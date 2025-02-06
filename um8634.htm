@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um8634</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DMTF,image analysis,image analysis Fourier-transform MTF,WDMTF" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="dmtf"></a></p>
+<p><a name="wdmtf"></a><span class="f_mine" style="font-weight: bold;">8.6.3.4 Fourier-transform diffraction MTF &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8635.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8633.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In cases where vector diffraction plays a role, or if the effects of polarization are to be considered (the lens must be in polarization mode – see </span><span class="f_mine" style="text-decoration: underline;"><a href="umch17.htm" class="topiclink">chapter 17</a></span><span class="f_mine">), the diffraction modulation transfer function may be obtained from dialogs </span><span class="f_mine" style="font-weight: bold;">MOP</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">MFM</span><span class="f_mine">, or with the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">[W]DMTF { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / M / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_mine" style="font-weight: bold;"> 0 </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-weight: bold;"> [ P ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span></p>
+</td>
+<td style="vertical-align:top; width:382px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the color number, “</span><span class="f_mine" style="font-weight: bold;">M</span><span class="f_mine">” for multicolor, or “</span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine">” for the primary color.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span></p>
+</td>
+<td style="vertical-align:top; width:382px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the fractional Y-object height</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS</span></p>
+</td>
+<td style="vertical-align:top; width:382px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the desired number of rays in the entrance pupil</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span></p>
+</td>
+<td style="vertical-align:top; width:382px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the fractional X-object height</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ P ]</span></p>
+</td>
+<td style="vertical-align:top; width:382px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">indicates that the MTF data should be plotted.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">DMTF</span><span class="f_mine"> is calculated by taking the Fourier transform of the line-spread function derived from the point-spread function described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um862.htm" class="topiclink">section 8.6.2</a></span><span class="f_mine">. &nbsp;Although more rigorous than the convolution method described in the preceding sections, this method has its own penalties: it is impossible to sample the entire image, which extends to infinity. &nbsp;It is therefore necessary to compromise between accuracy and cost; the image is sampled over an area about 6 times the radius of the Airy disk, and twice this area if the wide option is selected (</span><span class="f_mine" style="font-weight: bold;">WDMTF</span><span class="f_mine">). &nbsp;To sample further than this region would increase the cost of the computation, while the amount of additional energy that would be accounted for would steadily decrease as one sampled yet further. &nbsp;The current sampling algorithm is a compromise. &nbsp;The residual error in the MTF analysis is in most cases less than one percent at the lowest spatial frequencies, and even less at higher frequencies, for an image corrected to better than a wave of aberration.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The wide option calculates the MTF in X and Y at 64 spatial frequencies, and at + and – 45 degrees at 50 frequencies. The narrow option computes the MTF in X and Y at 21 spatial frequencies. &nbsp;The program selects as a default cutoff the theoretical cutoff for a lens of that F/number (calculated as in </span><span class="f_mine" style="text-decoration: underline;"><a href="um86.htm" class="topiclink">section 8.6</a></span><span class="f_mine">), at the primary wavelength, or the color specified if monochromatic. &nbsp;If the transmitted portion of the pupil is much smaller than the size of </span><span class="f_mine" style="text-decoration: underline;"><a href="um311.htm" class="topiclink">YMP1</a></span><span class="f_mine">, you may wish to reduce the size of YMP1 so that the F/number and the cutoff frequency will correspond more nearly to that of the physical image.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If a cutoff other than the default is desired, the FCO input rnay also be used, as in the case of the </span><span class="f_mine" style="text-decoration: underline;"><a href="um853.htm#gmtf" class="topiclink">GMTF</a></span><span class="f_mine">, but only for the wide option, &nbsp;This will plot only those values that are at or below the requested FCO.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If your current FCO is significantly below the diffraction cutoff, you will get a smoother MTF plot with the wide option, since it calculates more MTF values and there are then more data points in the reduced data range.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the exit pupil is strongly foreshortened in the Y-direction, the image dimension in the X-direction will be much smaller than in Y. &nbsp;There may then be too few samples in X to get an accurate MTF. &nbsp;The wide option (WDMTF) may then be more accurate, since it uses a finer grid of samples.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For reference, a perfect </span><span class="f_mine" style="font-weight: bold;">DMTF</span><span class="f_mine"> is also plotted at the first wavelength analyzed, on DMTF plots. &nbsp;This reference ignores apodization and vignetting, unlike the perfect MTF given with the convolution methods, which model the actual pupil.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An example DMTF plot is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um8f18.png" width="663" height="491" alt="um8f18" style="width:663px;height:491px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="m2f"></a><span class="f_mine">You can also get a display of a 3-dimensional MTF surface with the dialog </span><span class="f_mine" style="font-weight: bold;">MIF</span><span class="f_mine">, and 2-dimensional contours of the DMTF with the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">M2F</span><span class="f_mine"> </span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / M / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_mine" style="font-weight: bold;"> 0 </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature always employs wide-area sampling and plots out to the natural cutoff frequency, ignoring FCO input, if any. &nbsp;Bear in mind that in order to avoid aliasing error, you must request an adequate number of rays. &nbsp;See </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="hidd_mit2.htm" class="topiclink">MIF</a></span><span class="f_mine"> for a discussion of this topic.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="mif.png" width="992" height="678" alt="mif" style="width:992px;height:678px;border:none"><span class="f_mine"> Example MIF display.</span></p>
+<p class="p_mine"><img src="m2f.png" width="782" height="617" alt="m2f" style="width:782px;height:617px;border:none"><span class="f_mine"> Example M2F plot.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This option may be accessed by the menu MOP</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8635.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

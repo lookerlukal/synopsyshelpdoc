@@ -1,0 +1,412 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um553</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="GHPLOT, ghost image analysis" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;">&nbsp;</p>
+<p><a name="ghplot"></a><span style="font-weight: bold;">5.5.3 Plotted Ghost Image Features (GHPLOT) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-decoration: underline;"><a href="um5_54.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um552.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">SYNOPSYS can analyze and plot the ghost-image properties of a lens with real rays in several formats. &nbsp;Input is:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-weight: bold;">GHPLOT </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_footnotetext" style="font-weight: bold;"> { </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_footnotetext" style="font-weight: bold;">/P } </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">TSCF</span><span class="f_footnotetext" style="font-weight: bold;"> </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_footnotetext" style="font-weight: bold;"> </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_footnotetext" style="font-weight: bold;"> </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">MODE</span><span class="f_footnotetext" style="font-weight: bold;"> {R/L/C}</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-weight: bold;">R </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">REFL</span><span class="f_footnotetext" style="font-weight: bold;"> {ALL / </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_footnotetext" style="font-weight: bold;"> </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_footnotetext" style="font-weight: bold;"> </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_footnotetext" style="font-weight: bold;"> …}</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-weight: bold;">[ SINGLE </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">JREFH</span><span class="f_footnotetext" style="font-weight: bold;"> </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">JREFL</span><span class="f_footnotetext" style="font-weight: bold;"> ]</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-weight: bold;">[ BURIED </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">JREFH</span><span class="f_footnotetext" style="font-weight: bold;"> </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">JREF</span><span class="f_footnotetext" style="font-weight: bold;"> ]</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-weight: bold;">[ DRAD </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">DRAD</span><span class="f_footnotetext" style="font-weight: bold;"> ]</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-weight: bold;">[ SIMAGE [ </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">XS</span><span class="f_footnotetext" style="font-weight: bold;"> / BEST ] ]</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-weight: bold;">[ NARCISSUS </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">SURF</span><span class="f_footnotetext" style="font-weight: bold;"> ]</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-weight: bold;">[ SLOG </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_footnotetext" style="font-weight: bold;"> ]</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-weight: bold;">[ PER </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">EL</span><span class="f_footnotetext" style="font-weight: bold;"> </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">AZ</span><span class="f_footnotetext" style="font-weight: bold;"> [ </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">TSCF</span><span class="f_footnotetext" style="font-weight: bold;"> [</span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_footnotetext" style="font-weight: bold;"> </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">JSPS</span><span class="f_footnotetext" style="font-weight: bold;"> [ V/</span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">XOS</span><span class="f_footnotetext" style="font-weight: bold;"> </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">YOS</span><span class="f_footnotetext" style="font-weight: bold;"> ] ] ]</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-weight: bold;">PLOT</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">NRYS</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">The number of rays in the entrance pupil. &nbsp;The program will construct an (XY) grid of rays to approximate this number. &nbsp;Each ghost will be represented by the actual number that is traced and gets through to the image surface. &nbsp;In VIG mode, rays that violate clear apertures within the lens will be deleted.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_footnotetext" style="font-size: 11pt;"> / P</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Color number. &nbsp;Note that GHPLOT does not have a multicolor option. &nbsp;P is the principal color.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">TSCF</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Times Scale Factor. &nbsp;This affects only the MODES 1 and 2 plot. </span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Mode 1: &nbsp;this controls the size of the area plotted.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Mode 2: &nbsp;the peak height of the plot &nbsp;is 3.5 inches times TSCF.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">HBAR</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Fractional field in the Y-direction</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">GBAR</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Fractional field in the X-direction. &nbsp;A skew field must have been defined before you can use this parameter.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">MODE</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">The form of output is controlled by this selection, which must be an integer from 1 to 4. &nbsp;The selections are:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">1. &nbsp;Plotted spots</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">2. &nbsp;Oblique-perspective drawing</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">3. &nbsp;Colored boxes indicating intensity</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">4. &nbsp;PER drawing showing the paths of rays in a single ghost</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Times New Roman';">{</span><span class="f_footnotetext" style="font-size: 11pt;"> R / L / C }</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">This input only applies to MODE 2, and specifies a view direction for the 3-D surface. &nbsp;The default is C (centered).</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">SINGLE …</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Use this input to request analysis of only a single ghost, involving surfaces </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">JREFH</span><span class="f_footnotetext" style="font-size: 11pt;"> and </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">JREFL</span><span class="f_footnotetext" style="font-size: 11pt;">. &nbsp;If not entered, the program analyzes all two-bounce ghosts not involving dummy surfaces or reflecting surfaces.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">BURIED</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">This option is the only one that involves a single reflection rather than two. &nbsp;If your system has a </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;"><a href="um513.htm#bgi" class="topiclink">buried ghost image</a></span><span class="f_footnotetext" style="font-size: 11pt;">, this is a good way to look at the ray paths. &nbsp;Mode 4 (perspective drawing) is the only mode that makes sense in this case. &nbsp;The ghost that is analyzes starts with a reflection at </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">JREFH</span><span class="f_footnotetext" style="font-size: 11pt;">, and the ray paths are drawn going backward as far as </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">JREF</span><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">DRAD …</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">This gives the radius of a circular detector whose area is used to normalize the ghost intensity. &nbsp;A ghost that falls entirely within this area is assigned an intensity equal to the product of the two reflectances, while larger ghosts are less intense according to the area ratio.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">SIMAGE …</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">This gives the diameter of the image area that is to be sampled. &nbsp;The default is a square that encloses the CAO of the image surface. &nbsp;See below.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">NARCISSUS ...</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">GHPLOT can show the pattern at the image that arises from light reflected from that surface and then reflected again from surfaces within the lens. &nbsp;This is an issue in IR systems with a cooled detector: the retroreflected flux lowers the total output of the detector when a small ghost image is formed on the detector, and one observes a dark smudge near the center of the display. &nbsp;The paraxial sources of this effect can be found with the </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;"><a href="um54.htm#nar" class="topiclink">NAR</a></span><span class="f_footnotetext" style="font-size: 11pt;"> command. &nbsp;The NAR feature of GHPLOT analyzes much the same thing, but in this case with real rays, and the output is graphical. &nbsp;The surface number of the first reflection is given by the </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">SURF</span><span class="f_footnotetext" style="font-size: 11pt;"> input. &nbsp;This is usually just the detector itself, in FOCAL SYSTEMS. &nbsp;If the lens is AFOCAL, then that surface is not actually present, so one specifies instead the first of the two dummy surfaces, which are required in that mode, and which have zero curvature and thickness. &nbsp;The light that is traced actually starts at the object, and then reflects from the specified surface and propagates to each prior surface. &nbsp;Since the image is usually very small, this procedure is essentially identical to starting at a point on the detector. &nbsp;The reflectance of the detector is set at 1.0 for this feature.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">SLOG …</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Another use of GHPLOT is to find the source of stray light that originates out of the field. &nbsp;If the SLOG option is requested, the program will list the first </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">NRYS</span><span class="f_footnotetext" style="font-size: 11pt;"> rays that get completely through the system. &nbsp;From this list you can see which surfaces were responsible, and then examine those ray paths in mode 4. &nbsp;The SLOG option only works in mode 1.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">PER ..</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">This input is identical to the usual </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;"><a href="um72.htm#per" class="topiclink">PER</a></span><span class="f_footnotetext" style="font-size: 11pt;"> input, and only applies when MODE 4 is selected. &nbsp;None of the other input lines used with PER may be entered following this line, however; the ray definitions are taken from the other GHPLOT input. &nbsp;You must also specify BURIED or SINGLE &nbsp;when selecting this mode.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">In the event that you wish to analyze a ghost where the image surface is </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">JREFH</span><span class="f_footnotetext" style="font-size: 11pt;">, the PER option will not work unless you add a dummy surface at the image.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">PLOT</span></p>
+</td>
+<td style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Ends the GHPLOT input file.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">To illustrate these features, we start with the near-IR lens in file “1.RLE”, and do a simple GHOST analysis, which we can compare later with the output from GHPLOT.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">FET 1</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">GHOST R .0004</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">R .01 ALL</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Here is a portion of the output summary</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 13 &nbsp; 1.05809E-14 &nbsp; &nbsp;6.67329E-14 &nbsp; &nbsp; 6 &nbsp; &nbsp; 3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 21 &nbsp; 1.06017E-14 &nbsp; &nbsp;7.73346E-14 &nbsp; &nbsp; 7 &nbsp; &nbsp; 6</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;1 &nbsp; 1.77488E-14 &nbsp; &nbsp;9.50834E-14 &nbsp; &nbsp; 2 &nbsp; &nbsp; 1</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;2 &nbsp; 2.15403E-14 &nbsp; &nbsp;1.16624E-13 &nbsp; &nbsp; 3 &nbsp; &nbsp; 1</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;8 &nbsp; 2.18698E-14 &nbsp; &nbsp;1.38494E-13 &nbsp; &nbsp; 5 &nbsp; &nbsp; 2</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 16 &nbsp; 2.32820E-14 &nbsp; &nbsp;1.61776E-13 &nbsp; &nbsp; 7 &nbsp; &nbsp; 1</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;5 &nbsp; 2.52607E-14 &nbsp; &nbsp;1.87036E-13 &nbsp; &nbsp; 4 &nbsp; &nbsp; 2</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 25 &nbsp; 3.53198E-14 &nbsp; &nbsp;2.22356E-13 &nbsp; &nbsp; 8 &nbsp; &nbsp; 4</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 26 &nbsp; 3.60763E-14 &nbsp; &nbsp;2.58432E-13 &nbsp; &nbsp; 8 &nbsp; &nbsp; 5</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 17 &nbsp; 5.23795E-14 &nbsp; &nbsp;3.10812E-13 &nbsp; &nbsp; 7 &nbsp; &nbsp; 2</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 24 &nbsp; 8.13249E-14 &nbsp; &nbsp;3.92137E-13 &nbsp; &nbsp; 8 &nbsp; &nbsp; 3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 23 &nbsp; 9.15459E-14 &nbsp; &nbsp;4.83683E-13 &nbsp; &nbsp; 8 &nbsp; &nbsp; 2</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 28 &nbsp; 1.32566E-13 &nbsp; &nbsp;6.16248E-13 &nbsp; &nbsp; 8 &nbsp; &nbsp; 7</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 10 &nbsp; 1.34038E-12 &nbsp; &nbsp;1.95662E-12 &nbsp; &nbsp; 5 &nbsp; &nbsp; 4</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 27 &nbsp; 5.88713E-12 &nbsp; &nbsp;7.84375E-12 &nbsp; &nbsp; 8 &nbsp; &nbsp; 6</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 22 &nbsp; 1.74886E-11 &nbsp; &nbsp;2.53323E-11 &nbsp; &nbsp; 8 &nbsp; &nbsp; 1</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 11 &nbsp; 5.26013E-11 &nbsp; &nbsp;7.79336E-11 &nbsp; &nbsp; 6 &nbsp; &nbsp; 1</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">These data tell us that the strongest ghost arises from reflections at surface 6 and then from surface 1 (the last entry in the above list), and we can check the details (printed before the summary) to see some properties of that ghost:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;9 &nbsp; &nbsp; 5 - &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp;-72.6068 &nbsp; &nbsp; &nbsp; -0.4577 &nbsp; &nbsp; &nbsp; &nbsp;2.7558 &nbsp; 3.03505E-15</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 10 &nbsp; &nbsp; 5 - &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; -3.4550 &nbsp; &nbsp; &nbsp; -0.3402 &nbsp; &nbsp; &nbsp; &nbsp;6.5304 &nbsp; 1.34038E-12</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 11 &nbsp; &nbsp; 6 - &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.5515 &nbsp; &nbsp; &nbsp; -0.5074 &nbsp; &nbsp; &nbsp; &nbsp;4.2824 &nbsp; 5.26013E-11</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 12 &nbsp; &nbsp; 6 - &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; 44.1259 &nbsp; &nbsp; &nbsp; -0.4028 &nbsp; &nbsp; &nbsp; &nbsp;8.4078 &nbsp; 8.21736E-15</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 13 &nbsp; &nbsp; 6 - &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp;-38.8865 &nbsp; &nbsp; &nbsp; -0.5677 &nbsp; &nbsp; &nbsp; &nbsp;1.4386 &nbsp; 1.05809E-14</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Here we see that ghost number 11, which involved those surfaces, formed a blur at the image plane of radius 0.5515mm.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Let us now run GHPLOT and look at the energy distribution from all ghosts. &nbsp;First we select MODE 1. &nbsp;Input is</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">CHG</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">CFIX</span><span class="f_footnotetext" style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;;</span><span class="f_footnotetext"> we do not want to see vignetted rays, so we make all apertures hard</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">SSS .003</span><span class="f_footnotetext" style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;;</span><span class="f_footnotetext"> there will be lots of rays, so make each spot small</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">GHPLOT 4000 P 10 0.5 0 1</span><span class="f_footnotetext" style="font-family: 'Courier New';"> &nbsp;;</span><span class="f_footnotetext"> the picture will be drawn at 10X scale, at half field</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">R .01 ALL</span><span class="f_footnotetext" style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ;</span><span class="f_footnotetext"> reflectivity of all surfaces is 0.01</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">DRAD .0004 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_footnotetext">; detector radius is very small</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">PLOT</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">In this input, we elected to analyze the case where light enters from HBAR = 0.5, or half field. &nbsp;GHPLOT is the only ghost-analysis feature that lets you specify a field point; all of the others analyze the on-axis object only. &nbsp;A nonzero field angle will spread the several ghosts out so they can more easily be seen on the plot. &nbsp;Here is the result:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><img src="ghplot1.png" width="550" height="792" alt="ghplot1" style="width:550px;height:792px;border:none"></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">There seems to be a rather dense concentration of rays located above the center point. &nbsp;Let’s zoom in on that point:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><img src="ghplot2.png" width="468" height="470" alt="ghplot2" style="width:468px;height:470px;border:none"></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">There seems to be a caustic there, which could make the ghost appear brighter than predicted by the GHOST listing above. &nbsp;(Remember, that feature is a </span><span class="f_footnotetext" style="font-size: 11pt; font-style: italic;">paraxial</span><span class="f_footnotetext" style="font-size: 11pt;"> analysis only, and it therefore ignores aberrations in the ghost beam.) &nbsp;Let’s look at this energy distribution with MODE = 2:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">GHPLOT 20000 P 1 .5 0 2 L</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">…</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Here we increase the number of rays to 20000 so that the result will look smooth. &nbsp;Since the distribution is a function of local ray density, too few rays will make a bumpy picture. &nbsp;(GHPLOT is not restricted to the 20000 maximum ray limit that applies to most of the image analysis features; the number can be as large as necessary to produce a smooth plot.)</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><img src="ghplot3.png" width="716" height="564" alt="ghplot3" style="width:716px;height:564px;border:none"></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Indeed, there is a strong spike.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">To see color-coded intensity samples, we request MODE 3 by changing the input to</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">GHPLOT 20000 P 1 .5 0 3 L</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">…</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">and here is the result:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><img src="ghplot4.png" width="530" height="764" alt="ghplot4" style="width:530px;height:764px;border:none"></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext" style="margin: 0px 38px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt;">If you want to print this output on a black-and-white printer, it is best to run the analysis again, with switch 35 OFF. &nbsp;Then the distribution will then be shown as a grayscale, from black to white.</span></p>
+<p class="p_footnotetext" style="margin: 0px 38px 0px 38px;"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">The maximum intensity shown here is 1.266E-10, which is somewhat larger than the paraxially-predicted value of 7.8E-11. &nbsp;Here we must digress a bit to discuss the issues that affect the accuracy of this prediction.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">First, this analysis gave a field point HBAR of 0.5, so the ghosts were separated on the picture. &nbsp;The paraxial calculation applies only at the center of the field, where all the ghosts are superimposed. &nbsp;As you go off axis, the sum will usually decrease, due to the separations. </span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">A more important matter has to do with the size of the sample area. &nbsp;The program divides this area into a 60 x 60 array of bins, and counts the rays that arrive in each one. &nbsp;Consider two cases: where the bins are larger than the detector, and where they are smaller. &nbsp;In the first case, if there were a concentration of energy within a small portion of the bin, the program would not see it and the reported energy would be lower than it should be. &nbsp;In the second cases, the program finds the intensity at the most intense bin, which may not apply to the entire detector area, and calculates the intensity on this area from </span><span class="f_footnotetext" style="font-size: 11pt; font-style: italic;">that</span><span class="f_footnotetext" style="font-size: 11pt;"> value. &nbsp;So the reported energy will usually be higher than it should be. &nbsp;The most accurate energy analysis often results when the bin area is equal to that of the detector, and this is the result when you specify </span><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">SIMAGE BEST</span><span class="f_footnotetext" style="font-size: 11pt;">. &nbsp;But there is a catch: &nbsp;if the bins are sparsely populated, which happens with a large ghost blur and a small detector, then the stochastic noise in that calculation overwhelms the illumination calculation, and the results have little meaning. &nbsp;There seems to be no general solution, and you are advised to examine the MODE 3 plot to see if it looks smooth. &nbsp;If not, then use a larger SIMAGE and more rays. &nbsp;If the ghosts you see look smooth and extend over an area of several bins, then the energy calculation should not suffer from these issues.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">The calculated ghost intensity will also be strongly affected if any of the ghosts exhibit a </span><span class="f_footnotetext" style="font-size: 11pt; font-style: italic;">caustic</span><span class="f_footnotetext" style="font-size: 11pt;">. &nbsp;This is not an artifact, since the intensity in fact can become very large in such cases. In the example above, the spot analysis (MODE 1) looked suspiciously like a caustic pattern. &nbsp;Let us examine this pattern. &nbsp;Here we will request only a single ghost, and ask for a PER drawing, with MODE = 4.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">GHPLOT 4000 P 10 .5 0 4 L</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">DRAD .0004</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">SINGLE 6 1</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">PER 0 0 0 1 99</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">R .01 ALL</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">PLOT</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><img src="clip0406.png" width="842" height="622" alt="clip0406" style="width:842px;height:622px;border:none"></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">In order to keep the picture simple enough to interpret, the program allows only a single ghost to be analyzed in this mode. &nbsp;Here we select the ghost that we suspect has a caustic, involving surfaces 6 and 1. &nbsp;Also, we reduced the ray count to 4000 because fewer rays are easier to see in this mode. &nbsp;(The program takes the (X,Y) grid of rays that comes close to the requested ray number, and for MODE 4, takes only a single slice of that grid, giving a TFAN of 71 rays in this case.) &nbsp;Here, one can clearly see the caustic in the beam following the two reflections.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Let’s show this caustic in more detail, using the </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;"><a href="um552.htm#rghost" class="topiclink">RGHOST</a></span><span class="f_footnotetext" style="font-size: 11pt;"> feature. &nbsp;Run a MACro that contains</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">RGH 6 1 0 AIP</span><span class="f_footnotetext" style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp;;</span><span class="f_footnotetext"> the fractional aperture is in AIP</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">ORD = FILE 1</span><span class="f_footnotetext" style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; ;</span><span class="f_footnotetext"> and the Y-height at the image is in FILE location 1</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">and then type</span><span class="f_footnotetext"> </span><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;">DO MACRO FOR AIP = 0 TO 1</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">The resulting plot clearly shows how the ray height from this ghost is very nonlinear.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><img src="ghplot6.png" width="416" height="596" alt="ghplot6" style="width:416px;height:596px;border:none"></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">The paraxial analysis, which assumes that this plot is a straight line, did not in fact give a precise estimate of the energy. &nbsp;Here is an example where GHPLOT may be superior.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Let us now look at the source of glare from objects outside the field of view at HBAR = 4. &nbsp;The input will be</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">GHPLOT 400 P 10 4 0 1 &nbsp;; SELECT MODE 1, INDIVIDUAL RAYS</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">SLOG 100 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; LOG THE FIRST 100 RAYS</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">PLOT</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">The listing shows that 88 rays arrive at the image from this source position.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">RAY No. Hi &nbsp;Lo X &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Y</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">-----------------------------------------</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;1 &nbsp; 2 &nbsp; 1 &nbsp;0.400358E+01 &nbsp;0.417948E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;2 &nbsp; 2 &nbsp; 1 &nbsp;0.402346E+01 &nbsp;0.132948E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;3 &nbsp; 2 &nbsp; 1 &nbsp;0.403161E+01 -0.155158E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;4 &nbsp; 2 &nbsp; 1 &nbsp;0.133893E+01 &nbsp;0.419567E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;5 &nbsp; 2 &nbsp; 1 &nbsp;0.134555E+01 &nbsp;0.133881E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;6 &nbsp; 2 &nbsp; 1 &nbsp;0.134870E+01 -0.155122E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;7 &nbsp; 2 &nbsp; 1 -0.133893E+01 &nbsp;0.419567E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;8 &nbsp; 2 &nbsp; 1 -0.134555E+01 &nbsp;0.133881E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;9 &nbsp; 2 &nbsp; 1 -0.134870E+01 -0.155122E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 10 &nbsp; 2 &nbsp; 1 -0.400358E+01 &nbsp;0.417948E+01</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;"> &nbsp; &nbsp; &nbsp;…</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 68 &nbsp; 5 &nbsp; 3 &nbsp;0.306701E+01 -0.494091E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 69 &nbsp; 5 &nbsp; 3 -0.306572E+01 &nbsp;0.815147E+00</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 70 &nbsp; 5 &nbsp; 3 -0.306701E+01 -0.494091E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 71 &nbsp; 6 &nbsp; 3 &nbsp;0.549691E+01 -0.703057E+00</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 72 &nbsp; 6 &nbsp; 3 &nbsp;0.175080E+01 &nbsp;0.453863E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 73 &nbsp; 6 &nbsp; 3 &nbsp;0.183525E+01 -0.307098E+00</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 74 &nbsp; 6 &nbsp; 3 -0.175080E+01 &nbsp;0.453863E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 75 &nbsp; 6 &nbsp; 3 -0.183525E+01 -0.307098E+00</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 76 &nbsp; 6 &nbsp; 3 -0.549691E+01 -0.703057E+00</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 77 &nbsp; 6 &nbsp; 4 -0.269597E+01 -0.341428E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 78 &nbsp; 6 &nbsp; 4 -0.268594E+01 -0.269153E+00</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 79 &nbsp; 6 &nbsp; 4 -0.266163E+01 &nbsp;0.328956E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 80 &nbsp; 6 &nbsp; 4 &nbsp;0.269597E+01 -0.341428E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 81 &nbsp; 6 &nbsp; 4 &nbsp;0.268594E+01 -0.269153E+00</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 82 &nbsp; 6 &nbsp; 4 &nbsp;0.266163E+01 &nbsp;0.328956E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 83 &nbsp; 6 &nbsp; 5 -0.267106E+01 -0.466595E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 84 &nbsp; 6 &nbsp; 5 -0.266234E+01 -0.152252E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 85 &nbsp; 6 &nbsp; 5 -0.263814E+01 &nbsp;0.203683E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 86 &nbsp; 6 &nbsp; 5 &nbsp;0.267106E+01 -0.466595E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 87 &nbsp; 6 &nbsp; 5 &nbsp;0.266234E+01 -0.152252E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 88 &nbsp; 6 &nbsp; 5 &nbsp;0.263814E+01 &nbsp;0.203683E+01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">RAYS-GHOSTS TRACED = &nbsp; &nbsp;10752 RAYS EXITING = &nbsp; &nbsp; &nbsp; 88</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">There are several surface combinations that contribute to the glare. &nbsp;Let us examine the ray path for the ghost from surfaces 6 and 3. &nbsp;The lens has EFILE edges assigned and is in VIG mode.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">GHPLOT 4000 P 1 4 0 &nbsp;4 &nbsp;R &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">R 0.01 ALL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">SINGLE 6 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">DRAD 0.01 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">SIMAGE CAO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">PER 0 0 0 1 200 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">PLOT</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Here is the picture:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><img src="clip0405.png" width="843" height="623" alt="clip0405" style="width:843px;height:623px;border:none"></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt; font-weight: bold;">Buried Ghost Analysis</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Another use of GHPLOT is to look at the </span><span class="f_footnotetext" style="font-size: 11pt; font-weight: bold;">ghost rays within a lens</span><span class="f_footnotetext" style="font-size: 11pt;">, rather than at the image. &nbsp;This is especially important in high-power laser work, where an interior image can burn coatings if the concentration is great enough. &nbsp;Here is an example: &nbsp;After running </span><span class="f_footnotetext" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um513.htm#bgi" class="topiclink">BGI</a></span><span class="f_footnotetext" style="font-size: 11pt;">, we see that there is a buried ghost image caused by reflection at surface 13, with a focus point between surfaces 9 and 10. &nbsp;Let us look at some ray paths. &nbsp;Here is the MACro:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-weight: bold;">GHPLOT 200 P 1 0 0 4</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-weight: bold;">R .01 ALL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_footnotetext" style="font-size: 11pt;">; not really relevant here, since only the paths are of interest</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-weight: bold;">BURIED 13 9</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-weight: bold;">PER 0 0 0 5 15</span></p>
+<p class="p_footnotetext" style="margin: 0px 0px 0px 38px;"><span class="f_footnotetext" style="font-size: 11pt; font-weight: bold;">PLOT</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Here we requested analysis of a buried ghost from surface 13, with rays traced backward as far as surface 9. &nbsp;The results show the ghost in question:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><img src="ghplot7.png" width="654" height="516" alt="ghplot7" style="width:654px;height:516px;border:none"></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">GHPLOT is not compatible with </span><span class="f_footnotetext" style="font-size: 11pt; font-weight: bold;">nonsequential raytracing</span><span class="f_footnotetext" style="font-size: 11pt;">. &nbsp;It employs its own logic – which is itself nonsequential – and if you run it on a nonsequential system you will get a warning message saying that the analysis treats it as sequential. &nbsp;This can lead to rays being vignetted at a roof prism, because the UAP apertures on the prism faces are too small to pass the entire beam. &nbsp;To resolve this issue, make a CHG file, and include </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_footnotetext" style="font-size: 11pt;"> NAP for each of the roof faces, to remove these apertures. &nbsp;Or you can put the system in NOVIG mode, but this will then show ghost rays even if they are vignetted.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">If you ever need to evaluate a buried ghost in nonsequential mode, a single case can be run; look at the example in </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;"><a href="um1836.htm" class="topiclink">Section 18.3.6</a></span><span class="f_footnotetext" style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_mine"><span class="f_mine">All of the ghost analysis routines may be run from the dialog </span><span class="f_mine" style="font-weight: bold;">MGH</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um5_54.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

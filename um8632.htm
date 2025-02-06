@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um8632</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="image analysis,image analysis convolution MTF,MTF, ZMTF,Zernike option in convolution MTF,ZMTF" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="mtf"></a><span class="f_mine" style="font-weight: bold;">8.6.3.2 Single-field of view convolution MTF &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8633.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8631.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are two forms of single-field MTF, which are found in the dialog </span><span class="f_mine" style="font-weight: bold;">MOP</span><span class="f_mine">, and which can also be run with the commands</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:383px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ Z]MTF { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / M / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FREQ</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GRID</span><span class="f_mine" style="font-weight: bold;"> ] </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:179px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">printed analysis at a single frequency</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:383px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ Z]MTF { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / M / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> 0 [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GRID</span><span class="f_mine" style="font-weight: bold;"> ] </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-weight: bold;"> [ P ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:179px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">analysis at 21 frequencies, with optional plot</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The first form calculates the MTF in the tangential and sagittal directions at a spatial frequency of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FREQ</span><span class="f_mine">, which is in cy/mm for focal lenses and cy/mr for </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#afocal" class="topiclink">AFOCAL</a></span><span class="f_mine">. &nbsp;The mnemonic &quot;</span><span class="f_mine" style="font-weight: bold;">MTF</span><span class="f_mine">&quot; uses the exact-ray option, while &quot;</span><span class="f_mine" style="font-weight: bold;">ZMTF</span><span class="f_mine">&quot; the wavefront interpolation method. &nbsp;This will be a linear spline fir to the wavefront. &nbsp;An explicit color number may be entered for </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL,</span><span class="f_mine"> the letter “</span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine">” for the primary color, or the letter “</span><span class="f_mine" style="font-weight: bold;">M</span><span class="f_mine">”, indicating a multicolor analysis. &nbsp;The second form gives the MTF at 21 frequencies, and optionally a plot, if the </span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine"> is input. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the lens is poorly corrected and you want to examine the MTF at low frequencies, you will get better accuracy with the ZMTF option.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> An example is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um8f16.png" width="397" height="294" alt="um8f16" style="width:397px;height:294px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The interpolation options can take the optional </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GRID</span><span class="f_mine"> input; the default is 80 (by 80), a smaller grid is somewhat faster, but the output can become irregular if the grid is too small or the system is poorly corrected.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="8632fco"></a><span class="f_mine">The default cutoff frequency is the natural cutoff at the F/number of the lens and the requested wavelength (or the primary color in the case of a multicolor analysis). &nbsp;You may enter a desired cutoff with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">FCO </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FREQUENCY</span><span class="f_mine" style="font-weight: bold;"> </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">prior to the MTF command. &nbsp;This cutoff remains in effect until changed, or deleted with </span><span class="f_mine" style="font-weight: bold;">FCO 0</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8633.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

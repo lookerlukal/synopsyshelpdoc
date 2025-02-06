@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1013</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Desensitization, tolerance,SAT, etc.,Tolerances,Tolerances Desensitization" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><a name="tols"></a><span class="f_mine" style="font-size: 14pt;">10.13 Tolerance Desensitization &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1012.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1014.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When your lens has been designed and you run the tolerance analysis </span><span class="f_mine" style="text-decoration: underline;"><a href="umch12.htm#btol" class="topiclink">BTOL</a></span><span class="f_mine">, you may find that some manufacturing or mounting errors must be kept within a very small tolerance in order for the lens to work properly. &nbsp;The tighter the tolerances, the more expensive the system will be to manufacture, and for this reason one would like to reduce this sensitivity during the design phase, if possible.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Special tools have been provided in SYNOPSYS for this purpose. &nbsp;These are based on the observation that tight tolerances often arise because the aberrations of a given surface or element may themselves be quite large, but are compensated elsewhere by other large aberrations with the opposite sign. &nbsp;Although the net aberration may be small when they are all added up – and the image quality may be quite adequate – if the compensating surface or element is not exactly in the right place or has a slightly different power, the change in this sum can be large, because the values were large to start with, leading to the tight tolerances you would like to avoid. &nbsp;A key to reducing sensitivity is therefore to reduce the individual contributions.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The features described below are based on the 3rd-order aberration contributions of individual surfaces, which are disabled if the lens contains certain complex shapes. &nbsp;If you are not sure, run the THIRD analysis and look for a message saying the calculation is based on real rays. &nbsp;If that is the case, these features cannot be used.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The third-order aberrations described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um10322.htm" class="topiclink">Section 10.3.2.2</a></span><span class="f_mine"> include a special set that is used for this purpose. &nbsp;These are</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">SAT COT ACD ACT ECD ECT ESA ECO SDU RUD DAA</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:53px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SAT</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The sum of the squares of the surface contributions to spherical aberration, SA3.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:53px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">COT</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The sum of the squares of the surface contributions to coma, CO3.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:53px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ACD</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The sum of the squares of the amount by which CO3 varies as each surface is decentered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:53px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ACT</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The sum of the squares of the amount by which CO3 varies as each surface is tilted.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:53px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ECD</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The sum of the squares of the amount by which CO3 varies as each element is decentered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:53px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ECT</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The sum of the squares of the amount by which CO3 varies as each element is tilted.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:53px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ESA</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The sum of the squares of the element contributions to spherical aberration, SA3.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:53px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ECO</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The sum of the squares of the element contributions to coma, CO3.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:53px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SDU</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The sum of the squares of the change in the paraxial angle UA at each surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:53px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RUD</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This operand is actually not a 3rd-order one. &nbsp;The program finds the difference between the incidence angle of the full-field upper and lower rim rays at each surface. &nbsp;The idea is that if that difference is small, then that surface is likely not contributing much to the off-axis aberrations. &nbsp;RUD is the sum of the squares of these differences, over all surfaces. &nbsp;Flat surfaces are skipped, so dummies and windows do not contribute to this value.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:53px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">DAA</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This one finds the difference between the SA3 contributions at adjacent surfaces and returns the sum of the squares of the result. &nbsp;If two adjacent surfaces have large but opposite contributions, then their separation is likely to be very sensitive.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is an example of how you might use these aberrations to loosen the lens tolerances. &nbsp;We optimized the lens shown below and ran BTOL with a target wavefront quality of 0.05.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f24.png" width="717" height="279" alt="um10f24" style="width:717px;height:279px;border:none"><span class="f_mine"> Nominal lens</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Some of the tolerances came back very tight, as shown in the table below, where the nominal data are for this lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">3 TH</span></p>
+</td>
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">6 wedge</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">7 tilt</span></p>
+</td>
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">5 YDC</span></p>
+</td>
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">7 YDC</span></p>
+</td>
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">9 YDC</span></p>
+</td>
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">12 YDC</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Nominal</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.012</span></p>
+</td>
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.18 min</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.20 min.</span></p>
+</td>
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.0036</span></p>
+</td>
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.0027</span></p>
+</td>
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.0042</span></p>
+</td>
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.0071</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Case A</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.119</span></p>
+</td>
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.81</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.52</span></p>
+</td>
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.012</span></p>
+</td>
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.010</span></p>
+</td>
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.013</span></p>
+</td>
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.013</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Case B</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.046</span></p>
+</td>
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.77</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.72</span></p>
+</td>
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.019</span></p>
+</td>
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.033</span></p>
+</td>
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.013</span></p>
+</td>
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.017</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It would be expensive indeed to hold lens positions to these tight values, so we proceed as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;Run the command </span><span class="f_mine" style="text-decoration: underline;"><a href="um66.htm#third" class="topiclink">THIRD</a></span><span class="f_mine"> SENS, to see the current values of these parameters.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> THIRD SENS</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> ID 8-ELEMENT TELEPHOTO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;9069 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;09-FEB-08 &nbsp; 14:34:55</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> NORMALIZED 3RD-ORDER ANALYSIS OF TOLERANCE SENSITIVITY</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF SA3 BY SURFACE (SAT) = &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 85.107903</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF CO3 BY SURFACE (COT) = &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 21.404938</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF CO3/YDC BY SURFACE (ACD) = &nbsp; &nbsp; &nbsp; &nbsp;0.007657</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF CO3/TILT BY SURFACE (ACT) = &nbsp; &nbsp; &nbsp;73.889722</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF CO3/YDC BY ELEMENT (ECD) &nbsp;= &nbsp; &nbsp; &nbsp; 0.003941</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF CO3/TILT BY ELEMENT (ECT) = &nbsp; &nbsp; &nbsp;31.259708</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF SA3 BY ELEMENT (ESA) = &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.944190</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF CO3 BY ELEMENT (ECO) = &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.492351</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;Since we are mainly concerned about centration errors, we might try to reduce the value of ECD, the change in CO3 when an element is decentered. &nbsp;Let us add to the </span><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm#aant" class="topiclink">AANT</a></span><span class="f_mine"> file the line</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">M .001 100 A ECD</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since ECD is already a small number (compared to the others in the list) we give it a high weight so it makes a difference to the merit function. &nbsp;Keep in mind that we cannot simply target all of these values to zero, since lens elements in general cannot be designed without any aberrations and still have any optical power. &nbsp;Also, these quantities are coupled in obscure ways. &nbsp;If you, for example, reduce the value of SAT, you will probably find that COT also got much smaller. &nbsp;You could not give an independent value to both of them and expect that the program could find such a combination. &nbsp;So it is wise to proceed with one at a time, until you find the parameter that works best with your lens. &nbsp;In this example, controlling the value of ECD, the lens came back like this.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f25.png" width="711" height="269" alt="um10f25" style="width:711px;height:269px;border:none"><span class="f_mine"> Case A</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">THIRD SENS</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> ID 8-ELEMENT TELEPHOTO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;9069 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;09-FEB-08 &nbsp; 14:48:26</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> NORMALIZED 3RD-ORDER ANALYSIS OF TOLERANCE SENSITIVITY</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF SA3 BY SURFACE (SAT) = &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5.617179</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF CO3 BY SURFACE (COT) = &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4.163698</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF CO3/YDC BY SURFACE (ACD) = &nbsp; &nbsp; &nbsp; &nbsp;0.001758</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF CO3/TILT BY SURFACE (ACT) = &nbsp; &nbsp; &nbsp;18.629842</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF CO3/YDC BY ELEMENT (ECD) &nbsp;= &nbsp; &nbsp; &nbsp; 0.001155</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF CO3/TILT BY ELEMENT (ECT) = &nbsp; &nbsp; &nbsp; 8.206368</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF SA3 BY ELEMENT (ESA) = &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.149362</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SS OF CO3 BY ELEMENT (ECO) = &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.112059</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Notice how all of the values have changed, even though we only targeted one of them (ECD). &nbsp;Tolerances of this lens are listed as Case A in the above table. &nbsp;Clearly, the tolerances are much looser now, although still a challenge for the shop. &nbsp;Let us experiment some more. &nbsp;This time we will target the value of ACT to the value 7.0, which is 1/10 of the nominal value.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">M 7 1 A ACT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The lens now looks like this:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f26.png" width="697" height="257" alt="um10f26" style="width:697px;height:257px;border:none"><span class="f_mine"> Case B</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The tolerances are listed as Case B, above. &nbsp;For some shops this may be the better budget.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The quantity that you elect to control depends on which tolerances you want to affect. &nbsp;Airspace tolerances, for example, may respond to control over the quantity ESA. &nbsp;Lens thickness tolerances, on the other hand, may respond better to SAT. &nbsp;You will have to understand your lens, and experiment with these tools, to find the best targets and the best BTOL budget.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Sometimes the effect of these quantities is to </span><span class="f_mine" style="font-style: italic;">increase</span><span class="f_mine"> the merit function. &nbsp;Normally this would not be a good idea, since if the image gets worse, tolerances generally get tighter. &nbsp;But the relaxing effect of the tools in this chapter can sometimes outweigh that effect, giving tolerances that are looser anyway. &nbsp;This only works up to a point, of course, and if the merit function gets too large, you should require a less-demanding value in your merit function.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We cannot guarantee that any of these aberration targets will work in any given case, but experience has shown that they are certainly worth a try. &nbsp;Your tolerances may be relaxed by a factor of from two to 10.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We close by reminding the user that a very effective way to control the sensitivity of an individual element is to use the </span><span class="f_mine" style="text-decoration: underline;"><a href="um10321.htm" class="topiclink">SECTION</a></span><span class="f_mine"> aberrations. &nbsp;Whereas the quantities discussed in this section apply to all surfaces or elements, and are therefore very easy to use, the SECTION aberrations apply only to the surface range you specify. &nbsp;If an element still gets assigned a very tight centration tolerance, even after you try the targets given in this section – which can happen if some elements get much looser but the problem element gets tighter – you might control only the coma or spherical aberration of</span><span class="f_mine" style="font-style: italic;"> that</span><span class="f_mine"> element. &nbsp;This gives you precise control over the aberrations where you need it, and is often worth the extra step. &nbsp;For example, if the element at surfaces 13 and 14 were very sensitive, you might try</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M 0 .1 A SECTION SA3 13 14</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and experiment with the target and weights until you get the best results.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1014.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

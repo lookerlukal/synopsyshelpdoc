@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um312</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Herloski (Gaussian beams),OBG object,object,object Gaussian" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><a name="obg"></a><a name="um312"></a><span class="f_mine" style="font-weight: bold;">3.1.2 Gaussian Input Beam Definition (OBG) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3112.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um313.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt;">In cases where an input or output beam is very slow or collimated, diffraction effects can result in behavior which differs significantly from that which would be expected from consideration of the first-order geometrical properties of the system. &nbsp;In a laser beam, for example, where the input beam diameter is often very small, the path of the light is not well described by straight lines, and other methods of analysis are called for.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt;">In such a case, the input beam geometry is described by a waist location and a divergence. &nbsp;The latter is determined by diffraction and the former does not necessarily coincide with ordinary conjugate points in the system.</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">A simple way to couple the first-order and the diffraction effects has been given by Herloski </span><span class="f_c1" style="font-style: italic;">et. al.,  </span><span class="f_c1">(Applied Optics </span><span class="f_c1" style="font-weight: bold;">22</span><span class="f_c1"> 1168 (1983). &nbsp;This technique utilizes the fact that the actual behavior of a Gaussian beam may be described as a combination of two paraxial rays. &nbsp;In keeping with this theory, we define the object coordinate system and the paraxial rays for a Gaussian beam as follows:</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_c1"><span class="f_c1">1.</span></p>
+</td>
+<td style="vertical-align:top; width:508px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">Surface number one must be placed at the waist location of the input gaussian beam.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_c1"><span class="f_c1">2.</span></p>
+</td>
+<td style="vertical-align:top; width:508px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">The object specification is given as</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left; text-indent: 48px;"><span class="f_c1" style="font-weight: bold;">OBG </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">WAIST</span><span class="f_c1" style="font-weight: bold;"> [ </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">RBS</span><span class="f_c1" style="font-weight: bold;"> [ </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">WAISTx</span><span class="f_c1" style="font-weight: bold;"> ] [ </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">RBSx</span><span class="f_c1" style="font-weight: bold;"> ] [ </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">M2</span><span class="f_c1" style="font-weight: bold;"> ] ] ]</span></p>
+<p>&nbsp;</p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">instead of the normal OBA, OBB, or OBC input.  </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">WAIST</span><span class="f_c1"> is the beam radius in the Y-direction at the first surface (the waist) and </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">RBS</span><span class="f_c1"> is defined below. &nbsp;No APS should be entered. &nbsp;If </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">WAISTx</span><span class="f_c1"> is entered, it applies to the waist radius in the X-direction.  </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">M2</span><span class="f_c1"> gives the quality factor of the beam; default is 1.0, or a perfect Gaussian mode (0,0). &nbsp;More on this below.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_c1"><span class="f_c1">3.</span></p>
+</td>
+<td style="vertical-align:top; width:508px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">The program then calculates the divergence of the entering beam from</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">DIV = WAV(p) </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">M2</span><span class="f_c1"> / </span><span class="f_c1" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&pi;</span><span class="f_c1"> </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">WAIST</span><span class="f_c1"> No &nbsp; &nbsp; (WAV(p) is the primary wavelength, and No is the index of the object medium.)</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">There are two possible actions at this point, depending on the geometry of the lens: </span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">1. If the first surface (which is the waist location, according to the above rule) is a real refractive or reflective surface, or if thickness number one is zero, the program calculates an effective OBA-type object with the following parameters:</span></p>
+<p>&nbsp;</p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_c1">TH0 = 1.0E14</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_c1">YP0 = TH0 * DIV</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_c1">YMP1 = </span><span class="f_c1" style="text-decoration: underline;">WAIST</span><span class="f_c1"> * </span><span class="f_c1" style="text-decoration: underline;">RBS</span><span class="f_c1">   &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_c1" style="text-decoration: underline;">(</span><span class="f_c1">see below)</span></p>
+<p class="p_c1" style="text-align: left; text-indent: 48px;"><span class="f_c1">YP1 = 0.0</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">The two paraxial rays A and B (see </span><span class="f_c1" style="text-decoration: underline;"><a href="umch6.htm#um61" class="topiclink">6.1</a></span><span class="f_c1">) are then the &quot;waist ray&quot; and the &quot;divergence ray&quot;, respectively.  </span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">2. If the first surface is a dummy surface (no index change) </span><span class="f_c1" style="font-style: italic;">not</span><span class="f_c1"> coincident with surface 2, the program will assume that the input beam undergoes Gaussian propagation from surface 1 to surface 2, and will calculate the beam radius, divergence, and phase curvature on surface 2. &nbsp;Then the effective object will be of OBA-type, where the object point is at the center of curvature of the phase front, and the marginal ray height, YMP1, is calculated so that the paraxial marginal ray on surface two equals the beam radius there times </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">RBS</span><span class="f_c1">. &nbsp;As in case (1) the paraxial rays A and B are the waist and divergence rays. &nbsp;In this case, however, the paraxial path of the ray YA is a closer approximation to the actual path of a real marginal ray since the effects of diffraction between surfaces 1 and 2 (where the beam is presumed small and therefore most subject to diffraction spreading) have been accounted for. &nbsp;If the beam is then expanded at surface 2, as is frequently the case, diffraction effects from that point on are negligible and the paraxial raytrace and real raytrace closely approximate the behavior of the Gaussian beam. &nbsp;Note that to utilize this effect, surface 1 must have the assigned thickness </span><span class="f_c1" style="font-style: italic;">explicitly</span><span class="f_c1">. &nbsp;Putting surface 2 at the proper location with a LOCAL or GLOBAL descriptor will not do. &nbsp;In the common case where the beam travels through windows or encounters fold mirrors before it reaches a lens, one should put a dummy surface 2 at a distance from the waist equal to the combined thickness of all intervening surfaces. &nbsp;That will ensure that the real-ray behavior is correct at that point. &nbsp;Then other surfaces are put wherever you need them in the intervening space.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">This geometric trick is intended to model the entering beam so that real rays will closely follow the Gaussian beam path. &nbsp;Then aberrations are accounted for and you can use all of the image analysis tools to evaluate your system. &nbsp;However, there are cases where this trick does not work very well. &nbsp;If your system works in the mm-wave region, for example, then one cannot say that diffraction ceases to be an issue after the beam gets expanded, since diffraction plays a role everywhere. &nbsp;The only feature of SYNOPSYS that can evaluate the wavefront everywhere under such conditions is the </span><span class="f_c1" style="text-decoration: underline;"><a href="um96.htm#dprop" class="topiclink">DPROP</a></span><span class="f_c1"> program.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">The input </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">RBS</span><span class="f_c1"> (Relative Beam Size, default = 1.0) specifies that the pupil size is to be </span><span class="f_c1" style="text-decoration: underline;">RBS</span><span class="f_c1"> times the 1/e**</span><span class="f_c1" style="vertical-align: super;">2</span><span class="f_c1"> point of the input beam. &nbsp;A value of 1 implies that the beam is to be truncated exactly at the 1/e**</span><span class="f_c1" style="vertical-align: super;">2</span><span class="f_c1"> point, which is not always desirable since the far-field diffraction pattern is then different from a pure Gaussian. &nbsp;A value of RBS greater than six is not recommended, for numerical reasons. &nbsp;If you want to truncate in X at a different point from in Y, you may enter the data in </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">RBSx</span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">The properties of the Gaussian beam anywhere in the system may be listed by using the command </span><span class="f_c1" style="font-weight: bold;">BEAM</span><span class="f_c1"> (see </span><span class="f_c1" style="text-decoration: underline;"><a href="um512.htm" class="topiclink">section 5.12</a></span><span class="f_c1">). &nbsp;The geometry of the output beam may be controlled explicitly in the optimization program with the aberration definitions GBR, GBU, GWR, and GWL (see </span><span class="f_c1" style="text-decoration: underline;"><a href="um1032.htm" class="topiclink">section 10.3.2</a></span><span class="f_c1">). &nbsp;Of course, such a beam is defined only for the on-axis object point, and if a finite field is to be covered, as in a scanning system, the field must be defined by suitable tilts of the system or portions of it, rather than by the HBAR and GBAR coordinates, as is normally the case. &nbsp;The feature </span><span class="f_c1" style="text-decoration: underline;"><a href="um53.htm#flux" class="topiclink">FLUX</a></span><span class="f_c1"> and the </span><span class="f_c1" style="text-decoration: underline;"><a href="umch8.htm#image" class="topiclink">IMAGE</a></span><span class="f_c1"> analysis programs will take into account the Gaussian energy distribution of the beam when OBG has been specified, but the </span><span class="f_c1" style="text-decoration: underline;"><a href="um511e.htm#reverse" class="topiclink">REVERSE</a></span><span class="f_c1"> command will revert to a non-Gaussian object, and OBG must be reentered following that command.</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">You may also examine the beam profile at any point within a system with the diffractive propagation program </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um96.htm" class="topiclink">DPROP</a></span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">A non-circular laser beam may be modeled by giving a value of </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">WAISTx</span><span class="f_c1"> that is different from the waist radius in the Y-direction, in the OBG input. &nbsp;In this case the real-ray analysis will take into account the varying size and divergence of the beam at all parts of the entrance pupil. &nbsp;This has the strange consequences of producing a </span><span class="f_c1" style="font-style: italic;">different value </span><span class="f_c1">of TH0 at every azimuth in the pupil, as well as a different effective normalized pupil radius. &nbsp;If surface 2 is some distance from surface 1 (which is recommended) then the divergence of the beam everywhere is closely modeled by the real rays. &nbsp;Although non-circular, the beam is assumed to be free of astigmatism at the waist on surface 1.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p><a name="m2"></a><span class="f_c1">The </span><span class="f_c1" style="font-weight: bold;">energy falloff</span><span class="f_c1"> with aperture is automatically modeled with OBG, and does not require the assignment of a UAP apodization to surface 1, as with earlier releases. &nbsp;The rate of falloff is controlled by the </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">M2</span><span class="f_c1"> parameter, which describes laser quality. &nbsp;A perfect laser in the TEMoo mode has an M2 value of 1.0, while a laser that is unstable or has higher modes will in general exhibit a divergence that is greater than a perfect laser, even if the waist size is the same. &nbsp;If the divergence is, on the average, twice what one would expect, one says that M2 equals 2.0.  </span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">But now we confront a problem: &nbsp;There are a great many laser modes for which one can say M2 = 2.0, so one cannot give a unique description. &nbsp;The utility of the M2 convention is that it allows one to estimate </span><span class="f_c1" style="font-style: italic;">on the average</span><span class="f_c1"> what the laser output looks like, and this is the goal of the BEAM analysis. &nbsp;If one were to rigorously analyze a great many modes, superimpose the results, and then examine the ensemble, one would find that the energy distribution resembles the BEAM output fairly well. &nbsp;However, BEAM is only a first-order analysis that, like all first-order analyses in optics, ignores aberrations.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">So what is one to do when aberrations play a role? &nbsp;In this situation one can get a feel for the effect of the aberrations by using the </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um96.htm#dprop" class="topiclink">DPROP</a></span><span class="f_c1"> feature, analyzing a representative sample of the expected laser modes in turn, and seeing if any of them exhibit undesired imaging characteristics. &nbsp;To analyze a given mode, one specifies the desired mode with the RLE-file input</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p><a name="mode"></a><span class="f_c1" style="font-weight: bold;">MODE </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">XMODE</span><span class="f_c1" style="font-weight: bold;"> </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">YMODE</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">Here, XMODE and YMODE give the fractional position in the waist where a given mode has its peak intensity. &nbsp;(The current M2 value specifies the </span><span class="f_c1" style="font-style: italic;">reduction</span><span class="f_c1"> in the 1/e**2 point of that mode relative to the waist radius Wo.) &nbsp;Thus, to model a circular laser beam with a waist of 0.25 and an M2 of 4.0, in the mode where the peak is at 60% of the distance from the center to the top edge of the waist, one would input</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 24px;"><span class="f_c1" style="font-family: 'Courier New';">CHG</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 24px;"><span class="f_c1" style="font-family: 'Courier New';">OBG .25 1 0 0 4</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 24px;"><span class="f_c1" style="font-family: 'Courier New';">MODE 0 .6</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 24px;"><span class="f_c1" style="font-family: 'Courier New';">END</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">and then follow this with the DPROP analysis. &nbsp;In such cases, one should obtain a SLICE at the waist, and then at representative surfaces in the system, to verify that the displayed mode is what was intended. &nbsp;Then the image may be evaluated at the desired target location. &nbsp;Analyzing several modes in this way will show how the images differ from one to the other (they will), and will verify that the system imaging goals are (or are not) met.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">When a mode setting other than (0,0) is in effect, image programs such as </span><span class="f_c1" style="text-decoration: underline;"><a href="um862.htm#psprd" class="topiclink">PSPRD</a></span><span class="f_c1"> will also honor the smaller 1/e**2 point in the Gaussian distribution, as well as its decenter position. &nbsp;Although this is a convenient way to analyze the influence of these effects on the image, be aware that the analysis is less accurate than the DPROP analysis, which traces a given mode more or less rigorously rather than with the real-ray approximation of the former.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">Since the Gaussian beam is defined only for a single field point (the axis beam), the program will </span><span class="f_c1" style="font-style: italic;">ignore</span><span class="f_c1"> any nonzero HBAR or GBAR that may be requested when the OBG object is present.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">To analyze the energy in the beam as a function of aperture position, use the </span><span class="f_c1" style="text-decoration: underline;"><a href="um88.htm#map" class="topiclink">MAP</a></span><span class="f_c1"> or </span><span class="f_c1" style="text-decoration: underline;"><a href="umch15.htm#ai" class="topiclink">AI</a></span><span class="f_c1"> features and ask for the </span><span class="f_c1" style="font-style: italic;">transmission</span><span class="f_c1">. &nbsp;(The falloff is modeled as a reduced transmission of a uniform entering beam, not as an initial nonuniformity.)</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">The features that support the OBG object designation are intended for monochromatic systems, although it is possible to specify more than a single wavelength in the WAVL input. &nbsp;Be aware, however, that the first-order properties described above are applied to </span><span class="f_c1" style="font-style: italic;">all</span><span class="f_c1"> entered wavelengths, which may not necessarily be correct for any but the primary color. &nbsp;If a lens is used with more than a single laser, and they have different wavelengths or waist radii, it is better to model them as separate configurations and define each with the appropriate OBG parameters. &nbsp;Then the Gaussian beam parameters will be correct for all cases.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um313.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3112.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

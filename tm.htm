@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Tutorial Manual</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="TM" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_c1" style="background: #00ffff;"><span class="f_c1" style="font-size: 22pt; font-weight: bold;">SYNOPSYS™</span></p>
+<p class="p_c1"><span class="f_c1" style="font-size: 22pt; font-weight: bold;">Tutorial Manual</span></p>
+<p>&nbsp;</p>
+<p class="p_c2"><span class="f_c2" style="font-size: 17pt; font-weight: bold;">Ninth Edition</span></p>
+<p class="p_c2"><span class="f_c2">&nbsp;</span></p>
+<p class="p_c2"><span class="f_c2" style="font-size: 9pt; font-weight: bold;">February 4, 2015</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="p_c4"><span class="f_c4" style="font-size: 11pt;">This document describes the SYNOPSYS™ optical design and</span></p>
+<p class="p_c4"><span class="f_c4" style="font-size: 11pt;">analysis program, Version 15, a proprietary product of</span></p>
+<p class="p_c4"><span class="f_c4" style="font-size: 11pt;">Optical Systems Design, LLC.</span></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="osd.png" width="366" height="155" alt="osd" style="margin:0px auto 0px auto;width:366px;height:155px;border:none"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="p_c4"><span class="f_c4" style="font-size: 11pt;">Copyright&copy; 2017</span></p>
+<p class="p_c4"><span class="f_c4" style="font-size: 11pt;">Optical Systems Design, LLC</span></p>
+<p class="p_c4"><span class="f_c4" style="font-size: 11pt;">2102 N. Country Club Road, Ste. 12</span></p>
+<p class="p_c4"><span class="f_c4" style="font-size: 11pt;">Tucson, AZ 85716</span></p>
+<p class="p_c4"><span class="f_c4" style="font-size: 11pt;">www.osdoptics.com</span></p>
+<p class="p_c4"><span class="f_c4">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p class="p_c4"><span class="f_c4">&nbsp;</span></p>
+<p class="p_c4"><span class="f_c4">&nbsp;</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p><a name="tm_contents"></a><span class="f_c1" style="font-size: 25pt;">Table of Contents</span></p>
+<p>&nbsp;</p>
+<p class="p_c2"><span class="f_c2" style="font-size: 21pt; font-style: italic;">Chapter</span></p>
+<p class="p_c3"><span class="f_c3" style="font-size: 16pt; font-weight: bold;">1</span></p>
+<p class="p_p4" style="margin: 0px 0px 0px 432px;"><span class="f_p4" style="font-size: 13pt; font-weight: bold; text-decoration: underline;"><a href="tmch1.htm" class="topiclink">Getting Started with SYNOPSYS</a></span><span class="f_p4" style="font-size: 13pt; text-decoration: underline;"> </span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch1.htm#tml11" class="topiclink">What you need to know before you use SYNOPSYS</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch1.htm#tml12" class="topiclink">The first session</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch1.htm#tml13" class="topiclink">Command-mode input</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch1.htm#tml14" class="topiclink">Basic operations</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch1.htm#tml15" class="topiclink">Artificial intelligence</a></span></p>
+<p>&nbsp;</p>
+<p class="p_c3"><span class="f_c3" style="font-size: 16pt; font-weight: bold;">2</span></p>
+<p class="p_p4" style="margin: 0px 0px 0px 432px;"><span class="f_p4" style="font-size: 13pt; font-weight: bold; text-decoration: underline;"><a href="tmch2.htm" class="topiclink">The User Interface</a></span><span class="f_p4" style="font-size: 13pt;"> </span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch2.htm#tm2l2" class="topiclink">MACros</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch2.htm#tm2l3" class="topiclink">The SideBar</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch2.htm#tm2l4" class="topiclink">AI Symbol Substitution</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch2.htm#tm2l5" class="topiclink">Graphics</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch2.htm#tm2l6" class="topiclink">The Lens Library</a></span></p>
+<p>&nbsp;</p>
+<p class="p_c7"><span class="f_c7" style="font-size: 16pt; font-weight: bold;">3</span></p>
+<p class="p_p4" style="margin: 0px 0px 0px 432px;"><span class="f_p4" style="font-size: 13pt; font-weight: bold; text-decoration: underline;"><a href="tmch3.htm" class="topiclink">The Lens File</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch3.htm#tm3l2" class="topiclink">Stops and pupils</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch3.htm#tm3l3" class="topiclink">Paraxial pupil options</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch3.htm#tm3l4" class="topiclink">Real-ray pupil options</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch3.htm#tm3l5" class="topiclink">Vignetting</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch3.htm#tm3l6" class="topiclink">Approximate (and fast) pupil options</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch3.htm#tm3l7" class="topiclink">Using the pupil options</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch3.htm#tm3l8" class="topiclink">Other lens file options</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6">&nbsp;</span></p>
+<p class="p_p9" style="text-align: center; margin: 0px 0px 0px 0px;"><span class="f_p9" style="font-size: 16pt; font-weight: bold;">4</span></p>
+<p class="p_p4" style="margin: 0px 0px 0px 432px;"><span class="f_p4" style="font-size: 13pt; font-weight: bold; text-decoration: underline;"><a href="tmch4.htm" class="topiclink">Analyzing the Lens and its lmage</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch4.htm#tm4l2" class="topiclink">More Al symbol substitution</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch4.htm#tm4l3" class="topiclink">Al loops</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch4.htm#tm4l4" class="topiclink">Image analysis features</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch4.htm#tm4l5" class="topiclink">Footprint plots</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch4.htm#tm4l6" class="topiclink">Geometric image evaluation</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch4.htm#tm4l7" class="topiclink">Multicolor analysis</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch4.htm#tm4l8" class="topiclink">Diffraction-theoretic options</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch4.htm#tm4l9" class="topiclink">Pupil drawing</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch4.htm#tm4l10" class="topiclink">Point-spread function plot</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch4.htm#tm4l11" class="topiclink">HELP features</a></span></p>
+<p class="p_p6" style="text-indent: -20px; margin: 0px 0px 0px 48px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch4.htm#tm4l12" class="topiclink">Diffraction MTF features</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6" style="font-size: 10pt; text-decoration: underline;"><a href="tmch4.htm#tm4l13" class="topiclink">Other image-analysis features</a></span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 28px;"><span class="f_p6">&nbsp;</span></p>
+<p class="p_p9" style="text-align: center; margin: 0px 0px 0px 0px;"><span class="f_p9" style="font-size: 16pt; font-weight: bold;">5</span></p>
+<p class="p_p4" style="margin: 0px 0px 0px 432px;"><span class="f_p4" style="font-size: 13pt; font-weight: bold; text-decoration: underline;"><a href="tmch5.htm" class="topiclink">Finishing up</a></span><span class="f_p4" style="font-size: 9pt; font-weight: bold; text-decoration: underline;"><a href="tmch5.htm" class="topiclink"> </a></span><span class="f_p4" style="font-size: 13pt; font-weight: bold; text-decoration: underline;"><a href="tmch5.htm" class="topiclink">the Basics</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch5.htm#tm5l2" class="topiclink">SYNOPSYS Mode switches</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch5.htm#tm5l3" class="topiclink">Startup MACro SYSTART</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch5.htm#tm5l4" class="topiclink">Keeping track of your lenses and MACros</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch5.htm#tm5l5" class="topiclink">MACro loops</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch5.htm#tm5l6" class="topiclink">Al MACro loops</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch5.htm#tm5l7" class="topiclink">The SketchPAD</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch5.htm#tm5l8" class="topiclink">Changing the lens in PAD</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch5.htm#tm5l9" class="topiclink">Worksheet program</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch5.htm#tm5l10" class="topiclink">Mapping function utility</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11">&nbsp;</span></p>
+<p class="p_p9" style="text-align: center; margin: 0px 0px 0px 0px;"><span class="f_p9" style="font-size: 16pt; font-weight: bold;">6</span></p>
+<p class="p_p4" style="margin: 0px 0px 0px 432px;"><span class="f_p4" style="font-size: 13pt; font-weight: bold; text-decoration: underline;"><a href="tmch6.htm" class="topiclink">Optimization with SYNOPSYS</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l1" class="topiclink">Individual ray aberrations</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l3" class="topiclink">Use of transverse fans</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l4" class="topiclink">Color correction by ray differences</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l5" class="topiclink">Changes to the lens in optimization</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l6" class="topiclink">Controlling edge thicknesses</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l7" class="topiclink">Optimization example</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l8" class="topiclink">Creating a merit function</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l9" class="topiclink">The MOM optimization dialog</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l10" class="topiclink">FINAL aberration values</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l11" class="topiclink">Raygrid aberration definitions</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6glm" class="topiclink">Varying Glass Types with the Glass Model (GLM)</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l12" class="topiclink">Local minima</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l13" class="topiclink">Third and fifth-order aberrations</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l14" class="topiclink">Pupil selection in optimization</a></span></p>
+<p class="p_p11" style="margin: 0px 0px 0px 17px;"><span class="f_p11" style="font-size: 10pt; text-decoration: underline;"><a href="tmch6.htm#tm6l15" class="topiclink">Other optimization options</a></span></p>
+<p class="p_header"><span class="f_header">&nbsp;</span></p>
+<p class="p_p9" style="text-align: center; margin: 0px 0px 0px 0px;"><span class="f_p9" style="font-size: 16pt; font-weight: bold;">7</span></p>
+<p class="p_p2" style="margin: 0px 0px 0px 384px;"><span class="f_p2" style="font-size: 13pt; font-weight: bold; text-decoration: underline;"><a href="tmch7.htm" class="topiclink">The Power User</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch7.htm#tm7l1" class="topiclink">Reflecting systems</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch7.htm#tm7l2" class="topiclink">SYNOPSYS utilities</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch7.htm#tm7l3" class="topiclink">Scaling the lens</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch7.htm#tm7l4" class="topiclink">Tilts, decenters and other coordinate systems</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch7.htm#tm7l5" class="topiclink">Perspective drawing</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch7.htm#tm7l6" class="topiclink">Relative coordinate system</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch7.htm#tm7l7" class="topiclink">Global coordinates</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch7.htm#tm7l8" class="topiclink">Local coordinates</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch7.htm#tm7l9" class="topiclink">Analysis in other coordinate systems</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch7.htm#tm7l10" class="topiclink">Changing coordinate systems</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch7.htm#tm7l11" class="topiclink">Folding and unfolding your lens system</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3">&nbsp;</span></p>
+<p class="p_p9" style="text-align: center; margin: 0px 0px 0px 0px;"><span class="f_p9" style="font-size: 16pt; font-weight: bold;">8</span></p>
+<p class="p_p6" style="margin: 0px 0px 0px 0px;"><span class="f_p6" style="font-size: 13pt; font-weight: bold; text-decoration: underline;"><a href="tmch8.htm" class="topiclink">The Finishing</a></span><span class="f_p6" style="font-size: 9pt; font-weight: bold; text-decoration: underline;"><a href="tmch8.htm" class="topiclink"> </a></span><span class="f_p6" style="font-size: 13pt; font-weight: bold; text-decoration: underline;"><a href="tmch8.htm" class="topiclink">Touches</a></span><span class="f_p6" style="font-size: 13pt;"> </span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch8.htm#tm8l1" class="topiclink">Aspheric surfaces</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch8.htm#tm8l2" class="topiclink">Lens element drawing</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch8.htm#tm8l3" class="topiclink">Tolerancing with SYNOPSYS</a></span></p>
+<p class="p_p7" style="margin: 0px 0px 0px 58px;"><span class="f_p7" style="font-size: 10pt; text-decoration: underline;"><a href="tmch8.htm#tm8l4" class="topiclink">BTOL: a budget tolerance program</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch8.htm#tm8l5" class="topiclink">Monte-Carlo statistical tolerance verification</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch8.htm#tm8l6" class="topiclink">More Al possibilities</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3" style="font-size: 10pt; text-decoration: underline;"><a href="tmch8.htm#tm8l7" class="topiclink">Bibliography</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 0px;"><span class="f_p3">&nbsp;</span></p>
+<p class="p_p9" style="text-align: center; margin: 0px 0px 0px 0px;"><span class="f_p9" style="font-size: 16pt; font-weight: bold;">9</span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 0px;"><span class="f_p3">&nbsp;</span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 0px;"><span class="f_p3" style="font-size: 13pt; font-weight: bold; text-decoration: underline;"><a href="tmch9.htm" class="topiclink">A Lens Design Example</a></span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3">&nbsp;</span></p>
+<p class="p_p3" style="margin: 0px 0px 0px 20px;"><span class="f_p3">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

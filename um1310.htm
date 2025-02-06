@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1310</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="pon"></a><span class="f_mine" style="font-size: 14pt;">13.10 Capturing printout (PON, POFF) &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um139.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="ccw.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Output that can be listed in a Command Window may be captured for later printing or stored in a named data file for offline processing. &nbsp;The commands</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">PON</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">…</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">POFF</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will capture all data generated between the </span><span class="f_mine" style="font-weight: bold;">PON</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">POFF</span><span class="f_mine"> commands. &nbsp;If you later follow this with another PON, then data capture resumes, adding to what was captured before.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To close the capture file and send the data to the printer, use </span><span class="f_mine" style="font-weight: bold;">POF C</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">POF CLOSE</span><span class="f_mine">. &nbsp;To close the capture file and discard it without printing anything, use </span><span class="f_mine" style="font-weight: bold;">POF D</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also request that the program save the captured data to a named file, rather than to the printer. &nbsp;To do so, use the form</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">PON [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">filename </span><span class="f_mine" style="font-weight: bold;"> [ NEW ] ].</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The named file will have a file extension of “.TXT” if no extension is given in the name. &nbsp;Capture stops when the POFF command is entered, as before, and may be resumed with another PON f</span><span class="f_mine" style="text-decoration: underline;">ilename</span><span class="f_mine">. &nbsp;In this way, selected data may be extracted from your output. &nbsp;(You must reenter the same filename for this to work properly.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When the</span><span class="f_mine" style="font-weight: bold;"> POFF C</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">POFF CLOSE </span><span class="f_mine">command is entered, the capture file is closed and is ready to be opened at any time in Notepad or another text editor program. &nbsp;The output data in the file are thus available for processing with any program that is capable of reading a .TXT file. &nbsp;This is a convenient way to create a file that you want to send by email to someone. &nbsp;You can of course copy and paste the text itself directly from the Command Window into an email client, but in that case the font will most likely be a default proportional-spaced font, and columns of data will not line up correctly. &nbsp;The .TXT file preserves the font information and looks correct when opened later.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If no filename was given in the PON command, then when the file is closed the data are sent to a temporary new Command Window, which is then processed for printing. &nbsp;This will show all of the captured data along with a Print dialog box where the user can select from the available printers and then click OK. &nbsp;If the user clicks CANCEL, no printing occurs.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can reopen a named capture file and replace the previous contents with new data, even if it has not yet been closed. &nbsp;For this, add the optional </span><span class="f_mine" style="font-weight: bold;">NEW</span><span class="f_mine"> in word three of the PON command.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">POFF D</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will close the current capture file and discard all contents.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Printout may be captured with PON even if the system is currently in </span><span class="f_mine" style="text-decoration: underline;"><a href="um1312.htm" class="topiclink">QUIET</a></span><span class="f_mine"> mode. &nbsp;This may save some time if the printout is lengthy and you don't want to see it on the screen first.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The font size of hardcopy printouts may be adjusted via the menu item </span><span class="f_mine" style="font-weight: bold;">Options</span><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">|</span><span class="f_mine" style="font-weight: bold;">Set Printer Offset, Margins, Font</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="ccw.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

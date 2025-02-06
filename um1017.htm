@@ -1,0 +1,623 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1017</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="spb"></a><span class="f_mine" style="font-size: 14pt;">10.17 Saddle-point Build (SPB, AEI) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1016.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1018.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The previous sections in this chapter have explained how to set up the data files for optimization, and they all assume that you start with a lens that has good possibilities. &nbsp;But sometimes you do not. &nbsp;In that case, there are four features that can assist you: the expert-systems program </span><span class="f_mine" style="text-decoration: underline;"><a href="um153.htm#xsys" class="topiclink">XSYS</a></span><span class="f_mine">, the design-search feature </span><span class="f_mine" style="text-decoration: underline;"><a href="um1014.htm#dsearch" class="topiclink">DSEARCH</a></span><span class="f_mine">, the zoom-lens version </span><span class="f_mine" style="text-decoration: underline;"><a href="um1073.htm#zsearch" class="topiclink">ZSEARCH</a></span><span class="f_mine">, and the saddle-point build method, described here. &nbsp;You are encouraged to click the links to XSYS, DSEARCH, and ZSEARCH to learn about those powerful tools too.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Saddle-point build has three flavors. &nbsp;The first requires somewhat lengthy input; it can set up many parameters for you and does not require any starting lens at all. &nbsp;The second lets you start with an existing lens and add one or more elements to it. &nbsp;The third is a short form, </span><span class="f_mine" style="text-decoration: underline;"><a href="um1017.htm#aei" class="topiclink">AEI</a></span><span class="f_mine">, which requires only a single line of input but requires a starting lens and optimization MACro to be already set up. &nbsp;The theory behind the saddle-point build is explained </span><span class="f_mine" style="text-decoration: underline;"><a href="um1017.htm#spbtheory" class="topiclink">below</a></span><span class="f_mine" style="font-family: 'Times New Roman';">. &nbsp;Be aware that SPBUILD does not honor all the same input parameters as does DSEARCH. &nbsp;So study the list carefully.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Times New Roman';">Also be aware that if you enter your own AANT file, it will override the default one, so be sure to include all your relevant goals there if you do so.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Times New Roman';">SPB creates an optimization MACro that you can use to further improve the lens. &nbsp;But you cannot add an AEI directive to this file, since AEI uses the same code as SPB and there will be a file conflict. &nbsp;So just rename the optimization MACro first.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input for the long form SPBUILD is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SPBUILD LLIB [ QUIET ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ USE CURRENT [ </span><span class="f_mine" style="text-decoration: underline;">JSSS</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">JSPS</span><span class="f_mine"> ] ] </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ PANT... &nbsp; &nbsp; &nbsp; &nbsp;! note that this is optional</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ AANT... &nbsp; &nbsp; &nbsp; &nbsp;! and so is this</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SYSTEM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">(lens ID)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">(object description)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">(wavelengths)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[color order]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">(other system data, such as AFOCAL, etc.)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GOALS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ELEMENTS </span><span class="f_mine" style="text-decoration: underline;">NB</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">FNUM </span><span class="f_mine" style="text-decoration: underline;">FN</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">BACK </span><span class="f_mine" style="text-decoration: underline;">BK</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">TOTL </span><span class="f_mine" style="text-decoration: underline;">TT</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">STOP { FIRST / MIDDLE / LAST / IGNORE }</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">STOP { FIX / FREE }</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">RSTART </span><span class="f_mine" style="text-decoration: underline;">RD</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">THSTART</span><span class="f_mine" style="text-decoration: underline;"> TH</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">NPASS </span><span class="f_mine" style="text-decoration: underline;">NP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ CEMENT ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ CENTER ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">MONO</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">RT </span><span class="f_mine" style="text-decoration: underline;">RT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">FOV </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">HBAR</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">FWT </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SNAP </span><span class="f_mine" style="text-decoration: underline;">NPASSES</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ANNEAL </span><span class="f_mine" style="text-decoration: underline;">TEMP</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">COOL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SAMPLE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GLASS {POSITIVE/NEGATIVE}</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">{ S/O/H/F/U/C/G/R/M/P } </span><span class="f_mine" style="text-decoration: underline;">glassname</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SPECIAL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">(extra AANT entries)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GO</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The data that are required depend on which other options are selected.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">LLIB</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This is the number (1 to 10) of the library location that will receive the best of the lenses that are found.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">QUIET</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Since there can be a large number of cases to analyze, it is best to run in QUIET mode, to suppress all output to the Command Window until the process is complete. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">ELEMENTS</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This is the number of elements to be requested. &nbsp;Keep in mind that this is a lengthy program to run. &nbsp;A request for a 9-element lens will run in about two hours, in our tests, while a 5-element lens takes about five minutes. &nbsp;With N elements, the time scales as somewhat more than 2 to the N</span><span class="f_mine" style="vertical-align: super;">th</span><span class="f_mine"> power. &nbsp;So please do not use this feature for a 20-element microlithography lens. &nbsp;You must specify the desired number of elements.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">FNUM</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The desired F/number. &nbsp;This is required input for FOCAL systems. &nbsp;If you are designing an AFOCAL lens, you will have to put one or more ray targets in the SPECIAL section to control the magnification. &nbsp;One way to do this is to give a target value to the YA coordinate of the axial marginal ray at the next-to-last surface. &nbsp;There is no weight parameter for this item, since it is satisfied exactly by the curvature solve.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This datum is used by SPBUILD only if not superseded by other data.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">BACK</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The desired back focal distance. It is wise to specify a value, either here or in the SPECIAL section, since the lenses can get rather weird otherwise. &nbsp;The weighting of this aberration may be specified in word 3. &nbsp;To bypass this control, enter a target of zero.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For AFOCAL systems, this quantity is the distance </span><span class="f_mine" style="font-style: italic;">before</span><span class="f_mine"> the last two (dummy) surfaces, which makes it convenient for controlling the eye relief of an eyepiece.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">TOTL</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The desired distance from first vertex to last. &nbsp;The weighting of this aberration may be specified in word 3. &nbsp;To bypass this control, enter a target of zero.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:311px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">STOP { FIRST / MIDDLE / LAST / IGNORE }</span></p>
+</td>
+<td style="vertical-align:top; width:251px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input places the stop at the requested location before optimization. &nbsp;The default is MIDDLE. &nbsp;The IGNORE option is to be used with the USE CURRENT option, when the stop is defined in another part of the system and you do not want to change that definition.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:227px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">STOP { FIX / FREE }</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:335px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Here you specify whether the program should vary the stop position by means of the YP1 variable. &nbsp;Unless you really need the stop to be in a given place, it is wise to let it vary. &nbsp;The default is FREE. &nbsp;In this case, the lens no longer has a declared stop, and its position is </span><span class="f_mine" style="font-style: italic;">implied</span><span class="f_mine"> by the (varying) value of YP1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">RSTART </span><span class="f_mine" style="text-decoration: underline;">RD</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry determines how closely the added shells match the adjacent surface. &nbsp;By default, the program tries both weak positive and weak negative shells, and the radii differ from the adjacent surface by the curvature implied by </span><span class="f_mine" style="text-decoration: underline;">RD</span><span class="f_mine">. &nbsp;A rather large number is usually appropriate since shorter radius values will often produce ray failures – and are obviously not consistent with the saddle-point theory, which wants the ray paths to remain almost unchanged after adding the shell.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you enter a value of zero for </span><span class="f_mine" style="text-decoration: underline;">RD</span><span class="f_mine">, the program will try only a single shell instead of two when it generates the trial cases. &nbsp;A genuine saddle point will produce a lower merit function on both sides of the saddle, but in practice both trials nearly always turn into the same added element. &nbsp;So trying both cases is redundant, and the process takes twice as long as it would if only a single case were tested. So this is a way to avoid the extra work.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also use the mnemonic RDSTART.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">THSTART </span><span class="f_mine" style="text-decoration: underline;">TH</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input gives the starting value of lens thicknesses and airspaces. &nbsp;The default is 0.1 inches. &nbsp;You may request a different value, but it should be positive and nonzero. &nbsp;Saddle-point theory implies that this number should be small, but it may make no difference in practice.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also use the mnemonic TSTART.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">NPASS </span><span class="f_mine" style="text-decoration: underline;">NP</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The number of passes to be made during optimization. &nbsp;The time required for all of the cycles, including optimization and annealing could get long rather easily. &nbsp;Too few passes yields poorer lenses, while too many passes takes a long time. &nbsp;The default is 20 passes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">CEMENT</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If entered, the program will try cemented as well as air-spaced lenses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">CENTER</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option causes the program to try additional elements, centered halfway between adjacent surfaces, when all of the usual nesting elements have been tried.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">MONO</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option will only target rays in the primary color. &nbsp;It is automatic if the lens has fewer than three colors defined.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">RT </span><span class="f_mine" style="text-decoration: underline;">RT</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry specifies the value of the aperture-dependent weighting to be assigned to rays in a ray grid. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm" class="topiclink">Section 10.3.1.1</a></span><span class="f_mine"> for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">FOV …</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input lets you override the default three field points. &nbsp;Here, you may enter the desired HBAR value for up to five points.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">FWT …</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These entries define the field weights to be applied. &nbsp;The default weights (for HBAR 0, 0.75, 1.0) are 10, 2, 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">SNAP </span><span class="f_mine" style="text-decoration: underline;">NPASSES</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Think carefully about using the snapshot feature here. &nbsp;While it can be informative to watch every cycle of every case, the job may take twice as long to run. &nbsp;If you do not request the snapshot, the PAD display will be updated only when the program saves a lens according to the above rules. &nbsp;Thus the display changes infrequently and there is little time lost. &nbsp;That way you see only fairly good lenses, not the zillion awful lenses that the program has to weed out. &nbsp;If you want to monitor all iterations, use the input SNAP 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">ANNEAL …</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">With this input you can override the default annealing parameters, &nbsp;which are ANNEAL 100 5. &nbsp;A higher temperature may produce more variety in your lenses, but there may be little to gain and it will take more time. &nbsp;The cooling rate affects the run time: slower cooling will run longer and probably yield better lenses. &nbsp;But remember that the purpose of this feature is not to give you great lenses, but rather to give you great starting points. &nbsp;So you will probably save time in the long run by leaving the defaults alone.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">SAMPLE</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input will create only a single case and will not optimize anything. &nbsp;What you get is therefore an example of what that case looks like, and you can check if the starting radii and thicknesses, and the system data, make sense. &nbsp;It also prepares the optimization MACro, which you can examine and try yourself to see what it does.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">GLASS …</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">In this section you can designate two glass types to be assigned to either positive or negative elements (considering only the assigned powers, not the power that results from a curvature solve.) &nbsp;If either of these designations is used, you must specify both of them; the glasses will then not be varied during optimization. &nbsp;This feature is intended for systems not in the visible, where the glass model is not appropriate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The naming conventions are the same as glass-table glass entry in an RLE file (</span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm#gtb" class="topiclink">GTB</a></span><span class="f_mine">). &nbsp;See the last example in the </span><span class="f_mine" style="text-decoration: underline;"><a href="um1014.htm#dsearch" class="topiclink">DSEARCH</a></span><span class="f_mine"> section for a sample.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">SPECIAL</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This section is where you can type anything that can go into an </span><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm#aant" class="topiclink">AANT</a></span><span class="f_mine"> file, letting you control nearly anything you need. &nbsp;You do not have to enter any image-quality requests, since the default merit function takes care of this. &nbsp;But you could, for example declare the FOV input described above in the GOALS section with no arguments, thus defeating the default ray definitions – and then enter your own set here in the SPECIAL section. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you want your lens to be telecentric, you might enter the line</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M 0 1 A P HH 1 </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this section. &nbsp;Or if distortion is an issue, you might add</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M 0 10 A P YA 1</span></p>
+<p class="p_mine"><span class="f_mine">S GIHT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">to control it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This is where you can also enter any of the monitoring requests, such as </span><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm#monitor" class="topiclink">AEC</a></span><span class="f_mine">, ACC, ACM, ASA, ACA, AAC, AGE, or AAE. &nbsp;The first two of these are automatically placed into the merit function by SPBUILD, but if you want to override the default arguments, you can enter your own request in this section.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The formats for this section must follow the AANT file formats, or the process will abort. &nbsp;There is a limit of 20 lines for this section.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If SPB encounters ray failures when it tries to optimize the many systems, it may fail to find one good enough to save. &nbsp;In that case, the results are unpredictable. &nbsp;If this happens, try adding targets for the upper and lower rim rays at full field in this section. &nbsp;The program will then only find solutions where those rays trace, and this problem should go away.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="spbtheory"></a><span class="f_mine" style="font-weight: bold;">Saddle-Point Build Theory</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The Saddle-Point method of constructing lenses is based on an algorithm that is very different from the binary-search scheme used by </span><span class="f_mine" style="text-decoration: underline;"><a href="um1014.htm#dsearch" class="topiclink">DSEARCH</a></span><span class="f_mine">. &nbsp;Here we use ideas originally developed by Dr. Florian Bociort, who has studied ways to escape from local minima when optimizing a lens. &nbsp;The subject is explained in a recent paper: </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_HTMLPreformatted"><span class="f_HTMLPreformatted" style="font-size: 11pt; font-family: Arial;">F. &nbsp;Bociort and M. van Turnhout, &quot;Finding new local minima in lens design landscapes by constructing saddle points&quot;, Optical Engineering 48, 063001 (2009) </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For more information, please see his web page </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_HTMLPreformatted"><span class="f_Hyperlink" style="font-size: 11pt;"><a href="http://homepage.tudelft.nl/q1d90/FBweb/networks.html" class="weblink">http://homepage.tudelft.nl/q1d90/FBweb/networks.html</a></span><span class="f_HTMLPreformatted" style="font-size: 11pt; font-family: Arial;">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The central idea in this scheme is that, in N dimensions, a local minimum is a spot where the merit function gets worse in every direction. &nbsp;Starting with a lens in such a minimum, in principle one can add an element of zero power and zero thickness adjacent to one of the existing elements, with curves that match the side to which they are attached, and the merit function will not change. &nbsp;But now you have added some more dimensions, and in general there will be new minima in the vicinity that were not available before. &nbsp;If one changes the power of the weak shell to, say, a small positive value and reoptimizes using the additional variables, the system should move to one of the new minima. &nbsp;If you start with a small negative power, it may go to a different minimum. &nbsp;The topography in each case resembles a saddle point: things go up in every direction corresponding to the previous variables, but can go down in two directions along each of the new dimensions.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input for SPBUILD is much the same as for DSEARCH and is discussed above, but the implementation is quite different and there are more options. &nbsp;You can include your own PANT and AANT files as part of the SPBUILD input – which you cannot do with DSEARCH.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are three general approaches available in SPBUILD: where you start with an existing lens to which you wish to add elements, where you start with nothing at all, and where you already have a lens and optimization MACro set up and just want to find the best place to insert a single additional element. &nbsp;The action of the program is somewhat different in these cases. &nbsp;We first discuss the case where there is no starting lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Building a lens from scratch</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If no starting lens is declared, the program generates a singlet to start things off, using the SYSTEM data to establish the basic properties of the lens. &nbsp;Then it then does the following:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It optimizes the singlet, and the result is taken as the base lens. &nbsp;It then adds a thin shell at side 1, first with a small positive power and then with negative power, and reoptimizes everything each time. &nbsp;Then it does the same thing on side 2 of the singlet, again optimizing the system each time.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The best of these four cases is declared the new base lens. &nbsp;At this point we have a doublet that has been optimized and annealed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This process is continued, with trial shells added to the left and right sides of each of the two elements, with both small positive and then small negative power. &nbsp;When all elements have been so treated we select the best of the lot, and we now have an optimized three-element lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Continuing in this fashion, we wind up with a lens of the requested number of elements.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">As each case is investigated, the program first runs a normal optimization job for the requested number of passes, and then runs the same job again in order to free up any glass variables that became pinned to the boundaries of the glass chart. &nbsp;(After the first optimization, the lens will likely have changed so much that different glass properties might be called for.) &nbsp;Then it runs the simulated annealing program with the requested input parameters.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The process departs from pure saddle-point theory, however: we do not start out with zero shell thickness, for example, because that would defeat the automatic edge-feathering control. &nbsp;The small thickness that is used (taken from the THSTART data) changes the merit function slightly – and of course the shell probably also has an edge thickness violation at that point. &nbsp;So the merit function does in fact change as each shell is tested, but the process works fairly well nonetheless. &nbsp;We also depart from the theory if the user enters a radius value of zero; in that case only a single zero-power shell is tried at each iteration, saving roughly half the time and usually working almost as well.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the case we are discussing, (no starting lens), there is no point in entering a PANT file of your own, since the program manages all of the variables in the system itself. &nbsp;You may enter your own AANT file, however, and if you do, the only entry needed in the GOALS section is the number of elements, the number of passes, and the annealing parameters. &nbsp;If you do not enter your own AANT file, the program will create one for you based on the other parameters and targets in the GOALS section.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Starting with a current lens</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A somewhat more powerful approach starts out with a given lens and adds elements to it according to the above steps. &nbsp;The process is the same as that described above except that the program then does not start with a singlet. &nbsp;To use this option, the starting lens must be current, the goals must be declared as usual, and the requested number of elements should be greater than the starting number. &nbsp;The input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">USE CURRENT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSPS</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">must be the second line of the file, following the SPBUILD line. &nbsp;SYSTEM data, if entered, will be ignored in this case. &nbsp;The entire current lens will be treated, but you can specify that only a portion of the system will be subjected to the saddle-point building process. The range of this portion is given by the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSPS</span><span class="f_mine"> parameters. &nbsp;The requested number of elements applies to that portion, not to the lens as a whole.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program will maintain most of the solves in the active region as it adds elements, moving them to different surfaces as required as the geometry of the system changes – but it will delete any pickups there as it adds shells in various places. &nbsp;If the active region includes the last element in the lens, the program will add a curvature solve to that element, the value taken from the FNUM parameter, if any, or from any current solve data that are present on that element initially if no FNUM data are input. &nbsp;If none of these situations apply, then the F/number of the lens is uncontrolled by SPBUILD, and it is then your responsibility to provide an adequate control in the AANT file. &nbsp;If you do not provide an AANT file, the program will create one for you, as with DSEARCH, based on the GOALS parameters. &nbsp;The AANT and PANT files, if entered, must precede the GOALS section.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The purpose of allowing a PANT file within the SPBUILD input is so that you can specify variables that are </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> in the active region if you want to. &nbsp;The program will remember those variables and reassign them to the appropriate surfaces as the active region is altered. &nbsp;It will ignore any declared variables in the PANT file that refer to surfaces </span><span class="f_mine" style="font-style: italic;">within</span><span class="f_mine"> the active region, however. &nbsp;Those variables are managed entirely by the program and are added as required as the system geometry changes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A thickness solve will be in effect if the lens is FOCAL and the last element is in the active region. &nbsp;The lens will be assigned a paraxial pupil (to allow the stop position to vary).  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program will delete any </span><span class="f_mine" style="text-decoration: underline;"><a href="um78.htm#efile" class="topiclink">EFILE</a></span><span class="f_mine"> edges that may be in effect in the current lens, since they will very likely make no sense once the construction geometry is changed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are restrictions. &nbsp;The active region of the starting lens must have no tilts or decenters, no GLOBAL or LOCAL surfaces, no reflectors, no HOEs, DOEs, or gratings, and it must not be a zoom lens. &nbsp;In other words, it must be a pretty simple setup. &nbsp;(Surfaces not in this region may have any of the above, to the extent that they make sense.) &nbsp;If the last element is in the active region, it is wise to use a curvature and thickness solve there so the lens will satisfy the first-order requirements. &nbsp;If it is not in the active region, then you should probably </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> put a curvature solve at the end, since that would change the last element whenever the active region is altered – which is probably not what you had in mind. &nbsp;On the other hand, if you enter a PANT file that varies elements not in the active region, then the solve might make sense.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the last element is in the active region, then the requested FNUM parameter will be put in force as each shell is investigated – and if that yields a different F/number from the initial lens, the lens will be changed accordingly. &nbsp;Since one wants the changes to perturb the initial lens as little as possible, it is best to specify the same FNUM as is currently in effect (or to omit that item entirely, so the system will use the previous value).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Cemented and dummy surfaces are permitted in the active region. &nbsp;No shells will be added at a cemented interface, but they will be added at an internal dummy surface immersed in AIR. &nbsp;In this case, only two attempts are made, instead of the usual four, at that surface. &nbsp;No shell will be attempted at a dummy surface that immediately precedes the image surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">All of the shells are defined with AIR on both sides unless the optional </span><span class="f_mine" style="font-weight: bold;">CEMENT</span><span class="f_mine"> directive has been entered. &nbsp;If that is the case, the program tries a cemented shell on both sides of each element when it has finished evaluating the air-spaced shells. &nbsp;Sometimes the best design then incorporates a cemented pair. &nbsp;Usually one is better off with air-spaced singlets, however. &nbsp;One then has more degrees of freedom and hence more variables. &nbsp;But some designs require cemented elements, such as when an airspace would cause ray trace failures. &nbsp;So you can experiment with this option and determine whether it is appropriate for your system.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Special care is required if you want to control something at an </span><span class="f_mine" style="font-weight: bold;">intermediate surface</span><span class="f_mine">, as might happen if the system contains an internal reticle and you want a sharp image there as well as a well-corrected exit beam. &nbsp;If one simply corrects a ray grid at the reticle (by giving that surface number on the GNR or other directive) then anytime an element is inserted at a lower-numbered surface the surface number of the reticle gets changed -- so the aberrations then specify the wrong surface. &nbsp;To avoid this problem, you should assign the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3312.htm#flag3312" class="topiclink">FLAG</a></span><span class="f_mine"> attribute to the intermediate surface and then specify the word &quot;FLAG&quot; instead of the surface number on the aberration definition.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We have found that the results are influenced by the random element in the annealing stage, and the resulting configurations tend to be somewhat different each time you run the program. &nbsp;But usually the best one is of comparable quality to that produced by DSEARCH – and the process executes more quickly since the initial base lenses have fewer elements to optimize. &nbsp;One often sees configurations that are quite different from the DSEARCH results, which can be interesting. &nbsp;If you run it several times, you will get several different solutions, so feel free to explore.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One can turn off the annealing step by giving a starting temperature of zero. &nbsp;We recommend that this powerful tool be used, however, as part of the process.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The options to control the stop position have less effect in SPBUILD than in DSEARCH. &nbsp;As one adds shells to the base lens, one does not want to redefine the stop position every time since that defeats the theory – which says that the lens is otherwise unchanged. &nbsp;If the stop is free to vary, the program therefore lets it remain where it was as elements are added, while if the stop is declared fixed, it is reassigned to the desired position in each case. &nbsp;This usually makes a major change to the lens, unless it was on surface 1, which defeats the theory (although the resulting lens might be okay anyway), so we recommend that the stop remain free to move for this feature unless it is in a different section, not in the active region, and must stay there.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you do not declare a starting lens, the program generates a singlet to start off with. &nbsp;If you then let the stop position vary, it immediately goes out some distance in front – since that is the best configuration for a singlet. &nbsp;As lenses are added, this position </span><span class="f_mine" style="font-style: italic;">can</span><span class="f_mine"> move to a place inside the lens, but often it does not. &nbsp;When that happens, the program will usually fail to see other attractive configurations, such as the double Gauss objective – and for this reason, if you want, for example, a lens that is a derivative of the triplet, which has the stop inside the lens, then it is wise to add an entry in the SPECIAL section to force the chief ray inside the lens, as shown in an example below. &nbsp;You can also start with a triplet, with an internal stop, and utilize the USE CURRENT option. &nbsp;You can of course start with a Petzval lens, or any other form, and you will get a derivative of that configuration, which makes SPBUILD an excellent tool for investigating the many possibilities inherent in putting together a set of elements that work well together.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">As the shells are added, the radii are offset from the attached lens surface radius by the curvature given in the RSTART input. &nbsp;This radius should be quite long. &nbsp;If it is too short, the lens is altered by a large amount and one is then not starting from the current local minimum, which again defeats the theory. &nbsp;In addition, large radius differences will likely cause ray failures, which will cause that case to be skipped. &nbsp;The initial shell thickness is taken from the THSTART parameter, and it also should be small.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One should use a higher number of passes with SPB than with DSE. &nbsp;The point is to find the minimum before adding new elements, and that is likely to be missed with too few iterations. &nbsp;We recommend at least 20. &nbsp;There is little use for the SAMPLE option, since it will just be the starting singlet and not very interesting. &nbsp;We have had good results with an annealing temperature of 200 and a cooling rate of 20 – but you will want to experiment with these settings to find what works best with your lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If your design is a zoom lens with an alternate object distance via the ZFOCUS option, do not attempt to add surfaces in front of that group. &nbsp;The group number is already fixed, and an added element will not be treated as part of it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If explicit glass types are entered with the GLASS... parameters, then positive shells get the glass assigned to positive elements, and vice-versa, and the glass model is not used or varied in that case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that the program automatically adds AEC and ACC directives to the optimization MACro. &nbsp;These keep the system looking reasonable – but if, for example, your lens has a large aperture and will likely require elements thicker than the default 1 inch, you should add your own </span><span class="f_mine" style="text-decoration: underline;"><a href="um1038.htm#aacc" class="topiclink">ACC</a></span><span class="f_mine"> to the SPECIAL section, specifying a larger value for </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine">. &nbsp;Otherwise those required solutions will never be found. &nbsp;If you provide your own AANT file, then the above comments do not apply and you have the responsibility of managing the entire merit function yourself. &nbsp;In that case, you should avoid targetting anything that explicitly refers to a surface number within or past the active region, since those surface numbers change constantly as the program adds elements.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When the program has finished, it saves a copy of the optimization MACro in the file SPBUILD_OPT.MAC. &nbsp;That file always specifies optimization with 20 passes, and of course you are free to amend it in any way you wish before you run it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SPB is not recommended for multiconfiguration optimization. &nbsp;If the alternate configurations pick up data from the main configuration, which is the usual case, then those pickups will not work after the surface numbers in the latter have been changed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Example</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate the SPBUILD feature using the default starting singlet, we enter the following MACro:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SPB 3 &nbsp;QUIET</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SYSTEM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">OBB 0 20 12.7</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">UNI MM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GOALS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ELEMENTS 5</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">FNUM 3.5</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">BACK 33 .1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">STOP MIDDLE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">STOP FREE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">THSTART 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">!RSTART 2000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">RSTART 0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SNAP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">NPAS 80</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ANNEAL 100 50</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SPECIAL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ACA 60 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ACC 40 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">LUL -1 1 1 A P YA 1 0 0 0 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GO</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this input we override the default </span><span class="f_mine" style="text-decoration: underline;"><a href="um1038.htm#aacc" class="topiclink">ACC</a></span><span class="f_mine"> control, which limits the center thickness to no more than 25.4 mm (which is too small for this lens), and we add a critical-angle control (</span><span class="f_mine" style="text-decoration: underline;"><a href="um103_13.htm#aca" class="topiclink">ACA</a></span><span class="f_mine">) to avoid cases where the rays emerge from an element at grazing incidence. &nbsp;Note the LUL request in the SPECIAL section; this penalizes the chief ray if its intercept on surface 1 is positive (which happens if the stop is external). &nbsp;With this trick we ensure that the resulting lenses will have an internal stop -- which otherwise will not usually be the case, as noted in the text above. &nbsp;The RSTART request of 2000 mm has been commented out; the zero value examines only a single shell at each stage and runs twice as fast. &nbsp;Uncomment that line (and comment the next) to see if a better solution results if two shell powers are examined.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> An interesting result is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0028.png" width="458" height="233" alt="clip0028" style="width:458px;height:233px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Next is an example of the USE CURRENT option. &nbsp;We start with a triplet of F/2.8, shown below, and want to find a good configuration with five elements. &nbsp;We do not specify an active region, so the program will alter the whole lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="spb2.png" width="767" height="472" alt="spb2" style="width:767px;height:472px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The MACro in this case is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SPBUILD 3 &nbsp;QUIET</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> USE CURRENT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> GOALS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> ELEMENTS 5</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> FNUM 2.8</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> BACK 0 0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> TOTL 0 0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> STOP MIDDLE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> STOP FREE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> RSTART 1000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> THSTART .01</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> NPASS 20</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> ANNEAL 200 20</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> SNAP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> SPECIAL </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> LLL 10 1 .1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">A BACK</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> GO</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the SPECIAL section here we have specified that the back focus not be less than 10 mm. &nbsp;(There may be great solutions with a virtual image, which we don’t want to see.) &nbsp;This was done using one form of the limit aberration, </span><span class="f_mine" style="text-decoration: underline;"><a href="um10351.htm" class="topiclink">LLL</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When the process is complete, we have a 5-element lens with much better performance. &nbsp;If we were to run this MACro again, we would very likely get a different configuration.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="spb3.png" width="767" height="472" alt="spb3" style="width:767px;height:472px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is an example where we start with an existing design and want to modify only a portion of it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="spb4.png" width="745" height="225" alt="spb4" style="width:745px;height:225px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This system has an objective lens, a relay section, and a collimating section at the end. &nbsp;The relay presently has three elements, and we want to find the best place to insert an element in that portion so as to improve the image. &nbsp;Here is the input:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SPBUILD 9 QUIET</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">USE CURRENT 6 11 &nbsp; &nbsp; &nbsp; &nbsp;! this is the relay section</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">AANT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! use a custom AANT file</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">AEC </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ACC </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ACA 60 1 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! note the critical-angle control, to avoid ray failures</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">M 100 .1 A TOTL &nbsp; &nbsp; &nbsp; &nbsp;! target the total length</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">M .25 .1 A P HH 1 &nbsp; &nbsp; &nbsp; &nbsp;! this controls the output angle at the end</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">LLL 2 1 1 A BACK &nbsp; &nbsp; &nbsp; &nbsp;! the paraxial quantity BACK is actually the eye relief </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">M 0 1 A SAP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! control of pupil aberration at the exit pupil</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GSR .5 10 5 P 0  &nbsp; &nbsp; &nbsp; &nbsp;! a set of rays to be corrected</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GSR .5 10 5 1 0 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GSR .5 10 5 3 0 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR .5 2 3 P .7 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR .5 2 3 1 .7 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR .5 2 3 3 .7 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR .5 1 3 P 1 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR .5 1 3 1 1 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR .5 1 3 3 1 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GOALS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ELEM 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! the active region will get four elements</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">STOP IGNORE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! the stop stays at the objective</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">NPAS 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ANNEAL 50 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GO</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This produces an improved setup with a four-element relay.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="aei"></a><span class="f_mine" style="font-weight: bold;">Automatic Element Insertion</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A simplified form of saddle-point build is available, intended for when you already have a lens that is fairly well corrected and an optimization MACro with all of the parameters already set up, and you want to find the best place to insert a single element. &nbsp;In this case, the problem is well defined and most of the SPB input is not necessary. &nbsp;Only a single line of input is required, which should go in the MACro just before the PANT and AANT entries. &nbsp;The command is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">AEI </span><span class="f_mine" style="text-decoration: underline;">LLIB</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">JSSS</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">JSPS</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">FLAG</span><span class="f_mine"> [ </span><span class="f_mine" style="text-decoration: underline;">RSTART</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">TSTART</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">TEMPERATURE</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">COOLING</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">PINP</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">PINN</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="text-decoration: underline;">FLAG</span><span class="f_mine"> is one of { CEMENT / CONLY / CENTER / CNONLY / CC / 0 }. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">CENTER</span><span class="f_mine"> examines both airspaced and centered elements, and </span><span class="f_mine" style="font-weight: bold;">CC</span><span class="f_mine"> turns on both CEMENT and CENTER. &nbsp;If neither option is desired, enter 0 for this argument; in that case, only airspaced shells will be evaluated. &nbsp;Most arguments are similar to those used with SPB, described above. &nbsp;AEI also has two additional flags not found in SPB: &nbsp;The </span><span class="f_mine" style="font-weight: bold;">CONLY</span><span class="f_mine"> option only examines cemented shells. &nbsp;If you suspect your lens will benefit from a cemented interface, you can save some time by only examining those cases. &nbsp;The CNONLY option only adds centered elements, which can be useful if your lens has many small airspaces and it makes little sense to evaluate shells at both sides of those spaces. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature normally assigns a glass model to the inserted element, but if you prefer that it assign a real glass -- or if the wavelengths are greater than 2.0 um, where the glass model is not appropriate -- you can request that the element be assigned an index pickup instead. &nbsp;Two optional arguments specify the surface numbers of the starting system from which the index is to be obtained and assigned to positive (with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">PINP</span><span class="f_mine">) or negative shells (with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">PINN</span><span class="f_mine">). &nbsp;Thus, if your lens has glass type BK7 on surface1 and F2 on surface 21, you might enter the numbers 1 and 21 in words 10 and 11 of the AEI command if you want those two glasses to be used in the added element. &nbsp;(If you want any real glass type that is not currently in the lens, you must use the full </span><span class="f_mine" style="font-weight: bold;"><a href="um1017.htm#spb" class="topiclink">SPB</a></span><span class="f_mine"> format, given above in this section.) &nbsp;If </span><span class="f_mine" style="text-decoration: underline;">PINP</span><span class="f_mine"> is nonzero, you must enter a valid surface number for </span><span class="f_mine" style="text-decoration: underline;">PINN</span><span class="f_mine"> as well.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The requested surface range may not contain a reflecting surface. &nbsp;If one is present, you should &nbsp;run AEI twice, requesting surfaced before the mirror, and then surfaces after it.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program will add shells to aspheric surfaces within the requested range, but in this case the shells start out with flat surfaces. &nbsp;The added elements will therefore end up with spherical surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">AEI honors the shorcuts LB0, LB1, etc, as described in <a href="um103.htm#lb0" class="topiclink">Section 10.3</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default annealing temperature is 100, and the cooling rate is 20. &nbsp;This is a useful combination, but you can experiment with others if you wish. &nbsp;If you enter a temperature of zero, the annealing phase is skipped completely. &nbsp;This will execute much faster but the results are usually not as good.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The behavior of the program in this mode is slightly different from that outlined in the previous paragraphs.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;If the stop has been assigned to a surface within the active region, the program will convert it to an implied pupil and will vary the paraxial quantity YP1. &nbsp;Otherwise it will retain the present stop definition. &nbsp;(The stop is always fixed if the lens is a </span><span class="f_mine" style="text-decoration: underline;"><a href="um1071.htm#zfile" class="topiclink">ZFILE</a></span><span class="f_mine"> zoom lens, since the YP1 variable only applies to zoom 1.) &nbsp;If you do not want YP1 to vary, be sure that the stop surface is not in the active region.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;Variables that were assigned to the lens in the PANT file are retained by AEI, and radii and spacing variables for the added shell are varied as well. &nbsp;Note that, if a given TH is not given as a variable, it will not be subject to the AEC monitor and might well show feathered edges after AEI is finished..</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;Only a single element will be inserted at a time. &nbsp;Elements are not inserted at a dummy surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">4. &nbsp;Avoid using aberrations that are defined at an intermediate surface unless you have assigned that surface the </span><span class="f_mine" style="font-weight: bold;">FLAG</span><span class="f_mine"> attribute, since the surface numbers change whenever AEI inserts an element. &nbsp;It is likely that an aberration assigned to an explicit surface number will thereafter apply to the wrong surface. &nbsp;(You can, however, use the </span><span class="f_mine" style="font-style: italic;">implied</span><span class="f_mine"> surface numbers, such as </span><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm#lb0" class="topiclink">LB0</a></span><span class="f_mine">, LB1, to LB5. &nbsp;Those will be updated as elements are added.) &nbsp;If the FLAG is assigned, you can refer to that surface with the same mnemonic in the AANT file.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">5. &nbsp;If you request only a few optimization cycles and use the monitors AEC AAE, and AGE (for controlling edge thicknesses), assign them a very low weight. &nbsp;The new elements, when added, will usually violate those conditions, and the merit function will be very large otherwise. &nbsp;It is then unlikely that a quick optimization will be able to bring it down to where it looks like an improvement. &nbsp;That case will therefore be skipped, even though it might be an attractive configuration once you work out the violations. &nbsp;This is less important if you request a larger number of cycles; we generally request 20 to 30.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">6. &nbsp;The program always add a YMT solve if the active region extends to the last element and the lens is FOCAL (except for zoom lenses). &nbsp;If the starting lens has a curvature solve on the last element, that solve will be retained -- or transferred to the new shell if that is inserted at the end of the lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">7. &nbsp;AEI (unlike SPBUILD) honors the CORE directive. &nbsp;This can be a great time saver if your lens is complex.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">8. &nbsp;If you enter a value of zero for </span><span class="f_mine" style="font-weight: bold;">RSTART</span><span class="f_mine">, the program will only evaluate a single shell at each location. &nbsp;This runs twice as fast as does evaluating two powers of each shell, but you might miss a good configuration -- and the program will not evaluate any </span><span class="f_mine" style="text-decoration: underline;">PINN</span><span class="f_mine"> pickup since it never tries a negative shell.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When the process is complete, the program lists the final merit function found by each core and shows the best on on the PAD display. &nbsp;In the event you wish to look at any of the others, they can be found as AEI</span><span class="f_mine" style="text-decoration: underline;">nn</span><span class="f_mine">.RLE, where </span><span class="f_mine" style="text-decoration: underline;">nn</span><span class="f_mine"> is the core number-1. &nbsp;Thus the result from core 1 is found in AEI00.RLE and so on.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate this feature, we will try to improve the lens X32.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="spb5.png" width="762" height="467" alt="spb5" style="width:762px;height:467px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is our MACro:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">FET X32</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">CORE 8</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">CHG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">13 UMC -.125 YMT &nbsp; &nbsp; &nbsp; &nbsp;! add solves to control F/number and defocus</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">EFILE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ERASE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! erase all EFILE edges</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">AEI 5 1 11 0 10000 .2 50 10 &nbsp; &nbsp; &nbsp; &nbsp;! request insertion of one element, somewhere</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">PANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">VLIST RAD 1 2 3 4 5 6 8 9 10 11 12 &nbsp; &nbsp; &nbsp; &nbsp;! variables to design starting lens</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">VLIST TH ALL EXCEPT 1 2 &nbsp; &nbsp; &nbsp; &nbsp;! if varied, the first lenses become very thick, so we fix them this way</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">AANT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! this merit function is the complete description of the goals</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">AEC </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ACC 9 1 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GSR .5 3 4 P 0 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GSR .5 3 4 1 0 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GSR .5 3 4 3 0 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR .5 2 4 P .7 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR .5 2 4 1 .7 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR .5 2 4 3 .7 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR .5 1 4 P 1 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR .5 1 4 1 1 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR .5 1 4 3 1 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SNAP 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SYNO 30</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program comes back with an added element just before what was the stop surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0164.png" width="765" height="514" alt="clip0164" style="width:765px;height:514px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Only now it is not the stop anymore. &nbsp;Since the latter was originally on surface 7, which is within the active group, the program assigned an implied stop and varied its location. &nbsp;Now it wants to be just before the element at surface 10.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This example shows how one may very easily find the best place to insert an element. &nbsp;Users are encouraged to experiment with this interesting algorithm, and let us know of your results.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1018.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

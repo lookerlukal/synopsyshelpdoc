@@ -1,0 +1,872 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>tmch6</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="text-align: center;"><span style="font-size: 18pt; font-style: italic; font-weight: bold;">Chapter 6</span></p>
+<p class="p_heading4-1" style="border-top: none; border-right: none; border-left: none;"><span class="f_heading4-1">Optimization with SYNOPSYS</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">In this chapter you will begin to use one of the most powerful features of SYNOPSYS: the optimization program.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Two fundamental points should be made at the start. &nbsp;The first is that, in SYNOPSYS, there is no default merit function or set of variables, and you do not define the variables at the same time that you enter the lens data, as is sometimes done. &nbsp;You could not, therefore, enter just a lens file and then tell the program to &quot;go optimize it&quot; without first defining a set of variables and a set of optimization goals. &nbsp;Often you will be able to use one of the several ready-made merit functions found in the </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">MOM</span><span class="f_p1-5" style="font-size: 11pt;"> dialog, discussed below,or with the editor toolbar button </span><img src="clip0112.png" width="24" height="25" alt="clip0112" style="width:24px;height:25px;border:none"><span class="f_p1-5" style="font-size: 11pt;">, but in any case you have to define it in some way before you can optimize the lens.  </span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">The second point is that, since the input for optimization is entered only when you need it, you do not have to consider the optimization program as exclusively an image improvement program. &nbsp;You can vary anything you want in order to accomplish practically anything you want, and this feature can be used to perform a variety of lens manipulations that do not actually involve image improvement at all</span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">.</span><span class="f_p1-5" style="font-size: 11pt;"> &nbsp;If you are new to lens optimization, you will find the </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">MOM</span><span class="f_p1-5" style="font-size: 11pt;"> dialog very helpful. &nbsp;We will use it in some of the examples, and you will find that you can select most of what you need from the onscreen tools. &nbsp;Although MOM is friendly, as you gain experience with SYNOPSYS you will find that you can accomplish what you want quite a bit faster by typing your lines into a MACro. &nbsp;To gain the best of both worlds, we have placed buttons </span><img src="clip0113.png" width="117" height="29" alt="clip0113" style="width:117px;height:29px;border:none"><span class="f_p1-5" style="font-size: 11pt;"> in the MACro editor toolbar itself; these will activate some of the most useful of the MOM dialogs and then add the resulting data lines directly into your MACro. &nbsp;That’s great for power users.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Of course, the main use of optimization is image improvement, and I will show you how to do that with SYNOPSYS; but first, let us do some other things. &nbsp;Here is an example: the triplet lens that you entered has a YMT solve on the final airspace, so the image surface, number 7, is at the paraxial focus. &nbsp;But the real marginal ray does not focus at that point because the lens has spherical aberration. &nbsp;Where does that ray focus? &nbsp;Here is how to find out. &nbsp;The session shown below gives the input in boldface type.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> </span><span style="font-family: 'Courier New';">SYNOPSYS AI&gt;</span><span style="font-family: 'Courier New'; font-weight: bold;">CHG</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> </span><span style="font-family: 'Courier New';">RLE&gt;</span><span style="font-family: 'Courier New'; font-weight: bold;">NOP</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> RLE&gt;</span><span style="font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; GIHT &nbsp; &nbsp; &nbsp; &nbsp; FOCL &nbsp; &nbsp; &nbsp; &nbsp; FNUM &nbsp; &nbsp; &nbsp; &nbsp; BACK &nbsp; &nbsp; &nbsp; &nbsp; TOTL &nbsp; &nbsp; &nbsp; &nbsp; DELF</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; 18.19797 &nbsp; &nbsp; 49.99852 &nbsp; &nbsp; &nbsp;4.50032 &nbsp; &nbsp; 43.24391 &nbsp; &nbsp; 15.68982 &nbsp; &nbsp; &nbsp;0.00000</span></p>
+<p><span style="font-family: 'Courier New';">Lens number &nbsp; &nbsp;10 ID COOKE TRIPLET F/4.5</span></p>
+<p><span style="font-family: 'Courier New';"> SYNOPSYS AI&gt;</span><span style="font-family: 'Courier New'; font-weight: bold;">PANT</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> PANT&gt;</span><span style="font-family: 'Courier New'; font-weight: bold;">VY 6 TH</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> PANT&gt;</span><span style="font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> SYNOPSYS AI&gt;</span><span style="font-family: 'Courier New'; font-weight: bold;">AANT</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> AANT&gt;</span><span style="font-family: 'Courier New'; font-weight: bold;">M 0 1 A P YA 0 0 1</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> AANT&gt;</span><span style="font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> SYNOPSYS AI&gt;</span><span style="font-family: 'Courier New'; font-weight: bold;">SYNO 5</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> SYNOPSYS OPTIMIZATION PROGRAM</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> THE FOLLOWING MODE CONTROL SWITCHES ARE ON:</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp;1 &nbsp; 2 &nbsp; 4 &nbsp; 5 &nbsp; 7 &nbsp; 8 &nbsp;10 &nbsp;24 &nbsp;28 &nbsp;29 &nbsp;32 &nbsp;35 &nbsp;39 &nbsp;41 &nbsp;42</span></p>
+<p><span style="font-family: 'Courier New';"> 45 &nbsp;54 &nbsp;60 &nbsp;62 &nbsp;64 &nbsp;65 &nbsp;67 &nbsp;71 &nbsp;83 &nbsp;85 &nbsp;91</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> Iteration No. &nbsp; &nbsp; &nbsp;1</span></p>
+<p><span style="font-family: 'Courier New';"> Present merit function &nbsp;5.132594E-05</span></p>
+<p><span style="font-family: 'Courier New';"> Damping factor  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5.000000E-01</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> Iteration No. &nbsp; &nbsp; &nbsp;2</span></p>
+<p><span style="font-family: 'Courier New';"> Present merit function &nbsp;5.006645E-05</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> Improvement in the merit function is below threshold value.</span></p>
+<p><span style="font-family: 'Courier New';"> The KICK or ANNEAL function may further improve the lens.</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> Final merit function &nbsp; &nbsp;3.492738E-23</span></p>
+<p><span style="font-family: 'Courier New';">Lens number &nbsp; &nbsp;10 ID COOKE TRIPLET F/4.5</span></p>
+<p><span style="font-family: 'Courier New';"> SYNOPSYS AI&gt;</span><span style="font-family: 'Courier New'; font-weight: bold;">6 TH?</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New';"> The thickness or spacing of surface number &nbsp;6 &nbsp;is &nbsp; &nbsp; &nbsp;43.30799261</span></p>
+<p><span style="font-family: 'Courier New';"> SYNOPSYS AI&gt;</span></p>
+<p class="p_heading1-4"><span class="f_heading1-4">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">This example defined a single variable, the thickness of surface 6, and one aberration to be corrected, namely the Y-coordinate of the on-axis marginal ray. &nbsp;These items were defined in a parameter file called </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">PANT</span><span class="f_p1-5" style="font-size: 11pt;"> and an aberration file, </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">AANT</span><span class="f_p1-5" style="font-size: 11pt;">. &nbsp;You will see in this chapter many other items that can be put into these two files, in a variety of formats. &nbsp;The answer to our question is shown in the last line: 43.308 mm.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-5">&nbsp;</span></p>
+<p><a name="tm6l1"></a><span class="f_p1-5" style="font-size: 14pt;">Individual Ray Aberrations</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Let us examine the single ray target that was entered.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p2-5" style="margin: 0px 0px 0px 39px;"><span class="f_p2-5" style="font-size: 11pt; font-family: Courier;">M 0 1 A 2 YA 0 0 1</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">This line reads as follows: &quot;Minimize to a target of 0 with a weight of 1 the following quantity: add in color 2 the actual Y-coordinate of the ray from field point 0 and pupil point (0,1)&quot;.</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p7-2" style="margin: 0px 0px 0px 0px;"><span class="f_p7-2" style="font-size: 11pt;">______________________________________________________________________</span></p>
+<p class="p_p1-5" style="margin: 0px 12px 0px 0px;"><span class="f_p1-5">&nbsp;</span></p>
+<p><a name="tm6l2"></a><span class="f_p1-5" style="font-size: 10pt; font-style: italic; font-weight: bold; text-decoration: underline;">General format, individual ray aberration</span></p>
+<p class="p_p1-5" style="margin: 0px 12px 0px 0px;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="margin: 0px 12px 0px 0px;"><span class="f_p1-5" style="font-size: 10pt; font-weight: bold;">M </span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">TARGET</span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">WEIGHT</span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold;"> { A / S / MUL / DIV } { </span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold;"> / P } </span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">name</span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">XEN</span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">YEN</span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold;"> [ </span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p1-5" style="font-size: 10pt; font-weight: bold;"> ]</span></p>
+<p class="p_p7-2" style="margin: 0px 0px 0px 0px;"><span class="f_p7-2" style="font-size: 11pt;">______________________________________________________________________</span></p>
+<p class="p_p1-5" style="margin: 0px 12px 0px 0px;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">Where </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">name</span><span class="f_p1-5" style="font-size: 11pt;"> is usually one of the following:</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">XA</span></p>
+<p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">YA</span></p>
+<p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">ZA</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:485px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">Actual coordinate, in X, Y, or Z</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">XC</span></p>
+<p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">YC</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:485px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">X or Y coordinate, measured from the chief ray</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">OPD</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:485px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">Optical path difference</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">ZZ</span></p>
+<p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">HH</span></p>
+</td>
+<td style="vertical-align:top; width:485px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">Angle tangents of ray path; see </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="tmch3.htm" class="topiclink">Chapter 3</a></span><span class="f_p1-5" style="font-size: 11pt;"> </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Much useful lens design can be performed with just this one feature. &nbsp;The list above gives eight out of a total of 40 different targets permissible for </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">name</span><span class="f_p1-5" style="font-size: 11pt;">, which include ray intercepts in other coordinate systems and hologram parameters, among other things. &nbsp;Examine the printout from this optimization.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">When the program starts, it tells you which mode switches are on, for your records. &nbsp;The </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">SYNOPSYS</span><span class="f_p1-5" style="font-size: 11pt;"> command requested a total of five iterations, but in this simple case only two were needed. &nbsp;The merit function has been reduced to </span><span style="font-family: 'Courier New';">3.492738E-23,</span><span style="font-size: 11pt;"> which is a </span><span style="font-size: 11pt; font-style: italic;">very</span><span style="font-size: 11pt;"> small number.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">If you are completely new to computer lens optimization, you will appreciate a review of the basic concepts. The errors are expressed as a set of numbers representing the departure from the goals, and the sum of the squares of these errors is called the </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">merit function.  </span><span class="f_p1-5" style="font-size: 11pt;">If all of your design goals were met, the merit function would be zero, and it is the job of the optimization program to come as close to zero as physically possible using the variables you define in the PANT file. &nbsp;Since it is usually impossible to design a perfect lens, and since most of the goals you specify turn out to be nonlinear functions of the variables, the algorithm used to improve the lens deals with a very cumbersome problem that cannot be solved in closed form. &nbsp;Instead, it can only make incremental improvements that, it is hoped, will add up to sufficient gain after several iterations. &nbsp;SYNOPSYS uses a unique algorithm that approximates the higher-order properties in question, to improve the efficiency of the process. &nbsp;Look at the merit function at the start of the first and second iterations. The first pass, which uses an industry-standard algorithm called Damped Least Squares has reduced it from 5.1232E-5 to 5.066E-5. &nbsp;The second iteration uses information from the results of the first in a more powerful algorithm called the Pseudo-Second-Derivative or PSD III method, which reduces the merit function to 3.4927E-23. &nbsp;Of course, more complicated problems usually take more than two passes.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Let's look at this example again. The first step was to remove the YMT solve from the last airspace, since otherwise the program would not be able to vary thickness 6 (which is the same thing) – because a paraxial pickup or solve </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">takes precedence </span><span class="f_p1-5" style="font-size: 11pt;">over variables defined in the PANT file. &nbsp;In other words, if you want to vary something it must not be controlled by anything else. &nbsp;If you forgot to remove the solve in this example, the program would drop the variable automatically when it tried to examine the derivatives, and then terminate the run because there would be no variables left. &nbsp;The CHG file contained the instruction &quot;NOP&quot;, meaning No OPtions; this removes all pickups and solves from the lens. &nbsp;It is also possible to remove only a particular option (in a CHG file) with the input</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_t1"><span style="width:37px">&nbsp;</span><span class="f_t1" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_t1" style="font-size: 11pt; font-weight: bold;"> NCOP &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_t1" style="font-size: 11pt;">No Curvature OPtion</span></p>
+<p class="p_t1"><span style="width:37px">&nbsp;</span><span class="f_t1" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_t1" style="font-size: 11pt; font-weight: bold;"> NTOP &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_t1" style="font-size: 11pt;">No Thickness OPtion</span></p>
+<p class="p_t1"><span style="width:37px">&nbsp;</span><span class="f_t1" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_t1" style="font-size: 11pt; font-weight: bold;"> NIOP &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_t1" style="font-size: 11pt;">No Index OPtion</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">where the given surface number is the only one affected. &nbsp;You can also remove all options of a given kind:</span></p>
+<p>&nbsp;</p>
+<p><span style="width:37px">&nbsp;</span><span style="font-size: 11pt; font-weight: bold;">NCOP &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt;">(without a surface number)</span></p>
+<p><span style="width:37px">&nbsp;</span><span style="font-size: 11pt; font-weight: bold;">NTOP</span></p>
+<p><span style="width:37px">&nbsp;</span><span style="font-size: 11pt; font-weight: bold;">NIOP</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">The spreadsheet dialog </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="hidd_sps2.htm" class="topiclink">SPS</a></span><span class="f_p1-5" style="font-size: 11pt;"> gives you an interactive way to examine and change these and other surface properties, and many of the same dialogs can be accessed while you have the WorkSheet open, if you click on the toolbar buttons.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Here is a plotted SFAN from this lens before and after running the above commands.</span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p3-3"><img src="tm6f1.png" width="569" height="167" alt="tm6f1" style="width:569px;height:167px;border:none"></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">As you can see, the lens is now at the marginal focus. &nbsp;The left SFAN is at the paraxial focus and shows negative third-order and positive fifth-order spherical aberration. &nbsp;Let us look at the values of these and other aberrations. &nbsp;Type the command </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">THIRD</span><span class="f_p1-5" style="font-size: 11pt;">:</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';">SYNOPSYS AI&gt;</span><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">THIRD</span><span style="font-size: 9pt; font-family: 'Courier New';">  &nbsp; &nbsp; &nbsp; &nbsp;! </span><span style="font-size: 9pt;">actually, only 3 characters are needed, but it’s easier to read this way.</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';"> ID COOKE TRIPLET F/4.5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;31 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;30-JAN-98 &nbsp; 09-21-10</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 9pt; font-family: 'Courier New';"> THIRD-ORDER ABERRATION ANALYSIS</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';"> FOCAL LENGTH &nbsp;ENT PUP SEMI-APER &nbsp;GAUSS IMAGE HT</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; 49.998 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5.555 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;18.220</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';"> THIRD-ORDER ABERRATION SUMS</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SPH ABERR &nbsp; &nbsp; &nbsp; COMA &nbsp;TAN ASTIG &nbsp;SAG ASTIG &nbsp; &nbsp;PETZVAL DISTORTION</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(SA3) &nbsp; &nbsp; &nbsp;(CO3) &nbsp; &nbsp; &nbsp;(TI3) &nbsp; &nbsp; &nbsp;(SI3) &nbsp; &nbsp; (PETZ) &nbsp;(DI3(FR))</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -0.02572 &nbsp; -0.08002 &nbsp; &nbsp;0.03164 &nbsp; -0.08268 &nbsp; -0.13984 &nbsp; &nbsp;0.00762</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';"> PARAXIAL CHROMATIC ABERRATION SUMS</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AX COLOR &nbsp;LAT COLOR &nbsp;SECDRY AX SECDRY LAT</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(PAC) &nbsp; &nbsp; &nbsp;(PLC) &nbsp; &nbsp; &nbsp;(SAC) &nbsp; &nbsp; &nbsp;(SLC)</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00426 &nbsp; &nbsp;0.00449 &nbsp; &nbsp;0.00445 &nbsp; &nbsp;0.00147</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New';"> SYNOPSYS AI&gt;</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">You can get the third-order aberrations with the command </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">THIRD, </span><span class="f_p1-5" style="font-size: 11pt;">fifth-order with </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">FIFTH</span><span class="f_p1-5" style="font-size: 11pt;">, and the aberrations of just a portion of the lens with input of the form </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">THIRD 3 4, </span><span class="f_p1-5" style="font-size: 11pt;">which</span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p1-5" style="font-size: 11pt;">in this case would give the aberrations of just the central element of the triplet, including surfaces 3 through 4. &nbsp;Yet another form is </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">THIRD SUR</span><span class="f_p1-5" style="font-size: 11pt;"> or </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">FIFTH SUR, </span><span class="f_p1-5" style="font-size: 11pt;">which lists the aberrations surface by surface. &nbsp;(To be complete, let me mention also the command </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">FIRST, </span><span class="f_p1-5" style="font-size: 11pt;">giving first-order properties.) &nbsp;The dialog </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">MFT</span><span class="f_p1-5" style="font-size: 11pt;"> lists these options for you on the screen. &nbsp;The </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Al</span><span class="f_p1-5" style="font-size: 11pt;"> program can also tell you individual values in response to questions like</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p2-5" style="margin: 0px 0px 0px 39px;"><span class="f_p2-5" style="font-size: 11pt; font-weight: bold;">TOBSA?</span></p>
+<p class="p_p2-5" style="margin: 0px 0px 0px 39px;"><span class="f_p2-5" style="font-size: 11pt; font-weight: bold;">what is the coma?</span></p>
+<p class="p_p2-5" style="margin: 0px 0px 0px 39px;"><span class="f_p2-5" style="font-size: 11pt; font-weight: bold;">SA3?</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-5">&nbsp;</span></p>
+<p><a name="tm6l3"></a><span class="f_p1-5" style="font-size: 14pt;">Use of Transverse Fans</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Let me digress just a bit more. &nbsp;You have seen several examples of the various kinds of FANS curves and tables that SYNOPSYS can produce. &nbsp;Since these are central to understanding your lens, it is worth covering their interpretation at this point. &nbsp;I said earlier that the SFAN curve showed certain aberrations. &nbsp;Here is a chart that shows how some of the major aberrations look on a TFAN or SFAN.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><img src="tm6f2.png" width="554" height="215" alt="tm6f2" style="width:554px;height:215px;border:none"></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">This chart is of course valid only for </span><span class="f_p3-3" style="font-size: 11pt; font-style: italic;">transverse aberration </span><span class="f_p3-3" style="font-size: 11pt;">plots; OPD plots have their own shapes that you can derive (hint: the OPD is the integral of the TAP curve). &nbsp;In practice you seldom see curves just like these because more than a single aberration is usually present.</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">The above exercise has controlled a ray intercept at the image surface. &nbsp;As the general format box </span><span class="f_p3-3" style="font-size: 11pt; text-decoration: underline;"><a href="tmch6.htm#tm6l2" class="topiclink">above</a></span><span class="f_p3-3" style="font-size: 11pt;"> shows, an individual ray target may be specified at a desired surface other than the image using the optional [ </span><span class="f_p3-3" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p3-3" style="font-size: 11pt;"> ] part of the input as well. &nbsp;A more often-used variation is to specify a combination of rays as a single target. &nbsp;You may include up to 10000 individual aberrations in the AANT file, and you can also make any single</span><span class="f_p3-3" style="font-size: 11pt; font-style: italic;"> </span><span class="f_p3-3" style="font-size: 11pt;">aberration </span><span class="f_p3-3" style="font-size: 11pt; font-style: italic;">consist of more than one ray. </span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p3-3" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p3-3">&nbsp;</span></p>
+<p><a name="tm6l4"></a><span class="f_p3-3" style="font-size: 14pt;">Color Correction by Ray Differences</span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">For example, one way to correct the axial chromatic aberration of a lens is to specify a target for the difference between the transverse intercepts in the long and short wavelengths. &nbsp;With the wavelength definition of this triplet, these are colors 1 and 3. &nbsp;If primary axial color is corrected, these rays will focus in the same place (and if </span><span class="f_p3-3" style="font-size: 11pt; font-style: italic;">secondary </span><span class="f_p3-3" style="font-size: 11pt;">color is corrected they will focus in the same place as rays in color 2). &nbsp;Here is the AANT entry that would correct axial color at the 7-tenths zone:</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p2-5" style="margin: 0px 0px 0px 38px;"><span class="f_p2-5" style="font-size: 11pt; font-weight: bold;">M 0 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p2-5" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p2-5" style="font-size: 11pt;"> Minimize to target = 0 with weight of 1</span></p>
+<p class="p_p3-3" style="margin: 0px 0px 0px 38px;"><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">A 1 YA 0 0 .7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p3-3" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p3-3" style="font-size: 11pt;"> Add in color 1</span></p>
+<p class="p_p3-3" style="margin: 0px 0px 0px 38px;"><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">S 3 YA 0 0 .7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p3-3" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p3-3" style="font-size: 11pt;"> and Subtract in color 3</span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">The first of these two ray definitions could be placed on the same line as the target and weight, as was done before, but I show them separate here so you can see how the aberration is composed of two rays, the first added and the second subtracted -- giving the difference between them. &nbsp;You can also MULtiply or DIVide if you want to give a target to the ratio of two rays when controlling an obscuration, for example. &nbsp;To correct </span><span class="f_p3-3" style="font-size: 11pt; font-style: italic;">lateral</span><span class="f_p3-3" style="font-size: 11pt;"> color, you would control the difference in principal ray intercepts:</span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p3-3" style="margin: 0px 0px 0px 38px;"><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">M 0 1</span></p>
+<p class="p_p3-3" style="margin: 0px 0px 0px 38px;"><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">A 1 YA 1 0 0 </span></p>
+<p class="p_p3-3" style="margin: 0px 0px 0px 38px;"><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">S 3 YA 1 0 0 </span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-size: 11pt;">(Although this kind of control can be useful, one generally gets better image quality by correcting an </span><span style="font-size: 11pt; font-style: italic;">entire grid</span><span style="font-size: 11pt;"> of rays in each color, using the GNR and GNO options, explained below.)</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">Now that the lens is at the marginal focus you can find out the new value of thickness number 6 in any way you want. &nbsp;The Al questions “</span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">BACK?</span><span class="f_p1-5" style="font-size: 11pt;">&quot; or &quot;</span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">6 TH?</span><span class="f_p1-5" style="font-size: 11pt;">&quot; will do, as will </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">SPEC 6</span><span class="f_p1-5" style="font-size: 11pt;"> and the command &quot;</span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">PRT 6</span><span class="f_p1-5" style="font-size: 11pt;">&quot;. </span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-5">&nbsp;</span></p>
+<p><a name="tm6l5"></a><span class="f_p1-5" style="font-size: 14pt;">Changes to the Lens in Optimization</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">Try the above commands: run the optimization, and then type the command</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p4-4" style="margin: 0px 0px 0px 38px;"><span class="f_p4-4" style="font-size: 11pt; font-weight: bold;">CHANGES.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">This gives a table of the changes made to each variable during the last optimization.</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">Now let us control a purely physical property of the lens. &nbsp;In SYNOPSYS, everything that is to be controlled goes into the same merit function. &nbsp;You can control an individual aberration with </span><span class="f_p3-3" style="font-size: 11pt; text-decoration: underline;"><a href="um10352.htm#lagrange" class="topiclink">Lagrange</a></span><span class="f_p3-3" style="font-size: 11pt;"> multipliers rather than by the minimization process used for other aberrations, and this will often satisfy that goal exactly – indeed, if paraxial solves are present they accomplish essentially the same thing – but it is often useful to see how the mechanical goals interact with the optical ones. &nbsp;By minimizing everything at the same time, you can immediately see the tradeoffs between, say, restricting the overall length of the lens and the loss of image quality if it is too short. &nbsp;By adjusting the weights on each of the aberrations, both optical and physical, you can perform tradeoffs that optimize the whole system instead of just the image.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_heading3-3" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_heading3-3">&nbsp;</span></p>
+<p><a name="tm6l6"></a><span class="f_heading3-3">Controlling Edge Thicknesses</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">As you gain experience in lens design you will discover that whenever you vary the thickness of an element, the program generally wants to drive it to either a very large or a very small value. &nbsp;Of course it’s just doing its job, and the merit function is indeed reduced when it does this, never mind that the lens is impractical or impossible to make. &nbsp;But usually you want to control the edge thickness in such as way that the results make sense in the real world. &nbsp;How do you do this?</span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">SYNOPSYS gives you two tools for that purpose. &nbsp;If you put the entry</span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p3-3"><span style="width:48px">&nbsp;</span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">AEC [ </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">TAR</span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;"> [ </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;"> [ WINDOW ] ] ] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p3-3" style="font-size: 11pt;">(Auto Edge Control)</span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">in the AANT file, the program will automatically consider edges that become thinner than </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">TAR</span><span class="f_p3-3" style="font-size: 11pt;"> to be an “aberration” to be controlled, with a relative weight of </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_p3-3" style="font-size: 11pt;">. &nbsp;If you just enter </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">AEC</span><span class="f_p3-3" style="font-size: 11pt;"> without the other arguments, the target becomes by default 1 mm, and the weight and window are both 1.0. In most instances you can get the control you need with just this entry, and your lenses will come out looking reasonable. &nbsp;The </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_p3-3" style="font-size: 11pt;"> is a region within which the error is given by an exponential function; beyond that area it increases linearly. </span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">To prevent lenses from becoming extremely thick, there is a corresponding entry you can use:</span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p3-3"><span style="width:48px">&nbsp;</span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">ACC [ </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">TAR</span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;"> [ </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;"> &nbsp;[ WINDOW ] ] ] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p3-3" style="font-size: 11pt;">(Auto Center-thickness Control)</span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">This option has defaults of 1 inch thickness and a weight of 1. &nbsp;These features apply only to lenses and airspaces where the thickness (or separation) is </span><span class="f_p3-3" style="font-size: 11pt; font-style: italic;">explicitly</span><span class="f_p3-3" style="font-size: 11pt;"> included in the variable list, and they give the same target to all such elements. &nbsp;But sometimes you want to control a thickness that is not actually a variable (when it is controlled by a solve, for instance), or use a different target for some elements but not others. &nbsp;Another set of tools is provided for that purpose.</span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">In this example we will control the edge thickness of just the third element of the triplet. &nbsp;If you type the </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">EDGE</span><span class="f_p3-3" style="font-size: 11pt;"> command, you see that this element has an edge thickness of 1.2551 mm at a clear aperture of 5.5555. &nbsp;Let's see what it would be if you wanted to avoid vignetting off axis by increasing the clear apertures. &nbsp;First you must remove the user-entered CAO's. &nbsp;There are several ways to do this. &nbsp;One way is to use CHG and specify a CAO value of 0 for each surface (which restores the default); you could also enter an Al sentence like &quot;3 CAO = 0&quot; for every surface. &nbsp;But there is an easier way to remove all of the user-entered clear apertures:</span></p>
+<p class="p_p6-3"><span class="f_p6-3">&nbsp;</span></p>
+<p class="p_t5-1" style="margin: 0px 0px 0px 38px;"><span class="f_t5-1" style="font-size: 11pt; font-weight: bold;">CHG</span></p>
+<p class="p_t5-1" style="margin: 0px 0px 0px 38px;"><span class="f_t5-1" style="font-size: 11pt; font-weight: bold;">CFREE &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_t5-1" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_t5-1" style="font-size: 11pt;"> the </span><span class="f_t5-1" style="font-size: 11pt; font-weight: bold;">SYS</span><span class="f_t5-1" style="font-size: 11pt;"> dialog will also let you do this</span></p>
+<p class="p_t5-1" style="margin: 0px 0px 0px 38px;"><span class="f_t5-1" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p>&nbsp;</p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">Get the triplet back from the library and type these lines, and then ask for another EDGE listing. &nbsp;Now you see that the edge thickness of the last element is only 0.301 mm. Let's assume that you want a thicker lens. &nbsp;You could of course just increase the thickness of that element, which is something Al can do for you in response to a sentence such as</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p7-2" style="margin: 0px 0px 0px 44px;"><span class="f_p7-2" style="font-size: 11pt;">increase the TH of element 3 by 1.5,</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">or you could use a </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">CHG</span><span class="f_p3-3" style="font-size: 11pt;"> file and input a larger thickness value there. &nbsp;But controlling edge thicknesses is often important during optimization, so let us use that program to show how it is done.</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 39px;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 39px;"><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">PANT</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 39px;"><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">VY 5 TH</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 39px;"><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 39px;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 39px;"><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">AANT</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 39px;"><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">ECP 1.5 .1 5</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 39px;"><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 39px;"><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">SYNO 5</span></p>
+<p>&nbsp;</p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">The above commands will alter thickness number five so as to control the edge thickness.</span></p>
+<p>&nbsp;</p>
+<p class="p_p7-2" style="margin: 0px 0px 0px 0px;"><span class="f_p7-2" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p7-2" style="margin: 0px 0px 0px 0px;"><span class="f_p7-2">&nbsp;</span></p>
+<p class="p_p3-3" style="margin: 0px 192px 0px 38px;"><span class="f_p3-3" style="font-size: 11pt; font-style: italic; text-decoration: underline;">General format, edge thickness control:</span></p>
+<p class="p_p3-3" style="margin: 0px 192px 0px 38px;"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p4-4" style="margin: 0px 192px 0px 38px;"><span class="f_p4-4" style="font-size: 11pt;">{ ECP / ECN } </span><span class="f_p4-4" style="font-size: 11pt; text-decoration: underline;">TAR</span><span class="f_p4-4" style="font-size: 11pt;"> </span><span class="f_p4-4" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p4-4" style="font-size: 11pt;"> </span><span class="f_p4-4" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p4-4" style="font-size: 11pt;"> </span><span class="f_p4-4" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p4-4" style="font-size: 11pt;"> </span><span class="f_p4-4" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p4-4" style="font-size: 11pt;"> …</span></p>
+<p class="p_p7-2" style="margin: 0px 0px 0px 0px;"><span class="f_p7-2" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p4-4" style="margin: 0px 192px 0px 0px;"><span class="f_p4-4">&nbsp;</span></p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">The general format shows two kinds of control: ECP and ECN. &nbsp;These stand for Edge Control Positive and Edge Control Negative, and refer to the ray along which the thickness is to be measured. &nbsp;Look at the drawing of the reoptimized lens, shown below.</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5"><img src="tm6f3.png" width="404" height="256" alt="tm6f3" style="width:404px;height:256px;border:none"></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">This picture is taken from one of the </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">MOM</span><span class="f_p1-5" style="font-size: 11pt;"> dialogs, where you can just click on a surface to control that edge (in the “Mechanical controls” section). &nbsp;We’ll use this feature in a moment, but first you have to know what is going on.</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">The upper and lower marginal rays at full field are shown in red</span><span class="f_p3-3" style="font-size: 11pt; font-style: italic; font-weight: bold;"> </span><span class="f_p3-3" style="font-size: 11pt;">for positive (ray P) and blue for negative (ray N), and the edge defined by the intercepts of ray P at surfaces 5 and 6 define the edge thickness in this example. &nbsp;If we wanted to control the edge of the first element, the appropriate selection would be &quot;</span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">ECN ...</span><span class="f_p3-3" style="font-size: 11pt;">&quot; since it is the </span><span class="f_p3-3" style="font-size: 11pt; font-style: italic;">negative</span><span class="f_p3-3" style="font-size: 11pt;"> ray that requires the larger aperture at that element.  <a href="um1037.htm#aec" class="topiclink">Section 10.3.7</a> of the User's Manual describes how the affected rays are defined.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">The edge thickness control aberration operates in a somewhat peculiar way. If an edge becomes thinner than the value entered for </span><span class="f_p3-3" style="font-size: 11pt; text-decoration: underline;">TAR</span><span class="f_p3-3" style="font-size: 11pt;"> it adds an aberration equal to </span><span class="f_p3-3" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p3-3" style="font-size: 11pt;"> for each unit by which it is too thin. &nbsp;This is a rather powerful aberration, and it is wise to specify a low weight when correcting a lens where edges are initially too thin. &nbsp;If the edge tends to become </span><span class="f_p3-3" style="font-size: 11pt; font-style: italic;">thicker </span><span class="f_p3-3" style="font-size: 11pt;">than the target value, on the other hand, the ECP and ECN aberrations add nothing to the merit function. &nbsp;In the example just run, the requested target was 1.5 mm, and the final edge is somewhat thicker than this value.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">In cases where you want an edge to be </span><span class="f_p3-3" style="font-size: 11pt; font-style: italic;">exactly equal</span><span class="f_p3-3" style="font-size: 11pt;"> to a target, neither thicker nor thinner, a similar option is available using the mnemonics </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">ETP</span><span class="f_p3-3" style="font-size: 11pt;"> and </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">ETN</span><span class="f_p3-3" style="font-size: 11pt;">, for Edge Target…. &nbsp; And there is yet more: &nbsp;an explicit aberration mnemonic &quot;</span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#eth" class="topiclink">ETH</a></span><span class="f_p3-3" style="font-size: 11pt;">&quot; will control the edge thickness of an individual element.</span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">There are 17 optimization monitors you can use to keep your lens looking reasonable. &nbsp;For example, </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">ASC</span><span class="f_p3-3" style="font-size: 11pt;"> is used to avoid excessively steep surfaces. &nbsp;Type HELP </span><span class="f_p3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um103_12.htm#asc" class="topiclink">ASC</a></span><span class="f_p3-3" style="font-size: 11pt;"> to read about it.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_heading3-3" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_heading3-3">&nbsp;</span></p>
+<p><a name="tm6l7"></a><span class="f_heading3-3">Optimization Example</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">Now let us do some real optimization on this lens. &nbsp;The design is already well corrected, if one ignores the rays vignetted by the CAOs. &nbsp;Here we are going to correct these rays, and just to make things more challenging, open the lens up to a speed of F/2.8. &nbsp;This starting point will therefore show large aberrations and feathered edges, which we will correct with the optimization program. &nbsp;In case you did not save that lens, here is the RLE file again:</span></p>
+<p class="p_p3-3"><span class="f_p3-3">&nbsp;</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">RLE</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">ID COOKE TRIPLET F/4.5</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">OBB 0 20 5.555</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">APS 3</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">UNITS MM</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">1 CV .04652472 TH 2 CAO 5.5555 GTB S</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">SK16</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">2 CV -.008062 TH 5.25509</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">2 CAO 5.5555</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">3 RD -19.105175 TH 1.25 N13 61164 61659 62848</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">3 CAO 5</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">4 CV .045497 TH 4.93473 CAO 5.0</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">5 CAO 5.5555 CV .0030457 TH 2.25 PIN 1</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">6 RD -16.75377 YMT 0 CAO 5.5555</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">7</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-3"><span class="f_p3-3" style="font-size: 11pt;">The plot below shows the triplet before optimization. To get it in this state, enter the following commands (or copy those lines into the EE editor and run them):</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p2-5" style="margin: 0px 0px 0px 39px;"><span class="f_p2-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">GET 1</span></p>
+<p class="p_p2-5" style="margin: 0px 0px 0px 39px;"><span class="f_p2-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">CHG</span></p>
+<p class="p_p2-5" style="margin: 0px 0px 0px 39px;"><span class="f_p2-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">OBB 0 20 8.928</span></p>
+<p class="p_p2-5" style="margin: 0px 0px 0px 39px;"><span class="f_p2-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">6 UMC -.17857</span></p>
+<p class="p_p2-5" style="margin: 0px 0px 0px 39px;"><span class="f_p2-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">CFREE</span></p>
+<p class="p_p2-5" style="margin: 0px 0px 0px 39px;"><span class="f_p2-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">ID TRIPLET F/2.8</span></p>
+<p class="p_p2-5" style="margin: 0px 0px 0px 39px;"><span class="f_p2-5" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5"><img src="clip0206.png" width="567" height="418" alt="clip0206" style="width:567px;height:418px;border:none"></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">By now you should be familiar enough with SYNOPSYS input to read these commands fluently. The pupil is opened up to a semi-diameter of 8.928, and a UMC solve is inserted on surface 6 to guarantee that the F/number will be 2.8. &nbsp;CAO's are then removed with the CFREE entry and the ID of the lens changed to describe the new situation.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Where did the value of -.17857 for the UMC solve come from? &nbsp;From paraxial optics we know that the final ray angle UA equals 1/(2 FNUM). &nbsp;At F/2.8 that is the angle we need, and it is a </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">negative</span><span class="f_p1-5" style="font-size: 11pt;"> angle because, as you learned in </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="tmch3.htm" class="topiclink">Chapter 3</a></span><span class="f_p1-5" style="font-size: 11pt;"> a positive angle goes </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">up</span><span class="f_p1-5" style="font-size: 11pt;"> at the image. &nbsp;The ray is coming </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">down</span><span class="f_p1-5" style="font-size: 11pt;"> at this point, so it is negative.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">The lens is now very poorly corrected, with aberrations so large they are evident on the DWG plot. &nbsp;It is time to make a merit function to improve things, and you have a choice of many possibilities.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p2-5" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p2-5">&nbsp;</span></p>
+<p><a name="tm6l8"></a><span class="f_p2-5" style="font-size: 14pt;">Creating a Merit Function</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">This is an area where I cannot say that a certain approach is right and another wrong. &nbsp;In the example below, we will use a prepared merit function from MOM, and then show what it does and how you can modify it to suit your needs. &nbsp;As you gain experience with SYNOPSYS and lens design in general you will find yourself repeatedly changing the merit function and trying things. &nbsp;You will adjust weights, sometimes include third or fifth-order targets, add rays where you feel they are needed, and so on. &nbsp;It is a good bet that no two lens designers would use exactly the same merit function working the same problem, and you would seldom use the same one on more than a single lens. &nbsp;I can give here only some general guidelines.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">In general it is wise to control a fairly large set of rays. &nbsp;Computers are now so fast that you would save little time by trying to use a small rayset that you created yourself, and many problems concerning local minima are avoided if you use a large set. &nbsp;There are many ways to specify either individual rays or an entire grid of rays over which you can correct the transverse aberrations, OPD’s, the wavefront variance, spot size standard deviation, or even the diffraction MTF.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-5">&nbsp;</span></p>
+<p><a name="tm6l9"></a><span class="f_p1-5" style="font-size: 14pt;">The MOM Optimization Dialog</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">For this example we will use the </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">MOM</span><span class="f_p1-5" style="font-size: 11pt;"> dialog to set up the optimization input. &nbsp;This dialog lets you pick from a useful set of options, and everything is explained on the monitor so you don’t have to know the command-mode forms of these options. &nbsp;One feature of MOM lets you prepare a MACro of the items you have selected, so even if you want custom control in a way that MOM cannot provide, you can often use it to give you a place to start. &nbsp;Later we will describe a very handy shortcut to the most-often used of the MOM dialogs, which will put your variables and ray grid definitions directly into a MACro from the MACro editor. &nbsp;This is the preferred route for power users, and it does not involve using MOM itself.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Save the starting lens (at F/2.8) in the library, in location 2.  </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">Always</span><span class="f_p1-5" style="font-size: 11pt;"> save your starting point! &nbsp;I design exclusively with a MACro, and the first lines usually are a </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">LOG</span><span class="f_p1-5" style="font-size: 11pt;"> command and then a </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">STORE</span><span class="f_p1-5" style="font-size: 11pt;"> command, to save the starting point automatically. &nbsp;The results of the optimization will be saved in location 10 if switch 42 is ON, but I sometimes put another STORE command </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">after</span><span class="f_p1-5" style="font-size: 11pt;"> the optimization command, giving a different library location. &nbsp;That way I have a “before” and “after” copy no matter what happens.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Follow this sequence: type </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">MOM</span><span class="f_p1-5" style="font-size: 11pt;">, then click these buttons:</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Define Variables</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">ALL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p1-5" style="font-size: 11pt;"> to the right of the Radii button</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">ALL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p1-5" style="font-size: 11pt;"> to the right of the Spacings button</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Glass Model</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Do not click “ALL” this time; instead, click on the </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">vertex</span><span class="f_p1-5" style="font-size: 11pt;"> of surfaces 1 and 3. &nbsp;This is how you can select your choice of variables. &nbsp;(“ALL” would also have worked, in this case.) &nbsp;The variables dialog should now look like this.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><img src="tm6f5.png" width="308" height="394" alt="tm6f5" style="width:308px;height:394px;border:none"></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Using these options you will get default limits on the selected variables, and later you will see that this is not always desired. &nbsp;But for now, click on “</span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Back to Macro editor</span><span class="f_p1-5" style="font-size: 11pt;">”, and then click the following</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Select a Prepared Merit Fn</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">For this example, select option 4, and then click</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Back to Macro editor</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">This procedure will give you merit function selection 4, and automatic control of edge and center thicknesses (because the check boxes were checked by default). &nbsp;Be sure the box “Monitor optimization …” is selected. &nbsp;Now click “</span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Make a MACro</span><span class="f_p1-5" style="font-size: 11pt;">”, and give it the name TEST when prompted. &nbsp;Your optimization input shows up in a MACro editor.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><img src="tm6f12.png" width="331" height="352" alt="tm6f12" style="width:331px;height:352px;border:none"></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Click on the RUN MACro button </span><img src="runmacro.png" width="26" height="24" alt="runmacro" style="width:26px;height:24px;border:none"><span class="f_p1-5" style="font-size: 11pt;">, and watch the lens as it is optimized.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><img src="clip0207.png" width="821" height="527" alt="clip0207" style="width:821px;height:527px;border:none"></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">You will see that the on-axis image is well corrected, while the edge of the field is not as good. &nbsp;Let’s see what happens if we change the weights assigned to the three fields. &nbsp;In the MACro editor, change the weights of all three fields to 1:</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><img src="tm6f13.png" width="324" height="354" alt="tm6f13" style="width:324px;height:354px;border:none"></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">(These options are explained in detail below.) &nbsp;Now run the MACro again. &nbsp;See how the edge of the field improved, while the center got worse.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><img src="clip0208.png" width="820" height="528" alt="clip0208" style="width:820px;height:528px;border:none"></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">By changing weights in the merit function in this way, as well as adding other parameters that you want to control, you can influence the performance of your lens in countless ways. &nbsp;Here, the color correction changes with field, so you might want to correct the intercept differences at both ends of the TFAN curve in addition to just at the center. &nbsp;Or, you could go back to MOM and select Ready-made merit function 6, which will correct many rays over the pupil in each color (This is the default option, since it is usually the best choice), or you could …. &nbsp;Get the idea? &nbsp;You have to refine your merit function in stages, as you see what happens to the lens with what you have at the moment. &nbsp;(It’s been said that we don’t design</span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;"> lenses</span><span class="f_p1-5" style="font-size: 11pt;"> anymore – we only design merit functions!)</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">After running one of these optimizations, try clicking the KICK button </span><img src="kick.png" width="23" height="23" alt="kick" style="width:23px;height:23px;border:none"><span class="f_p1-5" style="font-size: 11pt;">. &nbsp;It probably won’t improve the triplet much -- but for more complex lenses this is a powerful tool that you will use often. &nbsp;When an optimization gets as far as it can, you don’t know if it is truly the best that you can do with that starting lens – or if the lens has got stuck in some local minimum, which happens all too often. &nbsp;In the latter case, the </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1012.htm#kick" class="topiclink">KICK</a></span><span class="f_p1-5" style="font-size: 11pt;"> option will often kick it out, and sometimes the optimization will proceed to a better solution. &nbsp;(This feature changes every variable by a random amount and reoptimizes. &nbsp;The command-mode form lets you specify how hard to kick.) &nbsp;The </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1012.htm#anneal" class="topiclink">ANNEAL</a></span><span class="f_p1-5" style="font-size: 11pt;"> command is even more powerful, and is recommend. &nbsp;It can be run from the button </span><img src="clip0329.png" width="26" height="25" alt="clip0329" style="width:26px;height:25px;border:none"><span class="f_p1-5" style="font-size: 11pt;"> in the top toolbar. &nbsp;It kicks the lens repeatedly and reoptimizes each time. &nbsp;The improvement is sometimes astonishing.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">As you gain experience with optimization in SYNOPSYS, you may prefer to construct your own merit function right from the start, rather than using a prepared one. &nbsp;Get out the triplet that you started with (at F/2.8) and follow the steps below. &nbsp;Here we will create a custom merit function using some of the other options that you will find in MOM. &nbsp;Type </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">MOM</span><span class="f_p1-5" style="font-size: 11pt;">, clear out the Select a Prepared Merit Fn option and click the Return to ... button. &nbsp;Then select the following:</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Select Standard RayGrids</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Use &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p1-5" style="font-size: 11pt;"> the first one</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Field Points &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p1-5" style="font-size: 11pt;"> the first one</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">RayGrid &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p1-5" style="font-size: 11pt;"> the first one</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">M -- Do all colors</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Weight &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p1-5" style="font-size: 11pt;"> type “5”</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Use &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p1-5" style="font-size: 11pt;"> the second one</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Field Points &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p1-5" style="font-size: 11pt;"> the second one</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">RayGrid &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p1-5" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p1-5" style="font-size: 11pt;"> the third one</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">M -- Do all colors</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">As you select these options, your choice is shown on the display:</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><img src="tm6f6.png" width="384" height="192" alt="tm6f6" style="width:384px;height:192px;border:none"></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">You have requested ray targets over an SFAN at the on-axis object point and a full grid of rays at two off-axis points. &nbsp;Why is the on-axis point different? &nbsp;The lens is rotationally symmetric, and the SFAN has as much information as would a full grid -- and will run faster because fewer rays are traced -- but it requires a higher weight for the same reason.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Now go back to MOM and click on “</span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">Mechanical Goals</span><span class="f_p1-5" style="font-size: 11pt;">”. &nbsp;In the dialog that opens, locate the section that says “Edge Control Aberrations”, and click on the </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">USE</span><span class="f_p1-5" style="font-size: 11pt;"> in the area that refers to the RED ray. &nbsp;Then click on the lens drawing, at the vertex of surface 5. &nbsp;Repeat this in the area that refers to the BLUE ray, and then click on surfaces 1 and 2. &nbsp;Change the target value to 1 mm and the weight to .05.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><img src="tm6f7.png" width="404" height="290" alt="tm6f7" style="width:404px;height:290px;border:none"></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">You have requested that SYNOPSYS control the edge thickness between surfaces 1 and 2, and between 2 and 3, along the path of the lower rim ray, and at surface 5 along the upper rim ray. &nbsp;You can also just click on the option “Automatically control edges …”, and the program will watch all of the edges of elements whose thickness is a variable, but these other options are useful for preventing feathered edges where the thickness is </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">not</span><span class="f_p1-5" style="font-size: 11pt;"> varying – like the final thickness where there is a YMT solve, for example. &nbsp;And even the automatic option will honor the target and weight that you supply here. &nbsp;Later, in your MACro, you can of course assign edge controls to each element with separate targets, if you need that kind of precise control.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Now go back to MOM, and click “Make a MACro”. &nbsp;You can also run the optimization directly from MOM, but you have seen how handy it is to change things in the MACro file later, after you see how well it works. &nbsp;When prompted for a file name, enter “TRIP”.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">You left the box in MOM checked that is labeled “Monitor optimization with the SketchPAD display”. &nbsp;This means that the PAD display will be continuously updated during optimization. &nbsp;Now click the Run button in the editor, and watch the lens as it is optimized.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 96px 0px 96px;"><span class="f_p1-5" style="font-size: 11pt;">If all of this has seemed complicated, remember that a power user can create this MACro in less than a minute, without using MOM. &nbsp;We strongly recommend that you become a power user!</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">When your MACro is displayed in the editor window, notice the toolbar buttons </span><img src="clip0114.png" width="119" height="28" alt="clip0114" style="width:119px;height:28px;border:none"><span class="f_p1-5" style="font-size: 11pt;">. &nbsp;If you click the left-most of these three, you go to the MOM variable parameters definition dialog; the second two go directly to the Standard Raygrid Selection dialog and the Ready Made Merit Function dialog, which are the MOM features most often used. The third and fourth go to a &quot;bare-bones&quot; dialog, where you can select the fields to correct, and a set of monitors that include the AEC you have seen plus 12 more. &nbsp;When you have made your selection and close these dialogs, the variable or ray definitions are automatically placed in the MACro </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">at the current cursor position</span><span class="f_p1-5" style="font-size: 11pt;">. &nbsp;For power users this is the fastest way to create a complex merit function -- but you have to set up the file structure yourself in this case, with the required AANT and END lines, for example, if they are not already there.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-5">&nbsp;</span></p>
+<p><a name="tm6l10"></a><span class="f_p1-5" style="font-size: 14pt;">FINAL Aberration Values</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">The result is quite good. &nbsp;MOM has constructed 206 aberrations to be controlled. &nbsp;If you were to type</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span style="width:48px">&nbsp;</span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">FINAL</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">You would get a listing of the whole set along with the final value of each and the relative effect it has on the total merit function. &nbsp;Usually you don’t want to see them all, but it is helpful to examine, say, the five largest aberrations. &nbsp;If one or two of them is dominating the merit function, that is often a clue that helps you to understand what is impeding a particular lens. &nbsp;Type</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span style="width:48px">&nbsp;</span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">FINAL 5</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">to see just this subset. &nbsp;Now let’s try some variations on this merit function. &nbsp;Here’s what MOM put into the editor:</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;">PANT</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> VLIST RAD 1 2 3 4 5 </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> VLIST TH 1 2 3 4 5 </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> VLIST GLM 1 3 </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> END</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> AANT</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> GSR .75 5 4 1 0 0  </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> GSR .75 5 4 2 0 0  </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> GSR .75 5 4 3 0 0  </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> GNR .75 1 3 1 .75 0  </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> GNR .75 1 3 1 1.0 0  </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> GNR .75 1 3 2 .75 0  </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> GNR .75 1 3 2 1.0 0  </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> GNR .75 1 3 3 .75 0  </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> GNR .75 1 3 3 1.0 0  </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> ECP 1 .05 5 </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> ECN 1 .05 1 2 </span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> END</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> SNAP</span></p>
+<p class="p_p1-5" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-5" style="font-size: 11pt;"> SYNOPSYS 20</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-5">&nbsp;</span></p>
+<p><a name="tm6l11"></a><span class="f_p1-5" style="font-size: 14pt;">Raygrid Aberration Definitions</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">MOM has inserted aberrations of the form GSR and GNR, from the choices listed below.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 6px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:370px; padding:4px; border:solid 1px #000000; border-right:none; border-bottom:none;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">GNR </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">RT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">DEL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p1-5" style="font-size: 11pt;"> [ </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p1-5" style="font-size: 11pt;"> [ F [ </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">XWT</span><span class="f_p1-5" style="font-size: 11pt;"> ] ] ]</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:179px; padding:4px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Transverse coordinates</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:370px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">GSR </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">RT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">DEL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p1-5" style="font-size: 11pt;"> [ </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p1-5" style="font-size: 11pt;"> [ F ] ]</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:179px; padding:4px; border:solid 1px #000000; border-top:none; border-bottom:none; border-left:none;"><p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Sagittal fan only, correct XC only</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:370px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">GTR </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">RT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">DEL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p1-5" style="font-size: 11pt;"> [ </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p1-5" style="font-size: 11pt;"> [ F ] ]</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:179px; padding:4px; border:solid 1px #000000; border-top:none; border-bottom:none; border-left:none;"><p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Tangential fan only, correct YC</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:370px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">GPR </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">RT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">DEL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p1-5" style="font-size: 11pt;"> [ </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p1-5" style="font-size: 11pt;"> [ F [ </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">XWT</span><span class="f_p1-5" style="font-size: 11pt;"> ] ] ]</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:179px; padding:4px; border:solid 1px #000000; border-top:none; border-bottom:none; border-left:none;"><p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Errors measured from principal ray in that color</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:370px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">GNO </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">RT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">DEL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p1-5" style="font-size: 11pt;"> [ 0 F ]</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:179px; padding:4px; border:solid 1px #000000; border-top:none; border-bottom:none; border-left:none;"><p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">OPD targets</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:370px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">GSO </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">RT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">DEL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p1-5" style="font-size: 11pt;"> [ 0 F ]</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:179px; padding:4px; border:solid 1px #000000; border-top:none; border-bottom:none; border-left:none;"><p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Sagittal fan only</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:370px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">GTO </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">RT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">DEL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p1-5" style="font-size: 11pt;"> [ 0 F ]</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:179px; padding:4px; border:solid 1px #000000; border-top:none; border-bottom:none; border-left:none;"><p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Tangential fan only</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:370px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">GPO </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">RT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">DEL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p1-5" style="font-size: 11pt;"> [ 0 F ]</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:179px; padding:4px; border:solid 1px #000000; border-top:none; border-bottom:none; border-left:none;"><p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Reference at principal ray</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:370px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">GNN 0 </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">DEL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p1-5" style="font-size: 11pt;"> [ SN ]</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:179px; padding:4px; border:solid 1px #000000; border-top:none; border-bottom:none; border-left:none;"><p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Correction to centroid, not chief ray position</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:370px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">GNV 0 </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">DEL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p1-5" style="font-size: 11pt;"> [ 0 F ] </span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:179px; padding:4px; border:solid 1px #000000; border-top:none; border-bottom:none; border-left:none;"><p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Wavefront variance</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:370px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">GPV 0 </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">DEL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p1-5" style="font-size: 11pt;"> [ 0 F ]</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:179px; padding:4px; border:solid 1px #000000; border-top:none; border-left:none;"><p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Reference at principal ray</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">These are explained in the </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um10311.htm" class="topiclink">User’s Manual</a></span><span class="f_p1-5" style="font-size: 11pt;">.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-5">&nbsp;</span></p>
+<p><a name="tm6glm"></a><span class="f_p1-5" style="font-size: 14pt;">Varying Glass Types with the Glass Model (GLM)</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">The glass model GLM can be used when designing a lens with optical glass at wavelengths in the visible portion of the spectrum. &nbsp;When you vary a glass this way</span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">, </span><span class="f_p1-5" style="font-size: 11pt;">you are actually calling for two variables, the index and the dispersion. &nbsp;SYNOPSYS can calculate approximate values for the index of a model glass at each of the wavelengths present in the lens, given just the Nd and V-number. &nbsp;Here we varied the glasses of elements one and two, but not element three, since it picks up the glass of the first element. &nbsp;After an optimization finishes, you can examine the SPEC listing to see what index and dispersion have been selected, and then insert the nearest real catalog glass. &nbsp;This is very easy to do, as we will show in a minute. &nbsp;During this optimization you saw the message</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">***** GLASS PINNED, VAR. NO. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;12 &nbsp;*****</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">on the output in the Command Window. &nbsp;This tells you that the index or (more likely) the dispersion wanted to move out of the boundaries of the glass map. &nbsp;When this happens, SYNOPSYS deletes one of the two variables (Nd and Vd) and from that point moves the glass </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">along</span><span class="f_p1-5" style="font-size: 11pt;"> the boundary that was violated. &nbsp;(There is also a command that will search for the best combination of </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">real</span><span class="f_p1-5" style="font-size: 11pt;"> glasses, and can locate combinations that are </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">not</span><span class="f_p1-5" style="font-size: 11pt;"> typical of a particular region of the glassmap, which the model cannot do. &nbsp;This is the </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um531.htm#gsearch" class="topiclink">GSEARCH</a></span><span class="f_p1-5" style="font-size: 11pt;">.)</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">For convenience, here is the RLE file for the lens in the current state. &nbsp;(You can copy and paste these lines into an editor if you need to load the lens.)</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;RLE</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">ID TRIPLET F/2.8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 44893</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;MERIT &nbsp; 0.178789E-01</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;WAVL .6562700 .5875600 .4861300</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;UNITS MM &nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;OBB &nbsp;0.000000 &nbsp; 20.00000 &nbsp; &nbsp;8.92800 &nbsp; -4.38990 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;8.92800</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 0 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 1 CV &nbsp; &nbsp; &nbsp;0.0439971819134 &nbsp; TH &nbsp; &nbsp; &nbsp;5.32766111</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 1 CTE &nbsp; 0.630000E-05</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 1 GLM &nbsp; &nbsp; &nbsp;1.90000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 37.62897436</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 2 CV &nbsp; &nbsp; &nbsp;0.0103641951154 &nbsp; TH &nbsp; &nbsp; &nbsp;5.64062350 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 2 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 3 RAD &nbsp; &nbsp;-50.9995499496830 &nbsp; TH &nbsp; &nbsp; &nbsp;1.03997942</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 3 GLM &nbsp; &nbsp; &nbsp;1.88513942 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 22.85259897</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 4 CV &nbsp; &nbsp; &nbsp;0.0458130972661 &nbsp; TH &nbsp; &nbsp; &nbsp;5.92600465 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 4 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 5 CV &nbsp; &nbsp; &nbsp;0.0121296097630 &nbsp; TH &nbsp; &nbsp; &nbsp;3.72282412</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 5 N1 1.89310308 N2 1.90000000 N3 1.91646996</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 5 DNDT &nbsp;4.330E-05 &nbsp;4.330E-05 &nbsp;4.330E-05 6.32800E-01 3.39000E+00 1.06000E+01</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 5 CTE &nbsp; 0.630000E-05</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 5 GID 'SK16 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 5 PIN &nbsp; &nbsp;1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 6 RAD &nbsp; &nbsp;-32.2297519514564 &nbsp; TH &nbsp; &nbsp; 38.03818247 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 6 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 6 CV &nbsp; &nbsp; &nbsp;-0.03102723</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 6 UMC &nbsp; &nbsp; -0.17857000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 6 TH &nbsp; &nbsp; &nbsp;38.03818247</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 6 YMT &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 7 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 7 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;END</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Now we will insert real glasses where the glass model left off. &nbsp;Go to PAD, and click on the Glass Table button </span><img src="glasstable.png" width="27" height="25" alt="glasstable" style="width:27px;height:25px;border:none"><span class="f_p1-5" style="font-size: 11pt;">, and then select the Schott catalog. &nbsp;Now you see the Schott glass map and two red-colored circles marking the model glass parameters. &nbsp;Click on the black or white square if you want to make a black or white background.  </span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><img src="clip0209.png" width="436" height="218" alt="clip0209" style="width:436px;height:218px;border:none"></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Click on a glass symbol near the circle for surface 1, and then enter the surface number 1 in the box labeled “Surface”. &nbsp; Now click “Apply”. &nbsp;Do the same for the glass model on surface 3. &nbsp;Now the lens has real glasses instead of model glasses. &nbsp;(There is also a command,</span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um523.htm#irg" class="topiclink">IRG</a></span><span class="f_p1-5" style="font-size: 11pt;">, that will substitute the closest real glass, or one you select, for a model glass and touch up the radii so that the element power remains the same, and another, </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um547.htm#arglass" class="topiclink">ARG</a></span><span class="f_p1-5" style="font-size: 11pt;">, that lets you narrow down potential matches based on cost and other factors) . &nbsp;We like the glassmap method, since you can see what is going on and can ask to see the properties of the glass you select.)</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">The next step would ordinarily be to reoptimize the lens, keeping the glass type fixed at the new glasses. &nbsp;In the MACro editor, remove the line that reads</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">VLIST GLM 1 3</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">(or just add an exclamation point at the front of the line:</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">!VLIST GLM 1 3</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">which will change that line to a comment that gets ignored, and run the file again.) &nbsp;You have just designed a lens.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Except maybe you are not done. &nbsp;Is the center element a bit too thin? &nbsp;Well, change the thickness, remove the number 3 from the variable list </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">VLIST TH …</span><span class="f_p1-5" style="font-size: 11pt;"> and keep going. &nbsp;Or maybe you should enter your own upper and lower limits for that variable, as explained in </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um102.htm" class="topiclink">Section 10.2</a></span><span class="f_p1-5" style="font-size: 11pt;">, and let it continue to vary &nbsp;There are lots of ways to proceed, and now you have a taste for what SYNOPSYS can do -- and what you must do -- to design a lens.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p3-3" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p3-3">&nbsp;</span></p>
+<p><a name="tm6l12"></a><span class="f_p3-3" style="font-size: 14pt;">Local Minima</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">A recurring problem in lens design is that of the so-called &quot;local minimum&quot;. &nbsp;Lens systems often have discrete solution regions, and optimization programs in general are not good at leaving one region and finding their way to a better one. &nbsp;To do so would require temporarily accepting a poorer lens on the way to the better one, which most algorithms prohibit. &nbsp;SYNOPSYS, on the other hand, has several features that can overcome this obstacle. &nbsp;These are the </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1018.htm" class="topiclink">BFO</a></span><span class="f_p1-5" style="font-size: 11pt;">,  </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1012.htm#kick" class="topiclink">KICK</a></span><span class="f_p1-5" style="font-size: 11pt;"> and </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1012.htm#anneal" class="topiclink">ANNEAL</a></span><span class="f_p1-5" style="font-size: 11pt;"> features, as well as the </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um153.htm#xsys" class="topiclink">XSYS</a></span><span class="f_p1-5" style="font-size: 11pt;">, </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1014.htm#dsearch" class="topiclink">DSEARCH</a></span><span class="f_p1-5" style="font-size: 11pt;">, and </span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1073.htm#zsearch" class="topiclink">ZSEARCH</a></span><span class="f_p1-5" style="font-size: 11pt;"> programs. &nbsp;Click the above links to read about those powerful tools in the User’s Manual.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">BFO can flip the bending of an element and reoptimize; the expert-systems program XSYS can make major changes to the structure of the lens, while the KICK and ANNEAL features will perturb a lens by a controlled amount and then repeat the optimization – sometimes moving to a better solution region. &nbsp; DSEARCH will examine all combinations of element powers and find the 10 best potential starting points that consist of a given number of elements. &nbsp;That program has proved to be an extraordinarily powerful design tool, and you are urged to study the User's Manual section on that feature. &nbsp;ZSEARCH can do the same with zoom lenses.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">If your lens seems stuck in a local minimum, and you believe it should improve further, it is usually wise to increase the number of rays in the ray grid. &nbsp;A grid that is too coarse actually </span><span style="font-size: 11pt; font-style: italic;">creates</span><span style="font-size: 11pt;"> local minima, and it is often helpful to trace a large number of rays in each color. &nbsp;Or you can switch between transverse aberrations and OPD correction, and run the ANNEAL function to try to improve things. &nbsp;Sometimes the results are astonishing, and it is always worth a try. &nbsp;I sometimes have two or three editor windows open, with different optimization targets, so I can go from one to another with a single click.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Let’s look at the causes of local minima, and then discuss some other strategies for dealing with them. &nbsp;Sometimes a poorly selected rayset will cause a lens to behave as though it were in a local minimum. &nbsp;Consider the fans curves shown below.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><img src="tm6f9.png" width="492" height="126" alt="tm6f9" style="width:492px;height:126px;border:none"></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">If the merit function were to correct the rays at zones A and C, these two TFAN curves would give about the same error. &nbsp;Adding ray B would make the one on the left appear better, since that ray has a smaller error. &nbsp;But in fact the fan on the right is to be preferred, since it has lower high-order aberrations and can probably be improved further. &nbsp;You can see that just adding another ray does not always improve things. &nbsp;How does one drive a lens to the better solution?</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">One useful procedure is to control the </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">slope </span><span class="f_p1-5" style="font-size: 11pt;">of the TFAN as well as the transverse errors themselves. &nbsp;If you were to reduce the </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">difference </span><span class="f_p1-5" style="font-size: 11pt;">between the intercepts of rays A and C, the lens would probably improve. &nbsp;Here is one way to do that with SYNOPSYS:</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p2-5" style="text-align: left;"><span class="f_p2-5" style="font-size: 11pt; font-family: 'Courier New';">AANT</span></p>
+<p class="p_p5-3" style="text-align: left; margin: 0px 0px 0px 60px;"><span class="f_p5-3" style="font-size: 11pt; font-family: 'Courier New';">M 0 1 A 2 YC 1 0 -1</span></p>
+<p class="p_p5-3" style="text-align: left; margin: 0px 0px 0px 60px;"><span class="f_p5-3" style="font-size: 11pt; font-family: 'Courier New';">M 0 1 A 2 YC 1 0 -.6</span></p>
+<p class="p_p5-3" style="text-align: left; margin: 0px 0px 0px 60px;"><span class="f_p5-3" style="font-size: 11pt; font-family: 'Courier New';">M 0 2 A ABR -1</span></p>
+<p class="p_p5-3" style="text-align: left; margin: 0px 0px 0px 60px;"><span class="f_p5-3" style="font-size: 11pt; font-family: 'Courier New';">S ABR -2</span></p>
+<p><span style="width:60px">&nbsp;</span><span style="font-size: 11pt; font-family: 'Courier New';">…</span></p>
+<p class="p_p5-3" style="text-align: left; margin: 0px 0px 0px 60px;"><span class="f_p5-3" style="font-size: 11pt; font-family: 'Courier New';">END</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">In this segment of a merit function, we first define separate YC aberrations at rays A and C. &nbsp;These correct the transverse intercept of those two rays measured from the chief-ray intercept. &nbsp;The next target then specifies the difference between &quot;ABR -1&quot; and &quot;ABR -2&quot; -- which is a convenient way of re-using the intercept differences calculated earlier. &nbsp;&quot;A ABR -1&quot; means the previous aberration, while &quot;S ABR -2&quot; subtracts the next-previous. &nbsp;(You can also specify an absolute aberration number, by entering a positive number; &quot;ABR 2&quot; would mean the second aberration in the AANT file, for example.) </span></p>
+<p class="p_p6-3" style="text-align: left; margin: 0px 0px 0px 23px;"><span class="f_p6-3">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Another powerful technique is to target both the transverse intercept </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">and </span><span class="f_p1-5" style="font-size: 11pt;">the OPD of selected rays. &nbsp;Since the OPD is the integral of the TAP fan curve, this technique will minimize the area under the curve at the same time that it minimizes the selected ray aberrations. &nbsp;Here you must be careful when selecting weights, however; an OPD error of </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">one </span><span class="f_p1-5" style="font-size: 11pt;">is one wave of aberration, a pretty good image in many instances -- while one unit of transverse aberration is generally quite bad. &nbsp;A useful rule is to weight the OPD by the quantity</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 33px;"><span class="f_p1-5" style="font-size: 11pt;">4 FNUM </span><span class="f_p1-5" style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&lambda;</span><span class="f_p1-5" style="font-size: 11pt;"> / 25400 &nbsp;if the lens is in units of inches ,and</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="margin: 0px 0px 0px 33px;"><span class="f_p1-5" style="font-size: 11pt;">4 FNUM </span><span class="f_p1-5" style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&lambda;</span><span class="f_p1-5" style="font-size: 11pt;"> / 1000 &nbsp;if the units are mm.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">For example, a system operating at F/10 at a wavelength of 0.5 </span><span class="f_p1-5" style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&mu;</span><span class="f_p1-5" style="font-size: 11pt;">M would need a relative weight on OPD errors of about .0008 if in inches, and .02 if in millimeters, adjusted, of course, as necessary to achieve the balance of aberrations you want. &nbsp;Automatic merit function number 8 creates both transverse and OPD targets and automatically adjusts the weights of the OPD errors according to the above logic, which can be a big time-saver.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Another technique is to use third and fifth-order aberration targets </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">judiciously.  </span><span class="f_p1-5" style="font-size: 11pt;">It is almost never a good idea to simply request that all third-order aberrations go to zero, since a proper balance of aberrations almost always </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">requires </span><span class="f_p1-5" style="font-size: 11pt;">non-zero third-order contributions. &nbsp;But sometimes a particular aberration seems to resist correction, typically a fifth-order component such as SOBSA (sagittal oblique spherical aberration) in a lens such as the double Gauss, or even simple coma in a lens that you believe should easily compensate for it. &nbsp;In such cases it is useful to include the third or fifth-order target temporarily, with a rather high weight, to force the lens to a configuration that specifically addresses this aberration. &nbsp;You may get a useful starting point for more optimization in a better solution region, or you may just get a lens with that aberration corrected and some other(s) seriously degraded. &nbsp;In that case you will know why you were having difficulty: some targets were incompatible with others -- and once you know what they are, you can explore ways to correct them.  </span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Yet another approach that works quite well for some lenses is to assign a nonuniform </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">weighting</span><span class="f_p1-5" style="font-size: 11pt;"> to the rays to be controlled. &nbsp;In the format for the GNR selection, for example, you saw </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">two</span><span class="f_p1-5" style="font-size: 11pt;"> weighting factors:</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span style="width:48px">&nbsp;</span><span class="f_p1-5" style="font-size: 11pt;">GNR </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">RT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">DEL</span><span class="f_p1-5" style="font-size: 11pt;"> { </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p1-5" style="font-size: 11pt;"> / P } </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p1-5" style="font-size: 11pt;"> [ </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p1-5" style="font-size: 11pt;"> [ F [ </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">XWT</span><span class="f_p1-5" style="font-size: 11pt;"> ] ] ].</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Here, the factor </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> applies equally to all rays generated by this request, while the weight </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">RT</span><span class="f_p1-5" style="font-size: 11pt;"> applies according to the equation</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span style="width:48px">&nbsp;</span><span class="f_p1-5" style="font-size: 11pt;">weight = </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> / (Xen**2 + Yen**2) **</span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">RT</span><span class="f_p1-5" style="font-size: 11pt;">. &nbsp; &nbsp; &nbsp; &nbsp;(see </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um10311.htm" class="topiclink">10.3.1.1</a></span><span class="f_p1-5" style="font-size: 11pt;">.)</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">If you, say, give a value of 1.0 to </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">RT</span><span class="f_p1-5" style="font-size: 11pt;">, the rays near the center of the pupil will be weighted more strongly than those at the edge. &nbsp;Looking at the above rayfans plot, you can see that if the beam were closer to the paraxial focus (with a smaller slope near the axis) then the end points would differ between the two, and the better lens would have the lower merit function.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">We almost always specify a value for RT that is greater than zero and experiment with it when we see the results.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-5">&nbsp;</span></p>
+<p><a name="tm6l13"></a><span class="f_p1-5" style="font-size: 14pt;">Third and Fifth-Order Aberrations</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Here is what you would put into the AANT file to control SOBSA:</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5"><span style="width:48px">&nbsp;</span><span class="f_p1-5" style="font-size: 11pt; font-weight: bold;">M 0 1 A SOBSA</span></p>
+<p class="p_p7-2" style="margin: 0px 0px 0px 0px;"><span class="f_p7-2" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p7-2" style="margin: 0px 0px 0px 0px;"><span class="f_p7-2">&nbsp;</span></p>
+<p class="p_p1-5" style="margin: 0px 192px 0px 0px;"><span class="f_p1-5" style="font-size: 11pt; font-style: italic; text-decoration: underline;">General format, first, third, and fifth-order aberrations:</span></p>
+<p class="p_p1-5" style="margin: 0px 192px 0px 0px;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="margin: 0px 192px 0px 0px;"><span class="f_p1-5" style="font-size: 11pt;">M </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">TAR</span><span class="f_p1-5" style="font-size: 11pt;"> </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">WT</span><span class="f_p1-5" style="font-size: 11pt;"> { A / S / MUL / DIV } </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">name</span></p>
+<p class="p_p7-2" style="margin: 0px 0px 0px 0px;"><span class="f_p7-2" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">where </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;">name</span><span class="f_p1-5" style="font-size: 11pt;"> is one of the following:</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">FOCL</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">BACK</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">TOTL</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">GIHT</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">EPP</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">DELF</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">FNUM</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">YP0</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">TH0</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">YP1</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">YMP1</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">XMP1</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">XP1</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">SA3</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">CO3</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">TI3</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">SI3</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">PETZ</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">DI3</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">PAC</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">PLC</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">SAC</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">SLC</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">SA5</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">CO5</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">TI5</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">SI5</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">ECOM</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">DI5</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">TOBSA</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">SOBSA</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">SAPU</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">COPU</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">ASPU</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5" style="font-size: 11pt;">DIPU</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">When a lens is near optimum and your favorite merit function will not improve it any more, you can investigate some of the slower options such as the GNV aberration or maximizing the diffraction MTF. &nbsp;Do not be surprised if the resulting ray fans look at first glance like a </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">less </span><span class="f_p1-5" style="font-size: 11pt;">well corrected lens; one reason why your favorite merit function (or any based on transverse intercepts) would not improve the lens further is that, to get the best performance from a lens on a diffraction-theory basis, you have to do more than just minimize a spot diameter. &nbsp;The GNV and MTF aberration options can get the balance you need better than you can. &nbsp;The MTF optimization feature is described in the </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um1039.htm" class="topiclink">User's Manual</a></span><span class="f_p1-5" style="font-size: 11pt;">.</span></p>
+<p class="p_p7-2" style="margin: 0px 0px 0px 0px;"><span class="f_p7-2">&nbsp;</span></p>
+<p class="p_p7-2" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p7-2">&nbsp;</span></p>
+<p><a name="tm6l14"></a><span class="f_p7-2" style="font-size: 14pt;">Pupil Selection in Optimization</span></p>
+<p class="p_p7-2" style="margin: 0px 0px 0px 0px;"><span class="f_p7-2">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">The above examples have illustrated two methods of defining rays to be corrected: one is to enter explicit ray parameters yourself, and the other is to ask the program to generate a whole set. &nbsp;In </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="tmch3.htm" class="topiclink">Chapter 3</a></span><span class="f_p1-5" style="font-size: 11pt;"> you read about some of the pupil options that are available in SYNOPSYS, along with the remark that optimization has its own rules. &nbsp;The reason is one of expediency; optimization can be a lengthy process, and one would like to avoid the slower pupil options if possible.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">For this reason, the optimization program in general ignores problems like vignetting at clear apertures and feathered edges,</span><span class="f_p1-5" style="font-size: 11pt; vertical-align: sub;"> </span><span class="f_p1-5" style="font-size: 11pt;">unless specifically directed with aberrations like ECP, etc. &nbsp;If you give a target to a specified ray, that ray will be corrected whether it would actually be vignetted or not. &nbsp;It is your job, if you like the correction you obtained, to compose the merit function so that the requested ray(s) will in fact get through the system. &nbsp;The exception to this rule is the WAP 3 option; since vignetting at CAOs is implicitly considered when this pupil is defined, it is of course implicit in all ray definitions since these are based on the pupil. &nbsp;But this is a very slow option, and you would like to avoid it when possible during optimization since the results can be unpredictable.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">If you anticipate that the final lens will be vignetted at off-axis image points, you should not attempt to correct the rays that will be lost. &nbsp;If you enter all of your own ray targets, you can simply select the ones you want. &nbsp;The automatic ray-generation features require an additional parameter, however, to specify what portion of the pupil should be corrected. &nbsp;There are two ways: the </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_p1-5" style="font-size: 11pt;"> option lets you specify vignetting fractions at up to nine field points, and it is usually the best option for this purpose. &nbsp;Or you can use the VSET option. &nbsp;Suppose that you expect, and can tolerate, vignetting of 40% at the full-field image point, as shown on the left in the following figure.</span></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5"><img src="tm6f10.png" width="414" height="178" alt="tm6f10" style="width:414px;height:178px;border:none"></p>
+<p class="p_p1-5"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">The portion of the pupil over which you need to correct ray errors is about 60% of the normal height, and is decentered about 10% in the vertical direction in this example. To specify this kind of pupil to SYNOPSYS, include the following line in the AANT file:</span></p>
+<p>&nbsp;</p>
+<p class="p_p3-3" style="margin: 0px 0px 0px 39px;"><span class="f_p3-3" style="font-size: 11pt; font-weight: bold;">VSET .6 .1</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">This input is honored by all of the features of optimization that create rays for you, such as GNR, MTF, and even ECN and ECP, but is </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">ignored </span><span class="f_p1-5" style="font-size: 11pt;">when you enter your own ray parameters, such as XA, YC, OPD, etc. &nbsp;In other words, when you enter your own rays, what you ask for is exactly what you get. &nbsp;The VSET parameter reduces the pupil in proportion to the fractional field being corrected. &nbsp;(The VFIELD option, mentioned above, by contrast simply </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">redefines</span><span class="f_p1-5" style="font-size: 11pt;"> the pupil size, so your individual rays and automatic ray sets are both reduced accordingly, by the same amount.)</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Another frequent pupil shape is the obscured one shown on the right in the previous illustration. &nbsp;Here the obscured portion is about 30% of the diameter of the pupil, and the AANT file input would be</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p2-5" style="margin: 0px 0px 0px 49px;"><span class="f_p2-5" style="font-size: 11pt; font-weight: bold;">OBSET .3</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">followed by the ray-generating aberrations. &nbsp;The VSET command shrinks the ray pattern in the Y-direction to fit the smaller ellipse, while the OBSET command simply discards any rays in the pattern that fall within the obscured area.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-3" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p3-3">&nbsp;</span></p>
+<p><a name="tm6l15"></a><span class="f_p3-3" style="font-size: 14pt;">Other Optimization Options</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">The optimization feature of SYNOPSYS is one of the most sophisticated parts of the program, and only a few of the basics have been covered in this Tutorial Manual. &nbsp;Here I will briefly mention some of the others, which are described in the </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="umch10.htm" class="topiclink">User's Manual</a></span><span class="f_p1-5" style="font-size: 11pt;">. &nbsp;One of these is the automatic </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um1010.htm#tpm" class="topiclink">testplate matching program</a></span><span class="f_p1-5" style="font-size: 11pt;">, which fits lenses to a selected testplate list one surface at a time and then reoptimizes the system after removing that radius from the set of variables. &nbsp;It is often possible to match every surface in a lens, and it uses the same merit function as normal optimization.</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">It is possible to specify first, third, or fifth-order aberration targets for only a </span><span class="f_p1-5" style="font-size: 11pt; font-style: italic;">portion</span><span class="f_p1-5" style="font-size: 11pt;"> of a lens as well as the entire system. &nbsp;Correcting in this way can often stabilize aberrations of a zoom lens, and by reducing the aberration contribution of a given element it is possible to render it less sensitive to tilt or centration errors. &nbsp;A related feature lets you control several quantities that are derived from 3</span><span class="f_p1-5" style="font-size: 11pt; vertical-align: super;">rd</span><span class="f_p1-5" style="font-size: 11pt;"> order aberrations and are specially designed to reduce tolerance sensitivity. &nbsp;These are described in </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um1013.htm" class="topiclink">Section 10.13</a></span><span class="f_p1-5" style="font-size: 11pt;">.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">See the User's Manual for a description of the </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um1071.htm#zfile" class="topiclink">ZFILE</a></span><span class="f_p1-5" style="font-size: 11pt;"> zoom lens feature, which lets you optimize a lens at up to twenty zoom positions in a single configuration.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">For optimizing infrared systems, the </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um54.htm#nar" class="topiclink">narcissus</a></span><span class="f_p1-5" style="font-size: 11pt;"> contribution of a given surface can be explicitly controlled on a first-order basis, as can the </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um10312.htm#aflux" class="topiclink">flux</a></span><span class="f_p1-5" style="font-size: 11pt;"> uniformity of a condenser system.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">In the event that you want to correct some combination of normal targets not easily expressed with the &quot;{ A / S / MUL / DIV }&quot; selections, you can define a </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um10310.htm#composite" class="topiclink">composite</a></span><span class="f_p1-5" style="font-size: 11pt;"> aberration in the form of an equation involving up to nine parameters, each defined using a normal aberration definition. &nbsp;This equation may contain trigonometic or exponential functions, square roots, etc. -- making it general enough for nearly any need. &nbsp;And if you need to control something that is not in any of the aberration definition lists, you still may be able to, with the </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um103_11.htm#clink" class="topiclink">CLINK</a></span><span class="f_p1-5" style="font-size: 11pt;"> feature, which can grab the output of nearly any SYNOPSYS command and treat it as an aberration.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">A completely general </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um1072.htm#acon" class="topiclink">multiconfiguration</a></span><span class="f_p1-5" style="font-size: 11pt;"> optimization feature can optimize up to six separate lenses at the same time and allow for specified parameters to be transferred between them. &nbsp;You can, for example, design the optics for exposing a </span><span class="f_p1-5" style="font-size: 11pt; text-decoration: underline;"><a href="um3324.htm#hoe" class="topiclink">holographic optical element (HOE)</a></span><span class="f_p1-5" style="font-size: 11pt;"> and at the same time optimize the image of the system that plays it back.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="font-size: 11pt;">Many users of SYNOPSYS will be able to do their work using only the features discussed so far in this manual. &nbsp;SYNOPSYS offers many additional features, however, and the next chapter will discuss some of the more common: reflecting systems and systems with unusual geometry involving tilts or decenters.</span></p>
+<p class="p_mine-4"><span class="f_mine-4">&nbsp;</span></p>
+<p class="p_p1-5" style="text-align: left;"><span class="f_p1-5" style="text-decoration: underline;"><a href="tmch7.htm" class="topiclink">To Chapter 7</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

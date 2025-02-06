@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>aberration definition</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="APS: code in AANT file,CONST: aberration input,FLAG: implied surface use,ZGROUP: format" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="aant"></a><span class="f_mine" style="font-size: 14pt;">10.3 Aberration Input (AANT)</span><span class="f_mine" style="font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1031.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um102.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Every quantity that you wish to incorporate into the merit function for optimization purposes must be described in an aberration input file, which must begin with the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">AANT [ P ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and end with the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may create up to 25,000 aberrations, which are defined by subsequent lines, of six types:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">1.</span></p>
+</td>
+<td style="vertical-align:top; width:448px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um1031.htm" class="topiclink">Ray-based aberrations</a></span><span class="f_mine">, including transverse coordinates and OPD's</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">2.</span></p>
+</td>
+<td style="vertical-align:top; width:448px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um1032.htm" class="topiclink">Paraxial aberrations</a></span><span class="f_mine">, including 3rd and 5th-order defects</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">3.</span></p>
+</td>
+<td style="vertical-align:top; width:448px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um1033.htm" class="topiclink">Construction parameter aberrations</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">4.</span></p>
+</td>
+<td style="vertical-align:top; width:448px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um1039.htm" class="topiclink">Diffraction MTF aberrations</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">5.</span></p>
+</td>
+<td style="vertical-align:top; width:448px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um10310.htm" class="topiclink">Composite aberrations</a></span><span class="f_mine"> defined by an equation using one or more of the other definitions.  </span><span class="f_mine" style="text-decoration: underline;"><a href="um103_11.htm#clink" class="topiclink">CLINK</a></span><span class="f_mine"> aberrations are similar, but involve processing a SYNOPSYS command and selecting one or more output data items.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">6.</span></p>
+</td>
+<td style="vertical-align:top; width:448px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">A constant number can also be included with the mnemonic </span><span class="f_mine" style="font-weight: bold;">CONST</span><span class="f_mine">. &nbsp;For example,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">M 0 1 A P YA .5</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">MUL CONST 2</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">S GIHT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This will find the Y-coordinate at half field, multiply by 2, and then subtract the Gaussian image height, controlling distortion at that field point.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the default mode (switch 29 on) SYNOPSYS ignores the optional [ </span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine"> ] on the AANT command and automatically gives a listing of the AANT input with the output. &nbsp;If switch 29 is turned off (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um105.htm" class="topiclink">10.5</a></span><span class="f_mine">), the form of listing can be controlled; the [ </span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine"> ] produces an input image, while omission of the </span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine"> results in a more lengthy but complete summary of the aberration definitions.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The values of all defined aberrations will be listed at the start and at the end of every optimization run if switch 89 is turned ON. &nbsp;Since the list may be lengthy, and one seldom needs to examine all of it, the default has this switch OFF.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">All aberration definitions must be placed between the AANT and END lines. Two kinds of aberration definitions are used most frequently. &nbsp;These specify a quantity to be controlled explicitly or imply a collection of such quantities. &nbsp;The first uses input such as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f27.png" width="321" height="178" alt="um10f27" style="width:321px;height:178px;border:none"><span class="f_mine"> .</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here, the GOALS section says to </span><span class="f_mine" style="font-weight: bold;">M</span><span class="f_mine">iminize to a target value of 55.2 with a relative weight of 1 the quantity in the DETAILS section, in this case the TOTL length of the lens. The “</span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine">” in that section means </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine">dd this quantity. &nbsp;You may have several items in the DETAILS section, combined with A, S, MUL, and DIV. &nbsp;For example, to control the sum of thicknesses 4 and 5, you could enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">M 34.567 A TH 4</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">A TH 5.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input that defines a collection of quantities to be controlled takes a form such as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">GNR 0.5 10 4 P 1</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">which in this example says to generate a grid of rays, weighted with parameters 0.5 and 10, 4 rays per half-pupil, color P (the primary color) at full field (HBAR = 1). &nbsp;This format is explained in </span><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm" class="topiclink">Section 10.3.1.1</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Input for the GOALS section formally takes the form</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f5.png" width="403" height="300" alt="um10f5" style="width:403px;height:300px;border:none"><span class="f_mine"> &nbsp;.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This input is followed by additional parameters that describe what is being minimized (the DETAILS section). &nbsp;These are in four categories, and you may read about them by following the links at the end of this section.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="aantaname"></a><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1011e.htm#alist" class="topiclink">aname</a></span><span class="f_mine"> is an optional string of up to 8 characters, consisting of all numbers or starting with a letter with no punctuation marks or spaces within the name. &nbsp;This name will appear on the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1011e.htm#alist" class="topiclink">ALIST</a></span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;"><a href="um109.htm#final" class="topiclink">FINAL</a></span><span class="f_mine"> output to help you identify individual aberrations.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">M</span><span class="f_mine"> means to minimize to the specified target; </span><span class="f_mine" style="font-weight: bold;">MF</span><span class="f_mine"> means to minimize with the fourth power of the aberration, rather than the second, in the merit function.  </span><span class="f_mine" style="font-weight: bold;">L</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">LIM</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">LL, LUL </span><span class="f_mine">and</span><span class="f_mine" style="font-weight: bold;"> LLL</span><span class="f_mine"> specify a one-sided limit, described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um10351.htm" class="topiclink">Section 10.3.5.1</a></span><span class="f_mine">.  </span><span class="f_mine" style="font-weight: bold;">C</span><span class="f_mine"> specifies exact correction based on Lagrange multipliers, described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um10352.htm" class="topiclink">Section 10.3.5.2</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">SR</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">SCR</span><span class="f_mine"> are described in the </span><span class="f_mine" style="text-decoration: underline;"><a href="um10312.htm" class="topiclink">ray aberration</a></span><span class="f_mine"> discussion. &nbsp;Up to 5001 aberrations M's, etc.) may be defined. &nbsp;Ray aberrations each may contain up to 9 components (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um10312.htm" class="topiclink">10.3.1.2</a></span><span class="f_mine">), and other types of aberrations any number.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Many of the aberration definitions allow one to refer to a particular surface number, for example, the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">M 55 .1 A TH 6</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">specifies a target value of 55 for thickness number 6.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="lb0"></a><span class="f_mine">It is sometimes convenient, when referring to a surface number within a lens, to use the special codes</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">LB0</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">LB1</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">LB2</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">LB3</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">LB4</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">...</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">LB9</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FLAG</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FP1</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FP2</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FP3</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FP4</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">... &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FP9</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FM1</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FM2</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FM3</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FM4</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">...</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FM9</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">APS</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The first of these specify “last but zero”, “last but one”, “last but two”, and so on; these let you count backwards from the last surface. &nbsp;If the lens has eight surfaces, the example referring to surface 6 could be written</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M 55 .1 A TH LB2.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may also use the mnemonics </span><span class="f_mine" style="font-weight: bold;">FLAG</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">APS</span><span class="f_mine"> to refer indirectly to a surface number. &nbsp;If a surface has been declared a </span><span class="f_mine" style="text-decoration: underline;"><a href="um3312.htm#flag3312" class="topiclink">FLAG</a></span><span class="f_mine"> surface, that surface number will be substituted for the FLAG entry. &nbsp;The entry </span><span class="f_mine" style="font-weight: bold;">FP1</span><span class="f_mine"> means &quot;flag plus one&quot; and so on, letting you specify up to nine surfaces before and after the flag surface. &nbsp;The surface declared the stop (with </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> APS ... in the RLE file) can be referenced with the </span><span class="f_mine" style="font-weight: bold;">APS</span><span class="f_mine"> entry. &nbsp;These are all useful when running </span><span class="f_mine" style="text-decoration: underline;"><a href="um1017.htm#spb" class="topiclink">SPBUILD</a></span><span class="f_mine"> or </span><span class="f_mine" style="text-decoration: underline;"><a href="um1017.htm#aei" class="topiclink">AEI</a></span><span class="f_mine">, where the number of surfaces is constantly changing and referring to a particular surface by number is not practical. &nbsp;These codes may be used almost anywhere in the program to refer to a surface number indirectly. &nbsp;They cannot be used within an RLE or CHG file. &nbsp;Also, APS cannot be used in an FFBUILD file, since that is a valid mnemonic in that case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="zoom"></a><span class="f_mine">When designing zoom lenses, you can declare which zooms are to be corrected with a </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">ZOOM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">nb</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">directive in the AANT file. &nbsp;All aberrations defined thereafter will apply to the requested zoom until another ZOOM directive is encountered. &nbsp;In the event you want the same aberrations to apply to more than a single zoom, you can use the </span><span class="f_mine" style="font-weight: bold;">ZGROUP ... END</span><span class="f_mine"> format. &nbsp;For example,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">ZGROUP ALL</span></p>
+<p class="p_mine"><span class="f_mine">(aberrations, raysets, etc.)</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span><span class="f_mine"> &nbsp;(to end the group)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">or</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">ZGROUP 1 3 5 7</span></p>
+<p class="p_mine"><span class="f_mine">...</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">ZGROUP 2 4 6 8</span></p>
+<p class="p_mine"><span class="f_mine">...</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(other AANT entries)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span><span class="f_mine"> (to end the AANT file)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The first example will apply the entered aberrations to all zoom groups; the second and third will apply only to the zooms entered explicitly.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that the ZGROUP entry requires an END entry (to terminate the group), and the AANT file requires a second END to terminate all aberration definitions. &nbsp;A ZGROUP may not include any ZOOM or another ZGROUP declaration.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="zfocus_aant"></a><span class="f_mine">The entry </span><span class="f_mine" style="font-weight: bold;">ZFOCUS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TH0</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DT</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GIHT</span><span class="f_mine" style="font-weight: bold;"> ] </span><span class="f_mine">will alter the object distance to the value </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TH0</span><span class="f_mine">, increase the airspace following surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSN</span><span class="f_mine"> by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DT</span><span class="f_mine">, and subsequent rays and aberrations will be calculated for those settings. &nbsp;To restore the nominal parameters, enter ZFOCUS OFF. &nbsp;The optional </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GIHT</span><span class="f_mine"> parameter is explained in <a href="um1071.htm#zfocus" class="topiclink">Section 10.7.1</a>.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For multiconfiguration optimization, you must enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">ACON </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">nb</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">before the aberrations that are to apply to configuration </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">nb</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="monitor"></a><span class="f_mine">There are, in addition to the definitions described above, several entries that are used to </span><span class="f_mine" style="font-weight: bold;">monitor</span><span class="f_mine"> certain aspects of the lens to keep it from becoming unreasonable. &nbsp;These are</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um1037.htm#aec" class="topiclink">AEC</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to monitor edge thicknesses, where TH is varying.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um1037.htm#aec" class="topiclink">AGE</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to monitor edge thickness of glass elements, where TH is varying.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um1037.htm#aec" class="topiclink">AFE</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">monitors edges, as does AGE, but at the apertures given by <a href="um78.htm#efile" class="topiclink">EFILE</a> points A and E if defined, or at the CAO if not.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um1037.htm#aec" class="topiclink">AAE</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to monitor edge thicknesses of airspaces, where TH is varying.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um1038.htm#aacc" class="topiclink">ACC</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to control maximum center thicknesses of elements, where TH is varying.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um1038.htm#aacc" class="topiclink">ACM</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to control minimum center thicknesses, where TH is varying.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um103_12.htm#asc" class="topiclink">ASC</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to prevent surface slopes from becoming too steep at the rim rays, where CV is varying.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um103_12.htm#asc" class="topiclink">ACS</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to prevent surface slopes from becoming too steep at the CAO, where CV is varying.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um103_13.htm#aca" class="topiclink">ACA</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to prevent rays from entering or leaving an element too close to the critical angle, where the CV is varying.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um103_13.htm#act" class="topiclink">ATC</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">checks the angle from normal of all rays traced by ray errors in the merit function. &nbsp;This is to prevent critical angle errors if the angle gets too steep.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um103_14.htm#aac" class="topiclink">AAC</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">aperture control, to monitor clear apertures and keep them from getting too large. &nbsp;This applies to all apertures not assigned a hard CAO.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um103_14.htm" class="topiclink">ALA</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to monitor apertures on lens surfaces. &nbsp;This is similar to AAC, but does not apply to reflective surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um103_15.htm#azooma" class="topiclink">AZA</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to monitor the airspace on both sides, and the edge dimensions, of each zoom group in a ZFILE zoom lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um103_16.htm" class="topiclink">ADT</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to monitor the maximum ratio of lens diameter to thickness.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="103_19.htm#adm" class="topiclink">ADM</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to monitor the minimum ratio of lens diameter to thickness.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um103_16.htm" class="topiclink">ADS</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to monitor the ratio of lens diameter to thickness, adding surface sag to the thickness. &nbsp;This accounts for the greater stiffness of meniscus elements..</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um103_17.htm" class="topiclink">AMS</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to monitor the separation between centers of curvature of meniscus lenses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um103_18.htm#arc" class="topiclink">ARC</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine"> to monitor the position of the chief ray within the beam throughout the lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Each of these has optional parameters to control how they are applied. &nbsp;Click the above links for a discussion of each. &nbsp;Special considerations apply to ZFILE zoom lenses; see <a href="um1073.htm#zsearch" class="topiclink">Section 10.7.3</a>.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This chapter hints at the depth of and the many possibilities that are available to you for the SYNOPSYS merit function. &nbsp;But the average user needs only a small part of these, and your merit function usually will turn out to be rather simple. &nbsp;Here, for example, is a sample merit function definition (see the following chapters for definitions of the parameters used):</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">AANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="text-decoration: underline;"><a href="um1037.htm#aec" class="topiclink">AEC</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm" class="topiclink">GSR</a></span><span class="f_mine"> 0 &nbsp; &nbsp;10.000000 3 &nbsp;2 &nbsp; &nbsp;0.000000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR 0 &nbsp; &nbsp; 2.000000 3 &nbsp;2 &nbsp; &nbsp;0.750000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR 0 &nbsp; &nbsp; 1.000000 3 &nbsp;2 &nbsp; &nbsp;1.000000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GSR 0 &nbsp; &nbsp;10.000000 3 &nbsp;1 &nbsp; &nbsp;0.000000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR 0 &nbsp; &nbsp; 2.000000 3 &nbsp;1 &nbsp; &nbsp;0.750000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR 0 &nbsp; &nbsp; 1.000000 3 &nbsp;1 &nbsp; &nbsp;1.000000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GSR 0 &nbsp; &nbsp;10.000000 3 &nbsp;3 &nbsp; &nbsp;0.000000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR 0 &nbsp; &nbsp; 2.000000 3 &nbsp;3 &nbsp; &nbsp;0.750000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GNR 0 &nbsp; &nbsp; 1.000000 3 &nbsp;3 &nbsp; &nbsp;1.000000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">M &nbsp;33 .1 A </span><span class="f_mine" style="text-decoration: underline;"><a href="um1032.htm" class="topiclink">BACK</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="text-decoration: underline;"><a href="um103_13.htm#aca" class="topiclink">ACA</a></span><span class="f_mine"> 60 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="text-decoration: underline;"><a href="um1038.htm#aacc" class="topiclink">ACC</a></span><span class="f_mine"> 40 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1031.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

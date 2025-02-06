@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um531</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Glass,Glass searching for real,GSEARCH" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p>&nbsp;</p>
+<p><a name="gsearch"></a><span style="font-size: 14pt;">5.31 Search for best glasses (GSEARCH) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-decoration: underline;"><a href="um530.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um532.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Glass model parameters (</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um334.htm#glm" class="topiclink">GLM</a></span><span class="f_mine">) can be varied during optimization to help you find the region of the glass table that gives the best image correction. &nbsp;That feature treats the parameters as continuous variables so it can find derivatives, and the model describes the average behavior of glasses in the visible portion of the spectrum. &nbsp;The </span><span class="f_mine" style="text-decoration: underline;"><a href="um523.htm#irg" class="topiclink">IRG</a></span><span class="f_mine"> feature can insert a real glass type, replacing a current model glass, and </span><span class="f_mine" style="text-decoration: underline;"><a href="um547.htm#arglass" class="topiclink">ARGLASS</a></span><span class="f_mine"> can replace any or all of the model glasses subject to certain selection criteria.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">But the glass model is not useful for systems outside the visible range, where the model coefficients are not appropriate and there may be few materials to select. &nbsp;Also, since the model describes only the average characteristics of glasses on the glass map, it will not lead to designs that employ materials whose usefulness derives precisely because they do </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> behave like normal glasses – the KzF glasses, for example.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For these cases, another feature is available.  </span><span class="f_mine" style="font-weight: bold;">GSEARCH</span><span class="f_mine"> will perform an exhaustive search over a selection of glass types and elements, optimizing the entire system for every combination (or selected subset). &nbsp;It is a lengthy process, but the catalog values of indexes are employed rather than a model, so it applies exactly to all materials.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The multicore option is recommended with this feature since it is often a lengthy process. &nbsp;AI symbols cannot be defined by the optimization MACro, but the program will inherit and honor any symbols already defined before it starts. &nbsp;If you want the optimization program to honor symbols, in other words, be sure to declare them </span><span class="f_mine" style="font-style: italic;">before</span><span class="f_mine"> calling GSEARCH. &nbsp;Also, be aware that, for many users who simply want to replace model glasses with real glass, ARGLASS is probably a better tool than GSEARCH. &nbsp;It runs much faster than GSEARCH, and unless you specifically need the special power of that program, it will probably not yield any better results.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">GSEARCH has two modes: &nbsp;If you enter a </span><span class="f_mine" style="font-weight: bold;">NAMES</span><span class="f_mine"> file, the program will cycle through all the entered glass names, applying each of them to every surface requested. &nbsp;The other option uses a </span><span class="f_mine" style="font-weight: bold;">NEAREST</span><span class="f_mine"> file, where you specify the number of glass types to be evaluated at each surface. &nbsp;The program finds candidate glasses in the latter case by comparing the Nd and Vd of every glass in the specified catalog with the present values in the lens and selecting the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> closest. &nbsp;Thus, if you enter a NAMES file, the total number of cases to be evaluated is the product of the number of surfaces times the number of glasses. &nbsp;The NEAREST analysis will usually examine a larger number of glasses, but the analysis does not take any longer since not all glasses are evaluated at each surface. &nbsp;The third word on the NEAREST line controls the glass selection: if &quot;P&quot; is entered, only preferred types from the requested tables are allowed, while &quot;0&quot; will allow all glasses in the table (some of which may well be obsolete.) &nbsp;Word four specifies the price limit; glasses whose price exceeds this value (which is relative to the price of BK7) will be ignored. &nbsp;The default accepts all glasses, regardless of price. The value of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> to the power of the number of surfaces must not exceed 9999 (and you can override that limit with the CLIMIT input), and the number per surface must not exceed 5.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Yet another option causes GSEARCH to replace only a single glass in the lens instead of cycling through the requested glasses on all surfaces. &nbsp;This is the </span><span class="f_mine" style="font-weight: bold;">SINGLE</span><span class="f_mine"> option.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">GSEARCH is not compatible with the protocol of switch 99, and that switch will be turned off before it runs.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Proceed as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. Set up the lens with a reasonable selection of glass types. &nbsp;It helps if the initial design satisfies the first-order and mechanical requirements, and the only remaining problem is to find the best materials to use. &nbsp;If possible, use low index materials at this stage. &nbsp;If the NEAREST option is used, the latter comment does not apply since the program will use glasses close to the starting values.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. Create an optimization MACro containing the PANT and AANT files, but not varying the glasses on surfaces you wish to include in the search space. &nbsp;(If you specify </span><span class="f_mine" style="font-weight: bold;">VLIST GLM ALL</span><span class="f_mine"> in the PANT file, The program will only vary those materials that are currently glass models, and not any real glass that GSEARCH has inserted, which is also okay.) &nbsp;This MACro may end with the line </span><span class="f_mine" style="font-weight: bold;">GSEARCH</span><span class="f_mine">, as required by earlier versions, but that line is no longer required. </span><span class="f_mine" style="font-weight: bold;"> DO NOT INCLUDE ANY OTHER COMMANDS IN THIS FILE, SUCH AS STORE, GET, FETCH, OR SYMBOL DEFINITIONS</span><span class="f_mine">. &nbsp;Those will crash all cores higher than 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Save this MACro with any desired name. &nbsp;Unless you specify differently in the input below, the program will assume it is named </span><span class="f_mine" style="font-weight: bold;">GSOPT.MAC</span><span class="f_mine" style="font-family: 'Times New Roman';">. </span><span class="f_mine"> The program will read this file when it optimizes each case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. Enter the following command sequence, either in real time or in another MACro.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GSEARCH </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LLIB</span><span class="f_mine" style="font-weight: bold;"> [ QUIET/Q ]</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p><span class="f_mine">GSEARCH will store the current lens in location </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LLIB</span><span class="f_mine" style="font-weight: bold;">, </span><span class="f_mine">and will then revert to that lens before trying each glass combination</span><span class="f_mine">. &nbsp;The optional </span><span class="f_mine" style="font-weight: bold;">QUIET</span><span class="f_mine"> (or </span><span class="f_mine" style="font-weight: bold;">Q</span><span class="f_mine">) suppresses output to the Command Window. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SURF</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Note that this is a </span><span class="f_mine" style="font-style: italic;">word</span><span class="f_mine">, not a number</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> …</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Assign glasses to the surfaces indicated.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> …</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ SUBSET</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;">S/O/H/F/U/C/G/M/P/N} </span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;">S/O/H/F/U/C/G/M/P/N} </span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">... </span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END ]</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This optional input allows only a subset of combinations. &nbsp;Listed surface numbers will only be matched to the given catalog. &nbsp;The input must directly follow the SURF set of data. &nbsp;This option does not add surfaces or catalogs; it only filters combinations when they are matched.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">OFILE &nbsp;&quot;</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">filename</span><span class="f_mine" style="font-weight: bold;">.MAC&quot;</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input specifies the name of a file that will be opened and used for optimizing each case. &nbsp;The file must exist and the name must end with the file type &quot;.MAC&quot;. &nbsp;The whole name must be set off with quotation marks. &nbsp;If this entry is omitted, the default name is GSOPT.MAC, as noted above.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">NAMES</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;">S/O/H/F/U/C/G/M/P/N} </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">glassname</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">See the </span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm#gtb" class="topiclink">GTB</a></span><span class="f_mine"> description, and below.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;">S/O/H/F/U/C/G/M/P/N } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">glassname</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;">S/O/H/F/U/C/G/M/P/N } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">glassname</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">…</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">NEAREST </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> { P / 0 &nbsp;[ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">price</span><span class="f_mine" style="font-weight: bold;"> ] }</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">See above text regarding this mode.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">{S/O/H/F/U/G/M/P/N}</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">...</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ USE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">nb</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry filters the many possible combinations of glass types, and only applies to the NAMES option. &nbsp;If a number greater than zero is entered, the program will only optimize those that contain at least that number of different glasses. &nbsp;For accurate color correction, one often requires three different types, and this will skip those that have fewer. &nbsp;The default will accept all combinations.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program initially sets up the case where the first glass is applied to every requested surface, to get a baseline merit function for testing the later combinations. &nbsp;It can happen that none of the cases honoring the USE directive is actually better than that baseline. &nbsp;When that happens, that case is returned, and you know that the USE option is probably not a good idea for that lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CLIMIT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Maximum number of cases allowed. &nbsp;This entry is intended to prevent a careless user from asking for an excessive number of cases and then wondering why it takes so long. &nbsp;The default is 9999 cases.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TIMEOUT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TIME</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">In multicore mode, some cores take longer to finish than others. &nbsp;After core 1 has finished all its cases, if any higher processes have not finished by an additional </span><span class="f_mine" style="text-decoration: underline;">TIME</span><span class="f_mine">, measured in 1/10 seconds, those processes will be aborted and any remaining cases assigned them will be skipped. &nbsp;This is to enable the program to finish even in the event that another core has become hung. &nbsp;The default is 600, which calls for a 60 second wait. &nbsp;To allow a 5-minute wait, you would enter </span><span class="f_mine" style="font-weight: bold;">TIMEOUT 3000</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">DELAY</span><span class="f_mine"> also works, and if you use </span><span class="f_mine" style="font-weight: bold;">DELAY OFF</span><span class="f_mine">, the time is set to a very large number, so it should never be triggered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default is OFF.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This option is seldom needed, since all the higher cores display a progress window with a STOP button and can be terminated that way if you want. &nbsp;Clicking the stop-sign button on the top toolbar will abort all running higher cores. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ SINGLE ]</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If this is entered, only a single surface will be assigned one of the candidate glasses. &nbsp;This is useful for finding the best location for one of the expensive glasses with unusual dispersion.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:283px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GO</span></p>
+</td>
+<td style="vertical-align:top; width:464px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The number of trial optimization is just the number of glasses entered, raised to a power equal to the number of elements. &nbsp;Thus, a selection of 10 glasses to be tried on 10 elements gives 10**10 cases, which at a rate of six optimizations per minute would require about 3171 years to run. &nbsp;Clearly, one must use this feature with discretion, and it will not accept any input that results in more than 9999 optimizations (just over one day at the above rate.) &nbsp;This feature honors the </span><span class="f_mine" style="text-decoration: underline;"><a href="um546.htm#core" class="topiclink">CORE</a></span><span class="f_mine"> directive, so by all means turn it on if you have a multicore PC; that will greatly speed things up. &nbsp;In the event that you really want to run more cases than this, you can override the CLIMIT as noted above. &nbsp;For example, to set the maximum number to 1.0e6, you should use the entry</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">CLIMIT 1.0E6.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you do this, however, be prepared to wait, perhaps for a long time, for it to finish. &nbsp;You can always click the stopsign button </span><img src="clip0407.png" width="28" height="28" alt="clip0407" style="width:28px;height:28px;border:none"><span class="f_mine"> to terminate the process, if you see a sufficiently low merit function listed on the running log. &nbsp;In that case, however, the program simply stops, and you have to load the best solution found so far, which you will find in the file GSEARCH.RLE.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-align: center;"><span class="f_mine" style="font-weight: bold;">Caution!</span></p>
+<p class="p_mine" style="text-align: center;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-align: center;"><span class="f_mine" style="font-weight: bold;">Be aware that the higher cores cannot send error messages to the Command Window. &nbsp;So be very sure your input is correct before running in multicore mode. &nbsp;One user asked for the wrong OFILE -- which was not appropriate for his current lens -- and all the processes got hung. &nbsp;If you kill them with the Task Manager, they will leave locked disk files, and the only way to recover is to reboot the PC. &nbsp;The moral: &nbsp;Check your input first!</span></p>
+<p class="p_mine" style="text-align: center;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate this feature, we will optimize a 3-5uM system, where the glass model is not appropriate. &nbsp;The MACro GSOPT.MAC contains</span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:298px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PANT</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">VLIST RAD 1 2 3 4 5</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">VLIST TH 1 2 3 4 5</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">AANT</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">ACC 25.4 1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">AEC 5 1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GSR .75 1 4 1 0 0  </span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GSR .75 1 4 2 0 0  </span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GSR .75 1 4 3 0 0  </span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GNR .75 1 3 1 .75 0  </span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GNR .75 1 3 1 1.0 0  </span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GNR .75 1 3 2 .75 0  </span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GNR .75 1 3 2 1.0 0  </span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GNR .75 1 3 3 .75 0  </span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GNR .75 1 3 3 1.0 0  </span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">SNAP</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">SYNO 25 0 FIX 5</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When you run this feature, you'll probably want to test your optimization MACro, since it is important that it converge quickly and reliably. &nbsp;Just run the file GSOPT.MAC to check the results. &nbsp;If your MACro contains items that do not relate to image quality, such as mechanical dimensions, etc., and if these are the predominant errors in the merit function, then the GSEARCH program will not necessarily find the best image. &nbsp;It simply selects that combination of glasses that gives the lowest merit function, and large mechanical errors can obscure the effects you wish to control.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now we enter and run another MACro, as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:298px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GSEARCH 5 QUIET</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">SURF</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">1 3 5</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">NAMES</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">U ZNS</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">U ZNSE</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">U AMTIR1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">U GE</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">U CAFL</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GO</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here we have saved the initial lens in location 5 in the library. &nbsp;The MACro lists the surfaces whose glasses we want to modify, and gives the program a selection of five materials from the Unusual catalog that are useful in the 3-5 region. &nbsp;This is only 125 cases altogether, and it runs in less than five minutes in our test. &nbsp;The final lens is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="gsearch1.png" width="645" height="456" alt="GSEARCH1" style="width:645px;height:456px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This design is corrected to within 1/10 wave over the entire region, and the program has selected the materials AMTIR1, GE, and CAFL.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">As the program substitutes each glass, it automatically runs the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um523.htm#irg" class="topiclink">IRG</a></span><span class="f_mine"> program, which adjusts the curvatures of the element to try to maintain the same power and bending as before. &nbsp;This step is intended to prevent ray failures – which would occur constantly if one just changed the index and did nothing else. &nbsp;But if the new glass has a lower index than the initial glass, the curves will become steeper, which might again cause ray failures. &nbsp;So it is wise to start with low-index materials if possible. &nbsp;It is also wise to use the FIX directive on the <a href="um104.htm" class="topiclink">SYNOPSYS</a> command, so even if rays fail the program may still be able to recover and optimize it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program saves the best combination in the file </span><span class="f_mine" style="font-weight: bold;">GSEARCH.RLE</span><span class="f_mine">, and automatically fetches that design when all combinations have been examined. &nbsp;You can interrupt the process by clicking on the stop sign </span><img src="stopsign.png" width="28" height="27" alt="stopsign" style="width:28px;height:27px;border:none"><span class="f_mine">, but then the program does not finish this last step. &nbsp;If you spot an excellent design (in </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um104.htm" class="topiclink">SNAP</a></span><span class="f_mine"> mode) and do not wish to wait until all of the remaining cases are run, just interrupt it and then fetch that file, which will be the best design encountered thus far. &nbsp;A running log is output by the program showing the lowest merit function encountered so far. &nbsp;If a very low value shows up, this is another indication that it may not be worthwhile to wait for all the other cases to finish. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The entries for glass names are in a strict format. &nbsp;The program takes the name from the characters typed in columns 3 through 18. &nbsp;This name must match </span><span class="f_mine" style="font-style: italic;">exactly</span><span class="f_mine"> an entry in the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um334.htm#gtb" class="topiclink">glass table</a></span><span class="f_mine">. &nbsp;So these parameters must occur at the beginning of the line in your MACro. &nbsp;If any entered names do not match, the program will terminate with an error message.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may run your GSEARCH command file via the MACro editor, but do not run it as the alternate MACro. &nbsp;GSEARCH creates its own alternate MACro to do the optimization, so this must be vacant.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate the NEAREST mode, we create a starting lens and an optimization file called GSOPT2.MAC, and then enter our MACro:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">CORE 8</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">GSEARCH 5 &nbsp;QUIET  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">SURF</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">1 3 6</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">OFILE &quot;GSOPT2.MAC&quot;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">NEAREST 5 P</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">S</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">O</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">H</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">GO</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This will replace the materials at surfaces 1, 3, and 6 with one of the five closest glasses from either the Schott, Ohara, or Hoya catalogs. &nbsp;The final lens will be the best combination that was found. &nbsp;Keep in mind that specifying many catalogs will not always yield a better lens than will fewer. &nbsp;Some of the glasses may have to depart from the starting values after others are matched, to find the best solution, and searching more catalogs may not find those further away since there are then more close ones to choose from.</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um532.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

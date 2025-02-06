@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>umch14</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="environmental analysis" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-size: 14pt; font-family: 'Times New Roman'; font-style: italic; font-weight: bold;">SYNOPSYS User’s Manual &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um141.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 14pt; font-family: 'Times New Roman'; font-style: italic; font-weight: bold;">Chapter 14</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-size: 14pt; font-weight: bold;">14.0 ENVIRONMENTAL ANALYSIS PACKAGE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Several programs are available for evaluating the effects of changes in the thermal and mechanical environment on a lens system. &nbsp;The system temperature and air pressure may be defined in the lens file itself, with the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#temp" class="topiclink">TEMPERATURE</a></span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#pressure" class="topiclink">PRESSURE</a></span><span class="f_mine"> parameters. &nbsp;Those options only affect the indices of refraction of the lens elements, however, and the input values of other parameters still apply in that case. &nbsp;If the system undergoes an environmental change that affects mechanical dimensions as well, then the programs described below are more appropriate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Thermal soaks may be analyzed with the program THERM, described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um59.htm" class="topiclink">section 5.9</a></span><span class="f_mine">. That program will alter the radii and thicknesses of elements according to the change in temperature and the thermal coefficients appropriate to the element.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If your system undergoes an environmental change that results in a more complicated change of surface shape, you can calculate the new shape with a third-party structural or thermal analysis program, and then obtain the coefficients of the new shape from that program. &nbsp;Those surface deformations may then be analyzed using the DC 1 ... input in the </span><span class="f_mine" style="font-weight: bold;">RLE</span><span class="f_mine"> file if the shape is described by that power series, and with the Zernike input if that polynomial is more appropriate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you have a set of position changes over the surface, the programs </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um57.htm#def" class="topiclink">DEF</a></span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um57.htm#zernike" class="topiclink">ZERNIKE</a></span><span class="f_mine"> can be used to derive the deformation coefficients. &nbsp;These can be determined by digitizing an interferogram, thereby generating a set of Z-deformations at each of a number of (X,Y) positions.  </span><span class="f_mine" style="text-decoration: underline;"><a href="um57.htm" class="topiclink">Section 5.7</a></span><span class="f_mine"> describes this feature.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-size: 11pt;">Another feature, </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um141.htm#tosp" class="topiclink">TOSP</a></span><span style="font-size: 11pt;">, is more general but operates only on a perturbational basis; it is described below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um141.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

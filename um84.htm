@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um84</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="footprint,MFP footprint plots,PUP (footprint pupil)" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="footprint"></a><span class="f_mine" style="font-size: 14pt;">8.4 Footprint Options &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um841.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um83.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="trace"></a><span class="f_mine">The ray pattern may be examined at locations other than the final image with the input shown below. &nbsp;The dialog </span><span class="f_mine" style="font-weight: bold;">MFP</span><span class="f_mine"> provides an interactive way to request footprint plots. &nbsp;In Command Mode or in a MACro the format is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um8f1.png" width="574" height="239" alt="um8f1" style="width:574px;height:239px;border:none"></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program traces a beam of approximately </span><span class="f_mine" style="font-weight: bold;">NRYS</span><span class="f_mine"> rays from the object at </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine"> and plots its intersection with surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ISN</span><span class="f_mine"> at a scale of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TSCF</span><span class="f_mine"> where 0.5 is half scale, etc. &nbsp;The center of the plot corresponds to ( </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XOS</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YOS</span><span class="f_mine"> ) on the surface unless </span><span class="f_mine" style="font-weight: bold;">CR</span><span class="f_mine"> is entered, in which case it is the chief ray position for that field angle.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">On the plot, the positive Y axis is oriented up, and the positive X axis is toward the right.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_mine"> is input as 1, a single ray is traced with fractional entrance pupil coordinates </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span><span class="f_mine">. &nbsp;For </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_mine"> greater than 1, the ray grid that is traced is defined by the pupil option in effect. &nbsp;The default option causes the program to trace a grid of rays filling a circular pupil. &nbsp;This will be a square grid if switch 90 is off, and a hexapolar array if that switch is on. You may request alternate patterns by the optional </span><span class="f_mine" style="font-weight: bold;">PUP</span><span class="f_mine"> input; </span><span class="f_mine" style="font-weight: bold;">PUP</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold;">2</span><span class="f_mine"> specifies different spacing in the X and Y directions, usually 1 by N for a slit pupil. &nbsp;In this case the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_mine"> entry on the TRACE command is overridden (but </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_mine"> must not equal 1).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="84pup"></a><span class="f_mine">The first option, PUP 1, creates a square grid of rays and sets the grid number so as to approximate the total number of rays requested in the TRACE data. &nbsp;If switch 90 is ON, the program traces a hexapolar grid instead of a square grid.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The first two options utilize the pupil diameter input as </span><span class="f_mine" style="text-decoration: underline;"><a href="um311.htm" class="topiclink">YMP1</a></span><span class="f_mine"> in the RLE file, or adjusted by any </span><span class="f_mine" style="text-decoration: underline;"><a href="um263.htm" class="topiclink">WAP</a></span><span class="f_mine"> or </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#fillstop" class="topiclink">FILLSTOP</a></span><span class="f_mine"> options in effect. &nbsp;For studying the effects of physical apertures it is sometimes necessary to specify an oversize value for YMP1, to ensure that the stops are what limit the beam, and not the input pupil diameter.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The third option, </span><span class="f_mine" style="font-weight: bold;">PUP 3</span><span class="f_mine">, allows you to determine the shape of the boundary of the vignetted pupil as seen from the entered object point. &nbsp;The program traces a pencil of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_mine"> rim rays, with a starting pupil radius of YMP1, and moves each ray toward or away from the chief ray until it just clears all of the apertures or feathered edges. &nbsp;The final ray pattern is then plotted. &nbsp;When using </span><span class="f_mine" style="font-weight: bold;">PUP 3</span><span class="f_mine">, at least one clear aperture must be specified or the pupil diameter would become infinite, and the lens must be in VIG mode. &nbsp;The chief ray must not be vignetted, or </span><span class="f_mine" style="font-weight: bold;">PUP 3</span><span class="f_mine"> will abort. &nbsp;The entry </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_mine"> (on the TRACE command) is overridden, but must not equal one.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">PUP 4</span><span class="f_mine"> is similar to </span><span class="f_mine" style="font-weight: bold;">PUP 3</span><span class="f_mine"> except that a search is performed only if the starting ray is vignetted (i.e. the beam will not grow larger than YMP1, but can become smaller if vignetting is encountered).  </span><span class="f_mine" style="font-weight: bold;">PUP 5</span><span class="f_mine"> is the same as </span><span class="f_mine" style="font-weight: bold;">PUP 3</span><span class="f_mine">, except that the center ray is taken at the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#icr" class="topiclink">ICR</a></span><span class="f_mine"> point. &nbsp;This option is useful for systems where the default center ray will not trace. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">PUP</span><span class="f_mine"> specification applies to the </span><span class="f_mine" style="font-weight: bold;">TRACE</span><span class="f_mine"> footprint output, and may be used to specify a pattern of rays to the </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#per" class="topiclink">drawing programs</a></span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold;">PER</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">RPER</span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold;">SOLID </span><span class="f_mine">as well.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">LINE </span><span class="f_mine">option for PUP 3, 4, and 5 will cause each ray intercept point on the surface to be connected with a straight line to the previous point. &nbsp;This is a good way to show the portion of a surface that is utilized by the beam from a given object point.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The footprints from additional object points may be plotted on the same drawing by merely entering additional </span><span class="f_mine" style="font-weight: bold;">TRACE</span><span class="f_mine"> data. &nbsp;In this way the total footprint required to cover a given field of view, or the aperture required for a scanning system, may be determined. &nbsp;A </span><span class="f_mine" style="font-weight: bold;">GET</span><span class="f_mine"> command may precede the </span><span class="f_mine" style="font-weight: bold;">TRACE</span><span class="f_mine"> command, to retrieve a lens with a rotated prism, for example, in the latter case. &nbsp;It is sometimes useful to request a different color for each of several field points (or requested wavelengths) with the optional [ RED/BLUE/GREEN…] input. &nbsp;If any of these are entered, the program will ignore any conflicting </span><span class="f_mine" style="text-decoration: underline;"><a href="um1314.htm#color" class="topiclink">COLOR</a></span><span class="f_mine"> directive that was entered previously.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If </span><span class="f_mine" style="text-decoration: underline;"><a href="um29.htm" class="topiclink">switch 16</a></span><span class="f_mine"> is turned on before the </span><span class="f_mine" style="font-weight: bold;">TRACE</span><span class="f_mine"> input, a list will be produced of all rays that are deleted because of ray failures and vignetting. &nbsp;Switch 21 will cause such rays to be included on the plot as a small numeral, giving the surface number where they stopped. &nbsp;This is a very handy way to find out where your beam is being vignetted.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="transmission"></a><span class="f_mine" style="font-weight: bold;">Transmission calculations</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A </span><span class="f_mine" style="font-weight: bold;">TRACE</span><span class="f_mine"> command may be used </span><span class="f_mine" style="font-style: italic;">without</span><span class="f_mine"> a preceding </span><span class="f_mine" style="font-weight: bold;">PLOT</span><span class="f_mine"> request, to provide just a transmission analysis of the system, and no plot.  </span><span class="f_mine" style="font-weight: bold;">TRACE</span><span class="f_mine"> will consider the effects of vignetting and apodization, while </span><span class="f_mine" style="font-weight: bold;">PTRACE</span><span class="f_mine"> will also consider the efficiency of coatings, if polarization mode is on (see </span><span class="f_mine" style="text-decoration: underline;"><a href="umch17.htm" class="topiclink">Chapter 17</a></span><span class="f_mine">). &nbsp;Neither of these will consider absorption within the glass, for which the </span><span class="f_mine" style="text-decoration: underline;"><a href="um534.htm#gtrans" class="topiclink">GTRANS</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um536.htm#rtrans" class="topiclink">RTRANS</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um95.htm#illum" class="topiclink">ILLUM</a></span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;"><a href="um539.htm#tn" class="topiclink">TN</a></span><span class="f_mine"> commands are used instead.  </span><span class="f_mine" style="text-decoration: underline;"><a href="um545.htm#ftrans" class="topiclink">FTRANS</a></span><span class="f_mine"> will estimate the Fresnel losses that occur at a cemented interface. &nbsp;The </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch15.htm#ai" class="topiclink">AI</a></span><span class="f_mine"> program can also evaluate the transmission along a ray, with all effects accounted for. &nbsp;The dialog </span><span class="f_mine" style="font-weight: bold;">MTR</span><span class="f_mine"> shows the eight commands that evaluate the transmission of your lens, and indicates which properties are taken into account, making it simple to select the most appropriate one.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The entry </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1032.htm" class="topiclink">SGTH</a></span><span class="f_mine"> can be used in the PANT file to control the total glass thickness and thereby control absorption losses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">With TRACE and PTRACE, a listing is made of the number of rays traced, the number that passed through to the image, the fractional transmission of the rays that got through, the transmission relative to the incident ray set, and the reduction due to reflection losses (with PTRACE). &nbsp;The raytrace statistics, and transmission, are put into the Al buffer (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um15123.htm" class="topiclink">15.1.2.3</a></span><span class="f_mine">).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If switch 27 is ON (default), the spots are plotted as a single dot. &nbsp;If it is OFF, the dots are drawn with symbols denoting the ray color. &nbsp;These symbols are the same as those listed on the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um851_1.htm#spt" class="topiclink">SPT</a></span><span class="f_mine"> graphics, and it is simple to make a sample of the latter if you need to see the symbol key. &nbsp;The size of the symbols can be set with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">SSSIZE </span><span class="f_mine" style="text-decoration: underline;">NB</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">before the plot is created.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is an example FOOTPRINT plot, created with the MACro</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">FET FOLDS  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">PUPIL 4 30 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">PLOT 9 3 0 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">RED  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">TRACE P 1 1 30 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">TRACE P 1 -1 30 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">MAGENTA &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">TRACE P -1 1 30 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">TRACE P -1 -1 30 &nbsp; </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">CYAN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">TRACE P 0 0 30 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p>&nbsp;</p>
+<p><img src="um8f30.png" width="547" height="737" alt="um8f30" style="width:547px;height:737px;border:none"></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um841.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

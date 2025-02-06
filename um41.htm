@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>SPEC</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="lens output,SPEC" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine-6" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine-6">&nbsp;</span></p>
+<p><a name="spec"></a><span class="f_mine-6" style="font-size: 14pt;">4.1 Lens Specifications (SPEC) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="umch4.htm" class="topiclink">Previous</a></span><span class="f_mine-6" style="font-family: 'Times New Roman';"> </span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um411.htm" class="topiclink">Next</a></span><span class="f_mine-6" style="font-family: 'Times New Roman';"> </span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">The command</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><img src="um4f1.png" width="296" height="291" alt="um4f1" style="width:296px;height:291px;border:none"></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">produces a listing of the lens data and a table of first-order quantities. &nbsp;The surface data are in fixed-point notation and most easily communicated to persons not familiar with SYNOPSYS printouts.  </span><span class="f_mine-6" style="text-decoration: underline;"><a href="umch6.htm#um61" class="topiclink">Section 6.1</a></span><span class="f_mine-6"> defines the paraxial terms used in SPEC listings. &nbsp;A portion of a lens may be listed if the surface numbers are given with the SPEC command. &nbsp;The default is the entire lens. &nbsp;If the </span><span class="f_mine-6" style="font-weight: bold;">SYS</span><span class="f_mine-6"> option is entered, SPEC prints only the first order table. &nbsp;The </span><span class="f_mine-6" style="font-weight: bold;">SURF</span><span class="f_mine-6"> option gives only surface data, and </span><span class="f_mine-6" style="font-weight: bold;">FULL</span><span class="f_mine-6"> adds a </span><span class="f_mine-6" style="text-decoration: underline;"><a href="um62.htm#cap" class="topiclink">CAP</a></span><span class="f_mine-6"> listing at the end. &nbsp;The </span><span class="f_mine-6" style="font-weight: bold;">RTG</span><span class="f_mine-6"> option prints only the symmetric data. &nbsp;This feature is also found in the </span><span class="f_mine-6" style="font-weight: bold;">MLL</span><span class="f_mine-6"> dialog.</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">Each surface has a medium identification code that describes the material or index of refraction. &nbsp;For air-spaced surfaces this is AIR or VACUUM, and for other surfaces the identification will be one of the following:</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold; text-decoration: underline;">glass type name</span><span class="f_mine-6" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp;for GTB glass table assignments</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold; text-decoration: underline;">TYPE</span><span class="f_mine-6" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp;for GID / TYPE assignments</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">GLM-NDVD &nbsp; &nbsp; &nbsp; &nbsp;for GLM glass model assignments</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">PICKUP &nbsp; &nbsp; &nbsp; &nbsp;for index pickup options</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">GLASS &nbsp; &nbsp; &nbsp; &nbsp;for GLASS data entries</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">GRIN </span><span class="f_mine-6" style="font-weight: bold; text-decoration: underline;">name</span><span class="f_mine-6" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp;for gradient-index materials</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">For each non-AIR surface the program also prints out the value of the index at the primary color &nbsp;and the quantity ( primary -1) / ( short - long ), which is the effective V-number for the wavelengths in effect – except for surfaces designated model glasses (GLM). &nbsp;For these the program prints out the values of Nd and Vd </span><span class="f_mine-6" style="font-style: italic;">of the model</span><span class="f_mine-6">, as indicated by the notation &quot;GLM-NDVD&quot; under the heading of medium for such surfaces.  </span><span class="f_mine-6" style="font-weight: bold;">If another surface picks up the index of the glass model, that surface will get the </span><span class="f_mine-6" style="font-style: italic; font-weight: bold;">actual</span><span class="f_mine-6" style="font-weight: bold;"> index and effective V-number and not the model parameters</span><span class="f_mine-6"> – and will therefore you will see different values from the GLM surface if the wavelengths do not happen to be the CDF lines.</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">An “A” following the surface number indicates that the surface has an asymmetry (tilt or decenter), while a “T” indicates that the surface has a TAG in effect (see </span><span class="f_mine-6" style="text-decoration: underline;"><a href="um3312.htm" class="topiclink">3.3.12</a></span><span class="f_mine-6">). &nbsp;If a quantity is influenced by a pickup or solve, the number so affected will be followed by a “P” or an “S”, as a guide to keeping track of numbers that are likely to change as a result of changes elsewhere in the lens. &nbsp;A surface that has been assigned </span><span class="f_mine-6" style="text-decoration: underline;"><a href="um334.htm" class="topiclink">MELT</a></span><span class="f_mine-6"> data is indicated with an “M”. &nbsp;To see the details of the pickup or solve, you should request a </span><span class="f_mine-6" style="text-decoration: underline;"><a href="um44.htm#pop" class="topiclink">POP</a></span><span class="f_mine-6"> listing (see below). &nbsp;The details of tilts and decenters will automatically be printed following a SPEC listing (see </span><span class="f_mine-6" style="text-decoration: underline;"><a href="um46.htm#asy" class="topiclink">ASY</a></span><span class="f_mine-6">, below), if any are in effect. &nbsp;If the optional </span><span class="f_mine-6" style="font-weight: bold;">GLOBAL</span><span class="f_mine-6"> is entered, the ASY output will be an ASY GLOBAL. &nbsp;If the </span><span class="f_mine-6" style="font-weight: bold;">LOCAL</span><span class="f_mine-6"> option is entered, the ASY output will be an ASY LOCAL, and if the lens is in </span><span class="f_mine-6" style="text-decoration: underline;"><a href="um384.htm#external" class="topiclink">EXTERNAL</a></span><span class="f_mine-6"> mode and </span><span class="f_mine-6" style="font-weight: bold;">EXTERNAL</span><span class="f_mine-6"> is entered, the output will include an ASY EXTERNAL.</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">Surfaces followed by negative space (following an odd number of reflections if the object is declared </span><span class="f_mine-6" style="text-decoration: underline;"><a href="um32.htm#lrays" class="topiclink">RRAYS</a></span><span class="f_mine-6">, the default) are indicated on the SPEC listing with the symbol “</span><span class="f_mine-6" style="font-family: 'Courier New';">&lt;-</span><span class="f_mine-6">“. &nbsp;If the object is declared LRAYS, the lens starts out in negative space and the symbol is </span><span class="f_mine-6" style="font-style: italic;">not</span><span class="f_mine-6"> shown following an odd number of reflections.</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">You can defeat the listing of the surface flags (“S”, “P”, etc.) by turning on switch 74.</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">There is also a plotted version of SPEC, which shows a lens drawing as well as the numeric tables. &nbsp;This is the </span><span class="f_mine-6" style="text-decoration: underline;"><a href="um411.htm#dspec" class="topiclink">DSPEC</a></span><span class="f_mine-6"> command.</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">Any lens parameter whose value exceeds 9,999,999 will be listed as &quot;INFINITE&quot; by SPEC. &nbsp;A sample SPEC listing is shown below.</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> ID RELAY FLAT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;07-OCT-05 &nbsp; 11:06:35</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> LENS SPECIFICATIONS:</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SYSTEM SPECIFICATIONS</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> ______________________________________________________________________________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> OBJECT DISTANCE &nbsp; &nbsp;(TH0) &nbsp; &nbsp; &nbsp; INFINITE &nbsp;FOCAL LENGTH &nbsp; &nbsp; (FOCL) &nbsp; &nbsp; -112.0450</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> OBJECT HEIGHT &nbsp; &nbsp; (YPP0) &nbsp; &nbsp; &nbsp; INFINITE &nbsp;PARAXIAL FOCAL POINT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;12.7113</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> MARG RAY HEIGHT &nbsp; (YMP1) &nbsp; &nbsp; &nbsp; &nbsp; 8.0000 &nbsp;IMAGE DISTANCE &nbsp; (BACK) &nbsp; &nbsp; &nbsp; 12.7113</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> MARG RAY ANGLE &nbsp; &nbsp;(UMP0) &nbsp; &nbsp; &nbsp; &nbsp; 0.0000 &nbsp;CELL LENGTH &nbsp; &nbsp; &nbsp;(TOTL) &nbsp; &nbsp; &nbsp; &nbsp;5.0344</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> CHIEF RAY HEIGHT &nbsp;(YPP1) &nbsp; &nbsp; &nbsp; &nbsp; 0.0000 &nbsp;F/NUMBER &nbsp; &nbsp; &nbsp; &nbsp; (FNUM) &nbsp; &nbsp; &nbsp; -7.0028</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> CHIEF RAY ANGLE &nbsp; (UPP0) &nbsp; &nbsp; &nbsp; &nbsp; 0.2500 &nbsp;GAUSSIAN IMAGE HT(GIHT) &nbsp; &nbsp; &nbsp; -0.4889</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> ENTR PUPIL SEMI-APERTURE &nbsp; &nbsp; &nbsp; &nbsp; 8.0000 &nbsp;EXIT PUPIL SEMI-APERTURE &nbsp; &nbsp; &nbsp;-1.6274</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> ENTR PUPIL LOCATION &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.0000 &nbsp;EXIT PUPIL LOCATION &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-10.0816</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> WAVL (uM) .6562700 .5875600 .4861300</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> WEIGHTS &nbsp; 1.000000 1.000000 1.000000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> COLOR ORDER &nbsp; &nbsp;2 &nbsp; 1 &nbsp; 3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> UNITS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; INCH</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> APERTURE STOP SURFACE (APS) &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp;SEMI-APERTURE &nbsp; &nbsp; 8.00142</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> FOCAL MODE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ON</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> MAGNIFICATION &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.12045E-10</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> POLARIZATION AND COATINGS ARE IGNORED.</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SURFACE DATA</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> ______________________________________________________________________________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SURF &nbsp; &nbsp; &nbsp; &nbsp; RADIUS &nbsp; &nbsp; &nbsp;THICKNESS &nbsp; &nbsp;MEDIUM &nbsp; &nbsp; &nbsp; &nbsp; INDEX &nbsp; &nbsp;V-NUMBER</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> ______________________________________________________________________________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;INFINITE &nbsp; &nbsp; &nbsp; INFINITE &nbsp; &nbsp;AIR</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 &nbsp; &nbsp; &nbsp; -98.85000 &nbsp; &nbsp; &nbsp;-37.86380 &nbsp; &nbsp;AIR &nbsp; &nbsp; &nbsp;&lt;-</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp;22.90473 &nbsp; &nbsp; &nbsp; -0.50000 &nbsp; &nbsp;SK12 &nbsp; &nbsp; &lt;- &nbsp; &nbsp;1.58313 &nbsp; &nbsp; &nbsp; 59.45 SCHOTT</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3 &nbsp; &nbsp; &nbsp; 536.59216 &nbsp; &nbsp; &nbsp; &nbsp;0.50000P &nbsp; PICKUP &nbsp; &nbsp; &nbsp; &nbsp; 1.58313P &nbsp; &nbsp; &nbsp;59.45</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 4 &nbsp; &nbsp; &nbsp; &nbsp;22.90473P &nbsp; &nbsp; &nbsp;23.05965 &nbsp; &nbsp;AIR</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp;INFINITE &nbsp; &nbsp; &nbsp; &nbsp;4.57873 &nbsp; &nbsp;AIR</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 6 &nbsp; &nbsp; &nbsp; &nbsp;11.91324 &nbsp; &nbsp; &nbsp; &nbsp;0.25000 &nbsp; &nbsp;BK7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.51680 &nbsp; &nbsp; &nbsp; 64.17 SCHOTT</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 7 &nbsp; &nbsp; &nbsp; &nbsp;-6.14322 &nbsp; &nbsp; &nbsp; &nbsp;6.36561 &nbsp; &nbsp;AIR</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 8 &nbsp; &nbsp; &nbsp; &nbsp;-1.62322 &nbsp; &nbsp; &nbsp; &nbsp;0.20000 &nbsp; &nbsp;SF6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.80518 &nbsp; &nbsp; &nbsp; 25.43 SCHOTT</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 9 &nbsp; &nbsp; &nbsp; &nbsp;-1.76086 &nbsp; &nbsp; &nbsp; &nbsp;8.12925 &nbsp; &nbsp;AIR</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;10 &nbsp; &nbsp; &nbsp; -77.41077 &nbsp; &nbsp; &nbsp; &nbsp;0.31500 &nbsp; &nbsp;BASF12 &nbsp; &nbsp; &nbsp; &nbsp; 1.66998 &nbsp; &nbsp; &nbsp; 39.20 SCHOTT</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;11 &nbsp; &nbsp; &nbsp; &nbsp;-5.35174 &nbsp; &nbsp; &nbsp; 12.71130S &nbsp; AIR</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> IMG &nbsp; &nbsp; &nbsp; &nbsp;INFINITE</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> KEY TO SYMBOLS</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> ______________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> A &nbsp;SURFACE HAS TILTS AND DECENTERS &nbsp; &nbsp;B &nbsp;TAG ON SURFACE</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> G &nbsp;SURFACE IS IN GLOBAL COORDINATES &nbsp; L &nbsp;SURFACE IS IN LOCAL COORDINATES</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> O &nbsp;SPECIAL SURFACE TYPE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; P &nbsp;ITEM IS SUBJECT TO PICKUP</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> S &nbsp;ITEM IS SUBJECT TO SOLVE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; M &nbsp;SURFACE HAS MELT INDEX DATA</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p>&nbsp;</p>
+<p class="p_mine-6"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um411.htm" class="topiclink">Next</a></span><span class="f_mine-6" style="font-family: 'Times New Roman';"> </span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine-6" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine-6">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

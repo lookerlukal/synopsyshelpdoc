@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1253</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Fabrication adjustments (FAMC),FAMC" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">12.5.3 Fabrication Adjustments in MC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um126.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1252.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">The above sections describe the operation of the Monte-Carlo feature (MC), which simulates the manufacturing errors of a lens and calculates performance statistics. &nbsp;That feature is intended for the case where you make an entire lens in accordance with the tolerance budget, assembling the elements into a cell within the accuracy specified by the budget. &nbsp;Then it runs the optimization program, with the goal of improving performance when adjustments are made in accordance with the results.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">In some cases it is not practical to attempt to produce a lens in the manner just described. &nbsp;Lenses such as the objectives used to expose the wafers for microlithography, as well as some astronomical systems, require tolerances of only a few microns on some parameters, and trying to hold such tolerances is extremely difficult. &nbsp;The assembly adjustments available to MC may not work well enough in those cases.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">A lens maker has recourse to another procedure in this situation. &nbsp;As each element is manufactured, the measured radii and thickness are input to the computer and the system is reoptimized with the remaining design parameters as variables. &nbsp;Then another element is made, according to the new specs, and the process repeated, and so on, until all elements are finished. &nbsp;The performance of the system is then close to the nominal performance even though all parameters were in error. &nbsp;At assembly, the desired airspaces are those produced by the last iteration, not the starting design, and only the effects of tolerances on those airspaces, as well as element wedge, tilt, and decenter then influence image quality. &nbsp;Many shops also adjust the centration of one or more elements at assembly to reduce those effects as well. &nbsp;The resulting lens performance is usually well within the diffraction limit, and at no time did anyone have to hold micron-level tolerances on radii or thicknesses. &nbsp;Note that the concept of testplate matching has little relevance in this scenario; as each lens is made and the system reoptimized, the radii invariably depart from any testplate radii that have been previously matched. &nbsp;For systems this difficult, each element is given as much attention as required, and the required radius is invariably achieved very closely without recourse to testplates.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">This procedure of course is much more expensive to carry out and requires much more time than the drop-in-in-the-cell procedure that MC emulates. &nbsp;It is only practical when but a few systems are to be made and resources are available to underwrite the effort.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The SYNOPSYS feature to help you calculate a useful budget and manufacturing sequence in this situation is the Fab. Adjust MC feature (FAMC). &nbsp;Proceed as follows:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">1. &nbsp;Optimize the lens.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">2. &nbsp;Run BTOL, giving your actual image requirements. &nbsp;Do not declare testplates matched with TPR … as usual. &nbsp;If the resulting budget is technically feasible and affordable, you do not need to use FAMC (but you might need to run it again with testplates matched and declared). &nbsp;If the budget has tolerances too tight to hold in the shop, read on.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">3. &nbsp;Identify the most critical elements, and list them in order of difficulty.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">4. &nbsp;Rerun BTOL, adjusting the input so that the tolerances are looser. &nbsp;You will have to iterate a few times, so to start with you might double the degradation that you asked for earlier. &nbsp;The point here is to wind up with a budget that is affordable, and then to test it with FAMC. &nbsp;One way that is sometimes convenient is to specify global fixed tolerances with the BTOL input, as described in </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um121.htm" class="topiclink">Section 12.1</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">5. &nbsp;Now prepare and run a MACro with the following lines:</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt;">FAMC </span><span style="font-size: 11pt; text-decoration: underline;">NSAMPLES</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">LIBLOC</span><span style="font-size: 11pt;"> [ QUIET [ </span><span style="font-size: 11pt; text-decoration: underline;">QTOL</span><span style="font-size: 11pt;"> { </span><span style="font-size: 11pt; text-decoration: underline;">QNUM</span><span style="font-size: 11pt;"> / ALL } </span><span style="font-size: 11pt; text-decoration: underline;">QLIB</span><span style="font-size: 11pt;"> [ </span><span style="font-size: 11pt; text-decoration: underline;">TSTAT</span><span style="font-size: 11pt;"> ]</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt;">PASSES </span><span style="font-size: 11pt; text-decoration: underline;">NPASS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">FAORDER </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> …</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">FAORDER </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> …</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">PHASE 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">PANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">(variables to adjust axially symmetric errors)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">AANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">(merit function to correct those errors)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">SNAP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">EVAL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">PHASE 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">PANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">(variables to correct non-symmetric errors)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">AANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">(merit function to correct those errors)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">SNAP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">SYNO NPASS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">PHASE 3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this input, the arguments on the FAMC line are the same as those on the </span><span class="f_mine" style="text-decoration: underline;"><a href="um125.htm#mc" class="topiclink">MC</a></span><span class="f_mine"> input, which you should review if necessary. &nbsp;(FAMC currently does not have a multiconfiguration option.)  </span><span class="f_mine" style="text-decoration: underline;">NPASS</span><span class="f_mine"> is the number of iterations of optimization you want for the first phase, and FAORDER gives the fabrication order of the elements. &nbsp;You generally want to make the fussiest elements first, so this should be the order that you listed in step 3. &nbsp;Each </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> in this list is the surface number of the </span><span class="f_mine" style="font-style: italic;">first side</span><span class="f_mine"> of the element. &nbsp;Every element in the lens should be included in the list somewhere, or it will not be perturbed. &nbsp;Cemented lenses only require one SN, as all contiguous elements will automatically be included.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input for </span><span class="f_mine" style="font-weight: bold;">PHASE 1</span><span class="f_mine"> specifies those radii, thickness, and airspaces that you intend to recalculate as each element is manufactured. &nbsp;For greatest benefit, you should list all radii and airspaces, but probably not glass thicknesses, which can become impractical too quickly, unless you set rather close limits to those variables.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that in the MACro, PHASE 1 ended with EVAL instead of the usual SYNO… input. &nbsp;What we are doing at this point is just </span><span class="f_mine" style="font-style: italic;">defining</span><span class="f_mine"> the optimization parameters, not running the optimization. &nbsp;When the program later perturbs each element, it will run the actual optimization at that time, calling for the number of passes requested in the PASSES input. &nbsp;As each element is perturbed, the PANT file parameters that refer to that element are deleted from the variable list, so the optimization uses only the remaining variables. &nbsp;Then the next element is perturbed, starting at the latest design values, and the process repeated. &nbsp;In this way, tolerances are already applied to the lens elements themselves when this phase is finished, and the ill effects are optimized away.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When phase 1 is completed, the program inserts all airspace, wedge, tilt, and decenter tolerances that are present in the budget, to simulate assembly errors, and sends the lens for optimization once again – this time using the </span><span class="f_mine" style="font-weight: bold;">PHASE 2</span><span class="f_mine"> input. &nbsp;Here, you only want to vary those parameters that will actually be used to compensate for assembly errors. &nbsp;These would not, of course, include any lens parameters that were recalculated in phase 1. &nbsp;The merit function should contain targets for both positive and negative field points, and the &quot;F&quot; option on ray sets, since the lens will not be axially symmetric at this stage.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When it encounters the PHASE 3 input, the program cycles the entire procedure, simulating the next case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When all of this is finished, you can examine the statistics of the results with</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">MC STAT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">MC PLOT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">as you would for a normal MC evaluation. &nbsp;Look at the yield that resulted, and if it is not at the statistical level you need, repeat the procedure from step 4, asking for higher or lower quality to offset the departure you found, or altering the fixed tolerances if those were input. &nbsp;This will produce a new budget, and after running FAMC again, the statistics may be more to your liking. &nbsp;When the results are satisfactory, the BTOL budget from that iteration is the budget you should send to the shop.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It goes without saying that you must be sure that they understand what you have done, which elements are to be made in which order, and the importance of sending back to the designer the measured data as each element is made so the lens can then be reoptimized with SYNOPSYS. &nbsp;Close cooperation between the designer and the shop is vital to the success of this approach. &nbsp;If anyone neglects this interaction, your lens will not work.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">FAMC displays the statistics of only the last set of adjustment parameters, because the other variables do not have the same nominal value on successive iterations, and listing the departure from those changing values has little meaning.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can ask for statistics on other quantities with the MC IZn input, described in the section on MC. &nbsp;This input should occur just before the PHASE 3 input.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">FAMC Example:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="famc01.png" width="402" height="284" alt="famc01" style="width:402px;height:284px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This lens is found in X25.RLE. &nbsp;First we optimize the lens with the merit function that we are going to use for the fab adjust.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">PANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">VLIST RAD 1 2 3 7 6 7 8 9 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">VLIST TH 2 4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">AANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">M 1 10 A FNUM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">ETN 1 10 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GSR .75 1 4 1 0 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GSR .75 1 4 2 0 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GSR .75 1 4 3 0 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 1 .75 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 1 1.0 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 2 .75 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 2 1.0 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 3 .75 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 3 1.0 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">SNAP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">SYNO 10</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(The edge clearance at surface 3 is likely to become negative, so we control it with the ETN aberration.) &nbsp;When the optimization is finished, we store the lens in library location 3.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now we want to see how tight the tolerances must be in order to maintain a spot variance of 0.0016. &nbsp;Let us assume that melt data are already applied to the glasses, so the values are exact and need not be perturbed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">CCW</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GET 3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">SPE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">BTOL 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">TOL SPOT .0016</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">EXACT INDEX 1 3 6 8 9</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">EXACT VNO 1 3 6 8 9</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">PREP MC</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GO</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The budget that comes out requires some thickness tolerances of 18 microns, and a centration of 6 microns. &nbsp;Let us see if we can achieve this kind of quality with looser tolerances by using fabrication adjustments. &nbsp;First, we rerun the BTOL analysis, this time requesting a spot variance of 0.002. &nbsp;Tolerances are about three times greater than the previous. &nbsp;We save the budget with BTOL SAVE, so we do not have to create it over again later if we start again another time. &nbsp;The file name is just the current log number. &nbsp;Let us see what FAMC will do:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">CCW</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GET 3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">BTOL FET 335 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! assuming the file name was 335.BTO</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">FAMC 100 3 QUIET -1 ALL 5</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">FAORDER 8 6 3 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">PASSES 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">PHASE 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">PANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">VLIST RAD 1 2 3 7 6 7 8 9 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">VLIST TH 2 4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">AANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">M 1 10 A FNUM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">ETN 1 10 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GSR .75 1 4 1 0 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GSR .75 1 4 2 0 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GSR .75 1 4 3 0 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 1 .75 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 1 1.0 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 2 .75 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 2 1.0 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 3 .75 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 3 1.0 0  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">SNAP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">EVAL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">PHASE 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">PANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">VY 3 YDC 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">VY 3 XDC 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">AANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 4 1 0 0 0 F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 4 2 0 0 0 F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 4 3 0 0 0 F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 1 .75 0 0 F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 1 1.0 0 0 F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 2 .75 0 0 F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 2 1.0 0 0 &nbsp;F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 3 .75 00 &nbsp;F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 3 1.0 0 0 F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 1 -.75 0 0 F </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 1 -1.0 0 0 &nbsp;F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 2 -.75 0 0 &nbsp;F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 2 -1.0 0 0 &nbsp;F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 3 -.75 0 0 &nbsp;F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">GNR .75 1 3 3 -1.0 0 0 F</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">SNAP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">SYNO 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt;">PHASE 3</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="famc02.png" width="419" height="256" alt="famc02" style="width:419px;height:256px;border:none"><span class="f_mine"> </span><img src="famc03.png" width="424" height="256" alt="famc03" style="width:424px;height:256px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The histogram on the left shows the ordinary MC statistics for this budget with only a focus solve on the final airspace. &nbsp;The requested performance of 0.002 is met quite well at the two-sigma level in this case, as one would expect, but this budget will not achieve the desired level of 0.0016. &nbsp;The plot on the right is the performance of FAMC, and it is clear that the performance is now about 0.0016 at the same level.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This example shows how one may sometimes achieve tolerances that are two or three times looser than would otherwise be required, by employing the process of fabrication adjustments. &nbsp;Let us comment on some of the above input.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The elements in this case will be manufactured starting from those at the back of the lens, since the budget was somewhat tighter for the rearmost elements. &nbsp;If this is not convenient, one can easily examine what happens with a different construction order, and advise the shop whether it matters. &nbsp;The AANT file for phase 2 included raysets for both positive and negative values of HBAR, since at that phase the lens will no longer be axially symmetric and we don’t want the program to adjust the lens so the image at field point +1 is excellent and wind up with a lens with a poor image at –1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A worst-case example will be found in library location 5, as called for by the FAMC input.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In case it is not obvious, the FAMC feature does not utilize the adjustment MACro MCFILE.MAC that MC does.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A run on FAMC takes many times longer to run than does an MC analysis. &nbsp;Because of the complexity of the calculations, the process only takes place in core 0, and there is no advantage in requesting more cores.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="text-decoration: underline;"><a href="um126.htm" class="topiclink">Next</a></span></p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um524</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="FVF (find VFIELD),vignetting,vignetting finding the VFIELD array" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;">&nbsp;</p>
+<p><a name="fvf"></a><span style="font-size: 14pt;">5.24 Creating a VFIELD (FVF)</span>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="text-decoration: underline;"><a href="um525.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um523.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">FVF [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> …]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">creates a </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um2631.htm" class="topiclink">VFIELD </a></span><span class="f_mine">vignetted-pupil array based on user entered hard apertures. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um262.htm" class="topiclink">section 2.6.2</a></span><span class="f_mine"> for a discussion of vignetting models. &nbsp;The </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine"> list may contain up to nine non-negative field points listed in order of increasing value. &nbsp;Rays are traced to determine the maximum extent of the unvignetted pupil at each of the field points. &nbsp;These data are then converted into a VFIELD array that gives the same pupil geometry at those fields. &nbsp;If no HBAR values are given on the command and a VFIELD set of HBARs has previously been entered, the current HBARs are used. &nbsp;There must currently be CAO or EFILE data assigned to the stop surface. &nbsp;Apertures assigned to other surfaces are evaluated in the same way as for </span><span class="f_mine" style="text-decoration: underline;"><a href="um263.htm" class="topiclink">WAP</a></span><span class="f_mine"> 3 pupils.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The lens must have been assigned a real stop before you can use FVF. &nbsp;This means that if you have modeled an implied stop by varying the paraxial quantity YP1, you must assign a real stop location before running FVF.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature is a very efficient substitute for the more general WAP 3 option (</span><span class="f_mine" style="text-decoration: underline;"><a href="um263.htm" class="topiclink">See 2.6.3</a></span><span class="f_mine">). &nbsp;That option reduces the pupil so as to clear all entered apertures for every analysis that requires raytracing, which is a lengthy process. &nbsp;The VFIELD, on the other hand, models the results with a stored table and finds the pupil when needed by interpolation, rather than by performing the search all over again. &nbsp;It is appropriate only when the lens is stable, however, since if the apertures change the data are no longer meaningful.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um525.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

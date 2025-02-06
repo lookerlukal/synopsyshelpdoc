@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>optimizing with the MOM dialog</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="optimization--&gt;" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-weight: bold;">MOM – Optimization Dialog</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Optimizing a lens is the most complex task performed by SYNOPSYS. &nbsp;Since no two design jobs have exactly the same goals, much of the work of the lens designer consists of choosing the parameters to vary and the properties of the lens and its image to control and in what way. &nbsp;For this reason SYNOPSYS offers a wide variety of items that can be specified in the parameter file (see </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#pant" class="topiclink">PANT</a></span><span class="f_footnotetext">) and in the merit function definition (see </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um103.htm#aant" class="topiclink">AANT</a></span><span class="f_footnotetext">).</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The subject of </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="umch10.htm" class="topiclink">optimization</a></span><span class="f_footnotetext"> describes the process in some detail; the </span><span class="f_footnotetext" style="font-weight: bold;">MOM</span><span class="f_footnotetext"> menu provides a convenient way, especially for new users, of preparing a useful parameter file and merit function that will get you started.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">In </span><span class="f_footnotetext" style="font-weight: bold;">MOM</span><span class="f_footnotetext">, you can open a variety of dialogs where you can, for example, just click on a lens drawing to specify your variables. &nbsp;You are given a choice of predefined aberration sets or standard raygrids, which define the rays to be traced during optimization, as well as the opportunity to select your own custom raygrids or even individual rays that will then be controlled, as well as first, third, and fifth-order aberrations and mechanical constraints.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">While this process can create a flexible and powerful optimization input file, there is a vast array of other items that are not found in MOM that can be selected when you make your own optimization MACro yourself. &nbsp;You can, for example, write an equation where you control virtually any combination of image and lens construction parameters, in 10 zoom positions. &nbsp;A common procedure is to let </span><span class="f_footnotetext" style="font-weight: bold;">MOM</span><span class="f_footnotetext"> construct the basics of your optimization input, and then select the button ‘Make a MACro’. &nbsp;You will be prompted for a filename, and then sent to the </span><span class="f_footnotetext" style="text-decoration: underline;"><a href="macros.htm" class="topiclink">MACro</a></span><span class="f_footnotetext"> editor where you may refine the input and run it. &nbsp;As you use SYNOPSYS, take the time to read </span><span class="f_footnotetext" style="text-decoration: underline;"><a href="umch10.htm" class="topiclink">Chapter 10</a></span><span class="f_footnotetext"> of the User’s Manual. &nbsp;There you will learn many of the other powerful optimization features that are available.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Power users generally have little use for the features of MOM, since creating your optimization MACro yourself in the MACro editor is much faster (once you know the formats) and then you have available the full range of features in SYNOPSYS.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">You can also access the MOM dialogs that create standard and ready-made raysets while in the </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="macros.htm" class="topiclink">MACro</a></span><span class="f_footnotetext"> editor. &nbsp;The raysets that you request in that dialog are then automatically pasted into the MACro you are editing.</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

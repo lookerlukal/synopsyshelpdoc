@@ -1,0 +1,459 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um121</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><a name="um121"></a><span class="f_mine" style="font-size: 14pt;">12.1 BTOL Input: General Format</span><span class="f_mine" style="font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1211.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="umch12.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The general format for </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> input is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um121.htm#bbtol" class="topiclink">[ BTOL [ CRITERION ] [ 0 / MULTI ] [ RECALC ] ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bsave" class="topiclink">[ BTOL { SAVE / FETCH &nbsp;number/ LIST } ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#btolsort" class="topiclink">[ BTOL SORT ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bmodify" class="topiclink">[ BTOL MODIFY/ DATA } ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bmulti" class="topiclink">[ BTOL CRITERION MULTI [ RECALC ] ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">[</span><span style="font-size: 11pt; font-weight: bold;"> BTOL EDIT </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">number</span><span style="font-size: 11pt; font-weight: bold;"> ]</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#btol_budget" class="topiclink">[ BTOL BUDGET { PTH { AIR / GLASS } / PCV }</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bdefaults" class="topiclink">[ DEFAULTS ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bfwav" class="topiclink">[ FWAV WAVELENGTH ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold;">[ RANGE </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">parameter</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">RANGE</span><span style="font-size: 11pt; font-weight: bold;"> ] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt;">! Global settings must come first</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold;">[ FIX </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">parameter</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">TOLERANCE</span><span style="font-size: 11pt; font-weight: bold;"> ]</span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bdamp" class="topiclink">[ DAMPING D ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bfov" class="topiclink">[ FOV NFOV ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bmono" class="topiclink">[ MONOCHROMATIC</a></span><span style="font-size: 11pt; font-weight: bold;"> [ </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span><span style="font-size: 11pt; font-weight: bold;"> ]]</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bfwt" class="topiclink">[ FWT WT WT WT ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um10311.htm#obs" class="topiclink">[ OBSET</a></span><span style="font-size: 11pt; font-weight: bold;"> { </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">R1</span><span style="font-size: 11pt; font-weight: bold;"> / </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">P1</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">R1</span><span style="font-size: 11pt; font-weight: bold;"> }</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bimax" class="topiclink">[ IMAX FRACTION ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bgrid" class="topiclink">[ GRID NB ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bzern" class="topiclink">[{ POWER / ZERNIKE }]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bzoom" class="topiclink">[ ZOOM { ALL / NB NB … } ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bnodmessage" class="topiclink">[ NODMESSAGE ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bsegment" class="topiclink">[ SEGMENT ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bucf" class="topiclink">[ UCF NFOV / HBAR GBAR / HBAR GBAR … ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bpreparemc" class="topiclink">[ PREPARE MC ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p class="p_heading1-10"><span class="f_heading1-10" style="text-decoration: underline;"><a href="um1212.htm#bzaw" class="topiclink">ZAW { UNIFORM / FNUM / NB WT }</a></span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">(</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1211.htm" class="topiclink">variable attributes</a></span><span class="f_mine">)</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt;">(</span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1212.htm" class="topiclink">adjustment requests</a></span><span style="font-size: 11pt;">)</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt;">(</span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1213.htm" class="topiclink">quality descriptors</a></span><span style="font-size: 11pt;">)</span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">{</span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um121.htm#bgo" class="topiclink"> EVALUATE / GO }</a></span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="width:559px; border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:60px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bfwav"></a><span class="f_mine" style="font-weight: bold;">FWAV</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the (optional) wavelength at which the number of fringes to test plate and irregularity tolerances are given. &nbsp;By default this is .6328 </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&mu;</span><span class="f_mine">M (HeNe). &nbsp;This input also affects the RANGE and FIX tolerances that are specified in waves.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px -13px 0px 0px;"><span class="f_mine" style="font-weight: bold;">RANGE / FIX</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:438px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These lines, </span><span class="f_mine" style="font-style: italic;">which must precede all other BTOL commands except DEFAULT and FWAV,</span><span class="f_mine"> let you override the default range on a whole class of variables, or to input a fixed tolerance for that class. &nbsp;Other </span><span class="f_mine" style="text-decoration: underline;"><a href="um1211.htm" class="topiclink">variable attributes</a></span><span class="f_mine"> let you change them on individual surfaces, but these are global in scope, for when you want to change them all. &nbsp;Any individual changes you later make will override the global setting for that surface. &nbsp;The allowed </span><span class="f_mine" style="text-decoration: underline;">parameters</span><span class="f_mine"> are:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">RFR</span><span class="f_mine"> for radius error, in fringes. &nbsp;The default range depends on the actual radius.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">CONIC</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">CC </span><span class="f_mine">for the conic constant. &nbsp;The default range is 1.0.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">TH</span><span class="f_mine"> thicknesses and airspaces. &nbsp;The default range is 0.005 inches. &nbsp;The range should be entered in current lens units. &nbsp;In mm, the default is 0.127 mm.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">INDEX</span><span class="f_mine"> The default range is 0.001.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">VNO</span><span class="f_mine"> (or </span><span class="f_mine" style="font-weight: bold;">VNUM</span><span class="f_mine">) The default range is 1.0.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">IRREG</span><span class="f_mine"> for cylinder figure errors; the default range is 2.5 fringes of power.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">REDGE</span><span class="f_mine"> for edge rolloff errors; the default range is 1.0 fringes at the edge of the aperture. &nbsp;This is modeled by aspheric term G16, which multiplies the radius to the 10</span><span class="f_mine" style="vertical-align: super;">th</span><span class="f_mine"> power.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">WEDGE</span><span class="f_mine"> specifies the wedge error on the second side of each element.  </span><span class="f_mine">The default range is 0.005 inches. &nbsp;Input data give the angle in degrees.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">WTR</span><span class="f_mine"> is similar to WEDGE, except the input gives the maximum TIR in lens units over an aperture of one inch.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">DECENTER</span><span class="f_mine"> (or </span><span class="f_mine" style="font-weight: bold;">YDC</span><span class="f_mine">) applied to the element as a whole. &nbsp;The default range is 0.005 inches.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is possible to find the assembly tolerance for a group of elements, in addition to those of a single element. &nbsp;To do so, add dummy surfaces before and after the group and assign a relative tilt or decenter to the group (to define the group size). &nbsp;The decenter or tilt angle can be zero initially. &nbsp;Then supply your own RANGE for the decenter or tilt of the dummy at the start of the group. &nbsp;This will force the program to add that parameter to the list of those to be toleranced.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">ZYDC </span><span class="f_mine">is valid only for </span><span class="f_mine" style="text-decoration: underline;"><a href="um1071.htm#zfile" class="topiclink">ZFILE</a></span><span class="f_mine"> zoom lenses, and applies to the centration error of zoom groups.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">TILT</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">TTR</span><span class="f_mine"> applied to the first side of all elements. &nbsp;The default RANGE is 0.005 inches. This is always input as a TIR value. &nbsp;See the above paragraph for comments about tilt tolerances for a group of elements.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:52px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bdamp"></a><span class="f_mine" style="font-weight: bold;">DAMP</span></p>
+</td>
+<td colspan="9" style="vertical-align:top; width:480px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is an optional damping factor used when solving for the adjustments. &nbsp;Since these may not be orthogonal, numerical difficulties may arise that can be offset by damping the solution. &nbsp;If there is more than one adjustment, the default damping is 0.00001; otherwise it is zero. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um1212.htm#damp" class="topiclink">below</a></span><span class="f_mine"> for a discussion of the considerations that apply to this parameter.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:52px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bfov"></a><span class="f_mine" style="font-weight: bold;">FOV</span></p>
+</td>
+<td colspan="9" style="vertical-align:top; width:480px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the number of field points to be considered, where</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"> NFOV</span><span class="f_mine"> is a number from one to five. &nbsp;Instead of specifying the individual points, as in </span><span class="f_mine" style="font-weight: bold;">TOL</span><span class="f_mine">, you must select from the following list </span><span class="f_mine" style="font-style: italic;">how many</span><span class="f_mine"> points you want. &nbsp;For example, </span><span class="f_mine" style="font-weight: bold;">FOV 1</span><span class="f_mine"> gives point 1; </span><span class="f_mine" style="font-weight: bold;">FOV 2</span><span class="f_mine"> gives points 1 and 2, etc. The default is </span><span class="f_mine" style="font-weight: bold;">FOV 3</span><span class="f_mine">, which gives the first three points, except for lenses with Gaussian object OBG, for which the default is a single field.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:120px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt; text-decoration: underline;">NFOV</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt; text-decoration: underline;">HBAR</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:268px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt; text-decoration: underline;">GBAR</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:138px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">0</span></p>
+</td>
+<td style="vertical-align:top; width:249px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">0</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:138px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">1</span></p>
+</td>
+<td style="vertical-align:top; width:249px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">0</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:138px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">3</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">.5</span></p>
+</td>
+<td style="vertical-align:top; width:249px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">0</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:138px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">4</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">-1</span></p>
+</td>
+<td style="vertical-align:top; width:249px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">0</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:138px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">5</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">0</span></p>
+</td>
+<td style="vertical-align:top; width:249px; padding:4px; border:solid 1px #000000;"><p class="p_t1-5"><span class="f_t1-5" style="font-size: 11pt;">1</span></p>
+<p class="p_t1-5"><span class="f_t1-5">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:60px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Note that the number selected affects the boundary conditions given tolerances by the </span><span class="f_mine" style="font-weight: bold;">MAG</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">DIST</span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold;">BORE</span><span class="f_mine"> options. &nbsp;To tolerance </span><span class="f_mine" style="font-weight: bold;">BORE</span><span class="f_mine"> requires only the first field point. </span><span class="f_mine" style="font-weight: bold;">MAG</span><span class="f_mine"> requires the first two, and </span><span class="f_mine" style="font-weight: bold;">DIST</span><span class="f_mine"> requires the first three. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um12135.htm" class="topiclink">section 12.1.3.5</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:60px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bmono"></a><span class="f_mine" style="font-weight: bold;">MONO</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Overrides the colors and weights declared in the lens file. &nbsp;The BTOL analysis will be monochromatic at the entered color, or at the principal color if no color number is entered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:60px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bfwt"></a><span class="f_mine" style="font-weight: bold;">FWT</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the relative weighting of each field point called for with the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um121.htm#bfov" class="topiclink">FOV</a></span><span class="f_mine"> input. The weights are input in the same order as the fields listed above. &nbsp;These values are used in several ways, as discussed in the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1213.htm" class="topiclink">TOL</a></span><span class="f_mine"> commands section and the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1212.htm" class="topiclink">FOCUS</a></span><span class="f_mine"> section, below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:60px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bucf"></a><span class="f_mine" style="font-weight: bold;">UCF</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">allows user-controlled field points. &nbsp;Up to 5 points may be requested in </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NFOV</span><span class="f_mine"> and defined by subsequent </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine"> entries. &nbsp;If </span><span class="f_mine" style="font-weight: bold;">TOL BORE</span><span class="f_mine"> is also requested, the first of these points must be at (0,0); if </span><span class="f_mine" style="font-weight: bold;">TOL MAG</span><span class="f_mine"> is desired, the second is restricted to (1,0); and if </span><span class="f_mine" style="font-weight: bold;">TOL DIS</span><span class="f_mine"> is needed, the third must be at (0.5, 0).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:60px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bzoom"></a><span class="f_mine" style="font-weight: bold;">ZOOM</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies which zoom positions (in a </span><span class="f_mine" style="text-decoration: underline;"><a href="um1071.htm#zfile" class="topiclink">ZFILE</a></span><span class="f_mine"> zoom lens) are to be considered by </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine">. &nbsp;The default is all zoom positions.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:60px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bimax"></a><span class="f_mine" style="font-weight: bold;">IMAX</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives an optional limit to the maximum change in MTF or Strehl ratio that will be accepted when the derivatives are calculated. &nbsp;To allow a 10% drop, for example, the input would be </span><span class="f_mine" style="font-weight: bold;">IMAX 0.1</span><span class="f_mine">. &nbsp;The default IMAX allows 50% drop. &nbsp;Too large a drop gives less accurate derivatives, while too small may require a lengthy search with successively smaller increments.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:60px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bgrid"></a><span class="f_mine" style="font-weight: bold;">GRID</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies the grid number of the rayset for all image quality evaluations. &nbsp;The default is 30, specifying a 30x30 rectangular grid. &nbsp;User input must be between 10 and 80.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:123px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bzern"></a><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> POWER / ZERNIKE }</span></p>
+</td>
+<td style="vertical-align:top; width:416px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">applies to OPD-based image descriptors, to select the kind of interpolation used to analyze image quality.  </span><span class="f_mine" style="font-weight: bold;">ZERNIKE</span><span class="f_mine">, the </span><span class="f_mine" style="font-weight: bold;">default</span><span class="f_mine">, fits the wavefront to a 36-term Zernike polynomial, while </span><span class="f_mine" style="font-weight: bold;">POWER</span><span class="f_mine"> uses a 17-term power-series polynomial, which is usually adequate and runs faster. &nbsp;If the FANS curves are gentle and smooth, the POWER method should be adequate. &nbsp;If there are strong flairs at the ends, then use the ZERNIKE method.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This parameter has no effect if the quality descriptor is MTF-based, since that always uses a linear spline interpolation method, or for spot-based descriptors, which involve exact raytracing.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:69px; padding:0px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px 18px 0px 0px;"><a name="bgo"></a><span class="f_mine" style="font-weight: bold;">GO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p><span class="f_mine">is the last input of the BTOL input file, and causes execution of the program.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:69px; padding:0px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px 28px 0px 0px;"><span class="f_mine" style="font-weight: bold;">EVALUATE</span><span class="f_mine"> </span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p><span class="f_mine">(instead of “</span><span class="f_mine" style="font-weight: bold;">GO</span><span class="f_mine">&quot;) will compute the initial values of the quality descriptors and then terminate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine" style="text-indent: -130px; margin: 0px 0px 0px 130px;"><a name="bpreparemc"></a><span class="f_mine" style="font-weight: bold;">PREPARE MC &nbsp;  </span></p>
+<p class="p_mine" style="text-indent: -130px; margin: 0px 0px 0px 130px;"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p><span class="f_mine">This command, when placed before the </span><span class="f_mine" style="font-weight: bold;">GO</span><span class="f_mine"> input, causes </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> to automatically prepare an adjustment file that can be used in a later </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine"> run to check the statistics. &nbsp;This file will contain PANT variables that duplicate the adjustment variables used in BTOL, as well as an AANT file that targets the same rays that the FOCUS command utilized. &nbsp;See </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um125.htm#mc" class="topiclink">MC</a></span><span class="f_mine"> for a description of this powerful feature.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine"><a name="bsave"></a><span class="f_mine" style="font-weight: bold;">BTOL { SAVE / FETCH </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">number</span><span class="f_mine" style="font-weight: bold;">/ LIST } </span></p>
+</td>
+<td style="vertical-align:top; width:878px; padding:0px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These commands are intended to help you document your lens and to save the tolerance budget produced by BTOL. &nbsp;The command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; BTOL SAVE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will save a summary of the tolerances in a file whose name is just the current log number, and with the file type .BTO. &nbsp;If you also save the lens with the command SAVE LOG, then you have a lens file and the tolerance file with the same name.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">BTOL FETCH </span><span class="f_mine" style="text-decoration: underline;">number</span><span class="f_mine"> will read the saved file in again. &nbsp;This lets you use the features that add tolerance information to DWG and ELD drawings, even if you exited from SYNOPSYS after running BTOL. &nbsp;Just be sure to FETCH the same lens that was used for the budget, since the saved budget applies only to that lens. &nbsp;If you have not exited from the program since running BTOL, you do not have to save or fetch this file, since the budget is still current.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">BTOL LIST will list the current tolerance budget. &nbsp;This is done automatically when you run the program, but you can list it again if you want (to capture on the printer, for example).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px 10px 0px 0px;"><a name="bmodify"></a><span class="f_mine" style="font-weight: bold;">MODIFY</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option is intended for the case when you already have run BTOL and have analyzed the statistics with </span><span class="f_mine" style="text-decoration: underline;"><a href="um125.htm#mc" class="topiclink">MC</a></span><span class="f_mine">. &nbsp;In the event that the results are not as good as you had expected – because some image property not considered by BTOL has gotten out of hand, for example, or because the yield was smaller than predicted – you can modify that budget and analyze it again.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This input must be followed by one or more additional lines of input stating which tolerances are to be changed by how much. &nbsp;The format of those lines is as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> list }</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">MULTIPLIER</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">...</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-weight: bold;">list</span><span class="f_mine"> is one of the following,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">ALL RD RAD RFR CV TH THI INDEX VNUM WEDGE IRREG YDC DECENTER TILT TTR XDC PEP REDGE RL1 RL2 PAX PAY CONIC ZYDC SSD 1 SSD 2</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and </span><span class="f_mine" style="text-decoration: underline;">MULTIPLIER</span><span class="f_mine"> is a value by which the given tolerance class is to be multiplied.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">With this input, for example, if you want all wedge tolerances to be reduced to 75% of the value currently in the budget, you would enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">BTOL MODIFY</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">WEDGE 0.75</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The selection </span><span class="f_mine" style="font-weight: bold;">ALL</span><span class="f_mine"> will multiply all tolerances in the budget by the requested value.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Once the budget has been altered by this option, you may save it, print it, or use it for MC analysis as you would any other budget.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine"><a name="bbtol"></a><span class="f_mine" style="font-weight: bold;">CRITERION</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If the entered number is less than 10, this is the confidence level of the budget, in sigma units: 1 for one sigma, 2 for two sigma, and so on. &nbsp;If the number is greater than 50, it gives the percent confidence: </span><span class="f_mine" style="font-weight: bold;">BTOL 90</span><span class="f_mine"> would specify a 90% confidence. &nbsp;Note that there is no sigma value that corresponds to a yield of less than 50% – since in that case the program finds a budget where the mean value of the performance just equals the target, and half of the lenses would be better than that, if the budget calculation converges.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine"><a name="bmulti"></a><span class="f_mine" style="font-weight: bold;">BTOL CRITERION MULTI</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:148px; padding:0px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Use this form to calculate the tolerance budget for several configurations at the same time. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um1214.htm" class="topiclink">Section 12.1.4</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px 426px 0px 0px;"><a name="btol_edit"></a><span style="font-size: 11pt; font-weight: bold;">BTOL EDIT </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">number</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine" style="text-indent: 173px; margin: 0px 14px 0px 0px;"><span style="font-size: 11pt;">This entry allows one to edit the budget that is returned by BTOL. &nbsp;See <a href="um128.htm" class="topiclink">Section 12.8</a> for details.</span></p>
+<p class="p_mine" style="text-indent: 173px; margin: 0px 426px 0px 0px;"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px 426px 0px 0px;"><a name="btol_budget"></a><span class="f_mine" style="font-weight: bold;">BTOL BUDGET { PTH ( AIR / GLASS } PCV }</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:69px; padding:0px; border:solid 1px #000000;"><p class="p_mine" style="text-indent: 50px;"><span class="f_mine">  </span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry may be used for lenses where symmetry is an important part of the aberration correction. &nbsp;In such cases you can assign pickups to the curvatures and thicknesses of elements in the second half and they will remain symmetrical with the first half. &nbsp;BTOL will then honor those pickups but assign a tolerance to the resulting values. &nbsp;(If you tolerance a lens with pickups </span><span class="f_mine" style="font-style: italic;">without</span><span class="f_mine"> calling for this option, BTOL will assume that the picked-up values are exact and will not tolerance them. &nbsp;This would be appropriate for a system where light encounters the same lens twice, as in a Mangin mirror, for example, where there can be only one set of tolerances for that element.) &nbsp;This option also turns on the system option PCV CV for that lens, so the pickup does not transfer aspheric terms, which are used to model the irregularity and rolled edges, which must be done separately for both &nbsp;elements.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can specify whether BTOL assigns tolerances to picked-up airspaces, glass thicknesses, or curvatures, or any combination.</span></p>
+<p class="p_mine" style="text-indent: 3px;"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:812px; padding:0px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">BTOL … RECALC</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:148px; padding:0px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option provides a way to quickly evaluate the budget consequences of several different quality descriptor values. &nbsp;The input procedure must be followed closely for the results to have any meaning.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">First, you execute a normal BTOL run </span><span class="f_mine" style="font-style: italic;">without</span><span class="f_mine"> giving a RECALC request. &nbsp;The program calculates all of the derivatives and produces the first budget. &nbsp;Then you change the tolerance limit or degradation amount of the quality descriptor, add the RECALC request to the BTOL command, and </span><span class="f_mine" style="font-style: italic;">run the entire</span><span class="f_mine"> BTOL input file again. &nbsp;You must not change anything else, since the derivatives apply only to those variables and the previous kind of quality descriptor. &nbsp;Thus, you could change </span><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">DEGRADE SPOT 0.2</span><span class="f_mine" style="font-family: 'Courier New';"> </span><span class="f_mine">into </span><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">DEGRADE SPOT 0.5</span><span class="f_mine">, for example, but you could not change a spot descriptor into WAVE, STREHL or MTF. &nbsp;Because the derivative calculation requires most of the calculation time, especially for REOPT adjustments, this reuse of the previous derivatives executes very quickly.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">But there is a catch. &nbsp;The program monitors the effect of each derivative increment, and will reduce the step size if the image degradation is excessive, with the goal of staying in a region of relative linearity. &nbsp;So a different quality limit might require a change in increment size if it were run completely, while the previous derivatives of course were based on the size that was appropriate to the previous limit. &nbsp;So after you have run the cases you want, and have selected the budget that is most suitable, it is wise to run </span><span class="f_mine" style="font-style: italic;">that</span><span class="f_mine"> case again, without the RECALC option turned on, as a final check.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:69px; padding:0px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px -9px 0px 0px;"><a name="bnodmessage"></a><span class="f_mine" style="font-weight: bold;">NODMESSAGE</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">As BTOL evaluates the effect on image quality of each variable, it will reduce the derivative increment if it finds excessive degradation; the purpose is to stay within the region of derivative accuracy. &nbsp;It can be helpful to monitor the messages it prints when this happens, but if they are not useful, this option will suppress them.</span></p>
+<p class="p_mine" style="text-indent: 15px;"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:69px; padding:0px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px -9px 0px 0px;"><a name="bsegment"></a><span class="f_mine" style="font-weight: bold;">SEGMENT</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">It is possible to estimate the total performance of a system when separate modules are evaluated separately. &nbsp;This option causes the program to print some statistical data that is useful for that purpose. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um1231.htm" class="topiclink">Section 12.3.1</a></span><span class="f_mine"> for more information.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:69px; padding:0px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px -9px 0px 0px;"><a name="bdefaults"></a><span class="f_mine" style="font-weight: bold;">DEFAULTS</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry causes the program to bypass the budget calculation completely, and treat the default tolerances as the budget. &nbsp;This budget is output along with the performance statistics that would result if the lens were built to that budget.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program will honor any RANGE, EXACT, or FIX input, and data so entered will override the default for this option.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:69px; padding:0px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px -9px 0px 0px;"><a name="btolsort"></a><span class="f_mine" style="font-weight: bold;">SORT</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:0px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Very complicated lenses, such as 30-element microlithography objectives that work in the UV, usually require extensive fabrication adjustment, where each element is made and measured in turn, and the entire system reoptimized for that exact lens before the next one is made. &nbsp;The process works best if the elements with the tightest tolerances are made first. &nbsp;This option will sort the previous BTOL budget, listing the radius and thickness tolerances, sorted from tightest to loosest.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1211.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

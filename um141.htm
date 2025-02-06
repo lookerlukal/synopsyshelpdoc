@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um141</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="text-align: justify; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;">&nbsp;</p>
+<p><a name="tosp"></a><span style="font-size: 14pt;">14.1 Thermal-Optical-Structural-Program (TOSP)  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="umch14.htm" class="topiclink">Previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1411.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-size: 11pt;">SYNOPSYS can evaluate the effects of certain mechanical and thermal perturbations on an otherwise well-corrected image. The program TOSP is accurate in the limit of small changes and can perform three tasks. &nbsp;A similar feature, </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um14_2.htm" class="topiclink">ENM</a></span><span style="font-size: 11pt;">, models changes directly on the system itself.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">TOSP can read a data file created by a thermal or structural analysis program, such as NASTRAN, containing a set of surface deformations or index changes due to thermal gradients at a number of nodes in a specified format.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">TOSP can create a data file describing the deformations or index changes at many nodes in accordance with the coefficients of a polynomial input by the user, in the specified format.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">3.</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">TOSP can create a set of rays, subject to vignetting and apodization, and analyze the change in OPD of each ray as a result of the perturbation file described above. &nbsp;This set of rays is then available to the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch8.htm#image" class="topiclink">IMAGE</a></span><span class="f_mine"> analysis programs which can evaluate the effects of these purturbations on the image quality.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_mine"><span class="f_mine">The image evaluation is accurate to first order in the perturbations; the path of each ray in the set is evaluated only for the nominal (unperturbed) design, and then the OPD error is approximated using the formula</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&Delta;</span><span class="f_mine" style="font-weight: bold;">OPD = </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&delta;</span><span class="f_mine" style="font-weight: bold;"> - ( N'COS(</span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&theta;</span><span class="f_mine" style="font-weight: bold;">) - N COS(</span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&#981;</span><span class="f_mine" style="font-weight: bold;">) )</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&Delta;</span><span class="f_mine">OPD is the change in OPD of the ray, </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&delta;</span><span class="f_mine"> is the surface displacement (perpendicular to itself), N and N' are the initial and subsequent indices of refraction across the surface, and </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&theta;</span><span class="f_mine"> and </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&#981;</span><span class="f_mine"> are the incident and refracted ray angles measured from the surface normal. &nbsp;For index changes, the OPD change is just the index change times the path length of the ray in the medium.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Only diffraction-limited images may be analyzed with </span><span class="f_mine" style="font-weight: bold;">TOSP</span><span class="f_mine">, since only the diffraction-theoretic programs </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um8634.htm#dmtf" class="topiclink">DMTF</a></span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um864.htm#dmodel" class="topiclink">DMODEL</a></span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um865.htm#dpf" class="topiclink">DPF</a></span><span class="f_mine"> (and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um94.htm#diff" class="topiclink">DIFF</a></span><span class="f_mine">), </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um862.htm#psprd" class="topiclink">PSPRD</a></span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um868.htm#variance" class="topiclink">VARIANCE</a></span><span class="f_mine"> can utilize the OPD data so generated. &nbsp;The program is called by the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">IMAGE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">TPF { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">TOSP.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">TPF</span><span class="f_mine"> entry specifies the field, color, and number of rays to be traced.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Assuming that a data file has been prepared properly (see below), the next input would be</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">GO</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">which will calculate the path perturbation for each ray, and store the OPD data for later analysis</span><span class="f_mine" style="font-weight: bold;">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program will honor all CAO'S, RAO'S, or CAI'S, if any, to determine which rays remain unvignetted, and the ray intensity is automatically apodized if the lens has a gaussian object (OBG).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Following this input, the stored pupil data may be inserted into the image analysis with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">GPP &nbsp; &nbsp; &nbsp;  </span><span class="f_mine"> (Get Perturbed Pupil).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The desired image analysis command may then follow, and this must be </span><span class="f_mine" style="font-style: italic;">in the same color and at the same field point</span><span class="f_mine"> as that specified on the </span><span class="f_mine" style="font-weight: bold;">TPF</span><span class="f_mine"> command. &nbsp;An informative message is printed to the effect that the previously stored data are being used, and an error message is printed if the image parameters do not match.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One characteristic of a TOSP analysis is that the reference sphere for OPD calculations (centered at the principal ray point) does not shift as a result of the wavefront perturbations. &nbsp;The diffraction analysis will evaluate the image in the usual manner, sampling the image over an area surrounding that point out to a distance of about 5.74 times the Airy disk radius. &nbsp;But if the wavefront is tilted, the actual image may be centered at a different place. &nbsp;An analysis such as </span><span class="f_mine" style="font-weight: bold;">PSPRD</span><span class="f_mine"> will therefore directly show any lateral motion of the image due to the environment. &nbsp;If the wavefront is deformed to an amount greater than about two waves, the diffraction programs may not be able to sample the entire image and inaccuracy will result (and a warning message will be displayed). &nbsp;However, if the wavefront is merely tilted by as much as </span><span class="f_mine" style="font-style: italic;">four</span><span class="f_mine"> waves, the diffraction programs are adequate since the image remains well confined and merely moves from the center of the sample area to nearer the edge. &nbsp;A plot from </span><span class="f_mine" style="font-weight: bold;">PSPRD</span><span class="f_mine"> will in any case illustrate the nature of the image change, and this check is recommended whenever using TOSP.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1411.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

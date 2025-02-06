@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um12111</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Cemented elements, tolerances" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">12.1.1.1 Cemented Elements and BTOL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1212.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1211.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When you have modeled a cement layer as an explicit surface with very small thickness, it must be declared with the CEMENT option in the BTOL input. &nbsp;When declared in this way, the cement layer is not given a thickness or wedge tolerance (since the cement is presumably well applied and controlled). &nbsp;The element following the cement layer, the second half of the doublet, is not given a separate tilt or decenter tolerance, but the final surface of that element is given a wedge tolerance. &nbsp;As a result of these operations, the second element of a doublet is assumed to tilt and decenter in a manner that follows the wedge of the first element, and have a wedge error of its own in addition, while the cement layer itself is considered perfect. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If a radius changes in such a way that the very close surfaces become feathered, the program will automatically increase the thickness of the cement layer as necessary to avoid such feathering, both in BTOL and in MC (which would otherwise vignette the ray bundle under these conditions).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The CEMENT option is especially important if you turn on switch 14 (to align successive surfaces with their wedge errors in opposite directions when you run </span><span class="f_mine" style="text-decoration: underline;"><a href="um125.htm#mc" class="topiclink">MC</a></span><span class="f_mine">). &nbsp;Otherwise the program will treat the cement layer as just another element and will align its wedge opposite to that of the elements on either side, as though it were a triplet. &nbsp;Then the two outer elements will be aligned so that their wedges </span><span class="f_mine" style="font-style: italic;">add</span><span class="f_mine"> instead of canceling. &nbsp;Also, without this option, the cement would be given a wedge by BTOL that would likely give severe vignetting when later modeled by MC.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The wedge, decenter, and roll tolerances can be confusing when applied to a cemented group. &nbsp;The following examples show how those features work and should guide you in selecting the variables that make sense to consider in your lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="rex1.png" width="201" height="351" alt="rex1" style="width:201px;height:351px;border:none"><span class="f_mine"> &nbsp;This is a cemented triplet, with explicit cement layers shown with exaggerated thicknesses, so you can see what is going on. &nbsp;Those layers are explicitly declared CEMENT in the cases below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="rex2.png" width="205" height="349" alt="rex2" style="width:205px;height:349px;border:none"><span class="f_mine"> &nbsp;This is the effect of the wedge tolerance on the first element of the group. &nbsp;Notice that the other elements are positioned where you would expect, if you cemented them onto the second side of that element.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="rex3.png" width="225" height="349" alt="rex3" style="width:225px;height:349px;border:none"><span class="f_mine"> &nbsp;In this example, the variable was the </span><span class="f_mine" style="font-style: italic;">roll</span><span class="f_mine"> of the second element, declared with parameter RL1. &nbsp;Again, the remaining elements in the group are out of place but retain their position relative to each other.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The tolerance budget for this case will include both the wedge and roll tolerances, if you declare the RL1 variables. &nbsp;They are both part of the budget, even though they describe almost the same thing: the wedge tolerance may be specified to the shop to guide them in centering each element, while the RL1 tolerances are a guide to how accurately they must be aligned for cementing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Contrast the above with the following picture:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="rex4.png" width="180" height="339" alt="rex4" style="width:180px;height:339px;border:none"><span class="f_mine"> &nbsp;In this case, the triplet was defined with contacted surfaces rather than cemented. &nbsp;Now, when a wedge is applied to the first element, it follows the default rules for wedges, which do not consider what follows. &nbsp;This means that the wedge on the first element is described by a tilt of the second side, with a group size of 1. &nbsp;So the element contacted to its right models the somewhat unrealistic situation where it also has a wedge, of the opposite sign, and the following elements remain where they were. &nbsp;We do not recommend this approach.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you do not want to create and declare explicit cement layers, you should set the wedges to EXACT, and declare the first side of each element with the RL1 parameter. &nbsp;This will be a better model for reality, but it is not as good as the cemented case, because you do not get usable wedge tolerances this way. &nbsp;Remember, changing a contacted pair into a pair with explicit cement can be done with a single mouse click in the WorkSheet.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1212.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

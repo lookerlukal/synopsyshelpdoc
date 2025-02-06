@@ -1,0 +1,21 @@
+{
+    "docs": [
+        {
+            "id": "custom-doc",
+            "name": "光学文档手册",
+            "url": "file://${workspaceFolder}/index.html",
+            "version": "1.0.0",
+            "type": "custom",
+            "filters": [
+                {
+                    "type": "glob",
+                    "pattern": "**/*"
+                }
+            ],
+            "browser": {
+                "enableScripts": true,
+                "enableImages": true
+            }
+        }
+    ]
+} 

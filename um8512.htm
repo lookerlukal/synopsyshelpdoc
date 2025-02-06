@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um8512</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Illumination pattern,IPAT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="ipat"></a><span class="f_mine" style="font-weight: bold;">8.5.12 Illumination Pattern (IPAT) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8513.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8511.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">When designing illumination systems, one often wants to examine the uniformity of the beam at the final surface; this is the purpose of the IPAT command. &nbsp;The formats are as follows:</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">IPATTERN [ </span><span style="font-size: 11pt; text-decoration: underline;">NCELLS</span><span style="font-size: 11pt;"> &nbsp;[ RANDOM ] ]</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">[ OBI INDEX </span><span style="font-size: 11pt; text-decoration: underline;">JX</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">JY</span><span style="font-size: 11pt;"> ]</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">TRACE {</span><span style="font-size: 11pt; text-decoration: underline;">ICOL</span><span style="font-size: 11pt;">/P} </span><span style="font-size: 11pt; text-decoration: underline;">HBAR</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">GBAR</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">NRYS</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">[ OBI INDEX </span><span style="font-size: 11pt; text-decoration: underline;">JX</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">JY</span><span style="font-size: 11pt;"> ]</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">TRACE …</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">…</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">These mnemonics have their usual meaning: the color selection {</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;">/P</span><span class="f_mine">} gives the color number, or the principal color if “P” is entered. &nbsp;The fractional field of view in Y and X are given by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine">, and the number of rays to be traced is given by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The ray number is not limited to the usual 20,000 rays, and you are encouraged to use a larger number in order to obtain a smooth display, which is calculated by filling an array of 300x300 cells covering the final surface, at the larger of the CAO or RAO dimensions, with rays, and then assigning a color to each box depending on how many rays arrived there. &nbsp;Additional TRACE commands may be entered as needed, and the resulting rays will be added to those already accumulated. &nbsp;You can thus model the output from your light source as fully as required. &nbsp;You can override the number of cells with the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NCELLS</span><span class="f_mine"> entry, where the data must be from 2 to 300. &nbsp;A smaller number smooths out the distribution but loses resolution. &nbsp;The ray pattern is by default a rectangular grid in the entrance pupil, but you can request instead a random set of rays with the </span><span class="f_mine" style="font-weight: bold;">RANDOM</span><span class="f_mine"> request. &nbsp;This is useful for systems with an array of lenslets, such as for homogenizers for microlithographic illuminators, where a regular grid will generate moire patterns with the regular lens array.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optional OBI… input can be used only if the system has been assigned an object of type OBI. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um316.htm" class="topiclink">Section 3.1.6</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A sample follows. &nbsp;Here, we enter the data for a lambertian object whose light enters a cone followed by a toroidal lens. &nbsp;The system is in nonsequential mode to allow for multiple reflections within the cone.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;">RLE</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;">ID LAMBERTIAN OBJECT WITH CONE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4877</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> FNAME 'OBL EXAMPLE.RLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> LOG &nbsp; &nbsp; 4877</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> WA1 .6250000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> WT1 1.00000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> GLOBAL</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> NOSEQUENTIAL</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> UNITS INCH</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> OBL 0.003 0.049 &nbsp;80. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 0 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 1 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; -0.27248800 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 1 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 1 LOOSE</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 2 CAO &nbsp; &nbsp; &nbsp;0.40000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 2 CAI &nbsp; &nbsp; &nbsp;0.06500000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 2 RAD &nbsp; &nbsp; &nbsp;0.0020000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;1.88000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 2 CC &nbsp; &nbsp; -1.04515000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 2 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 2 REFLECTOR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 2 INTERSECT FAR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 2 MBOUNCE</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 2 CAPTURE</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 2 LOOSE</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 3 CAO &nbsp; &nbsp; &nbsp;1.25000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 3 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00952965 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 3 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 3 CAPTURE</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 4 CAO &nbsp; &nbsp; &nbsp;0.45000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 4 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.12427800</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 4 GLM &nbsp; &nbsp; &nbsp;1.50000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 50.00000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 5 CAO &nbsp; &nbsp; &nbsp;0.45000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 5 CV &nbsp; &nbsp; -0.4343390000000 &nbsp; TH &nbsp; &nbsp;118.00000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 5 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 5 TORIC &nbsp; &nbsp; &nbsp;1.01859000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 6 RAO &nbsp; &nbsp;136.26000000 &nbsp; &nbsp; &nbsp;41.60000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 6 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> &nbsp; 6 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;"> END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;">IPAT</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;">TRACE P 0 0 80000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt;">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="obicone.png" width="406" height="404" alt="obicone" style="width:406px;height:404px;border:none"></p>
+<p class="p_mine"><img src="ipat.png" width="671" height="827" alt="IPAT" style="width:671px;height:827px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For this example we trace about 80000 rays, and the pattern shows a strong peak at two locations.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8513.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

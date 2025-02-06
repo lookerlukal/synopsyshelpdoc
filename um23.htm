@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um23</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LENS LOG,LOG number" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="log"></a><span class="f_mine" style="font-size: 14pt;">2.3 Log Number &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um22.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um24.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_mine"><span class="f_mine">Each SYNOPSYS run is assigned a log number, which is automatically incremented and displayed at the start of each run. &nbsp;The current value of the log number may be incremented at any time by the user with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">LOG</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">or initialized to a desired value with</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">LOG SET </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can see the current log number with</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">LOG SHOW.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The current log number is automatically assigned to a lens when it is changed, and it appears on all printed and plotted output on the same line as the </span><span class="f_mine" style="text-decoration: underline;"><a href="umch3.htm#um31" class="topiclink">ID</a></span><span class="f_mine"> information to help you keep track of which run produced which lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also set the log number assigned to a lens to a desired value with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">LOG LENS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In addition to these tools, the </span><span class="f_mine" style="text-decoration: underline;"><a href="umch15.htm#ai" class="topiclink">AI</a></span><span class="f_mine"> program can access the current log number with sentences like</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">LOG?</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">LOG = 331</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">change log to 56 .</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is also possible to reassign the log number associated with a particular lens with AI. &nbsp;This is normally set to the current log number whenever the lens is changed, but sometimes you may want the number displayed on plots to be that of the saved lens, not the current log number, after you have changed it in some way. &nbsp;Here is how to use AI to accomplish this:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">Z1 = LENS LOG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-size: 12pt;">(Change lens in some way)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">LENS LOG = Z1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-size: 12pt;">(Analysis that shows the lens log number, such as drawings, etc.)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-size: 12pt;">You can also use the special noun &quot;</span><span class="f_mine" style="font-size: 12pt; font-weight: bold;">LLOG</span><span class="f_mine" style="font-size: 12pt;">&quot; to refer to the lens log number.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um24.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um22.htm" class="topiclink">Previous</a></span><span class="f_mine"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

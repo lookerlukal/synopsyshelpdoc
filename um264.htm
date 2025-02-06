@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um264</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CSTOP option" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">2.6.4 CSTOP Option &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um2631.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um265.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The options described above define the chief ray and in some instances the aperture of the entering beam. &nbsp;If the </span><span class="f_mine" style="font-weight: bold;">WAP 2</span><span class="f_mine"> option is selected, the stop must have a hard aperture before the beam size can be determined. &nbsp;During the design phase, however, the stop clear aperture may be varying along with other properties of the lens, and in this case it is not practical to input a fixed value so as to satisfy the WAP requirement. &nbsp;In this case the system parameter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">CSTOP [REAL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">MARGIN</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">may be entered in the RLE or CHG file. &nbsp;This option traces the paraxial ray at the value of YMP1 entered in the original lens file, and then places a hard CAO on the stop surface at the aperture given by this ray. &nbsp;With this option, the stop CAO will float during the design, always giving the original paraxial entering beam diameter or F/number, and will provide a reference for all field points subject to a WAP 2 pupil size adjustment. &nbsp;This option is also explained in the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="hidd_pupilwizard.htm" class="topiclink">Pupil Wizard</a></span><span class="f_mine"> dialog.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">REAL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span><span class="f_mine"> option sets the CAO of the stop by tracing a </span><span class="f_mine" style="font-style: italic;">real</span><span class="f_mine"> ray at the fractional paraxial pupil coordinates </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span><span class="f_mine"> rather than a paraxial ray. &nbsp;This sets the aperture to the </span><span class="f_mine" style="font-style: italic;">exact</span><span class="f_mine"> value of the real-ray intercept. &nbsp;Occasionally one finds that ray grids generated using the WAP 2 or 3 options will trace skew rays that exceed this aperture by a small amount, due to high-order pupil aberrations or round-off errors. &nbsp;To avoid having those rays declared vignetted, you can enter a small </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">MARGIN</span><span class="f_mine">, which gives the amount by which a ray intercept at the stop can exceed the aperture and still be considered unvignetted. &nbsp;A margin of a few microns is usually sufficient, if this parameter is needed at all.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1071.htm#zfile" class="topiclink">ZFILE</a></span><span class="f_mine"> zoom lenses, the CSTOP is calculated only in zoom 1 to ensure that the same aperture will apply to all defined zooms. &nbsp;In the event that you want the calculation to be performed separately at each zoom, be sure to include the directive ZCSTOP in the ZFILE section of the RLE file. &nbsp;Then each zoom will get its own aperture value.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For users with experience with the Zemax™ program, the pupil model that most closely follows the logic in that program is given by the combination of CSTOP and WAP 2.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To remove a CSTOP, use </span><span class="f_mine" style="font-weight: bold;">NOFILL</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um265.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um2631.htm" class="topiclink">P</a></span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um2631.htm" class="topiclink">revious</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

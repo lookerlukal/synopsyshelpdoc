@@ -1,0 +1,922 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>appe</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-size: 14pt; font-family: 'Times New Roman'; font-style: italic; font-weight: bold;">SYNOPSYS User’s Manual</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 14pt; font-family: 'Times New Roman'; font-style: italic; font-weight: bold;">Appendix E</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-size: 14pt; font-weight: bold;">EXAMPLE SYNOPSYS FILES &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This Appendix contains example files that you can copy and then run on SYNOPSYS. &nbsp;Most of the analysis MACros require a suitable lens file in order to work properly. &nbsp;The first section contains several lenses that you can copy and then use when you run the other examples. &nbsp;These files will save themselves on disk with names “1.RLE”, “2.RLE”, etc., and the later examples will FETCH them. &nbsp;If they are not there, those examples will not work – but you can always edit the examples so that they fetch or get a different lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To run any of these files:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;Select the text lines you want by dragging the mouse over them and then pressing </span><span class="f_mine" style="font-weight: bold;">Ctrl+C</span><span class="f_mine">. &nbsp;This puts a copy of those lines onto the Windows clipboard.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;In SYNOPSYS, create a new, empty MACro window by clicking on button </span><img src="newmacrowindow.png" width="26" height="24" alt="newmacrowindow" style="width:26px;height:24px;border:none"><span class="f_mine">. &nbsp;(Or you can erase one of your current MACro windows.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;Click in the window to select it, if it is not already selected, and then press </span><span class="f_mine" style="font-weight: bold;">Ctrl+V</span><span class="f_mine">. &nbsp;This copies the clipboard contents into the MACro window.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">4. &nbsp;Click on the Run Macro button </span><img src="runmacro.png" width="26" height="24" alt="runmacro" style="width:26px;height:24px;border:none"><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">1. Near-infrared lens, F/1.4</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID MIT 1 TO 2 UM LENS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8085</span></p>
+<p class="p_mine"><span class="f_mine"> WAVL &nbsp; &nbsp; &nbsp; 1.970100 &nbsp; &nbsp; &nbsp;1.529600 &nbsp; &nbsp; &nbsp;1.060000</span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4</span></p>
+<p class="p_mine"><span class="f_mine"> NOVIG</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;MM  </span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;7.00000 &nbsp; 17.50000 &nbsp; -1.05311 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; 17.50000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;0 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 RAD &nbsp; &nbsp; &nbsp; 86.72000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 4.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 N1 &nbsp; &nbsp; &nbsp; &nbsp; 2.26504432 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 2.27176711 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 2.28899367</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 GTB &nbsp; U &nbsp; &nbsp;'ZNSB &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 RAD &nbsp; &nbsp; &nbsp;256.16000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 1.90921550</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 RAD &nbsp; &nbsp; &nbsp; 23.32000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 7.64871430</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 RAD &nbsp; &nbsp; &nbsp; 46.09000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 1.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 RAD &nbsp; &nbsp; &nbsp; 50.80000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 3.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 N1 &nbsp; &nbsp; &nbsp; &nbsp; 2.42683402 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 2.43803690 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 2.46972622</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 GTB &nbsp; U &nbsp; &nbsp;'ASS3A &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 RAD &nbsp; &nbsp; &nbsp; 17.38700000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp;28.71738800</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 RAD &nbsp; &nbsp; &nbsp; 27.14000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 3.50000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 TH &nbsp; &nbsp; &nbsp; &nbsp;16.29762601</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 YMT &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 RAD &nbsp; &nbsp; &nbsp; 65.22600000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;9 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;9 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">SAVE 1.RLE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Infrared ZFILE zoom lens</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID RAYZOOM A</span></p>
+<p class="p_mine"><span class="f_mine"> WAVL &nbsp; &nbsp; &nbsp;12.000000 &nbsp; &nbsp; 10.000000 &nbsp; &nbsp; &nbsp;8.000000</span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> AFOCAL</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;INCH</span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;1.20000 &nbsp; &nbsp;0.50000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.50000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;0 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 RAD &nbsp; &nbsp; &nbsp; 25.22203000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.20000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 N1 &nbsp; &nbsp; &nbsp; &nbsp; 2.39298171 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 2.40651351 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 2.41730296</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 GTB &nbsp; U &nbsp; &nbsp;'ZNSE &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 RAD &nbsp; &nbsp; &nbsp;-36.72369000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.40000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 RAD &nbsp; &nbsp; &nbsp; &nbsp;1.24926000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.25000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 RAD &nbsp; &nbsp; &nbsp; &nbsp;1.08227000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 4.61404000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 RAD &nbsp; &nbsp; &nbsp; 75.90620000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.10000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 RAD &nbsp; &nbsp; &nbsp; &nbsp;2.36974000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 2.50500000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 RAD &nbsp; &nbsp; &nbsp; &nbsp;9.30360000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.20000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 RAD &nbsp; &nbsp; &nbsp; -5.64516000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 1.01043000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;9 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;9 RAD &nbsp; &nbsp; &nbsp; -4.60078000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.10000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;9 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> 10 RAD &nbsp; &nbsp; &nbsp; 12.43505000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 2.42980000</span></p>
+<p class="p_mine"><span class="f_mine"> 10 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 11 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> 11 RAD &nbsp; &nbsp; &nbsp;-22.74636000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.25000000</span></p>
+<p class="p_mine"><span class="f_mine"> 11 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> 12 RAD &nbsp; &nbsp; &nbsp; -8.13228000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 12 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 13 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 13 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 14 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 14 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> ZFILE &nbsp; 2</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 &nbsp; 6</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;9 &nbsp;10</span></p>
+<p class="p_mine"><span class="f_mine"> ZOOM &nbsp; &nbsp;2</span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;1.20000 &nbsp; &nbsp;0.50000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.50000</span></p>
+<p class="p_mine"><span class="f_mine"> ZDATA &nbsp; 5.000000E-01 &nbsp;5.000000E-01</span></p>
+<p class="p_mine"><span class="f_mine"> ZOOM &nbsp; &nbsp;3</span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;1.20000 &nbsp; &nbsp;0.50000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.50000</span></p>
+<p class="p_mine"><span class="f_mine"> ZDATA &nbsp; 1.000000E+00 &nbsp;1.000000E+00</span></p>
+<p class="p_mine"><span class="f_mine"> ZOOM &nbsp; &nbsp;4</span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;1.20000 &nbsp; &nbsp;0.50000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.50000</span></p>
+<p class="p_mine"><span class="f_mine"> ZDATA &nbsp; 1.500000E+00 &nbsp;1.500000E+00</span></p>
+<p class="p_mine"><span class="f_mine"> ZOOM &nbsp; &nbsp;5</span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;1.20000 &nbsp; &nbsp;0.50000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.50000</span></p>
+<p class="p_mine"><span class="f_mine"> ZDATA &nbsp; 2.000000E+00 &nbsp;2.000000E+00</span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SAVE 2.RLE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Relay telescope with Mangin secondary mirror</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID RELAY FLAT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16</span></p>
+<p class="p_mine"><span class="f_mine"> FNAME '4.RLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> LOG &nbsp; &nbsp; &nbsp; 16</span></p>
+<p class="p_mine"><span class="f_mine"> WAVL .6562700 .5875600 .4861300</span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS INCH</span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;0.25000 &nbsp; &nbsp;8.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;8.00000</span></p>
+<p class="p_mine"><span class="f_mine"> MARGIN &nbsp; &nbsp; &nbsp; 0.050000</span></p>
+<p class="p_mine"><span class="f_mine"> BEVEL &nbsp; &nbsp; &nbsp; 0.010000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 0 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 CAI &nbsp; &nbsp; &nbsp;1.75000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 RAD &nbsp; &nbsp;-98.8500000000000 &nbsp; TH &nbsp; &nbsp;-37.86380000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 EFILE EX1 &nbsp; &nbsp; 8.051420 &nbsp; &nbsp; 8.051420 &nbsp; &nbsp; 8.061420 &nbsp; &nbsp; 0.000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 EFILE EX2 &nbsp; &nbsp; 2.750000 &nbsp; &nbsp; 8.051420 &nbsp; &nbsp;25.000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 EFILE MIRROR &nbsp; &nbsp;3.000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 REFLECTOR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 RAD &nbsp; &nbsp; 22.9047300000000 &nbsp; TH &nbsp; &nbsp; -0.50000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 N1 1.58014689 N2 1.58313118 N3 1.58995600</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 GTB S &nbsp; &nbsp;'SK12 &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 EFILE EX1 &nbsp; &nbsp; 2.095618 &nbsp; &nbsp; 2.095618 &nbsp; &nbsp; 2.105618 &nbsp; &nbsp; 0.000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 EFILE EX2 &nbsp; &nbsp; 2.095618 &nbsp; &nbsp; 2.095618 &nbsp; &nbsp; 0.000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 PTH &nbsp; -2 &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 PIN &nbsp; &nbsp;2</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 RAD &nbsp; &nbsp;536.5921599999994</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 GID 'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 EFILE EX1 &nbsp; &nbsp; 2.056960 &nbsp; &nbsp; 2.056960 &nbsp; &nbsp; 2.066960 &nbsp; &nbsp; 0.000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 EFILE EX2 &nbsp; &nbsp; 2.014406 &nbsp; &nbsp; 2.056960 &nbsp; &nbsp; 0.000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 REFLECTOR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 PCV &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 TH &nbsp; &nbsp; 23.05965000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 EFILE EX1 &nbsp; &nbsp; 2.014406 &nbsp; &nbsp; 2.056960 &nbsp; &nbsp; 2.066960</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 5 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;4.57873350 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 6 RAD &nbsp; &nbsp; 11.9132400000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.25000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 6 N1 1.51432237 N2 1.51680005 N3 1.52237643</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 6 GTB S &nbsp; &nbsp;'BK7 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 6 EFILE EX1 &nbsp; &nbsp; 0.929662 &nbsp; &nbsp; 0.929662 &nbsp; &nbsp; 0.939662 &nbsp; &nbsp; 0.000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 6 EFILE EX2 &nbsp; &nbsp; 0.929662 &nbsp; &nbsp; 0.929662 &nbsp; &nbsp; 0.000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 7 RAD &nbsp; &nbsp; -6.1432166000000 &nbsp; TH &nbsp; &nbsp; &nbsp;6.36561250 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 7 EFILE EX1 &nbsp; &nbsp; 0.929662 &nbsp; &nbsp; 0.929662 &nbsp; &nbsp; 0.939662</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 8 RAD &nbsp; &nbsp; -1.6232170000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.20000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 8 N1 1.79609226 N2 1.80518241 N3 1.82775300</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 8 GTB S &nbsp; &nbsp;'SF6 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 8 EFILE EX1 &nbsp; &nbsp; 0.787276 &nbsp; &nbsp; 0.818037 &nbsp; &nbsp; 0.828037 &nbsp; &nbsp; 0.000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 8 EFILE EX2 &nbsp; &nbsp; 0.828037 &nbsp; &nbsp; 0.828037 &nbsp; &nbsp; 0.000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 9 RAD &nbsp; &nbsp; -1.7608610000000 &nbsp; TH &nbsp; &nbsp; &nbsp;8.12924740 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 9 EFILE EX1 &nbsp; &nbsp; 0.828037 &nbsp; &nbsp; 0.828037 &nbsp; &nbsp; 0.828037</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;10 RAD &nbsp; &nbsp;-77.4107720000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.31500000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;10 N1 1.66494698 N2 1.66997943 N3 1.68203834</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;10 GTB S &nbsp; &nbsp;'BASF12 &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;10 EFILE EX1 &nbsp; &nbsp; 1.172517 &nbsp; &nbsp; 1.173983 &nbsp; &nbsp; 1.183983 &nbsp; &nbsp; 0.000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;10 EFILE EX2 &nbsp; &nbsp; 1.173983 &nbsp; &nbsp; 1.173983 &nbsp; &nbsp; 0.000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;11 TH &nbsp; &nbsp; &nbsp;12.71130141</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;11 YMT &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;11 RAD &nbsp; &nbsp; -5.3517360759348 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;11 EFILE EX1 &nbsp; &nbsp; 1.173983 &nbsp; &nbsp; 1.173983 &nbsp; &nbsp; 1.183983</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;12 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Save 4</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Cooke triplet, F/4.5</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID COOKE TRIPLET F/4.5 </span></p>
+<p class="p_mine"><span class="f_mine"> WAVL &nbsp; &nbsp; &nbsp; 0.656270 &nbsp; &nbsp; &nbsp;0.587560 &nbsp; &nbsp; &nbsp;0.486130</span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;MM  </span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; 20.00000 &nbsp; &nbsp;5.55500 &nbsp; -2.98488 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;5.55500</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;0 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 CAO &nbsp; &nbsp; &nbsp; &nbsp;5.55550000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 RAD &nbsp; &nbsp; &nbsp; 21.49395000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 2.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.61727185 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.62041015 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.62755669</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 GTB &nbsp; S &nbsp; &nbsp;'SK16 &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 CAO &nbsp; &nbsp; &nbsp; &nbsp;5.55550000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 RAD &nbsp; &nbsp; -124.03870000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 5.25509000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 CAO &nbsp; &nbsp; &nbsp; &nbsp;5.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 RAD &nbsp; &nbsp; &nbsp;-19.10518000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 1.25000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.61164538 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.61659189 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.62847951</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 GTB &nbsp; S &nbsp; &nbsp;'F4 &nbsp; &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 CAO &nbsp; &nbsp; &nbsp; &nbsp;5.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 RAD &nbsp; &nbsp; &nbsp; 21.97947000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 4.93473000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 CAO &nbsp; &nbsp; &nbsp; &nbsp;5.55550000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 RAD &nbsp; &nbsp; &nbsp;328.33175000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 2.25000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 TH &nbsp; &nbsp; &nbsp; &nbsp;43.24315291</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 YMT &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 CAO &nbsp; &nbsp; &nbsp; &nbsp;5.55550000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 RAD &nbsp; &nbsp; &nbsp;-16.75377000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">SAVE 3</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Triplet starting point</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID TRIPLET START &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine"> WAVL &nbsp; &nbsp; &nbsp; 0.656270 &nbsp; &nbsp; &nbsp;0.587560 &nbsp; &nbsp; &nbsp;0.486130</span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</span></p>
+<p class="p_mine"><span class="f_mine"> NOVIG</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;MM  </span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;9.20000 &nbsp; 18.14300 &nbsp; -4.15566 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; 18.14300</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;0 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 RAD &nbsp; &nbsp; &nbsp; 40.68495900 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 4.92735670</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.61045767 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.61375006 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.62134045</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 GTB &nbsp; S &nbsp; &nbsp;'SK6 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00297691 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp;11.26350500</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 RAD &nbsp; &nbsp; -100.20214000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 3.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 GLM &nbsp; &nbsp; &nbsp; &nbsp;1.61942000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 35.06544000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.01597645 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 3.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp;12.77565900</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 RAD &nbsp; &nbsp; &nbsp; 96.33423900 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 6.20000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.61045767 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.61375006 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.62134045</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 GTB &nbsp; S &nbsp; &nbsp;'SK6 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 CV &nbsp; &nbsp; &nbsp; &nbsp;-0.00290525</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 UMC &nbsp; &nbsp; &nbsp; -0.12500000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 TH &nbsp; &nbsp; &nbsp; 109.98891526</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 YMT &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">SAVE 6</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">1:1 Imaging lens, near IR</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID KOSO LENS 1:1</span></p>
+<p class="p_mine"><span class="f_mine"> WAVL &nbsp; &nbsp; &nbsp; 1.000000 &nbsp; &nbsp; &nbsp;0.940000 &nbsp; &nbsp; &nbsp;0.875000</span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;INCH</span></p>
+<p class="p_mine"><span class="f_mine"> OBA &nbsp; 2.5000 &nbsp; &nbsp; &nbsp;0.55000 &nbsp; &nbsp; &nbsp; &nbsp;0.2717 &nbsp; 0.1195 &nbsp; 0.0000 &nbsp; &nbsp; &nbsp; 0.0000 &nbsp; 0.2717</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;0 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.12859700</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 RAD &nbsp; &nbsp; &nbsp; &nbsp;1.62850000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.15343329</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.60893425 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.60996061 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.61119806</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 GTB &nbsp; S &nbsp; &nbsp;'SK16 &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 RAD &nbsp; &nbsp; &nbsp; -2.00230000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.00200085</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 RAD &nbsp; &nbsp; &nbsp; &nbsp;0.61575860 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.16220761</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.60893425 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.60996061 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.61119806</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 GTB &nbsp; S &nbsp; &nbsp;'SK16 &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 RAD &nbsp; &nbsp; &nbsp; &nbsp;2.42060000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.02153131</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 RAD &nbsp; &nbsp; &nbsp; -9.21120000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.08600261</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.64474507 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.64589001 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.64729966</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 GTB &nbsp; S &nbsp; &nbsp;'SSKN5 &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 RAD &nbsp; &nbsp; &nbsp; -1.95360000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.00209212</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 RAD &nbsp; &nbsp; &nbsp; -2.91970000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.05676288</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.69407394 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.69579502 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.69799585</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 GTB &nbsp; S &nbsp; &nbsp;'SF1 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;9 RAD &nbsp; &nbsp; &nbsp; &nbsp;0.48530000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.04907359</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;9 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 10 PTH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 10 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 10 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 11 PCV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-9 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 11 PTH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 11 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> 11 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> 12 PCV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 12 PTH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 12 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 13 PCV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 13 PTH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 13 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> 13 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> 14 PCV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 14 PTH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 14 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 15 PCV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 15 PTH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 15 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> 15 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> 16 PCV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 16 PTH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 16 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 17 PCV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 17 PTH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 17 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> 17 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> 18 PCV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 18 PTH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 18 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 19 TH &nbsp; &nbsp; &nbsp; &nbsp; 2.47919765</span></p>
+<p class="p_mine"><span class="f_mine"> 19 YMT &nbsp; &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 19 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 19 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 20 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 20 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">SAVE 7</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Wide-angle eyepiece</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This lens covers a 90-degree field of view, and is set to an accomodation of -1 diopters. &nbsp;To see it in PAD, ask for surfaces 2 through 18. &nbsp;Otherwise you will see the entrance pupil 1.6M away (surface 1), and the focal plane at -1M.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID EYEPIECE &nbsp; &nbsp;U.S.P. 4720183</span></p>
+<p class="p_mine"><span class="f_mine"> WAVL &nbsp; &nbsp; &nbsp; 0.656270 &nbsp; &nbsp; &nbsp;0.587560 &nbsp; &nbsp; &nbsp;0.486130</span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> AFOCAL</span></p>
+<p class="p_mine"><span class="f_mine"> ACCOMMODATE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -1.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> GLOBAL</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;MM  </span></p>
+<p class="p_mine"><span class="f_mine"> OBA &nbsp;-1632.8 &nbsp; &nbsp; &nbsp; 14.076 &nbsp; &nbsp; &nbsp;118.9700 &nbsp; 0.0000 &nbsp; 0.0000 &nbsp; &nbsp; &nbsp; 0.0000 118.9700</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;0 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp;1605.03790000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 RAD &nbsp; &nbsp; &nbsp;-55.55780400 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 2.80291130</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.53720939 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.53996033 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.54625278</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 GTB &nbsp; S &nbsp; &nbsp;'BAK2 &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 RAD &nbsp; &nbsp; &nbsp; 48.77268600 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 4.01072450</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 RAD &nbsp; &nbsp; -195.21027000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 5.97257240</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.83650455 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.84666309 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.87204106</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 GTB &nbsp; S &nbsp; &nbsp;'SF57 &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 RAD &nbsp; &nbsp; &nbsp;-33.50354100 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp;14.16661900</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 RAD &nbsp; &nbsp; &nbsp;-22.18383100 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 3.38887860</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.61503200 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.62004045 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.63208206</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 GTB &nbsp; S &nbsp; &nbsp;'F2 &nbsp; &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 RAD &nbsp; &nbsp; &nbsp;107.38465000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp;11.59397200</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 RAD &nbsp; &nbsp; &nbsp;-25.93393900 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp;10.80742900</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.61727185 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.62041015 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.62755669</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 GTB &nbsp; S &nbsp; &nbsp;'SK16 &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;9 RAD &nbsp; &nbsp; &nbsp;-23.66973300 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;9 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 10 TAG</span></p>
+<p class="p_mine"><span class="f_mine"> 10 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 2.10000000</span></p>
+<p class="p_mine"><span class="f_mine"> 10 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 10 DECEN &nbsp; &nbsp; &nbsp;0.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -7.76126000 &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> 10 AT &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.00000000 &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> 11 RAD &nbsp; &nbsp; 2628.00160000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp;12.88960200</span></p>
+<p class="p_mine"><span class="f_mine"> 11 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.61727185 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.62041015 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.62755669</span></p>
+<p class="p_mine"><span class="f_mine"> 11 GTB &nbsp; S &nbsp; &nbsp;'SK16 &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> 12 RAD &nbsp; &nbsp; &nbsp;-51.02149000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp;24.84278200</span></p>
+<p class="p_mine"><span class="f_mine"> 12 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 13 RAD &nbsp; &nbsp; &nbsp; 45.35914800 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp;14.00660700</span></p>
+<p class="p_mine"><span class="f_mine"> 13 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.61727185 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.62041015 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.62755669</span></p>
+<p class="p_mine"><span class="f_mine"> 13 GTB &nbsp; S &nbsp; &nbsp;'SK16 &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> 14 RAD &nbsp; &nbsp; -151.92301000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.45395187</span></p>
+<p class="p_mine"><span class="f_mine"> 14 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 15 RAD &nbsp; &nbsp; &nbsp; 27.42672700 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp;11.80904000</span></p>
+<p class="p_mine"><span class="f_mine"> 15 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.63505434 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.63854082 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.64657536</span></p>
+<p class="p_mine"><span class="f_mine"> 15 GTB &nbsp; S &nbsp; &nbsp;'SKN18 &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> 16 RAD &nbsp; &nbsp; &nbsp;-52.43301400 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 1.29378560</span></p>
+<p class="p_mine"><span class="f_mine"> 16 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.79609227 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.80518242 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.82775300</span></p>
+<p class="p_mine"><span class="f_mine"> 16 GTB &nbsp; S &nbsp; &nbsp;'SF6 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> 17 RAD &nbsp; &nbsp; &nbsp; 47.04536900 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp;13.84364700</span></p>
+<p class="p_mine"><span class="f_mine"> 17 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 18 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 18 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 19 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp;-999.99997287</span></p>
+<p class="p_mine"><span class="f_mine"> 19 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> 20 RAD &nbsp; &nbsp; &nbsp;999.99997287 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> 20 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">SAVE 9</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Example nonsequential system.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID NONSEQUENTIAL ART &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8089</span></p>
+<p class="p_mine"><span class="f_mine"> WAVL &nbsp; &nbsp; &nbsp; 0.656270 &nbsp; &nbsp; &nbsp;0.587560 &nbsp; &nbsp; &nbsp;0.486130</span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> GLOBAL</span></p>
+<p class="p_mine"><span class="f_mine"> NOSEQUENTIAL</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;INCH</span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;0.01000 &nbsp; &nbsp;3.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;3.00000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;0 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 LOOSE</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 1.50000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;1 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 CAPTURE</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 CAO &nbsp; &nbsp; &nbsp; &nbsp;0.60000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 RAD &nbsp; &nbsp; &nbsp; &nbsp;2.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.30000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 N1 &nbsp; &nbsp; &nbsp; &nbsp; 1.51432239 &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; 1.51680007 &nbsp; N3 &nbsp; &nbsp; &nbsp; &nbsp; 1.52237645</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;2 GTB &nbsp; S &nbsp; &nbsp;'BK7 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 CAO &nbsp; &nbsp; &nbsp; &nbsp;0.60000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 RAD &nbsp; &nbsp; &nbsp; -2.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 1.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;3 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 CAPTURE</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 CAO &nbsp; &nbsp; &nbsp; &nbsp;0.90000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 RAD &nbsp; &nbsp; &nbsp; -5.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.20000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;4 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 CAO &nbsp; &nbsp; &nbsp; &nbsp;0.92000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 RAD &nbsp; &nbsp; &nbsp; &nbsp;6.18857070 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 1.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;5 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 PIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 CAPTURE</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 CAO &nbsp; &nbsp; &nbsp; &nbsp;2.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.90000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;6 GID &nbsp; &nbsp; &nbsp; &nbsp;'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 CAO &nbsp; &nbsp; &nbsp; &nbsp;2.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 RAD &nbsp; &nbsp; &nbsp; -3.60000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 6.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;7 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 CAPTURE</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 CV &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; TH &nbsp; &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;8 AIR  </span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">SAVE ART</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Amici prism, polarization mode turned on, nonsequential raytrace for roof</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID AMICI</span></p>
+<p class="p_mine"><span class="f_mine">FNAME 'AMICI.RLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine">WAVL .6562700 .5875600 .4861300</span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> AFOCAL</span></p>
+<p class="p_mine"><span class="f_mine"> GLOBAL</span></p>
+<p class="p_mine"><span class="f_mine"> NOSEQUENTIAL</span></p>
+<p class="p_mine"><span class="f_mine"> POLARIZATION LINEAR Y</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS INCH</span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;1.00000 &nbsp; &nbsp;1.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;1.00000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 0 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;1.00000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 LOOSE</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;1.79246217</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 N1 1.51432237 N2 1.51680005 N3 1.52237643</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 GTB S &nbsp; &nbsp;'BK7 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 PRISM &nbsp; &nbsp; &nbsp; &nbsp;AMICI &nbsp; &nbsp; 2.10000000E+00</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 5 TH &nbsp; &nbsp; &nbsp;1.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 6 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 7 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">SAVE AMICI</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Perspective drawing of the Amici prism</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">FET AMICI</span></p>
+<p class="p_mine"><span class="f_mine">ON 20</span></p>
+<p class="p_mine"><span class="f_mine">PER 20 -20 0 1 99</span></p>
+<p class="p_mine"><span class="f_mine">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">PUP 2 15 1 </span></p>
+<p class="p_mine"><span class="f_mine">RED</span></p>
+<p class="p_mine"><span class="f_mine">TRA 2 0 0 15</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">MAP of the polarization that comes out if the prism is uncoated</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">FETCH AMICI</span></p>
+<p class="p_mine"><span class="f_mine">IMAGE</span></p>
+<p class="p_mine"><span class="f_mine">MAP POLAR OVER PUPIL</span></p>
+<p class="p_mine"><span class="f_mine">EXPLODED</span></p>
+<p class="p_mine"><span class="f_mine">ANALOG</span></p>
+<p class="p_mine"><span class="f_mine">SCALE .5</span></p>
+<p class="p_mine"><span class="f_mine">RGRID CREC 8 8</span></p>
+<p class="p_mine"><span class="f_mine">FGRID POINT 0 0 </span></p>
+<p class="p_mine"><span class="f_mine">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Example reflecting cone, surface defined by a spline.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(Note that hyperboloids also work, and are easier to set up -- but this is more general because the surface can be curved by the spline if necessary.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This example also shows how a MACro can contain both a lens file and the analysis commands.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ON 20</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID KONUS</span></p>
+<p class="p_mine"><span class="f_mine">WAVL .9500000 .8800000 .8000000</span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> GLOBAL</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS MM  </span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;8.00000 &nbsp; 10.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; 10.00000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 0 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; 31.00000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;2.00000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 SPLIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10 LIN</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; 3.06930804 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; 6.13861609 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; 9.20792389 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 12.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp;12.27723026 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp;15.34654045 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 20.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp;18.41584969 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 24.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp;21.48516083 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 28.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp;24.55446053 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 32.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp;27.62376976 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 36.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp;30.69308090 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 40.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 DECEN &nbsp; &nbsp; &nbsp;0.00000000 &nbsp; &nbsp;-26.00000000 &nbsp; &nbsp; &nbsp;0.00000000 &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 AT &nbsp; &nbsp; 52.50000001 &nbsp; &nbsp; &nbsp;0.00000000 &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 REFLECTOR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp;-35.00000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">RPER 20 30 2 1 99</span></p>
+<p class="p_mine"><span class="f_mine">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">RED</span></p>
+<p class="p_mine"><span class="f_mine">PUP 4 20</span></p>
+<p class="p_mine"><span class="f_mine">TRA 2 0 0 20</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Example MAP showing the incident angle of a set of rays at a steep surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">FET 9</span></p>
+<p class="p_mine"><span class="f_mine">CHG</span></p>
+<p class="p_mine"><span class="f_mine">OBA -1632.8 10 119 0 10</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">IMAGE</span></p>
+<p class="p_mine"><span class="f_mine">MAP UNI OVER FOV ON SURF 9</span></p>
+<p class="p_mine"><span class="f_mine">FGRID REC 7 7</span></p>
+<p class="p_mine"><span class="f_mine">ACTUAL</span></p>
+<p class="p_mine"><span class="f_mine">SCALE &nbsp;3</span></p>
+<p class="p_mine"><span class="f_mine">ANA </span></p>
+<p class="p_mine"><span class="f_mine">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Example curve-fit to interferogram data. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This file models an irregular aspheric on a lens surface, fitting it to digitized data from an interferogram. &nbsp;The surface shape is then plotted in oblique-perspective and as a contour plot. &nbsp;Note the use of the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um135.htm#gaw" class="topiclink">GAW</a></span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um135.htm#grw" class="topiclink">GRW</a></span><span class="f_mine"> commands to ensure that both plots show up on the screen.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">fet 1</span></p>
+<p class="p_mine"><span class="f_mine">ON 13</span></p>
+<p class="p_mine"><span class="f_mine">DEF &nbsp; &nbsp; L &nbsp;.000</span></p>
+<p class="p_mine"><span class="f_mine">2</span></p>
+<p class="p_mine"><span class="f_mine">-.90 &nbsp;.20 -1.5</span></p>
+<p class="p_mine"><span class="f_mine">-.85 &nbsp;.10 -1.5</span></p>
+<p class="p_mine"><span class="f_mine">-.82 -.10 -1.5</span></p>
+<p class="p_mine"><span class="f_mine">-.85 -.30 -1.5</span></p>
+<p class="p_mine"><span class="f_mine">-.85 -.50 -1.5</span></p>
+<p class="p_mine"><span class="f_mine">-.80 &nbsp;.56 -1.0</span></p>
+<p class="p_mine"><span class="f_mine">-.61 &nbsp;.30 -1.0</span></p>
+<p class="p_mine"><span class="f_mine">-.61 &nbsp;.10 -1.0</span></p>
+<p class="p_mine"><span class="f_mine">-.68 -.20 -1.0</span></p>
+<p class="p_mine"><span class="f_mine">-.60 -.45 -1.0</span></p>
+<p class="p_mine"><span class="f_mine">-.40 -.62 -1.0</span></p>
+<p class="p_mine"><span class="f_mine">-.20 -.80 -1.0</span></p>
+<p class="p_mine"><span class="f_mine">-.60 &nbsp;.71 -.50</span></p>
+<p class="p_mine"><span class="f_mine">-.40 &nbsp;.47 -.50</span></p>
+<p class="p_mine"><span class="f_mine">-.35 &nbsp;.20 -.50</span></p>
+<p class="p_mine"><span class="f_mine">-.40 -.10 -.50</span></p>
+<p class="p_mine"><span class="f_mine">-.37 -.30 -.50</span></p>
+<p class="p_mine"><span class="f_mine">-.20 -.53 -.50</span></p>
+<p class="p_mine"><span class="f_mine">-.04 -.80 -.50</span></p>
+<p class="p_mine"><span class="f_mine">-.05 -1.0 -.50</span></p>
+<p class="p_mine"><span class="f_mine">-.40 &nbsp;.88 0.00</span></p>
+<p class="p_mine"><span class="f_mine">-.24 &nbsp;.70 0.00</span></p>
+<p class="p_mine"><span class="f_mine">-.15 &nbsp;.50 0.00</span></p>
+<p class="p_mine"><span class="f_mine">-.00 &nbsp;.36 0.00</span></p>
+<p class="p_mine"><span class="f_mine"> .20 &nbsp;.20 0.00</span></p>
+<p class="p_mine"><span class="f_mine"> .30 &nbsp;.00 0.00</span></p>
+<p class="p_mine"><span class="f_mine"> .32 -.20 0.00</span></p>
+<p class="p_mine"><span class="f_mine"> .30 -.50 0.00</span></p>
+<p class="p_mine"><span class="f_mine"> .26 -.70 0.00</span></p>
+<p class="p_mine"><span class="f_mine"> .20 -.90 0.00</span></p>
+<p class="p_mine"><span class="f_mine">-.20 &nbsp;.96 0.50</span></p>
+<p class="p_mine"><span class="f_mine">-.00 &nbsp;.82 0.50</span></p>
+<p class="p_mine"><span class="f_mine"> .20 &nbsp;.58 0.50</span></p>
+<p class="p_mine"><span class="f_mine"> .40 &nbsp;.47 0.50</span></p>
+<p class="p_mine"><span class="f_mine"> .60 &nbsp;.30 0.50</span></p>
+<p class="p_mine"><span class="f_mine"> .70 &nbsp;.10 0.50</span></p>
+<p class="p_mine"><span class="f_mine"> .73 -.10 0.50</span></p>
+<p class="p_mine"><span class="f_mine"> .70 -.30 0.50</span></p>
+<p class="p_mine"><span class="f_mine"> .60 -.60 0.50</span></p>
+<p class="p_mine"><span class="f_mine"> .50 -.78 0.50</span></p>
+<p class="p_mine"><span class="f_mine"> .40 -.90 0.50</span></p>
+<p class="p_mine"><span class="f_mine"> .20 &nbsp;1.0 1.00</span></p>
+<p class="p_mine"><span class="f_mine"> .33 &nbsp;.80 1.00</span></p>
+<p class="p_mine"><span class="f_mine"> .50 &nbsp;.68 1.00</span></p>
+<p class="p_mine"><span class="f_mine"> .70 &nbsp;.59 1.00</span></p>
+<p class="p_mine"><span class="f_mine">0 -.2 -.25</span></p>
+<p class="p_mine"><span class="f_mine"> .9 .3 .75</span></p>
+<p class="p_mine"><span class="f_mine"> .95 -.1 .75</span></p>
+<p class="p_mine"><span class="f_mine"> .8 -.6 .8</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">gaw</span></p>
+<p class="p_mine"><span class="f_mine">IMAGE</span></p>
+<p class="p_mine"><span class="f_mine">SURP 2 0 1 1</span></p>
+<p class="p_mine"><span class="f_mine">CONT</span></p>
+<p class="p_mine"><span class="f_mine">SURP 2 0 1 1</span></p>
+<p class="p_mine"><span class="f_mine">grw</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Element drawing example</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">GAW</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID RELAY 6 INCH</span></p>
+<p class="p_mine"><span class="f_mine">WAVL .6562700 .5875600 .4861300</span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS INCH</span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;0.55000 &nbsp; &nbsp;3.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;3.00000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 0 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 CAI &nbsp; &nbsp; &nbsp;0.65000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 RAD &nbsp; &nbsp;-37.7865600000000 &nbsp; TH &nbsp; &nbsp;-14.19892000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 REFLECTOR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 RAD &nbsp; &nbsp; 11.8222100000000 &nbsp; TH &nbsp; &nbsp; -0.18750000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 N1 1.58014689 N2 1.58313118 N3 1.58995600</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 GTB S &nbsp; &nbsp;'SK12 &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 PTH &nbsp; -2 &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 PIN &nbsp; &nbsp;2</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 RAD &nbsp; -279.8438300000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 GID 'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 REFLECTOR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 PCV &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp;1.00000000 &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 TH &nbsp; &nbsp; &nbsp;9.15618000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 5 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;1.71767000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 6 RAD &nbsp; &nbsp; &nbsp;2.4631600000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.30000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 6 N1 1.51432237 N2 1.51680005 N3 1.52237643</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 6 GTB S &nbsp; &nbsp;'BK7 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 7 RAD &nbsp; &nbsp; -2.1903500000000 &nbsp; TH &nbsp; &nbsp; &nbsp;1.73188000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 8 RAD &nbsp; &nbsp; -0.7873600000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.20000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 8 N1 1.61503198 N2 1.62004043 N3 1.63208204</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 8 GTB S &nbsp; &nbsp;'F2 &nbsp; &nbsp; &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 9 RAD &nbsp; &nbsp; -1.3435000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;1.89306000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;10 RAD &nbsp; &nbsp; &nbsp;7.1754300000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.20000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;10 N1 1.66494698 N2 1.66997943 N3 1.68203834</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;10 GTB S &nbsp; &nbsp;'BASF12 &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;11 TH &nbsp; &nbsp; &nbsp; 5.04564694</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;11 YMT &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;11 RAD &nbsp; &nbsp; -2.1788400000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;12 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ELD 8</span></p>
+<p class="p_mine"><span class="f_mine">ID ELD EXAMPLE</span></p>
+<p class="p_mine"><span class="f_mine">ID NEGATIVE LENS</span></p>
+<p class="p_mine"><span class="f_mine">ID OSD, LLC</span></p>
+<p class="p_mine"><span class="f_mine">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ELD 1 .6</span></p>
+<p class="p_mine"><span class="f_mine">MTH 1.2</span></p>
+<p class="p_mine"><span class="f_mine">2 ABC 1.5 .2</span></p>
+<p class="p_mine"><span class="f_mine">2 ANG 30</span></p>
+<p class="p_mine"><span class="f_mine">ID ELD EXAMPLE</span></p>
+<p class="p_mine"><span class="f_mine">ID BEVELED MIRROR</span></p>
+<p class="p_mine"><span class="f_mine">ID OSD</span></p>
+<p class="p_mine"><span class="f_mine">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The above example shows a mirror whose thickness is set in the ELD file. &nbsp;Usually, this is done with the Edge Wizard (MEW), where it becomes part of the lens file.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Example optimization with user-selected rays</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">FET 6</span></p>
+<p class="p_mine"><span class="f_mine">OFF 1</span></p>
+<p class="p_mine"><span class="f_mine">PAD</span></p>
+<p class="p_mine"><span class="f_mine">d</span></p>
+<p class="p_mine"><span class="f_mine">t</span></p>
+<p class="p_mine"><span class="f_mine">1</span></p>
+<p class="p_mine"><span class="f_mine">123</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">f</span></p>
+<p class="p_mine"><span class="f_mine">b</span></p>
+<p class="p_mine"><span class="f_mine">m</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">PANT</span></p>
+<p class="p_mine"><span class="f_mine">VLIST RAD 1 2 3 4 6</span></p>
+<p class="p_mine"><span class="f_mine">VY 1 TH 12 5</span></p>
+<p class="p_mine"><span class="f_mine">VY 2 TH</span></p>
+<p class="p_mine"><span class="f_mine"> VY 3 TH 100 3</span></p>
+<p class="p_mine"><span class="f_mine"> VY 5 TH</span></p>
+<p class="p_mine"><span class="f_mine"> VLIST GLM 1 3 6</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">AANT</span></p>
+<p class="p_mine"><span class="f_mine">ECN 1 .1 1 2</span></p>
+<p class="p_mine"><span class="f_mine">M 0 20 A 1 YA 0 0 1</span></p>
+<p class="p_mine"><span class="f_mine">S 3 YA 0 0 1</span></p>
+<p class="p_mine"><span class="f_mine">M 0 20 A 1 YA 1</span></p>
+<p class="p_mine"><span class="f_mine">S 3 YA 1</span></p>
+<p class="p_mine"><span class="f_mine">M 0 5 A 2 YA 0 0 1</span></p>
+<p class="p_mine"><span class="f_mine">M 0 5 A 2 YA 0 0 .8</span></p>
+<p class="p_mine"><span class="f_mine">M 0 5 A 2 YA 0 0 .6</span></p>
+<p class="p_mine"><span class="f_mine">M 0 1 A 2 YC 1 0 1</span></p>
+<p class="p_mine"><span class="f_mine">M 0 1 A 2 YC 1 0 -1</span></p>
+<p class="p_mine"><span class="f_mine">M 0 2 A 2 YC 1 0 .7</span></p>
+<p class="p_mine"><span class="f_mine">M 0 2 A 2 YC 1 0 -.7</span></p>
+<p class="p_mine"><span class="f_mine">M 0 5 A 2 YC 1 0 .5</span></p>
+<p class="p_mine"><span class="f_mine">M 0 5 A 2 YC 1 0 -.5</span></p>
+<p class="p_mine"><span class="f_mine">M 0 1 A 2 XA 1 1</span></p>
+<p class="p_mine"><span class="f_mine">M 0 5 A 2 XA 1 .5</span></p>
+<p class="p_mine"><span class="f_mine">M 0 5 A 2 YC .7 0 .7</span></p>
+<p class="p_mine"><span class="f_mine">M 0 5 A 2 YC .7 0 -.7</span></p>
+<p class="p_mine"><span class="f_mine">M 0 5 A 2 XA .7 .7</span></p>
+<p class="p_mine"><span class="f_mine">M 0 .1 A 2 OPD 0 0 1</span></p>
+<p class="p_mine"><span class="f_mine">M 0 .1 A 2 OPD 1 1</span></p>
+<p class="p_mine"><span class="f_mine">M 0 .1 A 2 OPD 1 0 1</span></p>
+<p class="p_mine"><span class="f_mine">M 0 .1 A 2 OPD 1 0 -1</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">SNAP</span></p>
+<p class="p_mine"><span class="f_mine">SYNO 20</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">Example optimization with raysets generated automatically</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">FET 6</span></p>
+<p class="p_mine"><span class="f_mine">off 1</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">PANT</span></p>
+<p class="p_mine"><span class="f_mine">VLIST RAD 1 2 3 4 6 </span></p>
+<p class="p_mine"><span class="f_mine">VY 1 TH 20 3</span></p>
+<p class="p_mine"><span class="f_mine">VY 2 TH</span></p>
+<p class="p_mine"><span class="f_mine">VY 3 TH 20 3</span></p>
+<p class="p_mine"><span class="f_mine">VY 5 TH</span></p>
+<p class="p_mine"><span class="f_mine">VLIST GLM 1 3</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">AANT</span></p>
+<p class="p_mine"><span class="f_mine">ECN 1 .1 1 2 3 4 5 6 7</span></p>
+<p class="p_mine"><span class="f_mine">ECP 1 .1 1 2 3 4 5 6 7</span></p>
+<p class="p_mine"><span class="f_mine">GNR .5 1 3 M 0</span></p>
+<p class="p_mine"><span class="f_mine">GNR .5 1 3 2 .5</span></p>
+<p class="p_mine"><span class="f_mine">GNR .5 1 3 2 .7</span></p>
+<p class="p_mine"><span class="f_mine">GNR .5 1 3 2 1.</span></p>
+<p class="p_mine"><span class="f_mine">GNR .5 1 2 1 0</span></p>
+<p class="p_mine"><span class="f_mine">GNR .5 1 2 3 0</span></p>
+<p class="p_mine"><span class="f_mine">GNR .5 1 2 1 1</span></p>
+<p class="p_mine"><span class="f_mine">GNR .5 1 2 3 1</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">SNAP </span></p>
+<p class="p_mine"><span class="f_mine">SYNO 25 </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-weight: bold;">SOLID model of the nonsequential file ART.RLE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">FET ART</span></p>
+<p class="p_mine"><span class="f_mine">SOL 0 0 .75 1 99</span></p>
+<p class="p_mine"><span class="f_mine">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">RED</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -1</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.95</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.9</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.85</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.8</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.75</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.7</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.975</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.925</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.875</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.825</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.775</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.725</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.675</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.975</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.925</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.875</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.825</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.775</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.725</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.675</span></p>
+<p class="p_mine"><span class="f_mine">LIME</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.65</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.6</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.55</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.5</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.45</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.4</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.35</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.625</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.575</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.525</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.475</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.425</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.375</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.325</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.625</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.575</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.525</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.475</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.425</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.375</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.325</span></p>
+<p class="p_mine"><span class="f_mine">WHITE</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.3</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.25</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.275</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.225</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.275</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.225</span></p>
+<p class="p_mine"><span class="f_mine">BLUE</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.2</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.15</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.1</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.05</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.0</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.05</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.1</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.15</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.2</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.175</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.125</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.075</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 -.025</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.175</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.125</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.075</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.025</span></p>
+<p class="p_mine"><span class="f_mine">WHITE</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.25</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.3</span></p>
+<p class="p_mine"><span class="f_mine">LIME</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.35</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.4</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.45</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.5</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.55</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.6</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.65</span></p>
+<p class="p_mine"><span class="f_mine">RED</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.7</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.75</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.8</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.85</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.9</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;.95</span></p>
+<p class="p_mine"><span class="f_mine">RAY 2 0 0 &nbsp;1.</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

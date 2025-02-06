@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um547</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ARGLASS,glass,glass automatic insertion of real" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><a name="arglass"></a><span class="f_mine" style="font-size: 14pt;">5.47 Automatic Real Glass Insertion (ARGLASS) &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um546.htm" class="topiclink"> Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';">  </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um548.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Several routines in SYNOPSYS™ can change glass types or insert real glasses into a lens.  </span><span class="f_mine" style="text-decoration: underline;"><a href="um523.htm#irg" class="topiclink">IRG</a></span><span class="f_mine"> can assign a desired glass to a specified surface or automatically pick the closest one from a given glass table, and </span><span class="f_mine" style="text-decoration: underline;"><a href="um531.htm" class="topiclink">GSEARCH</a></span><span class="f_mine"> can try all permutations of a list of candidate glasses to find the best combination.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The feature described in this section will automatically replace any or all of the current glass model glasses with real glasses, subject to certain preferences. &nbsp;It can only be run after a normal optimization run, since it will repeat that optimization with the same merit function and the same variables – except for any GLM, GBC, or GBF variable on the surface under investigation, which will be deleted first. &nbsp;It can also be run from the dialog </span><span class="f_mine" style="font-weight: bold;">MRG</span><span class="f_mine">. &nbsp;If the optimization job was run in multiconfiguration mode, the main configuration must be in ACON 1, since ARG will restore that configuration before optimizing the candidate glasses in that case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> Input is:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ARGLASS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LIB</span><span class="f_mine" style="font-weight: bold;"> [ QUIET ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ SEQUENTIAL / SORT / REVERSE ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">CAT { S / O / H / F / G / R / M / U / N }</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ NRM ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">INCLUDE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine" style="font-weight: bold;"> [ TO ] </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSPS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">EXCLUDE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> …</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ PRICE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">PTIMES</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ BUBBLE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">BLIMIT</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ STAIN </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SLIMIT</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ ACID </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ALIMIT</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ ALKALI</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"> ALLIMIT</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ HUMIDITY </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HLIMIT</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ PREFERRED ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ SAFE ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ ILINE ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ ANNEAL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TEMP</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DELTA</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">GO</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">LIB</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This gives a library location where the program will save the starting lens, and then &nbsp;the final lens, with real glasses inserted, when the process is finished.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SEQUENTIAL / SORT / REVERSE</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option sets the order in which glass models are replaced.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">SEQUENTIAL</span><span class="f_mine"> matches them starting from the first element and ending at the last.  </span><span class="f_mine" style="font-weight: bold;">REVERSE</span><span class="f_mine"> does the same, in the opposite order.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">SORT</span><span class="f_mine"> examines the current model glasses and adjusts the order so that the model whose closest qualifying real glass is furthest from the model will be matched first. &nbsp;This will allow other glass variables to compensate for the disruption when that model is replaced by a glass that is not very close. When the other models are later matched in turn, presumably there will be less need for more variables since they are closer to a real glass and the lens is therefore changed by a smaller amount.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We have found that sorting the glass types sometimes, but not always, yields better results. &nbsp;You are encouraged to try all three options and select whichever works best.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default is SORT.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CAT</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Specifies the desired glass catalog, which must be one of S for Schott, O for Ohara, H for Hoya, F for Corning France, G for Guangming, R for Russian LZOS, &nbsp;M for Sumita, U for the unusual catalog, or N for the Nicon catalog. &nbsp;It does not work with the C (custom) &nbsp;catalog. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> If the U catalog is requested, the program will treat the PREFERRED designation as a request to match only plastic materials, and only surfaces marked PLASTIC in the RLE file will be matched. &nbsp;If any other catalog is requested, surfaces so marked will automatically be excluded.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">NRM</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This optional entry (No Range Message) will disable display of the error message when the useful range of a material does not encompass the wavelength range of the lens. &nbsp;If you are matching plastic elements to the U catalog, for example, and the ranges are slightly different, it is no matter and can be ignored. &nbsp;When optimizing with switch 99 on, every instance of SYNOPSYS can show the message, which is then a nuisance. &nbsp;This option will turn it off.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">INCLUDE</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Specifies the range of surfaces to be treated; the default is the entire lens. &nbsp;Only one INCLUDE directive may be entered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">EXCLUDE</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Gives a list of surfaces you do not want matched to real glasses. &nbsp;More than one EXCLUDE directive is allowed</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PRICE</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Here you give an upper limit to the price of the real glass, in multiples of the price of glass type N-BK7.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">BUBBLE</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This is the maximum bubble class you will accept</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">STAIN</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This gives the maximum stain class you will accept.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ACID</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The maximum acid class.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ALKALI</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The maximum alkali class</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">HUMIDITY</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The maximum humidity sensitivity class.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PREF</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Enter this option if you want to match only preferred glass types.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SAFE</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Use this directive to match only environmentally safe glasses (without lead or arsenic).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ILINE</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This filter will only match glass types identified by the manufacturer as suitable for use in the ultraviolet, where many other glass types darken with prolonged exposure. &nbsp;At present, only the Ohara catalog has a sufficient quantity of such types to be useful. &nbsp;Most of the other catalogs have few or none.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ANNEAL</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Here you can request that each case should be annealed at the specified temperature and cooling rate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GO</span></p>
+</td>
+<td style="vertical-align:top; width:501px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Begins the matching process.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program starts at the beginning of the range </span><span class="f_mine" style="text-decoration: underline;">JSSS</span><span class="f_mine"> to </span><span class="f_mine" style="text-decoration: underline;">JSPS</span><span class="f_mine">, identifies the next surface presently assigned a glass model (</span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm#glm" class="topiclink">GLM</a></span><span class="f_mine">)</span><span class="f_mine" style="font-family: 'Times New Roman';">,</span><span class="f_mine"> finds the closest glass in the specified catalog that meets the selection criteria, and reoptimizes the lens after adding targets to the merit function that move the GLM parameters close to the selected real glass. &nbsp;That step should reduce the likelihood of ray failures when the glass is inserted in place of the model. &nbsp;Then it replaces the glass model with that glass type, removes the glass model variable on that surface, and runs the optimization program again. &nbsp;Then it loops on the next candidate surface, continuing until all requested surfaces have been matched.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is an error to run ARGLASS without previously running an optimization run, and it is only intended for systems operating in the visible, where the glass model is valid.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the selection criteria are too restrictive, the program might fail to find any good solutions. &nbsp;Many glasses are not assigned all of the named attributes by the vendor, and in those cases the catalog has a value of zero for the missing data. &nbsp;Such glasses will therefore pass the tests of ARGLASS, even though the glass itself would perhaps not qualify if its true attributes were known. &nbsp;It is therefore recommended that you verify with the vendor the values of the attribute(s) that are important to your project.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The U catalog (unusual materials) is treated somewhat differently from the others. &nbsp;Those materials do not have data such as price, acid sensitivity, etc., but since that catalog contains all of the plastic materials, which are useful for molded optics, that one is supported as well. &nbsp;In this case the Preferred designation is automatically selected and singles out plastics instead of the usual availability level. &nbsp;All GLM materials will be matched to plastics in this mode, and if you want specific elements to not be matched, if they are to be made of optical glass, for example, you have to list the surface numbers of the model in the </span><span class="f_mine" style="font-weight: bold;">EXCLUDE</span><span class="f_mine"> section.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate the use of this feature, we will start from nothing and design a seven-element lens with <a href="um1014.htm#dsearch" class="topiclink">DSEARCH</a>. &nbsp;Then we use ARGLASS to substitute real glasses for the models returned by DSEARCH.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">First, create a <a href="um1014.htm#dsearch" class="topiclink">DSEARCH</a> MACro to find an attractive lens form.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">ON 998</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">CORE 13 &nbsp; &nbsp; &nbsp; &nbsp;! use multicores if you have them</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">QUIET</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> DSEARCH 5 &nbsp;QUIET</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> SYSTEM</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> ID DSEARCH SAMPLE</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> OBB 0 20 12.7</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> WAVL 0.6563 0.5876 0.4861</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> UNITS MM</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> END</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> GOALS</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> ELEMENTS 7</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> FNUM 3.57 </span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> BACK 50 0</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> TOTL 0 0</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> STOP MIDDLE</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> STOP FREE</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> RT 0.5</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> FOV 0.0 0.5 .7 1</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> FWT 10 5.5 5.5 3</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> NPASS 40</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> ANNEAL 0 0</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> SNAPSHOT 10</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> QUICK 20 40</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> END</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> SPECIAL PANT</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> &nbsp;CUL 1.9</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> &nbsp;FUL 1.9</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> END</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> GO</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">LOUD</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">When this finishes, we edit the optimization file that DSEARCH has prepared, adding the ARGLASS input at the bottom, increasing the number of passes requested, and then requesting an MTF analysis over the field:</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">PANT</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> &nbsp;CUL 1.9 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6"> &nbsp;FUL 1.9 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">VY 0 YP1</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">VLIST RD ALL</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">VLIST TH ALL</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">VY &nbsp; 1 GLM </span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">VY &nbsp; 3 GLM </span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">VY &nbsp; 5 GLM </span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">VY &nbsp; 7 GLM </span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">VY &nbsp; 9 GLM </span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">VY &nbsp;11 GLM </span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">VY &nbsp;13 GLM </span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">END</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">AANT P</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">AEC</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">ACC</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">GSR &nbsp; &nbsp; 0.500000 &nbsp; &nbsp; 5.000000 &nbsp; &nbsp; &nbsp;4 &nbsp;2 &nbsp; &nbsp;0.000000</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">GNR &nbsp; &nbsp; 0.500000 &nbsp; &nbsp; 3.000000 &nbsp; &nbsp; &nbsp;4 &nbsp;2 &nbsp; &nbsp;0.750000</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">GNR &nbsp; &nbsp; 0.500000 &nbsp; &nbsp; 1.000000 &nbsp; &nbsp; &nbsp;4 &nbsp;2 &nbsp; &nbsp;1.000000</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">GSR &nbsp; &nbsp; 0.500000 &nbsp; &nbsp; 5.000000 &nbsp; &nbsp; &nbsp;4 &nbsp;1 &nbsp; &nbsp;0.000000</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">GNR &nbsp; &nbsp; 0.500000 &nbsp; &nbsp; 3.000000 &nbsp; &nbsp; &nbsp;4 &nbsp;1 &nbsp; &nbsp;0.750000</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">GNR &nbsp; &nbsp; 0.500000 &nbsp; &nbsp; 1.000000 &nbsp; &nbsp; &nbsp;4 &nbsp;1 &nbsp; &nbsp;1.000000</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">GSR &nbsp; &nbsp; 0.500000 &nbsp; &nbsp; 5.000000 &nbsp; &nbsp; &nbsp;4 &nbsp;3 &nbsp; &nbsp;0.000000</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">GNR &nbsp; &nbsp; 0.500000 &nbsp; &nbsp; 3.000000 &nbsp; &nbsp; &nbsp;4 &nbsp;3 &nbsp; &nbsp;0.750000</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">GNR &nbsp; &nbsp; 0.500000 &nbsp; &nbsp; 1.000000 &nbsp; &nbsp; &nbsp;4 &nbsp;3 &nbsp; &nbsp;1.000000</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">M &nbsp; 0.500000E+02 &nbsp;0.100000E+01 A BACK</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">END</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">SNAP/DAMP 1</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">SYNOPSYS </span><span class="f_mine-6" style="font-weight: bold;">100</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">STORE 3</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">ARGLASS 3 QUIET</span><span class="f_mine-6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! Start of ARGLASS input.</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">CAT S</span><span class="f_mine-6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! Specify the Schott glass catalog.</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">INCLUDE 1 TO 13  </span><span class="f_mine-6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! Do all surfaces.</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">PREF </span><span class="f_mine-6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ! Only use preferred glass types</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">SAFE</span><span class="f_mine-6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! and environmentally save glasses.</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">GO</span><span class="f_mine-6"> &nbsp; &nbsp;  </span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">MOF M 0 40 80 0 Q 30 20 10  </span><span class="f_mine-6"> &nbsp; &nbsp; &nbsp;! Calculate the MTF over field.</span></p>
+<p>&nbsp;</p>
+<p class="p_mine-6"><span class="f_mine-6">We run this file on the best of the DSEARCH results that came back, and end up with this design, complete with real glasses. &nbsp;The entire process required only about a minute of computer time.</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0449.png" width="933" height="554" alt="clip0449" style="width:933px;height:554px;border:none"></p>
+<p><img src="clip0448.png" width="867" height="594" alt="clip0448" style="width:867px;height:594px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">These excellent results came about partly because we ran the job several times, adjusting some of the input parameters to find the best result. &nbsp;Powerful as the program is, there is still room in this world for human judgment. &nbsp;That’s your job as a lens designer; the software lets you make tradeoffs, but it does not do your job for you. &nbsp;It will make it much easier, faster, and fun, however.</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um548.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

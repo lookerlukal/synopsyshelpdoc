@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um12133</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Equivalence of Strehl and variance,Strehl tolerance calculation" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="bstrehl"></a><span class="f_mine" style="font-weight: bold;">12.1.3.3 BTOL Strehl ratio quality descriptor &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um12134.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um12132.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may select the Strehl ratio quality descriptor with the following input:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">TOL STREHL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">VALUE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">TOL STF </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">VALUE</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">VALUE</span><span class="f_mine" style="font-weight: bold;"> …</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">DEGRADE STREHL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FRACTION</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">DEGRADE STF </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> …</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TOL STREHL</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:436px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies that the Strehl ratio is to be evaluated and maintained within the specified tolerance. &nbsp;This option calculates the wavefront variance, but utilizes the inverse of the quantity</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; S.R. = exp( -4&#960;**2*variance) </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">as the quality descriptor. &nbsp;For this case the worst allowable value is smaller than the initial value, rather than the other way round as is the case with SPOT and WAVE. &nbsp;A field weighting of .5 would allow the S.R. of that point to degrade by one-half as much as would apply with a weight of 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">CAUTION: the Strehl ratio should be requested only for a system that is extremely well corrected. &nbsp;The budget calculation section of BTOL relies on the assumption that the change of the quality descriptors may be described fairly well by a Taylor's series with but two terms, and this is not true for an exponential such as the S.R. except over a small range. &nbsp;If the nominal system has a S.R. below about 0.3, the results of this calculation are not very meaningful and the wavefront variance or MTF should be used instead. &nbsp;For systems with more than about two waves of peak-to-valley wavefront error, the </span><span class="f_mine" style="text-decoration: underline;"><a href="um12132.htm" class="topiclink">SPOT</a></span><span class="f_mine"> tolerancing options, rather than any of the OPD-based methods, are recommended.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The Strehl ratio descriptor is recommended only for systems with a uniform, unvignetted, circular aperture. &nbsp;This means that it should not be relied on with Gaussian object systems, in which the aperture is strongly apodized.</span></p>
+<p class="p_mine"><span class="f_mine">Since this calculation is based on the wavefront variance, it automatically includes the ill effects of lateral color. &nbsp;Even if the image in each color is perfect and the S.R. in each color is high, the variance calculation takes a common image point for describing the wavefront, and lateral color shows up as wavefront tilt – which increases the variance and reduces the S.R. &nbsp;Of course, the definition of the S.R. becomes ambiguous in such cases, but it is nonetheless a useful tolerancing criterion.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">See the comments regarding </span><span class="f_mine" style="text-decoration: underline;"><a href="um12134.htm" class="topiclink">MTF</a></span><span class="f_mine"> tolerancing, for a discussion of the automatic derivative-correction employed for cases where the quality degrades excessively when calculating the derivatives.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:1px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TOL STF</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives a tolerance for the Strehl ratio at each field point.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">DEGRADE STREHL</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:395px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies the fractional change permitted in the Strehl ratio. &nbsp;For example, to allow the S.R. to degrade to 70% of its nominal value, one would enter DEGRADE STREHL 0.3.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">See the section on </span><span class="f_mine" style="font-weight: bold;">TOL STREHL</span><span class="f_mine"> for additional information and cautionary notes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">DEGRADE STF</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:395px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the allowed degradation to the Strehl ratio at each field point.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For convenience, here is a table giving the wavefront variance tolerance that is equivalent to a given Strehl ratio. &nbsp;This is applicable only for monochromatic analysis and can be used instead of the SR tolerance in that case. &nbsp;The variance analysis is slightly more robust since the latter does not require calculating the exponential SR approximation, which is more nonlinear.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">TABLE OF STREHL &nbsp;VERSUS VARIANCE</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STREHL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VARIANCE &nbsp; &nbsp;  </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> __________________________________________</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; 1.00000000 &nbsp; &nbsp; &nbsp; &nbsp;0.00000000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; 0.98433283 &nbsp; &nbsp; &nbsp; &nbsp;0.00040000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp; 0.96891111 &nbsp; &nbsp; &nbsp; &nbsp;0.00080000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 4 &nbsp; &nbsp; &nbsp; &nbsp; 0.95373102 &nbsp; &nbsp; &nbsp; &nbsp;0.00120000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; 0.93878875 &nbsp; &nbsp; &nbsp; &nbsp;0.00160000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 6 &nbsp; &nbsp; &nbsp; &nbsp; 0.92408058 &nbsp; &nbsp; &nbsp; &nbsp;0.00200000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 7 &nbsp; &nbsp; &nbsp; &nbsp; 0.90960285 &nbsp; &nbsp; &nbsp; &nbsp;0.00240000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 8 &nbsp; &nbsp; &nbsp; &nbsp; 0.89535195 &nbsp; &nbsp; &nbsp; &nbsp;0.00280000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 9 &nbsp; &nbsp; &nbsp; &nbsp; 0.88132431 &nbsp; &nbsp; &nbsp; &nbsp;0.00320000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 10 &nbsp; &nbsp; &nbsp; &nbsp;0.86751645 &nbsp; &nbsp; &nbsp; &nbsp;0.00360000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 11 &nbsp; &nbsp; &nbsp; &nbsp;0.85392492 &nbsp; &nbsp; &nbsp; &nbsp;0.00400000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 12 &nbsp; &nbsp; &nbsp; &nbsp;0.84054633 &nbsp; &nbsp; &nbsp; &nbsp;0.00440000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 13 &nbsp; &nbsp; &nbsp; &nbsp;0.82737735 &nbsp; &nbsp; &nbsp; &nbsp;0.00480000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp;0.81441469 &nbsp; &nbsp; &nbsp; &nbsp;0.00520000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 15 &nbsp; &nbsp; &nbsp; &nbsp;0.80165511 &nbsp; &nbsp; &nbsp; &nbsp;0.00560000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 16 &nbsp; &nbsp; &nbsp; &nbsp;0.78909544 &nbsp; &nbsp; &nbsp; &nbsp;0.00600000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 17 &nbsp; &nbsp; &nbsp; &nbsp;0.77673255 &nbsp; &nbsp; &nbsp; &nbsp;0.00640000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 18 &nbsp; &nbsp; &nbsp; &nbsp;0.76456334 &nbsp; &nbsp; &nbsp; &nbsp;0.00680000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 19 &nbsp; &nbsp; &nbsp; &nbsp;0.75258480 &nbsp; &nbsp; &nbsp; &nbsp;0.00720000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 20 &nbsp; &nbsp; &nbsp; &nbsp;0.74079392 &nbsp; &nbsp; &nbsp; &nbsp;0.00760000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 21 &nbsp; &nbsp; &nbsp; &nbsp;0.72918778 &nbsp; &nbsp; &nbsp; &nbsp;0.00800000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 22 &nbsp; &nbsp; &nbsp; &nbsp;0.71776347 &nbsp; &nbsp; &nbsp; &nbsp;0.00840000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 23 &nbsp; &nbsp; &nbsp; &nbsp;0.70651814 &nbsp; &nbsp; &nbsp; &nbsp;0.00880000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 24 &nbsp; &nbsp; &nbsp; &nbsp;0.69544900 &nbsp; &nbsp; &nbsp; &nbsp;0.00920000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 25 &nbsp; &nbsp; &nbsp; &nbsp;0.68455328 &nbsp; &nbsp; &nbsp; &nbsp;0.00960000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 26 &nbsp; &nbsp; &nbsp; &nbsp;0.67382827 &nbsp; &nbsp; &nbsp; &nbsp;0.01000000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 27 &nbsp; &nbsp; &nbsp; &nbsp;0.66327128 &nbsp; &nbsp; &nbsp; &nbsp;0.01040000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 28 &nbsp; &nbsp; &nbsp; &nbsp;0.65287970 &nbsp; &nbsp; &nbsp; &nbsp;0.01080000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 29 &nbsp; &nbsp; &nbsp; &nbsp;0.64265092 &nbsp; &nbsp; &nbsp; &nbsp;0.01120000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 30 &nbsp; &nbsp; &nbsp; &nbsp;0.63258239 &nbsp; &nbsp; &nbsp; &nbsp;0.01160000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 31 &nbsp; &nbsp; &nbsp; &nbsp;0.62267162 &nbsp; &nbsp; &nbsp; &nbsp;0.01200000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 32 &nbsp; &nbsp; &nbsp; &nbsp;0.61291611 &nbsp; &nbsp; &nbsp; &nbsp;0.01240000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 33 &nbsp; &nbsp; &nbsp; &nbsp;0.60331345 &nbsp; &nbsp; &nbsp; &nbsp;0.01280000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 34 &nbsp; &nbsp; &nbsp; &nbsp;0.59386123 &nbsp; &nbsp; &nbsp; &nbsp;0.01320000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 35 &nbsp; &nbsp; &nbsp; &nbsp;0.58455711 &nbsp; &nbsp; &nbsp; &nbsp;0.01360000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 36 &nbsp; &nbsp; &nbsp; &nbsp;0.57539875 &nbsp; &nbsp; &nbsp; &nbsp;0.01400000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 37 &nbsp; &nbsp; &nbsp; &nbsp;0.56638388 &nbsp; &nbsp; &nbsp; &nbsp;0.01440000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 38 &nbsp; &nbsp; &nbsp; &nbsp;0.55751024 &nbsp; &nbsp; &nbsp; &nbsp;0.01480000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 39 &nbsp; &nbsp; &nbsp; &nbsp;0.54877564 &nbsp; &nbsp; &nbsp; &nbsp;0.01520000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 40 &nbsp; &nbsp; &nbsp; &nbsp;0.54017787 &nbsp; &nbsp; &nbsp; &nbsp;0.01560000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 41 &nbsp; &nbsp; &nbsp; &nbsp;0.53171481 &nbsp; &nbsp; &nbsp; &nbsp;0.01600000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 42 &nbsp; &nbsp; &nbsp; &nbsp;0.52338434 &nbsp; &nbsp; &nbsp; &nbsp;0.01640000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 43 &nbsp; &nbsp; &nbsp; &nbsp;0.51518439 &nbsp; &nbsp; &nbsp; &nbsp;0.01680000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 44 &nbsp; &nbsp; &nbsp; &nbsp;0.50711291 &nbsp; &nbsp; &nbsp; &nbsp;0.01720000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 45 &nbsp; &nbsp; &nbsp; &nbsp;0.49916788 &nbsp; &nbsp; &nbsp; &nbsp;0.01760000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 46 &nbsp; &nbsp; &nbsp; &nbsp;0.49134733 &nbsp; &nbsp; &nbsp; &nbsp;0.01800000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 47 &nbsp; &nbsp; &nbsp; &nbsp;0.48364931 &nbsp; &nbsp; &nbsp; &nbsp;0.01840000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 48 &nbsp; &nbsp; &nbsp; &nbsp;0.47607189 &nbsp; &nbsp; &nbsp; &nbsp;0.01880000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 49 &nbsp; &nbsp; &nbsp; &nbsp;0.46861319 &nbsp; &nbsp; &nbsp; &nbsp;0.01920000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 50 &nbsp; &nbsp; &nbsp; &nbsp;0.46127135 &nbsp; &nbsp; &nbsp; &nbsp;0.01960000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 51 &nbsp; &nbsp; &nbsp; &nbsp;0.45404453 &nbsp; &nbsp; &nbsp; &nbsp;0.02000000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 52 &nbsp; &nbsp; &nbsp; &nbsp;0.44693094 &nbsp; &nbsp; &nbsp; &nbsp;0.02040000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 53 &nbsp; &nbsp; &nbsp; &nbsp;0.43992879 &nbsp; &nbsp; &nbsp; &nbsp;0.02080000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 54 &nbsp; &nbsp; &nbsp; &nbsp;0.43303635 &nbsp; &nbsp; &nbsp; &nbsp;0.02120000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 55 &nbsp; &nbsp; &nbsp; &nbsp;0.42625190 &nbsp; &nbsp; &nbsp; &nbsp;0.02160000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 56 &nbsp; &nbsp; &nbsp; &nbsp;0.41957373 &nbsp; &nbsp; &nbsp; &nbsp;0.02200000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 57 &nbsp; &nbsp; &nbsp; &nbsp;0.41300020 &nbsp; &nbsp; &nbsp; &nbsp;0.02240000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 58 &nbsp; &nbsp; &nbsp; &nbsp;0.40652966 &nbsp; &nbsp; &nbsp; &nbsp;0.02280000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 59 &nbsp; &nbsp; &nbsp; &nbsp;0.40016048 &nbsp; &nbsp; &nbsp; &nbsp;0.02320000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 60 &nbsp; &nbsp; &nbsp; &nbsp;0.39389110 &nbsp; &nbsp; &nbsp; &nbsp;0.02360000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 61 &nbsp; &nbsp; &nbsp; &nbsp;0.38771994 &nbsp; &nbsp; &nbsp; &nbsp;0.02400000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 62 &nbsp; &nbsp; &nbsp; &nbsp;0.38164547 &nbsp; &nbsp; &nbsp; &nbsp;0.02440000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 63 &nbsp; &nbsp; &nbsp; &nbsp;0.37566616 &nbsp; &nbsp; &nbsp; &nbsp;0.02480000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 64 &nbsp; &nbsp; &nbsp; &nbsp;0.36978053 &nbsp; &nbsp; &nbsp; &nbsp;0.02520000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 65 &nbsp; &nbsp; &nbsp; &nbsp;0.36398712 &nbsp; &nbsp; &nbsp; &nbsp;0.02560000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 66 &nbsp; &nbsp; &nbsp; &nbsp;0.35828447 &nbsp; &nbsp; &nbsp; &nbsp;0.02600000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 67 &nbsp; &nbsp; &nbsp; &nbsp;0.35267117 &nbsp; &nbsp; &nbsp; &nbsp;0.02640000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 68 &nbsp; &nbsp; &nbsp; &nbsp;0.34714580 &nbsp; &nbsp; &nbsp; &nbsp;0.02680000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 69 &nbsp; &nbsp; &nbsp; &nbsp;0.34170701 &nbsp; &nbsp; &nbsp; &nbsp;0.02720000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 70 &nbsp; &nbsp; &nbsp; &nbsp;0.33635343 &nbsp; &nbsp; &nbsp; &nbsp;0.02760000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 71 &nbsp; &nbsp; &nbsp; &nbsp;0.33108372 &nbsp; &nbsp; &nbsp; &nbsp;0.02800000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 72 &nbsp; &nbsp; &nbsp; &nbsp;0.32589658 &nbsp; &nbsp; &nbsp; &nbsp;0.02840000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 73 &nbsp; &nbsp; &nbsp; &nbsp;0.32079070 &nbsp; &nbsp; &nbsp; &nbsp;0.02880000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 74 &nbsp; &nbsp; &nbsp; &nbsp;0.31576481 &nbsp; &nbsp; &nbsp; &nbsp;0.02920000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 75 &nbsp; &nbsp; &nbsp; &nbsp;0.31081767 &nbsp; &nbsp; &nbsp; &nbsp;0.02960000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 76 &nbsp; &nbsp; &nbsp; &nbsp;0.30594804 &nbsp; &nbsp; &nbsp; &nbsp;0.03000000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 77 &nbsp; &nbsp; &nbsp; &nbsp;0.30115470 &nbsp; &nbsp; &nbsp; &nbsp;0.03040000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 78 &nbsp; &nbsp; &nbsp; &nbsp;0.29643646 &nbsp; &nbsp; &nbsp; &nbsp;0.03080000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 79 &nbsp; &nbsp; &nbsp; &nbsp;0.29179213 &nbsp; &nbsp; &nbsp; &nbsp;0.03120000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 80 &nbsp; &nbsp; &nbsp; &nbsp;0.28722058 &nbsp; &nbsp; &nbsp; &nbsp;0.03160000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 81 &nbsp; &nbsp; &nbsp; &nbsp;0.28272064 &nbsp; &nbsp; &nbsp; &nbsp;0.03200000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 82 &nbsp; &nbsp; &nbsp; &nbsp;0.27829121 &nbsp; &nbsp; &nbsp; &nbsp;0.03240000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 83 &nbsp; &nbsp; &nbsp; &nbsp;0.27393117 &nbsp; &nbsp; &nbsp; &nbsp;0.03280000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 84 &nbsp; &nbsp; &nbsp; &nbsp;0.26963945 &nbsp; &nbsp; &nbsp; &nbsp;0.03320000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 85 &nbsp; &nbsp; &nbsp; &nbsp;0.26541496 &nbsp; &nbsp; &nbsp; &nbsp;0.03360000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 86 &nbsp; &nbsp; &nbsp; &nbsp;0.26125666 &nbsp; &nbsp; &nbsp; &nbsp;0.03400000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 87 &nbsp; &nbsp; &nbsp; &nbsp;0.25716350 &nbsp; &nbsp; &nbsp; &nbsp;0.03440000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 88 &nbsp; &nbsp; &nbsp; &nbsp;0.25313448 &nbsp; &nbsp; &nbsp; &nbsp;0.03480000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 89 &nbsp; &nbsp; &nbsp; &nbsp;0.24916858 &nbsp; &nbsp; &nbsp; &nbsp;0.03520000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 90 &nbsp; &nbsp; &nbsp; &nbsp;0.24526481 &nbsp; &nbsp; &nbsp; &nbsp;0.03560000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 91 &nbsp; &nbsp; &nbsp; &nbsp;0.24142220 &nbsp; &nbsp; &nbsp; &nbsp;0.03600000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 92 &nbsp; &nbsp; &nbsp; &nbsp;0.23763980 &nbsp; &nbsp; &nbsp; &nbsp;0.03640000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 93 &nbsp; &nbsp; &nbsp; &nbsp;0.23391666 &nbsp; &nbsp; &nbsp; &nbsp;0.03680000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 94 &nbsp; &nbsp; &nbsp; &nbsp;0.23025184 &nbsp; &nbsp; &nbsp; &nbsp;0.03720000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 95 &nbsp; &nbsp; &nbsp; &nbsp;0.22664445 &nbsp; &nbsp; &nbsp; &nbsp;0.03760000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 96 &nbsp; &nbsp; &nbsp; &nbsp;0.22309357 &nbsp; &nbsp; &nbsp; &nbsp;0.03800000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 97 &nbsp; &nbsp; &nbsp; &nbsp;0.21959832 &nbsp; &nbsp; &nbsp; &nbsp;0.03840000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 98 &nbsp; &nbsp; &nbsp; &nbsp;0.21615784 &nbsp; &nbsp; &nbsp; &nbsp;0.03880000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 99 &nbsp; &nbsp; &nbsp; &nbsp;0.21277126 &nbsp; &nbsp; &nbsp; &nbsp;0.03920000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 100 &nbsp; &nbsp; &nbsp; 0.20943773 &nbsp; &nbsp; &nbsp; &nbsp;0.03960000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 101 &nbsp; &nbsp; &nbsp; 0.20615644 &nbsp; &nbsp; &nbsp; &nbsp;0.04000000 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um12134.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

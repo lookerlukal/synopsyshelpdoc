@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>5.56 CSAG</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Aspheric: fitting to measured SAG data,CSAG" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">5.56 </span><span style="font-size: 11pt; font-weight: bold;">Fitting aspheric terms to measured SAG data (CSAG)</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;background:url(background-topic-header.jpg)" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   &raquo;No topics above this level&laquo;
+   </p>
+   <h1 class="p_Heading1"><span class="f_Heading1">5.56 </span><span style="font-size: 11pt; font-weight: bold;">Fitting aspheric terms to measured SAG data (CSAG)</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <img src="hm_btn_navigate_prev_d.png" border="0"
+        ><a href="main_index.htm"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img name=main src="hm_btn_navigate_top.png" border=0 alt="Return to chapter overview"
+        ></a><img src="hm_btn_navigate_next_d.png" border="0">
+    </td>
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="text-decoration: underline;"><a href="5_55_black__box_lens.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="5_57_rns.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p>SYNOPSYS can fit a set of measured surface sag values to an aspheric surface. &nbsp;This can be used to model a measured surface in order to analyze the performance of the as-build lens. &nbsp;The shape is assumed rotationally symmetric, and the program assigns shape USS 21 to the surface. &nbsp;(You can also model a non-symmetric shape, with <span style="font-weight: bold; text-decoration: underline;"><a href="um57.htm#sfit" class="topiclink">SFIT</a></span>.)</p>
+<p>&nbsp;</p>
+<p>Input is:</p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">CSAG </span><span style="font-weight: bold; text-decoration: underline;">sn</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold; text-decoration: underline;">y</span><span style="font-weight: bold;"> </span><span style="font-weight: bold; text-decoration: underline;">sag</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold; text-decoration: underline;">y</span><span style="font-weight: bold;"> </span><span style="font-weight: bold; text-decoration: underline;">sag</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">...</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold; text-decoration: underline;">y</span><span style="font-weight: bold;"> </span><span style="font-weight: bold; text-decoration: underline;">sag</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">END</span></p>
+<p>&nbsp;</p>
+<p>The lens must be current, and the surface to be modeled is given as <span style="font-weight: bold; text-decoration: underline;">sn</span>. &nbsp;The number of zones to be fit must be from 3 to 50.</p>
+<p>&nbsp;</p>
+<p>The input includes a list of &nbsp;apertures (<span style="font-weight: bold; text-decoration: underline;">y</span>) and the measured sag at each point (<span style="font-weight: bold; text-decoration: underline;">sag</span>). &nbsp;The measurements must be normalized so the axis point has zero sag, but the entered input data start at the first <span style="font-style: italic; font-weight: bold;">non-zero</span> Y coordinate.</p>
+<p>&nbsp;</p>
+<p>When all the data are read in, the program submits an optimization run that targets the sag at each specified zone to the measured value, varying as many G-term variables as there are points to model, up to the maximum of 30 zones for this shape.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example:</span></p>
+<p>&nbsp;</p>
+<p>A vendor has measured the aspheric shape on surface 3 and provided a set of measurements.</p>
+<p>&nbsp;</p>
+<p>The input will then be as follows:</p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">CSAG 3</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">1 -.005145659</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">2 -.020512029&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">3 -.045897901&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">4 -.08100158</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">5 -.125465304&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">6 -.178925032&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">7 -.241055362&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">8 -.311588336&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">9 -.3902956</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">10 -.476908271&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">11 -.570935297&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">12 -.671380454&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">13 -.776293867&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">END</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p><span style="background-color: #ffffff;">The program finds the following coefficients, and the merit function comes down to 1.616E-12. &nbsp;This is a very good fit.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;ASY</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SPECIAL SURFACE DATA</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ______________________________________________________________________________</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;SURFACE NO. &nbsp; 3 -- UNUSUAL SURF TYPE 21 (EVEN AND ODD POWERS)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> G 1 &nbsp; -0.770423E-03 (CV) &nbsp; G 3 &nbsp; &nbsp;0.142691E-03 (R) &nbsp; &nbsp;G 4 &nbsp; -0.516782E-02 (R**2)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> G 5 &nbsp; &nbsp;0.458381E-03 (R**3) G 6 &nbsp; -0.280539E-03 (R**4) G 7 &nbsp; &nbsp;0.110637E-03 (R**5)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> G 8 &nbsp; -0.280429E-04 (R**6) G 9 &nbsp; &nbsp;0.478880E-05 (R**7) G 10 &nbsp;-0.556625E-06 (R**8)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> G 11 &nbsp; 0.433812E-07 (R**9) G 12 &nbsp;-0.216835E-08 (R**10)G 13 &nbsp; 0.628193E-10 (R**11)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> G 14 &nbsp;-0.801827E-12 (R**12)</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>

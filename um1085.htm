@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>improving an “optimum” lens</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="optimization--&gt;" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">10.8.5 When &quot;OPTIMUM&quot; is not good enough &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1086.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1084.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When a design has gone as far as it can the program will quit with a message stating that the last improvement was less than .01% of the merit function. &nbsp;Then it wise to try to optimize for a few more iterations, because sometimes the lens will start to improve some more. &nbsp;If that doesn’t work, you may try one of the following:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1012.htm#kick" class="topiclink">KICK</a></span><span class="f_mine"> the lens. &nbsp;This is a feature that can jump out of a local minimum by altering the design parameters by a small amount and then reoptimizing. &nbsp;Even better, see item 2.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Run the </span><span class="f_mine" style="text-decoration: underline;"><a href="um1012.htm#anneal" class="topiclink">simulated annealing</a></span><span class="f_mine"> feature. &nbsp;This will kick the lens repeatedly, sometimes finding a new solution region. &nbsp;Really! &nbsp;This feature sometimes works so well it’s scary. &nbsp;We have learned to anneal the lens with </span><span class="f_mine" style="font-style: italic;">every </span><span class="f_mine">design job we do, and we encourage all users to do the same.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">3</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Run the <a href="um1018.htm" class="topiclink">BFO</a> feature. &nbsp;This is an easy way to see if there is a better solution that can be found by flipping the bending of a meniscus element.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">4.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Run the </span><span class="f_mine" style="text-decoration: underline;"><a href="um69.htm#strain" class="topiclink">STRAIN</a></span><span class="f_mine"> feature, to identify elements that are contributing so much power (and such large aberrations) that the other elements cannot compensate. &nbsp;Click the above link for information on this useful feature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">5.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Eliminate something from the merit function -- especially mechanical constraints.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">6.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Add some variables.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">7.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">See if one or two aberrations are much larger than the others. If so, these are penalizing the system heavily. &nbsp;In this case it is instructive to run the system with much greater weight on the worst aberrations. &nbsp;The resulting design will not be very good, but you will see which aberrations had to get worse to improve the others, and sometimes you can think of a different way to improve them.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">8.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Sometimes, for reasons that remain obscure, it helps to optimize the lens with </span><span class="f_mine" style="font-style: italic;">fewer</span><span class="f_mine"> variables for a few iterations. &nbsp;If this yields a substantial improvement, you can then put the other variables back in.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">9.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Explore the output from the </span><span class="f_mine" style="text-decoration: underline;"><a href="um1014.htm#dsearch" class="topiclink">DSEARCH</a></span><span class="f_mine"> or </span><span class="f_mine" style="text-decoration: underline;"><a href="um1017.htm#spb" class="topiclink">SPBUILD</a></span><span class="f_mine"> programs, if your job meets the restrictions of these powerful features. &nbsp;You may discover a new starting point that results in a better lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">10.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If your optimization run terminates on the first iteration with a message that the damping has reached its limit or no solution could be found, it means that the ordinary DLS method did not work. &nbsp;Try turning on switch 82, which makes the program calculate first </span><span class="f_mine" style="font-style: italic;">and second</span><span class="f_mine"> derivatives on that pass, and see if you get better results. &nbsp;If not, try the simulated annealing feature, which will kick the lens out a local minimum and possibly find a better solution.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">11.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Often, one gets to an optimum solution and then finds that a mechanical problem has occurred: lenses colliding or edges out of control that were not given targets in the merit function, or something of the kind. &nbsp;So you add the required target and reoptimize – and the lens will not move at all. &nbsp;It is easy to see why. &nbsp;Imagine a flat plain with a low spot. &nbsp;That’s your minimum. &nbsp;Now raise and tilt this plain by a small angle. &nbsp;That’s the effect on the merit function of adding a mechanical goal that is rather far off. &nbsp;There is another minimum a great distance away, but you cannot see it from the bottom of the hole. &nbsp;In other words, the local minimum is still a local minimum, even though the merit function became much larger.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This is where the simulated annealing is most powerful. &nbsp;Nearly any random change to the lens kicks it out of the hole, and then it can head downhill toward the minimum you really want. &nbsp;Get in the habit of running this feature after every optimization run, even if it seems to have converged. &nbsp;You sometimes find a much better solution that way.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">12</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If the optimization fails on the first iteration, which can happen for obscure reasons, try turning on switch 86 and running the optimization MACro again. &nbsp;That switch causes the program to automatically run the simulated annealing program, at a temperature of 100 and a cooling of 5, when the first pass fails, which may result in a satisfactory optimization.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1086.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

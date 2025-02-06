@@ -1,0 +1,781 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>perspective, solid, rotating</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="APLOT,DSOLID,HPLOT,lens drawings--&gt;,PERSPECTIVE drawing,rotating perspective drawing,RPER,SOLID model drawing" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><a name="per"></a></p>
+<p><a name="rper"></a></p>
+<p><a name="stfile"></a><a name="solid"></a><span class="f_mine" style="font-size: 14pt;">7.2 Perspective Drawing, Solid Model (PER, RPER, SOLID…) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="text-decoration: underline;"><a href="um73.htm" class="topiclink">Next</a></span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;"><a href="um711.htm" class="topiclink">Previous</a></span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A perspective drawing of a lens, showing all tilts and decenters, can be obtained with the programs </span><span class="f_mine" style="font-weight: bold;">PER</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">SOLID</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">RPER, </span><span class="f_mine">and</span><span class="f_mine" style="font-weight: bold;"> RSOLID</span><span class="f_mine">.  </span><span class="f_mine" style="font-weight: bold;">PER</span><span class="f_mine"> produces a &quot;wire frame&quot; drawing showing all edges.  </span><span class="f_mine" style="font-weight: bold;">RPER</span><span class="f_mine"> is similar to </span><span class="f_mine" style="font-weight: bold;">PER</span><span class="f_mine"> except that the drawing can be rotated, zoomed, and panned. &nbsp;Most features of these programs can be run from the dialog </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="hidd_mpe.htm" class="topiclink">MPE</a></span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">SOLID </span><span class="f_mine">and </span><span class="f_mine" style="font-weight: bold;">RSOLID</span><span class="f_mine"> plot a solid model where hidden lines and surfaces are removed.  </span><span class="f_mine" style="font-weight: bold;">RSOLID</span><span class="f_mine"> can be rotated, zoomed, and panned. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um138.htm" class="topiclink">section 13.8</a></span><span class="f_mine"> regarding the use of the rotating features.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">STFILE</span><span class="f_mine"> creates a STEP file that models the lenses. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#stf" class="topiclink">below</a></span><span class="f_mine"> for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">These programs honor the </span><span class="f_mine" style="text-decoration: underline;"><a href="um78.htm#efile" class="topiclink">EFILE</a></span><span class="f_mine"> edges, if any, if switch 39 is ON.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-size: 11pt;">Switch 88 controls how entering rays are shown. &nbsp;If surface 0 is explicitly requested, then rays from that surface are shown, provided the object is not more than 10**6 units away. &nbsp;If it is further than this, or if your picture starts at surface 1, then the entering ray paths are shown only if this switch is on. &nbsp;If the starting surface is higher than 1, then the paths will start from that surface. &nbsp;This rule also applies to the </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;"><a href="um133.htm#pad" class="topiclink">PAD</a></span><span class="f_footnotetext" style="font-size: 11pt;"> perspective view.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Input is much the same for all of the programs in this family, and each has two forms of input: a command form and a prompted form. &nbsp;In addition, these features can be run interactively from the dialog </span><span class="f_mine" style="font-weight: bold;">MPE</span><span class="f_mine">. &nbsp;Entering the commands</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-weight: bold;">PER</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-weight: bold;">RPER</span></p>
+<p class="p_mine"><span class="f_mine">or &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-weight: bold;">[R/D]SOLID</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will activate the prompt, which will ask for the perspective angles, surface numbers, etc. To use the command form (in a MACro, for example) the format is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">[SSEP </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SEPARATION</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">[ HPLOT [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ] / APLOT [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> [ HPLOT ] ] ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> PER / RPER / [R]SOLID / STFILE } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">EL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AZ</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TSCF</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSPS</span><span class="f_mine" style="font-weight: bold;"> [ V / </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XOS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YOS</span><span class="f_mine" style="font-weight: bold;"> &nbsp;] ] ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ SPT ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ LINE ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ RAY { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ RAY... ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ PUP… ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ TRACE { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ GREYSCALE ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ TONE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">A</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">B</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">C</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">D</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">E</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ GLINT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">X</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Y</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ CUTAWAY ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ HRAYS ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ ACOLOR ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ COLOR </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RED</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">BLUE</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GREEN</span><span class="f_mine" style="font-weight: bold;"> / </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> … ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ SPART </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">PARTITION</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ PANELS ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">PLOT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ RED ]  </span><span class="f_mine"> &nbsp; (these entries select the pen color of subsequent rays)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ BLUE ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ LIME or GREEN ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ YELLOW ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ MAGENTA ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ CYAN ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ WHITE ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ BEAM ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ PUP... ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ TRACE...] </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ RAY... ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ GET </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:167px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SSEP </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SEPARATION</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:395px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input controls the separation between the two views that are displayed by the Stereogram feature, which works only with RPER. &nbsp;The default is two inches.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:274px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">HPLOT [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ] / APLOT [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> [ HPLOT] ]</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; width:365px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">apply when you want to superimpose the drawings of two or more different lens systems. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#hplot" class="topiclink">below</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:335px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> PER / RPER / SOLID / RSOLID / STFILE }</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:323px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">executes the selected program</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">EL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AZ</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">define a viewpoint from which the perspective will be drawn. The angles are defined in the figure below. &nbsp;In this figure, the X Y Z coordinate system is the local coordinate of the first surface to be drawn (not necessarily surface 1). &nbsp;The output will be oriented on the page so that the observer's Y coordinate is up, and his Z coordinate to the right. &nbsp;Thus, if both input angles are zero, the perspective is the same as in </span><span class="f_mine" style="font-weight: bold;">DWG</span><span class="f_mine"> output. &nbsp;The drawing is isometric i.e., infinity perspective, except for the RSOLID version, which gives a true perspective view.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TSCF</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">“times scale factor”: 0.5 equals half scale, etc. &nbsp;Zero or blank gives a default scale factor.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSPS</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">define the starting and stopping surfaces for the drawing. &nbsp;If zero is entered for both </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSPS</span><span class="f_mine"> or if both entries are omitted, the program will draw the entire lens, starting at surface 1. &nbsp;If only </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine"> is zero, the program will also draw the object point. &nbsp;If </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSPS</span><span class="f_mine"> &nbsp;exceeds the maximum surface number in the lens, the program will replace it with the actual maximum number.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XOS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YOS</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">optional coordinates used to locate the vertex of surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine">, measured in inches from the center of the plot page. &nbsp;If omitted, the program will center the drawing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Entering “V” instead of these coordinates will orient the picture so that the light enters from the top instead of from the left. &nbsp;If the drawing is larger vertically than it is horizontally, this will permit a larger scale factor and better resolution.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ SPT ]</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">see RAY, below</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ LINE ]</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">see RAY, below</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ RAY ]</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input specifies individual rays to be displayed. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">PUPIL</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">TRACE</span><span class="f_mine"> commands, which are described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um84.htm" class="topiclink">section 8.4</a></span><span class="f_mine">, may also appear in the input file for this feature, and will create a pattern of rays. &nbsp;The way in which the rays appear on the drawing depends on whether the commands that generate them come before or after the </span><span class="f_mine" style="font-weight: bold;">PLOT</span><span class="f_mine"> command in the input file, and on the setting of switch 90, as for footprints.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the ray requests precede the </span><span class="f_mine" style="font-weight: bold;">PLOT</span><span class="f_mine"> command, the intercept </span><span class="f_mine" style="font-style: italic;">points</span><span class="f_mine"> of the rays with each surface are shown on the drawing, but not the paths themselves. &nbsp;The points will be drawn as small dots following a </span><span class="f_mine" style="font-weight: bold;">SPT</span><span class="f_mine"> command (and </span><span class="f_mine" style="font-weight: bold;">PER</span><span class="f_mine"> will draw them with a symbol indicating the ray color, if switch 27 is OFF). &nbsp;The spot size can be set by the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um85.htm#sssize" class="topiclink">SSSIZE</a></span><span class="f_mine"> command. &nbsp;The set of points for all of the rays at each surface will be connected by a line if the rays are requested following a </span><span class="f_mine" style="font-weight: bold;">LINE</span><span class="f_mine"> command. &nbsp;This is normally used to outline the aperture of a beam created by the PUP 3 or PUP 4 option followed by a TRACE command (</span><span class="f_mine" style="text-decoration: underline;"><a href="um84.htm" class="topiclink">see 8.4</a></span><span class="f_mine">). </span><span class="f_mine" style="font-weight: bold;">SOLID</span><span class="f_mine"> does not honor the LINE option, but </span><span class="f_mine" style="font-weight: bold;">PER</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">RPER</span><span class="f_mine"> do.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the RAY or TRACE input </span><span class="f_mine" style="font-style: italic;">follows</span><span class="f_mine"> a </span><span class="f_mine" style="font-weight: bold;">PLOT</span><span class="f_mine"> command, the actual path of the ray(s) through the lens will be drawn. &nbsp;Up to 50 rays may be requested prior to the </span><span class="f_mine" style="font-weight: bold;">PLOT</span><span class="f_mine"> command, and any number after. &nbsp;Only a single </span><span class="f_mine" style="font-weight: bold;">TRACE</span><span class="f_mine"> … request is honored before the PLOT command, but any number may be entered after.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ GREYSCALE ]</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is used by </span><span class="f_mine" style="font-weight: bold;">SOLID</span><span class="f_mine"> (and ignored by </span><span class="f_mine" style="font-weight: bold;">PER</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">RPER</span><span class="f_mine">), causing the edges or surfaces shown to be shaded, simulating reflections or shadowing. The type of shading is controlled by switch 60, and the degree of shading is given by the TONE data. &nbsp;See below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ TONE … ]</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the degree of shading to be applied to </span><span class="f_mine" style="font-style: italic;">surfaces</span><span class="f_mine">. &nbsp;If </span><span class="f_mine" style="font-weight: bold;">GREYSCALE</span><span class="f_mine"> has been requested, lens </span><span class="f_mine" style="font-style: italic;">edges</span><span class="f_mine"> are shaded in a fixed manner, with either a greyscale tone or with a stippled effect using numerous small dots to simulate a halftone effect (see below).  </span><span class="f_mine" style="font-style: italic;">Surfaces</span><span class="f_mine"> may be shaded as well, emphasizing the curve. &nbsp;The shading that is applied to a surface falls off as the surface angle varies from a unique direction, called the </span><span class="f_mine" style="font-weight: bold;">GLINT</span><span class="f_mine"> angle, at a rate determined by the equation</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; SHADE = AN + B * </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&Gamma;</span><span class="f_mine" style="font-weight: bold;">**40 + C * </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&Gamma;</span><span class="f_mine" style="font-weight: bold;">**10 + D * </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&Gamma;</span><span class="f_mine" style="font-weight: bold;">**4 + E</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-weight: bold;">AN</span><span class="f_mine"> equals </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine"> if the angle </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&Gamma;</span><span class="f_mine"> between the local surface normal and the glint angle is less than about .5 degrees, and is zero otherwise. &nbsp;The other terms fall off at different rates, and by selecting the proper coefficients </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine"> -</span><span class="f_mine" style="font-weight: bold;"> E</span><span class="f_mine">, one may simulate a strong glint or a gradual shading. (See below.) The default is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-weight: bold;">TONE 0.4 0 0 0 0 </span><span class="f_mine"> (switch 60 off), and</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-weight: bold;">TONE 2 0 0 .5 .4</span><span class="f_mine"> (switch 60 on)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ GLINT ]</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">defines the glint direction by specifying a surface upon which it is to appear and the fractional aperture (relative to the local clear aperture) in X and Y of the desired location where the glint is to appear. &nbsp;Other surfaces in the lens will be also be shaded in accordance with the glint equation, if their surfaces angles happen to fall in the right range. &nbsp;The default </span><span class="f_mine" style="font-weight: bold;">GLINT</span><span class="f_mine"> direction is approximately 15 degrees elevation and 45 degrees azimuth (in paper plane coordinates). &nbsp;If </span><span class="f_mine" style="font-weight: bold;">GLINT</span><span class="f_mine"> is requested, </span><span class="f_mine" style="font-weight: bold;">GREY</span><span class="f_mine"> must also be requested.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CUTAWAY</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If this option is requested, the SOLID display will show lens elements with one quadrant cut away, revealing the surface profiles inside that section. &nbsp;Prism surfaces will be shown intact, but the extra surfaces that define the surfaces not encountered by the light will be deleted, allowing you to see inside the prism.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This option automatically turns on the grayscale option, which is required to properly display the cutouts. &nbsp;It is ignored by PER and RPER. &nbsp;For those programs you can achieve a similar effect by turning on switch 18. &nbsp;If any surfaces have decentered CAOs or RAOs, this option is not recommended.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">HRAYS</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option will show the path of hidden rays, normally not shown because they are behind something else. &nbsp;They are rendered with dotted magenta lines. &nbsp;If you are superimposing plots with the HPLOT … APLOT sequence, only the last plot will show the hidden rays.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RSOLID can also show hidden rays, but in this case they are faint lines</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span><span class="f_mine"> in the requested ray color.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ACOLOR</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option will automatically color lens elements according to the current value of the index and dispersion. &nbsp;The result is approximately the same as the colors shown on the PAD display if the flood-fill option is selected. &nbsp;This may be followed by individual COLOR requests, as described below, if other colors are desired on individual surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">COLOR …</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">You can select the color in which lens elements are drawn with this option. &nbsp;The three color parameters are the (RGB) components of a color reference structure that gives the relative intensity of red, blue, and green for the surfaces whose numbers follow on the next line. &nbsp;The parameters must all be within the range of 0 to 255. &nbsp;The total number of colors that can be specified in this way is over 16 million.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The dialog MPE lets you select colors with visual feedback. &nbsp;Scroll to the bottom of that dialog and click one of the </span><span class="f_mine" style="font-weight: bold;">Select</span><span class="f_mine"> buttons.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is how you would specify some common colors.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td colspan="3" style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Color:</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RED</span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">BLUE</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GREEN</span></p>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td colspan="3" style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Red</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">255</span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0</span></p>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td colspan="3" style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Blue</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0</span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">255</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0</span></p>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td colspan="3" style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Green</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0</span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">255</span></p>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td colspan="3" style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Yellow</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">255</span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">255</span></p>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td colspan="3" style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Magenta</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">255</span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">255</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0</span></p>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td colspan="3" style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Cyan</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0</span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">255</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">255</span></p>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Lens edges are colored according to the color assigned to the first surface of the element, and for best results one should specify the same colors on both sides of the element. &nbsp;All surfaces of a prism should be assigned the same color, unless you really want some faces to display differently.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This option only works with SOLID (switch 60 must be on, and GREYSCALE must also be selected) and RSOLID.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SPART</span></p>
+</td>
+<td style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The solid drawing programs by default partition the surface with a mesh of panels small enough to show a smooth curve. &nbsp;This can be as fine as 200 x 200 for some surface shapes, and the number of panels can be quite large. &nbsp;Steep surfaces are assigned more panels than shallow ones.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This entry overrides that calculation and forces the mesh to the input number, which must be from 5 to 300. &nbsp;A number smaller than the default will execute more quickly and produce a smaller DXF file when running the DSOLID option. &nbsp;Thus a DXF file of 80 MB with the default mesh is reduced in size to just over one MB with a mesh of 10, when drawing a system with aspheric surfaces on all elements -- which usually requires a fine mesh. &nbsp;Of course then the surface panels are more readily visible.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This option does not apply to OBI reflector arrays, which do not display properly with a smaller mesh.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PANELS</span></p>
+</td>
+<td style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The STEP file produced by STFILE uses the native sphere and cylinder shapes supported by that protocol. &nbsp;But it can also model those shapes with a multitude of small panels. &nbsp;The latter produces a much larger file than the former, so the former is generally recommended. &nbsp;But if your CAD program does not display lens elements properly, add this directive to the STFILE input. &nbsp;Then the program will use the panel option, which might be rendered better by that program.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">All elements with aspheric surfaces, wedges, or non-circular or decentered apertures are automatically rendered with the panel option.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ BEAM ]</span></p>
+</td>
+<td style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input executes the </span><span class="f_mine" style="text-decoration: underline;"><a href="um512.htm#beam" class="topiclink">BEAM</a></span><span class="f_mine"> routine, which finds the path of a Gaussian beam through the lens, and then plots the beam radius at each surface, connecting the points with a line in the last color requested. &nbsp;The BEAM analysis is a paraxial animal, and surface sags are ignored in that context, so the line breaks occur on the vertex plane of each surface, not at the actual surface. &nbsp;This is a good way to check whether the real-ray path is a good approximation to the Gaussian beam path – which it should be if you followed the rules when defining your OBG object. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um312.htm" class="topiclink">Section 3.1.2</a></span><span class="f_mine"> for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This option is available only with the PER version of the graphics suite, and only works on a lens with an OBG object.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ PUP …], </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">define a set of rays to be drawn on the picture (see </span><span class="f_mine" style="font-weight: bold;">RAY</span><span class="f_mine">, above).  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ TRACE …]</span></p>
+</td>
+<td style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The format of this input is the same as that used for footprints, and is defined in </span><span class="f_mine" style="text-decoration: underline;"><a href="um84.htm" class="topiclink">section 8.4</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ RED ] ,</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ BLUE ] …</span></p>
+</td>
+<td style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">request that the rays specified following the </span><span class="f_mine" style="font-weight: bold;">PLOT</span><span class="f_mine"> command should be drawn in that color. &nbsp;(This has nothing to do with the wavelength of the ray itself, which is given by the </span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / P }</span><span class="f_mine"> input.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+</td>
+<td style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">signals the program that there are no more rays to add, so it can complete the picture and show it.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The figure below defines the view angles </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">EL</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AZ</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f3.png" width="575" height="282" alt="um7f3" style="width:575px;height:282px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f4.png" width="416" height="306" alt="um7f4" style="width:416px;height:306px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this example switch 20 was OFF, and dummy surfaces show up as well as real ones</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f5.png" width="410" height="304" alt="um7f5" style="width:410px;height:304px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The above picture was made with switch 20 ON, so dummy surfaces do not appear. &nbsp;The plot also does not contain the optional </span><span class="f_mine" style="font-weight: bold;">GREYSCALE</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The sketches below illustrate some of the effects that you can achieve with the input parameters. &nbsp;(These example were all made with switch 60 off, showing the brightness with small dots.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:134px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><img src="um7f6.png" width="106" height="132" alt="um7f6" style="width:106px;height:132px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:134px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PER</span></p>
+</td>
+<td style="vertical-align:top; width:134px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><img src="um7f7.png" width="106" height="132" alt="um7f7" style="width:106px;height:132px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:134px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SOLID, </span><span class="f_mine">no</span><span class="f_mine" style="font-weight: bold;"> GREY</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:134px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><img src="um7f8.png" width="106" height="132" alt="um7f8" style="width:106px;height:132px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:134px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SOLID</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GREY</span></p>
+</td>
+<td style="vertical-align:top; width:134px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><img src="um7f9.png" width="106" height="132" alt="um7f9" style="width:106px;height:132px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:134px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SOLID</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GREY</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GLINT 6 -.3 .45</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:134px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><img src="um7f10.png" width="106" height="132" alt="um7f10" style="width:106px;height:132px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:134px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SOLID</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GREY</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GLINT 6 .3 .45</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">TONE .8 1</span></p>
+</td>
+<td style="vertical-align:top; width:134px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><img src="um7f11.png" width="106" height="131" alt="um7f11" style="width:106px;height:131px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:134px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SOLID</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GREY</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GLINT 6 .3 .45</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">TONE 0 .02 .02 .02</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you specify a lens color other than grey (the default), that color is then the brightest that will show up on the surface. &nbsp;But one usually wants the glint to be white, not in the lens color. &nbsp;To accomplish this, just give a value of 2.0 for TONE coefficient A, which will make it override the color at that spot. &nbsp;This is the default TONE if switch 60 is on.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you wish to send hardcopy output to a pen plotter, which cannot make a continuous greyscale, you should turn switch 60 off. &nbsp;Then the shading is simulated with a stippled pattern, shown below. &nbsp;This output resembles a line drawing executed by an artist.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f28.png" width="450" height="336" alt="um7f28" style="width:450px;height:336px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Print devices that can do continuous greyscales allow you to turn on switch 60, giving a smoother rendition, resembling a photograph:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f27.png" width="657" height="520" alt="um7f27" style="width:657px;height:520px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that if you use this option, the program does not show the dotted surface shape lines, which can be useful. &nbsp;In addition, the TONE parameters produce a </span><span class="f_mine" style="font-style: italic;">lighter </span><span class="f_mine">tone, with the glint shown in white – while the stippled method uses the TONE to </span><span class="f_mine" style="font-style: italic;">darken</span><span class="f_mine"> the surface, showing a black glint. &nbsp;For reference, here is the input file that produced the picture shown above:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">FET X28</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ON 60</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">SOL 20 -20 0 1 99</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">GREY</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">GLINT 1 .4 .6</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">COLOR 100 255 255/1 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">COLOR 200 100 175/13 14</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">PLOT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">RAY 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">PUP 2 1 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">BLUE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">TRA 2 1 0 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">TRA 2 -1 0 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">PUP 2 10 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">RED</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">TRA 2 0 0 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">CUTAWAY</span><span class="f_mine"> option gives an interesting variation of the solid model. &nbsp;Here is a picture of a set of prisms produced in the normal manner:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="prismsolid.png" width="685" height="543" alt="prismsolid" style="width:685px;height:543px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">And here is an example with colors requested and the cutaway option selected:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="prismcut.png" width="598" height="472" alt="prismcut" style="width:598px;height:472px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Lenses can be shown with these options as well:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="lenscut.png" width="684" height="541" alt="lenscut" style="width:684px;height:541px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The CUTAWAY option is disabled for elements that have been assigned a decentered RAO. That option will itself cut the lenses at the sides of the aperture, and it will override the CUTAWAY request for that element.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">PER</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">RPER</span><span class="f_mine"> features draw a circular rim in perspective on each surface, at the aperture given by the CAP listing (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um62.htm#um621" class="topiclink">6.2.1</a></span><span class="f_mine">), except for surfaces having a rectangular RAO specification (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#um3311" class="topiclink">3.3.1.1</a></span><span class="f_mine">), for which rectangular apertures are drawn, or a </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#uap" class="topiclink">UAP</a></span><span class="f_mine"> type 3. &nbsp;Surface sag curves in the XZ and YZ planes are also drawn. &nbsp;Dummy surfaces (surfaces with no index change) not assigned a user-entered aperture, and not the first or last surface to be drawn, may be omitted by turning on switch 20 prior to the </span><span class="f_mine" style="font-weight: bold;">PER</span><span class="f_mine" style="font-family: 'Times New Roman';">,</span><span class="f_mine" style="font-weight: bold;"> RPER,</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">SOLID</span><span class="f_mine"> input (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um29.htm" class="topiclink">2.9</a></span><span class="f_mine">). &nbsp;Other useful options are the NODRAW and NORAY options (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um3312.htm" class="topiclink">3.3.1.2</a></span><span class="f_mine">). &nbsp;If switch 39 is on and the lens has </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um78.htm#efile" class="topiclink">EFILE</a></span><span class="f_mine"> data assigned, then those data will apply and the entered CAO and RAO (if any) will not control the element dimensions. &nbsp;(Some combinations of EFILE and RAO data are, however, honored; see </span><span class="f_mine" style="text-decoration: underline;"><a href="um78.htm" class="topiclink">Section 7.8</a></span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RPER can optionally draw the wire-frame picture in </span><span class="f_mine" style="text-decoration: underline;"><a href="rperbar.htm" class="topiclink">stereo</a></span><span class="f_mine">, either with red-blue anaglyph glasses or as a side-by-side view shown with slightly different angles.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The rim that is drawn at each surface is intended to show the element as it would appear to an external observer, as opposed to the cross-section view obtained with the Y-Z profile program </span><span class="f_mine" style="font-weight: bold;">DWG</span><span class="f_mine">. &nbsp;When the lens is viewed from a compound angle these rims add to the realism of the picture, and I have occasionally even created stereo pairs of complicated systems, to better visualize the tilts and decenters involved. &nbsp;For cases when a cross-section drawing is preferred, the rims may be eliminated by turning switch 18 ON prior to the </span><span class="f_mine" style="font-weight: bold;">PER</span><span class="f_mine"> command (and specifying view angles of 0, 0). &nbsp;This option works for </span><span class="f_mine" style="font-weight: bold;">PER</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">RPER</span><span class="f_mine">, but not for </span><span class="f_mine" style="font-weight: bold;">SOLID</span><span class="f_mine">. &nbsp;An example is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f12.png" width="406" height="306" alt="um7f12" style="width:406px;height:306px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The ray paths resulting from </span><span class="f_mine" style="font-weight: bold;">RAY</span><span class="f_mine"> input are not checked for vignetting in these features, although ray failures are detected. &nbsp;If only rays in the vignetted pupil are to be shown, the </span><span class="f_mine" style="font-weight: bold;">PUP</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">TRACE</span><span class="f_mine"> commands should be used to create the ray pattern, since these options check each ray for vignetting.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is an example of a lens with an obscured aperture, where we will make a drawing showing the Y-Z profile and a set of rays.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ON 18</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">we do not want rims at this angle</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PER</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">calls PER with angles 0, 0</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PLOT</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">draws the lens</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PUP 2 1 25</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies a 1 X 25 rayset</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TRACE 2 0 0 25</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">executes the trace</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RAY 2</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Draws the optical axis, </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> a default. &nbsp;This ray is drawn even though the lens has a CAI on surface 2, since the </span><span class="f_mine" style="font-weight: bold;">RAY</span><span class="f_mine"> option ignores apertures.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">picture all done</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The results are shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f13.png" width="398" height="295" alt="um7f13" style="width:398px;height:295px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You are advised that the program </span><span class="f_mine" style="font-weight: bold;">SOLID</span><span class="f_mine"> is more complicated than </span><span class="f_mine" style="font-weight: bold;">PER</span><span class="f_mine">, and takes much longer to run. &nbsp;The drawing contains 630,000 pixels, and each surface must be sampled at small intervals. &nbsp;For best results the input should first be entered into a MACro using the </span><span class="f_mine" style="font-weight: bold;">PER</span><span class="f_mine"> command, to test the size and angles, and then changed to </span><span class="f_mine" style="font-weight: bold;">SOLID</span><span class="f_mine"> if these are satisfactory. &nbsp;You can also set up the angles you want in PAD, and then click the button labeled “PAD” in the MPE dialog to transfer those angles. &nbsp;A much faster version of SOLID is available as </span><span class="f_mine" style="font-weight: bold;">RSOLID</span><span class="f_mine">, described </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#rsolid" class="topiclink">below</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In order to speed up the </span><span class="f_mine" style="font-weight: bold;">SOLID</span><span class="f_mine"> model processing, each surface is first sampled rather coarsely, and if all four corners of a sample panel are hidden behind other surfaces, the entire sample is assumed hidden and is discarded. &nbsp;If your picture shows missing sections, you can defeat this presampling by turning on </span><span class="f_mine" style="font-weight: bold;">switch 73</span><span class="f_mine">. &nbsp;The picture will then take longer to process, but there should be no missing pieces. &nbsp;You should also select this option if your lens contains surfaces that extend close to the hemisphere point and the surface greyscale shows conspicuous panels or anomalies at the edge. &nbsp;The example below shows a system that looks better with switch 73 turned on (shown on the right). &nbsp;(The RSOLID option always uses the finer sampling, regardless of the switch setting, since that version does the modeling calculation in the graphics card rather than the CPU and is much faster as a result.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f31.png" width="270" height="457" alt="um7f31" style="width:270px;height:457px;border:none"><span class="f_mine">  </span><img src="um7f32.png" width="276" height="452" alt="um7f32" style="width:276px;height:452px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="hplot"></a><span class="f_mine">It is often useful to </span><span class="f_mine" style="font-weight: bold;">superimpose</span><span class="f_mine"> the perspective drawings of two different lens systems. &nbsp;That way you can show both paths of a beamsplitter or the geometry of two systems that utilize a common window, share lens elements, and so on. &nbsp;Seeing them both in perspective will help to identify mechanical interferences, and it makes a fine picture to show a customer.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The sequence for doing this is as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">HPLOT [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(hold plot)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ PER / RPER / SOLID / RSOLID ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">…</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">APLOT [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> [ HPLOT ] ] &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(add to previous plot)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ PER / RPER / SOLID / RSOLID ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">…</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Some cautions are in order.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;You specify which surfaces are to be coincident with the optional </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> entry on the HPLOT and APLOT commands. &nbsp;If, for example, the two systems are folded together at some point and then exit through a common window, you would give the surface number of that window on those commands. &nbsp;The numbers do not have to be the same, and the default is surface 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;The scale, offset and angle data, if any, are taken from the first picture only. &nbsp;The second drawing will ignore these data, giving the two pictures the same scale. &nbsp;Using the default scale and offset is generally successful. &nbsp;If the first picture requests the “V” orientation (light coming in from the top) then the second must also. &nbsp;The UNITS of the two systems should be the same.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;Raypaths are shown in both systems according to the entered data, but they are rendered differently for the two systems. &nbsp;Normally, ray paths are shown in vector form (a continuous line) while lens surfaces and edges are shown as pixels (small dots). &nbsp;But the raypaths for the first drawing must also be rendered as pixels, since only then can they be obscured by the elements of the second system, which is drawn later. &nbsp;The result is that the first raypaths show up as slightly irregular lines, while they are smooth in the second system. &nbsp;Consider that a feature. &nbsp;Also, if you specify ray paths in the first system in yellow or white, they will indeed be that color – even if shown on a white background, where they tend to disappear. &nbsp;Raypaths for the final drawing are shown as vectors, and can be in any color, since the program renders them as black in those cases if the background is white.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">4. &nbsp;You may request a greyscale on combined SOLID drawings – and the results will be somewhat better if switch 60 is on (giving a continuous greyscale rather than stippling.) &nbsp;It is best to request a greyscale on </span><span class="f_mine" style="font-style: italic;">both</span><span class="f_mine"> systems in that case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">5. &nbsp;Needless to say, both drawings must be of the same kind: you could not make a PER for the first and a SOLID for the second, for example.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">6. &nbsp;In the event you wish to combine more than just two drawings, you must add </span><span class="f_mine" style="font-weight: bold;">HPLOT</span><span class="f_mine"> in word three of the APLOT line. &nbsp;The program will then add the next picture but will not yet display it. &nbsp;Additional APLOT ... input may then be entered for each additional picture to be combined with the previous ones. &nbsp;The final picture must </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> be declared HPLOT; when it is added, the combination is then displayed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Two kinds of </span><span class="f_mine" style="font-weight: bold;">stereo drawings</span><span class="f_mine"> can be made using RPER. &nbsp;Once the display is on the screen, click on the button </span><img src="stereotwo.png" width="24" height="23" alt="stereotwo" style="width:24px;height:23px;border:none"><span class="f_mine"> to display two views side by side, drawn with a 5-degree tilt difference between them. &nbsp;You will probably have to zoom the picture down to separate the views, if they overlap initially. &nbsp;If you can fuse the two views by diverging your eyes to infinity while focusing on the screen, you will see them in 3-D. &nbsp;This view can be sent to a printer and works well either with a viewer, if you have one, or by fusing the views. &nbsp;The default separation on the hardcopy is 2 inches, but you can alter this with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">SSEP </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SEPARATION.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is an example of the display that is so produced.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="rperstereotwo.png" width="510" height="386" alt="rperstereotwo" style="width:510px;height:386px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Another toolbar button, </span><img src="stereo.png" width="26" height="24" alt="stereo" style="width:26px;height:24px;border:none"><span class="f_mine">, will draw the display as a red-blue anaglyph drawing that can be viewed in 3-D with colored glasses. &nbsp;This view can be larger than the stereogram view, but does not show the ray colors that you have requested, and does not work very well on paper hardcopy because the contrast is reduced by the glasses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you want to see the paths of rays inside of lenses or prisms, add the </span><span class="f_mine" style="font-weight: bold;">HRAYS</span><span class="f_mine"> request to the input, before the PLOT directive. &nbsp;They will then be shown as illustrated below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f41.png" width="633" height="474" alt="um7f41" style="width:633px;height:474px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="rsolid"></a><span class="f_mine" style="font-weight: bold;">Rotating RSOLID drawings</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The SOLID drawing feature also has a rotating option, using the RSOLID command. &nbsp;Unlike the normal SOLID version, which calculates the entire picture and implements the hidden-surface removal in software, the rotating version utilizes the OpenGL capabilities of your graphics card, which does much the same thing with dedicated hardware on the card and is many times faster than the software version. &nbsp;The GREYSCALE option is automatic in this case, and the HRAYS and CUTAWAY options are honored, if entered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You probably should not request rays in the colors yellow or white with this feature, however. &nbsp;SOLID is smart enough to show them in black if you select a white background, whereas RSOLID has already sent the ray color data to the graphics card by the time you click on the background buttons. &nbsp;So white rays are indeed white, and will be invisible if the background is also white.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program opens a small control panel where you can select a white or black background, rotate in jumps of 90 degrees, increase or decrease the drawing size, or restore the original view angle and size. &nbsp;There are also buttons to make a bitmap copy, which goes to the Windows clipboard, and another to print the window. &nbsp;The latter also makes a bitmap copy, but then automatically opens a new graphics window, pastes the picture there, and then prints that window. &nbsp;Printed copy comes out better if you have selected a white background, since the thin lines showing ray paths do not show up with inkjet printers, which bleed the background too much. &nbsp;By default, the picture is oriented horizontally in the graphics window. &nbsp;If you want the latter to better fill the printed page, turn on switch 81 before creating the bitmap copy, or click the button that shows a printer turned 90 degrees. &nbsp;This rotates the picture the long way. &nbsp;In the event that you wish to add text annotation to the pasted picture, and the picture has been rotated, be sure to click the option to rotate the text by 90 degrees when you are in the text editor, so they line up the same way.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are shortcuts to some of these manipulations: you may rotate the picture by dragging with the left mouse button, and pan by dragging with the right button. &nbsp;Enlarge the picture with &lt;Shift&gt;+right click, and reduce the size with &lt;Ctrl&gt;&lt;Shift&gt;+right click. &nbsp;The mouse wheel will also zoom in and out. &nbsp;After you have clicked and dragged in the drawing window, you can hold down the spacebar to slowly rotate the picture about the rendered Y-axis. &nbsp;&lt;Shift&gt;+spacebar will rotate about the rendered X-axis. &nbsp;If you requested angles of (0,0) with the RSOLID command, those rotations will occur about the lens Y axis in the first case, and about the lens Z-axis in the second.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may wish to move the button panel off the screen before requesting the bitmap or print options – since it will show up in your picture otherwise.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The bitmap copy may be pasted into any graphics program that can accept those files, including a SYNOPSYS graphics window. &nbsp;Then you can annotate and print the picture if you wish. &nbsp;A larger RSOLID window contains more pixels and will give a sharper bitmap copy, so increase the window size as much as possible before making the copy.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An example RSOLID plot is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f42.png" width="786" height="579" alt="um7f42" style="width:786px;height:579px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input that created this file is as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">FET X28</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">RSOLID 10 30 1.6 0 123 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">HRAYS </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">COLOR 255 0 0 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">1 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">COLOR 100 200 200</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">3 4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">COLOR 200 200 1  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">5 6</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">COLOR 255 255 255 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">7 8</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">COLOR 0 255 255</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">10 11 12</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">COLOR 200 50 101</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">13 14</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">PLOT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">RED &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">RAY P 0 0 0 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">PUPIL 2 1 11 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">BLUE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">TRACE P -1 0 11 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">PUPIL 2 1 11 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">LIME &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">TRACE P 1 0 11 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is possible to control the overall brightness level of the rendering with a data value that is user adjustable. &nbsp;To do so, enter the AI sentence</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SFLAGS 118 = </span><span class="f_mine" style="text-decoration: underline;">value</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default value is 0.5. &nbsp;A value of 0.6 will be brighter, and 0.4 will be darker.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="dsolid"></a><span class="f_mine">Yet another feature of this set is the </span><span class="f_mine" style="font-weight: bold;">DSOLID</span><span class="f_mine"> command, which works much like RSOLID except that it produces no onscreen display. &nbsp;Instead, the solid model is rendered in dxf format and saved as a disk file. &nbsp;The program will prompt you for a filename, and after this file is created you can open it with many common design programs such as AutoCAD. The program attempts to match any requested element colors as well as possible. &nbsp;A perfect match is not often possible, however, since SYNOPSYS can render in about 16 million colors, while dxf supports only 255. &nbsp;(A wire-frame dxf conversion can be produced by RPER. &nbsp;This is created more quickly than the DSOLID rendering, but then you only see lens edges, not the surfaces.) &nbsp;The orientation of the RPER dxf file is whatever is currently shown in the window, and you can adjust it as you see fit before making the dxf file. &nbsp;The orientation of DSOLID, on the other hand, is given by the original input data. &nbsp;The DSOLID model is a 2D projection of the lens. &nbsp;You can make a wire-frame model that can be rotated and exported, with the IGES button on the RPER display.</span></p>
+<p>&nbsp;</p>
+<p><span class="f_mine" style="font-size: 16pt; font-weight: bold;">STEP files</span></p>
+<p>&nbsp;</p>
+<p><a name="stf"></a><span class="f_mine">Some users prefer a </span><span class="f_mine" style="font-weight: bold;">STEP</span><span class="f_mine"> file, which is yet another protocol for describing solid objects. &nbsp;That format was never designed to model lenses, however, being more suitable for gears and circuit boards -- and it does not model lenses efficiently or gracefully. &nbsp;Different vendors have approached this limitation in different ways, and all have shortcomings; the feature in SYNOPSYS is no exception. &nbsp;It is implemented with the </span><span class="f_mine" style="font-weight: bold;">STFILE</span><span class="f_mine"> command, with the format described above.</span></p>
+<p>&nbsp;</p>
+<p><span class="f_mine">One limitation is that the native shapes available in the STEP protocol cannot model most of the 45+ different kinds of surfaces available in SYNOPSYS.  </span></p>
+<p>&nbsp;</p>
+<p><span class="f_mine">To circumvent these difficulties, the STEP feature in SYNOPSYS has to take a different approach. &nbsp;If a lens element is bounded by spherical surfaces with rotationally symmetric apertures, the program models it with the native shape in STEP. &nbsp;Rotationally symmetric aspheric surfaces with circular, centered apertures are cast into a NURBS surface of grid 9 x 9 using</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss15" class="topiclink">USS type 15.</a></span><span class="f_mine"> &nbsp;The STEP protocol can model this surface type -- although the accuracy of the recasting may not be perfect. &nbsp;To test whether the asphere is symmetric, the program compares the values of the surface sag at an array of points, and if the departures from strict symmetry do not exceed 0.001 mm, the shape is deemed symmetric enough for the purposes of designing a lens cell.</span></p>
+<p>&nbsp;</p>
+<p><span class="f_mine">The program then runs the optimization routine, varying the Z-component of each of the control points and targeting the sag at each point to the nominal value. &nbsp;The resulting value of the merit function is a good indication of how closely the NURBS surface matches the original asphere. &nbsp;If the number is small, the errors are also probably too small to be important when designing the cell. &nbsp;If they are not small (and this value depends on the lens units), it is wise to recast the surface yourself beforehand, with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="5_57_rns.htm" class="topiclink">RNS</a></span><span class="f_mine">, since then you can examine the results and see if the performance is seriously altered. &nbsp;If the 9 x 9 recasting to surface type USS 15 is not accurate enough, then try the RXN model, which allows up to 20 x 20 control points.</span></p>
+<p>&nbsp;</p>
+<p><span class="f_mine">Anything more complicated, such as non-symmetric aspherics, decentered apertures, wedges, etc., requires a different model. &nbsp;In this case, the program partitions the surface into a rectangular grid of panels and creates a model of each panel in turn. &nbsp;Edges and bevels are similarly partitioned into small panels. &nbsp;The result is that all shapes are accurately modeled at the corners of each panel, but appear as flat plates in between. &nbsp;If the goal is to open the lens model in a CAD program so you can fit a lens cell around it, this should also be adequate.</span></p>
+<p>&nbsp;</p>
+<p><span class="f_mine">Now for the shortcomings: &nbsp;This last approach is extremely inefficient. &nbsp;Each panel, of which there are hundreds, requires 39 separate lines in the step file, and the lines are verbose, so the file tends to be huge. &nbsp;For example, here is a lens as displayed by RSOLID.</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0471.png" width="748" height="396" alt="clip0471" style="width:748px;height:396px;border:none"></p>
+<p>&nbsp;</p>
+<p><span class="f_mine">This appears to be a smooth rendition, but really uses a great many partitions, each so small they are not readily apparent; the number of panels on each surface varies depending on the shape, and is usually between 40 and 200. &nbsp;Now look at the STFILE model below. &nbsp;To keep the file size reasonable, that program sets the default partition to 19, and the surfaces are therefore not as smooth. &nbsp;The file size of this picture is 4.44 MB. &nbsp;Only the first element uses the native shapes; the others are all rendered with panels.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="clip0469.png" width="739" height="422" alt="clip0469" style="width:739px;height:422px;border:none"></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">Since that size file may be too large for some users, especially for sending to an ME via email, we recommend reducing the partition number to less than this with the SPART directive. The size of file of the picture below is only 3.04 MB, and although the surfaces are not as smooth, the vertices are all in the right place, so it should be enough for the ME to work with. &nbsp;If you enlarge this model and examine the edges of the lenses, you see tiny cracks here and there, which is an artifact of the partitioning stage. &nbsp;The elements are therefore not strictly solid models; instead, you get a collection of small panels -- which fit well but not perfectly. &nbsp;This may or may not be a drawback for some users. &nbsp;You can also force the program to model all elements with panels, for cases when the user's CAD program does not render the simpler shapes correctly. &nbsp;To do so, use the </span><span class="f_mine" style="font-weight: bold;">PANELS</span><span class="f_mine"> option, described above.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0470.png" width="773" height="479" alt="clip0470" style="width:773px;height:479px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_ImageCaption" style="font-size: 11pt; font-weight: normal;">Here is the input that created this picture:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">STFILE 0 0 0 0 0 &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">SPART 9 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PLOT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">RED &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">RAY P 0 0 0 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUPIL 2 1 20 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">BLUE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE P 1 0 20 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note also that this version of the step file converter does not support color changes &nbsp;We encourage users to explore this feature and let us know if they identify improvements or find bugs.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Lastly, be aware that the default step file conversion by default does not draw dummy surfaces, unlike the other rendering options such as PER and SOLID, &nbsp;But dummy surfaces declared </span><span class="f_mine" style="text-decoration: underline;"><a href="um3312.htm#dummy_real" class="topiclink">REAL</a></span><span class="f_mine"> in the RLE or CHG file will also be rendered in the step file.</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um73.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

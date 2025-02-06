@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>HIDD_PUPILWIZARD</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="MPW,Wizard,Wizard pupil" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-weight: bold;">The Pupil Wizard</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The Pupil Wizard can be found in the top menubar under “Wizard”, and may be accessed via the command </span><span class="f_footnotetext" style="font-weight: bold;">MPW </span><span class="f_footnotetext">or with a toolbar button in the WorkSheet</span><span class="f_footnotetext">. &nbsp;This Wizard will help you to set up the object, the stop surface and aperture, and control the paraxial and real entrance pupil definitions.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Another feature, the Object Wizard, </span><span class="f_footnotetext" style="font-weight: bold;">MOW</span><span class="f_footnotetext">, can do much the same thing but is organized differently. &nbsp;You are encouraged to try both MPW and MOW and select whichever best suits your needs.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The Wizard works best if your lens already has all of the surface data. &nbsp;Then it will let you select from the more exotic options that you may need.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">This dialog is intended to be self-explanatory. &nbsp;It differs from the </span><span class="f_footnotetext" style="text-decoration: underline;"><a href="hidd_sys.htm#sys" class="topiclink">SYS</a></span><span class="f_footnotetext"> dialog by having a “Cancel” button. &nbsp;This button will discard any changes you make while in the dialog (except for the VFIELD option, which opens its own dialog with its own Cancel button, and changing the stop surface, which is done immediately.). &nbsp;The SYS dialog, on the other hand, is more like a spreadsheet, and any changes you type are </span><span class="f_footnotetext" style="font-style: italic;">immediately</span><span class="f_footnotetext"> entered into the lens and may in some cases alter the data elsewhere in the dialog.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">You can see an echo of the lens changes that are generated by this Wizard by placing switch 23 ON.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The Wizard will turn off </span><span class="f_footnotetext" style="text-decoration: underline;"><a href="um32.htm#xpxt" class="topiclink">XPXT</a></span><span class="f_footnotetext"> mode, if it is on, if the pupil is delared circular and there is no skew field point defined. &nbsp;If you really want this option to be on, you must reset it yourself after running the Wizard.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">For a general discussion of stops and pupils, see </span><span class="f_footnotetext" style="text-decoration: underline;"><a href="um26.htm" class="topiclink">Section 2.6</a></span><span class="f_footnotetext" style="font-family: 'Times New Roman';">.</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

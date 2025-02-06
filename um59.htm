@@ -1,0 +1,504 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um59</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="THERMAL soak calculation" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;">&nbsp;</p>
+<p><a name="therm"></a><span style="font-size: 14pt;">5.9 Thermal Soak Program &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-decoration: underline;"><a href="um510.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um58.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The RLE lens file permits optional input of the form TEMPERATURE </span><span class="f_mine" style="text-decoration: underline;">TEMP</span><span class="f_mine">, which causes the indices of refraction to be adjusted from the catalog values in accordance with thermal-index data contained within the catalog or entered explicitly by the user. &nbsp;That feature therefore models the index of the lenses at the entered temperature – but does not affect any other lens data, such as radii, thicknesses, and airspaces. &nbsp;This is where you give the temperature at which the lens will be manufactured if it is other than the default 20 degrees C. &nbsp;The lens dimensions you enter will apply to the lens at that temperature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you need to calculate how the dimensions and performance of a lens will </span><span class="f_mine" style="font-style: italic;">change</span><span class="f_mine"> as the temperature changes, and include the effect of mechanical expansion in the calculation, another feature, </span><span class="f_mine" style="font-weight: bold;">THERM</span><span class="f_mine">, is available, described in this section. &nbsp;There is also a very simple way to athermalize some systems using the </span><span class="f_mine" style="text-decoration: underline;"><a href="hidd_select_gtgraph.htm#athermal" class="topiclink">glass map display</a></span><span class="f_mine">. &nbsp;Click that link to read about it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The general case, where the lens experiences thermal fluxes and temperature gradients, is beyond the scope of SYNOPSYS. &nbsp;That kind of analysis requires taking into account the conductivity and emissivity of the lenses and the cell. &nbsp;A simple form of that analysis can be performed by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um14_2.htm" class="topiclink">ENM</a></span><span class="f_mine">, which accepts polynomial coefficients describing surface and index departures from nominal, as you might find if lenses are hotter on one side than on the other. &nbsp;See that link for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The simpler case, where the lens acquires a new, uniform, temperature can be examined with THERM. &nbsp;The program can either change the current lens in accordance with the coefficients and the new temperature, or it can create </span><span class="f_mine" style="font-style: italic;">shadowed</span><span class="f_mine"> versions of the current lens, in different configurations, that reflect the changes due to thermal effects – and which then automatically follow the current lens whenever that lens is changed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature will only work properly if every refracting material in the lens has been assigned thermal-index coefficients. &nbsp;All of the preferred glasses in the Schott and Ohara catalogs have them, and some in the U catalog as well. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm#dndt" class="topiclink">Section 3.3.4</a></span><span class="f_mine"> for a discussion of the options. &nbsp;There are several ways to verify that the materials are suitably defined. &nbsp;One is to type PGA ALL and look for any for which the program says there are no coefficients.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note also that lenses assigned a glass model (GLM) index have no thermal-index data, since that property varies widely between nearby glass types and is a function of wavelength as well -- and cannot reasonably be modeled. &nbsp;So use the thermal program only when real glasses are present in the lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A simpler way is to run the command </span><span class="f_mine" style="font-weight: bold;">THERM TEST</span><span class="f_mine">, which is a standalone command that does not require the rest of the normal THERM input file. &nbsp;This will list all materials lacking the required coefficients.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Every glass in the glass tables that has assigned dndt data also has the CTE, or alpha, of that material, so you do not need to enter those data in the input file. &nbsp;Lenses assigned an index pickup (PIN) will pick up the CTE from the pickup target as well. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To operate this program, each radius, thickness, or airspace is assigned an expansion coefficient, either automatically as mentioned above, or by the user. &nbsp;Index coefficients are </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> entered with the THERM file, since the RLE file and glass tables already contain all the needed data. &nbsp;Airspaces are automatically assigned the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#alpha" class="topiclink">ALPHA</a></span><span class="f_mine"> value that was entered in the lens file, if any. &nbsp;A new temperature is then input, and the program removes pickups and solves from the altered parameters and calculates the new dimensions. &nbsp;Input data are of the form shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">THERM [ TEST ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">COE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CNB</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">data</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">; expansion coefficients defined here</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">COE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CNB</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">data</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">…</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">RCHANGE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CNB</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">; radii will use this coefficient</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> …</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">TCHANGE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CNB</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">; thicknesses will use this one</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> …</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">DECENTER </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CNB</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">; and decenters will use this</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> …</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> { TLEFT / TRIGHT / TNULL } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">; specify mounting scheme here</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> TEMP </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TEMPERATURE</span><span class="f_mine" style="font-weight: bold;"> /</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ATS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TEMPERATURE</span><span class="f_mine" style="font-weight: bold;"> JCONF/ … &nbsp;/ END / &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">; this configuration will shadow</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">TEST }</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Linear dimensions change with temperature according to the equation</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">Q' = Q (1 + </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&alpha; &Delta;</span><span class="f_mine" style="font-weight: bold;">T)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-weight: bold;">Q</span><span class="f_mine"> is the parameter undergoing change, and </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&Delta;</span><span class="f_mine">T is the temperature change. &nbsp;The quantity </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&alpha;</span><span class="f_mine"> is the change per degree per lens unit.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CNB</span><span class="f_mine"> is an identifying integer from 1 to 50. &nbsp;You can enter a number for </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&alpha;</span><span class="f_mine"> on this line, or the name of one of the materials in the following list.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">data</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">material</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CTE</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">A5086</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Aluminum alloy</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">23.7E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">A6061</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; “</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">23.4E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">BECU</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Beryllium copper</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">18.0E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">BER</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Beryllium</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">11.4E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">IRON</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Gray cast iron</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">10.8E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">FCBRASS</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Free-cutting brass</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">20.5E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">BRASS</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Yellow brass</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">20.3E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">COPPER</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Copper</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">17.0E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">FUSILICA</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Fused silica, quartz</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.55E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">GRANITE</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Optical bench material</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">6.3E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">INVAR</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Low-expansion alloy</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.2E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">SAPPHIRE</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Available in rods</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">4.0E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">S304</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Stainless steel alloy</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">17.3E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">S316</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; “</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">16.0E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">S440</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; “</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">10.2E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">ZERODUR</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Low-expansion glass</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">0.05E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">PYREX</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Pyrex</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">4.2E-6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">ACRYLIC</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Plastic</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">6.74E-5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">STYRENE</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Plastic</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">7.0E-5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">SAN</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Plastic</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">6.6E-5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">POLYCARBONATE</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Plastic</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">6.75E-5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">NYLON</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Nylon</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">6.8E-5</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When all the necessary coefficient values have been entered, they are assigned to individual surfaces by specifying </span><span class="f_mine" style="font-weight: bold;">RCHANGE</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">TCHANGE</span><span class="f_mine">, and the </span><span class="f_mine" style="text-decoration: underline;">CNB</span><span class="f_mine"> that applies. &nbsp;On the following line(s), the surface numbers whose RD or TH have the specified </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&alpha;</span><span class="f_mine"> are listed.  </span><span class="f_mine" style="font-style: italic;">Relative</span><span class="f_mine"> surface decenters are recomputed with the coefficients assigned to DECENTER, but GLOBAL and LOCAL dimensions are not altered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the input file ends with the word </span><span class="f_mine" style="font-weight: bold;">TEST</span><span class="f_mine">, the program prints a table giving the coefficients of each parameter to be altered, and specifies the type of dndt data that apply to each element. &nbsp;In this case it does not make any changes to the lens. &nbsp;This listing is more complete than the simpler THERM TEST version, which only lists problems.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The desired new temperature is entered with the </span><span class="f_mine" style="font-weight: bold;">TEMP</span><span class="f_mine"> line. &nbsp;It must be in degrees Celsius.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program automatically puts the system at the requested temperature and recalculates those mechanical dimensions that were assigned a coefficient. &nbsp;Index values are recomputed at the new temperature according to the current dt/dt coefficients. &nbsp;(Note that if your lens contains a material that is not in the libraries or does not have coefficients assigned – and many of the older glasses do not – you must enter the index coefficients yourself in the </span><span class="f_mine" style="text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE file</a></span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Not all surface shapes can be altered by THERM at present. &nbsp;If your lens contains one that cannot, you will see an error message. &nbsp;Otherwise the radius is scaled up or down in accordance with the assigned coefficient, and aspheric coefficients are scaled by the power appropriate to each term.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Element</span><span class="f_mine" style="font-weight: bold;"> thicknesses</span><span class="f_mine"> are altered according to the entered </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CNB</span><span class="f_mine">, or according to the CTE in the glass table, if it contains coefficients for that glass type. &nbsp;Airspace changes are more complicated. &nbsp;If the lens file has been assigned an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#alpha" class="topiclink">ALPHA</a></span><span class="f_mine"> value, the expansion coefficient of each airspace is assumed to take that value, unless a different value is entered for that surface in the THERM input. &nbsp;If the final airspace in FOCAL systems has a thickness solve, it is </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> automatically assigned a coefficient, however, so that the solve will automatically be honored. &nbsp;You must either remove the solve, or assign a coefficient yourself if the lens cannot be refocused with temperature.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The situation for ZFILE zoom lenses is more complicated, as explained in </span><span class="f_mine" style="text-decoration: underline;"><a href="um1071.htm#zfileshadow" class="topiclink">Section10.7.1</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The airspaces themselves are altered according to one of three rules, which depend on the user input TLEFT, TRIGHT, and TNULL. &nbsp;These data describe how a change in a given thickness or airspace due to thermal expansion will affect other separations in the lens. &nbsp;Briefly, if a surface J is assigned a TLEFT parameter of </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine">, then any change in that TH causes a change of the opposite sign in surface J - </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine">. &nbsp;If the assignment is TRIGHT, then the affected surface will be J + </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine">. &nbsp;Thus an increase in one place causes a decrease elsewhere. &nbsp;There is a further complication, however: if the element to the left of an airspace is assigned a TRIGHT designation, then the program assumes that the lens mount design has a reference seat to the left of the element. &nbsp;In this case, the reference airspace dimension that is to be altered is not just the TH assigned to the airspace; but extends all the way to that seat. (Here, </span><span class="f_mine" style="font-style: italic;">left</span><span class="f_mine"> always means a lower-numbered surface, regardless of which way the light is actually going). &nbsp;Similarly, if the element to the right of the airspace is assigned a TLEFT, then the lens seat is assumed to be on the right of that element and the reference dimension goes to that seat. &nbsp;When these cases do not apply (i.e., TNULL), the program takes the reference dimension to be the actual TH altered by the surface sag values on the sides of the elements enclosing the airspace. &nbsp;Thus, the dimension that is expanded by a thermal change extends across the spacer separating the elements at the clear aperture, not at the vertices, in that case. &nbsp;This geometry is explained in the figure below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="therm1.png" width="748" height="502" alt="therm1" style="width:748px;height:502px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the above figure, the top lens mounting design requires the default spacing option, which is TNULL. &nbsp;Here, if lens A expands, point a and everything to the right moves to the right. &nbsp;So there is no compensation elsewhere, and each thickness and airspace expands independently of all of the others. &nbsp;The airspace is altered by the amount that distance (ab) changes, since that is the presumed dimension of the spacer. &nbsp;The inner diameter of this spacer is taken to be at the CAO of the element on each end, and the length is given by the nominal TH plus the sag distances at the two lenses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The lower mounting scheme is different. &nbsp;If lens C expands, point c stays where it was, and the airspace between the elements must </span><span class="f_mine" style="font-style: italic;">decrease</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span><span class="f_mine"> &nbsp;Similarly, if lens D expands, the airspace between them again must decrease, since it is mounted with a flange to its right and can only expand to the left. &nbsp;Of course the airspace will expand as well, but the distance that is affected by this expansion is (cd), rather than the nominal airspace. &nbsp;The change in this distance with temperature is then </span><span class="f_mine" style="font-style: italic;">applied</span><span class="f_mine"> to the TH. &nbsp;In this example, there are then three separate changes that are added together to find the effective airspace at the new temperature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In all of these examples, we assume that a single shoulder on one side of the lens controls its position. &nbsp;In practice there is usually a retaining ring of some kind on the other side, but this can easily overconstrain the lens. &nbsp;If the lens mount expands at a higher rate than the element itself, then the element is underconstrained and will be loose in its cell. &nbsp;If the temperature falls, the cell may be too small for the element, and this will cause stress in the lens, strain in the cell, and an index nonuniformity according to the stress-index coefficient. &nbsp;SYNOPSYS does not consider any of these complications, and you are advised to design your retaining rings with enough flexure to avoid this situation.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There is one more complication. &nbsp;As a spacer expands or contracts with temperature, the point at which it contacts the lens surface will change. &nbsp;This too affects the resulting airspace, since the sag of the surface differs at the new contact point. &nbsp;In addition, the sag is calculated at the new aperture for the new radius, which also has changed. &nbsp;The thickness adjustments described above automatically take these effects into account as well, for surfaces that have been assigned a hard CAO. &nbsp;That value specifies the aperture at the surface where the nominal spacer is in contact.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A rather complicated example is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="therm2.png" width="873" height="586" alt="therm2" style="width:873px;height:586px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here, we want to athermalize a system by combining two materials with different expansion coefficients. &nbsp;Let us assume that P is a reference point, and point Q expands away from P with a temperature increase according to the properties of aluminum. &nbsp;From Q we want to go to the left with a plastic material, which has a higher expansion coefficient, and mount two lenses as shown. &nbsp;Light comes in from the left.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Even this complicated system is not hard to set up, since the program does much of the work for you. &nbsp;The procedure is to model all of the points where the expansion coefficient changes, and assign the CTE to each where needed. &nbsp;Then couple each airspace where necessary to the location where an expansion leads to a corresponding contraction.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Thus, in the system we first put surfaces at P, Q, R, and S (which is a lens) in that order. &nbsp;Assign the coefficient of aluminum to P, and that of polycarbonate to Q and to the spacer between the elements. &nbsp;Assign TLEFT 1 to the surface at S, TLEFT 2 to the airspace between the elements, and TLEFT 3 to element F, first side, thickness. &nbsp;Do not assign anything to thickness (RS). &nbsp;In other words, we let the polycarbonate expand things from Q to R, and let the lens thicknesses and spacings control things from R to S. &nbsp;This describes the physical model.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now look at what happens when the temperature goes up:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;Q moves to the right</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;R moves to the left relative to Q</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;The thickness of E increases, and (RS) is reduced by the same amount (because of the TLEFT assignment) . &nbsp;But here, (RS) is a </span><span class="f_mine" style="font-style: italic;">negative</span><span class="f_mine"> number, so the decrease actually moves lens E away from R. &nbsp;(Even though R is physically to the right of E, numerically it is to the </span><span class="f_mine" style="font-style: italic;">left</span><span class="f_mine">, and so the TLEFT applies here.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">4. &nbsp;The airspace between E and F is altered by the amount that distance D changes. &nbsp;This distance is greater than the actual airspace because the TLEFT on lens F tells the program that the mounting flange is on the right side of the element, at the CAO of the second side, and it is the total distance that must expand with temperature. &nbsp;(RS) is given a compensating change by this expansion because of the TLEFT on the airspace.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">5. &nbsp;Element F expands, and (RS) is increased (made more negative) by the TLEFT on that element.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this way, the two elements and the spacer have expanded to the left, while point Q went to the right. &nbsp;By assigning the proper materials and distances in designs like this, one in principle can produce a lens whose focal point does not change with temperature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Thermal Shadowing</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="shadow"></a><span class="f_mine">The THERM input file is terminated in one of three ways: by the </span><span class="f_mine" style="font-weight: bold;">TEST</span><span class="f_mine"> directive, which lists a table of coefficients so you can check if everything is proper, but does not change the lens; by the new temperature directive </span><span class="f_mine" style="font-weight: bold;">TEMPERATURE</span><span class="f_mine">, which changes the current lens; or by the input </span><span class="f_mine" style="font-weight: bold;">ATS</span><span class="f_mine">, which activates </span><span class="f_mine" style="font-style: italic;">thermal shadowing</span><span class="f_mine">. &nbsp;The latter feature requires that the current lens be in ACON 1, and it places the perturbed lens into the specified configuration(s) automatically. &nbsp;This is a true shadow: if you change any of the parameters in ACON 1 that were assigned a thermal coefficient, the lenses in the other ACONs change as well in accordance with the thermal coefficients. &nbsp;Thus you may run a multiconfiguration optimization to control thermal effects by correcting the image in all ACONs at the same time. &nbsp;Shadowing is turned off by the command </span><span class="f_mine" style="font-weight: bold;">THERM OFF</span><span class="f_mine">, or by any GET or FETCH command. &nbsp;Bear in mind that the correlation between the nominal and shadowed lenses is defined with the original THERM file, and if you should later edit the nominal lens in a way that changes the surface numbers or materials, the shadowed lens will no longer make any sense. &nbsp;When shadowing is turned on, the status pane shows the word “SHADOW” near the lower right of your monitor.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you change any properties of the lens in ACON 1 that are </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> subject to a thermal coefficient, the alternate configurations will </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> shadow those data. &nbsp;In that case, if you want those data to be transferred to the shadowed lens, you should run the THERM file again to reconstruct the shadowed version(s). &nbsp;This applies, for example, when you change the object specifications or enter different wavelengths.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Any parameter that is perturbed by the THERM input will no longer be subject to a paraxial solve, if it had one before. &nbsp;Solves are left alone on parameters that are </span><span class="f_mine" style="font-style: italic;">not explicitly </span><span class="f_mine">assigned a coefficient, however. &nbsp;This means, for example, that if the nominal lens has a YMT solve on the image location, the shadowing (or altered) lens will still have a solve if that thickness it is not given a coefficient. &nbsp;You would use this feature when one is permitted to refocus the lens as the temperature changes. &nbsp;But if one cannot refocus, then you should assign a coefficient to the final airspace and let it vary with temperature as would any other thickness in the lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If a second case is to be analyzed, the THERM input file must be entered again, and for this purpose it is easiest to use a MACro. &nbsp;If you want to monitor the system at up to six temperatures, you should use the ATS option, since that requires but a single setup for all of the ACONs.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Following the TEMPERATURE or ATS lines, the system will be recomputed and a paraxial raytrace executed, which will honor any pickups or solves not on affected surfaces. &nbsp;A simple THERM input file is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 42px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">GET 4</span></p>
+<p class="p_mine"><span class="f_mine">CHG</span></p>
+<p class="p_mine"><span class="f_mine">ALPHA A6061</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">THERM</span></p>
+<p class="p_mine"><span class="f_mine">COE 1 PYREX</span></p>
+<p class="p_mine"><span class="f_mine">RCHANGE 1</span></p>
+<p class="p_mine"><span class="f_mine">1</span></p>
+<p class="p_mine"><span class="f_mine">TEMP 100</span></p>
+<p class="p_mine"><span class="f_mine">SPE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The starting lens</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Specify default airspace CTE of aluminum 6061</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Start THERM</span></p>
+<p class="p_mine"><span class="f_mine">The mirror has no glass assigned , so use pyrex data</span></p>
+<p class="p_mine"><span class="f_mine">Radii using coefficient 1 will be on the next line</span></p>
+<p class="p_mine"><span class="f_mine">Which is here, specifying surface 1, the mirror</span></p>
+<p class="p_mine"><span class="f_mine">Change the temperature to 100 C</span></p>
+<p class="p_mine"><span class="f_mine">And examine the lens to see what changed</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">THERM then prints the following output:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">THERMAL COEFFICIENT DATA IN EFFECT</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SN &nbsp;RADIUS &nbsp; &nbsp;THICKNESS &nbsp; &nbsp; &nbsp;INDEX &nbsp; &nbsp; &nbsp; DECENTER</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">--------------------------------------------------</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;1 &nbsp;4.200E-06 2.340E-05 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2.340E-05</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;2 &nbsp;6.400E-06 6.400E-06 DNDT FROM TABLE &nbsp;6.400E-06</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;3 &nbsp;6.400E-06 PICKUP &nbsp; &nbsp;PICKUP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6.400E-06</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;4 &nbsp;PICKUP &nbsp; &nbsp;2.340E-05 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2.340E-05</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2.340E-05 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2.340E-05</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp;6 &nbsp;7.100E-06 7.100E-06 DNDT FROM TABLE &nbsp;7.100E-06</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;7 &nbsp;7.100E-06 2.340E-05 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2.340E-05</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;8 &nbsp;8.100E-06 8.100E-06 DNDT FROM TABLE &nbsp;8.100E-06</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;9 &nbsp;8.100E-06 2.340E-05 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2.340E-05</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> 10 &nbsp;7.900E-06 7.900E-06 DNDT FROM TABLE &nbsp;7.900E-06</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> 11 &nbsp;7.900E-06 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7.900E-06</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> 12 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SYSTEM RECALCULATED FOR NEW TEMPERATURE OF &nbsp;100.000 ( &nbsp;80.000 DEGREES CHANGE)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Most of the data appearing in this table were assigned automatically. &nbsp;The final airspace, number 12, has a YMT solve in this lens, which is not removed automatically. &nbsp;If we want this distance to expand as well, we would enter a coefficient number and assign it to this airspace. &nbsp;Note the coefficient on radius 1, the mirror. &nbsp;This is the value for Pyrex, as requested. &nbsp;Coefficients are listed for decenters as well, but in this lens there are no decenters, so these values are unused in this case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is a more complicated example using the shadowing feature, where we will enter all of the coefficients ourselves to show how it can be done. &nbsp;In practice, since the glass dn/dt and CTE coefficients are all in the glass tables for this lens, the input would actually be much simpler.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um5f6.png" width="687" height="270" alt="um5f6" style="width:687px;height:270px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">THERM OFF &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; Always turn off shadowing if it was</span></p>
+<p class="p_mine"><span class="f_mine">ACON 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; on previously, and make sure to </span></p>
+<p class="p_mine"><span class="f_mine">GET 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; put the nominal lens in ACON 1.</span></p>
+<p class="p_mine"><span class="f_mine">SPE</span></p>
+<p class="p_mine"><span class="f_mine">THERM</span></p>
+<p class="p_mine"><span class="f_mine">COE 1 A6061 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; coefficient for aluminum</span></p>
+<p class="p_mine"><span class="f_mine">COE 2 6.8E-6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; LAK21 (expansion of glass LAK21)</span></p>
+<p class="p_mine"><span class="f_mine">COE 3 5.3E-6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; LAFN7</span></p>
+<p class="p_mine"><span class="f_mine">COE 4 8.1E-6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; SF6</span></p>
+<p class="p_mine"><span class="f_mine">COE 5 5.5E-6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; LAK16A</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RCHANGE 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; Coefficient number 2 will be assigned to radius 1</span></p>
+<p class="p_mine"><span class="f_mine">1</span></p>
+<p class="p_mine"><span class="f_mine">RCHANGE 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; Coefficient number 3 will be assigned to radii 2 and 3</span></p>
+<p class="p_mine"><span class="f_mine">2 3  </span></p>
+<p class="p_mine"><span class="f_mine">RCHANGE 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; and so on.</span></p>
+<p class="p_mine"><span class="f_mine">5 6</span></p>
+<p class="p_mine"><span class="f_mine">RCHANGE 5</span></p>
+<p class="p_mine"><span class="f_mine">7 8</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">TCHANGE 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; Coefficient number 2 will be assigned to thickness 1</span></p>
+<p class="p_mine"><span class="f_mine">1</span></p>
+<p class="p_mine"><span class="f_mine">TCHANGE 3</span></p>
+<p class="p_mine"><span class="f_mine">2</span></p>
+<p class="p_mine"><span class="f_mine">TCHANGE 4</span></p>
+<p class="p_mine"><span class="f_mine">5</span></p>
+<p class="p_mine"><span class="f_mine">TCHANGE 5</span></p>
+<p class="p_mine"><span class="f_mine">7</span></p>
+<p class="p_mine"><span class="f_mine">TCHANGE 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; Coefficient 1 is assigned to thicknesses 3, 4, 6, and 8.</span></p>
+<p class="p_mine"><span class="f_mine">3 4 6 8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; This would be automatic if we used the ALPHA option in RLE. </span></p>
+<p class="p_mine"><span class="f_mine">ATS 50 2 &nbsp; &nbsp; &nbsp; &nbsp;; Shadow the current lens in ACON 2, with a new temperature of 50.</span></p>
+<p class="p_mine"><span class="f_mine">ATS 200 3 &nbsp; &nbsp; &nbsp; &nbsp;; Also shadow at 200 degrees in ACON 3</span></p>
+<p class="p_mine"><span class="f_mine">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; If shadowing is specified, you need the END line to end the file.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This input will compute the new construction parameters for the illustrated lens resulting from a temperature change to 50 and 200 degrees. &nbsp;The altered lenses will show up in ACONs 2 and 3.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Thermal shadowing works on </span><span class="f_mine" style="font-weight: bold;">ZFILE</span><span class="f_mine"> zoom lenses too -- but the shadowed copies are not zoom lenses anymore. &nbsp;To see a shadowed lens in a given zoom, issue the ATS command when the lens in ACON 1 is in zoom 1. &nbsp;Then you can change zooms in ACON 1 and the copies in the other configurations will be a shadowed version of </span><span class="f_mine" style="font-style: italic;">that</span><span class="f_mine"> zoom setting. &nbsp;Also, be aware that the shadowed versions will not have the same CAOs as the nominal lens unless those have been declared hard apertures. &nbsp;Default apertures are calculated over all zooms, but this step cannot be done in a shadowed version since it is no longer a zoom lens, so the default apertures apply only to that zoom. &nbsp;Likewise, any CSTOP or FILLSTOP &nbsp;declaration will be deleted from a shadowed version, since it picks up the object parameters from ACON 1. &nbsp;If your lens is modeled with GLM materials, be aware that those have no thermal data whatever, and a thermal analysis at that point has little meaning.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="ats_sync"></a><span class="f_mine">It is also possible to </span><span class="f_mine" style="font-style: italic;">correct</span><span class="f_mine"> a zoom lens at more than one temperature. &nbsp;To do so, follow these steps:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;Use the ATS format explained above to create a shadowed copy of the zoom lens in another configuration. &nbsp;This can be done in zoom 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;In the AANT file, the aberrations normally start out in ACON 1 and ZOOM 1. You can specify ACON 2 as well, since at that point that ACON is a shadow of ACON 1 in ZOOM 1. &nbsp;After those aberrations have been defined, you want to switch to the shadowed ZOOM 2 in ACON 2 in the AANT file. &nbsp;But ACON 2 is not a zoom lens, so you cannot zoom it. &nbsp;To synchronize both configurations, you have to put ACON 1 in ZOOM 2 first so ATS can modify it and update ACON 2. &nbsp;Add to the AANT file the lines</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ACON 1</span></p>
+<p class="p_mine"><span class="f_mine">ZOOM 2</span></p>
+<p class="p_mine"><span class="f_mine">M 0 1 A SYNC</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The last line is a do-nothing aberration, the only effect of which is to actually switch to ACON 1 and put that lens in ZOOM 2. &nbsp;Now ACON 2 is a shadowed copy of that setup.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;Now you can add aberrations for that configuration:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ACON 2</span></p>
+<p class="p_mine"><span class="f_mine">M </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> ....</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Thermal shadowing cannot be used if  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1072.htm#acon" class="topiclink">ACON ... PICKUPS</a></span><span class="f_mine"> is in effect.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Let me finish this section with a warning: &nbsp;When you are finished with the thermal analysis, be sure to turn off thermal shadowing with the command </span><span class="f_mine" style="font-weight: bold;">THERM OFF</span><span class="f_mine">. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um510.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

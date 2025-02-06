@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um539</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="T/number,TN T/number" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p>&nbsp;</p>
+<p><a name="tn"></a><span style="font-size: 14pt;">5.39 T/number calculation (TN) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um538.htm" class="topiclink">Previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um540.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">Several features of SYNOPSYS will account for energy loss from various causes. &nbsp;Most of them are easily accessed via the dialog </span><span class="f_mine" style="font-weight: bold;">MTR</span><span class="f_mine">, which lists the options and the restrictions.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">1. </span><span style="font-size: 11pt; font-weight: bold;">GTRANS</span><span style="font-size: 11pt;"> in </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um534.htm" class="topiclink">Section 5.34</a></span><span style="font-size: 11pt;"> calculates the transmission of a single lens along the axis, and analyzes only the absorption within the glass at many wavelengths.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">2.  </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um84.htm#transmission" class="topiclink">PTRACE</a></span><span style="font-size: 11pt;"> considers vignetting, apodization, and coatings of the entire system – but not absorption.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">3.  </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um84.htm#transmission" class="topiclink">TRACE</a></span><span style="font-size: 11pt;"> considers vignetting and apodization, but not coatings or absorption.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">4. </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um173.htm#pray" class="topiclink"> PRAY</a></span><span style="font-size: 11pt;"> analyzes the path of a single ray, and evaluates the loss due to coatings.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">5.  </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um88.htm#map" class="topiclink">MAP</a></span><span style="font-size: 11pt;"> can map the transmission over the field or the pupil, and considers the same effects as TRACE.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">6. &nbsp;Another feature will show the transmission curve for a selected glass type in graphic form. &nbsp;This is found under the PAD GlassTable feature.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">7. </span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um536.htm#rtrans" class="topiclink">RTRANS</a></span><span style="font-size: 11pt;"> will analyze the absorption along a given ray, ignoring other effects.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">8. &nbsp;The </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="umch15.htm#ai" class="topiclink">AI</a></span><span style="font-size: 11pt;"> noun “TRANSMISSION” will trace a ray and account for all effects. &nbsp;For this analysis you would use input such as</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt;">FIND THE TRANS FOR HBAR = 1 AND YEN = .5</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">(Note that you must use at least </span><span style="font-size: 11pt; font-style: italic;">four</span><span style="font-size: 11pt;"> characters here, to distinguish “TRANSMISSION” FROM “TRACE”, which is a valid command not used in an AI sentence.)</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">9.  </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um95.htm#illum" class="topiclink">ILLUM</a></span><span style="font-size: 11pt;"> will find the illumination falloff over the field. &nbsp;This considers all effects, including obliquity at the image.</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">Yet another feature will find the effective T/number of the system at a requested field point, incorporating all of the above effects, including vignetting, apodization, coating losses, and glass absorption – but not obliquity, which does not change the T/number. &nbsp;Input is</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt;">TN </span><span style="font-size: 11pt; text-decoration: underline;">HBAR</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">GBAR</span><span style="font-size: 11pt;"> [ </span><span style="font-size: 11pt; text-decoration: underline;">ICOL</span><span style="font-size: 11pt;"> / P ]</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; text-decoration: underline;">HBAR</span><span style="font-size: 11pt;"> and </span><span style="font-size: 11pt; text-decoration: underline;">GBAR</span><span style="font-size: 11pt;"> are the fractional field in (Y,X), and </span><span style="font-size: 11pt; text-decoration: underline;">ICOL</span><span style="font-size: 11pt;"> is the color number to be analyzed. &nbsp;P specifies the primary color.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">Here is an example. &nbsp;This lens has an obscuration on the first doublet, apodization specified on surface 5, and quarter-wave AR coatings on all elements. &nbsp;(This lens is also in polarization mode, since coatings would be ignored otherwise.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><img src="um5f13.png" width="729" height="271" alt="um5f13" style="width:729px;height:271px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The command </span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt;">TN 1 0</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">gives the following listing:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">SYNOPSYS AI&gt;TN 1 0</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> Rayset &nbsp; Thru lens &nbsp; Energy/Ray &nbsp; &nbsp; &nbsp; &nbsp;Energy Thru &nbsp; *Polarization</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;577 &nbsp; &nbsp; 383 &nbsp; &nbsp; &nbsp;0.666000E+0 &nbsp;0.442076E+00 &nbsp; &nbsp;0.429355E+00</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> THE ABOVE ANALYSIS IGNORES ABSORPTION</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> T-NUMBER ANALYSIS AT FIELD (HBAR,GBAR) = &nbsp; &nbsp; 1.0000 &nbsp; &nbsp;0.0000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> COLOR NUMBER &nbsp;2 &nbsp;0.587560 uM </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> EFFECT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; X &nbsp; &nbsp; &nbsp; &nbsp; Y</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">----------------------------------</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> PARAXIAL &nbsp; &nbsp; &nbsp; 0.0000 &nbsp; &nbsp;3.5714</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> GEOMETRIC &nbsp; &nbsp; &nbsp;3.5295 &nbsp; &nbsp;3.2358</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> VIGNETTING &nbsp; &nbsp; 4.3322 &nbsp; &nbsp;3.9716</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> APODIZATION &nbsp; &nbsp;5.3085 &nbsp; &nbsp;4.8666</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> COATINGS &nbsp; &nbsp; &nbsp; 4.3959 &nbsp; &nbsp;4.0300</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ABSORPTION &nbsp; &nbsp; 4.3373 &nbsp; &nbsp;3.9763</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> TOTAL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5.3929 &nbsp; &nbsp;4.9440</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> COSINE OF INCIDENT ANGLE OF CENTER RAY AT IMAGE = &nbsp; 0.997804</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">The first three lines give the same information as the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um84.htm#transmission" class="topiclink">PTRACE</a></span><span style="font-size: 11pt;"> command. &nbsp;The number of rays through the lens has been reduced by the obscuration; the Energy/Ray is reduced by the apodization; Energy Thru is the ray fraction times the Energy/Ray; and the effects of coatings and polarization reduce the energy to the last value, 0.4294. &nbsp;The only thing missing so far is the effect of absorption in the glass, as stated in the listing.</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">That is provided by the table that follows, which reduces these data to an effective T/number. &nbsp;Thus the paraxial F/number is given in the first line of the table, and since this lens is not in XPXT mode, the X value is not calculated. &nbsp;The geometric F/number is found in X and Y by tracing real rays at the requested field point. &nbsp;The T/number is raised by energy losses from the other effects on the list. &nbsp;For example, if apodization were the only cause of energy loss, the T/number would be 4.8666 in the Y-direction. &nbsp;The TOTAL line gives the T/number when all causes are accounted for.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The effect of coatings is of course considered only if the lens is in </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um1711.htm" class="topiclink">polarization</a></span><span style="font-size: 11pt;"> mode and coatings have been assigned. &nbsp;If the polarization state is UNPOLARIZED, the loss due to surface reflections is averaged between the X and Y linear states, while the other items affecting the total are taken for Y polarization only.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">If your goal is to estimate the flux density at the image, then you also need to factor in the obliquity of the beam with respect to the local surface normal. &nbsp;The last line gives the cosine of this angle. &nbsp; The lens is approximately telecentric, so in this case the falloff is not great.</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um540.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,903 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um3324</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="holograhic optical elements (HOE)" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span class="f_mine" style="font-weight: bold;">3.3.2.4 </span><a name="hoe"></a><span class="f_mine" style="font-weight: bold;">Holographic optical elements (HOE's) </span><span class="f_mine"> &nbsp; &nbsp; &nbsp; </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3323.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3325.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(These options go into an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file, and may be entered interactively with the dialog </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">A hologram constructed by exposing an emulsion to two coherent beams can be defined as an optical element to SYNOPSYS. &nbsp;The HOE can be either refractive or reflective, and the substrate may be of any shape permitted by the normal surface options. &nbsp;In addition, the beams used in constructing the HOE may contain aberrations defined explicitly by the user or implicitly by means of auxiliary optical systems. &nbsp;Most of the parameters used to define the HOE or the auxiliary systems may also be entered either as </span><span class="f_p8-5" style="text-decoration: underline;"><a href="um102.htm#vg" class="topiclink">variables</a></span><span class="f_p8-5"> or </span><span class="f_p8-5" style="text-decoration: underline;"><a href="um1033.htm#ag" class="topiclink">aberrations</a></span><span class="f_p8-5"> in the optimization program.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">A HOE requires at least two surfaces just to describe the properties of the reference beams and emulsion. For transmission HOEs a third surface is usually required to define the other side of the substrate.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><a name="3324a11"></a><span class="f_p2-11">The input options for HOEs are as follows:</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_p2-11" style="font-weight: bold;"> HOE</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">HIN </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">INDEX</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">MODUL</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">CWAV </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">WAVELENGTH</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">HTH </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">THICKNESS</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">Pl </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">X1</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Y1</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z1</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">PHA</span><span class="f_p2-11" style="font-weight: bold;"> [ </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">INDEX</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">P2 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">X2</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Y2</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z2</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">PHA</span><span class="f_p2-11" style="font-weight: bold;"> [ </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">INDEX</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ WOPD / WLENS ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">(Point P1)</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ A11 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G1</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G3</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G6</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G10</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G16</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ A12 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G2</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G4</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G5</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G7</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G8</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G9</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ A13 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G11</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G12</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G13</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G14</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G15</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">(Point P2)</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ A21 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G1</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G3</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G6</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G10</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G16</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ A22 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G2</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G4</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G5</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G7</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G8</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G9</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ A23 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G11</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G12</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G13</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G14</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G15</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">(Point P1)</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ B11 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z1</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z2</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z3</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z4</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z5</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z6</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ B12 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z7</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z8</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z9</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z10</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z11</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z12</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ B13 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z13</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z14</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z15</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z16</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z17</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ B14 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z18</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z19</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z20</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z21</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z22</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z23</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ B15 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z24</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z25</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z26</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z27</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z28</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z29</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ B16 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z30</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z31</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z32</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z33</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z34</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ B17 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z35</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">Z36</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">(Point P2)</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ B21 … ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">...</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ B27 ... ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ GA1 ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ GA2 ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">ORDER </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">N</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">The rules for entering HOE's are as follows:</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 42px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">1.</span></p>
+</td>
+<td style="vertical-align:top; width:704px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Two surfaces are used to describe the HOE shape and emulsion. The first of the two is given the index of the emulsion as seen on playback. &nbsp;No curvature or thickness option is required for this surface, and it must be declared a HOE by the input </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> HOE. &nbsp;The substrate shape is given on the second of the two HOE surfaces, and the index assigned to this surface represents that of the substrate (usually some kind of glass). &nbsp;A coating may be assigned to the substrate surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">2.</span></p>
+</td>
+<td style="vertical-align:top; width:704px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The index and index modulation of the emulsion during exposure are given by the HIN input.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">3.</span></p>
+</td>
+<td style="vertical-align:top; width:704px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">The construction wavelength is given by the CWAV input.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">4.</span></p>
+</td>
+<td style="vertical-align:top; width:704px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The emulsion thickness is given by the HTH input. &nbsp;This and the index modulation are used to estimate the diffraction efficiency, with an enhanced version of the method of Kogelnik (H. Kogelnik, Bell Sys. Tech. J., </span><span class="f_mine" style="font-weight: bold;">48</span><span class="f_mine">, No.9, (November, 1969), pp.2909-2945). &nbsp;Only single-mode diffraction is considered, but off-Bragg incidence is included. &nbsp;(In polarization mode both the S- and P-plane efficiencies are computed; otherwise only the S-plane is given.)</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">5.</span></p>
+</td>
+<td style="vertical-align:top; width:704px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The two coherent beams are defined by the (X,Y, Z) coordinates of two point objects with the input P1 and P2. &nbsp;The X, Y, and Z coordinates have their usual meaning, in the local coordinate system of the HOE; the Z coordinate is positive if the point is to the right of the HOE. &nbsp;The (X,Y,Z) coordinates are not sufficient themselves to uniquely define the phase differences of the two beams at each point on the HOE, however, since each point may be either a real or virtual image. &nbsp;To remove ambiguity, an additional phase factor, PHA, is required for each point. &nbsp;It may be interpreted as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For a transmission HOE, the two points will be illuminated from the same side of the HOE. &nbsp;If the actual position of the point P1 or P2 is on the left of the HOE (i.e., in the –Z direction) the phase factor PHA is +1. &nbsp;If the point is on the right of the HOE the factor is -1. &nbsp;If either point is not in AIR, the immersion index may be entered in word 6.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For a reflection HOE, the two points are illuminated from opposite sides, and the rule depends on the diffraction order chosen. &nbsp;If ORD -1 is input, point P1 will be considered illuminated from the left, and the rule for PHA is the same as above. &nbsp;The point P2 is illuminated from the right of the HOE, and the rule is reversed: PHA is equal to +1 if the point P2 is to the right. &nbsp;If the ORD is +1, then point P1 uses the reverse rule and P2 the normal rule.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">6.</span></p>
+</td>
+<td style="vertical-align:top; width:704px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">The two beams are normally considered perfect point sources, but aberrations may be defined in the form of a power-series polynomial with the entries A11, A12, etc., or a Zernike polynomial using the entries B11, etc. &nbsp;The G-values give the OPD error of the construction beam as a function of the (X,Y) coordinates of a point on the HOE using the polynomial representation given in </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um94.htm" class="topiclink">section 9.4</a></span><span style="font-size: 11pt;">, and the B-values the error with the expansion listed in </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um33226.htm" class="topiclink">section 3.3.2.2.6</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_mine"><span class="f_mine">There is a significant difference between these expansions and the forms applied to image interpolation, however. &nbsp;In the case of HOE's, the coordinates (X,Y) are actual coordinates at the HOE in lens units rather than normalized coordinates at a pupil. &nbsp;Thus, to cause the beam P1 to have an OPD error varying as the fourth power of the radius and equal to 1.5 waves at a radius of 1.0 units, the input might be</span></p>
+<p class="p_p4-10" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 24px;"><span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">A11 0 1.5</span></p>
+<p class="p_p4-10"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">The G-terms can be varied in optimization, but you have to use the addressing scheme explained in </span><span class="f_p4-10" style="font-size: 11pt; text-decoration: underline;"><a href="um102.htm#vg" class="topiclink">Section 10.2</a></span><span class="f_p4-10" style="font-size: 11pt;">. &nbsp;Zernike terms are varied differently, with </span><span class="f_p4-10" style="font-size: 11pt; text-decoration: underline;"><a href="um102.htm#vlhg" class="topiclink">RHG and LHG</a></span><span class="f_p4-10" style="font-size: 11pt;"> variables.</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">The coefficients are normally entered in OPD units, but you may also enter them in </span><span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">lens units</span><span class="f_p4-10" style="font-size: 11pt;">. &nbsp;To do so, include the entry </span><span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">WLENS</span><span class="f_p4-10" style="font-size: 11pt;"> before you enter the coefficients themselves. &nbsp;In this case, the coefficients refer to the </span><span class="f_p4-10" style="font-size: 11pt; font-style: italic;">phase shift </span><span class="f_p4-10" style="font-size: 11pt;">in lens units.  </span><span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">WOPD</span><span class="f_p4-10" style="font-size: 11pt;"> will restore the default.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">7.</span></p>
+</td>
+<td style="vertical-align:top; width:704px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="3324debye"></a><span class="f_mine">An auxiliary optical system or systems may be defined as the source of the aberrations instead of explicit terms entered as in the above paragraph. &nbsp;There are no restrictions on the size or nature of these auxiliary systems, and they are really completely separate lenses that must be defined by the user prior to creating the system containing the HOE. &nbsp;Normally you will set up and store them in the lens library, as needed. &nbsp;The only requirements on these systems are that the next-to-last surface correspond geometrically in size, shape, and position to the HOE substrate, and that the full-field image point correspond to the point P1 or P2. &nbsp;In other words, these systems should correspond exactly to the geometry that will be employed in making the HOE, where the substrate is a dummy surface preceding the image, and the full-field image (both HBAR and GBAR equal to 1.0) is at the reference point P1 or P2. &nbsp;Since the OPD function is to be taken at the HOE surface, and not at infinity as is usually the case when tracing rays, you should turn off the Debye calculation for the auxiliary systems by turning on switch 66.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">8</span></p>
+</td>
+<td style="vertical-align:top; width:704px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um78.htm#efile" class="topiclink">EFILE</a></span><span class="f_mine"> edges cannot be assigned to a HOE.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="3324hp1"></a><span class="f_mine">To use an auxiliary system and transfer its data to the HOE, get that system from the library and then enter the command</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:24px"><span class="f_p4-10">&nbsp;</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:24px"></td><td style="border:none;padding:0"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">HP1 [-1]</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">Hologram Point 1</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:24px"><span class="f_p4-10" style="font-size: 11pt;">or</span></td><td style="border:none;padding:0"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">HP2 [-1] .</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">2</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:24px"><span class="f_p4-10">&nbsp;</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:24px"></td><td style="border:none;padding:0"><span class="f_p4-10" style="font-size: 11pt;">to use the power-series polynomial, and</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:24px"><span class="f_p4-10">&nbsp;</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:24px"></td><td style="border:none;padding:0"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">HZ1 [-1]</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:24px"><span class="f_p4-10" style="font-size: 11pt;">or</span></td><td style="border:none;padding:0"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">HZ2 [-1]</span></td></tr></table></div><p class="p_p4-10" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">to use the Zernike representation. &nbsp;The program indicates the accuracy of the curve fit by printing the maximum and RMS OPD difference between the exact data found over a grid of rays and the interpolated data from the expansion. &nbsp;If switch 13 is ON, the error at each sample ray will also be displayed. &nbsp;If these errors are a small fraction of a wave, the expansion may be used with confidence; if the power-series expansion is not adequate, the more lengthy Zernike series may be tried.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program will calculate the values of the coefficients from a real raytrace of the system, and store the values in a temporary file along with the image coordinates. &nbsp;After this step has been performed, the system containing the HOE is created or retrieved from the library. &nbsp;A CAO should be inserted on the HOE itself, by the user; the program verifies that the construction clear aperture is at least as large as that of the HOE. &nbsp;Then, in a </span><span class="f_mine" style="font-weight: bold;">CHG</span><span class="f_mine"> file, the HOE surface is declared with the HOE input, as above. &nbsp;Instead of introducing coefficients with the input </span><span class="f_mine" style="font-weight: bold;">A11</span><span class="f_mine"> etc., the entry</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">  &nbsp; &nbsp; &nbsp; &nbsp;GA1 &nbsp; &nbsp; &nbsp; &nbsp;Get Aberrations 1</span></p>
+<p class="p_mine"><span class="f_mine">or &nbsp; &nbsp; &nbsp; &nbsp;GA2 &nbsp; &nbsp; &nbsp; &nbsp;Get Aberrations 2</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">is input, causing the program to fetch the stored coefficients and to assign them to the points P1 or P2. &nbsp;The image location in X, Y, and Z is also retrieved and assigned to the X, Y, Z values for that point. &nbsp;A warning message will be printed if the major wavelength of the auxiliary system differs from the construction wavelength entered on the CWAV input, or if the clear aperture of the former is less than that of the HOE &nbsp;(The coefficients are only valid out to the aperture over which they were defined.) &nbsp;If the optional [-1] appears in word 2, the signs of the coefficients will be reversed before they are transferred to the HOE.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">8.</span></p>
+</td>
+<td style="vertical-align:top; width:484px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The final input to the HOE section of the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file is the </span><span class="f_mine" style="font-weight: bold;">ORDER</span><span class="f_mine"> line, which gives the diffraction order. &nbsp;This input is mandatory, and must be entered each time a SN HOE line is included. &nbsp;A value of-1 will cause a beam that appears to emanate from point P1 to be diffracted so as to converge to point P2, and a value of +1 will do the reverse. &nbsp;Note that only one case is physically meaningful at a time. &nbsp;Order -1 is recommended.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">9.</span></p>
+</td>
+<td style="vertical-align:top; width:484px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If a CAO is desired on the HOE to control vignetting, it may be placed on the second of the two HOE surfaces. &nbsp;Tilts and decenters, however, go on the HOE surface itself, not the substrate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">10.</span></p>
+</td>
+<td style="vertical-align:top; width:484px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="3324reflhoe"></a><span class="f_mine">The rules and input described above all refer to the common case of a thick, volume hologram. &nbsp;It is also possible to model a reflective </span><span class="f_mine" style="font-style: italic;">surface</span><span class="f_mine"> hologram, with somewhat different rules. &nbsp;The points P1 and P2 for such a case are defined the same way as for a thick transmission HOE, but the thickness HTH is declared to be zero. &nbsp;Reflection is indicated by declaring the substrate surface REFLECTIVE. &nbsp;The efficiency calculation is bypassed in this case, giving an efficiency of 1.0 for that surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">11.</span></p>
+</td>
+<td style="vertical-align:top; width:484px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Many features of a HOE may be controlled during optimization, including the local grating frequency, departure from the Bragg condition, and efficiency (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um10312.htm" class="topiclink">10.3.1.2</a></span><span class="f_mine">). Construction aberrations may be picked up in multiconfiguration optimization (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um1072.htm" class="topiclink">10.7.2</a></span><span class="f_mine">).</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p4-10" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<p><a name="varyhoe"></a><span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">Varying HOE parameters in optimization:</span></p>
+<p class="p_p4-10" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Most of the HOE parameters may be varied in optimization. &nbsp;The following table shows the locations that may be used.</span></p>
+<p class="p_p4-10" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 66px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">G 1</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">construction wavelength</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">G 4</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">X coordinate, point P1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">G 5</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y coordinate, point P1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">G 6</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Z coordinate, point P1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">G 8</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">X coordinate, point P2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">G 9</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y coordinate, point P2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">G 10</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Z coordinate, point P2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">G 11</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">HIN (HOE index)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">G 12</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">MODULATION of index</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">G 16 to G 32</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">vary aberration coefficients G1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">to G17 of point P1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">G 33 to G 50</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">vary aberration coefficients G1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">to G17 of point P2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">G 50</span></p>
+</td>
+<td style="vertical-align:top; width:292px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">HTH value</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p4-10" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p4-10" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10" style="font-size: 11pt;">If the aberrations are defined by </span><span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">Zernike</span><span class="f_p4-10" style="font-size: 11pt;"> terms, the variables are</span></p>
+<p class="p_p4-10" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p4-10" style="text-align: center; text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">Point P1:</span></p>
+<p class="p_p4-10" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 24px;"><span class="f_p4-10" style="font-size: 11pt;">LHG 16 through LHG 32 for terms Z1 through Z17; RHG 16 through RHG 32</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 24px;"><span class="f_p4-10" style="font-size: 11pt;">for Z18 through Z34, and LHG 33 and RHG 33 for Z35 and Z36.</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 24px;"><span class="f_p4-10" style="font-size: 11pt;">Thus, to vary term Z1, use VY </span><span class="f_p4-10" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p4-10" style="font-size: 11pt;"> LHG 16; and to vary Z18, VY </span><span class="f_p4-10" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p4-10" style="font-size: 11pt;"> RHG 16. &nbsp;Terms are shown in the following table.</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G-variable</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">LHG term</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">RHG term</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">16</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z1</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z18</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">17</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z2</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z19</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">18</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z3</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z20</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">19</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z4</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z21</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">20</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z5</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z22</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">21</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z6</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z23</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">22</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z7</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z24</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">23</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z8</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z25</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">24</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z9</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z26</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">25</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z10</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z26</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">26</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z11</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z28</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">27</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z12</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z29</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">28</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z13</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z30</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">29</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z14</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z31</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">30</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z15</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z32</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">31</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z16</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z33</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">32</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z17</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z34</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">33</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z35</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z36</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p4-10" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p4-10" style="text-align: center; text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10" style="font-size: 11pt; font-weight: bold;">Point P2:</span></p>
+<p class="p_p4-10" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 24px;"><span class="f_p4-10" style="font-size: 11pt;">LHG 34 through LHG 50 for terms Z1 through Z17; RHG 34 through RHG 50</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 24px;"><span class="f_p4-10" style="font-size: 11pt;">for Z18 through Z34, and LHG 51 and RHG 51 for Z35 and Z36. &nbsp;Terms are shown in the following table.</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G-variable</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">LHG term</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">RHG term</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">34</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z1</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z18</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">35</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z2</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z19</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">36</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z3</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z20</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">37</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z4</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z21</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">38</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z5</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z22</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">39</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z6</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z23</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">40</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z7</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z24</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">41</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z8</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z25</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">42</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z9</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z26</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">43</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z10</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z26</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">44</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z11</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z28</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">45</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z12</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z29</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">46</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z13</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z30</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">47</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z14</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z31</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">48</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z15</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z32</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">49</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z16</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z33</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">50</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z17</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z34</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">51</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z35</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">Z26</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p4-10" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p6-5"><span class="f_p6-5">&nbsp;</span></p>
+<p><a name="hoeex"></a><span class="f_p6-5" style="font-size: 11pt; font-style: italic; font-weight: bold;">Examples of HOE input</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">1. We want to make a HOE from two perfect coherent points, and to reconstruct the beam. Suppose the illumination system looks like this:</span></p>
+<p class="p_p4-10" style="margin: 0px 0px 0px 29px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p4-10" style="margin: 0px 0px 0px 29px;"><img src="um3f13.png" width="528" height="219" alt="um3f13" style="width:528px;height:219px;border:none"></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10" style="font-size: 11pt;">We will set up a system with the object corresponding to point P1 and expect the image to be formed at point P2.</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">RLE</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">ID HOLOGRAPHIC ELEMENT</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">WA1 .6328</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">OBA 10 1.5 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! real object at P1</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">2 IND 1.525 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! index of emulsion on playback</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">3 TH .05 GTB S &nbsp; &nbsp; &nbsp; &nbsp;! this is the substrate</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">BK7</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">3 CAO 1</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">4 TH -5</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">4 CAO 1</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">5 &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;! image plane at location P2 (see below)</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">2 HOE</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">HIN 1.525 .002 &nbsp; &nbsp; &nbsp; &nbsp;HOE exposure index, modulation</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">CWAV .6328</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">HTH .0004</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">P1 0 1.5 -10 1</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">P2 0 -1 -5 1</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">ORDER -1</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">END</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_t1-6"><span class="f_t1-6" style="font-size: 11pt;">Here we have modeled the substrate of the HOE as a glass plate of thickness 0.05 inches. &nbsp;The image formed by the HOE of the object at HBAR = 1 will fall approximately at point P2 </span><span class="f_t1-6">–</span><span class="f_t1-6" style="font-size: 11pt;"> except for aberrations and defocus caused by the glass plate, which was not modeled in this HOE example.</span></p>
+<p class="p_t1-6"><span class="f_t1-6">&nbsp;</span></p>
+<p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">2. In this example points P1 and P2 are physically similar to those in example 1, but the HOE is to be a reflection HOE.</span></p>
+<p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">RLE</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">ID REFLECTION HOE</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">WA1 .6328 </span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">OBA 10 1.5 1</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">2 INDEX 1.48</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">3 TH -5 AIR</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">3 REFLECTOR &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_NoSpacing" style="font-weight: bold;">substrate is declared a reflector</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">2 HOE</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">HIN 1.47364 .00014</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">CWAV .6328</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">HTH .00025</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">P1 0 1.5 -10 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_NoSpacing" style="font-weight: bold;">PHA is negative for P2. For an aluminized HOE, it would be +1.</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">P2 0 -1 -5 -1 </span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">ORD -1</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">4  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_NoSpacing" style="font-weight: bold;">the image surface</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">END</span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">Note in this example that the HOE gives a real image on surface 4; in the previous example the image was virtual.</span></p>
+<p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+<p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">3. Here we will create a reflective HOE using an auxiliary system to define the aberrations of one of the reference beams.</span></p>
+<p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+<p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">Consider the system in the sketch below. &nbsp;The HOE will be on a curved substrate, and both points P1 and P2 will be to the right of the HOE. &nbsp;Point P2 is at a great distance but on the optical axis, and point P1 is the virtual image formed by a negative lens.</span></p>
+<p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+<p class="p_p7-6"><img src="um3f14.png" width="429" height="285" alt="um3f14" style="width:429px;height:285px;border:none"></p>
+<p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+<p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">We will first define the auxiliary system:</span></p>
+<p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">RLE</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">ID HOE REFERENCE POINT P1 </span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">WA1 .6328</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">OBB 0.0000001 .125 .1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_NoSpacing">! Input beam initially collimated, very small FOV</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">LRAYS  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! </span><span class="f_NoSpacing">Object in air, but entering beam goes to the left</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">1 RD .3456 TH -.075 GTB S  &nbsp; &nbsp; &nbsp; &nbsp;! </span><span class="f_NoSpacing">first lens surface. &nbsp;Note negative TH</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">BK7</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">2 RD -3.45 TH -9.624 AIR &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">3 RD 25 TH 8 AIR &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! </span><span class="f_NoSpacing">this will be the HOE</span></p>
+<p><span style="font-weight: bold;">4  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! </span><span style="font-size: 11pt;">this will be point P1</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">3 AT -30 0 100 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! </span><span class="f_NoSpacing">HOE tilt angle</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! </span><span class="f_NoSpacing">Focus the system, so that the full-field image is fairly good</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">PANT &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">VY 3 TH</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">END</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">AANT </span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">M 0 1 A P YC 1 0 .1</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">END</span></p>
+<p class="p_NoSpacing"><span class="f_NoSpacing" style="font-weight: bold;">SYNO 5</span></p>
+<p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+<p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">When this system is entered into SYNOPSYS, we do a SPEC and CAP to check the position of the image point and the aperture on surface 3. &nbsp;These must correspond to the point P1 and the aperture of the final HOE. &nbsp;Assuming that these quantities are satisfactory, we save the system in the lens library and request that the aberration coefficients be prepared for the HOE system (which we have not yet created).</span></p>
+<p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+<p class="p_p7-6"><span style="width:48px">&nbsp;</span><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">STORE 5 &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p7-6" style="font-size: 11pt;">save the auxiliary system</span></p>
+<p class="p_p7-6"><span style="width:48px">&nbsp;</span><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">HP1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p7-6" style="font-size: 11pt;">compute the coefficients</span></p>
+<p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+<p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">Now we can make the HOE system:</span></p>
+<p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+<p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">RLE</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">ID HOE WITH ABERRATIONS</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">WA1 .6328</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">! this is the playback wavelength.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">OBA -8.89796 5.13724 2.5</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">! this is the object point. &nbsp;Since it is near point Pl we would expect the image to form near point P2.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">LRAYS</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">! Light enters going to the left</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">1 AIR</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">2 CAO 2.5 IND 1.5</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">! Fix CAO of the HOE and playback index.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">3 RD 25 TH 1000</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">! The image will be here.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">3 REFLECTOR</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">! Will be a reflective HOE; this is the substrate</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">4</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">2 HOE</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">HIN 1.5 .001 &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">CWAV .6328</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">! This wavelength must be the same as the major wavelength of the auxiliary system.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">HTH .0002</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">P1 0 5 8 -1</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">! This point will get the aberrations. Approx. &nbsp;(XYZ) coords. will be replaced with the actual image position, in the coordinate system of surface 3.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">P2 0 0 1000 1 &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">! Point P2 is 1000 inches away.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">ORD -1</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">END</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">CHG</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">2 HOE</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">GA1</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt;">! This picks up the coefficients we created above.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">ORD -1</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6" style="font-size: 11pt; font-weight: bold;">END</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p class="p_p7-6"><span class="f_p7-6">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_t2-3"><span style="width:48px">&nbsp;</span></p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3325.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3323.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>clear aperture listing</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CAP command,lens analysis routines--&gt;" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;">&nbsp;</p>
+<p><a name="cap"></a><span style="font-size: 14pt;">6.2 Clear Aperture Programs (CAP, EDGE) &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-decoration: underline;"><a href="um622.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="umch6.htm#um60" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="um621"></a><span class="f_mine" style="font-weight: bold;">6.2.1 CAP</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">CAP [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSPS</span><span class="f_mine" style="font-weight: bold;"> ] &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(Clear APertures)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp;CAP [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">is read, the program determines the maximum clear aperture radius for each surface by tracing three rays, normally the full field upper and lower rim rays and the on-axis marginal ray, and prints these in a table. &nbsp;If the lens has a skew field specified in the object description, the object point for </span><span class="f_mine" style="font-weight: bold;">CAP</span><span class="f_mine"> will be in the meridional plane at the same distance from the axis as the maximum skew object (where HBAR and GBAR both equal one). &nbsp;If the lens has tilts or decenters, the calculation is repeated by tracing from the lower extreme object point. &nbsp;The largest Y-coordinate required by any of these rays determines the aperture. &nbsp;The calculation is not performed for any surface at which the user has entered a </span><span class="f_mine" style="text-decoration: underline;"><a href="um3111.htm" class="topiclink">clear aperture</a></span><span class="f_mine"> explicitly (with CAO, RAO, or EAO). &nbsp;If </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#cfov" class="topiclink">CFOV</a></span><span class="f_mine"> is in effect, the maximum object point takes HBAR equal to l and GBAR equal to 0. </span><span class="f_mine" style="font-weight: bold;"> CAP</span><span class="f_mine"> may be run interactively from the dialog </span><span class="f_mine" style="font-weight: bold;">MLL</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Clear apertures may also be </span><span class="f_mine" style="text-decoration: underline;"><a href="um1033.htm#acao" class="topiclink">controlled</a></span><span class="f_mine"> or </span><span class="f_mine" style="text-decoration: underline;"><a href="um102.htm#vcao" class="topiclink">varied</a></span><span class="f_mine"> during optimization.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If surface numbers are entered, only that portion of the lens is listed. &nbsp;An example of CAP output is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">SYNOPSYS AI&gt;CAP </span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> ID MIT 1 TO 2 UM LENS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;23948 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;03-MAR-11 &nbsp; 13:50:27</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> CLEAR APERTURE DATA</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SURF &nbsp; &nbsp;X OR R-APER. &nbsp; &nbsp; Y-APER. &nbsp; &nbsp;REMARK &nbsp; &nbsp; X-OFFSET &nbsp; &nbsp;Y-OFFSET &nbsp;EFILE?</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> ___________________________________________________________________________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; 18.0000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *User CAO &nbsp; &nbsp; &nbsp; 0.0000 &nbsp; &nbsp; &nbsp;5.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; 18.0000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *User CAO &nbsp; &nbsp; &nbsp; 0.0000 &nbsp; &nbsp; &nbsp;5.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp; 16.1210 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Soft CAO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; 14.3585 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Soft CAO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; &nbsp; 13.8571 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Soft CAO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;6 &nbsp; &nbsp; &nbsp; &nbsp; 11.3885 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Soft CAO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;7 &nbsp; &nbsp; &nbsp; &nbsp; 23.0000 &nbsp; &nbsp; 26.0000 *User RAO &nbsp; &nbsp; &nbsp; 0.0000 &nbsp; &nbsp; &nbsp;4.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;8 &nbsp; &nbsp; &nbsp; &nbsp; 23.0000 &nbsp; &nbsp; 26.0000 *User RAO &nbsp; &nbsp; &nbsp; 0.0000 &nbsp; &nbsp; &nbsp;4.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;9 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6.0611 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Soft CAO</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> NOTE: CAO, CAI, EAO, and EAI input is semi-aperture.</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; RAO and RAI input is full aperture.</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The apertures from </span><span class="f_mine" style="font-weight: bold;">CAP</span><span class="f_mine"> are utilized by </span><span class="f_mine" style="text-decoration: underline;"><a href="umch7.htm#dwg" class="topiclink">DWG</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#per" class="topiclink">PER</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#rper" class="topiclink">RPER</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#solid" class="topiclink">SOLID</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="umch11.htm#tol" class="topiclink">TOL</a></span><span class="f_mine">, and </span><span class="f_mine" style="text-decoration: underline;"><a href="umch12.htm#btol" class="topiclink">BTOL</a></span><span class="f_mine"> which calculate them automatically, as well as the </span><span class="f_mine" style="text-decoration: underline;"><a href="sketchpad.htm" class="topiclink">SketchPAD</a></span><span class="f_mine"> feature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The values printed by </span><span class="f_mine" style="font-weight: bold;">CAP</span><span class="f_mine"> are not necessarily appropriate for tilted or decentered surfaces for which the apertures are not round. &nbsp;The footprint programs should be used to determine the aperture geometry in such cases. (See </span><span class="f_mine" style="text-decoration: underline;"><a href="um84.htm" class="topiclink">section 8.4</a></span><span class="f_mine"> and the dialog </span><span class="f_mine" style="font-weight: bold;">MFP</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Additional data may be entered to define the edges of lens elements for the drawing programs. &nbsp;Those data comprise the edge-description file, or EFILE, and they will override the CAO data if they are present, when those programs are run. &nbsp;If EFILE data are present, the CAP listing will show an asterisk at the affected surfaces. &nbsp;To view the EFILE data, use the ELIST command. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um310.htm" class="topiclink">section 3.10</a></span><span class="f_mine">.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For lenses which exhibit substantial vignetting at full field, either because of intentional stops or because of ray failures, an option is available to reduce the aperture that the program uses when finding the default CAOs. &nbsp;This is the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine">, which may be included in the </span><span class="f_mine" style="font-weight: bold;">RLE</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">CHG</span><span class="f_mine"> file. &nbsp;If the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#wap" class="topiclink">WAP</a></span><span class="f_mine"> or VFIELD option is in effect, the rays traced by CAP are based on the reduced pupil rather than the nominal pupil.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The CAO values calculated by the </span><span class="f_mine" style="font-weight: bold;">CAP</span><span class="f_mine"> program are not used for vignetting calculation for image analysis. &nbsp;Apertures to be used for vignetting must be entered </span><span class="f_mine" style="font-style: italic;">explicitly</span><span class="f_mine"> by the user, or fixed by the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#cfix" class="topiclink">CFIX</a></span><span class="f_mine"> parameter. &nbsp;The VFIELD parameters are honored by all analysis features that create a grid of rays. &nbsp;(The nonsequential features in some cases will honor even default apertures, as discussed in </span><span class="f_mine" style="text-decoration: underline;"><a href="umch18.htm" class="topiclink">Chapter 18</a></span><span class="f_mine">.)</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um622.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

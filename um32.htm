@@ -1,0 +1,827 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um32</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ACCOMODATE,AFOCAL,Chief ray, offset ICR,CPUPIL,EPUPIL,PRESSURE,RPUPIL,TEMPERATURE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-size: 14pt;">3.2 RLE Data -- Optional System Input &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um317.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">The following are optional system input mnemonics, itemized on the links below. &nbsp;Most of them may be entered interactively with the dialog </span><span class="f_c1" style="font-weight: bold;">SYS</span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_p13-2"><span class="f_p13-2">&nbsp;</span></p>
+<p class="p_p13-2"><a name="32units"></a><span class="f_p13-2" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um32.htm#units" class="topiclink">UNITS { INCH / MM / CM / M }</a></span></p>
+<p class="p_p13-2"><span class="f_p13-2">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32nop"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#nop" class="topiclink">NOP/NSOLVE</a></span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#fname" class="topiclink">FNAME</a></span><span class="f_c1" style="font-weight: bold;"> 'name'</span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32vig"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#vig" class="topiclink">VIG</a></span><span class="f_c1" style="font-weight: bold;"> </span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um3321.htm#ncop" class="topiclink">NCOP/NTOP/NIOP</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32aps"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#aps" class="topiclink">APS NB</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32cfix"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#cfix" class="topiclink">CFIX</a> {C/E/R)</span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32novig"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#novig" class="topiclink">NOVIG</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32nos"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#nosequential" class="topiclink">NOSEQUENTIAL</a></span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32wap"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#wap" class="topiclink">WAP { 1 - 3 }</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32cfree"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#cfree" class="topiclink">CFREE</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32global"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#globalp" class="topiclink">GLOBAL</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32seq"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#sequential" class="topiclink">SEQUENTIAL</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32vfield"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD NHBAR…</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32bth"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#bth" class="topiclink">BTH NB</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32rel"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#relativep" class="topiclink">RELATIVE</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32ffield"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#ffield" class="topiclink">FFIELD</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32afocal"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#afocal" class="topiclink">AFOCAL</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32symm"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#symm" class="topiclink">SYMM</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32icr"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#icr" class="topiclink">ICR XEN YEN</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32nffield"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#ffield" class="topiclink">NFFIELD</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32focal"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#focal" class="topiclink">FOCAL</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32xpxt"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#xpxt" class="topiclink">XPXT</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32gts"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#gts" class="topiclink">GTS</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32vacuum"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#vacuum" class="topiclink">VACUUM</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32accom"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#accom" class="topiclink">ACCOM DIOPTERS</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32ypxt"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#ypxt" class="topiclink">YPXT</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32gtz"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#gtz" class="topiclink">GTZ</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32air"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#air" class="topiclink">AIR</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32fills"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#fillstop" class="topiclink">FILLSTOP</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32npxt"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#npxt" class="topiclink">NPXT</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32pcao"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#pcao" class="topiclink">PCAO</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32cap"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#capp" class="topiclink">CAP</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32nofill"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#nofill" class="topiclink">NOFILL</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32pxt"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#pxtp" class="topiclink">PXT</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32rcao"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#rcao" class="topiclink">RCAO</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32ncap"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#ncap" class="topiclink">NCAP</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32cstop"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#cstop" class="topiclink">CSTOP [ REAL X Y [ MARGIN ]</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32add"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#add" class="topiclink">ADD NB</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#cpupil" class="topiclink">CPUPIL</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32cfov"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#cfov" class="topiclink">CFOV</a>, SFOV</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32rfov"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#rfov" class="topiclink">RFOV</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#epupil" class="topiclink">EPUPIL</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#rpupil" class="topiclink">RPUPIL</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#rhand" class="topiclink">RHAND</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#rhand" class="topiclink">LHAND</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#lrays" class="topiclink">LRAYS</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#lrays" class="topiclink">RRAYS</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#pressure" class="topiclink">PRESSURE</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="32temp"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#temp" class="topiclink">TEMPERATURE</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#nas" class="topiclink">NAS</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#ndef" class="topiclink">NDEF</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#aperfect" class="topiclink">APERFECT</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#alpha" class="topiclink">ALPHA</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#prrules" class="topiclink">PRRULES</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#slow" class="topiclink">SLOW</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#pspace" class="topiclink">PSPACE</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um32.htm#rle_pcv_cv" class="topiclink">PCV CV</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#ycap" class="topiclink">YCAP</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#xcap" class="topiclink">XCAP</a></span></p>
+</td>
+<td style="vertical-align:top; width:152px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#evd" class="topiclink">EVD { X/Y/U/OFF}</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; height:8px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#immerse" class="topiclink">IMMERSE { WATER / SEAWATER / AIR / CUSTOM Nd Vd }</a></span></p>
+</td>
+<td style="vertical-align:top; width:142px; height:8px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#repb" class="topiclink">REPUPIL B</a></span></p>
+</td>
+<td style="vertical-align:top; width:133px; height:8px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:8px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p13-2"><span class="f_p13-2">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 2px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table cellspacing="0" cellpadding="4" border="0" style="width:800px; border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="8" style="vertical-align:top; width:681px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="units"></a><span class="f_c1" style="font-weight: bold;">UNITS { INCH / MM / CM / M }</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-indent: 3px;"><span class="f_c1">&nbsp;</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">Defines the lens units. &nbsp;Default is INCH unless switch 24 is ON, in which case it is mm. &nbsp;If units other than inches are selected, the text in this manual may be interpreted by reading the entered units wherever &quot;inches” is written in reference to lens or image dimensions. &nbsp;(But not in reference to the page margins, spot symbol size, etc.)</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="aps"></a><span class="f_c1" style="font-weight: bold;">APS </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">NB</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left; text-indent: 1px; margin: 0px 0px 0px 27px;"><span class="f_c1">is the surface number of the stop. &nbsp;Positive values yield a paraxial pupil solve, negative values a real-ray pupil solve . (See </span><span class="f_c1" style="text-decoration: underline;"><a href="um26.htm" class="topiclink">section 2.6</a></span><span class="f_c1">.) &nbsp;If NB = 1, or if this entry is omitted, no pupil solve is performed, and the values of YP1 and XP1 (if any) entered with the subsequent object specification are used. &nbsp;APS input also removes the wide-angle pupil option.</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="wap"></a><span class="f_c1" style="font-weight: bold;">WAP [1-3 ]</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">sets the wide-angle pupil options on. &nbsp;See </span><span class="f_c1" style="text-decoration: underline;"><a href="um263.htm" class="topiclink">section 2.6.3</a></span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="8" style="vertical-align:top; width:681px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="vfield"></a><span class="f_c1" style="font-weight: bold;">VFIELD </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">NHBAR</span><span class="f_c1" style="font-weight: bold;"> …</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">initiates the pupil vignetted with field option. &nbsp;See </span><span class="f_c1" style="text-decoration: underline;"><a href="um2631.htm" class="topiclink">section 2.6.3.1</a></span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="nop"></a><span class="f_mine" style="font-weight: bold;">NOP/</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">NSOLVE</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">NOP removes all pickups and solves in the lens, and NSOLVE removes all thickness and curvature solves, leaving pickups alone.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="symm"></a><span class="f_mine" style="font-weight: bold;">SYMM</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">removes all asymmetries caused by tilts and decenters, and all deformations. &nbsp;Torics and biconics will be changed to spherical surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bth"></a><span class="f_mine" style="font-weight: bold;">BTH </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">adds the value of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> to the back focal distance if the latter was computed by a thickness solve. &nbsp;To remove a current BTH, enter BTH 0 in a CHG file, or remove the solve. &nbsp;To vary this parameter in the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#pant" class="topiclink">PANT</a></span><span class="f_mine"> file, use VY 0 BTH.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This parameter may also be given if the lens is in </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#aperfect" class="topiclink">APERFECT</a></span><span class="f_mine"> mode. &nbsp; In this case, the image will be evaluated at a position that is shifted by </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> from the focal plane of the simulated perfect lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vig"></a><span class="f_mine" style="font-weight: bold;">VIG</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">turns on the automatic vignetting option, which deletes rays that violate clear apertures or encounter feathering or trace failures, in most of the analysis programs. &nbsp;(This is the default option.) See </span><span class="f_mine" style="text-decoration: underline;"><a href="um262.htm" class="topiclink">section 2.6.2</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="novig"></a><span class="f_mine" style="font-weight: bold;">NOVIG</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">turns off the vignetting option. &nbsp;Only ray failures will cause ray deletion.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="cfix"></a><span class="f_mine" style="font-weight: bold;">CFIX {C/E/R)</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">fixes the CAO's that have been previously calculated with CAP as though they had been entered by the user. &nbsp;Normally, CAO's computed with CAP are ignored when vignetting is calculated, but when CFIX is entered they are changed to hard apertures as though entered explicitly. &nbsp;You should call </span><span class="f_mine" style="font-weight: bold;">CAP</span><span class="f_mine"> before including this command in a </span><span class="f_mine" style="font-weight: bold;">CHG</span><span class="f_mine"> file. &nbsp;Used alone, the CFIX directive fixes all CAOs in the system.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optional arguments are for systems declared XCAP, which makes the default apertures rectangular.</span></p>
+<p class="p_mine"><span class="f_mine">The form </span><span class="f_mine" style="font-weight: bold;">CFIX {C/E/R</span><span class="f_mine">} (with no surface number) will convert the aperture of all surfaces into a circular (C), elliptical (E), or rectangular (R) hard aperture. &nbsp;.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also use the form </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> CFIX {C/E/R}</span><span class="f_mine"> to fix the CAO of only a single surface. with the same options..  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="cfree"></a><span class="f_mine" style="font-weight: bold;">CFREE</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">frees all CAO's from vignetting consideration. &nbsp;User-entered apertures are discarded</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="afocal"></a><span class="f_mine" style="font-weight: bold;">AFOCAL</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes the final ray angles in radians to be output instead of ray intercepts at the image surface. &nbsp;OPD output represents the departure of the wavefront from a plane wave. &nbsp;When using this option, the last two surfaces in the lens must be flat and coincident, and the last must contain no tilts or decenters (or undos). &nbsp;This option should be used if the distance to the image is extremely large (i.e., if UMC 0 is used on the last lens element) to avoid errors inherent in using very large numbers.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The ray angles output by SYNOPSYS are defined in the following illustration, where the values </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&Phi;</span><span class="f_mine"> and </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&Psi; </span><span class="f_mine">give the angle to the ray as measured from a point on the ray projected to the XZ or YZ plane.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um3f3_zoom100.png" width="533" height="425" alt="um3f3" style="width:533px;height:425px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This geometry has some subtle implications, which are discussed in </span><span class="f_mine" style="text-decoration: underline;"><a href="um751.htm" class="topiclink">Section 7.5.1</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For best accuracy, the last surface in the lens should be in the vicinity of the exit pupil. &nbsp;If it is not, and the rays are not exactly parallel to the chief ray, then the OPD calculation varies with the distance along the beam where the wavefront is calculated, and results are imprecise.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The AFOCAL option and its variants all model the image at a specified distance with a curvature centered at the last surface, or infinity for pure AFOCAL. &nbsp;Occasionally you may encounter a system operating at a very high F/number (which normally calls for AFOCAL mode) but where the image surface is flat and not a sphere centered about the last surface. &nbsp;Thus it does not fit the AFOCAL model very well. &nbsp;Another mode is available for such cases. &nbsp;Declare the system </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#slow" class="topiclink">SLOW</a></span><span class="f_mine">, and some of the precision issues are avoided. &nbsp;See that link for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:139px; padding:4px; border:solid 1px #000000;"><p class="p_c1"><a name="aperfect"></a><span class="f_c1" style="font-weight: bold;">APERFECT </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">EFL</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:541px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">This option is intended for use with a lens whose output is collimated and which ordinarily would require the AFOCAL option. &nbsp;It will evaluate the image quality and location that one would see if a perfect lens of the specified focal length were placed behind the system. &nbsp;Output is then in linear lens units instead of angular units.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">Like the AFOCAL option, this mode requires that the last two surfaces be flat, but in this case the two are not coincident; the program will assign a separation equal to the requested EFL, plus any </span><span class="f_c1" style="text-decoration: underline;"><a href="um32.htm#bth" class="topiclink">BTH</a></span><span class="f_c1"> value that may be in effect.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">A subtle difference arises because the image in AFOCAL mode is evaluated as it would appear if you looked directly along the chief ray, while the image from APERFECT mode is evaluated looking perpendicular to the image surface, as in FOCAL mode with a flat image surface. &nbsp;As a result, the image size and shape will be different in the two cases.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">See </span><span class="f_c1" style="text-decoration: underline;"><a href="um751.htm" class="topiclink">Section 7.5.1</a></span><span class="f_c1"> for more information.</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="focal"></a><span class="f_c1" style="font-weight: bold;">FOCAL</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1"><span class="f_c1">restores the default FOCAL mode.</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="8" style="vertical-align:top; width:251px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="accom"></a><span class="f_c1" style="font-weight: bold;">ACCOM </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">DIOPTERS</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="margin: 0px 0px 0px 3px;"><span class="f_c1">&nbsp;</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">is used for a system that is nominally AFOCAL but may be slightly defocused. &nbsp;Intended primarily for eyepiece design, this option requires two final surfaces, as does AFOCAL mode, but automatically places the last at a distance of 1M/</span><span class="f_c1" style="text-decoration: underline;">DIOPTERS</span><span class="f_c1"> from the previous one, and gives the image a curvature centered at the previous surface. &nbsp;An accommodation of minus one diopter would therefore yield a surface at a distance of minus one meter with a radius of curvature of one meter. &nbsp;If the eye of the user were focused at this accommodation, the image surface would be everywhere in focus. &nbsp;RAY output is in radians, as with AFOCAL mode, and all image analysis that is referenced to the chief ray is in units of angular </span><span class="f_c1" style="font-style: italic;">arc length</span><span class="f_c1"> along this curved image surface rather than X and Y coordinates. &nbsp;OPD errors are measured from a reference wave converging to the image surface.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">Be warned that this feature skirts the very situation for which the AFOCAL option was intended: an image formed by a very slow beam. &nbsp;This is an issue for the following reason. &nbsp;If all of the rays converge to the chief-ray point, then the OPDs will of course be zero. &nbsp;But if a small aberration causes a ray to become parallel to the chief ray, as it might in an extremely slow beam, then the OPDs </span><span class="f_c1" style="font-style: italic;">are again zero</span><span class="f_c1">. &nbsp;Simple geometry shows that there are always two solutions to the minimum-OPD curve, and a distant, accommodated, image puts them very close together.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><a name="32debye"></a><span class="f_c1">This problem is largely avoided by disabling the </span><span class="f_c1" style="font-weight: bold;">Debye approximation</span><span class="f_c1"> and referencing the OPD values to the actual distance from the pupil to the ray intercept. &nbsp;For this reason, the Debye approximation is automatically bypassed in ACCOM mode. &nbsp;This precaution moves the two regions further apart, and OPDs are more likely to be correct. &nbsp;In any event, be sure to examine the TAP and OPD curves to verify that the second is the integral of the first, and make sure that the next-to-last surface is indeed at the exit pupil. &nbsp;You can bypass the Debye calculation yourself by turning switch 66 ON.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">It is possible to change the accommodation setting during optimization, for cases where the field is allowed to curve but the image must be sharp. &nbsp;See </span><span class="f_c1" style="text-decoration: underline;"><a href="um1031.htm" class="topiclink">Section 10.3.1</a></span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1"><a name="fillstop"></a><span class="f_c1" style="font-weight: bold;">FILLSTOP</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">causes the paraxial quantity YMP1 to be replaced by a new value calculated so that the marginal paraxial ray intercepts the stop surface at the user-entered clear aperture. &nbsp;This calculation is performed each time a paraxial raytrace is executed.  </span><span class="f_c1" style="text-decoration: underline;"><a href="um265.htm" class="topiclink">See 2.6.5</a></span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="nofill"></a><span class="f_c1" style="font-weight: bold;">NOFILL</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">removes the FILLSTOP and CSTOP options, retaining the most recent values of YMP1 and CAO at the stop.</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="7" style="vertical-align:top; width:487px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="cstop"></a><span class="f_c1" style="font-weight: bold;">CSTOP [ REAL </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">X</span><span class="f_c1" style="font-weight: bold;"> </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">Y</span><span class="f_c1" style="font-weight: bold;"> [ </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">MARGIN</span><span class="f_c1" style="font-weight: bold;"> ] ]</span></p>
+</td>
+<td style="vertical-align:top; width:184px; padding:4px; border:solid 1px #000000;"><p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">sets the CAO of the stop surface equal to the axial marginal ray height on that surface. &nbsp;Default is the paraxial ray, but a real ray at pupil coordinates (X Y) may be requested.  <a href="um264.htm" class="topiclink">See 2.6.4</a></span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="pcao"></a><span class="f_c1" style="font-weight: bold;">PCAO</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">causes default clear apertures to be based on a paraxial raytrace, rather than on a real raytrace. &nbsp;This is useful when roughing out a system where there are real ray failures, and the lens drawings have no useful aperture shown. &nbsp;The default apertures are not used for vignetting analysis, as mentioned in </span><span class="f_c1" style="text-decoration: underline;"><a href="um62.htm#um621" class="topiclink">section 6.2.1</a></span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">If you turn on </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um29.htm" class="topiclink">switch 28</a></span><span class="f_c1">, this option is defeated. &nbsp;In that case, the program will </span><span class="f_c1" style="font-style: italic;">automatically</span><span class="f_c1"> enter PCAO mode temporarily if it finds ray failures in the clear aperture calculation resulting in zero apertures (and surfaces missing from the drawing!)</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="rcao"></a><span class="f_c1" style="font-weight: bold;">RCAO</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">removes the PCAO option. &nbsp;Default clear apertures will be based on real rays, as described in </span><span class="f_c1" style="text-decoration: underline;"><a href="um62.htm#um621" class="topiclink">section 6.2.1</a></span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="cfov"></a><span class="f_c1" style="font-weight: bold;">CFOV</span></p>
+<p class="p_c1" style="text-align: left;"><a name="sfov"></a><span class="f_c1" style="font-weight: bold;">SFOV</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">specifies that the field of view in X is the same as in Y. &nbsp;CFOV declares it to be circular, while SFOV makes it square. &nbsp;The program automatically sets the X-field size XP0 equal to YP0.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">If CFOV is selected, the program causes CAP to treat YP0 as the maximum field for determining clear apertures, and programs that analyze the field in both X and Y clip the field at a circle whose radius is YP0.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">If SFOV is selected, the program uses the semi-diagonal dimension of the field, tracing it in the Y-Z plane, to find clear apertures, and programs that analyze the field in both X and Y go out to the corners of the square field.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">You must still input both HBAR and GBAR parameters to </span><span class="f_c1" style="font-style: italic;">utilize </span><span class="f_c1">both the X and Y extent of the field when tracing rays or analyzing a given point in the field.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="rfov"></a><span class="f_c1" style="font-weight: bold;">RFOV</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">specifies that the field is rectangular. &nbsp;This command does not change the current value of XP0, but causes CAP to trace the semi-diagonal dimension of the field to find clear apertures (traced in the Y-Z plane). &nbsp;RFOV is the default.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="cpupil"></a><span class="f_c1" style="font-weight: bold;">CPUPIL</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="32cp"></a><span class="f_c1">specifies that the paraxial pupil is circular. &nbsp;This is the default, and if you change YMP1 manually, the value of XMP1 will automatically follow. &nbsp;If you attempt to change XMP1, the new value is ignored.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="epupil"></a><span class="f_c1" style="font-weight: bold;">EPUPIL</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">specifies that the paraxial pupil may be non-circular. If you change YMP1 manually, the value of XMP1 will </span><span class="f_c1" style="font-style: italic;">not</span><span class="f_c1"> change, and the pupil will in general then be elliptical in shape. &nbsp;A </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#cstop" class="topiclink">CSTOP</a></span><span class="f_c1"> in this instance will yield an elliptical aperture on the stop. &nbsp;Also turns on XPXT mode.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="rpupil"></a><span class="f_c1" style="font-weight: bold;">RPUPIL</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">specifies that the paraxial pupil is rectangular. If you change YMP1 manually, the value of XMP1 will not change. &nbsp;A </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#cstop" class="topiclink">CSTOP</a></span><span class="f_c1"> in this instance will yield a rectangular aperture on the stop. &nbsp;Also turns on XPXT mode.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="rhand"></a><span style="font-size: 12pt; font-weight: bold;">RHAND / LHAND</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">These entries control the definition of positive X and ZZ. &nbsp;The default is a left-handed coordinate system.  <a href="um24.htm" class="topiclink">See Section 2.4</a>.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="add"></a><span class="f_c1" style="font-weight: bold;">ADD </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">NB</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">adds the entered </span><span class="f_c1" style="text-decoration: underline;">NB</span><span class="f_c1"> to all following surface number references. &nbsp;This can be useful for renumbering a section of a lens file. &nbsp;Type LE, and then insert the ADD … line before the section you wish to renumber.  </span><span class="f_c1" style="text-decoration: underline;"><a href="um3312.htm" class="topiclink">Another form</a></span><span class="f_c1"> of the ADD directive takes a surface number, and only renumbers surfaces beyond a given point.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="globalp"></a><span class="f_c1" style="font-weight: bold;">GLOBAL</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">turns on the global option for the </span><span class="f_c1" style="font-style: italic;">system</span><span class="f_c1">. &nbsp;Global output may be requested giving surface positions (see </span><span class="f_c1" style="text-decoration: underline;"><a href="um46.htm" class="topiclink">4.6</a></span><span class="f_c1">) and ray paths (see </span><span class="f_c1" style="text-decoration: underline;"><a href="um632.htm" class="topiclink">6.3.2</a></span><span class="f_c1">). This mode is automatically set when you request any analysis that requires it, or if any surfaces are </span><span class="f_c1" style="text-decoration: underline;"><a href="um382.htm" class="topiclink">global</a></span><span class="f_c1">, </span><span class="f_c1" style="text-decoration: underline;"><a href="um383.htm" class="topiclink">local</a></span><span class="f_c1">, or have </span><span class="f_c1" style="text-decoration: underline;"><a href="um38.htm" class="topiclink">tilts or decenters</a></span><span class="f_c1">, or the </span><span class="f_c1" style="text-decoration: underline;"><a href="um384.htm" class="topiclink">external option</a></span><span class="f_c1"> is on. &nbsp;See </span><span class="f_c1" style="text-decoration: underline;"><a href="um242.htm" class="topiclink">section 2.4.2</a></span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="relativep"></a><span class="f_mine" style="font-weight: bold;">RELATIVE</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">may only be entered to change a lens that currently is in GLOBAL mode. &nbsp;All surfaces will be made RELATIVE, using normal tilts and decenters to define the position – unless doing so would require multiple tilts on any given surface. &nbsp;In that case an informative message will be printed. &nbsp;System GLOBAL mode remains on. &nbsp;(To turn off system global mode, use the </span><span class="f_mine" style="text-decoration: underline;"><a href="um362.htm#le" class="topiclink">LE</a></span><span class="f_mine"> lens editor, and remove all global references in the lens, or enter &quot;SYMM&quot; in a CHG file.) &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um381.htm" class="topiclink">3.8.1</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="icr"></a><span class="f_mine" style="font-weight: bold;">ICR </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Image Chief Ray: defines the pupil coordinates of the ray to be used as a reference for image quality features. &nbsp;This includes all chief-ray-related features such as FANs, SPTs, etc. -- but does not affect the ray used by the real pupil feature, which is always at the center of the pupil.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="gts"></a><span class="f_mine" style="font-weight: bold;">GTS</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Global thickness = Separation (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um382.htm" class="topiclink">3.8.2</a></span><span class="f_mine">). &nbsp;This is the default.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="gtz"></a><span class="f_mine" style="font-weight: bold;">GTZ</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Global Thickness = Z-component. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um382.htm" class="topiclink">3.8.2</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="xpxt"></a><span class="f_mine" style="font-weight: bold;">XPXT</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies paraxial raytracing in both X-Z and Y-Z planes. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="ypxt"></a><span class="f_mine" style="font-weight: bold;">YPXT</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies only Y-Z paraxial trace (default). &nbsp;Also turns off the EPUPIL and RPUPIL options, if on.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="npxt"></a><span class="f_mine" style="font-weight: bold;">NPXT</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">disables the paraxial raytrace performed automatically when a lens is input or changed in any way. &nbsp;Only the raytracing is defeated; options such as pickups, reverse tilts, etc. are still honored – but paraxial solves cannot be processed and should not be present. &nbsp;This is intended for systems in which the real ray and paraxial-ray behavior are not coupled, such as in nonsequential systems. &nbsp;Certain features of SYNOPSYS, such as NAR, BEAM, BGI, etc. are also defeated in this mode.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="pxtp"></a><span class="f_c1" style="font-weight: bold;">PXT</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">restores the paraxial raytrace option, in YPXT mode. &nbsp;This parameter is distinct from the </span><span class="f_mine" style="text-decoration: underline;"><a href="umch6.htm#um61" class="topiclink">PXT</a></span><span class="f_mine"> </span><span class="f_mine" style="font-style: italic;">command</span><span class="f_mine">. &nbsp;Also turns off the EPUPIL and RPUPIL options, if on.</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="ncap"></a><span class="f_c1" style="font-weight: bold;">NCAP</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">turns off the automatic clear aperture calculation performed before DWG, PER, and certain other features of SYNOPSYS. &nbsp;This is intended for systems in which the default rays selected for CAP are not appropriate or do not even trace, such as an off-axis strip-field telescope, which has no &quot;on-axis&quot; field point. &nbsp;If this option is used, every surface should have a user-entered CAO or other aperture.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="capp"></a><span class="f_c1" style="font-weight: bold;">CAP</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">turns on the automatic CAP option (default). &nbsp;This parameter is distinct from the </span><span class="f_c1" style="text-decoration: underline;"><a href="um62.htm#um621" class="topiclink">CAP</a></span><span class="f_c1"> </span><span class="f_c1" style="font-style: italic;">command</span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="ycap"></a><span style="font-size: 12pt; font-weight: bold;">YCAP</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">This causes default clear apertures to be calculated only in the Y-Z plane. &nbsp;If the system has a skew field defined, the calculation is otherwise taken at an angle corresponding to the maximum corner of the field. &nbsp;If the field is non-circular, that default may not be appropriate, especially if you plan to cut the lenses to a rectangular shape.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="xcap"></a><span style="font-size: 12pt; font-weight: bold;">XCAP</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">This option calculates default clear apertures in both the X and Y directions, producing rectangular apertures on all surfaces not assigned a hard aperture. &nbsp;It is intended mainly for strip-field designs, where the skew field is different from the meridional. &nbsp;It also honors the DCCR directive, which assigns the center of the aperture to the midpoint between the upper and lower rim rays.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:23%; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="nosequential"></a><span class="f_c1" style="font-weight: bold;">NOSEQUENTIAL</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:425px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">specifies a system in which rays may encounter surfaces in other than numerical sequence. &nbsp;See </span><span class="f_c1" style="text-decoration: underline;"><a href="umch18.htm" class="topiclink">chapter 18</a></span><span class="f_c1"> for a description of this feature.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:23%; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="sequential"></a><span class="f_mine" style="font-weight: bold;">SEQUENTIAL</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:425px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">restores sequential raytracing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="ffield"></a><span class="f_mine" style="font-weight: bold;">FFIELD</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">alters the object height so that the absolute value of GIHT equals the user-entered CAO on the last surface. &nbsp;In AFOCAL mode this CAO is entered in </span><span class="f_mine" style="font-style: italic;">angular</span><span class="f_mine"> units. &nbsp;NFFIELD removes this option. &nbsp;This is a paraxial feature. &nbsp;The </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um517.htm#ocalc" class="topiclink">OCALC</a></span><span class="f_mine"> command is a real-ray equivalent.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that FFIELD is probably not compatible with a user-entered value of YP1. &nbsp;The latter sets the chief-ray height on surface 1, while FFIELD changes the definition of full field. &nbsp;That implies a value of YP1 that very likely is not what the user entered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vacuum"></a><span class="f_mine" style="font-weight: bold;">VACUUM</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">sets the index of airspaces to 0.9997076. &nbsp;This entry changes </span><span class="f_mine" style="font-style: italic;">all</span><span class="f_mine"> airspaces in the lens; you may also change individual surfaces. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm" class="topiclink">section 3.3.4</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="immerse"></a><span style="font-weight: bold;">IMMERSE { WATER / SEAWATER / AIR / CUSTOM </span><span style="font-weight: bold; text-decoration: underline;">Nd</span><span style="font-weight: bold;"> </span><span style="font-weight: bold; text-decoration: underline;">Vd</span><span style="font-weight: bold;"> }</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry declares the entire lens system immersed in water, seawater, or a custom material. &nbsp;All airspaces will be raytraced with the index of that material, as defined by GLM parameters. &nbsp;Those parameters closely match the measured index values for water and seawater, and you should evaluate any custom material you wish to use to see if the glass model is adequately described by the index and Abbe number. &nbsp;If so, it should be safe to use those data as well.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You cannot assign the VACUUM property to individual surfaces when this is in effect. &nbsp;Enter IMMERSE AIR to restore normal AIR in airspaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The system PRESSURE is reset to 100% if this is entered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="air"></a><span class="f_mine" style="font-weight: bold;">AIR</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:657px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">restores index of all airspaces to 1.0.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:81px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="pressure"></a><span class="f_mine" style="font-weight: bold;">PRESSURE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">P</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; width:599px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">sets the index of airspaces to a value that depends on the value of </span><span class="f_mine" style="text-decoration: underline;">P</span><span class="f_mine">, which is the atmospheric pressure expressed as a percent of normal. &nbsp;Thus, if P = 100, the result is ordinary AIR, while 0 is vacuum. &nbsp;Indices so affected will be listed with the material (AIR) instead of AIR, alerting you to the distinction. &nbsp;The system pressure will be annotated in SPEC and other listings only if it is not equal to the default 100%.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">AI can also show and change the system pressure, with the AI input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">PRESSURE?</span></p>
+<p class="p_mine"><span class="f_mine">PRESSURE = </span><span class="f_mine" style="text-decoration: underline;">value</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="6" style="vertical-align:top; width:22%; padding:4px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px -7px 0px 0px;"><a name="temp"></a><span class="f_mine" style="font-weight: bold;">TEMPERATURE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TEMP</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:309px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">sets the system temperature at TEMP degrees C. &nbsp;This directive alters the index of refraction of all glass-table glasses that have been assigned thermal-index coefficients, or any indices that have user-entered coefficients. &nbsp;It has no effect on other dimensions in the lens. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm" class="topiclink">Section 3.3.4</a></span><span class="f_mine">. &nbsp;The system temperature will be included in SPEC and other listings only if it is </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> equal to the default 20 degrees C, or to inform you if any glass indices were recalculated to that temperature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that the Schott and Ohara catalog index values are measured at temperatures of 22 and 25 degrees, not the expected 20 degrees. &nbsp;The program will recalculate the indices at the system temperature (which defaults to 20 degrees) if any glasses are from those catalogs. &nbsp;You can therefore expect to see a slight difference between the index values reported by SPEC and PRT and those in the vendor’s catalog.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">AI can also show and change the system temperature, with the AI input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">TEMP?</span></p>
+<p class="p_mine"><span class="f_mine">TEMP = </span><span class="f_mine" style="text-decoration: underline;">value</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:81px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="fname"></a><span class="f_mine" style="font-weight: bold;">FNAME '</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">name</span><span class="f_mine" style="font-weight: bold;">'</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; width:599px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry is filled in by the program whenever you fetch or save a file. &nbsp;The </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">name</span><span class="f_mine"> entry is just the filename, which is then automatically restored after a GET or by any feature that uses the library for temporary storage. &nbsp;You will usually not have any reason to change this entry yourself.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you do want to specify a filename here, you have 31 characters available, and should avoid special characters such as !@#$%^&amp;*()|\?/&gt;&lt;~ and blanks.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="ncop"></a><span class="f_mine" style="font-weight: bold;">NCOP/NTOP/NIOP</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:483px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These entries will remove all curvature pickups and solves, all thickness pickups or solves, or all index pickups in the entire lens. &nbsp;Another version, following a surface number, affects only that surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="lrays"></a><span class="f_mine" style="font-weight: bold;">LRAYS/RRAYS</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:483px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Use LRAYS if light enters the lens going to the left. &nbsp;The default is RRAYS, which propagates to the right.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="nas"></a><span class="f_mine" style="font-weight: bold;">NAS</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:483px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Removes all relative tilts and decenters in the lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="ndef"></a><span class="f_mine" style="font-weight: bold;">NDEF</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:483px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Removes all general aspheric deformations in the lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="alpha"></a><span class="f_mine" style="font-weight: bold;">ALPHA </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">data</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:483px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry gives the default coefficient of linear thermal expansion (CTE) or alpha, of the material used for the lens housing. &nbsp;The </span><span class="f_mine" style="text-decoration: underline;"><a href="um59.htm#therm" class="topiclink">THERM</a></span><span class="f_mine"> feature will by default assign this coefficient to airspace dimensions, in accordance with whatever mounting scheme you have declared. See that link for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The second entry may either be an expansion coefficient or one of the names on the following list.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A5086 aluminum alloy 5086, coefficient 23.7E-6</span></p>
+<p class="p_mine"><span class="f_mine">A6061 aluminum alloy 6061, coefficient 23.4E-6</span></p>
+<p class="p_mine"><span class="f_mine">BECU beryllium copper alloy, coefficient 18.0E-6</span></p>
+<p class="p_mine"><span class="f_mine">BER beryllium I-70H, coefficient 11.4E-6</span></p>
+<p class="p_mine"><span class="f_mine">IRON gray cast, coefficient 10.8E-6</span></p>
+<p class="p_mine"><span class="f_mine">FCBRASS free-cutting brass, coefficient 20.5E-6</span></p>
+<p class="p_mine"><span class="f_mine">BRASS yellow, coefficient 20.3E-6</span></p>
+<p class="p_mine"><span class="f_mine">COPPER UNS C14310, coefficient 17.0E-6</span></p>
+<p class="p_mine"><span class="f_mine">FUSILICA, coefficient 0.55E-6</span></p>
+<p class="p_mine"><span class="f_mine">GRANITE, coefficient 6.3E-6</span></p>
+<p class="p_mine"><span class="f_mine">INVAR, coefficient 1.2E-6</span></p>
+<p class="p_mine"><span class="f_mine">SAPPHIRE, coefficient 4.0E-6</span></p>
+<p class="p_mine"><span class="f_mine">S304 stainless steel 304, coefficient 17.3E-6</span></p>
+<p class="p_mine"><span class="f_mine">S316 stainless steel 316, coefficient 16.0E-6</span></p>
+<p class="p_mine"><span class="f_mine">S440 stainless steel 440, coefficient 10.2E-6</span></p>
+<p class="p_mine"><span class="f_mine">ZERODUR, coefficient 0.5E-6</span></p>
+<p class="p_mine"><span class="f_mine">PYREX, coefficient 4.2E-6</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="prrules"></a><span class="f_mine" style="font-weight: bold;">PRRULES</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:483px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This optional system entry enables </span><span class="f_mine" style="font-weight: bold;">principal-ray rules</span><span class="f_mine">, which state that the reference point for OPDs and images that are not in the major color will be the principal ray in the requested color instead of the chief ray in the major color. &nbsp;This is intended primarily for designing spectrometers, where one wants a sharp image in each color but does not want the images to fall at the same place. &nbsp;If this option is selected, the effects of lateral color will be ignored. &nbsp;In this mode, it makes sense to ask for single-color analyses, in order to examine each image in turn. &nbsp;You can also ask for a multicolor analysis, but the images will then be superimposed as though there were no image separation, which may be confusing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optimization request </span><span class="f_mine" style="text-decoration: underline;"><a href="um10312.htm#aopd" class="topiclink">OPD</a></span><span class="f_mine"> will function the same as </span><span class="f_mine" style="text-decoration: underline;"><a href="um10312.htm#aopp" class="topiclink">OPP</a></span><span class="f_mine">, and </span><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm#gnr" class="topiclink">GNO</a></span><span class="f_mine"> will be the same as </span><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm#gnr" class="topiclink">GPO</a></span><span class="f_mine">, so you may use either for optimization with OPD targets. &nbsp;For transverse-ray targets, the </span><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm#gnr" class="topiclink">GPR</a></span><span class="f_mine"> form should be used, since GNR will still reference the chief-ray intercept, which would no longer be appropriate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To remove this option, use </span><span class="f_mine" style="font-weight: bold;">CRRULES</span><span class="f_mine"> (chief-ray rules).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="slow"></a><span class="f_mine" style="font-weight: bold;">SLOW</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:483px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If your lens works at a very slow speed (F/100 or more) but cannot be analyzed in AFOCAL mode because of special geometry, turn this option on to put into effect a special F/number calculation used by the diffraction image analysis routines. Normally, the F/number at the image is calculated by analyzing the convergence angle of selected rays. &nbsp;But for slow systems, that angle will be very small, and geometric aberrations may alter it by an amount not much different, thus making the F/number calculation, and the diffraction analysis which depends on it, unreliable. &nbsp;If this option is on, the calculation is instead done by analyzing the size of the beam at the next-to-last surface, which, together with the back focal distance, gives a more reliable figure for the F/number. This only works if the image plane is flat and without tilts and decenters or undos. &nbsp;The thickness before the image should be large compared with the geometric aberrations.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To remove this option and restore the default, enter </span><span class="f_mine" style="font-weight: bold;">FAST</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="pspace"></a></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">PSPACE</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:483px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This declaration can be assigned to a surface that follows a grazing-incident reflection. If rays headed to the right are still going in that direction after a reflection, they become </span><span class="f_mine" style="text-decoration: underline;"><a href="um251.htm#strangerays" class="topiclink">strange rays</a></span><span class="f_mine">. &nbsp;Those rays follow different rules for intersections, and elements in negative space are rendered differently. &nbsp;But if all rays in the beam are strange rays, it may be more convenient to declare the surface following the mirror PSPACE. &nbsp;Then the normal rules for intersections and rendering will apply.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that strange rays following a mirror will intercept the next surface according to the strange rules, even if that surface is declared PSPACE, since the rays themselves are still in negative space until they reach that surface. &nbsp;Thus it may be necessary to declare that surface INTERCEPT NEAR as well.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To remove the PSPACE declaration, use ASPACE to put the automatic space declaration in effect.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="rle_pcv_cv"></a><span class="f_mine" style="font-weight: bold;">PCV CV</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:483px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option causes curvature pickups to transfer the base radius only, not aspheric terms or the conic constant. &nbsp;It is used for tolerancing symmetric systems, where a given lens is supposed to be identical to its mirror image but has to be assigned separate tolerances.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="evd"></a><span class="f_mine" style="font-weight: bold;">EVD {X/Y/U/OFF}</span></p>
+</td>
+<td style="vertical-align:top; width:483px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Diffraction image analysis by default uses </span><span class="f_mine" style="font-style: italic;">scalar</span><span class="f_mine"> diffraction theory, which means that if two wavefronts are in phase they add, and if out of phase they cancel.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">But this theory is imprecise in the case of a very fast lens, such as a microscope objective, where the cone angle can be steep. &nbsp;If rays from opposite sides of the pupil arrive at the image at 90 degrees relative to each other, they cannot interfere and cannot contribute to the interference pattern that makes up the image. &nbsp;So resolution is lower than scalar theory predicts in such cases. &nbsp;A perfect lens working at F/0.628, for example, has a scalar MTF at 1/2 of cutoff of about 0.4, while a vector-diffraction analysis yields an MTF of 0.37 in X and 0.26 in Y, if the object is linearly polarized in Y. &nbsp;One would like to improve the accuracy of the scalar calculation in such cases.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you declare the object to be </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch17.htm" class="topiclink">polarized</a></span><span class="f_mine">, this effect is taken into account -- but not all features can analyze the effects of polarization. &nbsp;For example, the Fourier-transform DMTF takes it into account and does a vector-diffraction analysis, while the other MTF features, which use a convolution method, do not.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">EVD</span><span class="f_mine"> (Emulate Vector Diffraction) options provide a way to compensate for this shortcoming. &nbsp;If it is activated, the programs that would otherwise do a scalar analysis will emulate the results from the more accurate vector analysis, yielding, in the case of the MTF mentioned above, results that agree within about 0.5%. &nbsp;This emulation ignores reflection losses and coatings, since it is not a true polarization analysis, but is nonetheless useful when you want a realistic estimate of the resolution of your lens. &nbsp;If polarization mode is turned on, this option is ignored for those features that can utilize that mode.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The polarization mode to be emulated is given by the second word; X or Y for linear polarization in that direction, U for unpolarized (a superposition of X and Y), and OFF turns off the emulation.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000;"><br>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000;"><br>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:468px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="repb"></a><span class="f_mine" style="font-weight: bold;">REPUPIL B</span></p>
+</td>
+<td style="vertical-align:top; width:1px; padding:4px; border:solid 1px #000000;"><br>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000;"><br>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000;"><br>
+</td>
+<td style="vertical-align:top; width:483px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Most users will not have to use this option. &nbsp;When the program requires a real chief ray, declared by a minus sign on the APS entry, it performs an iterative search for the ray that passes through the center of the stop surface. &nbsp;The wide-angle WAP ... options can modify the path, but the first step is to find that ray.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Normally, the first iteration tries the paraxial ray path, and if that ray traces successfully, the program begins a search for the central ray starting from there. &nbsp;But this calculation is more complicated than you might expect, and we have seen many wide-angle lenses for which there are two solutions, owing to the presence of a caustic related to the pupil aberrations. &nbsp;In the event that the first iteration happens to fall on the wrong side of the caustic, the search usually fails.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The REPUPL B option can in some cases succeed in finding the correct chief ray even then. &nbsp;It ignores the paraxial path and begins a systematic search, performed on a reversed copy of the lens, tracing from the stop surface out to the original object, which is then at the end. &nbsp;When a ray is found that goes to the desired object point, the original lens is restored and that path becomes the first iteration. (This search is automatically performed if the paraxial path will not trace.)  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The REPUPIL B option is intended only for rare cases where the paraxial path will trace but finds the wrong solution. The default is REPUPIL A, which starts with the paraxial path if it traces successfully.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Be aware that occasionally one encounters a lens for which there is no solution to the pupil search. &nbsp;A tactic we have sometimes used in such cases is to revert to a previous lens that traced correctly, and then add a target in the merit function so the real chief-ray intercept is close to the paraxial value. &nbsp;That reduces pupil aberrations, and the real pupil is less likely to fail thereafter. &nbsp;For example, one might use the following in the AANT file:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M 0 1 A P YA 1 0 0 0 1</span></p>
+<p class="p_mine"><span class="f_mine">S YP1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000;"><br>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000;"><br>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um317.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

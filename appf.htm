@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>appf</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-size: 14pt; font-family: 'Times New Roman'; font-style: italic; font-weight: bold;">SYNOPSYS User’s Manua</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 14pt; font-family: 'Times New Roman'; font-style: italic; font-weight: bold;">Appendix F</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-size: 14pt; font-weight: bold;">GLASS MODEL CALCULATIONS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When varying the index of refraction, one would ideally wish the indices at all wavelengths to vary in such a way that the relative partial dispersions agree with those found in real glasses of similar index and V-number. &nbsp;Since real glasses show a variety of wavelength dependencies, however, one can at best model this behavior only approximately. &nbsp;SYNOPSYS uses an interpolation formula that gives the index at any wavelength as a function of Nd and Vd; although these index values do not necessarily correspond exactly to any cataloged glass, the model is nonetheless useful as a design tool since you can predict approximately the amount of secondary spectrum you will obtain when real glasses from the same region of the glass map are substituted into a design.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p style="text-align: justify;"><span style="font-size: 11pt;">The interpolation formula in SYNOPSYS is of the following form:</span></p>
+<p style="text-align: justify;"><span style="font-size: 11pt;">Given a desired Nd, Vd, and wavelength, </span><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&lambda;</span><span style="font-size: 11pt;">, let</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">L1 = </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&lambda;</span><span class="f_mine">**</span><span class="f_mine" style="font-weight: bold;">2 - </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&lambda;</span><span class="f_mine" style="font-weight: bold;">d**2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">L2 = 1 /</span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;"> &lambda;</span><span class="f_mine" style="font-weight: bold;">**2 - 1 /</span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;"> &lambda;</span><span class="f_mine" style="font-weight: bold;">d**2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">L3 = 1 /</span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;"> &lambda;</span><span class="f_mine" style="font-weight: bold;">**4 - 1 /</span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;"> &lambda;</span><span class="f_mine" style="font-weight: bold;">d**4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">L4 = 1 /</span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;"> &lambda;</span><span class="f_mine" style="font-weight: bold;">**6 - 1 /</span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;"> &lambda;</span><span class="f_mine" style="font-weight: bold;">d**6</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&lambda;</span><span class="f_mine">d = 0.58756 </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&mu;</span><span class="f_mine">M. &nbsp;Then</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">N = Nd + ( C1 + C2 Nd + C3 Nd**2) L1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">+ ( D1 + D2 Nd + D3 Vd**Nd/Nd**2 ) L2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">+ ( E1 + E2/(Nd**3 Vd) + E3/(Nd Vd ) L3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">+ ( F1/Vd**2 + F2/(Nd Vd**2)) L3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">+ ( F3*L4**2*Vd**4 + G1/Vd**4 + G2*Nd**Vd + G3*Nd**2/Vd**3) L4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-size: 11pt;">The values of the coefficients in the above formula have been determined to be</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p><span style="font-family: Consolas;"> &nbsp; &nbsp; &nbsp;(C1 = -0.659750E-01, C2 = &nbsp; 0.823701E-01, C3 = &nbsp;-0.266608E-01)</span></p>
+<p><span style="font-family: Consolas;"> &nbsp; &nbsp; &nbsp;(D1 = -0.176259E-01, D2 = &nbsp; 0.157046E-01, D3 = &nbsp;-0.952593E-05)</span></p>
+<p><span style="font-family: Consolas;"> &nbsp; &nbsp; &nbsp;(E1 = &nbsp;0.431113E-03, E2 = &nbsp; 0.615268E-01, E3 = &nbsp;-0.117961E+00)</span></p>
+<p><span style="font-family: Consolas;"> &nbsp; &nbsp; &nbsp;(F1 = &nbsp;0.717936E+00, F2 = &nbsp; 0.315466E+01, F3 = &nbsp; 0.239483E-19)</span></p>
+<p><span style="font-family: Consolas;"> &nbsp; &nbsp; &nbsp;(G1 = -0.478519E+02, G2 = &nbsp; 0.151743E-20, G3 = &nbsp; 0.507817E+00)</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_mine"><span class="f_mine">This formula gives representative index values over the spectral range of </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&lambda;</span><span class="f_mine"> =.35 to .9</span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&mu;</span><span class="f_mine">M.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The values returned model the catalog indices with reasonable but not perfect accuracy. &nbsp;This is to be expected, since many glasses show dispersions that depart from the normal line, and the model represents an average value. &nbsp;Because the fit is not perfect for all glasses, a surface that </span><span class="f_mine" style="font-style: italic;">picks up </span><span class="f_mine">a glass model will, in general, exhibit N</span><span class="f_mine" style="font-size: 8pt;">d </span><span class="f_mine">and V</span><span class="f_mine" style="font-size: 8pt;">d</span><span class="f_mine"> that are slightly different</span><span class="f_mine" style="font-size: 8pt;"> </span><span class="f_mine">from the values called for in the model. &nbsp;The SPEC listing will show the desired parameters for the model glass (the </span><span class="f_mine" style="font-style: italic;">input</span><span class="f_mine"> to the model), while the </span><span class="f_mine" style="font-style: italic;">calculated</span><span class="f_mine"> properties (the output results) are shown for a surface that picks up the index – and the two therefore look slightly different in the listing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The coefficients above were found with a least-squares fit to selected glasses from the Schott catalog, with errors minimized over the spectral range 0.35 to 0.9 um. &nbsp;Although the model can be used outside this range, accuracy degrades as one goes beyond those values.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A second set of coefficients is available, for use when all wavelengths are in the UV, between 0.35 and 0.45 uM. &nbsp;This set is more precise over just this region, and can help when you design microlithography lenses, which require the shorter wavelengths. &nbsp;To activate this option, include the system parameter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">ILINE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">in the RLE or CHG file. &nbsp;To remove it, use </span><span class="f_mine" style="font-weight: bold;">NILINE</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>optimizing a ZFILE zoom lens</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="optimization--&gt;,ZFILE airspaces, controlling,ZGROUP" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">10.7.1.1 Optimizing ZFILE zoom lenses &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10712.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1071.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Variables in a ZFILE zoom lens are input to the </span><span class="f_mine" style="font-weight: bold;">PANT</span><span class="f_mine"> file in exactly the same way as fixed-focus lenses, with the variable &quot;</span><span class="f_mine" style="font-weight: bold;">ZDATA</span><span class="f_mine">&quot; used to vary the zoom motion of a given group. &nbsp;Every thickness or airspace that is to be varied in zoom 1 must be declared with a TH variable. &nbsp;(They are not affected by the ZFILE data since those data apply only to ZOOM 2 and higher.) &nbsp;The other zooms start with the current value of those variables and then add or subtract the current ZDATA value to arrive at a new set of spacings that apply only to that zoom. &nbsp;You never give a TH variable with the intent that it will apply only to a specified zoom, since the other variables take care of all cases. &nbsp;If your lens really has different thicknesses in the other zooms that are </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> a result of the zoom settings, then you should use the multiconfiguration method instead of the ZFILE.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The format for ZFILE zoom variables is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VY </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GN</span><span class="f_mine" style="font-weight: bold;"> ZDATA </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ZP</span><span class="f_mine" style="font-family: 'Times New Roman';">,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="text-decoration: underline;">GN</span><span class="f_mine"> is a group number and </span><span class="f_mine" style="text-decoration: underline;">ZP</span><span class="f_mine"> is the zoom position to vary. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Suppose, for example, you want to vary the zoom position of the second group in zoom number 3. &nbsp;The variable would then be</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">PANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">… &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(other variables)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">VY 2 ZDATA 3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">… &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(other zoom variables)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> A simpler notation is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST ZDATA ALL</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">which automatically creates variables for all zoom groups in all defined zooms.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Aberrations may also be corrected in the several zoom positions. &nbsp;To do so, the </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> file must contain the line</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">ZOOM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NZOOM</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">before the aberration to be analyzed in that zoom position. &nbsp;For example, if third-order spherical aberration is to be corrected in both zoom 1 and zoom 2, the AANT file might include</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">AANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZOOM 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">… &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(other aberrations)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A SA3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZOOM 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A SA3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">… &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(other aberrations in zoom 2)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZOOM 3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">… &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(aberrations in zoom 3, etc.)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also use the ZGROUP option to declare that a group of AANT entries will apply to all zooms or only those in a list. &nbsp;The format is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">ZGROUP [ ALL / </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">gp</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">gp</span><span class="f_mine" style="font-weight: bold;"> ... ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">(aberrations ...)</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that this group declaration must end with the END line, which is distinct from the END line that closes the AANT file. &nbsp;See <a href="um103.htm#aant" class="topiclink">Section 10.3</a> for examples.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is possible to hold just about anything constant across zoom positions. &nbsp;For example, the spherical aberration may be held constant with the following </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> input:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">AANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZOOM 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A SA3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZOOM 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">S SA3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this example we correct to zero the </span><span class="f_mine" style="font-style: italic;">difference</span><span class="f_mine"> between SA3 in zooms 1 and 2.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One naturally wants the airspaces that result from the combination of TH values in ZOOM 1 and the ZFILE data in other zooms to remain always positive (or negative, if the light is going to the left). &nbsp;The usual boundaries that apply to variables will not accomplish this, since the zoomed thickness is not itself a variable but is composed of two other parameters that are. &nbsp;The simplest way to control the airspaces in question is with the monitor</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">AZA </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine" style="font-family: 'Times New Roman';">,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">which will check the airspace on both sides of each zoom group in each zoom, and create an aberration if the value is less than </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine">. &nbsp;The error so found will vary quadratically over the range given by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine">, with a weight of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine">, and linearly above that range. &nbsp;This monitor only works in the current configuration (not in multiconfiguration optimization) and the target should be a positive number (the default is 1 mm). &nbsp;It is not intended for cases where the light goes to the left and thicknesses are negative.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may also control individual airspace values via an aberration in the AANT file.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f18.png" width="551" height="194" alt="um10f18" style="width:551px;height:194px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Suppose that when you optimize the above lens, the airspace between surfaces 4 and 5 tends to become negative in ZOOM 2. &nbsp;If this occurs when you are first roughing out the lens, the violation may or may not continue as the geometry changes, but when the lens is near its final form, the violation will likely persist.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The second case is easy to control. &nbsp;When one identifies a particular airspace that consistently tries to go negative, just target the offending TH to a convenient small value, and adjust the weight as required. &nbsp;For example</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">AANT</span></p>
+<p class="p_mine"><span class="f_mine">…</span></p>
+<p class="p_mine"><span class="f_mine">ZOOM 2</span></p>
+<p class="p_mine"><span class="f_mine">M 1 10 A TH 4</span></p>
+<p class="p_mine"><span class="f_mine">…</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This will tend to make thickness 4 acquire the value 1.0, and thereby prevent its going negative.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the lens is changing substantially, however, one does not want to target the thickness to a particular value, because later on it might very well want to become even </span><span class="f_mine" style="font-style: italic;">larger</span><span class="f_mine">, which itself is no problem but would be prevented by the above aberration. &nbsp;Here is where the one-sided aberration </span><span class="f_mine" style="text-decoration: underline;"><a href="um10351.htm" class="topiclink">LUL</a></span><span class="f_mine"> is useful.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this case one could add an aberration as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">AANT</span></p>
+<p class="p_mine"><span class="f_mine">…</span></p>
+<p class="p_mine"><span class="f_mine">ZOOM 2</span></p>
+<p class="p_mine"><span class="f_mine">LUL .5 1 .1 A TH 4</span></p>
+<p class="p_mine"><span class="f_mine">…</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here, we specify that if thickness 4 should get a value below 0.5 during optimization, it will be considered an aberration with a weight of 1.0. &nbsp;In other words, small values are penalized while larger values are not, so the program will not let the airspace get smaller because the aberration grows too large if it does – but it can become larger than this if it wants to. &nbsp;One will usually have to adjust the targets and weights in the above example according to the spacing one wants to achieve and the values of the other aberrations: if those are much larger than 1.0, then the limit defined in this manner may not affect things since its contribution is minimal; a larger penalty may be needed. &nbsp;It is best to try your optimization first, in order to identify those airspaces that are going to be a problem, and then add limits to the values in all zooms where they are needed. &nbsp;Avoid using very small ranges with large penalty values. &nbsp;Start with gentle penalties and increase them gradually until the desired effect is achieved. &nbsp;Of course the </span><span class="f_mine" style="font-weight: bold;">AZA</span><span class="f_mine"> monitor is much easier to use and accomplishes exactly the same thing.</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10712.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

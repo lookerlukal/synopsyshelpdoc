@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>HIDD_SPECTRUMWIZARD</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="MSW,Spectrum, source and target,Wizard,Wizard spectrum" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-weight: bold;">Spectrum Wizard Dialog</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">This Wizard is accessed via the menu </span><span class="f_footnotetext" style="font-weight: bold;">Wizard | Spectrum Wizard</span><span class="f_footnotetext">, or via the command </span><span class="f_footnotetext" style="font-weight: bold;">MSW</span><span class="f_footnotetext" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">This dialog shows the spectral curves of a source and a target, as well as their product. &nbsp;You select the wavelength interval of interest by typing into the appropriate data boxes – or by clicking on the “spin buttons” just to the right of the data boxes. &nbsp;When you have the desired range displayed, select a source and a target, and then click </span><span class="f_footnotetext" style="font-weight: bold;">Get Spectrum</span><span class="f_footnotetext">. &nbsp;The curves are shown on the dialog.  </span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The next step is to utilize these data for multicolor image analysis. &nbsp;You can transfer the wavelengths and weights to lens file by selecting the number of wavelengths you want and then clicking </span><span class="f_footnotetext" style="font-weight: bold;">Apply to lens</span><span class="f_footnotetext">. &nbsp;You can then use any of the image analysis features that permit a multicolor “M” entry to analyze the image in those colors with those weights.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">If the lens contains any indices that do not permit recalculation, you cannot use the above feature since it requires that rays can be traced at the new wavelengths, and this requires new indices at those wavelengths.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">If you select a </span><span class="f_footnotetext" style="font-weight: bold;">discrete source</span><span class="f_footnotetext"> instead of one of the blackbody (continuous) sources, the above options will select only wavelengths that are actually present in the spectrum of that source and within the current wavelength range. &nbsp;(There may be none, producing an error message). &nbsp;With this feature it is likely that you will not get the requested number of colors or wavelengths. &nbsp;But as long as at least one spectral line is in the range, you will get at least that data, and you can then perform the image analysis at that (or those) wavelengths.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The button </span><span class="f_footnotetext" style="font-weight: bold;">To Clipboard</span><span class="f_footnotetext"> sends a bitmap copy of the Spectrum Wizard dialog to the Windows clipboard. &nbsp;Then you can paste it into any third-party program that can accept graphics, like Word or any graphics editor.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">You can also print a copy of the dialog by clicking the </span><span class="f_footnotetext" style="font-weight: bold;">Print</span><span class="f_footnotetext"> button. &nbsp;SYNOPSYS will send a bitmap-copy of the dialog window to the printer.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">When you click the </span><span class="f_footnotetext" style="font-weight: bold;">Apply to lens</span><span class="f_footnotetext"> button, the program normally assigns new wavelengths and weights, as noted above. &nbsp;But if you select the option to </span><span class="f_footnotetext" style="font-weight: bold;">Keep current wavelengths</span><span class="f_footnotetext">, the program finds the weights at the wavelengths currently in the lens and only alters the weights at those wavelengths, according to the selected source and detector, keeping the wavelengths themselves constant.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-weight: bold;">Caution:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">When you apply these data to the lens file, you usually change the primary wavelength, and this will result in </span><span class="f_footnotetext" style="font-weight: bold;">different paraxial solves</span><span class="f_footnotetext">, if any are present. &nbsp;In particular, if the lens contains curvature solves, the radii that result will be different. &nbsp;This can have profound effects on the entire system if it goes unnoticed, and a warning message will be displayed if this is the case.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Of course the </span><span class="f_footnotetext" style="font-weight: bold;">transmission of the optics</span><span class="f_footnotetext"> strongly influences spectral weights, as well as do the source and detector. &nbsp;The Spectrum Wizard does not model this transmission at the present time, however (a future update will augment the entire glass catalog with transmission data for all glasses, and then the Wizard will be able to model the optics as well). &nbsp;So in order to make a realistic selection of wavelengths and weights, always select a wavelength region which you know is transmitted by the optics, when you use the Spectrum Wizard. &nbsp;If you want to modify the weights generated by this Wizard, go to the MMC dialog, which shows the weights (and wavelengths) that were generated, and then type your modified weights into the data boxes.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">If you intend to view the image with </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="hidd_mit.htm" class="topiclink">Image Tools</a></span><span class="f_footnotetext"> (command </span><span class="f_footnotetext" style="font-weight: bold;">MIT</span><span class="f_footnotetext">), or the </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um862.htm#psprd" class="topiclink">PSVISUAL</a></span><span class="f_footnotetext"> </span><span class="f_footnotetext" style="font-weight: bold;">PSPRD</span><span class="f_footnotetext"> option, </span><span class="f_footnotetext" style="font-style: italic;">do not</span><span class="f_footnotetext"> use the “Visual” weighting curves. &nbsp;Although this seems counter-intuitive, keep in mind that </span><span class="f_footnotetext" style="font-style: italic;">your eye</span><span class="f_footnotetext"> will add the eye curve automatically, and you don’t want it added twice. &nbsp;For all other image analysis, however, you should incorporate the eye response curve into the weights before performing your image analysis, if the system is intended for visual use.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The detector data presented in this dialog are derived from a variety of sources, including vendor data sheets. &nbsp;Since OSD does not control these products or data, </span><span class="f_footnotetext" style="font-style: italic;">it makes no warranty of any kind regarding the accuracy or completeness of the data presented. &nbsp;Always verify these data with the vendor prior to making a commitment regarding a choice of detector</span><span class="f_footnotetext">. &nbsp;The curves for CCDs and photographic films are all normalized prior to display, and you should therefore make no assumptions about the relative sensitivity or efficiency of one as compared to another based on the screen display.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-weight: bold;">Request:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">This is new feature with only a few representative sources and detectors. &nbsp;We ask all users to notify us if they need a source or detector that is not included. &nbsp;Please provide the spectral data, when making this request – and your curve will be in the next update!</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

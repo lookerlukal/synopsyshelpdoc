@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um5.54</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DLL: adding your own custom extension to SYNOPSYS,USER DLL" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">um5.54</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;background:url(background-topic-header.jpg)" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   &raquo;No topics above this level&laquo;
+   </p>
+   <h1 class="p_Heading1"><span class="f_Heading1">um5.54</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <img src="hm_btn_navigate_prev_d.png" border="0"
+        ><a href="main_index.htm"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img name=main src="hm_btn_navigate_top.png" border=0 alt="Return to chapter overview"
+        ></a><img src="hm_btn_navigate_next_d.png" border="0">
+    </td>
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="text-align: center; line-height: 1.70; margin: 0px 0px 11px 0px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; line-height: 1.70; margin: 0px 0px 11px 0px;"><span style="font-size: 14pt; font-family: Calibri; font-weight: bold;">Creating and using a custom DLL file with SYNOPSYS™ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-decoration: underline;"><a href="5_55_black__box_lens.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um553.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p style="line-height: 1.70; margin: 0px 0px 11px 0px;"><span style="font-size: 11pt; font-family: Calibri;">Occasionally a user of SYNOPSYS has need for a feature that is not currently in the program. &nbsp;When this happens, you are encouraged to contact us and request the new feature. &nbsp;Be specific about what it will do: the input and output, and the applicable theory if it is complicated. &nbsp;We usually respond quickly to such requests.</span></p>
+<p style="line-height: 1.70; margin: 0px 0px 11px 0px;"><span style="font-size: 11pt; font-family: Calibri;">But not always. &nbsp;If a new feature is judged to be of little interest to the general community, or if the theory is very complicated and there will be few eventual users, we might decline. &nbsp;In such cases, you can write your own DLL and link it into SYNOPSYS.</span></p>
+<p style="line-height: 1.70; margin: 0px 0px 11px 0px;"><span style="font-size: 11pt; font-family: Calibri;">Be advised that this step is not for the fainthearted. &nbsp;You will have to know a great deal about programming in MFC with C++. &nbsp;If you have not yet jumped into that whirlpool, you will find it cryptic, user-hostile, and frustrating. &nbsp;Nonetheless, it can be done if you are an expert. &nbsp;Here are the steps:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 11px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.70;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:11pt; font-family: 'Calibri';color:#000000;">1.</span></td><td style="border:none"><span style="font-size: 11pt; font-family: Calibri;">Ask for a copy of USERDLL.sln from OSD, LLC &nbsp;This contains a rudimentary structure to which you can add your custom programs.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 11px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.70;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:11pt; font-family: 'Calibri';color:#000000;">2.</span></td><td style="border:none"><span style="font-size: 11pt; font-family: Calibri;">Get Microsoft Visual Studio 2010, which is the version that will link to SYNOPSYS.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 11px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.70;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:11pt; font-family: 'Calibri';color:#000000;">3.</span></td><td style="border:none"><span style="font-size: 11pt; font-family: Calibri;">The sample programs in USERDLL.sln contain several sections, most of which are involved with communicating between SYNOPSYS and the DLL. &nbsp;Do not change any of those sections! &nbsp;The section you can customize is called MyDLLFiles.cpp.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 11px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.70;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:11pt; font-family: 'Calibri';color:#000000;">4.</span></td><td style="border:none"><span style="font-size: 11pt; font-family: Calibri;">The sample code shows how to create a custom surface shape. &nbsp;This shape will be defined entirely by a set of 43 aspheric coefficients, entered with the XDD input format in an RLE file. &nbsp;Your code must be able to return the surface sag as a function of X and Y, the axial curvature in X and Y, and must be able to adjust the G-coefficients when the lens is scaled or reversed. &nbsp;The example does these things for a shape with one coefficient, namely the curvature.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 11px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.70;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:11pt; font-family: 'Calibri';color:#000000;">5.</span></td><td style="border:none"><span style="font-size: 11pt; font-family: Calibri;">The sample also shows how to write code to analyze the image, either with transverse aberrations or OPDs. &nbsp;It can calculate the RMS spot size and wavefront in a single color and field. &nbsp;You can enlarge this capability as much as you wish. &nbsp;(Of course, SYNOPSYS can already do this kind of image evaluation; the examples are given only to show you how to write this kind of program.)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 11px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.70;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:11pt; font-family: 'Calibri';color:#000000;">6.</span></td><td style="border:none"><span style="font-size: 11pt; font-family: Calibri;">The file fortranstructures.h lists the contents of most of the common blocks in SYNOPSYS, from which you can extract whatever lens data you wish. &nbsp;It is not recommended that you</span><span style="font-size: 11pt; font-family: Calibri; font-style: italic;"> change</span><span style="font-size: 11pt; font-family: Calibri;"> any of these data in your own routine, however. &nbsp;Use the RLE and CHG formats instead. &nbsp;Those have extensive error checking and initialize a host of arrays and constants needed by many features of the program, which your DLL file will not be able to do. &nbsp;Be warned.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 11px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.70;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:11pt; font-family: 'Calibri';color:#000000;">7.</span></td><td style="border:none"><span style="font-size: 11pt; font-family: Calibri;">Your custom DLL will be able to write its results to the Command Window, using the sample code provided.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 11px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.70;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:11pt; font-family: 'Calibri';color:#000000;">8.</span></td><td style="border:none"><span style="font-size: 11pt; font-family: Calibri;">When your DLL is complete and compiles correctly, copy the file USERDLL.dll into the SYNOPSYS directory. &nbsp;The program will look for it there.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 11px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.70;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:11pt; font-family: 'Calibri';color:#000000;">9.</span></td><td style="border:none"><span style="font-size: 11pt; font-family: Calibri;">When SYNOPSYS starts up, it &nbsp;automatically loads your DLL if it is present. &nbsp;To check, enter the command </span><span style="font-size: 11pt; font-family: Calibri; font-weight: bold;">USER DLL</span><span style="font-size: 11pt; font-family: Calibri;">, which will show a message telling you whether the load was successful or not. &nbsp;Then, to use a custom shape, enter it as shape </span><span style="font-size: 11pt; font-family: Calibri; font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss18" class="topiclink">USS 18</a></span><span style="font-size: 11pt; font-family: Calibri;"> and give the required coefficients as G-terms. &nbsp;To use your custom image analysis, use the command</span><span style="font-size: 11pt; font-family: Calibri; font-weight: bold;"> USER DLL IMAGE </span><span style="font-size: 11pt; font-family: Calibri; font-weight: bold; text-decoration: underline;">NRYS</span><span style="font-size: 11pt; font-family: Calibri; font-weight: bold;"> </span><span style="font-size: 11pt; font-family: Calibri; font-weight: bold; text-decoration: underline;">ICOL</span><span style="font-size: 11pt; font-family: Calibri; font-weight: bold;"> </span><span style="font-size: 11pt; font-family: Calibri; font-weight: bold; text-decoration: underline;">HBAR</span><span style="font-size: 11pt; font-family: Calibri; font-weight: bold;"> </span><span style="font-size: 11pt; font-family: Calibri; font-weight: bold; text-decoration: underline;">GBAR</span><span style="font-size: 11pt; font-family: Calibri;">. &nbsp;(Or you can define your own data based on the input in the CARD() array.) &nbsp;If that command is preceded by the </span><span style="font-size: 11pt; font-family: Calibri; font-weight: bold;">OPD</span><span style="font-size: 11pt; font-family: Calibri;"> command, the OPD section of the analysis will be used. &nbsp;Use the command </span><span style="font-size: 11pt; font-family: Calibri; font-weight: bold;">USER DLL CUSTOM </span><span style="font-size: 11pt; font-family: Calibri;">to run any other code you have put in the routine pfnDoUserFunc() in the USERDLL files.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 11px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.70;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:11pt; font-family: 'Calibri';color:#000000;">10.</span></td><td style="border:none"><span style="font-size: 11pt; font-family: Calibri;">If you succeed in getting your custom shape or image analysis working, by all means send us a copy of it. &nbsp;We then might well incorporate it into the program itself.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 11px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.70;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:11pt; font-family: 'Calibri';color:#000000;">11.</span></td><td style="border:none"><span style="font-size: 11pt; font-family: Calibri;">We do not guarantee that your DLL will work or the results will be correct. &nbsp;You do this at your own risk.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 11px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.70;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:11pt; font-family: 'Calibri';color:#000000;">12.</span></td><td style="border:none"><span style="font-size: 11pt; font-family: Calibri;">Best of luck to you. &nbsp;We may or may not be able to help you diagnose bugs in your code. &nbsp;As we said, this is not for the fainthearted.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 11px 24px;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: 1.70;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:24px"></td><td style="border:none;padding:0"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="text-decoration: underline;"><a href="5_55_black__box_lens.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um553.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></td></tr></table></div>
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>

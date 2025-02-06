@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1751</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="birefringent,birefringent raytracing" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">17.5.1 Birefringent raytracing &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1752.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um175.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Tracing rays into birefringent media involves two steps not required for ordinary polarization raytracing. &nbsp;The first concerns the ray path in the medium, which in the case of the ordinary ray is given by the usual Snell's law formula where the ordinary index is taken. &nbsp;The situation becomes more complicated with the extraordinary ray, since the effective index in the medium is not just the 'extraordinary index&quot;, but is instead a function of the ray angle within the medium. &nbsp;The program solves for the index affecting a given ray based on the incident ray angle and the crystal axis direction, and then applies the refraction formula, yielding a refracted wavefront normal vector. &nbsp;This vector is not, in general, aligned with the Poynting vector in the medium, however, since propagation within a birefringent medium is not in the direction normal to the wavefront. &nbsp;The ray is therefore extended along the direction of the Poynting vector – since that defines the direction of energy flow – and upon reaching the exiting face of the crystal it is refracted again. &nbsp;Here it is the wavefront normal vector rather than the Poynting vector that is required by the refraction formula, and which gives the ray direction outside of the medium.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The second complication arises because, by definition, the ordinary and extraordinary rays differ in their polarization. &nbsp;In regular polarization tracing, the E-vector of a given ray is resolved into the S- and P-components when the ray reaches a refracting surface. &nbsp;These components refract in an identical manner, and differ only in the proportions reflected and transmitted and in the phase change induced by the interface (including the coating, if any). &nbsp;But these components do not, in general, correspond to the ordinary and extraordinary rays, so in the case of a birefringent medium the program must again resolve them in two new directions: the resolution direction given by the cross product of the refracted ray vector and the crystal axis vector defines the ordinary ray, and if the surface of the medium has been defined as “</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ORDINARY</span><span class="f_mine">&quot;, this polarization is retained and the other component is discarded. &nbsp;If the extraordinary ray is instead to be taken at the surface, the polarization is resolved in the direction given by the cross product between the ordinary-ray polarization vector and the extraordinary ray propagation vector, and only this component is retained. &nbsp;In each case, the effective index within the medium, once calculated, then becomes the substrate index for analyzing the properties of any coating through which the ray passed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate these points, we will trace a </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um173.htm#pray" class="topiclink">PRAY</a></span><span class="f_mine"> through the system given above, and examine the output. &nbsp;(</span><span class="f_mine" style="font-weight: bold;">PRAY</span><span class="f_mine"> also cycles through the several modes, if switch 57 is on.) &nbsp;The command is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">PRAY 2 0 0 0 SURF</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and the output is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_heading1-8"><span class="f_heading1-8">SYNOPSYS AI&gt;PRAY 2 0 0 0 SURF </span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SURFACE &nbsp; &nbsp;1 IS DECLARED ORDINARY.</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">  </span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;SURF. NO. &nbsp; MAGN. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; X &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Z &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PHASE</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> --------------------------------------------------------------------------------</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Incid. S &nbsp;1 0.707107E+00 &nbsp;0.000000E+00 &nbsp;0.707107E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp; &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 12pt; font-weight: bold;">A</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Incid. P &nbsp;1 0.707107E+00 &nbsp;0.707107E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.900000E+02</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Refr. &nbsp;S &nbsp;1 0.685073E+00 &nbsp;0.000000E+00 &nbsp;0.685073E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Refr. &nbsp;P &nbsp;1 0.685073E+00 &nbsp;0.685073E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.900000E+02</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Incid. S &nbsp;2 0.685073E+00 &nbsp;0.000000E+00 &nbsp;0.685073E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp; &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 12pt; font-weight: bold;">B</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Incid. P &nbsp;2 0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Refr. &nbsp;S &nbsp;2 0.663726E+00 &nbsp;0.000000E+00 &nbsp;0.663726E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00</span></p>
+<p class="p_heading2-4"><span class="f_heading2-4"> Refr. &nbsp;P &nbsp;2 0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> V1: (X,Y,Z),Phase &nbsp;0.000000E+00 &nbsp;0.663726E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> V2: (X,Y,Z),Phase &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> INTENSITY: Apod., Polar., Prod. &nbsp;0.100000E+01 &nbsp;0.440532E+00 &nbsp;0.440532E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> SURFACE &nbsp; &nbsp;1 IS DECLARED EXTRAORDINARY.</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; SURF. NO. &nbsp; MAGN. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; X &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Z &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PHASE</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> --------------------------------------------------------------------------------</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Incid. S &nbsp;1 0.707107E+00 &nbsp;0.000000E+00 &nbsp;0.707107E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Incid. P &nbsp;1 0.707107E+00 &nbsp;0.707107E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.900000E+02</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Refr. &nbsp;S &nbsp;1 0.689719E+00 &nbsp;0.000000E+00 &nbsp;0.689719E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Refr. &nbsp;P &nbsp;1 0.689719E+00 &nbsp;0.689719E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.900000E+02</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Incid. S &nbsp;2 0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Incid. P &nbsp;2 0.689719E+00 &nbsp;0.689719E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.900000E+02</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Refr. &nbsp;S &nbsp;2 0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Refr. &nbsp;P &nbsp;2 0.672759E+00 &nbsp;0.672759E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.900000E+02</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> V1: (X,Y,Z),Phase &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> V2: (X,Y,Z),Phase &nbsp;0.672759E+00 &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.900000E+02</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> INTENSITY: Apod., Polar., Prod. &nbsp;0.100000E+01 &nbsp;0.452604E+00 &nbsp;0.452604E+00</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this listing, the </span><span class="f_mine" style="font-weight: bold;">PRAY</span><span class="f_mine"> is traced twice because switch 57 is on, and the program therefore cycles through all combinations of modes (two in this example because there is but a single birefringent medium). &nbsp;Section </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine"> shows the incident and refracted polarization vectors for the ordinary ray. &nbsp;Because the incident ray is circularly polarized and the intercept with the surface is exactly 90 degrees, the S and P vectors appear with a magnitude of .707107 along the Y and X directions, and a relative phase difference of 90 degrees. &nbsp;After refraction into the crystal, the magnitudes are reduced to.68507 due to reflection losses at the uncoated interface, taking the ordinary index in the Fresnel equation. &nbsp;Section </span><span class="f_mine" style="font-weight: bold;">B</span><span class="f_mine"> gives the polarization vectors at the exit face of the crystal. &nbsp;Because the crystal axis is in the X-Z plane and the ordinary ray was to be traced, only the polarized component in the Y-direction contains energy after going through the crystal. &nbsp;This is given as the “</span><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">INCID. S</span><span class="f_mine">&quot; on surface 2. &nbsp;There is another reflection loss at this surface, and the final vector magnitude is .663726, giving a final intensity of the square of this value, or .440532, polarized in the Y direction.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The second case run by the program analyzes the extraordinary ray. &nbsp;The incident vectors are the same as in the previous example, but because the extraordinary index is somewhat lower than the ordinary, the reflection loss is reduced, and the polarization vectors show a magnitude of .689719. &nbsp;After passing through the crystal, only the X-component of the polarization remains, the other component being discarded because we are here tracing only the extraordinary ray. &nbsp;The final ray intensity is .452604, aligned in the X-direction.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1752.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

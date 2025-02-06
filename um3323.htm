@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Fresnel</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="aspherics--&gt;,Fresnel surfaces" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_p8-5"><span class="f_p8-5" style="font-weight: bold;">3.3.2.3 Fresnel Surfaces</span><span class="f_p8-5" style="font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p8-5" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33229.htm" class="topiclink">Previous</a></span><span class="f_p8-5" style="font-family: 'Times New Roman';"> </span><span class="f_p8-5" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3324.htm" class="topiclink">Next</a></span><span class="f_p8-5" style="font-family: 'Times New Roman';"> </span><span class="f_p8-5" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(These options go into an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file, and may be entered interactively with the dialog </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">A Fresnel surface is one whose slope is not given by the derivative of its sagitta. &nbsp;A common example is the familiar flat plastic lens with molded concentric grooves bearing a local slope angle. &nbsp;Such lenses give an image of fair quality and are widely used as solar energy collectors.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">In the general case, one may consider a Fresnel surface to be a collection of infinitely small zones of arbitrary slope impressed on a surface which itself may have arbitrary shape. &nbsp;SYNOPSYS allows specification of such surfaces, as follows:</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">To describe the Fresnel surface, two lens surfaces are required. &nbsp;The first of these should be a dummy surface (with no index difference on either side) with a thickness of zero, whose curvature definition applies to the substrate shape of the Fresnel surface. &nbsp;The immediately following surface is given whatever shape defines the local slope of the Fresnel surface. &nbsp;The index difference for the lens is entered on this surface, and it is then declared a Fresnel surface with the input</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span style="width:48px">&nbsp;</span><span class="f_p8-5" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_p8-5" style="font-weight: bold;"> FRESNEL.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">Any curvature option may be utilized for either of these surfaces, including torics and power-series aspherics. &nbsp;A flat substrate (the first of the two surfaces) with a conic slope would give the usual flat Fresnel lens. &nbsp;A slope specified by a second surface with CV = 0 and a non-zero G2 term (using the DC2 input) could be used to describe a Fresnel prism, and so on. The Z-intercept of each ray is given by the first surface while the slope is obtained from the second, making this feature completely general. &nbsp;The two curvatures may be varied in the normal fashion with the optimization program.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">If a Fresnel surface is reflective, the </span><span class="f_p8-5" style="text-decoration: underline;">SN</span><span class="f_p8-5"> REFLECTOR designation goes on the </span><span class="f_p8-5" style="font-style: italic;">second</span><span class="f_p8-5"> of the two surfaces.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">A Fresnel surface may be redefined as a normal surface merely by subsequently entering any valid curvature specification for the second of the two descriptors. &nbsp;If a new slope is to be entered on a Fresnel, the new curvature option should be followed by a new </span><span class="f_p8-5" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_p8-5" style="font-weight: bold;"> FRESNEL</span><span class="f_p8-5"> declaration.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">Normally, a Fresnel lens actually has three surfaces, when you include the other side of the lens (which is frequently just a flat surface) -- two for the Fresnel side and one for the other.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">Only the substrate shape will appear on DWG and other plots.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">One should be aware that when Fresnel lenses are manufactured, the precision of molding is not adequate to maintain coherence of the light from adjacent zones. &nbsp;The result is that over the aperture of the beam the phase is rather chaotic, and one cannot reliably compute the OPD of any given ray. &nbsp;The program will generate a value if requested, but this is probably of little meaning in practical cases.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">A second type of Fresnel surface is also available, using the </span><span class="f_p8-5" style="text-decoration: underline;"><a href="um3327.htm" class="topiclink">USS</a></span><span class="f_p8-5"> type 3 shape. &nbsp;This kind of surface does not assume that the zones are of negligible size, but is restricted to a flat substrate.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3324.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33228.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

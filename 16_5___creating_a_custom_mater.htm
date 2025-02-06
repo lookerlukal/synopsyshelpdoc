@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>16.5. Creating a Custom Material Library</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">16.5 Creating a Custom Material Library</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;background:url(background-topic-header.jpg)" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   &raquo;No topics above this level&laquo;
+   </p>
+   <h1 class="p_Heading1"><span class="f_Heading1">16.5 Creating a Custom Material Library</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <img src="hm_btn_navigate_prev_d.png" border="0"
+        ><a href="main_index.htm"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img name=main src="hm_btn_navigate_top.png" border=0 alt="Return to chapter overview"
+        ></a><img src="hm_btn_navigate_next_d.png" border="0">
+    </td>
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um164.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The previous sections have explained how to </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um161.htm" class="topiclink">create a custom film stack</a></span><span style="font-size: 11pt;"> with RFILM, </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um1722.htm" class="topiclink">save it,</a></span><span style="font-size: 11pt;"> and </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um172.htm" class="topiclink">apply it to your lens</a></span><span style="font-size: 11pt;"> using standard materials in the default database. &nbsp;But when a film is deposited on a lens, usually in a vacuum chamber at high temperature, the index of refraction of the film usually differs from that of the bulk material. &nbsp;This section describes how to create a custom library of materials with properties you can assign yourself.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Proceed in three steps:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">1. &nbsp;Create a library of custom materials.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">2. &nbsp;Define a custom coating stack using those materials.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">3. &nbsp;Apply that coating to lens surfaces.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a name="nilb"></a><span style="font-size: 11pt; font-weight: bold;">Creating a library of custom materials</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Enter a MACro in the format shown below. &nbsp;The command </span><span style="font-size: 11pt; font-weight: bold;">NLIB</span><span style="font-size: 11pt;"> creates a new library, deleting any previous one.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;</span><span style="font-family: 'Courier New Bold'; color: #7b0000; background-color: #dedede;">FILM</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;NLIB</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;1 &quot;C-MGF2B &nbsp; &nbsp; &nbsp; &nbsp; &quot; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp;0.179416E+01 &nbsp;-0.718242E-02 &nbsp; 0.434546E-01 &nbsp;-0.908349E-02 &nbsp; 0.109341E-02 &nbsp;-0.474168E-04&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;2 &quot;TIO2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp;6.029678E+00 -3.245631E-02 7.932891E-02 1.176626E-01-2.343667E-02 2.416714E-03</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Each material is defined with a material number (1 and 2 here) followed by a reference name of up to 16 characters (</span><span style="font-size: 11pt; font-style: italic;">which must be enclosed in quote marks</span><span style="font-size: 11pt;">), followed by the number 0 or 1. &nbsp;Zero means the six interpolation coefficients on the next line are for the power-series expansion used in the old Schott catalog (and also in the format produced by the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um334.htm#gfit" class="topiclink">GFIT</a></span><span style="font-size: 11pt;"> option in the RLE file), while the number 1 means they are coefficients for the Sellmeier equation. &nbsp;Up to 10 materials may be so defined.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here we have defined two custom materials (which in this example have the same index as the bulk materials). This input creates the file LIB.CFL, the custom materials library, which is created in the current working directory.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-weight: bold;">Creating a custom coating stack</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Now that the materials are defined, we can make a custom coating stack. &nbsp;A sample is shown below.</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; color: #7b0000; background-color: #dedede;">FILM</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">RFILM</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">ID TEST CUSTOM FILM</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">WAVL .5876</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">ANG 0</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">0 1</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">.25 C01</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">0 1.5</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">SAVE CUSTOM02</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p><span style="font-size: 11pt;">In this case we define a 1/4-wave coating, at a wavelength of 0.5876 um, defined at an incident angle of zero degrees, using the first custom material we defined above, which is C-MGF2B. &nbsp;Then we save that stack as custom coating number 2.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-weight: bold;">Adding a custom coating stack to your lens</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Now we </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um172.htm" class="topiclink">apply this coating</a></span><span style="font-size: 11pt;"> to all lens surfaces, identifying the stack with the number 02, which refers to the coating CUSTOM02.FIL, which we saved above..Note that polarization mode is turned on; otherwise coatings are ignored.</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; color: #7b0000; background-color: #dedede;">CHG</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">POL LIN Y</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">COAT 02 ALL</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p><span style="font-size: 11pt;">To check the properties of the stack on a given surface, use the command </span><span style="font-size: 11pt; font-weight: bold;">PCOAT </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">sn</span><span style="font-size: 11pt;">. &nbsp;For, example, PCOAT 1 shows this listing:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">SYNOPSYS AI&gt;PCOAT 1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> COATING STACK, SURFACE No. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> CUSTOM COATING &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; STACK DATA</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; CONTROL WAVELENGTH = &nbsp; &nbsp;0.5876 MICRONS</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; CONTROL ANGLE = &nbsp; &nbsp; 0.000 DEG.</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;OPTICAL &nbsp; PHYSICAL</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SURF NO. &nbsp; &nbsp; &nbsp;THICKNESS &nbsp;THICKNESS &nbsp; INDEX &nbsp; &nbsp;IMAG. INDEX</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(WAVES) &nbsp; (MICRONS)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; INCIDENT MEDIUM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.0000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.2500 &nbsp; &nbsp;0.107580 &nbsp; &nbsp;1.3655 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;C-MGF2B &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(CUSTOM)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.000000 &nbsp; &nbsp;1.5168</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SUBSTRATE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.5168 &nbsp; &nbsp; 0.0000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p><span style="font-size: 11pt; font-weight: bold;">Listing your custom library</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The command FILM / </span><span style="font-size: 11pt; font-weight: bold;">PCFL</span><span style="font-size: 11pt;"> will print the contents of the custom library on the Command Window. &nbsp;(This command is recognized in the FILM program only.)</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> FILM&gt;PCFL</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 1 &quot;C-MGF2B &nbsp; &nbsp; &nbsp; &nbsp; &quot; 0</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.179416E+01 &nbsp;-0.718242E-02 &nbsp; 0.434546E-01 &nbsp;-0.908349E-02 &nbsp; 0.109341E-02 &nbsp;-0.474168E-04</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 2 &quot;TIO2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot; 0</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.602968E+01 &nbsp;-0.324563E-01 &nbsp; 0.793289E-01 &nbsp; 0.117663E+00 &nbsp;-0.234367E-01 &nbsp; 0.241671E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> FILM&gt;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-weight: bold;">Editing your custom library</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Once the library is defined, you can edit it should you ever need to, to add additional materials, for example.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The command (at the FILM&gt; prompt) is </span><span style="font-size: 11pt; font-weight: bold;">ECFL</span><span style="font-size: 11pt;">, which loads the contents of the library into the MACro editor, where you may revise it. &nbsp;It is automatically saved when the file runs.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>

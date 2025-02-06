@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Selecting a potential match</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="XSYS-&gt;" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">15.3.5.2 Selecting a potential match</span><span class="f_mine" style="font-size: 14pt;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um15351.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um153521.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When </span><span class="f_mine" style="font-weight: bold;">XSYS</span><span class="f_mine"> has found the ten best potential matches, it lists them in order of mismatch. &nbsp;Two ratings are printed: </span><span class="f_mine" style="font-style: italic;">image</span><span class="f_mine"> and </span><span class="f_mine" style="font-style: italic;">mechanical</span><span class="f_mine">, the image value refers to the expected OPD mismatch, where the units are quite arbitrary and reflect the field and color weights; the mechanical match refers to everything else, and the mismatch is the sum of the two. &nbsp;A typical rating might read:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">TOP TEN MATCHES WITH EXAMPLE LENSES:</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> No. &nbsp;Exam. Move Keep &nbsp; &nbsp;Ap. &nbsp; &nbsp; Scaled &nbsp; &nbsp; Mismatch &nbsp; &nbsp;Image &nbsp; Mechanical Mode</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> -- &nbsp; ----- ---- ---- &nbsp; &nbsp;--- &nbsp; &nbsp; ------ &nbsp; &nbsp; -------- &nbsp; &nbsp;----- &nbsp; ---------- ----</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;1 &nbsp; &nbsp;3 &nbsp; 10 &nbsp; -3 &nbsp; &nbsp; 1.2677 &nbsp; &nbsp; 0.9891 &nbsp; &nbsp; 1.2382 &nbsp; &nbsp; 0.0693 &nbsp; &nbsp; 1.1690 &nbsp; &nbsp;1</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;2 &nbsp; 10 &nbsp; &nbsp;4 &nbsp; 12 &nbsp; &nbsp; 1.1094 &nbsp; &nbsp; 1.0076 &nbsp; &nbsp; 1.4348 &nbsp; &nbsp; 0.0867 &nbsp; &nbsp; 1.3481 &nbsp; &nbsp;3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;3 &nbsp; &nbsp;5 &nbsp; -3 &nbsp; 12 &nbsp; &nbsp; 0.5145 &nbsp; &nbsp; 1.0153 &nbsp; &nbsp; 1.5546 &nbsp; &nbsp; 0.1653 &nbsp; &nbsp; 1.3893 &nbsp; &nbsp;4</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;4 &nbsp; 19 &nbsp; -4 &nbsp; -7 &nbsp; &nbsp; 0.4277 &nbsp; &nbsp; 0.9401 &nbsp; &nbsp; 1.7503 &nbsp; &nbsp; 0.1727 &nbsp; &nbsp; 1.5776 &nbsp; &nbsp;2</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;5 &nbsp; 16 &nbsp; 13 &nbsp; &nbsp;0 &nbsp; &nbsp; 1.0000 &nbsp; &nbsp; 2.2493 &nbsp; &nbsp; 2.0562 &nbsp; &nbsp; 0.0000 &nbsp; &nbsp; 2.0562 &nbsp; &nbsp;3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;6 &nbsp; 22 &nbsp; &nbsp;7 &nbsp; &nbsp;0 &nbsp; &nbsp; 1.0000 &nbsp; &nbsp; 1.3158 &nbsp; &nbsp; 2.0570 &nbsp; &nbsp; 0.0000 &nbsp; &nbsp; 2.0570 &nbsp; &nbsp;3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;7 &nbsp; &nbsp;7 &nbsp; -2 &nbsp; 12 &nbsp; &nbsp; 0.5117 &nbsp; &nbsp; 1.0140 &nbsp; &nbsp; 2.2454 &nbsp; &nbsp; 0.0576 &nbsp; &nbsp; 2.1878 &nbsp; &nbsp;4</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;8 &nbsp; 16 &nbsp; &nbsp;5 &nbsp; &nbsp;7 &nbsp; &nbsp; 1.1824 &nbsp; &nbsp; 0.9041 &nbsp; &nbsp; 2.3135 &nbsp; &nbsp; 0.5870 &nbsp; &nbsp; 1.7265 &nbsp; &nbsp;3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;9 &nbsp; 10 &nbsp; &nbsp;2 &nbsp; 14 &nbsp; &nbsp; 1.0000 &nbsp; &nbsp; 1.4060 &nbsp; &nbsp; 2.3221 &nbsp; &nbsp; 0.7943 &nbsp; &nbsp; 1.5278 &nbsp; &nbsp;3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> 10 &nbsp; &nbsp;9 &nbsp;-14 &nbsp; &nbsp;0 &nbsp; &nbsp; 1.0000 &nbsp; &nbsp; 1.4383 &nbsp; &nbsp; 2.4955 &nbsp; &nbsp; 2.2901 &nbsp; &nbsp; 0.2054 &nbsp; &nbsp;4</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This listing is read as follows: match number one, which has the lowest mismatch, is taken from example lens number 3. &nbsp;The mode of substitution is 1 (see below), and the combination lens is formed from three surfaces of the starting lens, counting from the left (-3), and 10 surfaces from the example, starting at the right (10). &nbsp;The example lens local F/number did not match the starting lens, so the example was scaled up by 1.2677 and then stopped down to its previous aperture. &nbsp;At that point the F/numbers matched and the two sections were at a common focus, but the example was further scaled by .9891 from that focus so as to minimize the OPD and mechanical mismatch relative to the stated requirements. &nbsp;These errors were .0693 and 1.169, respectively, and the total mismatch is the sum of the two, or 1.2382</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The second match involves 4 surfaces from example 10, and 12 from the starting lens, both counting from the right. (If either of these is AFOCAL, the two planes required for AFOCAL mode will be included, and a dummy plane at the first surface may be present if the lens is used reversed.) &nbsp;In this case, the error in the mechanical goals was 1.3481, and with the OPD errors the total mismatch was 1.4348. &nbsp;The fifth match moves all of example 16 (13 surfaces) and discards the entire starting lens. &nbsp;The image mismatch is zero (XSYS assumes that the examples are perfectly corrected, if they are used intact), but the mechanical error is large.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that just because a lens has a low mismatch, it is not guaranteed to be a good starting point. &nbsp;There are usually many requirements on a lens that are not stated with the input, and in some cases the example portions are used in a fashion very different from the context in which they were designed. &nbsp;The program will penalize a match if, say the field angles are vastly different, but even so that match may give the lowest mismatch error and will be selected best -- and in such a case it may exhibit ray failures and be wholly unsuitable.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You are encouraged to examine all ten of the matches before ruling out any of them.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um153521.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

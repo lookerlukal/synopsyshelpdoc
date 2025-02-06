@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>aspheric toroids</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="aspherics--&gt;,ASTORIC" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_p8-5"><span class="f_p8-5" style="font-weight: bold;">3.3.2.2.8 Aspheric Toroids</span><span class="f_p8-5">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p8-5" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33227.htm" class="topiclink">Previous</a></span><span class="f_p8-5" style="font-family: 'Times New Roman';"> </span><span class="f_p8-5" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33229.htm" class="topiclink">Next</a></span><span class="f_p8-5" style="font-family: 'Times New Roman';"> </span><span class="f_p8-5" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(These options go into an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file, and may be entered interactively with the dialog </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">An aspheric toroid is a surface whose shape in the Y-Z plane is given by a conic section, flat, or sphere, plus optional power-series terms using the input </span><span class="f_p8-5" style="font-weight: bold; text-decoration: underline;"><a href="um33222.htm" class="topiclink">DC1</a></span><span class="f_p8-5"> and DC2 (defined as described below) -- and whose shape in the X-Z plane is found by rotating the Y-Z curve about a given point on the axis. &nbsp;The Y-Z shape is thus aspheric, while the X-Z curve is spherical. &nbsp;To enter this kind of surface, give the Y-Z shape first, using the mnemonics RD, RAD, CV, CC, DC1, and DC2, and then specify the center of curvature for the X-Z curve with</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-7" style="margin: 0px 0px 0px 57px;"><span class="f_p5-7" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p5-7" style="font-size: 11pt;"> </span><span class="f_p5-7" style="font-size: 11pt; font-weight: bold;">ASTORIC </span><span class="f_p5-7" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">RX</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p8-5"><span class="f_p8-5">where </span><span class="f_p8-5" style="font-weight: bold; text-decoration: underline;">RX</span><span class="f_p8-5"> is the radius of curvature in the X-Z plane. (RX = 0 sets the curvature to infinity.) &nbsp;The X-Z curvature is placed into the G(17) aspheric location, and may be varied by giving that term as a variable in optimization.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">The </span><span class="f_p8-5" style="font-weight: bold;">aspheric coefficients</span><span class="f_p8-5"> used for ASTORICs differ from those of ordinary aspheres; only terms in even powers of Y enter into the equation, since the profile thus described is applied to the Y-Z shape only, where X equals zero. &nbsp;The terms in powers of X are replaced by additional powers of Y, giving terms up to order 20 in Y:</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5" style="font-weight: bold;">G-term</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5" style="font-weight: bold;">Power of Y</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">1</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">2</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">12</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">3</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">4</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">14</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">5</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">16</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">6</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">7</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">18</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">8</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">20</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">9</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">unused</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">10</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">8</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">11</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">unused</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">12</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">unused</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">13</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">unused</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">14</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">unused</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">15</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">unused</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">16</span></p>
+</td>
+<td style="vertical-align:top; width:160px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">10</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">The sag of this surface is given by</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><img src="um3f35.png" width="279" height="37" alt="um3f35" style="width:279px;height:37px;border:none"></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">where </span><span class="f_p8-5" style="font-weight: bold;">F(y)</span><span class="f_p8-5"> is the sag given by the aspheric terms in the Y-Z plane. &nbsp;Note that some of these coefficients apply to a high power of the aperture, and the value of a quantity like Y**20 may be a </span><span class="f_p8-5" style="font-style: italic;">very</span><span class="f_p8-5"> large number, exceeding the numerical precision of the computer. &nbsp;It is wise to scale systems with these coefficients to inches or larger units, so that the magnitude of these numbers will be manageable.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33229.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33227.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

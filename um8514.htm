@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um8514</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Lateral color plot,LCPLOT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">um8514</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;background:url(background-topic-header.jpg)" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   &raquo;No topics above this level&laquo;
+   </p>
+   <h1 class="p_Heading1"><span class="f_Heading1">um8514</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <img src="hm_btn_navigate_prev_d.png" border="0"
+        ><a href="main_index.htm"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img name=main src="hm_btn_navigate_top.png" border=0 alt="Return to chapter overview"
+        ></a><img src="hm_btn_navigate_next_d.png" border="0">
+    </td>
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><span class="f_mine" style="font-weight: bold;">8.5.14 Lateral Color Plot (LCPLOT) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um86.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8513.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p>A convenient way to analyze the lateral color aberration of your lens is with the command</p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-weight: bold;">LCPLOT [ </span><span style="font-weight: bold; text-decoration: underline;">NB</span><span style="font-weight: bold;"> [ </span><span style="font-weight: bold; text-decoration: underline;">SCF</span><span style="font-weight: bold;"> ] ]</span></p>
+<p>&nbsp;</p>
+<p>NB is the number of field points to analyze, with a default of 10 and a maximum of 50, and SCF is the aberration value per one inch on the plot. &nbsp;This feature may be run from the <span style="font-weight: bold;">MRR</span> dialog.</p>
+<p>&nbsp;</p>
+<p>Here is an examle:</p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;">GET 1</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;">LCPLOT</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;GET 1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> Get lens no. &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp;ID MIT 1 TO 2 UM LENS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3119</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; GIHT &nbsp; &nbsp; &nbsp; &nbsp; FOCL &nbsp; &nbsp; &nbsp; &nbsp; FNUM &nbsp; &nbsp; &nbsp; &nbsp; BACK &nbsp; &nbsp; &nbsp; &nbsp; TOTL &nbsp; &nbsp; &nbsp; &nbsp; DELF</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp;6.13932 &nbsp; &nbsp; 50.00075 &nbsp; &nbsp; &nbsp;1.42859 &nbsp; &nbsp; 16.29978 &nbsp; &nbsp; 49.77532 &nbsp; &nbsp; &nbsp;0.00000</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;LCPLOT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> LATERAL COLOR EVALUATION</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> LONG WAVELENGTH IS COLOR &nbsp;1 MED. IS COLOR &nbsp;2 SHORT IS &nbsp;3</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> Y-COORDINATE AT IMAGE AND Y-DIFFERENCES</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; REL. FIELD &nbsp; &nbsp;LONG &nbsp; &nbsp; &nbsp; MED. &nbsp; &nbsp; &nbsp; SHORT &nbsp; &nbsp; &nbsp;L-S &nbsp; &nbsp; &nbsp; &nbsp;M-S &nbsp; &nbsp; &nbsp; &nbsp;L-M</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ------------------------------------------------------------------------------</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;1 &nbsp; &nbsp;0.0000 &nbsp; 0.000000 &nbsp; 0.000000 &nbsp; 0.000000 &nbsp; 0.000000 &nbsp; 0.000000 &nbsp; 0.000000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;2 &nbsp; &nbsp;0.1111 &nbsp; 0.682874 &nbsp; 0.682029 &nbsp; 0.679968 &nbsp; 0.002906 &nbsp; 0.002060 &nbsp;8.451E-04</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;3 &nbsp; &nbsp;0.2222 &nbsp; 1.365044 &nbsp; 1.363348 &nbsp; 1.359212 &nbsp; 0.005832 &nbsp; 0.004136 &nbsp; 0.001696</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;4 &nbsp; &nbsp;0.3333 &nbsp; 2.045802 &nbsp; 2.043243 &nbsp; 2.037003 &nbsp; 0.008799 &nbsp; 0.006241 &nbsp; 0.002558</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;5 &nbsp; &nbsp;0.4444 &nbsp; 2.724431 &nbsp; 2.720993 &nbsp; 2.712603 &nbsp; 0.011828 &nbsp; 0.008390 &nbsp; 0.003438</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;6 &nbsp; &nbsp;0.5556 &nbsp; 3.400201 &nbsp; 3.395861 &nbsp; 3.385262 &nbsp; 0.014940 &nbsp; 0.010599 &nbsp; 0.004340</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;7 &nbsp; &nbsp;0.6667 &nbsp; 4.072370 &nbsp; 4.067098 &nbsp; 4.054215 &nbsp; 0.018154 &nbsp; 0.012883 &nbsp; 0.005272</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;8 &nbsp; &nbsp;0.7778 &nbsp; 4.740177 &nbsp; 4.733939 &nbsp; 4.718683 &nbsp; 0.021493 &nbsp; 0.015256 &nbsp; 0.006237</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;9 &nbsp; &nbsp;0.8889 &nbsp; 5.402851 &nbsp; 5.395607 &nbsp; 5.377875 &nbsp; 0.024976 &nbsp; 0.017733 &nbsp; 0.007243</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 10 &nbsp; &nbsp;1.0000 &nbsp; 6.059615 &nbsp; 6.051320 &nbsp; 6.030992 &nbsp; 0.028623 &nbsp; 0.020329 &nbsp; 0.008295</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0241.png" width="406" height="549" alt="clip0241" style="width:406px;height:549px;border:none"></p>
+<p>&nbsp;</p>
+<p>In this example we have turned on switch 87, which plots the dotted grid lines as well.</p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman';"><a href="um86.htm" class="topiclink">Next</a> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>

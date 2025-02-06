@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um310</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="BEVEL, specifying,EFILE input formats,MARGIN, specifying,Mirrors, edges of" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><a name="um310"></a><span class="f_mine" style="font-size: 14pt; font-weight: bold;">3.10 Edge descriptions &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um393.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3_11.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The lens data described in this chapter are adequate for designing a lens and showing it with a variety of drawing features. &nbsp;But the apertures that are shown will be just the clear apertures (CAO’s) that are in effect (either default or user-entered), with edges constructed by the drawing programs to make the elements look realistic. &nbsp;For more precise control over the edge geometry, additional data are needed. &nbsp;These data may be entered into the RLE file in the formats described below or created with a separate feature, the </span><span class="f_mine" style="text-decoration: underline;"><a href="um78.htm#efile" class="topiclink">EFILE</a></span><span class="f_mine">. &nbsp;But the </span><span class="f_mine" style="font-weight: bold;">fastest and easiest</span><span class="f_mine"> way to define your edges is with the </span><span class="f_mine" style="text-decoration: underline;"><a href="hidd_edgewizard.htm" class="topiclink">Edge Wizard</a></span><span class="f_mine">, where you can create, delete, and edit your edge data while watching the results on the PAD display. &nbsp;Some of the edge parameters are coupled to others, and the Wizard shows these connections onscreen, which greatly facilitates your understanding of the situation.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To enter EFILE data into the RLE file, you must select a mode from the following (see the link to the Edge Wizard for a description of how these options work):</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:207px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE OFF</span></p>
+</td>
+<td style="vertical-align:top; width:497px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">No EFILE is in effect for this surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:207px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE UP</span></p>
+</td>
+<td style="vertical-align:top; width:497px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Edge coordinates are calculated upwards, starting at the CAO</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:207px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE DOWN</span></p>
+</td>
+<td style="vertical-align:top; width:497px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Edges are calculated downwards, starting at the entered diameter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:207px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE MIX</span></p>
+</td>
+<td style="vertical-align:top; width:497px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">A combination of UP and DOWN</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:207px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE EX1 …</span></p>
+</td>
+<td style="vertical-align:top; width:497px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Edge data are entered explicitly; see below for data format</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:207px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE MIRROR …</span></p>
+</td>
+<td style="vertical-align:top; width:497px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">For a mirror in air, this activates drawing the rear side as well</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:207px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE CMIRROR ...</span></p>
+</td>
+<td style="vertical-align:top; width:497px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Rear side of mirror copies curvature of front side. &nbsp;Other EFILE dimensions do not apply to this type.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An edge description involves three coordinates at each surface, A, B, and C. &nbsp;For a definition of these quantities, see the link above to the Edge Wizard. &nbsp;The input formats for the RLE file are as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE DIA </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DIA</span></p>
+</td>
+<td style="vertical-align:top; width:353px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Specifies the value of (2*C)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE ERAD </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">C</span></p>
+</td>
+<td style="vertical-align:top; width:353px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Specifies the value of C</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE BEVEL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">BC</span></p>
+</td>
+<td style="vertical-align:top; width:353px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Specifies the bevel dimension BC</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE FACE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AB</span></p>
+</td>
+<td style="vertical-align:top; width:353px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Specifies the face dimension AB</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE ANGLE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span></p>
+</td>
+<td style="vertical-align:top; width:353px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Specifies the face angle ANG</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The above entries apply to the modes </span><span class="f_mine" style="font-weight: bold;">UP</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">DOWN</span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold;">MIXED</span><span class="f_mine">. &nbsp;In some cases, entered data are overridden by other data, since the input possibilities exceed the number of degrees of freedom. &nbsp;This is made clear in the Edge Wizard, where the unneeded options are grayed out as necessary. &nbsp;After you have created your edge in the Wizard, these data are saved with the lens, and you can ask for a LEO listing to see which of the above options are actually required for your case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Some options require additional data describing a MARGIN and a BEVEL, which are also explained in the Edge Wizard. &nbsp;These data may be entered in an RLE file with</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">MARGIN </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">MARGIN</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">BEVEL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">BEVEL</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To specify the edge parameters explicitly, use the forms</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE EX1 </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">A</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">B</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">C</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE EX2 </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">E</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">D</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG2</span><span class="f_mine">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(with the </span><span class="f_mine" style="font-style: italic;">same</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SN!</span><span class="f_mine">)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">And for a mirror, follow the above with the entry</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE MIRROR </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">MTH</span><span class="f_mine">, which gives the thickness to show up on the drawing. &nbsp;(All three lines are required for this form.) &nbsp;Here is the input one might apply to the file RTLOG141.RLE to add a beveled back to the large primary mirror:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">1 EFILE EX1 &nbsp; &nbsp; 8.011420 &nbsp; &nbsp; 8.011420 &nbsp; &nbsp; 8.061420 &nbsp; &nbsp; 0.000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">1 EFILE EX2 &nbsp; &nbsp; 3.000000 &nbsp; &nbsp; 7.961420 &nbsp; &nbsp;25.000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">1 EFILE MIRROR &nbsp; &nbsp;3.000000</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The bevel now appears on the SOLID drawing:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="efilemrr.png" width="619" height="405" alt="efilemrr" style="width:619px;height:405px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The above example shows that with this type, the back of the mirror is axially symmetric. &nbsp;That might not be appropriate if the mirror is strongly curved or decentered. &nbsp;In such cases, the form </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> EFILE CMIRROR </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">MTH</span><span class="f_mine" style="font-weight: bold;"> </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">might be preferable. &nbsp;The back surface is then a copy of the front surface, with the same borders, slope, and curvature. &nbsp;It is also the only option for mirrors that honors a </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#uap" class="topiclink">UAP</a></span><span class="f_mine"> aperture.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The explicit mode is the only mode that works properly for both elements in a cemented doublet. &nbsp;The other modes transfer dimensions from the second element to the first, which is usually not what you want.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The explicit mode requires more than just the (ABC) coordinates of the other options, for the following reason: the RLE file is a </span><span class="f_mine" style="font-style: italic;">surface-oriented</span><span class="f_mine"> input structure, while the complete edge description of an element requires the (ABC) coordinates of </span><span class="f_mine" style="font-style: italic;">both sides</span><span class="f_mine"> of an element. &nbsp;With the other options the program combines opposite faces to gather the full edge definition, creating points E and D from points A and B of the second side and modifying the data as required by the mode employed – while the EXPLICIT option lets you enter the entire definition yourself, for maximum control. &nbsp;If you use this form, data for the second side are not strictly required, but should be entered anyway, with EX2, because the program requires that both sides of an element utilize the same EFILE mode and will give an error message if there is a mismatch. &nbsp;If this sounds complicated, it is. &nbsp;Use the Wizard. &nbsp;You will find it at </span><span class="f_mine" style="font-weight: bold;">MPW</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Once entered, the EFILE data will appear on all of the lens drawing formats except PAD/P, provided switch 39 is ON.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">See the link to EFILE, above, for more options including a listing of the current data.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3_11.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um393.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

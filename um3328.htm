@@ -1,0 +1,734 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um3328</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="doe"></a><span class="f_mine" style="font-weight: bold;">3.3.2.8 Diffractive optical elements (DOEs) </span><span class="f_mine"> &nbsp; &nbsp; &nbsp; </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3327.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um333.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(These options go into an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file, and may be entered interactively with the dialog </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SYNOPSYS has two forms of diffractive optical elements (DOEs). &nbsp;A simple form with only rotationally-symmetric shape and OPD coefficients is given by surface types USS 16, 20, 25, 26, and 27, described in <a href="um3327.htm#uss16" class="topiclink">Section &nbsp;3.3.2.7</a>. &nbsp;A more general form, with a variety of expansion polynomials, is described below.</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-11"><span class="f_p2-11">This kind of diffractive optical element may be defined with the input</span></p>
+<p style="text-indent: 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span style="font-size: 11pt; font-weight: bold;"> DOE </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">CWAV</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HIN</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">VNUM</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt; font-weight: bold;">[ RNORM </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">RNORM</span><span style="font-size: 11pt; font-weight: bold;"> ]</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">Where </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_p2-11"> is the surface to be declared a DOE, </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">CWAV</span><span class="f_p2-11"> is the wavelength at which the OPD function is to be defined, and </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">HIN</span><span class="f_p2-11"> is the index of the emulsion. &nbsp;The latter is used for preparing the fringe height multiplier to be displayed on the </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;"><a href="um530.htm#dmask" class="topiclink">DMASK</a></span><span class="f_p2-11"> plot. &nbsp;The </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">VNUM</span><span class="f_p2-11"> gives the Abbe number of the emulsion. &nbsp;The blaze angle is calculated from the local fringe spacing and the value of HIN, and the diffraction efficiency is given by the difference between the construction wavelength and index, and the same during playback.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p8-5">The value of VNUM is given by </span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5"> VNUM = (N(primary) - 1) / (N(short) - N(long))</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">where the three index values are taken from the wavelengths assigned to the lens as given by the </span><span class="f_p8-5" style="text-decoration: underline;"><a href="umch3.htm#corder" class="topiclink">color order</a></span><span class="f_p8-5">. &nbsp;It will equal the Abbe number of the material only if those wavelengths are the C, d, and F lines.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">This type of DOE is modeled with two surfaces, as are <a href="um3324.htm" class="topiclink">HOEs</a>; see the discussion at that link for details. &nbsp;An AR coating may be assigned to the </span><span class="f_p2-11" style="font-style: italic;">second</span><span class="f_p2-11"> of the two.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The DOE is modeled by SYNOPSYS as a special case of a </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um3324.htm#hoe" class="topiclink">HOE</a></span><span style="font-size: 11pt;">; the program puts points P1 and P2 at the same location so the DOE itself has no optical power, and then accepts OPD coefficient terms in the form A11 … . &nbsp;For DOEs, these terms are interpreted as follows:</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ A11 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G16</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G18</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G21</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G25</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G31</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ A12 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G17</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G19</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G20</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G2</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G23</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G24</span><span class="f_p2-11" style="font-weight: bold;"> ]</span></p>
+<p class="p_p2-11" style="margin: 0px 0px 0px 48px;"><span class="f_p2-11" style="font-weight: bold;">[ A13 </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G26</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G27</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G28</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G29</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G30</span><span class="f_p2-11" style="font-weight: bold;"> </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">G32</span><span class="f_p2-11" style="font-weight: bold;">]</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The G-term polynomial takes the form</span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">OPD =</span></p>
+</td>
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> &nbsp; G(16)R**2</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(17)Y</span></p>
+</td>
+<td style="vertical-align:top; width:114px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(18)R**4</span></p>
+</td>
+<td style="vertical-align:top; width:110px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(19)R**2Y</span></p>
+</td>
+<td style="vertical-align:top; width:116px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(20)Y**2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(21)R**6</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(22)R**4Y</span></p>
+</td>
+<td style="vertical-align:top; width:114px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(23)R**2Y**2</span></p>
+</td>
+<td style="vertical-align:top; width:110px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(24)Y**3</span></p>
+</td>
+<td style="vertical-align:top; width:116px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(25)R**8</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(26)X</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(27)R**2X</span></p>
+</td>
+<td style="vertical-align:top; width:114px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(28)R**4X</span></p>
+</td>
+<td style="vertical-align:top; width:110px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(29)X**3</span></p>
+</td>
+<td style="vertical-align:top; width:116px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(30)XY</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(31)R**10</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(32)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:110px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:116px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">where R is the radial distance from the axis.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">Unlike the HOE and USS features, this legacy DOE form does not accept an ORDER parameter.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">This polynomial is of the same form as the power-series aspheric equation used for lens surfaces, described in <a href="um33222.htm" class="topiclink">Section 3.3.2.2.2</a></span>, <span style="font-size: 11pt;">except they start at G16 instead of G1 to allow storage for the other HOE parameters.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The Zernike terms are defined in </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um33226.htm" class="topiclink">Section 3.3.2.2.6</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-11"><span class="f_p2-11">There are some additional expansions that are also available for DOEs (but not for HOEs). &nbsp;The first will model the phase shift according to a different polynomial, which we call &quot;S-term&quot; to distinguish it from the G-term polynomial described above.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The S-term polynomial takes 21 coefficients of the form</span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt; font-weight: bold;">Term</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt; font-weight: bold;">Argument</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S1</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">Y</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S2</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S3</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">Y**2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S4</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S5</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**2 Y**2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S6</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">Y**4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S7</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S8</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**4 Y**2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S9</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**2 Y**4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S10</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">Y**6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S11</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**8</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S12</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**6 Y**2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S13</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**4 Y**4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S14</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**2 Y**6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S15</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">Y**8</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S16</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**10</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S17</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**8 Y**2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S18</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**6 Y**4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S19</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**4 Y**6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S20</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">X**2 Y**8</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">S21</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">Y**10</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Input is very simple:  </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Snn </span><span style="font-size: 11pt; text-decoration: underline;">VALUE.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">To illustrate the input of these terms, suppose that we wanted term S9 to have a value of 2.54: &nbsp;In the DOE input file we would include</span></p>
+<p>&nbsp;</p>
+<p style="text-indent: 48px;"><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">S9 2.54.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">To zero out all of the S-terms, use the input</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">S0</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">without any arguments.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">A more complex function is available with the XDD terms. &nbsp;Here, the aperture is divided into two zones, and the inner and outer zones are assigned different coefficients of an even-power-series expansion. &nbsp;The terms are as follows;</span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">XD term</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">Function</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">XDD location</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">1</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**2, for inner zone</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">2</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**4</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">3</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**6</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">4</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**8</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">5</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**10</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">6</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**12</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">7</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**14</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">8</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**16</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">9</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**18</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">10</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**20</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">11</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**22</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">12</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**24</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">13</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**26</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">14</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**28</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">15</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**30</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">16</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">Radius, normalizing</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">17</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">Phase offset</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">18</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">Zone radius</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">19</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**2, for outer zone</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">20</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**4</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">21</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**6</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">22</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**8</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">23</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**10</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">24</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**12</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">25</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**14</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">26</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**16</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">27</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**18</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">28</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**20</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">29</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**22</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">7</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">30</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**24</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">7</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">31</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**26</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">7</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">32</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**28</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">7</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">33</span></p>
+</td>
+<td style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">R**30</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">7</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Input for this form is as follows:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">XDD 1 </span><span style="font-size: 11pt; text-decoration: underline;">XD1</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD2</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD3</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD4</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD5</span></p>
+<p><span style="font-size: 11pt;">XDD 2 </span><span style="font-size: 11pt; text-decoration: underline;">XD6</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD7</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD8</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD9</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD10</span></p>
+<p><span style="font-size: 11pt;">XDD 3 </span><span style="font-size: 11pt; text-decoration: underline;">XD11</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD12</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD13</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD14</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD15</span></p>
+<p><span style="font-size: 11pt;">XDD 4 </span><span style="font-size: 11pt; text-decoration: underline;">XD16</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD17</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD18</span></p>
+<p><span style="font-size: 11pt;">XDD 5 </span><span style="font-size: 11pt; text-decoration: underline;">XD19</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD20</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD21</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD22</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD23</span></p>
+<p><span style="font-size: 11pt;">XDD 6 </span><span style="font-size: 11pt; text-decoration: underline;">XD24</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD25</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD26</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD27</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD28</span></p>
+<p><span style="font-size: 11pt;">XDD 7 </span><span style="font-size: 11pt; text-decoration: underline;">XD29</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD30</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD31</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD32</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">XD33</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">To zero out all of these terms, enter XDD 0 with no other arguments. &nbsp;Note that this form is different from that used for the USS type 8 surface: the latter requires a surface number, while the data for a DOE do not.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">With this form, rays hitting at or inside the zone of radius given by XD 18 are diffracted by the function in terms XD1 through XD15, while those hitting outside of this radius are diffracted by terms XD19 through XD33. &nbsp;The DOE therefore can have two different powers, one in the center zone and the other in the outside zone. &nbsp;(It is also possible for the </span><span style="font-size: 11pt; font-style: italic;">substrate</span><span style="font-size: 11pt;"> to have two different powers in two zones, if that shape is declared to be a USS type 8. &nbsp;In this case one would probably want the zone radius to be the same for the DOE as for the USS. &nbsp;But any valid surface shape can be assigned, and it is not necessary to utilize the USS substrate shape.)</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Term XD16 gives a normalizing radius for the expansion. &nbsp;If it is nonzero, the radial distance from the vertex is divided by this number before the OPD is calculated.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Term XD32 is a phase offset, calculated by the program, that adjusts the phase of the outer zone to match that of the inner at the zone boundary. &nbsp;This avoids a sharp break in the OPD at that location. &nbsp;You should not edit this value, since the program recalculates it.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">You may enter an optional normalizing radius in </span><span style="font-size: 11pt; text-decoration: underline;">RNORM</span><span style="font-size: 11pt;">. &nbsp;If this is nonzero, the program will divide the aperture location of a given ray by this number before calculating the phase shift that is due to G or S-terms. &nbsp; (The XDD form places this factor in data location XD16, and ignores the RNORM input.)</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Input is normally in units of OPD, or cycles of phase shift, but you can enter the data in lens units if you precede all S-term entries with the input</span></p>
+<p>&nbsp;</p>
+<p style="text-indent: 48px;"><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">WLENS</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">WOPD</span><span style="font-size: 11pt;"> (the default) specifies entry in OPD units.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The Surface Shape dialog (reached from SPS or from the WorkSheet via the &quot;Surface Data&quot; toolbar button) will lead to a subdialog where you can convert from lens units to OPD units and vice-versa.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">You can see the shape of the OPD function with the </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um535.htm" class="topiclink">DSAG</a></span><span style="font-size: 11pt;"> feature.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">A DOE may be thought of as a circular grating applied to a lens surface. &nbsp;The grating is usually very coarse by grating standards, and is blazed at the construction wavelength so as to give nearly 100% efficiency. &nbsp;At other wavelengths, the blazing is not perfect, but the grating equation determines the diffraction angle, rather than the blaze angle, and for that reason long wavelengths are bent more than short – in contrast to the case with refractive optics where short wavelengths invariably encounter a larger index and are bent more. &nbsp;Thus, with diffractive optics it is possible to balance the two and to correct color with only a singlet.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">For a discussion of the manufacture of DOEs, see the section on the </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um530.htm#dmask" class="topiclink">DMASK</a></span><span style="font-size: 11pt;"> command.</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-11"><span class="f_p2-11">Note that reflective DOEs are quite practical, and are treated as coated reflective HOEs. &nbsp;This means that the DOE itself is a transmissive element, rather than reflective, and the reflection occurs on the substrate, which must be declared a REFLECTOR. &nbsp;For a reflective DOE, the emulsion index should be 1.0, since the DOE itself will be aluminized and the index is not material. &nbsp;(The &quot;substrate&quot; is always the second of the two DOE surfaces in this discussion, even if the DOE is on the second side of an element and the physical substrate is actually on a lower-numbered surface.)</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">All DOEs (except the USS 16 type mentioned above) require two surfaces, as do HOEs. &nbsp;The first is declared the DOE, with no index change, and the second is the substrate. &nbsp;The latter may be assigned any shape option except Fresnel, and is given the index of the substrate as well as any clear aperture size that may be needed. &nbsp;Tilts and decenters, on the other hand, are assigned to the DOE itself, not to the substrate.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p><a name="varydoe"></a><span class="f_p2-11">DOE OPD parameters may be varied in the same way as HOE parameters (although you are cautioned not to alter any of the construction parameters other than the coefficients.) &nbsp;These are always assigned to point P1, and no coefficients should be declared on point P2. &nbsp;The S-term coefficients may be varied as follows:</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span style="width:48px">&nbsp;</span><span class="f_p2-11">G16 through G36 will vary terms S1 through S21.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">G-terms are varied in a similar manner:</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span style="width:48px">&nbsp;</span><span class="f_p2-11">Variables G16 through G31 will vary DOE terms G16 through G31.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">And the XDD coefficients follow the same rule: </span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span style="width:48px">&nbsp;</span><span class="f_p2-11">G16 through G48 will vary terms XD1 through XD33.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">If your DOE uses Zernike coefficients, the variables are a little more complicated. &nbsp;Coefficients Z1 through Z17 are varied by input of the form</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span style="width:48px">&nbsp;</span><span class="f_p2-11">VY SN LHG 16</span></p>
+<p class="p_p2-11"><span class="f_p2-11">to</span></p>
+<p class="p_p2-11"><span style="width:48px">&nbsp;</span><span class="f_p2-11">VY SN LHG 32.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">Coefficients Z18 through Z34 use variables RHG 16 through 32. &nbsp;Terms Z35 is varied with LGH 33, and term Z36 with RHG 33.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">Example DOE:</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">Here is the input for a MACro that will design a color-corrected singlet to be molded in acrylic plastic.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">RLE</span></p>
+<p class="p_p2-11"><span class="f_p2-11">ID SINGLET DOE</span></p>
+<p class="p_p2-11"><span class="f_p2-11">WAVL CDF</span></p>
+<p class="p_p2-11"><span class="f_p2-11">OBB 0 1 1</span></p>
+<p class="p_p2-11"><span class="f_p2-11">1 RAD 10 TH .3 GLM 1.491 61.4</span></p>
+<p class="p_p2-11"><span class="f_p2-11">2 DOE .6328 1.491 65.2</span></p>
+<p class="p_p2-11"><span class="f_p2-11">A11</span></p>
+<p class="p_p2-11"><span class="f_p2-11">3 YMC 0 TH 15</span></p>
+<p class="p_p2-11"><span class="f_p2-11">4</span></p>
+<p class="p_p2-11"><span class="f_p2-11">END</span></p>
+<p class="p_p2-11"><span class="f_p2-11">PANT</span></p>
+<p class="p_p2-11"><span class="f_p2-11">VY 1 ASPH</span></p>
+<p class="p_p2-11"><span class="f_p2-11">VY 2 G 16</span></p>
+<p class="p_p2-11"><span class="f_p2-11">VY 2 G 18</span></p>
+<p class="p_p2-11"><span class="f_p2-11">VY 2 G 21</span></p>
+<p class="p_p2-11"><span class="f_p2-11">END</span></p>
+<p class="p_p2-11"><span class="f_p2-11">AANT</span></p>
+<p class="p_p2-11"><span class="f_p2-11">GSR 1 10 3 2</span></p>
+<p class="p_p2-11"><span class="f_p2-11">GSR 1 5 3 1</span></p>
+<p class="p_p2-11"><span class="f_p2-11">GSR 1 5 3 3</span></p>
+<p class="p_p2-11"><span class="f_p2-11">GNR 1 1 3 2 1</span></p>
+<p class="p_p2-11"><span class="f_p2-11">END</span></p>
+<p class="p_p2-11"><span class="f_p2-11">SNAP</span></p>
+<p class="p_p2-11"><span class="f_p2-11">SYNO 10</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><img src="um3f37.png" width="484" height="328" alt="um3f37" style="width:484px;height:328px;border:none"></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">In this input we declared the DOE on surface 2, and put a YMC solve on surface 3, which will be the substrate of the DOE. &nbsp;This is one way to control the first-order properties of the lens; in this case the image will be in focus on surface 4 at a distance of 15 inches from the DOE. &nbsp;The radius could also be input explicitly and varied as usual.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">The DOE was assigned power-series OPD terms (which are all zero to start with) with the A11 input. &nbsp;The format of this input is the same as for </span><span class="f_p2-11" style="text-decoration: underline;"><a href="um3324.htm#hoe" class="topiclink">HOEs</a></span><span class="f_p2-11">. &nbsp;Now it is possible to vary these terms in optimization in order to correct color along with anything else in the merit function. &nbsp;If the lens is to be molded in plastic, this is a good place to use aspherics as well as the DOE, since the finished lens does not increase in price with this added complexity (although the mold will be more expensive).</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">The OPD terms of order 2, 4, and 6 in powers of the zone height are varied with terms G 16, 18, and 21. &nbsp;The polynomial is the same as that described by input of the form DC1, etc., (see </span><span class="f_p2-11" style="text-decoration: underline;"><a href="um33222.htm" class="topiclink">section 3.3.2.2.2</a></span><span class="f_p2-11">). &nbsp;These may be varied, with DOE aspheric terms G1 through G16 varied by changing variables G 16 through G 31 in the DOE. &nbsp;See </span><span class="f_p2-11" style="text-decoration: underline;"><a href="um102.htm#vg" class="topiclink">section 10.2</a></span><span class="f_p2-11" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">It is simple to check the spatial frequency of the DOE: &nbsp;Here is a MACro that uses the </span><span class="f_p2-11" style="text-decoration: underline;"><a href="um88.htm#map" class="topiclink">MAP</a></span><span class="f_p2-11"> feature to prepare a table showing the frequency in cy/mm at 25 points distributed over surface 2</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">DEFAULT.MAC</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> --- MAP HSFREQ OVER PUPIL ON SURF 2</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> --- FGRID POINT 0 0</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> --- RGRID CREC 5 5</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> --- ACTUAL</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> --- DIGITAL</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> --- PRINT</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.122436E+02 &nbsp;0.000000E+00 &nbsp;0.000000E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.000000E+00 &nbsp;0.455905E+01 &nbsp;0.163926E+01 &nbsp;0.455905E+01 &nbsp;0.000000E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.122436E+02 &nbsp;0.163926E+01 &nbsp;0.235583E-05 &nbsp;0.163926E+01 &nbsp;0.122436E+02</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.000000E+00 &nbsp;0.455905E+01 &nbsp;0.163926E+01 &nbsp;0.455905E+01 &nbsp;0.000000E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.000000E+00 &nbsp;0.000000E+00 &nbsp;0.122436E+02 &nbsp;0.000000E+00 &nbsp;0.000000E+00</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">Here we see that the DOE requires a maximum of just over 12 cy/mm at the edge of the beam. &nbsp;To see the </span><span class="f_p2-11" style="font-style: italic;">locations </span><span class="f_p2-11">on the DOE where these data apply, you could use the ”PRINT FULL” option of MAP.</span></p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um333.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3327.htm" class="topiclink">previous</a><a href="um.htm#um_contents" class="topiclink"> TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

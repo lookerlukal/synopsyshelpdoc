@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um153</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="xsys"></a><span class="f_mine" style="font-size: 14pt;">15.3 Expert systems  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1522.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1531.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A second major part of the SYNOPSYS artificial intelligence capability is the expert systems program, XSYS. &nbsp;This program can often find new lens configurations for you. &nbsp;The </span><span class="f_mine" style="text-decoration: underline;"><a href="um1014.htm" class="topiclink">DSEARCH</a></span><span class="f_mine"> program is also good at finding starting points for optimization.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Normally, in the field of AI, an 'expert systems&quot; program is one that employs a tree-structured logic wherein decisions are derived from the responses of a number of experts in a particular field to a lengthy debriefing. &nbsp;Remarkable performance has been achieved in some areas, rivaling that of a human expert.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The SYNOPSYS program takes a somewhat different approach: the program is presented with a number of finished lens designs, the products of expert designers, which represent the state of the art. &nbsp;Using these lenses as models, the program analyzes the optical properties in great detail, determining for each lens the first and higher-order properties, and the aberrations that are present in the beam before and after each element. &nbsp;In so doing, the program &quot;learns&quot; how a particular optical problem was solved. &nbsp;The more examples it is given, the more it learns.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Then, when presented with a new problem or a lens that is not well corrected, it can determine if the current problem resembles one for which it knows a solution.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature is unique among all the programs in SYNOPSYS in that its performance is not built in. &nbsp;When the program is first installed, and without an example file, </span><span class="f_mine" style="font-weight: bold;">XSYS</span><span class="f_mine"> is ignorant. &nbsp;Most engineering programs give a certain output in response to a certain input, but </span><span class="f_mine" style="font-weight: bold;">XSYS</span><span class="f_mine"> has to be educated before it will work. &nbsp;And if the example file contains only microscope objectives, for example, it will probably not be of use designing infrared telescopes: the examples should represent more or less the kind of systems for which the program will be used.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We should note here that XSYS is not the only feature of SYNOPSYS that can derive entirely new lens configurations. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um1014.htm" class="topiclink">Section 10.14</a></span><span class="f_mine"> for a discussion of the DSEARCH and SPBUILD programs, which utilize a procedure altogether different from that of XSYS.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When the program XSYS is entered, it prompts with the following menu:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:466px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">Welcome to the SYNOPSYS expert systems program.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">Select one of the following input commands:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:53px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">M</span></p>
+</td>
+<td style="vertical-align:top; width:419px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">(this menu again)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">START</span></p>
+</td>
+<td style="vertical-align:top; width:419px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">(to start a new lens from scratch)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">ALTER</span></p>
+</td>
+<td style="vertical-align:top; width:419px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">(find alternate starting point)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">REENTER</span></p>
+</td>
+<td style="vertical-align:top; width:419px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">to re-use the last match list)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">LIST</span></p>
+</td>
+<td style="vertical-align:top; width:419px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">(to list example lenses on file)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">USE</span></p>
+</td>
+<td style="vertical-align:top; width:419px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">(to use one of the example lenses)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">INITIALIZE</span></p>
+</td>
+<td style="vertical-align:top; width:419px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">(to generate a file of examples)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">ADD</span></p>
+</td>
+<td style="vertical-align:top; width:419px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">(to add a lens to the example file)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">END</span></p>
+</td>
+<td style="vertical-align:top; width:419px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">XSYS can be used for three broad purposes:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Any of the example lenses may be retrieved intact for use as a starting point.</span></p>
+<p class="p_mine"><span class="f_mine">(Example: </span><span class="f_mine" style="font-weight: bold;">USE 4</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">A general set of requirements may be input, and </span><span class="f_mine" style="font-weight: bold;">XSYS</span><span class="f_mine"> will find the lens (or portion of a lens) that most closely matches them (according to various weights input by the user) when the scale and aperture are adjusted as well as possible. &nbsp;This lens can then be used as a starting point. (</span><span class="f_mine" style="font-weight: bold;">START</span><span class="f_mine">)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">3.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If you provide a starting lens, </span><span class="f_mine" style="font-weight: bold;">XSYS</span><span class="f_mine"> can analyze the beam everywhere in the lens and determine if a similar set of aberrations or first-order properties exists in any of the examples -- and if so, how the aberrations were corrected or how the first-order properties were achieved. &nbsp;It will then suggest alternate starting points based on this information. &nbsp;This feature is perhaps the most powerful ability of </span><span class="f_mine" style="font-weight: bold;">XSYS</span><span class="f_mine">. (</span><span class="f_mine" style="font-weight: bold;">ALTER</span><span class="f_mine">)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1531.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

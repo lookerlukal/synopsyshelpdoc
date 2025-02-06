@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>correcting edge feathering</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="AAE automatic air edge control,AEC (auto edge control),AFE atomatic feathering control,AGE automatic glass edge control,ECP, ECN, ETP, ETN,edge feathering, controlling,feathered edges; controlling,optimization--&gt;" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="aec"></a><span class="f_mine" style="font-weight: bold;">10.3.7 Edge Feathering Control (AEC) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1038.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1036.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The automatic edge-feathering control AEC is one of several </span><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm#monitor" class="topiclink">monitors</a></span><span class="f_mine"> that can be included in the merit function to make sure that certain requirements are not exceeded. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The monitors described in this section are easy to use, but do not apply to cases where surfaces are tilted or decentered. &nbsp;To control edge feathering in those cases, the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#rclear" class="topiclink">RCLEAR</a></span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#lsx" class="topiclink">LSX, LSY, LSZ</a></span><span class="f_mine"> aberrations are recommended instead.</span><br>
+<span class="f_mine">&nbsp;</span><br>
+<span class="f_mine">There are several simple tools to control edge thicknesses. &nbsp;The basic one is </span><span class="f_mine" style="font-weight: bold;">AEC</span><span class="f_mine">, or Automatic Edge Control. &nbsp;This is enabled by placing the entry </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-weight: bold;">AEC [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;">  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine" style="font-weight: bold;"> ] ].</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">in the AANT file. &nbsp;This control applies to all edges </span><span class="f_mine" style="font-weight: bold;">where the associated TH is a variable</span><span class="f_mine">. &nbsp;To control edges where the corresponding TH is not a variable (as when controlled by a pickup or solve), use the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#eth" class="topiclink">ETH</a></span><span class="f_mine"> operand for that thickness.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Often the minimum edge thickness one can tolerate on glass elements is different from that of airspaces, however. &nbsp;An airspace of half a millimeter presents no mechanical problems, while a lens edge so small is generally to be avoided. &nbsp;The AANT entries</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_mine" style="font-weight: bold;">AGE [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;">  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_mine" style="font-weight: bold;">AFE [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;">  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_mine" style="font-weight: bold;">AAE [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;">  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">allow one to give a different target to glass edges (with </span><span class="f_mine" style="font-weight: bold;">AGE</span><span class="f_mine">) and air edges (with </span><span class="f_mine" style="font-weight: bold;">AAE</span><span class="f_mine">).  </span><span class="f_mine" style="font-weight: bold;">AEC</span><span class="f_mine"> turns off AGE and AAE. &nbsp;If </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine"> is zero, the program substitutes the defaults.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When optimizing a </span><span class="f_mine" style="text-decoration: underline;"><a href="um1071.htm#zfile" class="topiclink">ZFILE</a></span><span class="f_mine"> zoom lens, the edge monitors will examine </span><span class="f_mine">all zoom positions automatically.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">AFE</span><span class="f_mine"> is similar to AGE, but examines the edges at <a href="um78.htm#efile" class="topiclink">EFILE</a> points A and E, if those are defined, or at the current CAO points, if not. &nbsp;This has subtle consequences that depend on how the EFILE edges are defined. &nbsp;If the EXPLICIT form is used, the apertures are fixed, while if the other forms are in effect, the values of points A and E will change as the lens changes. &nbsp;Edge feathering will therefore be controlled at an aperture given by the current CAO dimension plus the current MARGIN.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program will automatically monitor edges so designated and will add a penalty to the merit function if any of them become thinner than </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine">, weighted by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine">. &nbsp;The default is 1mm thickness, with a weight of 1.0. &nbsp;This feature does not monitor thicknesses controlled by a pickup or solve (since those cannot be variables), and it does not honor the </span><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm#vset" class="topiclink">VSET</a></span><span class="f_mine"> parameter (which can be changed for individual aberrations but not for a global feature like AEC). &nbsp;Nonetheless, it is a very convenient tool for keeping the lens in the real world, especially in the initial stages of a design, when the lens is changing rapidly and sometimes wants to have rather large or small element thicknesses. &nbsp;The rays involved are the same as those traced by </span><span class="f_mine" style="font-style: italic;">both</span><span class="f_mine"> the ECP and ECN options, described below, (except for VSET). &nbsp;The penalty is applied quadratically up to an error of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine">, and linearly thereafter.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The AEC option, if entered, will be converted to AGE if a subsequent AAE is entered, and to AAE if AGE is later entered. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">AEC does not support hyperspherical surfaces, since the edge thickness is then undefined. &nbsp;It will control the thickness at the CAO point but not at the hyperspherical point. &nbsp;To monitor the latter, we recommend controlling the ZA or ZG coordinates of a marginal ray on both sides of the element or airspace.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">AEC and the other edge monitors automatically apply to all zoom settings of a ZFILE zoom lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can request that an individual edge thickness be monitored, with the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f11.png" width="473" height="102" alt="um10f11" style="width:473px;height:102px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-weight: bold;">ECP</span><span class="f_mine"> causes the program to trace the upper (usually positive Y) rim ray from the full field object point and </span><span class="f_mine" style="font-weight: bold;">ECN</span><span class="f_mine"> causes the program to trace the lower (negative Y) rim ray from this object point. &nbsp;The thickness of the edge between each surface entered by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> data and the next surface in the lens is computed and compared to the target. &nbsp;If the edge is thinner, the difference is considered a violation. &nbsp;The sum of the squares of the edge violations of all entered surfaces is then included in the merit function. &nbsp;The square root of this quantity is printed as the aberration value. &nbsp;This feature does not take tilt and decenter geometry of the surfaces involved into account, and should therefore not be used for wedges.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The definition of &quot;full field&quot; depends on the object description. &nbsp;If the object field is rectangular, the program finds the distance from the axis to the object point where HBAR and GBAR </span><span class="f_mine" style="font-style: italic;">both</span><span class="f_mine"> equal 1.0, and traces from a point </span><span class="f_mine" style="font-style: italic;">in the meridional plane</span><span class="f_mine"> at this distance from the axis. &nbsp;If the system specification &quot;CFOV&quot; is in effect, specifying a circular field, the point traced is at HBAR = 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A final complication should be noted. &nbsp;If the lens uses the real pupil option (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um261.htm" class="topiclink">Section 2.6.1</a></span><span class="f_mine">), then the “upper” rim ray is in fact the ray at the margin on the same side of the axis as the full-field object. &nbsp;If the object height is positive, then the upper rim ray is in the same orientation as with a paraxial pupil. &nbsp;But if it is negative, the upper rim ray is then at the bottom of the pupil. &nbsp;This usually turns out to be exactly what you want anyway, since the ECP ray requires the larger aperture in either case, for elements before the stop, as you would expect.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When in doubt, simply look at the PAD display, be sure there is a drawing on the window, and press the </span><span class="f_mine" style="font-weight: bold;">F7</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">F8</span><span class="f_mine"> keys. &nbsp;The F7 key will show only the &quot;lower&quot; rim ray, and F8 the &quot;upper&quot;. &nbsp;You can quickly verify which ray is encountering featured edges and construct your ECP or ECN target accordingly.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">ETP</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">ETN</span><span class="f_mine"> are similar to </span><span class="f_mine" style="font-weight: bold;">ECP</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">ECN</span><span class="f_mine">, except that the edge is controlled equally for both thicker and thinner values. &nbsp;This specifies an exact target for the thickness.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To use this feature, the value of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine"> should be equal to the desired edge thickness, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> the value that you wish to go into the merit function when the edge is 1 unit too thin. &nbsp;Both </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> are always entered positive, even when the lens thickness itself is negative.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">As with everything else (except the Lagrange multiplier option) in damped-least-squares optimization, this error is balanced against others according to its weight. &nbsp;This means that a useful value of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> is about equal to the value of the largest of the other aberrations to be controlled. &nbsp;If the merit function contains OPD's, a useful WT might be in the range of 1 to 10, while if small transverse aberrations are specified, a value of .01 may suffice. &nbsp;It is usually best to start with a small weight and increase it only if the lens does not respond to the small value, since a large weight on a severe edge violation can change the lens by an inordinate amount and move away from an otherwise good solution region.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Of course, it is important that some variables are available to control edges, especially center thicknesses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If any of these individual controls are in effect, they will override any AEC or ACC request on that surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature uses the data entered by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um10311.htm#vset" class="topiclink">VSET</a></span><span class="f_mine">, if any, to reduce the size of the effective off-axis pupil, and of course it honors all of the pupil-size options such as the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#wap" class="topiclink">WAP</a></span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine">. &nbsp;But if the edge thickness is better determined by rays other than the upper and lower rim rays as defined by this pupil, you may create your own aberration by specifying, for instance,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">A TH </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">A 2 ZA </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-weight: bold;"> ( </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN +1</span><span class="f_mine" style="font-weight: bold;"> )</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">S 2 ZA </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-weight: bold;"> ( </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> )</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">or by utilizing the </span><span class="f_mine" style="font-weight: bold;">LIM</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">LL</span><span class="f_mine"> input, described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um10351.htm" class="topiclink">section 10.3.51</a></span><span class="f_mine">, to achieve one-directional control.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1038.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<BODY>
+<OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x800025">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Overview">
+	<param name="Local" value="brieft.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Tutorial Manual">
+	<param name="Local" value="tm.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="User's Manual">
+	<param name="Local" value="um.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="What's new in this update?">
+	<param name="Local" value="updateinfo.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Main Index">
+	<param name="Local" value="main_index.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Menus">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="File menu">
+	<param name="Local" value="menu_file.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Edit menu">
+	<param name="Local" value="menu_edit.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="View menu">
+	<param name="Local" value="menu_view.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Window menu">
+	<param name="Local" value="menu_window.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="MACro menu">
+	<param name="Local" value="menu_macro.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Options">
+	<param name="Local" value="menu_options.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Help menu">
+	<param name="Local" value="menu_help.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="EZ Menus">
+	<param name="Local" value="menu_ezmenus.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Wizard menu">
+	<param name="Local" value="menu_wizard.htm">
+</OBJECT>
+</UL>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Toolbars">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Top toolbar">
+	<param name="Local" value="afx_hidw_toolbar.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SideBar">
+	<param name="Local" value="hidd_set_tb_action.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="SketchPAD">
+	<param name="Local" value="sketchpad.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Graphics">
+	<param name="Local" value="graphics.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Worksheet">
+	<param name="Local" value="worksheet.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="RPER">
+	<param name="Local" value="rperbar.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="GlassMap">
+	<param name="Local" value="gt.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Annotation">
+	<param name="Local" value="afile.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Zoom Bar">
+	<param name="Local" value="um1071.htm#zoombar">
+</OBJECT>
+</UL>
+</UL>
+</BODY></HTML>

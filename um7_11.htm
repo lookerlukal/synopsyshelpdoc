@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um7.11</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="GSS System Summary,System Summary, graphical" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><a name="gss"></a><span class="f_mine" style="font-size: 14pt;">7.11 Graphical System Summary (GSS) &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um712.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um710.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">This manual has described many different ways to analyze your system, some based on geometric optics and others on diffraction theory. &nbsp;With those features you generally get one kind of analysis on a plotted page.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Another command will create a drawing with a collection of several kinds of graphs, including the diffraction point-spread function, spot diagram, pupil wavefront map, MTF, field curves, distortion curves, and lens drawing </span>–<span style="font-size: 11pt;"> all on the same page. &nbsp;This command is intended primarily to help you document your final design by displaying lots of data all at once. &nbsp;It can be accessed with the dialog </span><span style="font-size: 11pt; font-weight: bold;">MGS</span><span style="font-size: 11pt;">. &nbsp;Because each of the graphical elements is quite small, you should generate the full-size version of the analysis if you wish to make measurements of the data. &nbsp;Input is:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">[ FCO </span><span style="font-size: 11pt; text-decoration: underline;">CUTOFF</span><span style="font-size: 11pt;"> ]</span></p>
+<p><span style="font-size: 11pt;">[ PSVISUAL </span><span style="font-size: 11pt; text-decoration: underline;">MAGN</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">GAIN</span><span style="font-size: 11pt;"> ]</span></p>
+<p><span style="font-size: 11pt;">[ FRINGES [ </span><span style="font-size: 11pt; text-decoration: underline;">GRID</span><span style="font-size: 11pt;"> ] ]</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">GSS [ [ </span><span style="font-size: 11pt; text-decoration: underline;">ICOL</span><span style="font-size: 11pt;"> / P / M ] </span><span style="font-size: 11pt; text-decoration: underline;">NRYS</span><span style="font-size: 11pt;"> [ Q ] ]</span></p>
+<p><span style="font-size: 11pt;">[ZERNIKE]</span></p>
+<p><span style="font-size: 11pt;">[ HBAR </span><span style="font-size: 11pt; text-decoration: underline;">HBAR</span><span style="font-size: 11pt;"> &nbsp;[ </span><span style="font-size: 11pt; text-decoration: underline;">HBAR</span><span style="font-size: 11pt;"> &nbsp;[ </span><span style="font-size: 11pt; text-decoration: underline;">HBAR</span><span style="font-size: 11pt;"> ] ] ]</span></p>
+<p><span style="font-size: 11pt;">[ GBAR </span><span style="font-size: 11pt; text-decoration: underline;">GBAR</span><span style="font-size: 11pt;"> ]</span></p>
+<p><span style="font-size: 11pt;">[ DWG </span><span style="font-size: 11pt; text-decoration: underline;">TSCF</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">JSSS</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">JSPS</span><span style="font-size: 11pt;"> ]</span></p>
+<p><span style="font-size: 11pt;">[ PER </span><span style="font-size: 11pt; text-decoration: underline;">EL</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">AZ</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">TSCF</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">JSSS</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">JSPS</span><span style="font-size: 11pt;"> [ V ] ]</span></p>
+<p><span style="font-size: 11pt;">[ PSCF </span><span style="font-size: 11pt; text-decoration: underline;">PSCF</span><span style="font-size: 11pt;"> &nbsp;[ R / L / 0 [ C ] ] ]</span></p>
+<p><span style="font-size: 11pt;">[ SSCF </span><span style="font-size: 11pt; text-decoration: underline;">SSCF</span><span style="font-size: 11pt;"> ]</span></p>
+<p><span style="font-size: 11pt;">[ PUSCF </span><span style="font-size: 11pt; text-decoration: underline;">PUSCF</span><span style="font-size: 11pt;"> [ </span><span style="font-size: 11pt; text-decoration: underline;">WX</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">WY</span><span style="font-size: 11pt;"> ] ]</span></p>
+<p><span style="font-size: 11pt;">[ FSCF </span><span style="font-size: 11pt; text-decoration: underline;">FSCF</span><span style="font-size: 11pt;"> ]</span></p>
+<p><span style="font-size: 11pt;">[ DSCF </span><span style="font-size: 11pt; text-decoration: underline;">DSCF</span><span style="font-size: 11pt;"> ]</span></p>
+<p><span style="font-size: 11pt;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">All input except the GSS and END lines is optional.  </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">FCO specifies the cutoff frequency of the MTF, which is calculated by the routines described in </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um863.htm" class="topiclink">Section 8.6.3</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">PSVISUAL displays the diffraction point-spread function with its visual appearance rather than by oblique projection. &nbsp;The data are described in </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um862.htm" class="topiclink">Section 8.6.2</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">FRINGES shows the pupil map as fringes instead of in oblique perspective. &nbsp;GSS does not honor the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um861.htm" class="topiclink">CONTOUR</a></span><span style="font-size: 11pt;"> directive, and will turn the latter into FRINGES if it is requested.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The analysis may be requested in a single color (</span><span style="font-size: 11pt; text-decoration: underline;">ICOL</span><span style="font-size: 11pt;">), in the primary color (P), or in all colors at once (M). &nbsp;The default is M.  </span><span style="font-size: 11pt; text-decoration: underline;">NRYS</span><span style="font-size: 11pt;"> gives the number of rays to be analyzed. &nbsp;This number is fit to the (usually circular) aperture, so the exact number may vary, and the number in each color of the spot diagram is reduced according to the spectral weight in that color. &nbsp;The default is 600 rays. &nbsp;The optional Q runs in quiet mode, where output to the Command Window is suppressed.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Field points to be analyzed are given with the </span><span style="font-size: 11pt; text-decoration: underline;">HBAR</span><span style="font-size: 11pt;"> input, where you may request up to three fractional field points.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">If the lens has a nonzero skew field, you may specify the fractional field point in the X-direction with the </span><span style="font-size: 11pt; text-decoration: underline;">GBAR</span><span style="font-size: 11pt;"> input.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The optional ZERNIKE directive causes the program to use the Zernike wavefront expansion for the MTF portion of the analysis. &nbsp;This option is intended for cases when the cutoff frequency FCO is too low for the normal MTF analysis. &nbsp;(You will get an error message if that is the case, raising the FCO to the limit, and advising you to use the Zernike option.)</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The default drawing is the lens profile (</span><span style="font-size: 11pt; text-decoration: underline;"><a href="umch7.htm#dwg" class="topiclink">DWG</a></span><span style="font-size: 11pt;">), which will be drawn at the scale given by </span><span style="font-size: 11pt; text-decoration: underline;">TSCF</span><span style="font-size: 11pt;"> and will include surfaces </span><span style="font-size: 11pt; text-decoration: underline;">JSSS</span><span style="font-size: 11pt;"> through </span><span style="font-size: 11pt; text-decoration: underline;">JSPS</span><span style="font-size: 11pt;"> if those data are entered. &nbsp;In the event that the requested scale would cause the drawing to exceed its somewhat limited area of the picture, or if no scale is entered, the program will calculate a scale that is within this area. &nbsp;If no surfaces are entered, the program will draw the entire lens. &nbsp;Since this is a Y-Z profile drawing, it will not display tilts or decenters that are out of the plane of the paper, and caution is recommended if that is the case. &nbsp;The program will fit the drawing horizontally into its assigned area, but it there are asymmetries that go above or below this area, you are advised to use the PER option instead.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">If you enter the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um72.htm#per" class="topiclink">PER</a></span><span style="font-size: 11pt;"> data, the drawing will be a perspective view instead of the Y-Z profile of DWG. &nbsp;You may select the view angles with </span><span style="font-size: 11pt; text-decoration: underline;">EL</span><span style="font-size: 11pt;"> (the elevation) and </span><span style="font-size: 11pt; text-decoration: underline;">AZ</span><span style="font-size: 11pt;"> (the azimuth). &nbsp;The drawing will be at a scale of </span><span style="font-size: 11pt; text-decoration: underline;">TSCF</span><span style="font-size: 11pt;"> if entered, or a default scale if not, and will span surfaces </span><span style="font-size: 11pt; text-decoration: underline;">JSSS</span><span style="font-size: 11pt;"> through </span><span style="font-size: 11pt; text-decoration: underline;">JSPS</span><span style="font-size: 11pt;"> if those data are entered. &nbsp;Note that this feature takes only a single line of perspective data, unlike the PER command itself; the rays to be traced are always the chief ray and the upper and lower rim rays at whatever HBARs have been requested. &nbsp;The optional V in word 7 will cause the input light to come down from the top, rather than from the left. &nbsp;The perspective feature draws rims around the edges of the elements; if both view angles are zero and you don’t want the extra rim lines on the drawing, turn on switch 18 before running GSS.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; text-decoration: underline;">PSCF</span><span style="font-size: 11pt;"> gives the height, in inches, of the peak of the point-spread function. &nbsp;This value should be no greater than 1.0, since the area for each diagram is small. &nbsp;If you enter no data for </span><span style="font-size: 11pt; text-decoration: underline;">PSCF</span><span style="font-size: 11pt;">, the program will adjust the height of each pattern to illustrate relative intensities. &nbsp;The pictures may be rotated left (L) or right (R), and may be displayed with colors that map the local color of the image at each point (C). &nbsp;If the optional PSVISUAL has been entered, you should enter a height unless the image is very well corrected at all field points. &nbsp;(The program normalizes the heights before it converts to the visual appearance, and the intensities are then normalized and the spot will be easily seen – while a poor image with no height given may well be too dim to see clearly.)</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">SSCF gives a reference dimension, in lens units, for the spot diagrams. &nbsp;If the lens is AFOCAL, this dimension is in radians. &nbsp;The program draws, for reference, the size of the Airy diffraction disk, calculated for the major color and the actual F/number in X and Y at the first requested image point. &nbsp;This may be defeated by turning on switch 80. &nbsp;Switch 85 affects the colors displayed.  </span><span class="f_mine" style="text-decoration: underline;"><a href="um851_1.htm" class="topiclink">See Section 8.5.1.1</a></span><span class="f_mine"> for a discussion of this special color option.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; text-decoration: underline;">PUSCF</span><span style="font-size: 11pt;"> give a reference dimension, in waves, for the PUPIL plots. &nbsp;If FRINGES has been requested, you may also enter a wedge in X and Y, in fringes, with </span><span style="font-size: 11pt; text-decoration: underline;">WX</span><span style="font-size: 11pt;"> and </span><span style="font-size: 11pt; text-decoration: underline;">WY</span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; text-decoration: underline;">FSCF</span><span style="font-size: 11pt;"> gives a reference dimension, in lens units, for the field curvature plot. &nbsp;If the lens is AFOCAL, this dimension is in diopters.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; text-decoration: underline;">DSCF</span><span style="font-size: 11pt;"> gives a reference dimension for the distortion plot. &nbsp;This is a fraction, relative to the GIHT.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Since many of the items displayed by GSS involve diffraction effects, this feature should only be used with systems whose image is corrected well enough to make this analysis appropriate. &nbsp;Here is an example of the GSS output, where the input was </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">GET 4</span></p>
+<p><span style="font-size: 11pt;">GSS</span></p>
+<p><span style="font-size: 11pt;">PSCF 0 L</span></p>
+<p><span style="font-size: 11pt;">END</span></p>
+<p>&nbsp;</p>
+<p><img src="gss1.png" width="874" height="690" alt="gss1" style="width:874px;height:690px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here we entered the number 0 for the PSPRD height, so the program would scale the diagrams according to intensity, and requested a left orientation on the drawings.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The next example shows the visual appearance of the diffraction patterns for an eyepiece, with the pupil displayed as fringes with a 6-wave wedge in X added for clarity. &nbsp;Here is the input:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">GET 9</span></p>
+<p><span style="font-size: 11pt;">SSS .002 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; small spots requested, because the pictures are small</span></p>
+<p><span style="font-size: 11pt;">PSVIS 3 2</span></p>
+<p><span style="font-size: 11pt;">FRINGES</span></p>
+<p><span style="font-size: 11pt;">GSS M 600 Q &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; quiet mode requested</span></p>
+<p><span style="font-size: 11pt;">DWG 0 2 18</span></p>
+<p><span style="font-size: 11pt;">PUSCF .1 6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; fringes for the pupil, requested above; the scale is ignored</span></p>
+<p><span style="font-size: 11pt;">PSCF 1 L  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; and visual display for the image, normalized intensity</span></p>
+<p><span style="font-size: 11pt;">END</span></p>
+<p>&nbsp;</p>
+<p><img src="gss2.png" width="820" height="650" alt="gss2" style="width:820px;height:650px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um712.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

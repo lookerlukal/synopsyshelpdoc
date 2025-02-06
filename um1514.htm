@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>calculating with</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="=,AI--&gt;,calculating in AI,COMPOSITE, with AI" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">15.1.4 Calculating with Al</span><span class="f_mine" style="font-size: 14pt;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um15131.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um15142.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Two features are available for doing simple calculations with AI. &nbsp;The COMPOSITE method is compact but imposes strict format rules, while the method using the </span><span class="f_mine" style="text-decoration: underline;"><a href="um15142.htm" class="topiclink">Zn parameters</a></span><span class="f_mine"> is free form.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">15.1.4.1 Composite aberrations in AI</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">AI</span><span class="f_mine"> can evaluate a quantity in the format of a composite aberration, described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um10310.htm" class="topiclink">section 10.3.10</a></span><span class="f_mine">. &nbsp;In this case the idea is not to correct the aberration, but simply to print its value. &nbsp;The command for this feature is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">COMPOSITE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">followed by the composite definitions entered in the format of an aberration definition. &nbsp;For example, the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">COMPOSITE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">CD1 TH 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">CD2 RAD 3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">= CD1/CD2</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">would calculate the ratio of thickness number 2 to radius number 3. &nbsp;There are nine CD's (CD1 to CD9), and this feature requires adherence to the input formats of an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um103.htm#aant" class="topiclink">AANT</a></span><span class="f_mine"> file: the CD’s must be defined </span><span class="f_mine" style="font-style: italic;">in order</span><span class="f_mine">, and you cannot define them with an </span><span class="f_mine" style="font-weight: bold;">AI</span><span class="f_mine"> sentence. &nbsp;I.e., “</span><span class="f_mine" style="font-weight: bold;">CD1 2 TH</span><span class="f_mine">” would not work because that is not a valid </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> format (although AI itself allows more flexible input, the command interpreter does not). &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um10310.htm" class="topiclink">section 10.3.10</a></span><span class="f_mine"> for a discussion of the formats of a COMPOSITE aberration. &nbsp;Although this feature is less forgiving than the other AI features, it is more compact for some purposes. &nbsp;It also can access any parameter that can go into a merit function, including some that are not otherwise known to the AI program.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To evaluate the difference between two ray coordinates, you might enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">COMPOSITE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">CD1 2 YA 0 0 1 0 4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">CD2 2 YA 0 0 1 0 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">= CD2 - CD1</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This kind of sequence may be put into a MACro, but not into a multiline symbol, since the “=” sign must be in the first column of the input line, as in the case of aberration definitions – and multiline symbols retain their column placement.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">As in the case of composite aberrations, the equation can involve the functions ABS, the SQRT and circular functions SIN, ASIN, COS, ACOS, TAN, ATAN, and the exponential and logarithmic functions EXP, ALOG, and ALOG10. &nbsp;Angular arguments in every case are in units of </span><span class="f_mine" style="font-style: italic;">radians</span><span class="f_mine">, as in Fortran.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The results of the equation evaluation are displayed on the screen and automatically placed into FILE location 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When a COMPOSITE command is entered, all previously defined CDn's are deleted. &nbsp;(If defined within an AANT file, they retain their values unless explicitly redefined. &nbsp;See <a href="um1514.htm" class="topiclink">15.1.4.</a>)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If your composite definition is complicated, it helps to be able to print the values of all of the CDn parameters afterwards for troubleshooting. &nbsp;This is easily done with the AI sentence</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">SHOW CD</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that this feature uses the aberration calculation program that is also used by the optimization feature. &nbsp;For this reason, any previously defined AANT file data are discarded when the composite data are calculated, and if you wish to continue a previous optimization, you must re-enter both the PANT and AANT files. &nbsp;See the next section for a different format that leaves your AANT file intact.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Also, note that you may freely use any of the </span><span class="f_mine" style="text-decoration: underline;"><a href="um103101.htm" class="topiclink">Zn parameters</a></span><span class="f_mine"> in your equation. &nbsp;Those are handy when you just want to insert a numeric parameter, since you can vary that value with the VY </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> VZN <a href="um102.htm#vvzn" class="topiclink">variable declaration</a> in the PANT file. &nbsp;This feature lets you do all kinds of parametric studies, should you even need that kind of power.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that you can also evaluate an equation with simpler input, using the Zn parameters instead of the CDn. &nbsp;This is explained in the next section.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um15142.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

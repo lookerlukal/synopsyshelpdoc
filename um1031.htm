@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1031</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="BIREF, setting index in optimization,diopter, setting in optimization,POLARIZATION, setting in optimization" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">10.3.1 Ray Aberrations, Settings &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10311.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um103.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The set of rays to be traced by SYNOPSYS may be entered explicitly by the user, generated automatically by the program, or both. &nbsp;Automatic raysets ignore vignetting, but honor the </span><span class="f_mine" style="font-weight: bold;">VSET</span><span class="f_mine"> parameter (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm" class="topiclink">10.3.1.1</a></span><span class="f_mine">), to model a vignetted pupil, and also the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine"> array, if one is in effect.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Additional parameters may be entered to alter the lens when evaluating ray aberrations that are defined later. &nbsp;(All of these are put into the AANT file.) &nbsp;The first is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">DIOPTERS </span><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold; text-decoration: underline;">D</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This parameter only works when the lens is in AFOCAL mode. &nbsp;It changes the accommodation setting of the lens to the entered value of </span><span class="f_mine" style="text-decoration: underline;">D</span><span class="f_mine">. &nbsp;The lens remains at that setting until the user changes it. &nbsp;It is wise therefore to add a final DIOPTER </span><span class="f_mine" style="text-decoration: underline;">D</span><span class="f_mine"> line at the end of the AANT file if you always want the system to go back to an original setting when the optimization is finished.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">ZOOM </span><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold; text-decoration: underline;">NB</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will adjust the current zoom setting to zoom number NB. &nbsp;This only works on </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1071.htm#zfile" class="topiclink">ZFILE</a></span><span class="f_mine"> zoom lenses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">BIREF </span><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;"> { ORD / EXTR }</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will set the index selection of the material at surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> &nbsp;to the selected state. &nbsp;Rays traced following this input will therefore see that index. &nbsp;The material must be a </span><span class="f_mine" style="text-decoration: underline;"><a href="um175.htm" class="topiclink">BIREF</a></span><span class="f_mine"> before you can use this input.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">POLAR { X / Y / CL / CR }</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will set the polarization state of the system to linear-X, linear-Y, circular-X or circular-Y. &nbsp;Polarization mode must be on before you can use this input.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">These changes are made to the lens whenever the aberration array is evaluated. &nbsp;The lens remains with those settings thereafter, except when you request EVAL instead of SYNOPSYS; in that case the lens is restored to the initial state afterward. &nbsp;This means that on the </span><span class="f_mine" style="font-style: italic;">next</span><span class="f_mine"> optimization evaluation, you may not start with the original settings. &nbsp;It is wise to initialize them explicitly, at the start of the AANT file, if this is the case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10311.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

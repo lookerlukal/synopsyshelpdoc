@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um75</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DIS, plotted distortion curve,F-theta lens: distortion of" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><span class="f_mine" style="font-size: 14pt;">7.5 Distortion Curve (DIS)</span><span class="f_mine">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um751.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um74.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">DIS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span><span class="f_mine" style="font-weight: bold;"> [ { P / 0 } [ { GBAR / 0 } { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / P / M } {REAL / 0 } [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">REFHBAR</span><span class="f_mine" style="font-weight: bold;"> ] ] ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will produce a table and a plot (if </span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine"> is input) of the normalized distortion vs. fractional field of view for 25 points in the field. &nbsp;For each point the real-ray intercepts in both X and Y are compared with the Gaussian image height for that field, and the differences are divided by the full-field GIHT. &nbsp;The output gives two columns, with the transverse (Y) distortion along with the sagittal (X). &nbsp;The values are thus fractions of the GIHT, in both directions. &nbsp;If the optional </span><span class="f_mine" style="font-style: italic;">word</span><span class="f_mine"> “GBAR” (not a number!) is entered in word four, the object points and calculation are taken in the X-Z plane. &nbsp;A zero </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span><span class="f_mine"> gives default scaling. &nbsp;This command can also be run from the </span><span class="f_mine" style="font-weight: bold;">MRR</span><span class="f_mine"> dialog. &nbsp;A FOCAL lens with no distortion has an image height that is everywhere proportional to the object height.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A color number may be entered in word 5 (or “P” for the primary color or &quot;M&quot; for a multicolor analysis). &nbsp;If the word “</span><span class="f_mine" style="font-weight: bold;">REAL</span><span class="f_mine">” is entered in word 6, the distortion that is calculated will be the actual difference (not normalized) between the ray intercept and the paraxial value at that field point, in lens units if the lens is FOCAL, and in radians if not.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you enter a nonzero reference field point in </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">REFHBAR</span><span class="f_mine">, the magnification is redefined so that the distortion is exactly zero at that point; the result then gives the distortion relative to </span><span class="f_mine" style="font-style: italic;">that</span><span class="f_mine"> magnification. &nbsp;This is useful, for example, if you want to calculate the departure of each field point from the ideal pixel location, where you try different values of REFHBAR to minimize the maximum departure.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#afocal" class="topiclink">AFOCAL</a></span><span class="f_mine"> or </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#accom" class="topiclink">ACCOMODATED</a></span><span class="f_mine"> mode the distortion is defined as above except that instead of the linear image height the program deals with the output </span><span class="f_mine" style="font-style: italic;">angles.</span><span class="f_mine"> &nbsp;Thus, if the lens has no distortion, one finds that the output </span><span class="f_mine" style="font-style: italic;">angle</span><span class="f_mine"> is everywhere proportional to the input (object) </span><span class="f_mine" style="font-style: italic;">angle</span><span class="f_mine">.  </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#aperfect" class="topiclink">APERFECT</a></span><span class="f_mine"> mode, on the other hand shows the linear image height. &nbsp;These issues influence the meaning of the distortion calculation, as explained in </span><span class="f_mine" style="text-decoration: underline;"><a href="um751.htm" class="topiclink">Section 7.5.1</a>.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In lenses with object type </span><span class="f_mine" style="font-weight: bold;">OBD</span><span class="f_mine"> (for wide angles) the object coordinate given by </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> always refers to a fractional </span><span class="f_mine" style="font-style: italic;">angle</span><span class="f_mine">, not linear height. &nbsp;As a consequence, the distortion curve will appear perfect only if the image height is linearly proportional to the object angle. &nbsp;This is the situation usually desired for so-called F-theta lenses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since the paraxial calculation of the ideal image point ignores tilts and decenters, the program </span><span class="f_mine" style="font-weight: bold;">DIS</span><span class="f_mine"> must be used with caution in systems with asymmetries. &nbsp;In such cases, a value should be entered for REFHBAR, causing the paraxial results to be ignored. &nbsp;The command </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="7_17_cdist.htm" class="topiclink">CDIST</a></span><span class="f_mine"> will calculate the coefficients of a power-series polynomial that models the distortion over the field, and does not assume symmetry.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A sample </span><span class="f_mine" style="font-weight: bold;">DIS</span><span class="f_mine"> plot is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f18.png" width="459" height="662" alt="um7f18" style="width:459px;height:662px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="font-size: 11pt;">The command <a href="um712.htm" class="topiclink">GDIST</a> can also evaluate distortion, showing a grid of points.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um751.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

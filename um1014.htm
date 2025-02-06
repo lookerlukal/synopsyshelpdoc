@@ -1,0 +1,1038 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1014</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Design search,DSEARCH,DSS MACro, showing DSEARCH results in PAD,Global optimization" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span class="f_mine" style="font-size: 14pt;">10.14 </span><a name="dsearch"></a><span class="f_mine" style="font-size: 14pt;">Design Search (DSEARCH) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1013.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1015.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The previous sections in this chapter have explained how to set up the data files for optimization, and they all assume that you start with a lens that has good possibilities.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">But sometimes you do not have one. &nbsp;There are four features that can help in such cases: </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um153.htm#xsys" class="topiclink">XSYS</a></span><span class="f_mine">,  </span><span class="f_mine" style="font-weight: bold;">DSEARCH</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1073.htm#zsearch" class="topiclink">ZSEARCH</a></span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1017.htm#spb" class="topiclink">SPBUILD</a></span><span class="f_mine">. &nbsp;While XSYS is a very powerful feature, it requires a lens database that requires some effort to set up. &nbsp;DSEARCH and SPBUILD, on the other hand require no advance preparation. &nbsp;Input for both of these features is much the same. &nbsp;SPB is described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um1017.htm" class="topiclink">Section 10.17</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Both of those features may be found in the dialog </span><span class="f_mine" style="font-weight: bold;">MDS</span><span class="f_mine">. &nbsp;This section describes the Design Search program.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Design Search (DSEARCH)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">We first point out that although DSEARCH is a remarkably fast and effective global search program, one cannot expect that it will produce finished designs, ready to send to the shop, in one operation. &nbsp;It is intended only to create plausible starting points as a first step in a lengthy design process. &nbsp;Then it is up to you to modify the results as necessary in order to meet your requirements. &nbsp;One usually performs several steps before the design is complete, summarized as follows;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">A. &nbsp;Enter the requirements as best you can into the DSEARCH input file. &nbsp;The dialog MDS can get you started, and then you can modify the file it creates as required.</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">B. Run the program and examine the results.  </span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">C. If all of the designs depart from your goals significantly, perhaps because the design went in a direction you did not expect, modify the input and go back to step B.</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">D. If one or more designs look like a good starting point, evaluate them to see what shortcomings remain.</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">E. Modify the merit function created by DSEARCH, changing weights, adding or modifying monitors and rays, and adding targets for mechanical goals if those are violated.</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">F. Optimize and anneal. &nbsp;When that process will go no further, use <a href="um1017.htm#aei" class="topiclink">AEI</a> to add an element where it will do the most good.</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">G. Try using <a href="um1016.htm#aed" class="topiclink">AED</a>, to see if an element can be removed.</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">I. Repeat steps F and G, perhaps several times, as the configuration continues to improve.</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">J. When the design becomes reasonable, it is time to add windows, fold mirrors, dummy surfaces for a cold stop or to monitor the image at a field stop, etc.</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">K. When all important goals are met, run the real-glass routine <a href="um547.htm#arglass" class="topiclink">ARGLASS</a> or the glass-search routine <a href="um531.htm#gsearch" class="topiclink">GSEARCH</a>. &nbsp;Those will substitute real glass types for the glass models used by DSEARCH. &nbsp;(For IR and UV designs, the glass model is not appropriate and you should specify the materials directly in the DSEARCH input.)</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">L. Continue to optimize and anneal until the design will not improve any more.</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">M. If the design is still not good enough, go back to step D and select a different return from DSEARCH. Then repeat the subsequent steps.</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">O. Study the design examples in the Online Tutorial section of the SYNOPSYS website. &nbsp;There you will see how a variety of problems are identified and corrected.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">And a final thought: &nbsp;The optimization algorithms in SYNOPSYS are the most powerful in the world, but nothing can change the chaotic nature of the lens design landscape. &nbsp;The default algorithm is PSD III, activated by switch 2. &nbsp;We have run many test cases with this switch both on and off, and when off, the program uses PSD II instead -- and often the results from the two settings are markedly different. &nbsp;We encourage you to try both switch settings when running DSEARCH, and choose the best returns from both. &nbsp;The setting may be selected with the PSD input, described below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The Design Search program will search through lens space in order to find an attractive starting point. &nbsp;You give it the desired system parameters and the number of elements you want, along with some target quantities to define the design goals. &nbsp;Then it performs the following steps:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;It constructs a series of candidate lenses, with initial dimensions assigned according to either a binary search scheme or randomly, depending on user input.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default option assigns element powers according to the bit in a binary number that is incremented at each cycle. &nbsp;Thus, if you request, say, a four-element lens, the first lens would have all negative elements taken from the binary number (0000). &nbsp;The next try would have one positive element, from the number (0001) and so on.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the RANDOM option is selected, the radii, thicknesses, and airspaces are calculated as a random fraction of the input (or default) values of RSTART, THSTART, and ASTART. &nbsp;In either case, elements are given a GLM glass model (for visible spectrum systems) or are assigned one of two entered glass types (for IR systems).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;If the system is FOCAL, the program assigns a UMC solve to the final surface with a value taken from the desired F/number, and assigns a YMT solve to the final airspace. &nbsp;Thus, the power of the last element defined in step 1 is altered. &nbsp;If it is AFOCAL, the target value of the curvature solve is zero, and there is no YMT solve. &nbsp;These steps can be overridden by user input.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;The program constructs a PANT file that varies all radii except the last (which has a solve), all thicknesses except the last, and (if the system is not monochromatic and is in the visible) the GLM variable on each element. &nbsp;It also varies the paraxial quantity YP1, unless directed otherwise. &nbsp;This allows the paraxial stop position to vary.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">4. &nbsp;It traces the upper and lower rim rays to check for ray failures, which are common. &nbsp;If any are found, it submits a quick optimization using the ERROR aberration and the previously defined variables. &nbsp;This usually converges immediately, and the rays will then trace. &nbsp;If not, after several tries that case is skipped.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">5. &nbsp;It constructs an AANT file with the requests AEC and ACC to control edge and center thicknesses so the lenses are reasonable. &nbsp;Then it adds the first-order targets that have been requested and a default set of rays at the entered field points. &nbsp;(The default points are at HBAR = 0., 0.75, and 1.0.) &nbsp;If the system is not monochromatic, it also corrects rays in the long and short colors (taken from the CORDER input). &nbsp;These will be colors 1 and 3 if the default wavelengths (CDF) are in effect. &nbsp;It then adds any input you have given in the SPECIAL section (see below) to the merit function.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">6. &nbsp;It runs the optimization program for the requested number of cycles.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">7. &nbsp;It then submits an </span><span class="f_mine" style="text-decoration: underline;"><a href="um1012.htm#anneal" class="topiclink">ANNEAL</a></span><span class="f_mine"> run, if requested, which makes small random changes to the lens and reoptimizes, over and over.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">8. When all of the above steps are done, it cycles with the next candidate lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">9. &nbsp;If multicore mode is in effect (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um546.htm#core" class="topiclink">CORE</a></span><span class="f_mine">), the program assigns the trial cases sequentially to all of the authorized cores. &nbsp;This can greatly speed up the process, and you are encouraged to implement this mode if your PC has that capability. &nbsp;The optimization file created by DSEARCH cannot define any new AI symbols, but it will inherit and honor any symbols previously defined.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">As it performs these steps, the program saves the resulting designs in two ways. &nbsp;The best design seen so far is automatically saved in the requested library location; the first ten designs are saved in files named DSEARCH01.RLE, DSEARCH02.RLE, up to 10. &nbsp;Thereafter, when each case is optimized, the merit function is compared to the worst of the ten, and if better it replaces that file.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When all of the cycles have finished, the best lens that was found is therefore in the requested library location, and the ten best are in the named files (although not necessarily in numerical order). &nbsp;The program then makes a composite drawing showing all of the lenses in those files. &nbsp;It also creates and opens a MACro with the name DSEARCH_OPT.MAC, which lets you easily continue work on any of the resulting lenses. &nbsp;In the event that any of them look interesting, be sure to </span><span class="f_mine" style="text-decoration: underline;"><a href="um372.htm#fetch" class="topiclink">FETCH</a></span><span class="f_mine"> and save them with a unique name, since the files will be overwritten the next time you run DSEARCH. &nbsp;It also creates a MACro DSS.MAC, which gives you an easy way to open and evaluate in PAD all of the saved examples. &nbsp;Just run that MACro, and press the &lt;Enter&gt; key to go on to the next one.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The command </span><span class="f_mine" style="font-weight: bold;">DSEARCH PLOT</span><span class="f_mine"> will show a plot of the most recent results, in numerical order. &nbsp;DSEARCH automatically makes a plot, sorted by quality -- but this feature lets you come back the next day and make a new plot if you want to.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature is intended only for single configuration fixed-focus lenses. &nbsp;Zoom lenses can be designed with </span><span class="f_mine" style="text-decoration: underline;"><a href="um1073.htm#zsearch" class="topiclink">ZSEARCH</a></span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optimization portion by default varies the glass model variable on each element, which is only appropriate for systems operating in the visible portion of the spectrum. &nbsp;If your system is outside this region, you must select the materials to use for positive and negative elements with the GLASS… input, described below. &nbsp;In that case, the glass model is not used or varied.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">DSEARCH identifies each of the 10 best lenses as it saves them. &nbsp;A character string is put into the lens identification string ID1 listing the sequence of element powers that created the design (in binary search mode). &nbsp;Note that the </span><span class="f_mine" style="font-style: italic;">resulting</span><span class="f_mine"> powers are often different from the initial set. &nbsp;In the event you want to run only a particular case again, that string tells you how to identify it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Input for this feature is as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"> DSEARCH <a href="um1014.htm#dslib" class="topiclink">LLIB</a> [ <a href="um1014.htm#dsquiet" class="topiclink">QUIET</a> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ <a href="um1014.htm#dsusecurrent" class="topiclink">USE CURRENT</a> </span><span class="f_mine" style="text-decoration: underline;">JFROM</span><span class="f_mine"> [ ALL ] ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SYSTEM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">(lens ID)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">(object description)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">(wavelengths)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[color order]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">(other system data, such as AFOCAL, etc.)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GOALS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsafocal" class="topiclink">[ AFOCAL ]</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dselements" class="topiclink">ELEMENTS</a> </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> [ </span><span class="f_mine" style="text-decoration: underline;">NPOS</span><span class="f_mine"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsfnum" class="topiclink">FNUM</a> </span><span class="f_mine" style="text-decoration: underline;">FN</span><span class="f_mine"> [ </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">(all goals below are optional)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ <a href="um1014.htm#dssingle" class="topiclink">SINGLE</a> [ </span><span class="f_mine" style="text-decoration: underline;">P N N P</span><span class="f_mine"> ... / </span><span class="f_mine" style="text-decoration: underline;">1 0 0 1</span><span class="f_mine"> ... / CASE </span><span class="f_mine" style="text-decoration: underline;">nb</span><span class="f_mine"> ] ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dssample" class="topiclink">SAMPLE</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsimmerse" class="topiclink">IMMERSE</a> </span><span class="f_mine" style="text-decoration: underline;">INDEX</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">VNUM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dscover" class="topiclink">COVER</a> </span><span class="f_mine" style="text-decoration: underline;">TH</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">INDEX</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">VNUM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsback" class="topiclink">BACK</a> </span><span class="f_mine" style="text-decoration: underline;">BK</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">[</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> / SET ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dstotl" class="topiclink">TOTL</a> </span><span class="f_mine" style="text-decoration: underline;">TT</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsstop" class="topiclink">STOP</a> { FIRST / MIDDLE / LAST / TELECENTRIC }</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">STOP { FIX [ </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> ] / FREE }</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ STOP REAL ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsrstart" class="topiclink">RSTART</a> </span><span class="f_mine" style="text-decoration: underline;">RD1</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">RD2</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">RD3</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">RD4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsthstart" class="topiclink">THSTART</a> </span><span class="f_mine" style="text-decoration: underline;">TH</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsastart" class="topiclink">ASTART</a> </span><span class="f_mine" style="text-decoration: underline;">ATH</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ <a href="um1014.htm#dsaspheric" class="topiclink">ASPHERIC</a> Q ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ ASPHERIC R ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ ASPHERIC </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> [ </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> ... ] ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ <a href="um1014.htm#dszernike" class="topiclink">ZERNIKE</a> { 0 / SYMM / RSYMM / RRSYMM } </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">RNORM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ <a href="um1014.htm#dsforbes" class="topiclink">FORBES</a> { A / B / C } </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">RNORM ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ <a href="um1014.htm#dsplastic" class="topiclink">PLASTIC</a> </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> ... &nbsp;]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsrt" class="topiclink">RT</a> </span><span class="f_mine" style="text-decoration: underline;">RT </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsnpass" class="topiclink">NPASS</a> </span><span class="f_mine" style="text-decoration: underline;">NP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsdamp" class="topiclink">DAMP</a> </span><span class="f_mine" style="text-decoration: underline;">DAMP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="text-decoration: underline;"><a href="um1014.htm#dspsd" class="topiclink">[ PSD { 2 / 3 } ]</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dstrack" class="topiclink">TRACK</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsstatistics" class="topiclink">STATISTICS</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsnoload" class="topiclink">NOLOAD</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dscolor" class="topiclink">COLOR</a> { MONO / &nbsp;P / 3 / M }</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsopd" class="topiclink">OPD</a> [ </span><span class="f_mine" style="text-decoration: underline;">WOPD</span><span class="f_mine"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsopshear" class="topiclink">OPSHEAR</a> [ </span><span class="f_mine" style="text-decoration: underline;">WOPD</span><span class="f_mine"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dstopd" class="topiclink">TOPD</a> [ </span><span class="f_mine" style="text-decoration: underline;">WOPD</span><span class="f_mine"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dstoshear" class="topiclink">TOSHEAR</a> [ </span><span class="f_mine" style="text-decoration: underline;">WOPD</span><span class="f_mine"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="text-decoration: underline;"><a href="um1014.htm#dsshear" class="topiclink">SHEAR</a></span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SHEAR</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dspdist" class="topiclink">PDIST</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsrevert" class="topiclink">REVERT</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ <a href="um1014.htm#dsdelay" class="topiclink">DELAY</a> { </span><span class="f_mine" style="text-decoration: underline;">SECONDS</span><span class="f_mine"> / OFF } ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsrandom" class="topiclink">RANDOM</a> </span><span class="f_mine" style="text-decoration: underline;">CASES</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsfov" class="topiclink">FOV</a> </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">HBAR</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsfwt" class="topiclink">FWT</a> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsngrid" class="topiclink">NGRID</a> </span><span class="f_mine" style="text-decoration: underline;">GRID</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dssnap" class="topiclink">SNAP</a> </span><span class="f_mine" style="text-decoration: underline;">NPASSES</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsanneal" class="topiclink">ANNEAL</a> </span><span class="f_mine" style="text-decoration: underline;">TEMP</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">COOL</span><span class="f_mine"> [Q/0] </span><span class="f_mine" style="text-decoration: underline;">APASSES</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="text-decoration: underline;"><a href="um1014.htm#dswac" class="topiclink">WAC</a></span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">angle</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="text-decoration: underline;"><a href="um1014.htm#dsqmf" class="topiclink">DSENS</a></span><span class="f_mine"> { 0 &nbsp;- 5 } [ </span><span class="f_mine" style="text-decoration: underline;">wt</span><span class="f_mine"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="text-decoration: underline;"><a href="um1014.htm#dsfilter" class="topiclink">FILTER</a></span><span class="f_mine"> {P/N/W P/N/W ... }</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsquick" class="topiclink">QUICK</a> </span><span class="f_mine" style="text-decoration: underline;">NQUICK</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">NREAL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dskeep" class="topiclink">KEEP</a> </span><span class="f_mine" style="text-decoration: underline;">NKEEP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsglass" class="topiclink">GLASS</a> {POSITIVE/NEGATIVE}</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">{ S/O/H/F/U/C/G/R/M/P } </span><span class="f_mine" style="text-decoration: underline;">glassname</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsspecialpant" class="topiclink">SPECIAL</a> PANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">(extra PANT entries)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine"><a href="um1014.htm#dsspecial" class="topiclink">SPECIAL</a> AANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">(extra AANT entries)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">{ <a href="um1014.htm#dsgo" class="topiclink">GO</a> / EVAL }</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">[ DSEARCH PLOT ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The data that are required depend on which other options are selected, as explained below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 93px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 38px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:4px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px 68px 0px 0px;"><a name="dslib"></a><span class="f_mine">LLIB</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This is the number (1 to 10) of the library location that will receive the best of the lenses that are found.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsquiet"></a><span class="f_mine">QUIET</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Since there can be a large number of cases to analyze, it is best to run in QUIET mode, to suppress all output to the Command Window until the process is complete. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsusecurrent"></a>USE_CURRENT</p>
+</td>
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">This entry is useful when you want DSEARCH to find a set of elements that will follow an existing lens or portion thereof. &nbsp;The SYSTEM input is ignored, if entered, with this option. &nbsp;The first part of the current lens, up to surface </span><span class="f_mine" style="text-decoration: underline;">JFROM</span><span class="f_mine">-1 remains in place, and the requested number of elements is added starting at surface </span><span class="f_mine" style="text-decoration: underline;">JFROM</span><span class="f_mine">. &nbsp;To find a relay section that will couple to an objective, for example, this may do the job.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">The original portion of the lens is by default not altered by DSEARCH in this case, although the airspace before the added lenses is varied. &nbsp;That lets you optimize the added lenses without changing the elements that come before them. &nbsp;In the event that you want all lenses to be varied, put the word &quot;ALL&quot; in word four of the declaration.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">The program deletes all hard <a href="um331.htm#cao" class="topiclink">CAO</a>s and all <a href="um78.htm#efile" class="topiclink">EFILE</a> data on those elements that will be varied. &nbsp;The stop definition present in the current lens is retained, including <a href="um264.htm" class="topiclink">CSTOP</a> and <a href="um263.htm" class="topiclink">WAP</a> declarations -- but if the latter are in effect, or if you want the stop to remain on the same surface number afterward, be sure to request STOP FIX in the input.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">One use of this feature is for designing very wide-angle lenses, where DSEARCH cannot normally find many combinations that will trace. &nbsp;Just work up a front end that traces and sends light at a more shallow angle into the remainder, and then use DSEARCH to find lenses that will work in that situation.  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">The requested number of elements are added to those already in the USE CURRENT section.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">If you select the ALL option, the program will vary all radii in the current lens. &nbsp;In the event that you want any to remain fixed, such as the curvature of a surface declared the stop, be sure to declare that surface STATIC in the RLE file.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dselements"></a><span class="f_mine">ELEMENTS </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> [ </span><span class="f_mine" style="text-decoration: underline;">NPOS</span><span class="f_mine"> ]</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">This is the number of elements to be added and tested. &nbsp;Keep in mind that this can be a lengthy program to run. With N elements, the time scales as somewhat more than 2 to the N</span><span class="f_mine" style="vertical-align: super;">th</span><span class="f_mine"> power. &nbsp;So please do not use this feature for a 20-element microlithography lens. &nbsp;You must specify the desired number of elements, and that number must be less than 21.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">Be sure to read about the QUICK option, which will run much faster, described below.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">Another option that will accelerate the process is to specify a given number of positive elements in word 3. &nbsp;Consideration of optics principles tells us that if you want to correct color, you will never succeed with a lens containing all crown or all flint elements.  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NPOS</span><span class="f_mine"> is the number of positive elements that must be present in the candidate lens, or that case is skipped. &nbsp;If you request an 8-element design and expect that it will need three negative elements, for example, you would enter ELEMENTS 8 5. &nbsp;This will bypass many unsuitable candidates.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">In binary mode, this option reduces the number of cases to be optimized. &nbsp;In random mode, with glasses varying, the system tests the candidate system and counts the number of elements whose curvatures yield positive power. &nbsp;If explicit glass types have been declared, it assigns those glasses at random, and counts the number assigned the positive-element glass.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 5px;"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsafocal"></a>[ AFOCAL ]</p>
+</td>
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input causes DSEARCH to create AFOCAL lenses, where the output is collimated. &nbsp;For this case, the first-order properties are controlled by entering a value for the FNUM target that is the desired paraxial YA at the next-to-last surface. &nbsp;It must be entered before the FNUM request.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dswac"></a>WAC <span style="text-decoration: underline;">angle</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">When a very wide field angle is input to DSEARCH, there is a good chance that most or all of the rays traced for optimization will fail to get through the entire lens. &nbsp;One strategy for avoiding this problem is to create a front end that converts the wide angle beam to a narrower one, and then use that via the USE CURRENT option.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">WAC</span><span class="f_mine"> option is a simpler and often effective method that does much the same thing. &nbsp;You enter an angle, in degrees, that is smaller than the object angle, and the program adjusts the curvature of surface 2 via a paraxial UPC solve with the angle as a target. &nbsp;This reduces the chief-ray angle paraxially and improves the odds that real rays will then trace. &nbsp;After the curvature is thus found, the solve is deleted and the curvature variable is again available as usual. &nbsp;This works for object angles up to 89 degrees, but not past 90, for which the first option is required.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dssingle"></a><span class="f_mine">SINGLE</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Use this to examine only a single case. &nbsp;The arguments define the binary number you wish to examine, entered either with a series of “P” or “N” characters, a series of “0’s” and “1’s”, or the decimal equivalent as a case number. &nbsp;Thus, to look at a triplet configuration, one could enter SINGLE P N P or SINGLE 1 0 1 or SINGLE CASE 5. The characters must be separated by spaces. This is intended mainly for very complex systems, for which a full binary search would take a very long time. &nbsp;The number of elements must also be entered with the ELEMENTS directive. &nbsp;The lens that results rarely has the same distribution of power as the starting lens, but you have some control with the use of the RSTART parameter, which can force the elements to have curves steep enough to steer the design that way. &nbsp;Do not request a RANDOM evaluation if you want to enter these data.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If no arguments are entered, the program will create a single case of alternating positive and negative powers.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also run a single case by using the EVAL option instead of GO. &nbsp;See below to read about that feature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsfnum"></a><span class="f_mine">FNUM </span><span class="f_mine" style="text-decoration: underline;">FN</span><span class="f_mine"> [ </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> ]</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This is required input with DSEARCH for focal systems, giving the desired F/number at the image as </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FN</span><span class="f_mine">.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For </span><span class="f_mine" style="font-weight: bold;">AFOCAL</span><span class="f_mine"> systems, it is optional, and gives the desired value of the paraxial marginal ray height (PYA) at the next-to-last surface, if entered. &nbsp;(If omitted, be sure to target the full-field HH to the desired angle tangent, or the full-aperture YA to the desired aperture, so the magnification will be controlled.) &nbsp;If a value for </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FN</span><span class="f_mine"> is entered and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> is zero, a UMC solve will be added to the last element, and the PYA aberration will get a weight of 10. &nbsp;If </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> is nonzero, an aberration for PUA will be used instead of &nbsp;a UMC solve, and the entered weight will apply to both the PUA and PYA targets. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For </span><span class="f_mine" style="font-weight: bold;">focal</span><span class="f_mine"> systems, the weight argument </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> is optional; if omitted the F/number will be controlled by a UMC solve on the next-to-last surface. &nbsp;If entered, it becomes the weight for an aberration to control the same thing. &nbsp;(The quantity evaluated is actually 1/FNUM, rather than FNUM itself, since the latter must go through infinity in order to change sign, which it will have to do about half the time. &nbsp;You will probably need a fairly high weight, if you enter any, since images are always much better at a very high F/number – and you don’t want to see those solutions.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Optimization almost always works better if the F/number is controlled by a solve. &nbsp;There will be one fewer variables, and the matrix to be inverted is better conditioned. &nbsp;But in the case of DSEARCH, since the other elements do not initially have anywhere near the powers that would be appropriate, the curvature solve often yields a very short radius of curvature and rays fail to trace. &nbsp;The program has tools for correcting this difficulty, but those do not work if the errors are particularly severe. &nbsp;So, if your results indicate that many cases were skipped, you should defeat the curvature solve by specifying a weight on the FNUM request. &nbsp;A fairly high weight (say, 100) may be called for, as mentioned above.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsimmerse"></a><span class="f_mine">IMMERSE ...</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If the image is not formed in AIR, as with an oil-immersion microscope, this is where you should declare the index and dispersion of the medium before the image. &nbsp;Enter data that approximate the properties of that medium, which will be declared a </span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm#glm" class="topiclink">GLM</a></span><span class="f_mine"> glass model. &nbsp;When the design is finished, you can then assign a different material if the glass model is not sufficiently precise. &nbsp;It is probably a good idea to also add targets for the back focus distance and curvature of the last surface, to ensure realistic geometry.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dscover"></a><span class="f_mine">COVER ...</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Use this if you want to model a cover glass, as commonly used in microscopy. &nbsp;In this case, if you ask for N elements, element N will be flat on both sides with the entered thickness and GLM glass model parameters. &nbsp;If you want, say, a nine-element lens plus cover glass, you should therefore request 10 elements and define the cover glass parameters with these data. &nbsp;If the input calls for a UMC solve, it will be applied to the lens before the cover glass. &nbsp;If a YMT solve is used, it will apply to the last airspace.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that it is possible to request both IMMERSE and COVER, but it makes little sense to do so. &nbsp;The whole point of immersion is to avoid very steep ray angles in air, and this advantage is lost if the space before the cover glass is in air, as it will be if COVER is requested.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since a cover glass cannot take both positive and negative powers, the program will skip half of the usual number of cases to avoid running those cases twice--except in random mode, where all cases are considered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You cannot request a cover glass for an AFOCAL system.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsback"></a><span class="f_mine">BACK</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The desired back focal distance. It is wise to specify a value, either here or in the SPECIAL AANT section, since the lenses can get rather weird otherwise. &nbsp;The weighting of this aberration may be specified in word 3. &nbsp;To bypass this control, enter a target of zero.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the lens will have a UMC solve (see FNUM, above) then the back focus is given a target in the merit function per this input. &nbsp;If you give a weight to FNUM, then the F/number is controlled by an entry in the AANT file instead of a paraxial solve, and in this case the quantity controlled for the BACK request is actually 1/BACK rather than BACK itself. &nbsp;In this case, it is best to enter a fairly large weight, say 1000 or so, since the quantity that is controlled becomes small for large values of BACK, and any errors also become small and have little effect on the merit function otherwise.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Yet another option is to specify the word &quot;SET&quot; in word three of the line. &nbsp;Then the program sets the back focus to this distance and there is no YMT solve or target in the merit function. &nbsp;This option is only available for focal systems. &nbsp;Note that if you want the final BACK to go to zero, just entering that target value won't work, since that is the flag to bypass the control. &nbsp;In that case, just enter a very small nonzero target, so the program will see it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For AFOCAL systems, this quantity is the distance </span><span class="f_mine" style="font-style: italic;">before</span><span class="f_mine"> the last two (dummy) surfaces, which makes it convenient for controlling the eye relief of an eyepiece.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dstotl"></a><span class="f_mine">TOTL</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The desired distance from first vertex to last. &nbsp;The weighting of this aberration may be specified in word 3. &nbsp;To bypass this control, enter a target of zero.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsstop"></a><span class="f_mine">STOP { FIRST / MIDDLE / LAST / TELECENTRIC </span><span class="f_mine" style="font-family: 'Times New Roman';">}</span></p>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input places the stop at the requested location before optimization. &nbsp;The default is MIDDLE.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If TELECENTRIC is selected, the entrance pupil will be at infinity and all incoming chief rays will be parallel to the optical axis. &nbsp;This selection does not allow the stop to be FREE.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="6" style="vertical-align:top; width:332px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">STOP { FIX [ </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> ] / FREE }</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Here you specify whether the program should vary the stop position by means of the YP1 variable. &nbsp;Unless you really need the stop to be in a given place, it is wise to let it vary. &nbsp;The default is FREE. &nbsp;In this case, the lens no longer has a declared stop, and its position is </span><span class="f_mine" style="font-style: italic;">implied</span><span class="f_mine"> by the (varying) value of YP1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The above does not apply for systems with a wide-angle object of type OBD. &nbsp;That form of object does not allow varying YP1, so you should declare a stop position as above and not let it vary if you use that object type.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A third option is also available: &nbsp;If you enter STOP FIX </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine">, the program will assign the stop to surface </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine">, ignoring the other STOP input. &nbsp;The position will then not be allowed to vary. &nbsp;If </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> is negative, the stop will be real instead of paraxial; ray aiming will then be used to find all chief rays.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If your system has a telecentric object entered with TCO, be sure to use STOP FIRST and STOP FIX in the DSEARCH input. Otherwise the TCO directive will be overridden.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine">STOP REAL</p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry declares the stop real, so the program finds a real chief ray by iteration to the center of the stop surface when tracing rays for aberration correction. &nbsp;It can be useful if there are large pupil aberrations that cause inappropriate rays to be traced otherwise.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It also can be declared when the stop is free to move. &nbsp;In this case, the lens will get an </span><span class="f_mine" style="font-style: italic;">implied</span><span class="f_mine"> real pupil wherever the chief ray happens to cross the axis. &nbsp;Then the rays that are traced more closely resemble those that will result when the final lens is later assigned a real stop at that location.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since this option involves searching for the real pupil, it executes more slowly than does a paraxial pupil. &nbsp;And for very wide-angle lenses, the search might not succeed when the various cases are optimized, since the geometry varies over a large design space. &nbsp;In that case, many cases might be skipped, and you should not use this option. &nbsp;Instead, do the search with a paraxial pupil, and change to a real pupil only for the final lens as it is nearing completion.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsrstart"></a><span class="f_mine">RSTART </span><span class="f_mine" style="text-decoration: underline;">RD1</span><span class="f_mine"> …</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input specifies up to four values of the initial radius to be tested by the program. &nbsp;When the program constructs each element, it assigns a radius, with the appropriate sign, cycling over the entered values, or randomly, to each side. &nbsp;Entering a very long radius will usually produce different results from using short radii. &nbsp;You will have to experiment to find what value works best in your case. &nbsp;The default is 100 inches (or 2540 mm) radius. &nbsp;We have seen the best results when </span><span class="f_mine" style="text-decoration: underline;">RD</span><span class="f_mine"> is about six times the desired focal length.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In random mode, only the first parameter has effect; it gives the shortest radius that will be assigned to any surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the starting radius is too short, there will probably be many ray failures, which are hard to fix, although the program tries its best. &nbsp;Look at the listing at the end, which tells you the total number of cases that were attempted and the number that had to be skipped because they simply did not work. &nbsp;If the latter number is large, then you probably need to enter (or override) the starting radius with a larger number. &nbsp;In extreme cases, with a radius that is much too short, the program may post many error messages as it tries to optimize each case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also use the mnemonic RDSTART.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This parameter is not applied if the PDIST option is selected.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsthstart"></a><span class="f_mine">THSTART </span><span class="f_mine" style="text-decoration: underline;">TH</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input gives the starting value of lens thicknesses and airspaces. &nbsp;The default is 0.1 inches. &nbsp;You may request a different value, but it should be positive and nonzero.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also use the mnemonic TSTART.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsastart"></a><span class="f_mine">ASTART </span><span class="f_mine" style="text-decoration: underline;">ATH</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The default airspace value is equal to THSTART, but you can follow that entry with a different value if you wish, entered with this mnemonic.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsaspheric"></a><span class="f_mine">[ ASPHERIC </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> [ </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> ... ] ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">[ ASPHERIC Q ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">[ ASPHERIC R ]</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This request will cause aspheric terms to be assigned to added surfaces. &nbsp;If no surface numbers are given, all surfaces will be assigned terms except for a cover plate, if any. &nbsp;Otherwise, only surfaces whose numbers are given will be aspheric. &nbsp;Up &nbsp;to 20 surface numbers may be listed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The number of terms assigned is selected from </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine">. &nbsp;The first term is just the conic constant CC, the second is the R**4 term, and so on.  </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> can be up to 5, which varies terms up to R**16.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the optional &quot;</span><span class="f_mine" style="font-weight: bold;">Q</span><span class="f_mine">&quot; is entered on a separate line, the program will vary the conic constant on all eligible surfaces in quick mode as well as in real mode. &nbsp;Otherwise, quick mode only uses spherical surfaces. &nbsp;Real mode always varies the CC variables in aspheric mode. &nbsp;If the optional &quot;</span><span class="f_mine" style="font-weight: bold;">R</span><span class="f_mine">&quot; is entered, real-mode optimization will also vary all of the other allowed aspheric terms. &nbsp;The final optimization MACro DSEARCH_OPT.MAC always lists all assigned aspheric terms in the PANT file. &nbsp;Both Q and R can be entered on the same line.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Modern cell-phone camera lenses and pinhole spy cameras often have aspherics on most or all surfaces, and to assist in those designs we have provided this option in DSEARCH.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This option is tricky to use, however. &nbsp;To keep things under control, you will probably need a </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GRID</span><span class="f_mine"> of 6 or more, and to correct up to six field points. &nbsp;This option works best if you also use QUICK mode. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is probably a good idea to start with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> no more than 3 or 4. &nbsp;This follows good practice in optimizing with fewer terms as far as possible before adding yet more. &nbsp;If the results are promising, you can always add additional variables to the DSEARCH_OPT file.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A common use is when designing small plastic aspheres, which become economical in large quantities. &nbsp;One must then keep the GLM model within the range of the glass map where plastics are to be found. &nbsp;This is easily done: declare those elements with the PLASTIC directive.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dszernike"></a><span style="font-size: 11pt;">ZERNIKE { 0 / SYMM / RSYMM / RRSYMM } </span><span style="font-size: 11pt; text-decoration: underline;">SN</span><span style="font-size: 11pt;"> [ </span><span style="font-size: 11pt; text-decoration: underline;">RNORM</span><span style="font-size: 11pt;"> ]</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This request will assign Zernike polynomial terms to the entered surface. &nbsp;The variables depend on the mode selection: &quot;</span><span class="f_mine" style="font-weight: bold;">0</span><span class="f_mine">&quot; varies all terms; &quot;</span><span class="f_mine" style="font-weight: bold;">SYMM</span><span class="f_mine">&quot; varies terms symmetric in X, &nbsp;&quot;</span><span class="f_mine" style="font-weight: bold;">RSYMM</span><span class="f_mine">&quot; VARIES only radially symmetric terms, and &quot;</span><span class="f_mine" style="font-weight: bold;">RRSYMM</span><span class="f_mine">&quot; is a reduced version of RSYMM that does not vary the highest-order term G 36, which can be unstable in some cases. &nbsp;The unit aperture is set to </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RNORM</span><span class="f_mine">, or 1.0 if this entry is omitted. &nbsp;A separate request must be entered for each surface to be declared a Zernike surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is a good idea to enter a value for </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RNORM</span><span class="f_mine"> that is approximately equal to the anticipated final CAO on the surface. &nbsp;This will avoid problems associated with raising a large number to a very high power.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Be aware that assigning this attribute will greatly increase the time required to complete the search. &nbsp;A spherical surface has one curvature variable, while a Zernike surface can have up to 36, depending on the options selected. &nbsp;This means that a run that might take a few minutes with spherical surfaces could run for several hours if several surfaces are Zernikes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsforbes"></a><span style="font-size: 11pt;">FORBES { &nbsp;A &nbsp;/ B / C } </span><span style="font-size: 11pt; text-decoration: underline;">SN</span><span style="font-size: 11pt;"> [ </span><span style="font-size: 11pt; text-decoration: underline;">RNORM</span><span style="font-size: 11pt;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This request will assign a Forbes polynomial (USS types 9, 11 or 13) to the entered surface. &nbsp;The unit aperture is set to </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RNORM</span><span class="f_mine">, or 1.0 if this entry is omitted. &nbsp;A separate request must be entered for each surface to be declared a Forbes surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is a good idea to enter a value for </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RNORM</span><span class="f_mine"> that is approximately equal to the anticipated final CAO on the surface. &nbsp;This will avoid problems associated with raising a large number to a high power.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Be aware that assigning this attribute will increase the time required to complete the search. &nbsp;A spherical surface has one curvature variable, while a Forbes surface will be assigned five variables in the real-ray optimization phase. &nbsp;In addition, aspheric ray tracing is inherently slower.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">DSEARCH only varies five of the 16 coefficients that may be assigned to a Forbes types A and B surface, since starting from flat surfaces works better if you start with just a few and add more later when you continue to work on the lens. &nbsp;Type C is different: this type does not utilize a conic constant term, and only five terms are axially symmetric.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Also, note that the quick mode, while faster than the default mode, takes longer than is the case with spherical surfaces, owing to the raytracing and curve-fitting required to calculate the 3rd and 5th-order aberrations for this surface type.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that the surface number goes in word three of this operand. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Also note that pupil aberrations such as SAPU are not available for systems with this shape.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsplastic"></a><span class="f_mine">[ PLASTIC </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> ... ] </span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This request will cause the entered surfaces to be declared PLASTIC before the lens is optimized. &nbsp;This keeps the GLM parameters within the region of the glass map where plastics are to be found. &nbsp;It also restricts the GLM variable on that surface to the same region. &nbsp;Surface numbers must be from 1 to 100.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsrt"></a><span class="f_mine">RT </span><span class="f_mine" style="text-decoration: underline;">RT</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry specifies the value of the aperture-dependent weighting to be assigned to rays in a ray grid. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm" class="topiclink">Section 10.3.1.1</a></span><span class="f_mine"> for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsnpass"></a><span class="f_mine">NPASS </span><span class="f_mine" style="text-decoration: underline;">NP</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The number of passes to be made during optimization. &nbsp;The time required for all of the cycles, including optimization and annealing can get long rather easily. &nbsp;Too few passes yields poorer lenses, while too many passes take a long time. &nbsp;The default is 25 passes. &nbsp;If the number of elements is small, on the other hand, you can request a larger number, say 50, and each case will be closer to optimum. &nbsp;Fewer annealing passes can then be requested. &nbsp;You can experiment with the number of passes and number of annealing passes, to find the most reliable results in the shortest time.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Users who have experience with other programs -- whose optimization is many time slower than that in SYNOPSYS -- may by habit think they have to request hundreds of iterations. &nbsp;That is a bad idea. &nbsp;Start with perhaps 20 passes and see how good the results are. &nbsp;Increase it gently if needed. &nbsp;But remember, if you ask for, say 600 quick and 600 real passes, the job will seem to hang, since each case is finished </span><span class="f_mine" style="font-style: italic;">very</span><span class="f_mine"> slowly. &nbsp;Be warned!</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This input is overridden by any QUICK input, if entered, but the original value is used in the final optimization MACro DSEARCH_OPT.MAC.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsdamp"></a>DAMP</p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This damping factor will be written to the optimization MACro when DSEARCH is finished.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dspsd"></a>[ PSD { 2 / 3 } ]</p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The optimization algorithms we have called PSD II and PSD III are both very effective, but because they take different paths through the design space, the end result is often quite different. &nbsp;They are selected via mode switches, and for convenience can be selected with this input as well. &nbsp;PSD III turns on switch 2, while PSD II turns it off. &nbsp;Both turn on switch 8. &nbsp;You are encouraged to run your DSEARCH input both ways and select the results that best meet your needs.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If this entry is omitted, the program retains the switch settings in effect before the search was started.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dscolor"></a><span class="f_mine">COLOR ...</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option controls which colors are corrected in the real-ray optimization phase. &nbsp;There are three arguments: &quot;MONO&quot; or &quot;P&quot; will only target rays in the primary color. &nbsp;It is automatic if the lens has fewer than two colors defined. &nbsp;The number &quot;3&quot; will target the primary, long, and short wavelengths, and &quot;M&quot; will target all colors defined in the lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsopd"></a><span class="f_mine">OPD [ </span><span class="f_mine" style="text-decoration: underline;">WOPD</span><span class="f_mine"> ]</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">DSEARCH by default creates an optimization MACro consisting of transverse ray aberrations. &nbsp;Entering this parameter results in OPD targets instead. &nbsp;You can experiment with this setting, to see which works best for your lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The weighting factor </span><span class="f_mine" style="text-decoration: underline;">WOPD</span><span class="f_mine"> is used to account for the scale difference between ray and OPD aberrations. This means an error of one wave is usually better than an error of one inch, for example. &nbsp;If word two is blank, the program will calculate a reasonable value based on the current lens units, F/number, and wavelength. &nbsp;Or you can enter your own value.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dstopd"></a><span class="f_mine">TOPD [ </span><span class="f_mine" style="text-decoration: underline;">WOPD</span><span class="f_mine"> ]</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If this option is selected, the program will create an optimization MACro containing </span><span class="f_mine" style="font-style: italic;">both</span><span class="f_mine"> transverse and OPD errors. &nbsp;This is potentially a way to obtain higher resolution lenses, and you are encouraged to experiment with this option. &nbsp;Since more raytracing is involved, it will take longer to run than the default TAP or optional OPD settings.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsopshear"></a><span class="f_mine">OPSHEAR [ </span><span class="f_mine" style="text-decoration: underline;">WOPD</span><span class="f_mine"> ]</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option creates <a href="um103_11.htm" class="topiclink">GSHEAR</a> ray sets for the real-mode optimization. &nbsp;It is intended to peak the MTF and can be used instead of the OPD option.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dstoshear"></a><span class="f_mine">TOSHEAR [ </span><span class="f_mine" style="text-decoration: underline;">WOPD</span><span class="f_mine"> ]</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This creates both transverse aberrations and GSHEAR ray sets. &nbsp;It can be more stable than the OPSHEAR option, which performs poorly at first, when the candidate lenses are a long way from optimum and OPD errors are very large.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsshear"></a><span style="font-size: 11pt;">SHEAR </span><span style="font-size: 11pt; text-decoration: underline;">SHEAR</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If you request either OPSHEAR or TOSHEAR, the default shear added to the merit function is 0.25. &nbsp;This input can override that default.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsrevert"></a><span class="f_mine">REVERT</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option only applies in quick mode. &nbsp;After a candidate lens is optimized for 3</span><span class="f_mine" style="vertical-align: super;">rd</span><span class="f_mine"> and 5</span><span class="f_mine" style="vertical-align: super;">th</span><span class="f_mine"> order aberrations, the merit function is used to rate that configuration relative to all the others. &nbsp;But the resulting lens may not be the best possible design with that construction, and starting from that minimum may in some cases prevent the program from reaching a better minimum. &nbsp;This option will revert to the input data for that case after rating it per the quick optimization results, so the real-ray optimization will not start in that local minimum. &nbsp;It seems to matter mostly with very difficult designs of low F/number.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This option turns off the CORE directive, if it is on, and will only run in a single core.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsdelay"></a><span class="f_mine">[ DELAY { </span><span class="f_mine" style="text-decoration: underline;">SECONDS </span><span class="f_mine">/ OFF } ]</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Used only for multicore operation. &nbsp;In the unlikely event that one of the cores fails to terminate normally (and turns into a “zombie” process), the program will wait for </span><span class="f_mine" style="text-decoration: underline;">SECONDS</span><span class="f_mine"> seconds after the main core has finished and then display a dialog that lets you terminate the process on all other cores by clicking the OK button. &nbsp;The default delay is 60 seconds. &nbsp;If the other cores appear to be working properly – but not yet finished – just wait until the progress bars have all been closed before you click the button. Then the program will finish normally.  </span><span class="f_mine" style="font-weight: bold;">OFF</span><span class="f_mine"> sets the timer to a large number so it never goes off. &nbsp;The default is OFF.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This option is seldom needed, since all the higher cores display a progress window with a STOP button and can be terminated that way if you want. &nbsp;Clicking the stop-sign button on the top toolbar will abort all running higher cores. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:338px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dspdist"></a><span class="f_mine">PDIST</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option overrides the user-entered RSTART parameter and instead distributes the desired amount of optical power among the positive and negative elements according to a simple algorithm. &nbsp;The purpose is to avoid combinations of very strong curves that will require ray-failure correction. &nbsp;It also deletes any combinations where the number of negative elements is greater than half of the total number, so the operation runs somewhat more quickly.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dstrack"></a><span class="f_mine">TRACK</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The program automatically displays a progress bar so you can see how far it has progressed. &nbsp;The TRACK option replaces this with a small window that monitors each case and reports the current and best merit function values.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsstatistics"></a><span class="f_mine">STATISTICS</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option will create and display a plot showing the statistics of the entire run, where the abscissa is the log of the merit function and the ordinate is the number of cases whose merit was close to that value. &nbsp;Since DSEARCH also makes a picture of the best matches, it is best to issue the command GNW before running DSEARCH, so you get both pictures.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsnoload"></a><span class="f_mine">NOLOAD</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Use this option if you do not want the program to open the file DSEARCH_OPT.MAC. &nbsp;That file is automatically created and is often useful, but if you plan to use your own optimization MACro after the search completes, you don’t need to see the automatic one.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsngrid"></a><span class="f_mine">NGRID </span><span class="f_mine" style="text-decoration: underline;">GRID</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry controls the grid number for the rays optimized by DSEARCH, and you can specify any number from 1 to 50. &nbsp;The default works pretty well, so only change this if you know what you are doing. &nbsp;The default calls for 4 rays in the half-pupil.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsrandom"></a><span class="f_mine">RANDOM </span><span class="f_mine" style="text-decoration: underline;">CYCLES</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option creates candidate lenses by assigning a random fraction of the entered (or default) values of RSTART, THSTART, and ASTART. &nbsp;The total number of cases to analyze is then given by </span><span class="f_mine" style="text-decoration: underline;">CYCLES</span><span class="f_mine">, with a default of 200 cases. &nbsp;See below for more information.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsfov"></a><span class="f_mine">FOV …</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input lets you override the default three field points. &nbsp;Here, you may enter the desired HBAR value for up to six points. &nbsp;Only the first field may be zero; zeros entered elsewhere terminate the list. &nbsp;Systems with Gaussian object type OBG cannot take any field point except zero.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The first point is usually on the axis and is controlled via GSR or GSO ray sets, which utilize fewer rays than the full-pupil forms GNR and GNO. &nbsp;If the geometry of the lens requires correcting a full set of rays at the on-axis point, just enter a small but nonzero value for the first FOV.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsfwt"></a><span class="f_mine">FWT …</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These entries define the field weights to be applied. &nbsp;The default weights (for HBAR 0, 0.75, 1.0) are 10, 2, 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:270px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsquick"></a><span class="f_mine">QUICK </span><span class="f_mine" style="text-decoration: underline;">NQUICK</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">NREAL</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This optional input is intended to speed up the often rather lengthy search process. &nbsp;If entered, it causes the program to first do a quick screening pass, evaluating all potential candidates and optimizing them with a special merit function that traces only three rays while targeting all of the monochromatic 3</span><span class="f_mine" style="vertical-align: super;">rd</span><span class="f_mine"> and 5</span><span class="f_mine" style="vertical-align: super;">th</span><span class="f_mine">-order aberrations (plus PAC and PLC if MONO is not in effect), and SPECIAL entries if there are any. &nbsp;This step executes very quickly because few rays are traced. &nbsp;Then it revisits each of the </span><span class="f_mine" style="text-decoration: underline;">NKEEP</span><span class="f_mine"> best results and optimizes those with the usual ray-based merit function. &nbsp;Since many very poor configurations will have been eliminated, the whole process runs much more quickly. &nbsp;You can choose from four alternate merit functions in this step by choosing one of the following mnemonics</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">QUICK</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">Q0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">Q3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">Q6</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">QUICK and Q3 add three real rays to the 3</span><span class="f_mine" style="vertical-align: super;">rd</span><span class="f_mine"> and 5</span><span class="f_mine" style="vertical-align: super;">th</span><span class="f_mine">-order targets. &nbsp;Q0 does not add any real rays, and Q6 adds six rays. &nbsp;The extras include rim rays at the 0.75 field point, and are intended to help when designing wide-angle systems.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The quick search is performed with </span><span class="f_mine" style="text-decoration: underline;">NQUICK</span><span class="f_mine"> iterations, and the ray-based optimization phase is then executed with </span><span class="f_mine" style="text-decoration: underline;">NREAL</span><span class="f_mine"> iterations. &nbsp;(This procedure ignores the </span><span class="f_mine" style="text-decoration: underline;">NPASS</span><span class="f_mine"> request.) &nbsp;If </span><span class="f_mine" style="text-decoration: underline;">NREAL</span><span class="f_mine"> is zero, the program will not perform any optimization after the quick search is done, and you then see only the lenses that were produced in the first phase.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The improvement in speed depends on the number of cases involved. &nbsp;We have seen this option run as much as 18 times faster, when searching for an eight-element lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optimization MACro DSEARCH_OPT.MAC will contain the normal definition, not the quick one.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You are encouraged to experiment with this setting, and see if the lens configurations that come back are attractive.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:270px; padding:4px; border:solid 1px #000000;"><p class="p_mine">( <a name="dsqmf"></a>DSENS { 0 - 5 } [ <span style="text-decoration: underline;">wt</span> ]</p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The default QUICK merit function described above targets all of the 3rd and 5th-order aberrations, while the real optimization that follows consists of arrays of real rays. &nbsp;If you enter </span><span class="f_mine" style="font-weight: bold;">DSENS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">n</span><span class="f_mine">, the latter merit function will also contain one of the tolerance sensitivity requests.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The selections are as follows;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">0 none</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">1 SAT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">2 ESA</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">3 SDU</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">4 RUD</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">5 DAA</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For example, number 1 will control the sums of the squares of the 3rd-order spherical aberration at every surface, and one &nbsp;hopes that the tolerance sensitivity of the resulting lenses will be reduced. &nbsp;The default weight is 1.0, and you may enter a different weight in word 3.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you enter </span><span class="f_mine" style="font-weight: bold;">DSENS 2</span><span class="f_mine">, the added term will be ESA instead of SAT. &nbsp;This controls the aberration sum of individual </span><span class="f_mine" style="font-style: italic;">elements</span><span class="f_mine"> instead of surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The other terms are defined in </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1013.htm" class="topiclink">Section10.13</a></span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature is not guaranteed to work, of course; the resulting lenses may well have reduced sensitivity, but may also have reduced quality, since any additional requirement entails compromise with all the others. &nbsp;Still, we have seen it produce a different set of returns, with equivalent quality and looser tolerances. &nbsp;So it is worth a try, if tolerances are a problem. &nbsp;One hopes that it will favor those designs that intrinsically have looser tolerances when it processes the 10 best returns from the quick mode.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default is DSENS 0, which does not add this item to the MF.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dskeep"></a><span class="f_mine">KEEP </span><span class="f_mine" style="text-decoration: underline;">NKEEP</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option limits the number of cases that are displayed, to </span><span class="f_mine" style="text-decoration: underline;">NKEEP</span><span class="f_mine">, which must be a number between 1 and 10. &nbsp;It is intended to speed up the QUICK mode even more: only this number of cases will survive the screening pass, and if it is fewer than the default 10 the process does not take as long. &nbsp;It makes little sense if QUICK mode is not in effect, however, since all cases will still be optimized. &nbsp;But only this number will be shown on the plot.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dssnap"></a><span class="f_mine">SNAP </span><span class="f_mine" style="text-decoration: underline;">NPASSES</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Think carefully about using the snapshot feature here. &nbsp;While it can be informative to watch every cycle of every case, the job may take twice as long to run. &nbsp;If you do not request the snapshot, the PAD display will be updated only when the program saves a lens according to the above rules. &nbsp;If you request a value of </span><span class="f_mine" style="text-decoration: underline;">NPASSES</span><span class="f_mine"> of from 5 to 10, however, the display changes less frequently and there is little time lost. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsanneal"></a><span class="f_mine">ANNEAL …</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">With this input you can specify annealing parameters. &nbsp;A higher temperature may produce more variety in your lenses. &nbsp;The cooling rate affects the run time: slower cooling will run longer and probably yield better lenses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">DSEARCH usually works better if you request some annealing. &nbsp;We suspect that some excellent lenses cannot be reached just by sliding downhill from the simple starting points created by the program. &nbsp;By creating some randomness in the process (or by using the RANDOM option) the program is more likely to see such cases.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the letter “Q” is entered in word four of the input line, the quick mode optimization will also perform an annealing cycle. &nbsp;Otherwise, annealing is performed only on the final optimization pass with real ray targets, if quick mode is in effect.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If a value is input in word five, then the number of optimization iterations requested for the annealing cycles will be that number. &nbsp;Otherwise, it is the same as the number of passes given elsewhere. &nbsp;It often happens that more annealing cycles, with fewer passes each time, works better than the reverse.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default mode does not do any annealing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dssample"></a><span class="f_mine">SAMPLE</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input will create only a single case and will not optimize anything. &nbsp;What you get is therefore an example of what that case looks like, and you can check if the starting radii and thicknesses, and the system data, make sense. &nbsp;It also prepares the optimization MACro, which you can examine and try yourself to see what it does.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsfilter"></a>FILTER ...</p>
+</td>
+<td colspan="6" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input will restrict the search space. &nbsp;The arguments specify whether the element at a given position is positive (P), negative (N), or can be either (W). &nbsp;For example, in a 5-element lens, if you only want to examine cases where the last two elements are positive, you could enter FILTER W W W P P.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Each element assigned a positive or negative power cuts the total number of cases to be analyzed by a factor of two, making very long runs more practical. &nbsp;Of course, you might miss a good configuration by so doing, but since the optimization program can alter the power of an element, it does not rule out finding solutions whose power distribution differs from what you requested.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If all elements are specified in this way, the result is the same as if you requested a SINGLE case with that construction.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsglass"></a><span class="f_mine">GLASS …</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">In this section you can designate two glass types to be assigned to either positive or negative elements (considering only the assigned powers, not the power that results from a curvature solve.) &nbsp;If either of these designations is used, you must specify both of them; the glasses will then not be varied during optimization. &nbsp;This feature is intended for systems not in the visible, where the glass model is not appropriate, or when specific plastics are to be used. &nbsp;It is also useful for UV lithography designs, where only select iLine glasses are appropriate. &nbsp;(But consider using the default model glasses with boundaries on the locations on the glass map in this case. &nbsp;This will restrict those models to the area populated by iLine glasses, from which you can choose the best match when the design is almost finished.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The naming conventions are the same as glass-table glass entry in an RLE file (</span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm#gtb" class="topiclink">GTB</a></span><span class="f_mine">). &nbsp;See the last example in this section for a sample.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input formats are quite flexible. &nbsp;The following are all valid examples:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">GLASS POS</span></p>
+<p class="p_mine"><span class="f_mine">U SILICON</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">GLASS POS</span></p>
+<p class="p_mine"><span class="f_mine">U 'SILICON'</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">GLASS POS U SILICON</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">GLASS POS U &quot;SILICON&quot;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In RANDOM mode, the glass types, if entered, are assigned at random to the lens elements.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that this selection applies only to the </span><span class="f_mine" style="font-style: italic;">initial</span><span class="f_mine"> powers assigned by DSEARCH. &nbsp;As the lens is optimized, those powers can, and often do, change. &nbsp;As a result, a glass that you assigned to positive elements may well end up on a negative element. &nbsp;That means that, in that case, the lens works better with that assignment instead of what you intended.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsspecial"></a><span class="f_mine">SPECIAL AANT</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This section is where you can type anything that can go into an </span><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm#aant" class="topiclink">AANT</a></span><span class="f_mine"> file, letting you control nearly anything you need. &nbsp;You do not have to enter any image-quality requests, since the default merit function takes care of this. &nbsp;But you could, for example declare the FOV input described above in the GOALS section with no arguments, thus defeating the default ray definitions – and then enter your own set here in the SPECIAL section. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you want your lens to be telecentric, you might enter the line</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M 0 1 A P HH 1 </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this section. &nbsp;Or if distortion is an issue, you might add</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M 0 10 A P YA 1</span></p>
+<p class="p_mine"><span class="f_mine">S GIHT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">to control it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This is where you can also enter any of the monitoring requests, such as </span><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm#monitor" class="topiclink">AEC</a></span><span class="f_mine">, ACC, ACM, ASA, ACA, AAC, AGE, or AAE. &nbsp;The first two of these are automatically placed into the merit function by DSEARCH, but if you want to override the default arguments, you can enter your own request in this section.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The formats for this section must follow the AANT file formats, or the process will abort. &nbsp;There is a limit of 40 lines for this section.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsspecialpant"></a><span class="f_mine">SPECIAL PANT</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">In this section you can put any PANT input you want the program to honor. &nbsp;This should seldom be needed, since the program automatically puts all normal variables in the PANT file anyway.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dsgo"></a><span class="f_mine" style="font-weight: bold;">{ GO / EVAL }</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GO</span><span class="f_mine"> starts the search process.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">EVAL</span><span class="f_mine"> runs a single case, as does the SINGLE directive. &nbsp;But in this case the starting lens will consist of alternating positive and negative lenses. &nbsp;This is intended to help you find input errors quickly. &nbsp;If the results seem okay, you can then run the full search.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px -7px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px -7px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px -7px;"><span class="f_mine">DSEARCH example:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is the input for a case where we want a 5-element lens with very low distortion:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">LOG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">TIME</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">DSEARCH 5 QUIET</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SYSTEM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ID TEST DSEARCH</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">OBB 0 15 35</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">UNI MM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">WAVL CDF</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GOALS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ELEMENTS 5</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">BACK 100</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">FNUM 4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">THSTART 5</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ASTART 25</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">RSTART 1000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">NPASS 50</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ANNEAL 200 200</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">!SNAP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; this is turned </span><span class="f_mine" style="font-style: italic;">off! </span><span class="f_mine"> See the above comments.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">STOP MIDDLE &nbsp; &nbsp; &nbsp; &nbsp;; these are actually defaults</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">STOP FREE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SPECIAL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ACM 3 1 1 &nbsp; &nbsp; &nbsp; &nbsp;; require all elements to be at least 3 mm thick</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ACA 60 1 1 &nbsp; &nbsp; &nbsp; &nbsp;; very steep surfaces should be avoided</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">M 0 1 A P YA 1 &nbsp; &nbsp; &nbsp; &nbsp;; here we correct distortion, which Is not a default target</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">S GIHT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GO</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">TIME</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(In this MACro, we are using the </span><span class="f_mine" style="text-decoration: underline;"><a href="um515.htm#time" class="topiclink">TIME</a></span><span class="f_mine"> feature to tell us how long the process took, by comparing the start and end time. &nbsp;The </span><span class="f_mine" style="text-decoration: underline;"><a href="um211e.htm" class="topiclink">PROJECT</a></span><span class="f_mine"> command is also useful for this purpose.) &nbsp;The output is below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="dsearch1.png" width="568" height="771" alt="dsearch1" style="width:568px;height:771px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A total of 32 lenses were evaluated (2**5), and the ten best are shown. &nbsp;Some of the designs are similar to others, which means that the configuration is attractive and can be derived in different ways. &nbsp;If you run DSEARCH more than once, with the same input, you will get somewhat different results each time. &nbsp;This is because the annealing portion of the process makes small random changes that are different each run, and then optimizes from there. &nbsp;You might want to run the program a few times to see if there are any great configurations that were missed in some runs. &nbsp;It is also a good idea to change the starting radius and run it again. &nbsp;This opens up a new set of possibilities. &nbsp;You can also try asking for more passes, say 99, and turn the annealing off by giving a starting temperature of zero.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is the file DSEARCH_OPT.MAC, which was automatically saved:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">PANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">VY 0 YP1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">VLIST RD ALL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">VLIST TH ALL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">VY &nbsp; 1 GLM </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">VY &nbsp; 3 GLM </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">VY &nbsp; 5 GLM </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">VY &nbsp; 7 GLM </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">VY &nbsp; 9 GLM </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">AANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">AEC</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">ACC</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">GSR 0 &nbsp; &nbsp;10.000000 4 &nbsp;2 &nbsp; &nbsp;0.000000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">GNR 0 &nbsp; &nbsp; 2.000000 4 &nbsp;2 &nbsp; &nbsp;0.750000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">GNR 0 &nbsp; &nbsp; 1.000000 4 &nbsp;2 &nbsp; &nbsp;1.000000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">GSR 0 &nbsp; &nbsp;10.000000 4 &nbsp;1 &nbsp; &nbsp;0.000000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">GNR 0 &nbsp; &nbsp; 2.000000 4 &nbsp;1 &nbsp; &nbsp;0.750000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">GNR 0 &nbsp; &nbsp; 1.000000 4 &nbsp;1 &nbsp; &nbsp;1.000000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">GSR 0 &nbsp; &nbsp;10.000000 4 &nbsp;3 &nbsp; &nbsp;0.000000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">GNR 0 &nbsp; &nbsp; 2.000000 4 &nbsp;3 &nbsp; &nbsp;0.750000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">GNR 0 &nbsp; &nbsp; 1.000000 4 &nbsp;3 &nbsp; &nbsp;1.000000</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">M &nbsp; 0.100000E+03 &nbsp;0.100000E+01 A BACK</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">ACM 1 1 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">ACA 60 1 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">M 0 1 A P YA 1 ; HERE WE CORRECT DISTORTION, WHICH IS NOT A DEFAULT TARGET &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">S GIHT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">SNAP/DAMP 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New';">SYNOPSYS 20</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here you see all of the variables and the merit function entries that were used during the search cycles. &nbsp;In this file, the program has also inserted a SNAPSHOT request – which was not in the user input – because this file is for your own use later and of course you want to see what is going on. &nbsp;Note the unity weight on the target BACK. &nbsp;This is the default weight on all first-order targets.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now let us try a more demanding problem. &nbsp;Here, we will try to design an eyepiece that covers a 90-degree field of view. &nbsp;To do so, we will design it in reverse, from the eye toward the objective. &nbsp;We specify a relative aperture of F/6 and an eye pupil of 0.1 inches diameter, which yields a focal length of 0.6 inches. &nbsp;Note the requirement in the SPECIAL section to control the value of HH in the emerging beam, which must be aimed at the location of the objective lens, 60 inches to the right. &nbsp;The ray angle tangent is therefore 0.01 at full field, and 0.005 at half field, and we control both to keep the pupil aberration under control.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is the input file:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">LOG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">TIME</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">DSEARCH 5 QUIET</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SYSTEM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ID TEST DSEARCH EYEPIECE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">OBB 0 45 .05   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; &nbsp;We will control the eye relief in the SPECIAL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">UNI INCH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; &nbsp;section, below.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">WAVL CDF</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">WAP 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; &nbsp;this keeps the beam diameter constant at all</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; &nbsp;field points.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GOALS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ELEMENTS 8</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">TOTL 6 .01</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">FNUM 6.0 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">THSTART .4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">RSTART 50</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">NPASS 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ANNEAL 100 5</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SNAP 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">STOP FIRST</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">STOP FREE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">QUICK 10 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">FOV 0 .75 .9 1. &nbsp; &nbsp; &nbsp; &nbsp;; we correct over four field points in this wide-angle design</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">FWT 2 1 1 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">!SAMPLE &nbsp; &nbsp; &nbsp; &nbsp;; uncomment this to see just one starting case</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SPECIAL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">M .63 1 A P YA 1 0 0 0 1 &nbsp; &nbsp; &nbsp; &nbsp;; The chief-ray height at the eye lens</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">M -.01 1 A P HH 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; will equal 0.63, to give eye relief of 0.63.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">M -.005 1 A P HH .5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; Control the ray angle here, so the eye point</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; is conjugate to the objective.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GO</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">TIME</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="dsearch2.png" width="626" height="844" alt="dsearch2" style="width:626px;height:844px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this example we elected to give a weight to the FNUM request; the value will therefore be controlled via an aberration rather than by a UMC solve. &nbsp;For this wide-angle system it makes a difference: with a UMC solve, we find that the program is unable to get rays to pass through 96 cases – which is not unusual for wide-angle systems – while without the solve no cases were skipped. &nbsp;In general, one gets better results more quickly if the paraxial UMC solve is utilized, but this example is a case where the results are better without it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">What would happen if we change the starting radius or thickness? &nbsp;It is easy to find out. &nbsp;Feel free to experiment. &nbsp;In any event, you now have several candidates to choose from.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The above input took about 7 minutes to execute. &nbsp;When we took out the line</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">QUICK 10 10</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">we got similar, but not identical, results – and the job took over two hours. &nbsp;Unless you have lots of time, we recommend quick mode.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is an example of a system to operate in the thermal infrared:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">DSEARCH 3 QUIET</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SYSTEM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">OBB 0 10 25</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">WAVL 12 10 8</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ID IR DESIGN EXAMPLE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">UNI MM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GOALS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ELEM 4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">FNUM 3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">BACK 54 .1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">NPASS 20</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">QUICK 20 20</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GLASS POS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">U GE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GLASS NEG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">U ZNSE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">SPECIAL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ACC 10 .1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GO</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This input will generate a set of four-element lenses in the 8-12 region, made of GE and ZNSE. &nbsp;Here is the lens that came back, which was corrected to within 0.2 waves.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="dsearch3.png" width="631" height="266" alt="dsearch3" style="width:631px;height:266px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">RANDOM search option</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The goal of DSEARCH is to provide a very efficient and fast way to find starting points, and it is successful for the most part. &nbsp;But we cannot claim to have solved the global optimization problem completely. &nbsp;DSEARCH embodies the assumption that, starting from the top of the plane-parallel hill, one can go downhill in any direction</span><span class="f_mine" style="font-family: 'Times New Roman';">,</span><span class="f_mine"> and each direction will arrive at a different local minimum. &nbsp;We humans like to visualize a 3-D landscape with hills and valleys scattered all over. &nbsp;You want to find the deepest valley. &nbsp;If you go down from the top in any direction, you will arrive at a valley, for sure. &nbsp;In the process, you first alter the starting curves so they are no longer flat. &nbsp;But there are an infinite number of combinations of curvatures that you could, in principle, evaluate. &nbsp;That leads to a very lengthy process, which is in fact implemented in some codes but which we would rather avoid. &nbsp;If one evaluates every node in a multidimensional mesh of combinations (which includes thicknesses, spacings, and index values as well as curvatures), one can easily wind up with 200,000 cases or more. &nbsp;Evaluating that mesh can take all weekend.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Still, our incompletely understood landscape may have valleys that cannot be reached just by sliding down from the top. &nbsp;In that case, the binary search method will not find it and we need something else. &nbsp;For that reason, we have implemented the RANDOM option. &nbsp;Picture the landscape as a plain with lots of depressions, some wide and shallow, a few narrow and deep. &nbsp;You cannot fall into the deep ones unless you are very close to them. &nbsp;If you request a large number of random cases, say 2000 or more, you increase the likelihood of finding those isolated local minima. &nbsp;And if you use the QUICK option, the time required is not excessive. &nbsp;We have run a problem with six elements, 2000 random cases, with QUICK 60 60 specified. &nbsp;An excellent solution came back in just over eight minutes. &nbsp;You might have to request more than this number in some cases, but we doubt you will ever have to wait for an overnight run.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Ray Aiming in DSEARCH</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We have tested the program with wide-angle camera lenses up to about 90 degrees total field of view, with interesting results. &nbsp;But remember, the program normally uses paraxial rules for ray aiming, and wide-angle lenses usually require a real pupil since pupil aberrations are often large. &nbsp;You can try declaring a </span><span class="f_mine" style="font-style: italic;">real</span><span class="f_mine"> paraxial pupil with the SYSTEM input, with the entry APS -1. &nbsp;Or, when the process completes, you can assign a real stop in the vicinity of where the program wanted the stop to go, remove the YP1 variable from the optimization MACro, and reoptimize if you are working with wide-angle lenses.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For designing very wide-angle lenses,the program needs your help. &nbsp;If the entering beam is more than 90 degrees from the axis, then of course no rays will trace through the almost-flat surfaces, and DSEARCH will find no solutions. &nbsp;But in such cases there is a simple approach that works very well: rough out a front end of one or two negative elements, bent in a way that the wide-angle beam gets through, and use this portion with the USE CURRENT option. &nbsp;Then DSEARCH will add elements following that section and will probably succeed in finding some very good solutions.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We have had good results in wide-angle designs by specifying a desired surface as a real stop and turning on the </span><span class="f_mine" style="text-decoration: underline;"><a href="um264.htm" class="topiclink">CSTOP</a></span><span class="f_mine"> option (both in the SYSTEM section). &nbsp;Be sure to declare the existence of the stop surface in that section as well by including a surface number higher than that one (so the initial system assigns a CAO to the correct surface). &nbsp;Then, in the GOALS section, specify the STOP FIX </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> directive so the stop always goes on the same surface. &nbsp;Then the program will use the real pupil instead of paraxial. &nbsp;The disadvantage is that the stop then cannot vary. &nbsp;But you can experiment with different locations if you need to see others.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">MACros created by DSEARCH</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When DSEARCH has finished, it automatically loads the file DSEARCH_OPT.MAC into a new editor window. &nbsp;This file contains the PANT and AANT entries used for optimization by DSEARCH. &nbsp; Run this file to optimize again, and then try some annealing of your own. &nbsp;Feel free to explore any of the results of DSEARCH, not just the top one. &nbsp;They are not yet optimum, just interesting candidates for further work. &nbsp;And by all means run the program several times, either with the same or slightly different parameters. &nbsp;There will be differences in the output, and you are then better able to judge whether you have found all the best candidates.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We finish this section with one more topic. &nbsp;You’ve run DSEARCH, and now you want to examine each of the candidate lenses more closely. &nbsp;The program makes a MACro called </span><span class="f_mine" style="font-weight: bold;">DSS.MAC</span><span class="f_mine">, which will open each of the resulting lens files and display then in PAD. &nbsp;Here is an example for the case when KEEP 5 was requested:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">FETCH DSEARCH01</span></p>
+<p class="p_mine"><span class="f_mine"> PAD/U</span></p>
+<p class="p_mine"><span class="f_mine"> NEW</span></p>
+<p class="p_mine"><span class="f_mine">FETCH DSEARCH02</span></p>
+<p class="p_mine"><span class="f_mine"> PAD/U</span></p>
+<p class="p_mine"><span class="f_mine"> NEW</span></p>
+<p class="p_mine"><span class="f_mine">FETCH DSEARCH03</span></p>
+<p class="p_mine"><span class="f_mine"> PAD/U</span></p>
+<p class="p_mine"><span class="f_mine"> NEW</span></p>
+<p class="p_mine"><span class="f_mine">FETCH DSEARCH04</span></p>
+<p class="p_mine"><span class="f_mine"> PAD/U</span></p>
+<p class="p_mine"><span class="f_mine"> NEW</span></p>
+<p class="p_mine"><span class="f_mine">FETCH DSEARCH05</span></p>
+<p class="p_mine"><span class="f_mine"> PAD/U</span></p>
+<p class="p_mine"><span class="f_mine"> NEW</span></p>
+<p class="p_mine"><span class="f_mine">GDS</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When you run this MACro, the program will do the following:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;Open the named file.</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;Refresh the PAD display, showing that lens along with whatever image analysis display you currently have requested.</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;Wait until you press the &lt;Enter&gt; key. &nbsp;This is the function of the NEW command, which waits for new input. &nbsp;When you press that key, it continues with the next case.</span></p>
+<p class="p_mine"><span class="f_mine">4. &nbsp;When all lenses have been displayed, the MACro loops to the top (because of the GDS command) and starts over. &nbsp;This lets you cycle through all cases very quickly and select the one you want to work on.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When you see the one you want, just press the &lt;Esc&gt; key and the MACro will terminate, leaving you with that lens. &nbsp;You can also just click the Run button on the editor, to immediately start optimizing that case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">So it’s rather easy: type </span><span class="f_mine" style="font-weight: bold;">EM DSS</span><span class="f_mine"> and press the &lt;Enter&gt; key repeatedly until you see the version you like, and then click the Run button. &nbsp;Lens design was never so easy!</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since DSEARCH can take a while to run, we recommend multicore operation, as mentioned above. &nbsp;If you want to abort the run, there are two options.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;Click the STOP button on the progress bar. &nbsp;This stops all cores as soon as practical, and concludes with the statistics of those cases that have run so far.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;Click the Stop Process button on the top toolbar. &nbsp;This terminates the run immediately, sending you to the command prompt. &nbsp;In this case, no results from the program are shown.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1015.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

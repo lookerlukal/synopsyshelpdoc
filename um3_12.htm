@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um3.12</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">um3.12</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;background:url(background-topic-header.jpg)" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   &raquo;No topics above this level&laquo;
+   </p>
+   <h1 class="p_Heading1"><span class="f_Heading1">um3.12</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <img src="hm_btn_navigate_prev_d.png" border="0"
+        ><a href="main_index.htm"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img name=main src="hm_btn_navigate_top.png" border=0 alt="Return to chapter overview"
+        ></a><img src="hm_btn_navigate_next_d.png" border="0">
+    </td>
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><span style="font-size: 14pt; font-weight: bold;">3.12 Hyperhemispheric surfaces</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Special considerations apply to surfaces whose curves extend beyond the hemisphere point. &nbsp;Many of the usual rules do not apply to such shapes, and they may require special input.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here is an example of a lens with this kind of surface:</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0483.png" width="299" height="374" alt="clip0483" style="width:299px;height:374px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">In this lens, surface 7 extends past the hemisphere point.  </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">There are two situations to consider: &nbsp;The first is when this kind of shape occurs naturally during lens optimization. &nbsp;The surface in question remains formally a normal spherical surface, but when the program calculates the default clear apertures, it senses that the ray intercept is past that point and activates a flag whose purpose is to alert the lens drawing programs, including the PAD display, to draw the shape properly, past that point. &nbsp;Vignetting is not tested in that case, and only <a href="um3312.htm" class="topiclink">simple edges</a> are drawn. <a href="um78.htm#78feile" class="topiclink"> EFILE</a> edges may not be assigned to such elements, since the normal edge geometry makes no sense in that case. &nbsp;Only spherical surfaces are so treated, and there must be no decentered or non-circular apertures..</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The other situation is when a design is complete and you want to assign hard clear apertures yourself. &nbsp;In that case, you also </span><span style="font-size: 11pt; font-style: italic;">must</span><span style="font-size: 11pt;"> declare the surface a <a href="um3312.htm#3312hyper" class="topiclink">HYPERHEMISPHERE</a>, since the default CAO calculation is bypassed then and the flag is not set automatically, as in the previous situation.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Element drawings with ELD also show the simple edge, and if you want to design the edges differently, you should declare the elements <a href="um3312.htm#3312draw" class="topiclink">NOEDGE</a> first. &nbsp;Then ELD will not draw the edges, and you can draw the shape you want with the annotation editor.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The example above shows the hyperhemisphere on side 1. &nbsp;It can also occur on side 2, as shown below.</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0484.png" width="211" height="368" alt="clip0484" style="width:211px;height:368px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">This kind of surface is much more difficult to manufacture than a normal concave surface, and is to be avoided unless you have no alternative.  </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">All of the lens drawing programs honor this kind of shape, except for <a href="um72.htm#solid" class="topiclink">SOLID</a>. &nbsp;But the rotating solid program <a href="um72.htm#rsolid" class="topiclink">RSOLID</a> works and does much the same thing.</span></p>
+<p>&nbsp;</p>
+<p><a name="avoidinghyperhemisphericalsurfaces"></a><span style="font-size: 14pt; font-weight: bold;">Avoiding hyperhemispherical surfaces</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The above comments regarding the difficulty inherent in these shapes apply even more if you want a surface to be aspheric and the optimization program bends it into a hyperhemispheric shape. &nbsp;Small plastic aspheres are commonly used in cell-phone camera lenses, and they can be produced at low cost by a molding process. &nbsp;But it is impossible to separate a lens from the mold if it goes past the hemisphere point, and the feature that tests for that condition only applies to pure spherical shapes anyway, not to aspheres. &nbsp;So one must control the shape so that situation does not occur.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The ray aberration DSLOPE can in some cases keep the surface slope in the region short of the hemisphere point, but that feature calculates the sags at two close points and takes the derivative with respect to Y. &nbsp;The problem is that a hyperhemispheric surface has</span><span style="font-size: 11pt; font-style: italic;"> two</span><span style="font-size: 11pt;"> solutions to the sag equation, and the program takes the one closest to the vertex. &nbsp;For this reason, if the shape should happen to become strongly hyper at any iteration, the sag calculation will not see it and the shape cannot thereafter leave that solution.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Instead, in this case the ray aberration</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um10312.htm#rslope" class="topiclink">RSLOPE</a></span><span style="font-size: 11pt;"> is recommended. &nbsp;That calculates the slope relative to the optical axis, rather than to the vertex plane (as DSLOPE does), and it uses real ray intercepts instead of a simple sag calculation.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Thus, in a case where DSEARCH comes back with a hyper surface, as shown below where surface 2 is aspheric and extends too far,</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0485.png" width="137" height="434" alt="clip0485" style="width:137px;height:434px;border:none"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">one might add to the SPECIAL AANT section the entry</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">LLL 5 1 1 A P RSLOPE 1 0 1 0 2</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">This will keep the slope angle larger than 5 degrees at the full-field upper rim ray position on that surface. &nbsp;In this instance, the pupil is inverted, but the program senses that and returns a positive slope for intercepts short of the hyper point. &nbsp;So this operand will work regardless of the pupil orientation.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">This is what DSEARCH returned when the RSLOPE was controlled on surfaces 2 and 4:</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0486.png" width="154" height="415" alt="clip0486" style="width:154px;height:415px;border:none"></p>
+<p><span style="font-size: 11pt;">Now both of those surfaces are practical aspheres.</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>

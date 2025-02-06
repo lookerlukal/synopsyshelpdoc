@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>making a one-sided aberration</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LIM,LIM LLL aberrations,LLA absolute value limit,LLL limit aberration,LUA absolute value limit,LUL limit aberration,optimization--&gt;" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">10.3.5.1 Limit Input &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10352.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1035.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Sometimes you will want an aberration to be greater than or less than a particular value, but do not care what it is otherwise. &nbsp;It is unwise to give a specific target in such cases because that might constrain the solution unnecessarily.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To permit specification of a “one-sided” requirement, three input formats are available: </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> LUL / LLL / LUA / LLA } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> L / LIM } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-weight: bold;">LL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">A1</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">f1</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">A2</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">f2</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">These are used instead of the usual </span><span class="f_mine" style="font-weight: bold;">M </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> before an aberration definition. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The simplest of the three is the </span><span class="f_mine" style="font-weight: bold;">LUL</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold;">...</span><span class="f_mine"> format. &nbsp;Here you specify a target value, a relative weight, and a window size. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">LUL</span><span class="f_mine"> option specifies an upper limit, while the </span><span class="f_mine" style="font-weight: bold;">LLL</span><span class="f_mine"> form gives a lower limit. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Considering the </span><span class="f_mine" style="font-weight: bold;">LUL</span><span class="f_mine"> form first, if the quantity to be controlled is less than </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine">, the aberration is zero because this is an upper limit and we don’t care in that case. &nbsp;For values that exceed </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine">, the aberration varies as the square of the departure from </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine">, calculated so that if the excess is just equal to </span><span class="f_mine" style="text-decoration: underline;">WINDOW</span><span class="f_mine">, the aberration value is equal to </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine">.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For the </span><span class="f_mine" style="font-weight: bold;">LLL</span><span class="f_mine"> form, the rules are reversed; the aberration is zero if the quantity exceeds </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine">, and varies as a quadratic if the quantity is less than </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine" style="font-family: 'Times New Roman';">.  </span><span class="f_mine">  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">LUA</span><span class="f_mine"> form gives an upper limit to the absolute value of the aberration, while </span><span class="f_mine" style="font-weight: bold;">LLA</span><span class="f_mine"> gives a lower limit to the absolute value.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Thus, to control airspace number 4 so that it is larger than 10 mm, one could enter in the AANT file</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">LLL 10 2 1 &nbsp; &nbsp; &nbsp; &nbsp;! the lower limit is 10 lens units; weighting factor = 2.0, and the window size is 1 unit.</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">A TH 4</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the value were to decrease to, say 9 mm, then this aberration would get a value of 2.0. &nbsp;One can adjust the importance of this control with the </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> input, and get as precise a result as required with the </span><span class="f_mine" style="text-decoration: underline;">WINDOW</span><span class="f_mine"> parameter. &nbsp;(As with all aberrations, one must be mindful of the need to balance things: a very tight control somewhere may result in other goals being neglected.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The second form defines the aberration as an exponential, which is also a one-sided control. &nbsp;The aberration in this case is defined to be</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">fi = exp( </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> (Aberration - </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> ) )</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Either a positive or negative limit may be imposed, depending on the values of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine">. &nbsp;You can enter these values yourself using the following steps, or you can select the &quot;</span><span class="f_mine" style="font-weight: bold;">LL</span><span class="f_mine">&quot; option and the program will find them for you.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In either case, you will identify two values of the controlled quantity and two values of the aberration that will correspond to those values, as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.</span></p>
+</td>
+<td style="vertical-align:top; width:533px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Choose </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">A1</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">f1</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">A2</span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">f2</span><span class="f_mine"> where </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">A1</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">A2</span><span class="f_mine"> are values of the quantity near the desired limit, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">f1</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">f2</span><span class="f_mine"> are the aberration values you wish to go into the merit function corresponding to those values. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Then, using the LL method, you simply enter those values, according to the format above. &nbsp;The program then calculates the values of </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> that yield an exponential function that fits those data.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.</span></p>
+</td>
+<td style="vertical-align:top; width:533px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If you prefer, you can calculate the values of </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> yourself, as follows:</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">WT = ( ln ( f1 / f2 ) ) / ( A1 - A2 )</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">TAR = ( ln f1 + WT A1 ) / WT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For example, suppose you wish the narcissus value on surface 9 to be greater than 0.01. &nbsp;Suppose that the other aberrations in the merit function have values of about 0.02. Then you might pick values for the parameters A and f</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">A1 = 0.008, f1 = 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">A2 = 0.010, f2 = 0.02</span></p>
+<p class="p_mine"><span class="f_mine">Then</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">WT = ( ln ( 10.0 / 0.02 ) ) / ( 0.01 - 0.008 ) = 3107.304</span></p>
+<p class="p_mine"><span class="f_mine">and</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">TAR = ( ln ( 10.0 ) + 3107.304 * 0.008 ) / 3107.304 = 0.008741.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The AANT entry would be</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">L .008741 3107.304 A NAR 9</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A simpler input would be just </span><span class="f_mine" style="font-weight: bold;">LL .008 10 .010 .02 A NAR 9</span><span class="f_mine">, which would do the same thing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In either case, a plot of f(A) would look like the curve below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f9.png" width="345" height="270" alt="um10f9" style="width:345px;height:270px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The exponential form works as well as the quadratic forms (LUL and LLL), except if the starting system is very far from the desired target. &nbsp;In that case, the exponential value may well become extremely large and the control will not work properly. &nbsp;So unless the starting design is fairly close to the target, you will get better results with the quadratic form.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10352.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

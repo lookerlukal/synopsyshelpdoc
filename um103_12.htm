@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um103.12</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ACS slope monitor,ASC slope control,ASC, automatic slope control,Slope, with ASC" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="asc"></a><span class="f_mine" style="font-weight: bold;">10.3.12 Surface slope control (ASC, ACS) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um103_13.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um103_11.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">During optimization, lenses occasionally become bent to such an extent that the slope at the margin approaches the hemisphere point. &nbsp;This is usually undesirable for two reasons: first, the lens is hard to make and coatings are hard to apply uniformly, and second, in that situation rays are often very close to failing – even though the merit function seems to be under control – and very small changes to the lens can cause failures. &nbsp;Then the optimization procedure gets stalled.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This is one of several kinds of </span><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm#monitor" class="topiclink">monitors</a></span><span class="f_mine"> that operate continuously during optimization.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One can control the slope of the surface at a single point with the </span><span class="f_mine" style="text-decoration: underline;"><a href="um10312.htm#dslope" class="topiclink">DSLOPE</a></span><span class="f_mine"> aberration. &nbsp;Another option lets you automatically control the slope of all lenses in the system. &nbsp;The AANT file entry</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">ASC [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANGLE</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;">  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine" style="font-weight: bold;"> ] ] &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(Automatic Slope Control)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will add an aberration that depends on the amount by which the absolute value of the surface slope angle at each surface exceeds the target value. &nbsp;The aberration is calculated so that:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;Any angle less than the target gets zero penalty.</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;Any angle within </span><span class="f_mine" style="text-decoration: underline;">WINDOW</span><span class="f_mine"> of the target gets a penalty that increases quadratically with the difference and is equal to </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> when the error equals </span><span class="f_mine" style="text-decoration: underline;">WINDOW</span><span class="f_mine">. </span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;Any angle more than this amount from the target gets a penalty that increases linearly from where the quadratic penalty left off.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">With this option, lenses are monitored continuously along the upper and lower rays at the full-field point, and those that tend to become too steep are automatically controlled. &nbsp;The default ANGLE is 60 degrees, the default weight is 1.0, and the default </span><span class="f_mine" style="text-decoration: underline;">WINDOW</span><span class="f_mine"> is one degree. &nbsp;This aberration applies to all surfaces whose curvature is varying. &nbsp;If you want to allow angles steeper than the default 60 degrees, just enter your own target and weight.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The value of the ASC aberration is calculated </span><span class="f_mine" style="font-style: italic;">after</span><span class="f_mine"> other aberrations in the merit function are computed, regardless of where the declaration occurs in the AANT file. &nbsp;For most lenses this makes no difference – but if the lens is a </span><span class="f_mine" style="text-decoration: underline;"><a href="um1071.htm#zfile" class="topiclink">ZFILE</a></span><span class="f_mine"> zoom lens, the calculation is therefore performed at the last zoom that was specified in the merit function. &nbsp;Thus, for example, if the last aberration was specified at zoom 7, then the ASC penalty will also be computed in zoom 7. &nbsp;If this behavior is not what you really want, you are advised to use the </span><span class="f_mine" style="text-decoration: underline;"><a href="um10312.htm" class="topiclink">DSLOPE</a></span><span class="f_mine"> aberration instead of ASC.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The form </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">ACS [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANGLE</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;">  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine" style="font-weight: bold;"> ] ] &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(Automatic CAO Slope Control)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">operates in much the same way, but examines the slope at the current CAO aperture instead of monitoring at the rim rays. &nbsp;For most lenses they are equivalent -- but if you are optimizing a ZFILE zoom lens, the monitors are evaluated after all other aberrations, which means that the system is in the last zoom position at that time. &nbsp;The ASC version would therefore monitor the slopes at that zoom along the rim rays, while the ACS version would check at the current CAO, which is set to the maximum value needed for all zooms (at surfaces with a soft CAO). &nbsp;The latter is therefore usually preferred when working with zoom lenses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One can evaluate the current slopes of all surfaces with the command </span><span class="f_mine" style="text-decoration: underline;"><a href="um544.htm#slope" class="topiclink">SLOPE</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.  </span><span class="f_mine"> the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#slope" class="topiclink">SLOPE</a></span><span class="f_mine"> operand is available for controlling the slope of a given surface at a given ray in the AANT file, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#cslopeabrn" class="topiclink">CSLOPE</a></span><span class="f_mine"> will return the slope at the current CAO..</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um103_13.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

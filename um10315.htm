@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Ghost-image control</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="BGI aberration,buried ghost image,ghost image,ghost image control in optimization,optimization--&gt;,PGHOST aberration" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">10.3.1.5 Ghost-image control &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1032.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10314.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A ghost image is caused by a reflection from one or more refracting surfaces. &nbsp;SYNOPSYS can evaluate and control two types: The </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um55.htm#ghost" class="topiclink">GHOST</a></span><span class="f_mine"> program can show which combinations of surfaces are responsible for ghost images at the image surface, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um513.htm#bgi" class="topiclink">BGI</a></span><span class="f_mine"> can evaluate the properties of a ghost image that is formed at another place within a lens system.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To control the size of the blur </span><span class="f_mine" style="font-style: italic;">at the image</span><span class="f_mine"> from a selected paraxial ghost, the input is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">M </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> A PGHOST </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JREFH</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JREFL</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">M </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> A PUGHOST </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JREFH</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JREFL</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The first of these, PGHOST, is used to control the blur size of a paraxial ghost of a point in object space. &nbsp;This is the usual ghost image situation, where a bright object in one part of the field forms a ghost image in another part. &nbsp;The second variety, PUGHOST, is used to control the size of the ghost image of a point on the entrance pupil.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Suppose that the ghost resulting from a reflection from surface 15 and then from surface 9 is sharply focused at the image plane. &nbsp;A small ghost is a bright ghost, and you can reduce its intensity by increasing the blur size. &nbsp;Suppose that you want the ghost to have a blur radius of not less than 5 mm. &nbsp;Here is how you could target it to exactly this value in the AANT file input:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M 5 1 A PGHOST 15 9</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since a </span><span class="f_mine" style="font-style: italic;">larger</span><span class="f_mine"> ghost is not a defect, it is often better to give a </span><span class="f_mine" style="text-decoration: underline;"><a href="um10351.htm" class="topiclink">one-sided aberration</a></span><span class="f_mine">:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">LL 5 .1 4 1</span></p>
+<p class="p_mine"><span class="f_mine">A PGHOST 15 9</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here the defect has a value of 0.1 if the ghost radius is 5.0, and a value of 1.0 if the radius drops to 4.0. &nbsp;Note that the returned value of the aberration is always positive, and the target value should therefore be positive as well.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-style: italic;">Do not</span><span class="f_mine"> turn on switch 47 if you use this feature for optimization. &nbsp;That option is intended for </span><span class="f_mine" style="text-decoration: underline;"><a href="um551.htm" class="topiclink">detailed analysis</a></span><span class="f_mine"> of a single ghost, and it will produce a great deal of unwanted printout if this switch setting is used in optimization.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Like the GHOST command, this feature will augment the calculated paraxial ghost radius by the estimated diffraction disk radius if </span><span class="f_mine" style="font-weight: bold;">switch 49</span><span class="f_mine"> is on (but not for PUGHOST)</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also control the size of a ghost that is formed within a lens system (a “buried ghost”). &nbsp;This is useful in high-power laser systems, where a ghost reflection from a lens surface can cause damage to the elements if sharply focused. &nbsp;The input for this kind of control is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">M </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> A BGI </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JREFL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JHOT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JREFL</span><span class="f_mine"> is the surface that reflects the light, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JHOT</span><span class="f_mine"> is the surface where you want to monitor the flux to prevent damage. &nbsp;The LL form is also recommend for this kind of control. &nbsp;Thus, to ensure that the beam radius of the ghost reflected from surface 41 on surface 9 remains larger than 0.2 units, you could input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">LL 0.2 .01 0.1 5 A BGI 41 9</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">in the merit function. &nbsp;This example gives a penalty of 0.01 if the ghost radius is 0.2, and a penalty of 5 if it shrinks to 1.5. &nbsp;Note that the control is applied to the </span><span class="f_mine" style="font-style: italic;">absolute value</span><span class="f_mine"> of the blur radius, so the program will let it assume a large positive or negative value, as the situation requires.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Also note that both the PGH and BGI controls are </span><span class="f_mine" style="font-style: italic;">paraxial</span><span class="f_mine"> quantities, and do not involve real raytracing. &nbsp;They therefore ignore apertures, tilts, and decenters. &nbsp;Both will honor switch 49 and add the estimated diffraction disk radius to the calculated geometric ghost image radius if this switch is on.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1032.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

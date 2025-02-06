@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um534</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="GTRANS,Transmission, glass" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+   <script type="text/javascript" src="synopsysv16_popup_html.js"></script>
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="gtrans"></a><span class="f_mine" style="font-size: 14pt;">5.34 Glass Transmission (GTRANS) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="text-decoration: underline;"><a href="um533.htm" class="topiclink">Previous</a></span><span class="f_mine"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um535.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The command</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-weight: bold;">GTRANS </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">WLOW</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">WHIGH</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">will calculate the transmission of the glass assigned to surface </span><span style="font-size: 11pt; text-decoration: underline;">SN</span><span style="font-size: 11pt;"> over the wavelength range from </span><span style="font-size: 11pt; text-decoration: underline;">WLOW</span><span style="font-size: 11pt;"> to </span><span style="font-size: 11pt; text-decoration: underline;">WHIGH</span><span style="font-size: 11pt;">. &nbsp;The glass must come from one of the glass tables, and it must be one for which transmission data are available. &nbsp;(Some glasses lack published data, and no data at all are available for the Hoya and LZOS catalogs.) &nbsp;This command may also be accessed via the </span><span style="font-size: 11pt; font-weight: bold;">MTR</span><span style="font-size: 11pt;"> dialog.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Another feature will show the transmission curve for a selected glass type in graphic form. &nbsp;This is found under the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="javascript:void(0);" onclick="return hmshowPopup(event, popid_1374834120X, this);" class="popuplink">PAD GlassTable</a></span><span style="font-size: 11pt;"> feature. &nbsp;Yet another feature will show the transmission along the path of a ray through the entire lens. &nbsp;This is </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um536.htm" class="topiclink">RTRANS</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here is an example, where surface 8 has the glass SF6:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">GTRAN 8 .35 .7 </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> TRANSMISSION DATA FOR SURFACE NO. &nbsp;8</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SCHOTT &nbsp; &nbsp; &nbsp; &nbsp; SF6</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp;WAVELENGTH &nbsp;TRANS(5MM) &nbsp;TRANS(TH)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp;---------------------------------</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.35000 &nbsp; &nbsp;0.000000 &nbsp; &nbsp;0.000000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.36667 &nbsp; &nbsp;0.600287 &nbsp; &nbsp;0.595405</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.38333 &nbsp; &nbsp;0.846750 &nbsp; &nbsp;0.844500</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.40000 &nbsp; &nbsp;0.940918 &nbsp; &nbsp;0.940002</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.41667 &nbsp; &nbsp;0.977366 &nbsp; &nbsp;0.977008</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.43333 &nbsp; &nbsp;0.991384 &nbsp; &nbsp;0.991247</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.45000 &nbsp; &nbsp;0.996558 &nbsp; &nbsp;0.996503</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.46667 &nbsp; &nbsp;0.998247 &nbsp; &nbsp;0.998219</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.48333 &nbsp; &nbsp;0.998596 &nbsp; &nbsp;0.998573</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.50000 &nbsp; &nbsp;0.998468 &nbsp; &nbsp;0.998443</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.51667 &nbsp; &nbsp;0.998206 &nbsp; &nbsp;0.998177</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.53333 &nbsp; &nbsp;0.997937 &nbsp; &nbsp;0.997905</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.55000 &nbsp; &nbsp;0.997706 &nbsp; &nbsp;0.997669</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.56667 &nbsp; &nbsp;0.997520 &nbsp; &nbsp;0.997480</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.58333 &nbsp; &nbsp;0.997375 &nbsp; &nbsp;0.997333</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.60000 &nbsp; &nbsp;0.997265 &nbsp; &nbsp;0.997221</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.61667 &nbsp; &nbsp;0.997182 &nbsp; &nbsp;0.997137</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.63333 &nbsp; &nbsp;0.997120 &nbsp; &nbsp;0.997074</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.65000 &nbsp; &nbsp;0.997074 &nbsp; &nbsp;0.997027</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.66667 &nbsp; &nbsp;0.997041 &nbsp; &nbsp;0.996993</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.68333 &nbsp; &nbsp;0.997017 &nbsp; &nbsp;0.996969</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 0.70000 &nbsp; &nbsp;0.997000 &nbsp; &nbsp;0.996952</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The third column gives the transmission for a thickness equal to the center thickness of the lens in question, while the second is for a thickness of 5 mm, which is listed in the vendor's glass catalogs.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">A warning message will be printed whenever the requested range exceeds the range of published transmission data for that glass type.</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um535.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um751</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="AFOCAL distortion,Distortion of eyepiece,Eyepiece, distortion of" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-size: 14pt;">7.5.1 AFOCAL distortion</span><span class="f_mine">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um76.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um75.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Special consideration must be given to the problem of calculating distortion when the lens has collimated output. &nbsp;In such cases, AFOCAL mode is recommended, and then the output from features that trace rays deals with ray </span><span class="f_mine" style="font-style: italic;">angles</span><span class="f_mine">, not transverse intercepts.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This has profound consequences. &nbsp;Whereas in the case of a focal system it is easy to define what one means by “zero distortion”, this is not so simple when the lens is AFOCAL. &nbsp;In the former case, one means that the output ray intercept must be proportional to the object height. &nbsp;If one asks for a distortion calculation in the AFOCAL case, however, then “zero distortion” by default means that the output </span><span class="f_mine" style="font-style: italic;">angle</span><span class="f_mine"> is proportional to the input </span><span class="f_mine" style="font-style: italic;">angle. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One has to sort this out when designing an eyepiece, since one wants the user to see an image free from distortion. &nbsp;Here are two procedures that we have found effective:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;Lay out the system from the telescope side, with the eye point at the end and the lens in AFOCAL mode. &nbsp;Assign the stop to the telescope aperture, as shown below. &nbsp;Use object OBA, giving an object distance equal to the separation between the stop and the telescope image. &nbsp;The object is inside the eyepiece, and the separation between the stop and the eyepiece is varied for focusing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f35.png" width="726" height="249" alt="um7f35" style="width:726px;height:249px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Assign the eye relief distance you want to the airspace to the eye point, and when you optimize the system, control the chief-ray intercept at the eye point for two or three field points (to avoid pupil aberrations that give rise to the notorious “kidney-bean” effect).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Correct distortion by giving a target to the value of YA of the chief ray at two or three field points. &nbsp;Thus, to get a 45-degree angle at full field, that YA should be 0.7854 radians, and at half field it should be half that. &nbsp;Strictly speaking, the output angle should be proportional to the input angle, but for most telescopes the actual input angle is very small and we can use the (linear) HBAR instead. &nbsp;You can start by giving a target to the difference between YA at full field and the GIHT, and see if you need to control other field angles afterwards.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If these requirements are met by the optimization program, the lens will have little pupil aberration and distortion. &nbsp;The latter can then be evaluated with the command <a href="um712.htm" class="topiclink">GDIS</a>, which gives this picture for the 16-mm eyepiece example installed with the program.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f36.png" width="394" height="397" alt="um7f36" style="width:394px;height:397px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This design has a small amount of barrel distortion, which changes sign near the very edge of the field. &nbsp;In practice, this amount of distortion is not very noticeable.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Modeled in this way, the output </span><span class="f_mine" style="font-style: italic;">angles</span><span class="f_mine"> are plotted, as mentioned above. &nbsp;If you were to declare the system APERFECT 10, on the other hand, the lens would then no longer be in AFOCAL mode, and the image would be evaluated over a flat plane. &nbsp;In this case, the GDIS plot would show substantial distortion, as shown below. &nbsp;This is what other programs show, since they do not have an AFOCAL mode. &nbsp;If you were to correct distortion in one of those programs, then it would be corrected over the flat plane and the image would appear strongly distorted to the eye. &nbsp;This is yet another reason to avoid using other programs.</span></p>
+<p class="p_mine"><img src="clip0474.png" width="447" height="449" alt="clip0474" style="width:447px;height:449px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;Lay out the system starting from the eye pupil, which is the reverse of the illustration above. &nbsp;Define the field angle as you wish, and use object type OBD, which is normally used for wide-angle lenses but is also useful here since the input field angle HBAR then refers to a fractional </span><span class="f_mine" style="font-style: italic;">angle</span><span class="f_mine"> instead of height. &nbsp;Assign the stop to surface 1, at the eye point, and put a dummy surface at the location of the telescope objective. &nbsp;The final image is inside the eyepiece in this example, and a YMT solve at the objective can be used to get the final surface at that image.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Assign a paraxial YMP1 to object OBD, and use a UMC solve on the last lens surface to control the F/number and therefore the focal length. &nbsp;Assign the WAP 1 pupil option, to keep the beam into the eye of constant diameter over the field.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now correct the chief-ray height at the dummy objective at two or three field points, and also control the marginal ray height at that surface so that it falls at the edge of the objective. &nbsp;Do this for the full-field point as well. &nbsp;This will control distortion as well as pupil aberration.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If these goals are achieved, the GDIS plot will show little or no distortion, as shown below. &nbsp;(This plot was obtained with lens C41L1 from my book </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;">Automatic and quasi-autonomous computational methods and techniques</span><span style="font-size: 12pt; font-family: 'Times New Roman';">.</span><span style="font-size: 12pt; font-family: 'Times New Roman';">)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f44.png" width="391" height="373" alt="um7f44" style="width:391px;height:373px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the goals are not closely met, there may still be some distortion, and the sign will appear reversed since the lens is reversed. &nbsp;You can then reverse the lens if you wish, and make a new distortion plot with the correct sign.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um76.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

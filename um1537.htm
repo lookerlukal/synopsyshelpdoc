@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Infrared example</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="XSYS-&gt;" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">15.3.7 XSYS Example</span><span class="f_mine" style="font-size: 14pt;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1536.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this section we give a simple example of the use of XSYS. &nbsp;First we create a data file, using many of the example lenses that come bundled with SYNOPSYS. &nbsp;This MACro is saved with the name XSYSINIT.MAC.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">; XSYSINIT.MAC</span></p>
+<p class="p_mine"><span class="f_mine">; THIS FILE CREATES THE DATABASE THAT WILL BE</span></p>
+<p class="p_mine"><span class="f_mine">; USED BY XSYS. &nbsp;LIST HERE ALL LENS FILES THAT</span></p>
+<p class="p_mine"><span class="f_mine">; YOU THINK MAY CONTAIN USEFUL INFORMATION</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">XSYS</span></p>
+<p class="p_mine"><span class="f_mine">INIT</span></p>
+<p class="p_mine"><span class="f_mine">X1</span></p>
+<p class="p_mine"><span class="f_mine">X2</span></p>
+<p class="p_mine"><span class="f_mine">X3</span></p>
+<p class="p_mine"><span class="f_mine">X4</span></p>
+<p class="p_mine"><span class="f_mine">X5</span></p>
+<p class="p_mine"><span class="f_mine">X6</span></p>
+<p class="p_mine"><span class="f_mine">X7</span></p>
+<p class="p_mine"><span class="f_mine">X8</span></p>
+<p class="p_mine"><span class="f_mine">X9</span></p>
+<p class="p_mine"><span class="f_mine">X10</span></p>
+<p class="p_mine"><span class="f_mine">X11</span></p>
+<p class="p_mine"><span class="f_mine">X12</span></p>
+<p class="p_mine"><span class="f_mine">X13</span></p>
+<p class="p_mine"><span class="f_mine">X14</span></p>
+<p class="p_mine"><span class="f_mine">X15</span></p>
+<p class="p_mine"><span class="f_mine">X16</span></p>
+<p class="p_mine"><span class="f_mine">X17</span></p>
+<p class="p_mine"><span class="f_mine">X18</span></p>
+<p class="p_mine"><span class="f_mine">X19</span></p>
+<p class="p_mine"><span class="f_mine">X20</span></p>
+<p class="p_mine"><span class="f_mine">X21</span></p>
+<p class="p_mine"><span class="f_mine">X22</span></p>
+<p class="p_mine"><span class="f_mine">X23</span></p>
+<p class="p_mine"><span class="f_mine">X24</span></p>
+<p class="p_mine"><span class="f_mine">X25</span></p>
+<p class="p_mine"><span class="f_mine">X26</span></p>
+<p class="p_mine"><span class="f_mine">X27</span></p>
+<p class="p_mine"><span class="f_mine">X28</span></p>
+<p class="p_mine"><span class="f_mine">X29</span></p>
+<p class="p_mine"><span class="f_mine">X30</span></p>
+<p class="p_mine"><span class="f_mine">X31</span></p>
+<p class="p_mine"><span class="f_mine">X32</span></p>
+<p class="p_mine"><span class="f_mine">X33</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now we create another MACro that will utilize this database. &nbsp;It starts with the lens at location number 9 in the database, and then alters it so as to give an afocal magnification of 0.2, and a total length of about 300 mm. &nbsp;We do not require color correction in this example.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">; XSYS.MAC</span></p>
+<p class="p_mine"><span class="f_mine">; HERE IS A SIMPLE EXAMPLE OF HOW THE EXPERT-SYSTEMS PROGRAM</span></p>
+<p class="p_mine"><span class="f_mine">; XSYS CAN HELP YOU FIND STARTING POINTS. &nbsp;WE OPEN A PRELIMINARY</span></p>
+<p class="p_mine"><span class="f_mine">; LENS (USE 9) FROM THE XSYS DATABASE, AND THEN ASK IT</span></p>
+<p class="p_mine"><span class="f_mine">; TO FIND COMBINATIONS WHERE THE AFOCAL MAGNIFICATION IS 0.2</span></p>
+<p class="p_mine"><span class="f_mine">; WITH A WEIGHT OF 10</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">XSYS</span></p>
+<p class="p_mine"><span class="f_mine">USE 9</span></p>
+<p class="p_mine"><span class="f_mine">XSYS</span></p>
+<p class="p_mine"><span class="f_mine">ALTER</span></p>
+<p class="p_mine"><span class="f_mine">AFMAG .2 10</span></p>
+<p class="p_mine"><span class="f_mine">TOTL 300 .01</span></p>
+<p class="p_mine"><span class="f_mine">CWT 0</span></p>
+<p class="p_mine"><span class="f_mine">PASSES 5</span></p>
+<p class="p_mine"><span class="f_mine">PLOT AUTO</span></p>
+<p class="p_mine"><span class="f_mine">snap</span></p>
+<p class="p_mine"><span class="f_mine">GO</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program finds the 10 best matches, and creates a plot:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="xsysexample.png" width="550" height="647" alt="xsysexample" style="width:550px;height:647px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To then use the first of these matches, we simply enter the number 1 at the prompt:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">TOP TEN MATCHES WITH EXAMPLE LENSES:</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> No. &nbsp;Exam. Move Keep &nbsp; &nbsp;Ap. &nbsp; &nbsp; Scaled &nbsp; &nbsp; Mismatch &nbsp; &nbsp;Image &nbsp; Mechanical Mode</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> -- &nbsp; ----- ---- ---- &nbsp; &nbsp;--- &nbsp; &nbsp; ------ &nbsp; &nbsp; -------- &nbsp; &nbsp;----- &nbsp; ---------- ----</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;1 &nbsp; &nbsp;9 &nbsp;-14 &nbsp; &nbsp;0 &nbsp; &nbsp; 1.0000 &nbsp; &nbsp; 1.4156 &nbsp; &nbsp; 0.3916 &nbsp; &nbsp; 0.1900 &nbsp; &nbsp; 0.2016 &nbsp; &nbsp;4</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;2 &nbsp; &nbsp;3 &nbsp; 10 &nbsp; -3 &nbsp; &nbsp; 1.2677 &nbsp; &nbsp; 0.9891 &nbsp; &nbsp; 1.2297 &nbsp; &nbsp; 0.0691 &nbsp; &nbsp; 1.1606 &nbsp; &nbsp;1</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;3 &nbsp; 10 &nbsp; &nbsp;4 &nbsp; 12 &nbsp; &nbsp; 1.0896 &nbsp; &nbsp; 1.0078 &nbsp; &nbsp; 1.4184 &nbsp; &nbsp; 0.0759 &nbsp; &nbsp; 1.3424 &nbsp; &nbsp;3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;4 &nbsp; &nbsp;5 &nbsp; -3 &nbsp; 12 &nbsp; &nbsp; 0.5064 &nbsp; &nbsp; 1.0152 &nbsp; &nbsp; 1.5538 &nbsp; &nbsp; 0.1788 &nbsp; &nbsp; 1.3750 &nbsp; &nbsp;4</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;5 &nbsp; 19 &nbsp; -4 &nbsp; -7 &nbsp; &nbsp; 0.4277 &nbsp; &nbsp; 0.9388 &nbsp; &nbsp; 1.7592 &nbsp; &nbsp; 0.1727 &nbsp; &nbsp; 1.5866 &nbsp; &nbsp;2</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;6 &nbsp; 22 &nbsp; &nbsp;7 &nbsp; &nbsp;0 &nbsp; &nbsp; 1.0000 &nbsp; &nbsp; 1.3145 &nbsp; &nbsp; 2.0166 &nbsp; &nbsp; 0.0000 &nbsp; &nbsp; 2.0166 &nbsp; &nbsp;3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;7 &nbsp; 16 &nbsp; 13 &nbsp; &nbsp;0 &nbsp; &nbsp; 1.0000 &nbsp; &nbsp; 2.2424 &nbsp; &nbsp; 2.0425 &nbsp; &nbsp; 0.0000 &nbsp; &nbsp; 2.0425 &nbsp; &nbsp;3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;8 &nbsp; &nbsp;7 &nbsp; -2 &nbsp; 12 &nbsp; &nbsp; 0.5037 &nbsp; &nbsp; 1.0142 &nbsp; &nbsp; 2.2261 &nbsp; &nbsp; 0.0653 &nbsp; &nbsp; 2.1608 &nbsp; &nbsp;4</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;9 &nbsp; 16 &nbsp; &nbsp;5 &nbsp; &nbsp;7 &nbsp; &nbsp; 1.1936 &nbsp; &nbsp; 0.8984 &nbsp; &nbsp; 2.3369 &nbsp; &nbsp; 0.5611 &nbsp; &nbsp; 1.7757 &nbsp; &nbsp;3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> 10 &nbsp; &nbsp;5 &nbsp; -5 &nbsp; 10 &nbsp; &nbsp; 0.7482 &nbsp; &nbsp; 1.0571 &nbsp; &nbsp; 2.4754 &nbsp; &nbsp; 0.1590 &nbsp; &nbsp; 2.3163 &nbsp; &nbsp;4</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> Select a number.</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> XSYS&gt;1 </span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> The following match will now be inserted:</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> No. &nbsp;Exam. Move Keep &nbsp; &nbsp;Ap. &nbsp; &nbsp; Scaled &nbsp; &nbsp; Mismatch &nbsp; &nbsp;Image &nbsp; Mechanical Mode</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> -- &nbsp; ----- ---- ---- &nbsp; &nbsp;--- &nbsp; &nbsp; ------ &nbsp; &nbsp; -------- &nbsp; &nbsp;----- &nbsp; ---------- ----</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;1 &nbsp; &nbsp;9 &nbsp;-14 &nbsp; &nbsp;0 &nbsp; &nbsp; 1.000 &nbsp; &nbsp; &nbsp;1.416 &nbsp; &nbsp; 0.3916 &nbsp; &nbsp; 0.1900 &nbsp; &nbsp; 0.2016 &nbsp; &nbsp; 4</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> Mechanical errors:</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp;YB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;UB &nbsp; &nbsp; &nbsp; &nbsp; FNUM &nbsp; &nbsp; &nbsp; &nbsp;BACK &nbsp; &nbsp; &nbsp; &nbsp; FOV</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 0.0000E+00 -0.3725E-08 -0.1291E+00 &nbsp;0.0000E+00 -0.2605E-06</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; PUPIL &nbsp; &nbsp; &nbsp; ROOM &nbsp; &nbsp; &nbsp; DEFOCUS &nbsp; &nbsp; &nbsp; TH0 &nbsp; &nbsp; &nbsp; &nbsp;TOTL</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 0.0000E+00 &nbsp;0.0000E+00 -0.1436E+00 &nbsp;0.2826E-10 &nbsp;0.4054E+00</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> Get lens no. 10 &nbsp; &nbsp; &nbsp; &nbsp;ID COMPACT IR 7X AFOCAL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 24424</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">Lens number &nbsp; &nbsp;10 ID COMPACT IR 7X AFOCAL</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">Lens number &nbsp; &nbsp;10 ID COMPACT IR 7X AFOCAL</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> This is match number &nbsp;1</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> Enter &quot;Y&quot; to optimize, &lt;CR&gt; to skip, &lt;ESC&gt; TO END &quot;L&quot; for list, or number.</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> XSYS&gt;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Then we enter Y and the lens is quickly optimized.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="xsysresult.png" width="767" height="472" alt="xsysresult" style="width:767px;height:472px;border:none"></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

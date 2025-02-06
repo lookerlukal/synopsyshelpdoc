@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um313</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Lambertian object,OBL object" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">3.1.3 Lambertian Object (OBL) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um312.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um314.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">An important class of optical systems is designed to collect and distribute light in a desired manner, rather than form a sharp image. &nbsp;This class often involves a light source such as a tungsten filament or an LED, both of which approximate a Lambertian emitter.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">This kind of source can be modeled with the OBL object descriptor in the RLE file, described in this section. &nbsp;For a single LED with no reflector around it, this format is appropriate. &nbsp;To model an array of LEDs plus a reflector, the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um316.htm" class="topiclink">OBI</a></span><span style="font-size: 11pt;"> format is used instead.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The format for the OBL object is</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt; font-weight: bold;">OBL </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">TH0</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YP0</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ANGLE</span><span style="font-size: 11pt; font-weight: bold;"> [ </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">XP0</span><span style="font-size: 11pt; font-weight: bold;"> ]</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">Here, the arguments </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">TH0</span><span style="font-size: 11pt;"> and </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YP0</span><span style="font-size: 11pt;"> have their usual meaning, but there is no input of YMP1 as is usually the case. &nbsp;Instead, you give the semi-</span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ANGLE</span><span style="font-size: 11pt;"> of the source, which is in degrees and must be greater than 0 and less than 90. &nbsp;Since there is little light at extreme angles from a flat Lambertian source, it is usually best to give an angle of no more than 85 degrees (or less if the light source restricts one to a still-smaller value).</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The program deals with this type of object in a unique manner: whereas the radiation falling on a distant plane would fall off as the cosine of the ray angle to the fourth power, we choose to model the ray </span><span style="font-size: 11pt; font-style: italic;">distribution</span><span style="font-size: 11pt;"> with this function and treat each ray with equal weight. &nbsp;By so doing one can make a footprint of the ray pattern at a desired surface and get a good visual impression of the energy uniformity. &nbsp;One can also use the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um857.htm#gmodel" class="topiclink">GMODEL</a></span><span style="font-size: 11pt;"> and image dissection routines to find the energy pattern explicitly. &nbsp;If the rays all had different weights, (which would be the way to model a distribution with rays uniformly spaced) a visual impression would be harder to make.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">As a result of this kind of model, it is not so simple to trace a given ray. &nbsp;If you ask, say, for the ray at YEN = 1, you will indeed get the ray at the entered angle. &nbsp;But other rays are remapped into the entrance pupil in a way that approximates the falloff as mentioned above, and as a result you will not usually get the ray that you expected. &nbsp;If this seems complicated, remember that these systems are not intended for forming images, and one seldom has need to trace a particular ray. &nbsp;Instead, one deals with overall ray distributions, as illustrated by the example in </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um537.htm" class="topiclink">Section 5.37</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">A good way to examine the illumination pattern at the final surface is with </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um8512.htm#ipat" class="topiclink">IPAT</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">If no value is input for the skew field </span><span style="font-size: 11pt; text-decoration: underline;">XP0</span><span style="font-size: 11pt;">, the OBL format automatically makes the object square; it extends in both HBAR and GBAR, so you can evaluate the flux from anywhere on a square LED. &nbsp;The default clear apertures, which are calculated to pass the light at the </span><span style="font-size: 11pt; font-style: italic;">corner</span><span style="font-size: 11pt;"> field point, rather than from the object in the meridional plane at HBAR = 1 will therefore appear larger than you might otherwise expect. &nbsp;Enter a small (but nonzero) value for XP0 if you want to model an object that has a negligible X-dimension.</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um314.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um312.htm" class="topiclink">previous</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um548</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Code-V, converting input,CVCONVERT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="cvconvert"></a><span class="f_mine" style="font-size: 14pt;">5.48 Code-V Input File Converter (CVCONVERT) &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um547.htm" class="topiclink"> Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um549.htm#um549" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">The command </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;">CVCONVERT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">will open a dialog where you can select a disk file with the extension “.seq”. &nbsp;This is the output file produced by the lens design program Code-V™. &nbsp;SYNOPSYS™ can open this file and in most cases convert the data to the SYNOPSYS RLE format. &nbsp;When it finishes, it opens the new file in a MACro editor where you can examine the results, make any changes necessary, and then run the file. &nbsp;The file to be converted must reside in the current working directory.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 48px 0px 48px;"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;">Disclaimer: &nbsp;Since Code-V™ is a third-party program over which we have no control and for which the data are not fully transparent, we make no guarantee that the results of the conversion to SYNOPSYS™ format will be complete or accurate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">Keep in mind that both SYNOPSYS and Code-V are both very large programs, and each has some features not present in the other. &nbsp;The converter will capture as much of the lens data as practical and issue a warning message if it cannot convert an important item. &nbsp;These usually involve surface types that are not supported – but the glass tables and some system properties differ between the two programs, so the conversion may be incomplete. &nbsp;Some parameters are deemed not important and are skipped entirely. &nbsp;One should therefore carefully examine the result from CVCONVERT to be sure that the lens model is complete and accurate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">Since the logic of how systems are organized differs considerably between the programs, there are some situations where automatic conversion is impractical. &nbsp;For example, in SYNOPSYS™, a ZFILE zoom lens zooms only declared airspaces and the object definition; this is intended for ordinary zoom lenses. &nbsp;But the program also has six independent configurations which can reside in memory at the same time, and correlations can be declared so that any property of the lens can be “zoomed” between them in multiconfiguration mode. &nbsp;Code-V allows only a single configuration to reside, on the other hand, and other configurations have to be emulated by zooming all kinds of other properties. &nbsp;Thus, when CV declares a zoom lens, the converter has to check to see if the system follows the protocol of the ZFILE, and if so, it generates the appropriate data, and if not, it issues a warning message.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">When problems have emerged related to raytracing the lens, they are usually due to a simple difference in first-order conventions. &nbsp;For this reason, we recommend, when you plan to convert a file and have access to Code-V, first change the file as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;">1. &nbsp;Avoid paraxial F/number or field angle solves. &nbsp;The conversion can avoid many problems if the lens has a fixed input semi field angle and fixed semi aperture on axis.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;">2. &nbsp;Delete any vignetting tables. &nbsp;SYNOPSYS can make its own VFIELD table if you need it. &nbsp;And of course, be sure that CAOs are assigned where necessary to get the vignetting you want.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;">3. &nbsp;If the stop is on surface 1, SYNOPSYS will aim rays at the vertex plane, while Code-V aims them at the surface itself; this can lead to different rays being traced. &nbsp;If you assign object type OBD, however, SYNOPSYS will also aim rays at the surface. &nbsp;This is not automatic, so you should check yourself to see if this step is required.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">As far as we have determined, when a TH is zoomed in CV, there is no automatic reverse zoom following the group. &nbsp;This means that all following surfaces are shifted, not just those in the group. &nbsp;In order to model this arrangement in SYNOPSYS™, we set the size of each group so it extends from the starting surface all the way to the image.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">The converter also ignores any nonsequential declarations in the CV file. &nbsp;The geometry and protocols are so different that we leave it up to the user to duplicate such systems.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">As of this update, GRIN systems are not converted. &nbsp;In CV, those use the private glass catalog – which is not supported the same way in SYNOPSYS™.</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">Aspherics are converted, using the </span><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33222.htm" class="topiclink">G-term polynomial</a></span><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';"> form if the declarations do not extend beyond the 10</span><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman'; vertical-align: super;">th</span><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">-power of aperture, and </span><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3327.htm#uss" class="topiclink">USS type 1</a></span><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';"> if they do. &nbsp;That form can accommodate up to the 28</span><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman'; vertical-align: super;">th</span><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';"> power. &nbsp;Other shapes are at present not converted.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">Tilts and decenters are converted, provided they use only the RELATIVE tilt and decenter rules. &nbsp;The program adds a dummy axis-tilt surface where CV uses the BEN parameter. &nbsp;If global coordinates are involved, the converter ignores them, and you will have to insert them yourself where needed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">HOEs, DOEs, and gratings are converted, but you are advised to carefully study the declarations that result. &nbsp;The protocols are very complicated, and we have only addressed some simple cases. &nbsp;SYNOPSYS will use type USS 16 for DOEs if possible.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">In some CV systems, surface number 1 is assigned a decenter and declared the stop in order to model a decentered entrance pupil, such as required for an off-axis paraboloid. &nbsp;If the converter senses this usage, it will insert a dummy surface 1 and decenter the remaining system by the opposite amount. &nbsp;The result is equivalent, but follows the procedure of SYNOPSYS, which recommends that no tilt or decenter be assigned to the first surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">Many glass names differ. &nbsp;For example, Code-V recognizes the name SBSM81 for the Ohara glass S-BSM81, while SYNOPSYS™ uses the latter name. &nbsp;You are advised to check the converted file before running it, to correct errors of this nature. &nbsp;When the CV input specifies a private glass catalog, the converter checks to see if the glass catalog is imbedded in the seq file, and uses it if so; if not it issues a warning message and substitutes a model glass. &nbsp;It is a pity that Code-V does not include the exact index values as well as the glass name. &nbsp;In our opinion, this is a blunder: if the named glass is someday removed from the catalog, or renamed, the .seq file will thereafter never open properly. &nbsp;The RLE file from SYNOPSYS, on the other hand, includes both the index and glass name. &nbsp;This is an example of where SYNOPSYS is a better program than Code-V.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">The object specification will become one of OBA, OBB, OBG, or OBD. &nbsp;If other designations are desired, you are advised to edit the RLE file created by the converter.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';"> data are created if the CV file specifies vignetting. &nbsp;It does not honor asymmetric vignetting in X, however, since a real pupil in SYNOPSYS™ is rotated for skew field points, and the meridional declarations are usually appropriate. &nbsp;As noted above, we recommend you delete the vignetting table before saving the seq file.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">In spite of these limitations, all of the most common optical parameters are captured satisfactorily, and most users will find that reading a file from CV is quite practical.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-family: 'Times New Roman';">We recognize that a great many options are not converted, although in most cases there is an equivalent option in SYNOPSYS™. &nbsp;If you wish to convert a system that is not fully supported, please send us a copy of the .seq file, along with sufficient graphical documentation so that we can figure out what it is supposed to do. &nbsp;We will attend to all such requests according to our judgment.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um549.htm#um549" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

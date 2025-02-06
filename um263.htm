@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um263</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Using the WAP and VFIELD options,WAP pupils,wide-angle pupils" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">2.6.3 Wide-Angle Pupils (WAP) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um262.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um2631.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For cases where the default circular, centered pupil is not adequate, three wide-angle pupil options are available: WAP 1, 2, and 3. &nbsp;They may be selected easily via the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="hidd_pupilwizard.htm" class="topiclink">Pupil Wizard</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The entry</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">WAP 1</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">in an RLE or CHG file will put into effect the first wide-angle pupil option, which sets the radius of the input beam to YMP1 as measured perpendicular to the chief ray rather than perpendicular to the axis.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The system entry</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">WAP 2</span></p>
+<p class="p_p2-10"><span class="f_p2-10">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">results in the second wide-angle pupil option, which causes the values of YMP1 and XMP1 to be adjusted at every field angle so that the upper and lower rim rays and the skew rays all intercept the stop surface at the edge given by the </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#cao" class="topiclink">CAO</a></span><span class="f_mine"> or </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#rao" class="topiclink">RAO</a></span><span class="f_mine"> on that surface. &nbsp;This option automatically turns on the real pupil option as well (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um261.htm" class="topiclink">2.6.1</a></span><span class="f_mine">), and the </span><span class="f_mine" style="text-decoration: underline;"><a href="um265.htm" class="topiclink">FILLSTOP</a></span><span class="f_mine"> option, unless the </span><span class="f_mine" style="text-decoration: underline;"><a href="um264.htm" class="topiclink">CSTOP</a></span><span class="f_mine"> option has been selected instead. &nbsp;The chief ray is central in this pupil, and might therefore not be centered at the stop surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since this iterative calculation is performed every time a chief ray is required by any feature of SYNOPSYS, it is one of the more time-consuming options of the code. &nbsp;The entrance pupil so found is usually noncircular, and the change in energy throughput with field angle resulting from the pupil size change is currently ignored by those features that calculate throughput by means of ray counting. &nbsp;(The transmission calculations </span><span class="f_mine" style="text-decoration: underline;"><a href="um539.htm#tn" class="topiclink">TN</a></span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;"><a href="um95.htm#illum" class="topiclink">ILLUM</a></span><span class="f_mine"> do consider the pupil size change, however, since they factor in the convergence angle at the image.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For wide-angle lenses with marked change of pupil size with field, this option is recommended. &nbsp;A user entered hard aperture (CAO, EAO, or RAO) must be on the stop surface (or the CSTOP option selected, which does the same thing) or this option will give an error message.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Because this option (as well as WAP 3) involve iterative ray aiming, which can be a slow process if the lens is lengthy, you should consider using the <a href="um32.htm#32vfield" class="topiclink">VFIELD</a> option instead. &nbsp;For example, you can put WAP 2 in effect, and then run </span><span class="f_mine" style="text-decoration: underline;"><a href="um524.htm#fvf" class="topiclink">FVF</a></span><span class="f_mine"> to find the size and shape change over field of the pupil. &nbsp;That creates the VFIELD array, turns off the WAP option, and all options that involved ray tracing will then run much faster. &nbsp;But this only makes sense if the lens is fairly stable, since the array will be inaccurate if substantial changes are made later.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A strange problem occasionally shows up in systems using the WAP 2 or 3 pupils. &nbsp;As the program iterates to find the extreme rays, it can encounter ray failures or come to a caustic in the beam. &nbsp;In this case, there can be no real solution to the equations for finding the intersection with the CAO of the stop. &nbsp;The program then comes as close as it can, but the beam then does not fill the stop surface, and the chief ray is redefined as the ray midway between the upper and lower rays in the beam that actually gets through. &nbsp;If this occurs, one potential solution is to add a target to the MF of the chief ray position at the stop. &nbsp;A decentered beam will then cause a large error and the program will avoid that kind of solution.</span></p>
+<p class="p_p2-10"><span class="f_p2-10">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The system option</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">WAP 3</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">provides yet another way to control the pupil size and shape in systems where the paraxial pupil is not adequate. &nbsp;With this option, the program will try to find the limiting rays at the top, bottom, and both sides of the pupil at each field point where a chief ray would ordinarily be traced; these rays are the ones that just clear all CAO, RAO, and EAO apertures in the lens (remember, WAP 2 considers only the CAO at the stop). &nbsp;The meridional rays are traced first, and the chief ray is defined as the midpoint between the top and bottom rays (even though it may not pass through the center of the real stop surface). &nbsp;The skew ray search is then performed to the right and left of this ray. The resulting pupil is usually elliptical (or rectangular, if </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#rpupil" class="topiclink">RPUPIL</a></span><span class="f_mine"> is in effect). &nbsp;WAP 3 is the most time-consuming of the WAP options and is best used </span><span class="f_mine" style="font-weight: bold;">after the lens has been completely designed</span><span class="f_mine">. &nbsp;If it is used during the design phase, it may happen that the existing hard apertures become too small for the beam. &nbsp;Then the entrance pupil will be reduced in size -- which will nicely stop down the lens and make the aberrations look great. &nbsp;But that's not the solution you want. &nbsp;To avoid this trap, save WAP 3 for those rare cases when the design is finished and you need this special pupil definition for image analysis.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">These pupil options examine only the CAO, EAO, and RAO apertures, and are not affected by any </span><span class="f_mine" style="text-decoration: underline;"><a href="um78.htm#efile" class="topiclink">EFILE</a></span><span class="f_mine"> data that may be in effect. &nbsp;The former may be considered to be the apertures that limit the light beam, while the latter are apertures to be machined into the lens elements themselves – which do not have to be the same thing. &nbsp;Often, a retaining ring is used to hold the lens element, and it is the aperture of that part that limits the beam, not the edges of the glass element. &nbsp;In this case, the CAO should be set equal to the radius of the ring, not the lens edge.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is not a good idea to put a hard clear aperture on an image surface, or a lens that is very close to one, when using WAP 3. &nbsp;The aberrations at that point can sometimes create a caustic, and when the program searches for the ray that just hits the CAO, the search can fail. &nbsp;When this happens, you see the message</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">WAP PUPIL SIZE EQUATION HAS NO REAL SOLUTION.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In other words, do not put a hard CAO anyplace where the beam may exhibit a caustic if you use WAP 3.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vig" class="topiclink">vignetting mode</a></span><span class="f_mine"> is turned on, then EFILE edge data may </span><span class="f_mine" style="font-style: italic;">vignette</span><span class="f_mine"> the beam, if those edges are smaller in diameter than the lens CAO. &nbsp;That is, the pupil is defined as above, and rays are traced according to the current ray-grid model, but then some of those rays will be </span><span class="f_mine" style="font-style: italic;">deleted </span><span class="f_mine">from the ray set during image analysis if the program finds that the ray hits a surface above the EFILE points A or E.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the WAP 2 and 3 options encounter ray failures while searching for the boundaries of the pupil, the resulting pupil will be reduced in size, which is not necessarily what you want. &nbsp;If your goal is to correct rays over the pupil you expected, you might in fact wind up correcting rays over the smaller pupil without knowing about it. &nbsp;For this reason, it is wise not to use those pupil options too early in the design, and, if you use them later, to monitor the optimization in the PAD display and watch the rays where they intercept the stop surface. &nbsp;Normally those rays will nicely fill the stop, but if it appears that the stop is significantly underfilled, then ray failures may be the cause. &nbsp;(We have found it helpful to correct the </span><span class="f_mine" style="font-style: italic;">slope</span><span class="f_mine"> of the geometric TFAN at one or both edges in such cases, which drives the program away from large high-order aberrations at the edge of the pupil. &nbsp;This has proved a good way to cure such ray failure problems.)  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In other words, </span><span class="f_mine" style="font-style: italic;">do not</span><span class="f_mine"> use the WAP 3 option during optimization, unless the lens is already very stable.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Suppose the TFAN shows very large aberrations right at the negative edge, and the stop is under-filled. &nbsp;Here is what you could put into the AANT file to control things:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">M 0 .1 A P YA 1 0 –1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">S P YA 1 0 -.95</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This will target the difference between the ray intercepts at the -.95 and –1.0 pupil point.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A last word about this admittedly complicated topic. &nbsp;Nature has no problem finding a bundle of rays that passes through the lens, because nature has an infinite number of rays to try. &nbsp;We don’t. &nbsp;In order to make the lens design process practical, we have to determine as quickly as possible which rays get through and which do not. &nbsp;Sometimes we want to ignore the rays that do not and sometimes we want to consider them, as when we are planning to fix up vignetting problems later on, when the design form has taken a definite shape. &nbsp;So there is no one-size-fits-all solution, and you must understand what you are after and what tools will best get you there.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Some users conclude that, since the WAP 3 option is the most sophisticated one available, it should be used in every lens. &nbsp;This is a mistake. &nbsp;In fact, that option should rarely, if ever, be used, and then mainly for analyzing a finished design.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="wap_vfield"></a><span class="f_mine">Here is our approach: &nbsp;First, design the lens with a paraxial pupil unless you are sure it is going to need a real one. &nbsp;If the chief ray at the stop is not centered closely enough for your purposes, then change to a real pupil. &nbsp;Work on the design until you have discovered whether a certain amount of vignetting at off-axis points will be necessary. &nbsp;Then use the </span><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm#vset" class="topiclink">VSET</a></span><span class="f_mine"> option in the merit function, trying various values until the rays that get considered are well behaved. &nbsp;Now you know how much vignetting will be appropriate. &nbsp;Adjust element thicknesses as required to avoid feathering over the beam you want to correct. &nbsp;It can sometimes happen that rays beyond the reduced rayset you have just corrected will fail to trace. &nbsp;In this case, the default clear aperture calculation has to ignore those rays and will probably return aperture values that are too small. &nbsp;Here is where the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine"> option comes in handy. &nbsp;Assign a VFIELD to your lens, with at least two field points, both at the on-axis point (with no vignetting), and at the edge of the field with the reduction you found useful with the VSET tests you ran. &nbsp;(The CAP calculation now traces rays at this reduced pupil too, and will not find ray failures.) &nbsp;Now remove the VSET and optimize again. &nbsp;This time the program redefines the pupil according to the VFIELD data, not according to the VSET data – which does much the same thing but with more user control. &nbsp;You are almost there.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now do a CHG/CFIX/END, to install hard clear apertures everywhere. &nbsp;These apertures are those that just pass the rays from the pupil as reduced by the VFIELD. &nbsp;(If you did not change to the VFIELD option, you have to assign the CAOs yourself; this is very easy to do: in the WorkSheet, add a CAO to the first and last surfaces. &nbsp;Then adjust the CAO values with the sliders until the TFAN is vignetted at just the points you anticipated.) &nbsp;Now you can switch to WAP 3 to check that the image quality is adequate at other points in the field. &nbsp;If you have a large number of analysis runs to do, you can save some time by making a better VFIELD array instead of using the WAP option. &nbsp;Do this with the </span><span class="f_mine" style="text-decoration: underline;"><a href="um524.htm#fvf" class="topiclink">FVF</a></span><span class="f_mine"> command, which can generate an updated VFIELD data array at several more field points, based on the current hard lens apertures. &nbsp;The vignetting you have designed into the lens will not necessarily vary linearly with field (which VSET assumes), and now you can examine the image at many points to see if the vignetting changes with field in the appropriate manner. &nbsp;If so, the design is ready for the finishing touches, testplates, and tolerancing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the apertures are suitable and the design seems adequate but shows strong vignetting, it is wise to do an additional test. &nbsp;The VFIELD and WAP options model the vignetted pupil with an ellipse (or rectangle), but the actual pupil can in some cases be crescent shaped. &nbsp;Simply change to WAP 2, which deletes the VFIELD, and then look at the footprint at the stop at full field. &nbsp;Vignetted rays will simply be deleted (be sure VIG mode is turned on), and the pattern that results is the actual pattern that the previous options were trying to emulate. &nbsp;Look at the same footprint with the VFIELD or WAP option in effect, and compare the two. &nbsp;If they are nearly the same, you are done. &nbsp;If not, you should run the optimization again, adding some rays of your own choosing, traced at the parts of the pupil that were not present with the reduced-pupil options.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The comments in </span><span class="f_mine" style="text-decoration: underline;"><a href="um261.htm#protate" class="topiclink">Section 2.6.1</a></span><span class="f_mine">, which describe how the entrance pupil is rotated for skew field points if the real pupil option is used, apply equally to the WAP options, which enable the real pupil.</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um2631.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um262.htm" class="topiclink">P</a></span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um262.htm" class="topiclink">revious</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

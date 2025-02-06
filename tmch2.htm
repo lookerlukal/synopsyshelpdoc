@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>tmch2</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="EE editor command,GDS command" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_p1-1" style="text-align: center; margin: 0px 0px 0px 0px;"><span class="f_p1-1" style="font-size: 18pt; font-style: italic; font-weight: bold;">Chapter 2</span></p>
+<p class="p_p1-1" style="text-align: center; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-1" style="font-size: 18pt; font-weight: bold;">The User Interface</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-1" style="text-align: left;"><span class="f_p2-1" style="font-size: 11pt;">In the last chapter you entered a singlet lens in real time and tried a few commands, and you know how simple it was to get those things done in SYNOPSYS. &nbsp;The next project is to enter a triplet lens using the </span><span class="f_p2-1" style="font-size: 11pt; text-decoration: underline;"><a href="macros.htm" class="topiclink">MACro</a></span><span class="f_p2-1" style="font-size: 11pt;"> editor and do some more challenging analysis on it. &nbsp;Eventually you will start to optimize this lens, but first you have to know how to use the editor, since that is how you will communicate with the program for much of your work, especially for optimization.</span></p>
+<p class="p_p2-1" style="text-align: left;"><span class="f_p2-1">&nbsp;</span></p>
+<p class="p_heading1-3" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_heading1-3">&nbsp;</span></p>
+<p><a name="tm2l2"></a><span class="f_heading1-3">MACros</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p2-1" style="text-align: left;"><span class="f_p2-1" style="font-size: 11pt;">In case you are unfamiliar with the term, a MACro is simply a series of input lines that is entered into a file and then run as a unit. &nbsp;All of the input that you entered in the first chapter could have been prepared ahead of time and then sent to SYNOPSYS to be executed, and the output would have been the same as before. &nbsp;If you plan to enter more than one or two input lines to do a given task, it is usually wise to do it with a MACro rather than in real time, since you will frequently want to run those lines more than once, perhaps with modifications, and you only have to type a MACro once. &nbsp;In this section you will enter the data for a triplet using a MACro.</span></p>
+<p class="p_p2-1" style="text-align: left;"><span class="f_p2-1">&nbsp;</span></p>
+<p class="p_p2-1" style="text-align: left;"><span class="f_p2-1" style="font-size: 11pt;">As with many features of SYNOPSYS, you can start the MACro editor either by a mouse click or from the keyboard. &nbsp;The command </span><span class="f_p2-1" style="font-size: 11pt; font-weight: bold;">EE</span><span class="f_p2-1" style="font-size: 11pt;"> (Excellent Editor) opens the editor, creating a new editor window if there is none already open, or just activating the last window you used if it has not been closed yet. &nbsp;Or you can use the menu item at the top of the window frame </span><span class="f_p2-1" style="font-size: 11pt; font-weight: bold;">MACro</span><span class="f_p2-1" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">|</span><span class="f_p2-1" style="font-size: 11pt; font-weight: bold;">Create a New Editor Window</span><span class="f_p2-1" style="font-size: 11pt;">, – or just click the button </span><img src="newmacrowindow.png" width="26" height="24" alt="newmacrowindow" style="width:26px;height:24px;border:none"><span class="f_p2-1" style="font-size: 11pt;">. &nbsp;When the new window opens, type the following lines:</span></p>
+<p class="p_p2-1" style="text-align: left;"><span class="f_p2-1">&nbsp;</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">RLE</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">ID COOKE TRIPLET F/4.5</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">OBB 0 20 5.555</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">APS 3</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">UNITS MM</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">1 CV .04652472 TH 2 CAO 5.5555 GTB S</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">SK16</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">2 CV -.008062 TH 5.25509</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">2 CAO 5.5555</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">3 RD -19.105175 TH 1.25 N13 61164 61659 62848</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">3 CAO 5</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">4 CV .045497 TH 4.93473 CAO 5.0</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">5 CAO 5.5555 CV .0030457 TH 2.25 PIN 1</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">6 RD -16.75377 YMT 0 CAO 5.5555</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">7</span></p>
+<p class="p_p1-1" style="margin: 0px 0px 0px 38px;"><span class="f_p1-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">(If you want to avoid some work, you can just copy the above lines and paste them into the EE editor.)</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">When you are done, click the button </span><img src="savemacroas.png" width="26" height="24" alt="savemacroas" style="width:26px;height:24px;border:none"><span style="font-size: 11pt;"> on the editor toolbar, type the name COOKE in the File Save dialog box, click OK, and then click the button </span><img src="runmacro.png" width="26" height="24" alt="runmacro" style="width:26px;height:24px;border:none"><span style="font-size: 11pt;">. &nbsp;This button saves the file with the most recent name and then runs it. &nbsp;Once you have executed a MACro, SYNOPSYS remembers what was in it, and even if you have closed the editor window you can always run it again – without opening it – with the command </span><span style="font-size: 11pt; font-weight: bold;">GDS</span><span style="font-size: 11pt;"> (Get Data Set). &nbsp;This is a useful trick to remember if you make a MACro for image analysis and you want to run it over and over. &nbsp;You can also open a new editor window with the button </span><img src="newmacrowindow.png" width="26" height="24" alt="newmacrowindow" style="width:26px;height:24px;border:none"><span style="font-size: 11pt;"> and create any number of editors in this way, each of which can hold a different set of commands.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">When you execute this MACro, you will see the data in your RLE file scroll on the screen, and then the PXT line for the triplet. &nbsp;(Did you notice that this file does </span><span style="font-size: 11pt; font-style: italic;">not</span><span style="font-size: 11pt;"> have a wavelength definition? &nbsp;The default is simply WAVL CDF.)</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p><span style="font-size: 11pt;">Look at the FOCL value; it should be about 50 mm. If it is not, you probably made a typing error; in that case, reenter </span><span style="font-size: 11pt; font-weight: bold;">EE</span><span style="font-size: 11pt;"> to change it. &nbsp;(Or just click in the editor window to resume typing there.) &nbsp;A </span><span style="font-size: 11pt; font-weight: bold;">SPEC</span><span style="font-size: 11pt;"> listing might help you find the error.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p><span style="font-size: 11pt;">It's time to try some more SYNOPSYS commands – </span><span style="font-size: 11pt; font-weight: bold;"><a href="um42.htm#prt" class="topiclink">PRT</a></span><span style="font-size: 11pt;">, a listing program with a different format than </span><span style="font-size: 11pt; font-weight: bold;"><a href="um41.htm#spec" class="topiclink">SPEC</a></span><span style="font-size: 11pt;">, </span><span style="font-size: 11pt; font-weight: bold;"><a href="um44.htm#pop" class="topiclink">POP</a>,</span><span style="font-size: 11pt;"> which lists the options currently in effect, such as the YMT solve on the final airspace, </span><span style="font-size: 11pt; font-weight: bold;"><a href="um62.htm#cap" class="topiclink">CAP</a>, </span><span style="font-size: 11pt;">which lists clear aperture data, and </span><span style="font-size: 11pt; font-weight: bold;"><a href="um622.htm#edge" class="topiclink">EDGE</a>, </span><span style="font-size: 11pt;">giving edge thicknesses of each element and airspace. &nbsp;Type these commands to see what they do. &nbsp;Then type the command </span><span style="font-size: 11pt; font-weight: bold;">MLL</span><span style="font-size: 11pt;">, to open a dialog that lets you choose from these or several other commands related to lens listings, and </span><span style="font-size: 11pt; font-weight: bold;">MUT</span><span style="font-size: 11pt;">, which shows a variety of utilities, such as </span><span style="font-size: 11pt; font-weight: bold;">EDGE</span><span style="font-size: 11pt;">.</span></p>
+<p>&nbsp;</p>
+<p class="p_heading2-1" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_heading2-1">&nbsp;</span></p>
+<p><a name="tm2l3"></a><span class="f_heading2-1">The SideBar</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Now that you’ve typed several commands, it’s time to look at ways to do these same things with mouse clicks. &nbsp;On the left side of the SYNOPSYS window you will see a row of toolbar buttons. &nbsp;First, look at what happens if you move the mouse cursor to one of the buttons – </span><span style="font-size: 11pt; font-weight: bold;">but do </span><span style="font-size: 11pt; font-style: italic; font-weight: bold;">not</span><span style="font-size: 11pt; font-weight: bold;"> click it</span><span style="font-size: 11pt;"> (minimize this help window first, if you have only a single monitor). &nbsp;Point at the button </span><img src="tbdialog.png" width="26" height="24" alt="tbdialog" style="width:26px;height:24px;border:none"><span style="font-size: 11pt;"> and hold the mouse still for a moment. &nbsp;See the “Tool Tips” window that tells you the function of this button? &nbsp;“Program ToolBar”. &nbsp;The other buttons have similar tooltips that help you find the one you need. &nbsp;The exact function of these buttons can be changed to whatever you want, by – you guessed it – clicking on the top one. &nbsp;This brings up a dialog where you can choose whether you want a particular button to open a dialog window giving you a menu of selections, or if you’d rather have that button actually perform some task immediately. &nbsp;Now click that button.</span></p>
+<p>&nbsp;</p>
+<p><img src="tm2f1.png" width="396" height="200" alt="tm2f1" style="width:396px;height:200px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">In this dialog the button row is shown on the left, and you see that most of them have two radio buttons to the right. &nbsp;In the above figure, the choice “I03” has been selected for the toolbar button </span><img src="spec.png" width="26" height="24" alt="spec" style="width:26px;height:24px;border:none"><span style="font-size: 11pt;">. &nbsp;But the characters &quot;I03&quot; mean nothing at all -- until AI has a look. &nbsp;Type the AI sentence “SYMBOLS?”. &nbsp;Is that string defined?</span></p>
+<p class="p_mine-2"><span class="f_mine-2">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">SYMBOLS? </span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;1 AIP 0</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;2 PP* RPT .02 10 2 1 3</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;3 FF* FINAL 5</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;4 TT* EM TEST</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;5 I01 MLB</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;6 I02 MWL</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;7 </span><span style="font-family: 'Courier New'; font-weight: bold; color: #ff0000;">I03 SPEC</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;8 I04 LE</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;9 I05 THIRD</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 10 I06 DWG 0 1 99 HBAR 0 1 -1</span></p>
+<p><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; . . . </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Indeed. &nbsp;In this example, I03 has been defined as the characters “SPEC”. &nbsp;Here is one of the most useful features of AI. &nbsp;Close the dialog and click that button. &nbsp;You get a SPEC listing again. &nbsp;Now open the dialog again and select the radio button that says “MLL”. &nbsp;Close it and click the button once more. &nbsp;This time you see the MLL dialog again, where you can select from a variety of kinds of SPEC and other listing commands. &nbsp;How did the SPEC command get associated with the characters I03 in the AI program? &nbsp;The next section tells how.</span></p>
+<p>&nbsp;</p>
+<p class="p_heading2-1" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_heading2-1">&nbsp;</span></p>
+<p><a name="tm2l4"></a><span class="f_heading2-1">AI Symbol Substitution</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">When it first starts up, SYNOPSYS looks for and executes the MACro SYSTART.MAC, which performs some initializations and then calls another MACro, ICONS.MAC, where these definitions are defined. &nbsp;You can also define symbols in real time. &nbsp;Type into the command window</span></p>
+<p>&nbsp;</p>
+<p class="p_heading3-1"><span class="f_heading3-1">I03: PRT</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Be sure to leave a space after the colon. &nbsp;Now if you click that SideBar button again, you will get a PRT listing instead of SPEC. &nbsp;You could also type “I03” into the Command Window and you would get the same thing. &nbsp;You can define any set of up to three characters in this way, giving any valid SYNOPSYS command, an AI sentence, </span><span style="font-size: 11pt; font-style: italic;">or even another symbol</span><span style="font-size: 11pt;">. &nbsp;Type the following:</span></p>
+<p>&nbsp;</p>
+<p class="p_heading3-1"><span class="f_heading3-1">PPP: SPEC/CAP</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Now type </span><span style="font-size: 11pt; font-weight: bold;">PPP</span><span style="font-size: 11pt;">. &nbsp;You get a SPEC followed by a CAP listing. &nbsp;You have just defined a new command, which did not exist until you created it. &nbsp;There’s a lot more to AI, which you will see in later chapters.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">But there’s a catch: the command </span><span style="font-size: 11pt; font-weight: bold;">PPP</span><span style="font-size: 11pt;"> will disappear when you </span><span style="font-size: 11pt; font-weight: bold;">EXIT</span><span style="font-size: 11pt;"> from SYNOPSYS. &nbsp;To define a </span><span style="font-size: 11pt; font-style: italic;">permanent </span><span style="font-size: 11pt;">command, which will come back every time you start the program, you should put your definition in a file called CUSTOM.MAC. &nbsp;That file is also automatically executed whenever SYNOPSYS starts up, if it exists. &nbsp;The file ICONS.MAC comes installed with a default set of sidebar definitions, but that file is replaced at each update, so it is not wise to edit it yourself. &nbsp;To save your own definitions you should put them in CUSTOM.MAC. &nbsp;(If you create additional user directories, both of these files will be safe in all directories except USER.) &nbsp;To edit the file ICONS.MAC, just click on the button  </span><img src="tbicons.png" width="26" height="24" alt="tbicons" style="width:26px;height:24px;border:none"><span style="font-size: 11pt;">. &nbsp;Then click the run button </span><img src="runmacro.png" width="26" height="24" alt="runmacro" style="width:26px;height:24px;border:none"><span style="font-size: 11pt;"> to save and run it.</span></p>
+<p>&nbsp;</p>
+<p class="p_heading4" style="border-top: none; border-right: none; border-left: none;"><span class="f_heading4">&nbsp;</span></p>
+<p><a name="tm2l5"></a><span class="f_heading4">Graphics</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Now you will make a drawing of the triplet and explore some graphics features. &nbsp;You can just click on the button </span><img src="dwg.png" width="26" height="24" alt="dwg" style="width:26px;height:24px;border:none"><span style="font-size: 11pt;"> to make the drawing, but you will learn more by using a command. &nbsp;The command you will use to get a Y-Z profile drawing of the lens is </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="umch7.htm#dwg" class="topiclink">DWG</a></span><span style="font-size: 11pt; font-weight: bold;">, </span><span style="font-size: 11pt;">along with some optional arguments. &nbsp;In the SYNOPSYS manuals I write the format for such a command like this:</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p><span style="font-size: 11pt; font-weight: bold;">DWG [ </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">TSCF</span><span style="font-size: 11pt; font-weight: bold;"> [ </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">JSSS</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">JSPS</span><span style="font-size: 11pt; font-weight: bold;"> [ HBAR </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span><span style="font-size: 11pt; font-weight: bold;"> ] ] ]</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p><span style="font-size: 11pt;">where you will remember that the square brackets [ ] mean that the entry is optional and the underline means that you type a number there instead of the letters of the mnemonic. &nbsp;For example, the argument [ </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">TSCF</span><span style="font-size: 11pt;"> ] means “Times Scale Factor&quot;, or 2 for a 2X times scale, etc., and since it is optional the program will make up a suitable scale if you leave that argument out. &nbsp;You can also give the starting and stopping surfaces to appear on the picture ( </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">JSSS</span><span style="font-size: 11pt;">, </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">JSPS</span><span style="font-size: 11pt;"> ), and up to three field angles at which rays are traced on the drawing, using the mnemonic </span><span style="font-size: 11pt; font-weight: bold;">HBAR</span><span style="font-size: 11pt;"> and three arguments. &nbsp;The dialog </span><span style="font-size: 11pt; font-weight: bold;">MPL</span><span style="font-size: 11pt;"> gives you boxes to fill in to do the same thing, but it’s good to know the command form because then you can put it into a MACro if you want. &nbsp;(We should mention here that SYNOPSYS does </span><span style="font-size: 11pt; font-style: italic;">not</span><span style="font-size: 11pt;"> maintain a list of predefined field points. &nbsp;You define the full-field object with the lens input, and thereafter you can trace or analyze at any field you want by specifying a fraction of that value with the </span><span style="font-size: 11pt; text-decoration: underline;">HBAR</span><span style="font-size: 11pt;"> entry.)</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">The defaults of the </span><span class="f_BodyText-1" style="font-weight: bold;">DWG</span><span class="f_BodyText-1"> program will draw the whole lens, and will include the image surface automatically, provided that the back focus distance does not exceed the overall length of the lens measured from the first to last vertex. &nbsp;Default rays are traced from the edge of the field. &nbsp;Since the back focus of this lens exceeds the total thickness, we will specifically include the image surface in this case to be sure it shows up on the plot. &nbsp;(There is a mode switch to </span><span class="f_BodyText-1" style="font-style: italic;">always</span><span class="f_BodyText-1"> draw the image surface, even if it is at a great distance; this is switch 63. &nbsp;We’ll cover the topic of mode switches in a later section.) &nbsp;Here is the command to make a drawing at the default scale:</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">&nbsp;</span></p>
+<p class="p_BodyText-1" style="text-indent: 48px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">DWG 0 1 99</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">&nbsp;</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">Here we enter a value of 0 for the scale factor, because the surface numbers (1 99) must come in words 3 and 4 of the DWG command, and something must be in word 2. &nbsp;Since there are not more than 99 surfaces, this input will draw the whole lens, and since a scale factor of zero is clearly not meaningful the program substitutes a default, 3.448 times scale in this case.</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">&nbsp;</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">For this triplet you typed a CAO value at each surface, which is not a requirement in general. &nbsp;The program will calculate a useful default clear aperture at each surface by examining the paths of a few rays, and those will show up on the CAP listing with the message “Soft CAO” instead of &quot;*User CAO&quot;. &nbsp;The two cases are treated differently: soft (default) CAO's are ignored when the program looks for </span><span class="f_BodyText-1" style="text-decoration: underline;"><a href="um26.htm#vignetting" class="topiclink">vignetting</a></span><span class="f_BodyText-1">. &nbsp;This lens would still vignette without CAO's, however, due to edge feathering. &nbsp;The system option </span><span class="f_BodyText-1" style="font-weight: bold;">NOVIG</span><span class="f_BodyText-1"> turns off </span><span class="f_BodyText-1" style="font-style: italic;">all</span><span class="f_BodyText-1"> vignetting checking, so if a ray traces it is considered valid. &nbsp;There are many system options, which I will introduce as necessary to show how they are used.</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">&nbsp;</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">As you work with SYNOPSYS, if you hear a beep, check to see if the error light </span><img src="errorbutton.png" width="36" height="35" alt="errorbutton" style="width:36px;height:35px;border:none"><span class="f_BodyText-1"> is lit up. &nbsp;If it is, just click that button to read about the error or warning condition. &nbsp;You can turn off any particular error message by clicking “Do not show this message …” in the error box when it shows up, and you can turn off the beeper entirely with the button </span><img src="nobeep.png" width="32" height="33" alt="nobeep" style="width:32px;height:33px;border:none"><span class="f_BodyText-1">. &nbsp;But if you do, be sure to check the error button frequently, to see if it has been turned red.</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">Type </span><span style="font-size: 11pt; font-weight: bold;">MPL</span><span style="font-size: 11pt;"> and click on the first DWG button. &nbsp;Or just type </span><span style="font-size: 11pt; font-weight: bold;">DWG</span><span style="font-size: 11pt;"> into the Command Window. &nbsp;The results are the same -- a Graphics Window pops up with your picture in it.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The program DWG, which you just used to make a lens drawing, shows the Y-Z profile of each element, and is suitable for lenses with bilateral symmetry. &nbsp;If you want to look at a system with tilts or decenters, there are more general drawing programs that can give wire-frame perspective drawings or solid models (</span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um72.htm#per" class="topiclink">PER</a></span><span style="font-size: 11pt;">, </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um72.htm#solid" class="topiclink">SOLID</a></span><span style="font-size: 11pt;">, </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um72.htm#rsolid" class="topiclink">RSOLID</a></span><span style="font-size: 11pt;">, and </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um72.htm#rper" class="topiclink">RPER</a></span><span style="font-size: 11pt;">, explained in </span><span style="font-size: 11pt; text-decoration: underline;"><a href="tmch7.htm" class="topiclink">Chapter 7</a></span><span style="font-size: 11pt;"> of the Tutorial Manual). </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">You can save your picture permanently by clicking on the save button at the top of the Graphics Window; you will use this form later when you add your own annotation to the picture.</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-1" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p2-1">&nbsp;</span></p>
+<p><a name="tm2l6"></a><span class="f_p2-1" style="font-size: 14pt;">The Lens Library</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">SYNOPSYS has a lens library with room for ten lenses. &nbsp;You can also save and retrieve any number of lenses in the form of MACros of the input, or with the commands </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um372.htm#save" class="topiclink">SAVE</a></span><span style="font-size: 11pt;"> and </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um372.htm#fetch" class="topiclink">FETCH</a></span><span style="font-size: 11pt;">, with the menu </span><span style="font-size: 11pt; font-weight: bold;">FILE | SAVE …</span><span style="font-size: 11pt;">. or the top toolbar button </span><img src="filesave.png" width="28" height="24" alt="FileSave" style="width:28px;height:24px;border:none"><span style="font-size: 11pt;">, but the library is the most convenient place to put a working copy. &nbsp;It also has the virtue that many features of SYNOPSYS can automatically read from and write to the library. The library commands are:</span></p>
+<p>&nbsp;</p>
+<p class="p_t6" style="margin: 0px 0px 0px 24px;"><span class="f_t6" style="font-size: 11pt; font-weight: bold;">PLB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_t6" style="font-size: 11pt;">Print LiBrary contents</span></p>
+<p class="p_p4-1" style="margin: 0px 0px 0px 24px;"><span class="f_p4-1" style="font-size: 11pt; font-weight: bold;">STORE [ </span><span class="f_p4-1" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span><span class="f_p4-1" style="font-size: 11pt; font-weight: bold;"> ]</span></p>
+<p class="p_p4-1" style="margin: 0px 0px 0px 24px;"><span class="f_p4-1" style="font-size: 11pt; font-weight: bold;">GET </span><span class="f_p4-1" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span></p>
+<p class="p_p4-1" style="margin: 0px 0px 0px 24px;"><span class="f_p4-1" style="font-size: 11pt; font-weight: bold;">DLL [ NB ] &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p4-1" style="font-size: 11pt;"> Delete Library Listing (delete a lens from the library).</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">To store the triplet, first do a </span><span style="font-size: 11pt; font-weight: bold;">PLB</span><span style="font-size: 11pt;"> to check what is in the library at the moment. &nbsp;If nothing valuable is in the first location, you can enter </span><span style="font-size: 11pt; font-weight: bold;">STORE 1</span><span style="font-size: 11pt;">. Then do a </span><span style="font-size: 11pt; font-weight: bold;">PLB</span><span style="font-size: 11pt;"> and verify that your triplet is there. &nbsp;Try the </span><span style="font-size: 11pt; font-weight: bold;">MLB</span><span style="font-size: 11pt;"> dialog, where you can store and get a lens with a mouse click. &nbsp;Then type the command</span></p>
+<p>&nbsp;</p>
+<p class="p_p4-1" style="margin: 0px 0px 0px 39px;"><span class="f_p4-1" style="font-size: 11pt; font-weight: bold;">EXIT</span></p>
+<p>&nbsp;</p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">or click on the button </span><img src="close.png" width="66" height="35" alt="close" style="width:66px;height:35px;border:none"><span class="f_BodyText-1"> to exit from SYNOPSYS.</span></p>
+<p class="p_mine-2"><span class="f_mine-2">&nbsp;</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1" style="text-decoration: underline;"><a href="tmch3.htm" class="topiclink">To Chapter 3</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

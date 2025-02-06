@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>8.6.3.7</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><a name="8.6.3.7"></a><span class="f_Heading1">8.6.3.7 Pupil: effect on MTF calculation</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;background:url(background-topic-header.jpg)" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   &raquo;No topics above this level&laquo;
+   </p>
+   <h1 class="p_Heading1"><a name="8.6.3.7"></a><span class="f_Heading1">8.6.3.7 Pupil: effect on MTF calculation</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <img src="hm_btn_navigate_prev_d.png" border="0"
+        ><a href="main_index.htm"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img name=main src="hm_btn_navigate_top.png" border=0 alt="Return to chapter overview"
+        ></a><img src="hm_btn_navigate_next_d.png" border="0">
+    </td>
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p>The convolution diffraction MTF is widely used as a measure of lens quality, and under the right conditions it is entirely appropriate. &nbsp;But most users are not aware that under other conditions its accuracy may be reduced. &nbsp;We pointed out that the calculation is a function of the OPD values at pairs of sheared points in the pupil, and that the default scalar calculation ignores the polarization and incidence angle of rays at the image and only considers the phase of each ray relative to that of the chief ray. &nbsp;The effect of those details is usually small unless the F/number is extremely low.</p>
+<p>&nbsp;</p>
+<p>But there is another condition that affects the MTF, and this one is not so small. &nbsp;The convolution MTF model ignores the effect of <span style="font-style: italic;">pupil aberrations</span>.</p>
+<p>&nbsp;</p>
+<p>To understand this effect, consider the image of a sine wave formed by a lens under coherent illumination. &nbsp;If the object is a sine wave in amplitude space, then the energy distribution at the exit pupil consists of exactly three coherent radiating points, the separation between them giving the spatial frequency of the sine-wave image. &nbsp;It is an example of the classic two-slit experiment (generalized to three) that yields a set of interference fringes. &nbsp;Those fringes constitute the image of the target, and the contrast of that image is just the MTF. &nbsp;Now generalize to the incoherent case, where the pupil is uniformly filled with illumination, &nbsp;Every point in the entrance pupil now turns into a different set of three points at the exit location, and the superposition of the patterns from all such radiating triplets is the image in that case. &nbsp;Note the assumption that the spatial frequency of each pattern is the same as that of all the others.</p>
+<p>&nbsp;</p>
+<p>So far, this is simple enough. &nbsp;But what happens if the exit pattern is not a faithful geometric mapping of the entrance pupil? &nbsp;Consider the footprint plot below, which shows the ray pattern emerging from an afocal lens with substantial pupil distortion at that location.</p>
+<p>&nbsp;</p>
+<p><img src="clip0460.png" width="413" height="404" alt="clip0460" style="width:413px;height:404px;border:none"></p>
+<p>&nbsp;</p>
+<p>With this kind of mapping, it is obvious that each set of three points in the entrance pupil gives rise to a set of three at the exit surface whose spacing depends on where one starts. &nbsp;At the edge they will be closer together than at the center. &nbsp;So the spatial frequency of the sine-wave image from each set is different from that of all the others, since.that depends on the separation. &nbsp;In this situation, the superposition of all those sine-wave patterns of different frequencies is a pattern with <span style="font-style: italic;">lower contrast </span>than one would get if they all lined up on top of each other. &nbsp;This is what is ignored by the convolution MTF algorithm.  </p>
+<p>&nbsp;</p>
+<p>The picture above shows the pattern at the last lens surface, which is not close to the exit pupil of the lens in this case. &nbsp;If the last two surfaces (required for afocal lenses) are moved to the exit pupil, the ray pattern becomes almost uniform for this lens and the difference between the convolution and Fourier-transform MTF is then negligible.</p>
+<p>&nbsp;</p>
+<p>To illustrate this effect, we show the MTF of the above ray pattern, calculated by the convolution method: (MTF):</p>
+<p>&nbsp;</p>
+<p><img src="clip0461.png" width="549" height="405" alt="clip0461" style="width:549px;height:405px;border:none"></p>
+<p>&nbsp;</p>
+<p>And here is the MTF calculated by the Fourier-transform method (DMTF):</p>
+<p>&nbsp;</p>
+<p><img src="clip0462.png" width="546" height="407" alt="clip0462" style="width:546px;height:407px;border:none"></p>
+<p>&nbsp;</p>
+<p>The two are very different. &nbsp;The program tests for this condition and prints a warning message if the ray pattern does not seem entirely correct. &nbsp;It finds the ray intercept with the LB1 surface of the marginal ray and a ray at half the entrance pupil, calculates the distance from these two intercepts from that of the chief ray, and if the latter is not half of the former within 2%, it displays a message. </p>
+<p>&nbsp;</p>
+<p>So be careful when analyzing the MTF of your lens, and if the two methods do not agree closely, the DMTF is likely to be more accurate. &nbsp;If the last surfaces of your AFOCAL lens are not at the exit pupil, you are advised to put them there and again compare the two results. &nbsp;Not many people know about this effect, as they should.</p>
+<p>&nbsp;</p>
+<p>In cases like this, if you have followed the rules and the output pattern is still not uniform, you can add a target to the MF to control the distortion of the output ray pattern. &nbsp;You cannot just control the third-order pupil aberration unless the test surface is actually at the paraxial exit pupil, since the quantity DIP is taken there, not the last surface.</p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um851.1</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="image analysis,image analysis single spot diagram,SPT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="spt"></a><span class="f_mine" style="font-weight: bold;">8.5.1.1 Spot Diagram (SPT) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um851_2.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um851.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">SPT { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / M / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YSCF</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will generate a single spot diagram describing the image on the final surface. &nbsp;The data are as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span></p>
+</td>
+<td style="vertical-align:top; width:454px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">color number; the optional “M” calls for a multicolor analysis, and the “P” for just the primary color.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span></p>
+</td>
+<td style="vertical-align:top; width:454px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">fractional Y-object coordinate</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRYS &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:454px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">number of rays in spot, up to 20,000</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span></p>
+</td>
+<td style="vertical-align:top; width:454px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">that image dimension which will be scaled to one inch on the plot. &nbsp;If omitted or zero, the program will use a reasonable default.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span></p>
+</td>
+<td style="vertical-align:top; width:454px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">fractional X-object coordinate</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YSCF</span></p>
+</td>
+<td style="vertical-align:top; width:454px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">optional scaling for Y-direction</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="8511origin"></a><span class="f_mine">The origin of the plot is the chief ray position in the primary color (even if that color is not requested). &nbsp;Spots may be drawn either as a single dot or with a symbol indicating the color, as determined by </span><span class="f_mine" style="text-decoration: underline;"><a href="um29.htm" class="topiclink">switch 27</a></span><span class="f_mine"> (see the dialog </span><span class="f_mine" style="font-weight: bold;">MSS</span><span class="f_mine"> or </span><span class="f_mine" style="text-decoration: underline;"><a href="appb.htm" class="topiclink">App. B</a></span><span class="f_mine">). &nbsp;The default is ON 27, which gives just a dot. &nbsp;The size of the symbols so requested may be controlled with the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um85.htm#sssize" class="topiclink">SSSIZE</a></span><span class="f_mine"> command.  </span><span class="f_mine" style="font-weight: bold;">SPT</span><span class="f_mine"> may also be run interactively from the dialog </span><span class="f_mine" style="font-weight: bold;">MGI</span><span class="f_mine">. &nbsp;The geometry of the ray grid is set by switch 90: if on, the grid is hexapolar, while if off it is a square grid.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Multicolor SPT traces the same number of rays in each color, unlike </span><span class="f_mine" style="text-decoration: underline;"><a href="um851_2.htm#tfs" class="topiclink">TFS</a></span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;"><a href="um88.htm#map" class="topiclink">MAP</a></span><span class="f_mine">, which vary the ray number according to the spectral weights. &nbsp;(The RMS and centroid calculations are more accurate if the ray counts are the same.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SPT plots will be shown in color if switch 35 is ON. &nbsp;The default displayed colors come from a built-in color table, and will not necessarily be the same color as the wavelengths analyzed. &nbsp;To display the spots in approximately the visual colors of each wavelength, turn on switch 85 as well as 35 before requesting the plot. &nbsp; In this mode, the program draws a black area before drawing the spots, since a good image could appear white, and would be invisible otherwise. &nbsp;Wavelengths in the UV are shown in violet, and in the IR are drawn in red – even though in fact those wavelengths are invisible to the eye.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A sample </span><span class="f_mine" style="font-weight: bold;">SPT</span><span class="f_mine"> plot is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um8f6.png" width="528" height="748" alt="um8f6" style="width:528px;height:748px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program draws, for reference, the size of the Airy diffraction disk, calculated for the major color and the actual F/number in X and Y at the requested image point. &nbsp;This may be defeated by turning on switch 80.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If switch 50 is ON, a listing will also be produced giving the coordinates of every ray in the spot diagram.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um851_2.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

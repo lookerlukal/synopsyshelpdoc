@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>power-series</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="aspherics--&gt;,aspherics--&gt; AT1, AT2, AT3, AT4, AT5,aspherics--&gt; DC1, DC2, DC3, DC4 aspherics,aspherics--&gt; Options for,AT1 ...,DC1 ..." />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">3.3.2.2.2 Power-series Aspherics &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p3-10" style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33221.htm" class="topiclink">Previous</a></span><span class="f_p3-10" style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span class="f_p3-10" style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33223.htm" class="topiclink">Next</a></span><span class="f_p3-10" style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span class="f_p3-10" style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SYNOPSYS has many features to help with the design and analysis of aspheric surfaces. &nbsp;The most basic option adds a power series to a base spherical radius plus optional conic constant. &nbsp;That option is described in this section.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Others that may be useful include the following:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um46.htm#asy" class="topiclink">ASY</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to print basic information about asymmetries in the lens, including aspheric shapes</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um516.htm#adef" class="topiclink">ADEF</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to analyze the shape of an aspheric surface</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um516.htm#adstat" class="topiclink">ADSTAT</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to list statistics of the shape</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um511.htm#sprofile" class="topiclink">SPROFILE</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine"> to show an aspheric shape with optional contours or fringes</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="gsag.htm" class="topiclink">GSAG</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine"> to calculate the influence of a single aspheric term</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um10_21.htm" class="topiclink">AGT</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to test whether adding aspheric terms improves the merit function</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um57.htm#sfit" class="topiclink">SFIT</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">calculates the aspheric terms required to match a set of measured sag values over a surface</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um549.htm#um549" class="topiclink">FFA</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">analysis of free-form surface</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um544.htm#slope" class="topiclink">SLOPE</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">analyze the slope of a surface at the current aperture</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um88.htm#88gsag" class="topiclink">MAP</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">can map the aspheric shape of a surface in global coordinates via GSAG</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="5_56_csag.htm" class="topiclink">CSAG</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">fits a set of measured sag values to a rotationally symmetric shape using USS type 21</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1015.htm#aaa" class="topiclink">AAA</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">automatic aspheric assignment; finds the best place in a lens to insert an asphere</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um14_2.htm" class="topiclink">ENM</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">to alter a surface according to a polynomial representing environment changes, such as temperature gradients, on a surface</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss" class="topiclink">USS</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">provides a menu of many unusual surface shapes &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="5_58_recast_zernike_surface.htm" class="topiclink">RZS</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">recast a surface into Zernike format</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="5_57_rns.htm" class="topiclink">RNS</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">recast a surface as a NURBS surface (USS 15).</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="5_57_rns.htm" class="topiclink">RXN</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">recast a surface as an XNURB surface (USS 24).</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="5_60_ras_recast_aspheric_to_g-.htm" class="topiclink">RAS</a></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine">recast a surface as a G-series aspheric</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The basic aspheric shape is described below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(These options go into an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file, and may be entered interactively with the dialog </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">SYNOPSYS will accept aspheric polynomial terms of the following form, the data are input with the DCn or ATn format:</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">Z =</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> &nbsp; G(1)R**2</span></p>
+</td>
+<td style="vertical-align:top; width:115px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(2)Y</span></p>
+</td>
+<td style="vertical-align:top; width:115px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(3)R**4</span></p>
+</td>
+<td style="vertical-align:top; width:116px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(4)R**2Y</span></p>
+</td>
+<td style="vertical-align:top; width:114px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(5)Y**2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(6)R**6</span></p>
+</td>
+<td style="vertical-align:top; width:115px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(7)R**4Y</span></p>
+</td>
+<td style="vertical-align:top; width:115px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(8)R**2Y**2</span></p>
+</td>
+<td style="vertical-align:top; width:116px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(9)Y**3</span></p>
+</td>
+<td style="vertical-align:top; width:114px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(10)R**8</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(11)X</span></p>
+</td>
+<td style="vertical-align:top; width:115px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(12)R**2X</span></p>
+</td>
+<td style="vertical-align:top; width:115px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(13)R**4X</span></p>
+</td>
+<td style="vertical-align:top; width:116px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(14)X**3</span></p>
+</td>
+<td style="vertical-align:top; width:114px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(15)XY</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(16)R**10</span></p>
+</td>
+<td style="vertical-align:top; width:115px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(17)</span></p>
+</td>
+<td style="vertical-align:top; width:115px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(18)R**12</span></p>
+</td>
+<td style="vertical-align:top; width:116px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(19)R**14</span></p>
+</td>
+<td style="vertical-align:top; width:114px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(20)R**16</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(21)R**18</span></p>
+</td>
+<td style="vertical-align:top; width:115px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">+ G(22)R**20</span></p>
+</td>
+<td style="vertical-align:top; width:115px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:116px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:114px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">where R is the radial distance from the axis.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">This polynomial permits expressing non-rotationally-symmetric surfaces as well as the more common aspherics using even powers of the radius. &nbsp;The same input fomat is also used for unusual surface shapes (<a href="um3327.htm#uss" class="topiclink">USS</a>). &nbsp;Data are input as follows:</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:304px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> DC1 </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G1</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G3</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G6</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G10</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G16</span></p>
+</td>
+<td style="vertical-align:top; width:251px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">(even powers of radius)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:304px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> DC2 </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G2</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G4</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G5</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G7</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G8</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G9</span></p>
+</td>
+<td style="vertical-align:top; width:251px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">(higher order terms)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:304px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> DC3 </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G11</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G12</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G13</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G14</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G15</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span></p>
+</td>
+<td style="vertical-align:top; width:251px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">(terms without bilateral symmetry)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:304px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> DC4 </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G18</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G19</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G20</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G21</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G22</span></p>
+</td>
+<td style="vertical-align:top; width:251px; padding:4px; border:solid 1px #000000;"><p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">(highest terms)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">(To remove surface deformations, enter </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> NDEF</span><span class="f_p3-10" style="font-size: 11pt;"> or </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> NULL</span><span class="f_p3-10" style="font-size: 11pt;">.) &nbsp;Term G 17 is used only by the tolerancing program BTOL to model certain thickness tolerances.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">The deformations so entered may be applied to flat, spherical, conics, or aspheric toroids, but not to biconics, torics, splines, biradial conics, or Zemikes.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">Note: aspheric coefficients must be entered on a separate line from other input. &nbsp;This means you cannot input, say DC1 data, on the same line as the RD or CC.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">Thus, to add a G(3) term to surface 1 of a lens, one could enter</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 24px;"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">CHG</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 24px;"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">1 DC1 0 .002</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 24px;"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">Another form of input is permitted, which has the G terms in numeric order.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span style="width:48px">&nbsp;</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> AT1 </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G1</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G2</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G3</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G4</span></p>
+<p class="p_p3-10"><span style="width:48px">&nbsp;</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> AT2 </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G5</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G6</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G7</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G8</span></p>
+<p class="p_p3-10"><span style="width:48px">&nbsp;</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> AT3 </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G9</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G10</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G11</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G12</span></p>
+<p class="p_p3-10"><span style="width:48px">&nbsp;</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> AT4 </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G13</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G14</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G15</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G16</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G17</span></p>
+<p class="p_p3-10"><span style="width:48px">&nbsp;</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> AT5 </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G18</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G19</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G20</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G21</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">G22</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">If </span><span class="f_p3-10" style="font-size: 11pt; text-decoration: underline;"><a href="um29.htm" class="topiclink">switch 68</a></span><span class="f_p3-10" style="font-size: 11pt;"> is turned on, </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um43.htm#leo" class="topiclink">LEO</a></span><span class="f_p3-10" style="font-size: 11pt;">, </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um362.htm#le" class="topiclink">LE</a></span><span class="f_p3-10" style="font-size: 11pt;"> and </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um372.htm#save" class="topiclink">SAVE</a></span><span class="f_p3-10" style="font-size: 11pt;"> will output the deformation terms in this format as well.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">Some aspheric surfaces use the </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">XDD</span><span class="f_p3-10" style="font-size: 11pt;"> and </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">XLD</span><span class="f_p3-10" style="font-size: 11pt;"> mnemonics, as described in the appropriate section of the </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss" class="topiclink">USS</a></span><span class="f_p3-10" style="font-size: 11pt;"> family of shapes.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">Surfaces controlled by a curvature solve, such as UMC, are allowed to have aspheric coefficients as well as a conic constant, but they cannot be assigned any of the other shapes, such as toric, biconic, etc. </span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><a name="on97"></a><span class="f_p3-10" style="font-size: 11pt;">We note here that there are two algorithms in the program to find the intersection point of a ray with an aspheric surface. &nbsp;The default method is very fast, using a coarse sample to find a crossing point and then a quadratic search to zero in. &nbsp;This is recommended for the usual situation where the shape is determined largely by the radius of curvature and conic constant, and the aspheric terms depart from that shape by a relatively small amount.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">But if the shape itself is largely determined by the aspheric coefficients, another method is sometimes called for. &nbsp;This can happen with strongly aspheric cell-phone camera lenses -- especially if the shape flies back and forth, creating a situation where a given ray might have two or more intersections with the surface. &nbsp;If this happens, the fast routine can sometimes zero in on an intersection you do not want. &nbsp;In that case, you are advised to turn on </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">switch 97</span><span class="f_p3-10" style="font-size: 11pt;">, which activates a slower binary search algorithm that proceeds more cautiously and usually avoids the unwanted intersection.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">Aspheric terms may be varied for optimization as explained in </span><span class="f_p3-10" style="font-size: 11pt; text-decoration: underline;"><a href="um102.htm#vg" class="topiclink">Section 10.2</a></span><span class="f_p3-10" style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">A useful feature to help you determine whether your lens will benefit from aspheric terms is the </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um10_21.htm" class="topiclink">AGT</a></span><span class="f_p3-10" style="font-size: 11pt;"> command.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">To illustrate the use of this shape, we load the MACro GNR.MAC. &nbsp;This starts with a poorly corrected triplet and runs the optimization program.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;GNR.MAC</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;THIS SHOWS A SIMPLE OPTIMIZATION RUN</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GET 6 &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;THE STARTING LENS, POORLY CORRECTED</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PANT P &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;DEFINE THE VARIABLE PARAMETERS</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VLIST RAD 1 2 3 4 6&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY 1 TH 20 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY 2 TH</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY 3 TH 20 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY 5 TH</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VLIST GLM 1 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">AANT P &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;DEFINE THE ABERRATIONS TO BE CORRECTED</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">AEC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;AUTOMATIC EDGE CORRECTION</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">ACC &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;AUTOMATIC CENTER THICKNESS CONTROL</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 3 2 0</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 3 2 .5</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 3 2 .7</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 3 2 1.</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 2 1 0</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 2 3 0</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 2 1 1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 2 3 1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">SNAP&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;REQUEST SNAPSHOTS AS OPTIMIZATION RUNS</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">SYNO 25 ;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;REQUEST OPTIMIZATION FOR 25 PASSES</span></p>
+<p>&nbsp;</p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">The lens that it produces has a merit function value of 0.01177.</span></p>
+<p class="p_p3-10"><img src="clip0332.png" width="780" height="478" alt="clip0332" style="width:780px;height:478px;border:none"></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">Now we add a new variable to the PANT file and run the MACro once again:</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PANT P &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;DEFINE THE VARIABLE PARAMETERS</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VLIST RAD 1 2 3 4 6&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY 1 TH 20 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY 2 TH</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY 3 TH 20 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY 5 TH</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VLIST GLM 1 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #ff0000; background-color: #ffffff;">VY 1 G 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">This will vary term G 3 on surface 1, the R**4 term, and since that surface is not yet declared an aspheric surface, it by default will use the polynomial given above. &nbsp;After running this version, the lens is much better, with a merit function of 0.00466.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><img src="clip0333.png" width="764" height="471" alt="clip0333" style="width:764px;height:471px;border:none"></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10">If the surface had</span><span class="f_p3-10" style="font-style: italic;"> already</span><span class="f_p3-10"> been defined as a different kind of aspheric, the G-variable would have applied to the formula appropriate for </span><span class="f_p3-10" style="font-style: italic;">that</span><span class="f_p3-10"> shape, not the polynomial above.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33223.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33221.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

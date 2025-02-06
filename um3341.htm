@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um3341</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="GRIN, input data for,index,index gradient-index,Sands,Sharma" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="grin"></a><span class="f_mine" style="font-weight: bold;">3.3.4.1 Gradient-Index (GRIN) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um334.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um34.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(These options go into an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file, and may be entered interactively with the dialog </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_t3-3"><span class="f_t3-3" style="font-size: 11pt;">Several kinds of gradient-index materials may be specified to SYNOPSYS with input of the form</span></p>
+<p class="p_t3-3"><span class="f_t3-3">&nbsp;</span></p>
+<p class="p_t3-3"><span style="width:48px">&nbsp;</span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold;"> GRIN </span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">name</span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">DT</span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">N1</span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">N2</span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">N3</span></p>
+<p class="p_t3-3"><span class="f_t3-3" style="font-size: 11pt;">or &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold;"> GRIN </span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">name</span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">DT</span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_t3-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">N2</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_p2-11"><span class="f_p2-11">followed by coefficients entered with</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 56px;"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">GC1 </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">C1</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">C2</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">C3</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">C4</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 56px;"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">GC2 </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">C5</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">C6</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">C7</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">C8</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p2-11"><span class="f_p2-11">where </span><span class="f_p2-11" style="text-decoration: underline;">name</span><span class="f_p2-11"> is one of the following:</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p4-10" style="text-indent: 0px; border-color: #000000; border-style: solid; border-width: 0px; padding: 5px 5px 5px 5px; margin: -4px 19px -4px 19px;"><span class="f_p4-10" style="font-size: 11pt;">RADIAL, AXIAL, URN, SPHERICAL, SELFOC, LUNEBERG, MAXWELL, USR, EYE, LOCAL.</span></p>
+<p class="p_p4-10" style="text-indent: 0px; border-color: #000000; border-style: solid; border-width: 0px; padding: 5px 5px 5px 5px; margin: -4px 19px -4px 19px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_p4-10" style="text-indent: 0px; border-color: #000000; border-style: solid; border-width: 0px; padding: 5px 5px 5px 5px; margin: -4px 19px -4px -5px;"><span class="f_p4-10" style="font-size: 11pt;">A special version of a GRIN is used by </span><span class="f_p4-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um14_2.htm" class="topiclink">ENM</a></span><span class="f_p4-10" style="font-size: 11pt;">, which can model the change in index or surface sag as a result of environmental changes, such as temperature gradients, with a special input format, described in Section 3.3.4.2..</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p2-11"><span class="f_p2-11">GRIN materials can only be used in systems with exactly three wavelengths in which the primary color is color 2. &nbsp;The entries </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">N1</span><span class="f_p2-11">, </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">N2</span><span class="f_p2-11"> and </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">N3</span><span class="f_p2-11"> are the base indices. &nbsp;If only N2 is entered, all three indices will have the same value. &nbsp;Coefficients may be entered for three wavelengths, with the color number (1 to 3) given by </span><span class="f_p2-11" style="text-decoration: underline;">ICOL</span><span class="f_p2-11" style="font-family: 'Times New Roman';">.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p2-11"><span class="f_p2-11">The quantity </span><span class="f_p2-11" style="font-weight: bold; text-decoration: underline;">DT</span><span class="f_p2-11"> is the integration increment. &nbsp;A large value will permit faster raytracing, but a small value gives more accurate results; a good compromise for some systems is 0.05. &nbsp;The program uses the fast raytrace algorithm of Sharma (Sharma, Kumar, and Ghatak, Appl Opt.</span><span class="f_p2-11" style="font-weight: bold;"> 21</span><span class="f_p2-11">, 984 (1982).) &nbsp;The path of a ray within a GRIN is curved, and will appear as such on lens drawings. &nbsp;Because raytracing involves numerical integration of a second-order differential equation, it takes many times longer to trace a GRIN than a normal material. &nbsp;OPD's are computed, also using the techniques of Sharma (A. Sharma, Appl. Opt. </span><span class="f_p2-11" style="font-weight: bold;">24</span><span class="f_p2-11">, 4367 (1985)). &nbsp;The paraxial programs and third-order program automatically take into account the effect of a GRIN, using the method of Sands (P.J. Sands, JOSA </span><span class="f_p2-11" style="font-weight: bold;">60</span><span class="f_p2-11">,1436 (1970)), with the exception of third-order chromatic aberration, which is not at present treated.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p2-11"><span class="f_p2-11">Coefficients are entered with GC1 and GC2 input. &nbsp;These data apply to the several types of GRIN as follows:</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">RADIAL:</span></p>
+</td>
+<td style="vertical-align:top; width:268px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">N = N</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: sub;">o </span><span class="f_p2-11" style="font-size: 10pt;">+ C1P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2  </span><span class="f_p2-11" style="font-size: 10pt;">+ C2P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">4</span><span class="f_p2-11" style="font-size: 10pt;"> + C3P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">6</span><span class="f_p2-11" style="font-size: 10pt;"> + C4P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">8</span></p>
+</td>
+<td style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">(P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2</span><span class="f_p2-11" style="font-size: 10pt;">=X**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2</span><span class="f_p2-11" style="font-size: 10pt;">+Y**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2</span><span class="f_p2-11" style="font-size: 10pt;">)</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">AXIAL:</span></p>
+</td>
+<td style="vertical-align:top; width:268px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">N = N</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: sub;">o </span><span class="f_p2-11" style="font-size: 10pt;">+ C1Z + C2Z**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2 </span><span class="f_p2-11" style="font-size: 10pt;">+ C3Z**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">3 </span><span class="f_p2-11" style="font-size: 10pt;">+ C4Z**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">4</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">URN:</span></p>
+</td>
+<td style="vertical-align:top; width:268px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">N = N</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: sub;">o </span><span class="f_p2-11" style="font-size: 10pt;">+C1Z + C2Z**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2 </span><span class="f_p2-11" style="font-size: 10pt;">+ C3Z**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">3 </span><span class="f_p2-11" style="font-size: 10pt;">+ C4Z**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">4 </span><span class="f_p2-11" style="font-size: 10pt;">+ C5P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2 </span><span class="f_p2-11" style="font-size: 10pt;">+ C6P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">4</span><span class="f_p2-11" style="font-size: 10pt;">+C7P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">6</span><span class="f_p2-11" style="font-size: 10pt;">+C8P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">8</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">SPHERICAL:</span></p>
+</td>
+<td style="vertical-align:top; width:268px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">N = N</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: sub;">o </span><span class="f_p2-11" style="font-size: 10pt;">+ C1P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2 </span><span class="f_p2-11" style="font-size: 10pt;">+ C2P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">4</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">(P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2</span><span class="f_p2-11" style="font-size: 10pt;"> = X**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2 </span><span class="f_p2-11" style="font-size: 10pt;">+ Y**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2 </span><span class="f_p2-11" style="font-size: 10pt;">+ (Z - C3) **</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2</span><span class="f_p2-11" style="font-size: 10pt;">)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">SELFOC:</span></p>
+</td>
+<td style="vertical-align:top; width:268px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">N = N</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: sub;">o </span><span class="f_p2-11" style="font-size: 10pt;">(1- C1P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2</span><span class="f_p2-11" style="font-size: 10pt;">/2)</span></p>
+</td>
+<td style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">(P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2 </span><span class="f_p2-11" style="font-size: 10pt;">= X**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2 </span><span class="f_p2-11" style="font-size: 10pt;">+Y**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2</span><span class="f_p2-11" style="font-size: 10pt;">)</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">LUNEBERG:</span></p>
+<p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">MAXWELL</span></p>
+</td>
+<td style="vertical-align:top; width:268px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">N**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2 </span><span class="f_p2-11" style="font-size: 10pt;">= N</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: sub;">o</span><span class="f_p2-11" style="font-size: 10pt;">**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2 </span><span class="f_p2-11" style="font-size: 10pt;">(2 - P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2</span><span class="f_p2-11" style="font-size: 10pt;">/C2**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2</span><span class="f_p2-11" style="font-size: 10pt;">)</span></p>
+</td>
+<td style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">(P**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2 </span><span class="f_p2-11" style="font-size: 10pt;">= X**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2 </span><span class="f_p2-11" style="font-size: 10pt;">+ Y**</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2 </span><span class="f_p2-11" style="font-size: 10pt;">+ (Z - C1) **</span><span class="f_p2-11" style="font-size: 10pt; vertical-align: super;">2</span><span class="f_p2-11" style="font-size: 10pt;">)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">EYE</span></p>
+</td>
+<td style="vertical-align:top; width:268px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">see below</span></p>
+</td>
+<td style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">LOCAL</span></p>
+</td>
+<td style="vertical-align:top; width:268px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11" style="font-size: 10pt;">see below</span></p>
+</td>
+<td style="vertical-align:top; width:197px; padding:4px; border:solid 1px #000000;"><p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The axial gradient is always in the direction of propagation.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The aperture of the ray within a GRIN is compared at each increment with the clear aperture, if any, that has been entered on the GRIN surface. &nbsp;If this aperture is exceeded, and the lens is in VIG mode (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm" class="topiclink">3.2</a></span><span class="f_mine">), the ray is vignetted. &nbsp;The </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um528.htm#grs" class="topiclink">GRS</a></span><span class="f_mine"> command will show statistics of the index within a GRIN.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The lens of the </span><span class="f_mine" style="font-weight: bold;">human eye</span><span class="f_mine"> can be modeled as a special type of GRIN. &nbsp;This type does not allow user-entered coefficients, since eyes are all more or less the same. &nbsp;The formula and coefficients were provided by Dr. Jose' Antonio Diaz Navas in the form below:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0165_zoom63.png" width="583" height="91" alt="clip0165" style="width:583px;height:91px;border:none"></p>
+<p class="p_mine"><span class="f_mine">A complete model of the eye must also include the cornea and other structures; these can be modeled with data from the U catalog; an example is given below. &nbsp;The GRIN portion is defined by</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> GRIN EYE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DT</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AGE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The base index and other data are coded into the definition and cannot be entered by the user.  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AGE</span><span class="f_mine"> in this case gives the age in years of the subject eye.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is useful to model the effect of a local index inhomogeneity in a lens element. &nbsp;This uses a special form of GRIN input, as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">SN GRIN LOCAL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DT</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">N1</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">N2</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">N3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">GC1 </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">X0</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Y0</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Z0</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DN</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">GC2 </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">R</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_p9-4" style="margin: 0px 0px 0px 0px;"><span class="f_p9-4">&nbsp;</span></p>
+<p><a name="grinex"></a><span class="f_p9-4" style="font-size: 10pt; font-style: italic; font-weight: bold;">Examples of GRIN input</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">Here is the input describing a Selfoc rod with an external focal plane, and requesting a </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#per" class="topiclink">perspective</a></span><span class="f_mine"> drawing. &nbsp;The base index of the rod is 1.5, and the gradient is given by the coefficient Cl, which in this example has a value of .1225. &nbsp;Data are entered for wavelength 2 only.</span></p>
+<p>&nbsp;</p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">RLE</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">ID EXAMPLE GRIN</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">WAVL .6328 .6328 .6328</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">UNITS MM</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">OBG .1 2</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">1 CAO .5</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">1 TH 11.64</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">1 GRIN SELFOC .1 1.5</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">GC1 1 0</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">GC1 2 .1225</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">2 YMT 0</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">2 CAO .5</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">3</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">PER 10 30 15</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">PLOT</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">PUP 2 1 6</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">TRA 2 0 0 6</span></p>
+<p class="p_p10-2" style="margin: 0px 0px 0px 56px;"><span class="f_p10-2" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p>&nbsp;</p>
+<p class="p_p8-5"><span class="f_p8-5">The resulting picture is shown below.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><img src="clip0166.png" width="861" height="184" alt="clip0166" style="width:861px;height:184px;border:none"></p>
+<p class="p_p8-5"><a name="grin_eye"></a><span style="font-weight: bold;">GRIN model of the human eye:</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5">Here is the RLE file for a simple model of the eye of a person 20 years old. &nbsp;All surfaces are aspheric; the index values of the cornea, aqueous and vitreous humors are taken from the U catalog. &nbsp;The lens is modeled as a GRIN, and the retina is modeled with a biradial conic. &nbsp;This model is axially symmetric; a more accurate model would also incorporate tilts and decenters in several places.</p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"> RLE</p>
+<p class="p_p8-5">ID EYE MODEL</p>
+<p class="p_p8-5"> WAVL .6562700 .5550000 .4861300</p>
+<p class="p_p8-5"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</p>
+<p class="p_p8-5"> UNITS MM  </p>
+<p class="p_p8-5"> OBB &nbsp;0.000000 &nbsp; 10.00000 &nbsp; &nbsp;2.50000 &nbsp; -0.54896 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;2.50000</p>
+<p class="p_p8-5"> &nbsp; 0 AIR</p>
+<p class="p_p8-5"> &nbsp; 1 CAO &nbsp; &nbsp; &nbsp;4.50000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</p>
+<p class="p_p8-5"> &nbsp; 1 RAD &nbsp; &nbsp; &nbsp;7.6900000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.57900000</p>
+<p class="p_p8-5"> &nbsp; 1 CC &nbsp; &nbsp; -0.18000000</p>
+<p class="p_p8-5"> &nbsp; 1 N1 1.37269615 N2 1.37597881 N3 1.37937937</p>
+<p class="p_p8-5"> &nbsp; 1 GTB U &nbsp; &nbsp;'EYECORNEA &nbsp; &nbsp; &nbsp; '</p>
+<p class="p_p8-5"> &nbsp; 2 CAO &nbsp; &nbsp; &nbsp;4.50000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</p>
+<p class="p_p8-5"> &nbsp; 2 RAD &nbsp; &nbsp; &nbsp;6.5300000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;3.09100000</p>
+<p class="p_p8-5"> &nbsp; 2 CC &nbsp; &nbsp; -0.12000000</p>
+<p class="p_p8-5"> &nbsp; 2 N1 1.33290591 N2 1.33609278 N3 1.33940386</p>
+<p class="p_p8-5"> &nbsp; 2 GTB U &nbsp; &nbsp;'EYEAQUEOUS &nbsp; &nbsp; &nbsp;'</p>
+<p class="p_p8-5"> &nbsp; 3 RAD &nbsp; &nbsp; 12.1137000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;3.40200000</p>
+<p class="p_p8-5"> &nbsp; 3 CC &nbsp; &nbsp; -4.56000000</p>
+<p class="p_p8-5"> &nbsp; 3 N1 1.36676921 N2 1.37100226 N3 1.37580590</p>
+<p class="p_p8-5"> &nbsp; 3 GRIN EYE &nbsp;1.00000000E-02 &nbsp;2.00000000E+01</p>
+<p class="p_p8-5"> &nbsp; 4 RAD &nbsp; &nbsp; -5.8700000000000 &nbsp; TH &nbsp; &nbsp; 16.36280649</p>
+<p class="p_p8-5"> &nbsp; 4 CC &nbsp; &nbsp; -1.13000000</p>
+<p class="p_p8-5"> &nbsp; 4 N1 1.33277693 N2 1.33599067 N3 1.33929613</p>
+<p class="p_p8-5"> &nbsp; 4 GTB U &nbsp; &nbsp;'EYEVITREOUS &nbsp; &nbsp; '</p>
+<p class="p_p8-5"> &nbsp; 4 TH &nbsp; &nbsp; &nbsp;16.36280649</p>
+<p class="p_p8-5"> &nbsp; 4 YMT &nbsp; &nbsp; &nbsp;0.00000000</p>
+<p class="p_p8-5"> &nbsp; 5 CAO &nbsp; &nbsp; &nbsp;8.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</p>
+<p class="p_p8-5"> &nbsp; 5 TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</p>
+<p class="p_p8-5"> &nbsp; 5 AIR</p>
+<p class="p_p8-5"> &nbsp; 5 BRD &nbsp; &nbsp;-10.17070000 &nbsp; &nbsp; 11.37711000 &nbsp; &nbsp; 11.45577000</p>
+<p class="p_p8-5"> END</p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><img src="clip0167.png" width="894" height="523" alt="clip0167" style="width:894px;height:523px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">GRIN model of an inhomogeneous lens</span></p>
+<p>&nbsp;</p>
+<p>The element at surface 13 of a microlithography lens has a small local index irregularity, and we wish to model the effect on the image.</p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CHG</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">13 GRIN LOCAL 1 1.476134 1.476137 1.47614</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GC1 2 6 11 8 1.0E-5</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GC2 2 5.9</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p>&nbsp;</p>
+<p>Here, the grin data are entered with</p>
+<p>&nbsp;</p>
+<p>GC1 <span style="text-decoration: underline;">ICOL</span> <span style="text-decoration: underline;">X0</span> <span style="text-decoration: underline;">Y0</span> <span style="text-decoration: underline;">Z0</span> <span style="text-decoration: underline;">DN</span></p>
+<p>GC2 <span style="text-decoration: underline;">ICOL</span> <span style="text-decoration: underline;">RADIUS</span></p>
+<p>&nbsp;</p>
+<p>In this input, we give the integration step (1 mm), and then the three nominal index values. &nbsp;The GC1 line gives the (X, Y, Z) location of the center of the irregularity, which is modeled as a spherical volume with cosine profile. &nbsp;The index change in this case is 1.0e-5 at the center of the volume, which is 5.9 mm in radius as specified on the GC2 line. &nbsp;This type of GRIN input can only be assigned to color 2 in a 3-color lens, or color 1 in a 1-color lens, but the effects are applied to all colors.</p>
+<p>&nbsp;</p>
+<p>Then we create a picture of the fringe pattern in the output beam for an object point at half field. &nbsp;The effect of this small index variation is clearly visible. &nbsp;The PSPRD plot is also affected.</p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">FRINGES &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUPIL P .5 0 5 0 3 0&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p><img src="clip0427.png" width="584" height="434" alt="clip0427" style="width:584px;height:434px;border:none"></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PSPRD P .5 600 0 0 3.5 R&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0428.png" width="701" height="520" alt="clip0428" style="width:701px;height:520px;border:none"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um34.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um334.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

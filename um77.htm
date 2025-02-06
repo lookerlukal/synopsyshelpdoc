@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um77</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ELD, element drawing" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="eld"></a><span class="f_mine" style="font-size: 14pt;">7.7 Lens Element Drawing (ELD)</span><span class="f_mine">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um78.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um76.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A lens element drawing may be obtained with the input file</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ &nbsp;USE BTOL ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">ELD [ - ]</span><span class="f_mine" style="text-decoration: underline;">jsss</span><span class="f_mine"> [ </span><span class="f_mine" style="text-decoration: underline;">tscf</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ MTH </span><span class="f_mine" style="text-decoration: underline;">th</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ DIA </span><span class="f_mine" style="text-decoration: underline;">dia</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ RAD </span><span class="f_mine" style="text-decoration: underline;">rad</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ BEVEL </span><span class="f_mine" style="text-decoration: underline;">bc</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ { 1/2 } { A </span><span class="f_mine" style="text-decoration: underline;">a</span><span class="f_mine"> / SAG </span><span class="f_mine" style="text-decoration: underline;">sag</span><span class="f_mine"> / BC </span><span class="f_mine" style="text-decoration: underline;">bc</span><span class="f_mine"> / ABC </span><span class="f_mine" style="text-decoration: underline;">ab</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">bc</span><span class="f_mine"> / AAB </span><span class="f_mine" style="text-decoration: underline;">a</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">ab</span><span class="f_mine"> / ANG </span><span class="f_mine" style="text-decoration: underline;">angle</span><span class="f_mine"> } ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ ID </span><span class="f_mine" style="text-decoration: underline;">up to 35 characters of title</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ ID </span><span class="f_mine" style="text-decoration: underline;">second line</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ ID </span><span class="f_mine" style="text-decoration: underline;">third line</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ COAT &quot;</span><span class="f_mine" style="text-decoration: underline;">string</span><span class="f_mine">&quot; ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ FINISH &quot;</span><span class="f_mine" style="text-decoration: underline;">string&quot;</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ DESIGNER &quot; </span><span class="f_mine" style="text-decoration: underline;">string</span><span class="f_mine">&quot; ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ CHECKER &quot; </span><span class="f_mine" style="text-decoration: underline;">string</span><span class="f_mine">&quot; ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ TWAV &quot;</span><span class="f_mine" style="text-decoration: underline;">string</span><span class="f_mine">&quot; ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">jsss</span><span class="f_mine"> is the lower of the two surface numbers defining the lens element to be drawn, and the scale factor </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">tscf</span><span class="f_mine"> is optional. &nbsp;The program will automatically scale the lens by powers of 2 or 1/2 until it fits the page if </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">tscf</span><span class="f_mine"> is not entered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ELD is also found in the dialog MPL.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program draws a single lens element, honoring any edge description data that may be in effect. &nbsp;This additional information can most easily be created with the </span><span class="f_mine" style="text-decoration: underline;"><a href="hidd_edgewizard.htm" class="topiclink">Edge Wizard</a></span><span class="f_mine">, but may also be created with an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um78.htm#efile" class="topiclink">EFILE</a></span><span class="f_mine"> command or entered explicitly into the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um310.htm" class="topiclink">RLE</a></span><span class="f_mine"> input. &nbsp;Data so defined become part of the lens description and are saved with the lens. &nbsp;If no edge definition is in effect for the requested element, the program will substitute a default edge that is related to the CAO, as described below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The font size of the three ID lines is adjusted according to the length of the line, with three sizes for lengths up to 20 characters, up to 27, and up to 35.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ELD creates a drawing with numerous boxes that can be filled in by the user, along with some that the program fills with data taken from the lens specifications. &nbsp;Boxes for lens tolerances are filled in if you specify the USE BTOL option, described below. &nbsp;Boxes for the coating, surface finish, designer name, checker name, and test wavelength are left empty unless you enter explicit character strings as listed above. &nbsp;In that case, those strings are added as user annotation. &nbsp;For example, to add the designer's name to the plot, you might enter DESIGNER &quot;JOHN SMITH&quot; with the ELD input. &nbsp;Note that the quotation marks are required, to identify the input as a character string, not a command argument. &nbsp;The above strings are limited to nine characters, except for the name or initials of the designer and checker, which will accept 12.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ELD may also be run from the dialog MPL. &nbsp;This dialog does not permit entry of optional edge dimensions, however, so it is best to define the edges with the wizard (MEW) first. &nbsp;(Actually, we </span><span class="f_mine" style="font-style: italic;">always</span><span class="f_mine"> recommend using the wizard to define your edges. &nbsp;That way you can see what you get, so you have immediate control.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Some elements cannot be drawn in an appropriate manner by ELD, and in such cases you can elect to get an ELD drawing with most of the data boxes filled with the usual information but without the element itself. &nbsp;To do so, simply</span><span class="f_mine" style="font-weight: bold;"> give a </span><span class="f_mine" style="font-style: italic; font-weight: bold;">negative</span><span class="f_mine" style="font-weight: bold;"> surface number on the ELD command</span><span class="f_mine">. &nbsp;The program will then leave the scale factor and surface sag boxes empty and will not draw the element. &nbsp;It will also not list aspheric terms, which would not include the non-symmetric terms, if any, and would be misleading. &nbsp;Then you can add a PER or other drawing of the element and annotate it yourself; an example is given below showing how to do this. &nbsp;If you want </span><span class="f_mine" style="font-style: italic;">all </span><span class="f_mine">of the data boxes empty, just turn on switch 34, which strips annotation from all graphics.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If a surface is </span><span class="f_mine" style="font-style: italic;">not rotationally symmetric</span><span class="f_mine">, the above paragraph applies. &nbsp;The default ELD drawing will not show the asymmetry.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the lens or mirror has been assigned a decentered CAO or RAO, ELD will draw the </span><span class="f_mine" style="font-style: italic;">parent</span><span class="f_mine"> part, from which the actual piece will be cored out or sliced off. &nbsp;Since one must usually make the parent first, this procedure gives you a drawing useful for that step. &nbsp;You can then make a second drawing, adding a perspective view as required, annotated with the annotation editor, to inform the shop of the extra steps required.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optional command </span><span class="f_mine" style="font-weight: bold;">USE BTOL</span><span class="f_mine">, entered before the ELD command, will open the data file created by BTOL. &nbsp;If that file contains tolerance values for the element to be drawn by ELD, those tolerances are added to the drawing automatically. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um713.htm" class="topiclink">Section 7.13</a></span><span class="f_mine"> for examples. &nbsp;(This option uses the data in the most recent file named BTOL_ELD.DAT. &nbsp;If you do not run BTOL on the current lens, those data will apply to the </span><span class="f_mine" style="font-style: italic;">last</span><span class="f_mine"> lens you toleranced, not the current one. &nbsp;You probably don’t want those numbers, so be sure to run BTOL with the current system first, or else FETCH the budget if you prepared it at an earlier time. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um121.htm" class="topiclink">Section 12.1</a></span><span class="f_mine"> for details. )</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The tolerance shown for surface sag on the drawing is taken from the BTOL budget for the adjacent airspace, if any. &nbsp;This sag error may or may not actually affect that airspace, however, depending on the mounting scheme you decide on later. &nbsp;So be sure to examine the ELD drawing to verify that the sag tolerances are appropriate. &nbsp;In the event that the adjacent airspace has no tolerance assigned, because it was either declared EXACT or will be used as an adjustment, the program assigns a default sag tolerance of 0.005 inches (0.127 mm) or 1/20 of the actual sag, whichever is smaller.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The options described below give a somewhat complicated way to define the edge geometry temporarily, within the ELD data file, and are probably </span><span class="f_mine" style="font-weight: bold;">not appropriate for most users</span><span class="f_mine">, who will prefer the other features mentioned above, particularly the Edge Wizard (MEW).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To define the edge geometry temporarily within the ELD input file itself, data are entered defining the relevant quantities shown below, where three points of interest at each surface are labeled A, B, and C. &nbsp;Data entered with the ELD file </span><span class="f_mine" style="font-style: italic;">do not </span><span class="f_mine">become part of the lens description. &nbsp;They are used only for that drawing, and then discarded. &nbsp;If no edge data are provided either with the lens file or in the ELD data, then default edges will be supplied by ELD, according to the rules below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f20.png" width="499" height="308" alt="um7f20" style="width:499px;height:308px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Point </span><span class="f_mine" style="font-weight: bold;">C</span><span class="f_mine"> is always at the same height for both surfaces, while </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">B </span><span class="f_mine">may be different. The default values for these quantities are as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CONVEX</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:311px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CONCAVE</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">C</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">larger CAO + .050 in.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">C</span></p>
+</td>
+<td style="vertical-align:top; width:311px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">larger CAO + .050 in.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">B</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">C - .005 in. (BC = .005)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">B</span></p>
+</td>
+<td style="vertical-align:top; width:311px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">C -. 005 in. (BC = .005)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">A</span></p>
+</td>
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">A = B</span></p>
+</td>
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">A</span></p>
+</td>
+<td style="vertical-align:top; width:311px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">actual CAO + .005in.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If no data are entered to override the default lens edge definition, the program will add .050 in. to the larger clear aperture (as given on the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um62.htm#cap" class="topiclink">CAP</a></span><span class="f_mine"> listing) to determine the lens diameter, and will give both sides a bevel of .005 in. &nbsp;Convex surfaces will extend up to the start of the bevel, while concave surfaces will have a flat section from just beyond the </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#cao" class="topiclink">CAO</a></span><span class="f_mine"> for that surface up to the bevel.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are several ways to specify other values for the edge parameters. &nbsp;In some cases specifying one will automatically redefine others as well. &nbsp;In general, unless an option giving the quantity </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AB</span><span class="f_mine"> explicitly is entered (</span><span class="f_mine" style="font-weight: bold;">ABC</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">AAB</span><span class="f_mine">), the values of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">A</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">B</span><span class="f_mine"> will always be the same for convex surfaces. &nbsp;For concave surfaces, these quantities are generally different.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The simplest option is to specify the diameter of the element with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DIA</span><span class="f_mine">, or the radius with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RAD</span><span class="f_mine"> (DIA = RAD *2). &nbsp;The values of </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">B</span><span class="f_mine"> will then follow the default rules: </span><span class="f_mine" style="font-weight: bold;">BC</span><span class="f_mine"> = .005 in., </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine"> = </span><span class="f_mine" style="font-weight: bold;">B</span><span class="f_mine"> for convex surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">BEVEL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">BC</span><span class="f_mine"> gives a new bevel dimension to both sides of the lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">More explicit control may be obtained by the optional surface input which begins with either </span><span class="f_mine" style="font-weight: bold;">1</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">2</span><span class="f_mine">; &quot;</span><span class="f_mine" style="font-weight: bold;">1</span><span class="f_mine">&quot; referring to the leftmost surface on the drawing and &quot;</span><span class="f_mine" style="font-weight: bold;">2</span><span class="f_mine">&quot; to the rightmost. &nbsp;Normally (for positive thickness) the leftmost is also </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">A</span></p>
+</td>
+<td style="vertical-align:top; width:521px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives a new value to </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine"> for that surface. &nbsp;Entered only for concave surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SAG</span></p>
+</td>
+<td style="vertical-align:top; width:521px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">implies a new </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine"> for that surface: that aperture giving the desired sag.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">BC</span></p>
+</td>
+<td style="vertical-align:top; width:521px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives a new bevel dimension, thus redefining point </span><span class="f_mine" style="font-weight: bold;">B</span><span class="f_mine">. &nbsp;For convex surfaces, </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine"> is also redefined so that </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine"> = </span><span class="f_mine" style="font-weight: bold;">B</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ABC</span></p>
+</td>
+<td style="vertical-align:top; width:521px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives explicit data for the distances </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AB</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">BC</span><span class="f_mine"> for that surface. &nbsp;This input is valid for either convex or concave surfaces.  </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine"> is recalculated, and is not necessarily equal to </span><span class="f_mine" style="font-weight: bold;">B</span><span class="f_mine"> in either case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">AAB</span></p>
+</td>
+<td style="vertical-align:top; width:521px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives data for the value of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">A</span><span class="f_mine"> and the distance </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AB</span><span class="f_mine">, thus implicitly redefining the bevel distance </span><span class="f_mine" style="font-weight: bold;">BC</span><span class="f_mine">. &nbsp;This may also apply to convex or concave surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span></p>
+</td>
+<td style="vertical-align:top; width:521px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the face angle for the section </span><span class="f_mine" style="font-weight: bold;">AB</span><span class="f_mine">, which is normally at a 90 degree angle. </span></p>
+<p class="p_mine"><span class="f_mine">This is not to be confused with the bevel angle, which is always at 45 degrees.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An example ELD drawing is shown below.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f21.png" width="655" height="486" alt="um7f21" style="width:655px;height:486px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Also included on the drawing are numerous boxes containing dimensions appearing on the drawing or in which you may enter tolerances, etc. &nbsp;The input used to prepare this picture was</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ELD 1 .2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">MTH 3.0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">BEVEL 0.1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">2 ANG 30</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">2 ABC 3.5 .5</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ID ELD EXAMPLE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ID BEVELED MIRROR</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ID OSD, Inc </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the edge-definition data had been left out of this file, the mirror would have been drawn according to the current EFILE data, if any, instead of the entered dimensions.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Two lines of a title may be input with the first two </span><span class="f_mine" style="font-weight: bold;">ID</span><span class="f_mine"> lines. &nbsp;These must begin in column 1 with the characters &quot;ID&quot;, and the actual text characters will begin in column 4. &nbsp;Any characters may appear in these lines except the (&quot;) character. &nbsp;The program adjusts the text size to try to fit the entered characters in the space provided on the drawing, using three character heights: largest for up to 20 characters, smaller for up to 27, and smallest for 28 to 35 characters. &nbsp;This may not be exact, since the proportional font uses more space for some characters than for others.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A single line giving your company name may be input with the third </span><span class="f_mine" style="font-weight: bold;">ID</span><span class="f_mine"> line. &nbsp;Conic sections, torics, and power-series aspherics may be drawn, but not elements where one side is tilted or decentered with respect to the other – and only the rotationally-symmetric power-series terms will be annotated. &nbsp;Also, Fresnel surfaces are not at present treated. &nbsp;Only the Y-Z profile is shown, and for non-symmetric surfaces you will need to add another view by hand or by combining the </span><span class="f_mine" style="font-weight: bold;">ELD</span><span class="f_mine"> output with a </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um72.htm#per" class="topiclink">PER</a></span><span class="f_mine"> drawing, possibly using a negative surface number to suppress the normal drawing as explained above. &nbsp;Only the Y-dimension of RAO (rectangular aperture) data will be shown on the drawing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Other annotation can be added to the drawing with the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="afile.htm" class="topiclink">Annotation Editor</a></span><span class="f_mine">. &nbsp;One can define several lines of text that are used frequently and add them to the drawing as explained in that link.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Mirrors may be drawn as well as lenses. &nbsp;The mirror thickness may be defined in the Edge Wizard or may be included in the </span><span class="f_mine" style="font-weight: bold;">ELD</span><span class="f_mine"> file. &nbsp;If </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine"> is a reflecting surface, you may follow the </span><span class="f_mine" style="font-weight: bold;">ELD</span><span class="f_mine"> file header command with the </span><span class="f_mine" style="font-weight: bold;">MTH</span><span class="f_mine"> input, which gives the desired thickness of the mirror. &nbsp;This thickness is positive if the mirror is on the left, as shown on the above drawing. &nbsp;If omitted, the mirror thickness will take a value equal to 1/10 of the clear aperture radius. &nbsp;A flat dummy surface will be inserted for the back side, and all of the other edge parameters are available to specify bevels, face angles, etc.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If either side of the lens element has a </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#cao" class="topiclink">CAl</a></span><span class="f_mine"> specification, the obscured portion will be shown as a dotted line on the ELD drawing. &nbsp;If both sides have a CAl, or if the drawing is a mirror with a CAl, a perforation will be shown and annotated, as shown in the above example.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Glass types will be entered if the element has a glass-table glass or a PIN of a glass-table glass.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">More complex edge shapes require a combination of ELD and PER or </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#per" class="topiclink">SOLID</a></span><span class="f_mine">. &nbsp;Here is an example of a lens element with a combination of EFILE edges plus an RAO aperture. &nbsp;This element was edited with the Edge Wizard, which specified the values of points A, B, and C for both sides. &nbsp;The RAO aperture could also have been added there. &nbsp;For this example, we want the ELD drawing to show the element as well as two views created with SOLID. &nbsp;To combine the plots we use the </span><span class="f_mine" style="text-decoration: underline;"><a href="um1314.htm#cplot" class="topiclink">CPLOT</a></span><span class="f_mine"> command. &nbsp;Here is the input MACro:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">OFF 60 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; We want a stippled effect for shading</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">CPLOT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; This command says to combine plots</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">ELD 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; Draw the element at surface 3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">ID ELD EXAMPLE </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">ID COMPLEX APERTURE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">ID OSD. INC.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">SOL 0 90 1.5 3 4 -1.0 2 &nbsp; &nbsp; &nbsp; &nbsp;; Now add a drawing showing the face</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">GREY &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; Note the explicit center coordinates</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">PLOT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">SOL 10 30 1.5 3 4 -1.5 -.5 &nbsp; &nbsp; &nbsp; &nbsp;; Another view, in perspective</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">GREY</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">PLOT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">QPLOT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; Finally, the plot is displayed</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When the drawing was finished, we added some annotation with the </span><span class="f_mine" style="text-decoration: underline;"><a href="afile.htm" class="topiclink">AFILE</a></span><span class="f_mine"> annotation tool. &nbsp;Here is the picture.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="eld_per.png" width="674" height="534" alt="eld_per" style="width:674px;height:534px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Prisms require a different drawing format. &nbsp;In this case four views are shown, and dimensions are given where appropriate. &nbsp;Angles and tolerances are listed in a table, along with surface shape tolerances, the latter as computed by </span><span class="f_mine" style="text-decoration: underline;"><a href="umch12.htm#btol" class="topiclink">BTOL</a></span><span class="f_mine"> and shown if the USE BTOL directive has been entered. &nbsp;This drawing does not accept any of the optional data permitted for an ELD file except for three ID lines and the PLOT entry, which must all be entered, and in that order.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An example drawing of an Abbe prism is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="prism_eld.png" width="857" height="679" alt="prism_eld" style="width:857px;height:679px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um78.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

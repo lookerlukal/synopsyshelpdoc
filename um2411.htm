@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>relative</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="coordinates--&gt;,Undo stack" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">2.4.1.1 Relative position</span><span class="f_mine">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um241.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um2412.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The simplest rule is </span><span class="f_mine" style="font-weight: bold;">RELATIVE</span><span class="f_mine">. &nbsp;According to this rule, the nominal position of each surface is on the Z-axis of the previous surface, with a spacing given by the current thickness of that surface. &nbsp;The X and Y axes of the two are parallel. &nbsp;If a tilt or decenter is specified, the surface is tilted or moved by the stated amount relative to its nominal position, and its local coordinate system moves with it. &nbsp;This rule uses the mnemonics AT, BT, and GT for tilts, and DECENTER for decenters, as explained in </span><span class="f_mine" style="text-decoration: underline;"><a href="um381.htm" class="topiclink">section 3.8.1</a></span><span class="f_mine">. &nbsp;It is the easiest rule to use in most cases.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Under this rule one or more surfaces can tilt or decenter as a group, and the surface following the group remains where it was; the program automatically calculates the reverse tilt and decenter for that surface, which is called the “undo” surface. &nbsp;Relative tilts and decenters can be picked up by another surface, and the tilt axis need not be located at the vertex of the surface, making this rule powerful enough for most situations. &nbsp;You may specify any number of tilted or decentered surfaces that utilize the same undo surface, creating an </span><span class="f_mine" style="font-style: italic;">undo stack</span><span class="f_mine">. &nbsp;The only requirement is that the undo surface must undo </span><span class="f_mine" style="font-style: italic;">all</span><span class="f_mine"> of the relative tilts and decenters that are in effect at that point, and that require an undo surface. &nbsp;Thus, you cannot overlap relative regions, and attempting to do so will produce an error message.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The undo surface may itself be RELATIVE, LOCAL or </span><span class="f_mine" style="text-decoration: underline;"><a href="um2412.htm" class="topiclink">GLOBAL</a></span><span class="f_mine">; in the latter two cases, the relative tilts and decenters are treated as permanent, without an undo.</span></p>
+<p class="p_p2-10"><span class="f_p2-10">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Tilt directions are defined positive if the surface rotates in the anti-clockwise direction as seen from the positive end of the rotation axis. These are shown below.</span></p>
+<p class="p_p2-10"><span class="f_p2-10">&nbsp;</span></p>
+<p class="p_p2-10" style="text-align: center;"><img src="um2f3.png" width="289" height="162" alt="um2f3" style="margin:0px auto 0px auto;width:289px;height:162px;border:none"></p>
+<p class="p_p2-10" style="text-align: center;"><span class="f_p2-10">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um2412.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um241.htm" class="topiclink">P</a></span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um241.htm" class="topiclink">revious</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

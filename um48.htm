@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um48</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine-6" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine-6">&nbsp;</span></p>
+<p><a name="lnc"></a><span class="f_mine-6" style="font-size: 14pt;">4.8 List NURBS Control points (LNC) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um47.htm" class="topiclink">Previous</a></span><span class="f_mine-6" style="font-family: 'Times New Roman';"> </span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um49.htm" class="topiclink">Next</a></span><span class="f_mine-6" style="font-family: 'Times New Roman';"> </span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">The command</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 24px;"><span class="f_mine-6" style="font-weight: bold;">LNC </span><span class="f_mine-6" style="font-weight: bold; text-decoration: underline;">isn</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">will list the definition of a NURBS surface declared with USS types 15 or 24. &nbsp;A table is produced showing the (X,Y,Z) coordinates of each control point and the sag at that point. &nbsp;See </span><span class="f_mine-6" style="font-weight: bold;"><a href="um3327.htm" class="topiclink">Section 3.3.2.7</a></span><span class="f_mine-6"> for details about this surface type. &nbsp;The lens below has been assigned a NURBS type 24 at surface 5. &nbsp;The LNC command produces a list of the control points and the surface sag at each one. &nbsp;Note that the surface does not actually to through any of the control points except at the corners.</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><img src="clip0475.png" width="359" height="256" alt="clip0475" style="width:359px;height:256px;border:none"></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">NURBS DEFINITION DATA, SURFACE &nbsp;5</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">SURFACE IS USS TYPE 24</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">DATA ARE IN SLOT NUMBER &nbsp;1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">BASE CURVATURE &nbsp; &nbsp;0.00000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">CONIC CONSTANT &nbsp; &nbsp;0.00000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">NUMBER OF CONTROL POINTS IN X &nbsp; &nbsp;12.0000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">MINIMUM, MAXIMUM IN X &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-0.714300 &nbsp; &nbsp; &nbsp;0.714300</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">NUMBER OF CONTROL POINTS IN Y &nbsp; &nbsp;12.0000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">MINIMUM, MAXIMUM IN Y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-0.714300 &nbsp; &nbsp; &nbsp;0.714300</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">NODE &nbsp; &nbsp; &nbsp; &nbsp;X &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Z &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SURFACE SAG</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> _____________________________________________________________________________________</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;1 -0.714300000000 &nbsp; &nbsp; &nbsp;-0.714300000000 &nbsp; &nbsp; &nbsp;-0.193463960000E-01 &nbsp;-0.193463960000E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;2 -0.584427272727 &nbsp; &nbsp; &nbsp;-0.714300000000 &nbsp; &nbsp; &nbsp;-0.139920140000 &nbsp; &nbsp; &nbsp;-0.651180368666E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;3 -0.454554545455 &nbsp; &nbsp; &nbsp;-0.714300000000 &nbsp; &nbsp; &nbsp;-0.530451210000E-01 &nbsp;-0.344592022307E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;4 -0.324681818182 &nbsp; &nbsp; &nbsp;-0.714300000000 &nbsp; &nbsp; &nbsp; 0.973442260000E-01 &nbsp;-0.179788410457E-03</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;5 -0.194809090909 &nbsp; &nbsp; &nbsp;-0.714300000000 &nbsp; &nbsp; &nbsp; 0.162711990000E-01 &nbsp; 0.157384556760E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;6 -0.649363636364E-01 &nbsp;-0.714300000000 &nbsp; &nbsp; &nbsp; 0.905402410000E-02 &nbsp; 0.183558653974E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;7 &nbsp;0.649363636364E-01 &nbsp;-0.714300000000 &nbsp; &nbsp; &nbsp; 0.631008760000E-02 &nbsp; 0.164439843339E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;8 &nbsp;0.194809090909 &nbsp; &nbsp; &nbsp;-0.714300000000 &nbsp; &nbsp; &nbsp; 0.119524640000E-01 &nbsp; 0.108444475861E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;9 &nbsp;0.324681818182 &nbsp; &nbsp; &nbsp;-0.714300000000 &nbsp; &nbsp; &nbsp; 0.754170260000E-01 &nbsp;-0.559899962388E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 10 &nbsp;0.454554545455 &nbsp; &nbsp; &nbsp;-0.714300000000 &nbsp; &nbsp; &nbsp;-0.496734550000E-01 &nbsp;-0.373087341123E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 11 &nbsp;0.584427272727 &nbsp; &nbsp; &nbsp;-0.714300000000 &nbsp; &nbsp; &nbsp;-0.135566640000 &nbsp; &nbsp; &nbsp;-0.648311361369E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 12 &nbsp;0.714300000000 &nbsp; &nbsp; &nbsp;-0.714300000000 &nbsp; &nbsp; &nbsp;-0.213993640000E-01 &nbsp;-0.213993640000E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 13 -0.714300000000 &nbsp; &nbsp; &nbsp;-0.584427272727 &nbsp; &nbsp; &nbsp;-0.186536050000 &nbsp; &nbsp; &nbsp;-0.816044652738E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 14 -0.584427272727 &nbsp; &nbsp; &nbsp;-0.584427272727 &nbsp; &nbsp; &nbsp;-0.115551830000 &nbsp; &nbsp; &nbsp;-0.356664254680E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 15 -0.454554545455 &nbsp; &nbsp; &nbsp;-0.584427272727 &nbsp; &nbsp; &nbsp; 0.141565470000 &nbsp; &nbsp; &nbsp; 0.105973008588E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 16 -0.324681818182 &nbsp; &nbsp; &nbsp;-0.584427272727 &nbsp; &nbsp; &nbsp; 0.187205460000E-01 &nbsp; 0.348266355466E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 17 -0.194809090909 &nbsp; &nbsp; &nbsp;-0.584427272727 &nbsp; &nbsp; &nbsp; 0.891119230000E-01 &nbsp; 0.428310907934E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 18 -0.649363636364E-01 &nbsp;-0.584427272727 &nbsp; &nbsp; &nbsp; 0.722177550000E-01 &nbsp; 0.441195973366E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 19 &nbsp;0.649363636364E-01 &nbsp;-0.584427272727 &nbsp; &nbsp; &nbsp; 0.689857280000E-01 &nbsp; 0.440344799552E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 20 &nbsp;0.194809090909 &nbsp; &nbsp; &nbsp;-0.584427272727 &nbsp; &nbsp; &nbsp; 0.115278990000 &nbsp; &nbsp; &nbsp; 0.425396792094E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 21 &nbsp;0.324681818182 &nbsp; &nbsp; &nbsp;-0.584427272727 &nbsp; &nbsp; &nbsp; 0.173323170000E-01 &nbsp; 0.344679934980E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 22 &nbsp;0.454554545455 &nbsp; &nbsp; &nbsp;-0.584427272727 &nbsp; &nbsp; &nbsp; 0.146675020000 &nbsp; &nbsp; &nbsp; 0.106938881849E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 23 &nbsp;0.584427272727 &nbsp; &nbsp; &nbsp;-0.584427272727 &nbsp; &nbsp; &nbsp;-0.113352910000 &nbsp; &nbsp; &nbsp;-0.353706206492E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 24 &nbsp;0.714300000000 &nbsp; &nbsp; &nbsp;-0.584427272727 &nbsp; &nbsp; &nbsp;-0.190064430000 &nbsp; &nbsp; &nbsp;-0.849886713148E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 25 -0.714300000000 &nbsp; &nbsp; &nbsp;-0.454554545455 &nbsp; &nbsp; &nbsp;-0.411202050000E-01 &nbsp;-0.461474221743E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 26 -0.584427272727 &nbsp; &nbsp; &nbsp;-0.454554545455 &nbsp; &nbsp; &nbsp; 0.162624580000 &nbsp; &nbsp; &nbsp; 0.966818897358E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 27 -0.454554545455 &nbsp; &nbsp; &nbsp;-0.454554545455 &nbsp; &nbsp; &nbsp; 0.106236530000 &nbsp; &nbsp; &nbsp; 0.381118518915E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 28 -0.324681818182 &nbsp; &nbsp; &nbsp;-0.454554545455 &nbsp; &nbsp; &nbsp; 0.964616080000E-01 &nbsp; 0.441150740727E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 29 -0.194809090909 &nbsp; &nbsp; &nbsp;-0.454554545455 &nbsp; &nbsp; &nbsp;-0.146545940000E-01 &nbsp; 0.411155493604E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 30 -0.649363636364E-01 &nbsp;-0.454554545455 &nbsp; &nbsp; &nbsp; 0.707194010000E-01 &nbsp; 0.379386746961E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 31 &nbsp;0.649363636364E-01 &nbsp;-0.454554545455 &nbsp; &nbsp; &nbsp; 0.530488970000E-01 &nbsp; 0.379714200182E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 32 &nbsp;0.194809090909 &nbsp; &nbsp; &nbsp;-0.454554545455 &nbsp; &nbsp; &nbsp;-0.166530140000E-01 &nbsp; 0.411617516942E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 33 &nbsp;0.324681818182 &nbsp; &nbsp; &nbsp;-0.454554545455 &nbsp; &nbsp; &nbsp; 0.875291750000E-01 &nbsp; 0.441528672460E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 34 &nbsp;0.454554545455 &nbsp; &nbsp; &nbsp;-0.454554545455 &nbsp; &nbsp; &nbsp; 0.105148410000 &nbsp; &nbsp; &nbsp; 0.382838919225E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 35 &nbsp;0.584427272727 &nbsp; &nbsp; &nbsp;-0.454554545455 &nbsp; &nbsp; &nbsp; 0.168656020000 &nbsp; &nbsp; &nbsp; 0.950150516072E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 36 &nbsp;0.714300000000 &nbsp; &nbsp; &nbsp;-0.454554545455 &nbsp; &nbsp; &nbsp;-0.439047400000E-01 &nbsp;-0.504313427825E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 37 -0.714300000000 &nbsp; &nbsp; &nbsp;-0.324681818182 &nbsp; &nbsp; &nbsp; 0.830795000000E-01 &nbsp;-0.654259259852E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 38 -0.584427272727 &nbsp; &nbsp; &nbsp;-0.324681818182 &nbsp; &nbsp; &nbsp; 0.199765890000E-01 &nbsp; 0.344211508585E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 39 -0.454554545455 &nbsp; &nbsp; &nbsp;-0.324681818182 &nbsp; &nbsp; &nbsp; 0.988266430000E-01 &nbsp; 0.442374200492E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 40 -0.324681818182 &nbsp; &nbsp; &nbsp;-0.324681818182 &nbsp; &nbsp; &nbsp; 0.231427360000E-01 &nbsp; 0.380427136780E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 41 -0.194809090909 &nbsp; &nbsp; &nbsp;-0.324681818182 &nbsp; &nbsp; &nbsp; 0.201445470000E-01 &nbsp; 0.286665224059E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 42 -0.649363636364E-01 &nbsp;-0.324681818182 &nbsp; &nbsp; &nbsp;-0.110214780000E-01 &nbsp; 0.228219470216E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 43 &nbsp;0.649363636364E-01 &nbsp;-0.324681818182 &nbsp; &nbsp; &nbsp;-0.105865450000E-01 &nbsp; 0.228239600466E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 44 &nbsp;0.194809090909 &nbsp; &nbsp; &nbsp;-0.324681818182 &nbsp; &nbsp; &nbsp; 0.280966820000E-01 &nbsp; 0.286578248964E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 45 &nbsp;0.324681818182 &nbsp; &nbsp; &nbsp;-0.324681818182 &nbsp; &nbsp; &nbsp; 0.202054120000E-01 &nbsp; 0.380267550130E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 46 &nbsp;0.454554545455 &nbsp; &nbsp; &nbsp;-0.324681818182 &nbsp; &nbsp; &nbsp; 0.962873130000E-01 &nbsp; 0.442791678317E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 47 &nbsp;0.584427272727 &nbsp; &nbsp; &nbsp;-0.324681818182 &nbsp; &nbsp; &nbsp; 0.219209820000E-01 &nbsp; 0.341635764151E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 48 &nbsp;0.714300000000 &nbsp; &nbsp; &nbsp;-0.324681818182 &nbsp; &nbsp; &nbsp; 0.685488970000E-01 &nbsp;-0.992782025155E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 49 -0.714300000000 &nbsp; &nbsp; &nbsp;-0.194809090909 &nbsp; &nbsp; &nbsp; 0.171127010000E-01 &nbsp; 0.128760558871E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 50 -0.584427272727 &nbsp; &nbsp; &nbsp;-0.194809090909 &nbsp; &nbsp; &nbsp; 0.866022830000E-01 &nbsp; 0.426145396090E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 51 -0.454554545455 &nbsp; &nbsp; &nbsp;-0.194809090909 &nbsp; &nbsp; &nbsp;-0.153279900000E-01 &nbsp; 0.411768988807E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 52 -0.324681818182 &nbsp; &nbsp; &nbsp;-0.194809090909 &nbsp; &nbsp; &nbsp; 0.140667530000E-01 &nbsp; 0.286602010021E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 53 -0.194809090909 &nbsp; &nbsp; &nbsp;-0.194809090909 &nbsp; &nbsp; &nbsp; 0.944880090000E-02 &nbsp; 0.163818921830E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 54 -0.649363636364E-01 &nbsp;-0.194809090909 &nbsp; &nbsp; &nbsp;-0.664039630000E-02 &nbsp; 0.938198375275E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 55 &nbsp;0.649363636364E-01 &nbsp;-0.194809090909 &nbsp; &nbsp; &nbsp;-0.676014880000E-02 &nbsp; 0.938098913464E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 56 &nbsp;0.194809090909 &nbsp; &nbsp; &nbsp;-0.194809090909 &nbsp; &nbsp; &nbsp; 0.928096330000E-02 &nbsp; 0.163808639206E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 57 &nbsp;0.324681818182 &nbsp; &nbsp; &nbsp;-0.194809090909 &nbsp; &nbsp; &nbsp; 0.174181030000E-01 &nbsp; 0.286583650178E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 58 &nbsp;0.454554545455 &nbsp; &nbsp; &nbsp;-0.194809090909 &nbsp; &nbsp; &nbsp;-0.138523720000E-01 &nbsp; 0.411841524578E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 59 &nbsp;0.584427272727 &nbsp; &nbsp; &nbsp;-0.194809090909 &nbsp; &nbsp; &nbsp; 0.930760070000E-01 &nbsp; 0.425399550809E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 60 &nbsp;0.714300000000 &nbsp; &nbsp; &nbsp;-0.194809090909 &nbsp; &nbsp; &nbsp; 0.229855370000E-01 &nbsp; 0.115347566060E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 61 -0.714300000000 &nbsp; &nbsp; &nbsp;-0.649363636364E-01 &nbsp; 0.103685560000E-01 &nbsp; 0.176641876321E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 62 -0.584427272727 &nbsp; &nbsp; &nbsp;-0.649363636364E-01 &nbsp; 0.713555230000E-01 &nbsp; 0.440234587785E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 63 -0.454554545455 &nbsp; &nbsp; &nbsp;-0.649363636364E-01 &nbsp; 0.709791490000E-01 &nbsp; 0.379534730302E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 64 -0.324681818182 &nbsp; &nbsp; &nbsp;-0.649363636364E-01 &nbsp;-0.113112920000E-01 &nbsp; 0.228071366083E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 65 -0.194809090909 &nbsp; &nbsp; &nbsp;-0.649363636364E-01 &nbsp;-0.682589800000E-02 &nbsp; 0.937399050506E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 66 -0.649363636364E-01 &nbsp;-0.649363636364E-01 &nbsp;-0.289219390000E-01 &nbsp; 0.192658415021E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 67 &nbsp;0.649363636364E-01 &nbsp;-0.649363636364E-01 &nbsp;-0.316022840000E-01 &nbsp; 0.192353431010E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 68 &nbsp;0.194809090909 &nbsp; &nbsp; &nbsp;-0.649363636364E-01 &nbsp;-0.863002180000E-02 &nbsp; 0.937644731086E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 69 &nbsp;0.324681818182 &nbsp; &nbsp; &nbsp;-0.649363636364E-01 &nbsp;-0.898242440000E-02 &nbsp; 0.228122751293E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 70 &nbsp;0.454554545455 &nbsp; &nbsp; &nbsp;-0.649363636364E-01 &nbsp; 0.656089390000E-01 &nbsp; 0.379395460794E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 71 &nbsp;0.584427272727 &nbsp; &nbsp; &nbsp;-0.649363636364E-01 &nbsp; 0.662153320000E-01 &nbsp; 0.440672268513E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 72 &nbsp;0.714300000000 &nbsp; &nbsp; &nbsp;-0.649363636364E-01 &nbsp; 0.129908830000E-01 &nbsp; 0.176950749215E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 73 -0.714300000000 &nbsp; &nbsp; &nbsp; 0.649363636364E-01 &nbsp; 0.825937150000E-02 &nbsp; 0.169078246695E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 74 -0.584427272727 &nbsp; &nbsp; &nbsp; 0.649363636364E-01 &nbsp; 0.690633110000E-01 &nbsp; 0.440392737318E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 75 -0.454554545455 &nbsp; &nbsp; &nbsp; 0.649363636364E-01 &nbsp; 0.592754230000E-01 &nbsp; 0.379886402053E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 76 -0.324681818182 &nbsp; &nbsp; &nbsp; 0.649363636364E-01 &nbsp;-0.111488830000E-01 &nbsp; 0.228278223554E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 77 -0.194809090909 &nbsp; &nbsp; &nbsp; 0.649363636364E-01 &nbsp;-0.646509850000E-02 &nbsp; 0.938514453651E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 78 -0.649363636364E-01 &nbsp; 0.649363636364E-01 &nbsp;-0.291761420000E-01 &nbsp; 0.193044749749E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 79 &nbsp;0.649363636364E-01 &nbsp; 0.649363636364E-01 &nbsp;-0.324444710000E-01 &nbsp; 0.192880346871E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 80 &nbsp;0.194809090909 &nbsp; &nbsp; &nbsp; 0.649363636364E-01 &nbsp;-0.854265900000E-02 &nbsp; 0.938665053283E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 81 &nbsp;0.324681818182 &nbsp; &nbsp; &nbsp; 0.649363636364E-01 &nbsp;-0.843316280000E-02 &nbsp; 0.228311971893E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 82 &nbsp;0.454554545455 &nbsp; &nbsp; &nbsp; 0.649363636364E-01 &nbsp; 0.607387180000E-01 &nbsp; 0.379852844391E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 83 &nbsp;0.584427272727 &nbsp; &nbsp; &nbsp; 0.649363636364E-01 &nbsp; 0.628610680000E-01 &nbsp; 0.440160144816E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 84 &nbsp;0.714300000000 &nbsp; &nbsp; &nbsp; 0.649363636364E-01 &nbsp; 0.118389430000E-01 &nbsp; 0.162784503314E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 85 -0.714300000000 &nbsp; &nbsp; &nbsp; 0.194809090909 &nbsp; &nbsp; &nbsp; 0.128114690000E-01 &nbsp; 0.116886797218E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 86 -0.584427272727 &nbsp; &nbsp; &nbsp; 0.194809090909 &nbsp; &nbsp; &nbsp; 0.111326600000 &nbsp; &nbsp; &nbsp; 0.425661202789E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 87 -0.454554545455 &nbsp; &nbsp; &nbsp; 0.194809090909 &nbsp; &nbsp; &nbsp;-0.172640440000E-01 &nbsp; 0.411575926062E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 88 -0.324681818182 &nbsp; &nbsp; &nbsp; 0.194809090909 &nbsp; &nbsp; &nbsp; 0.265618500000E-01 &nbsp; 0.286531402298E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 89 -0.194809090909 &nbsp; &nbsp; &nbsp; 0.194809090909 &nbsp; &nbsp; &nbsp; 0.976643480000E-02 &nbsp; 0.163778300970E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 90 -0.649363636364E-01 &nbsp; 0.194809090909 &nbsp; &nbsp; &nbsp;-0.736567180000E-02 &nbsp; 0.937684063578E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 91 &nbsp;0.649363636364E-01 &nbsp; 0.194809090909 &nbsp; &nbsp; &nbsp;-0.776413750000E-02 &nbsp; 0.938226421077E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 92 &nbsp;0.194809090909 &nbsp; &nbsp; &nbsp; 0.194809090909 &nbsp; &nbsp; &nbsp; 0.936751090000E-02 &nbsp; 0.163746115220E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 93 &nbsp;0.324681818182 &nbsp; &nbsp; &nbsp; 0.194809090909 &nbsp; &nbsp; &nbsp; 0.279705540000E-01 &nbsp; 0.286429020048E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 94 &nbsp;0.454554545455 &nbsp; &nbsp; &nbsp; 0.194809090909 &nbsp; &nbsp; &nbsp;-0.157691870000E-01 &nbsp; 0.412128684135E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 95 &nbsp;0.584427272727 &nbsp; &nbsp; &nbsp; 0.194809090909 &nbsp; &nbsp; &nbsp; 0.116990890000 &nbsp; &nbsp; &nbsp; 0.423223587027E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 96 &nbsp;0.714300000000 &nbsp; &nbsp; &nbsp; 0.194809090909 &nbsp; &nbsp; &nbsp; 0.176587260000E-01 &nbsp; 0.807643101250E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 97 -0.714300000000 &nbsp; &nbsp; &nbsp; 0.324681818182 &nbsp; &nbsp; &nbsp; 0.760390960000E-01 &nbsp;-0.479765988209E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 98 -0.584427272727 &nbsp; &nbsp; &nbsp; 0.324681818182 &nbsp; &nbsp; &nbsp; 0.167346990000E-01 &nbsp; 0.344984279425E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> 99 -0.454554545455 &nbsp; &nbsp; &nbsp; 0.324681818182 &nbsp; &nbsp; &nbsp; 0.870326380000E-01 &nbsp; 0.441396801909E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">100 -0.324681818182 &nbsp; &nbsp; &nbsp; 0.324681818182 &nbsp; &nbsp; &nbsp; 0.213589950000E-01 &nbsp; 0.380184277116E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">101 -0.194809090909 &nbsp; &nbsp; &nbsp; 0.324681818182 &nbsp; &nbsp; &nbsp; 0.136344180000E-01 &nbsp; 0.286519093414E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">102 -0.649363636364E-01 &nbsp; 0.324681818182 &nbsp; &nbsp; &nbsp;-0.101896250000E-01 &nbsp; 0.228086162719E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">103 &nbsp;0.649363636364E-01 &nbsp; 0.324681818182 &nbsp; &nbsp; &nbsp;-0.956705280000E-02 &nbsp; 0.228239537807E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">104 &nbsp;0.194809090909 &nbsp; &nbsp; &nbsp; 0.324681818182 &nbsp; &nbsp; &nbsp; 0.234281750000E-01 &nbsp; 0.286386281546E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">105 &nbsp;0.324681818182 &nbsp; &nbsp; &nbsp; 0.324681818182 &nbsp; &nbsp; &nbsp; 0.179386340000E-01 &nbsp; 0.379841666163E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">106 &nbsp;0.454554545455 &nbsp; &nbsp; &nbsp; 0.324681818182 &nbsp; &nbsp; &nbsp; 0.826224110000E-01 &nbsp; 0.442851296009E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">107 &nbsp;0.584427272727 &nbsp; &nbsp; &nbsp; 0.324681818182 &nbsp; &nbsp; &nbsp; 0.188761350000E-01 &nbsp; 0.338982789884E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">108 &nbsp;0.714300000000 &nbsp; &nbsp; &nbsp; 0.324681818182 &nbsp; &nbsp; &nbsp; 0.530262740000E-01 &nbsp;-0.132051030946E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">109 -0.714300000000 &nbsp; &nbsp; &nbsp; 0.454554545455 &nbsp; &nbsp; &nbsp;-0.491214460000E-01 &nbsp;-0.366547614234E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">110 -0.584427272727 &nbsp; &nbsp; &nbsp; 0.454554545455 &nbsp; &nbsp; &nbsp; 0.147181760000 &nbsp; &nbsp; &nbsp; 0.107434336658E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">111 -0.454554545455 &nbsp; &nbsp; &nbsp; 0.454554545455 &nbsp; &nbsp; &nbsp; 0.106641540000 &nbsp; &nbsp; &nbsp; 0.383034050227E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">112 -0.324681818182 &nbsp; &nbsp; &nbsp; 0.454554545455 &nbsp; &nbsp; &nbsp; 0.968138490000E-01 &nbsp; 0.443061458266E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">113 -0.194809090909 &nbsp; &nbsp; &nbsp; 0.454554545455 &nbsp; &nbsp; &nbsp;-0.145395280000E-01 &nbsp; 0.412055424510E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">114 -0.649363636364E-01 &nbsp; 0.454554545455 &nbsp; &nbsp; &nbsp; 0.714246310000E-01 &nbsp; 0.379576830620E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">115 &nbsp;0.649363636364E-01 &nbsp; 0.454554545455 &nbsp; &nbsp; &nbsp; 0.621433420000E-01 &nbsp; 0.380036351724E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">116 &nbsp;0.194809090909 &nbsp; &nbsp; &nbsp; 0.454554545455 &nbsp; &nbsp; &nbsp;-0.166122090000E-01 &nbsp; 0.412358231008E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">117 &nbsp;0.324681818182 &nbsp; &nbsp; &nbsp; 0.454554545455 &nbsp; &nbsp; &nbsp; 0.849353670000E-01 &nbsp; 0.443095466578E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">118 &nbsp;0.454554545455 &nbsp; &nbsp; &nbsp; 0.454554545455 &nbsp; &nbsp; &nbsp; 0.104016580000 &nbsp; &nbsp; &nbsp; 0.385415977008E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">119 &nbsp;0.584427272727 &nbsp; &nbsp; &nbsp; 0.454554545455 &nbsp; &nbsp; &nbsp; 0.165307700000 &nbsp; &nbsp; &nbsp; 0.952145207196E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">120 &nbsp;0.714300000000 &nbsp; &nbsp; &nbsp; 0.454554545455 &nbsp; &nbsp; &nbsp;-0.397230340000E-01 &nbsp;-0.508900559404E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">121 -0.714300000000 &nbsp; &nbsp; &nbsp; 0.584427272727 &nbsp; &nbsp; &nbsp;-0.134703650000 &nbsp; &nbsp; &nbsp;-0.643553387379E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">122 -0.584427272727 &nbsp; &nbsp; &nbsp; 0.584427272727 &nbsp; &nbsp; &nbsp;-0.113604750000 &nbsp; &nbsp; &nbsp;-0.355052814240E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">123 -0.454554545455 &nbsp; &nbsp; &nbsp; 0.584427272727 &nbsp; &nbsp; &nbsp; 0.167683970000 &nbsp; &nbsp; &nbsp; 0.939880905528E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">124 -0.324681818182 &nbsp; &nbsp; &nbsp; 0.584427272727 &nbsp; &nbsp; &nbsp; 0.221992200000E-01 &nbsp; 0.340992271643E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">125 -0.194809090909 &nbsp; &nbsp; &nbsp; 0.584427272727 &nbsp; &nbsp; &nbsp; 0.964247960000E-01 &nbsp; 0.424912119238E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">126 -0.649363636364E-01 &nbsp; 0.584427272727 &nbsp; &nbsp; &nbsp; 0.580644190000E-01 &nbsp; 0.440255472127E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">127 &nbsp;0.649363636364E-01 &nbsp; 0.584427272727 &nbsp; &nbsp; &nbsp; 0.645460550000E-01 &nbsp; 0.439637729448E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">128 &nbsp;0.194809090909 &nbsp; &nbsp; &nbsp; 0.584427272727 &nbsp; &nbsp; &nbsp; 0.118060580000 &nbsp; &nbsp; &nbsp; 0.422416419657E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">129 &nbsp;0.324681818182 &nbsp; &nbsp; &nbsp; 0.584427272727 &nbsp; &nbsp; &nbsp; 0.190785430000E-01 &nbsp; 0.338074956942E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">130 &nbsp;0.454554545455 &nbsp; &nbsp; &nbsp; 0.584427272727 &nbsp; &nbsp; &nbsp; 0.167248580000 &nbsp; &nbsp; &nbsp; 0.947315275611E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">131 &nbsp;0.584427272727 &nbsp; &nbsp; &nbsp; 0.584427272727 &nbsp; &nbsp; &nbsp;-0.984615540000E-01 &nbsp;-0.373314977131E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">132 &nbsp;0.714300000000 &nbsp; &nbsp; &nbsp; 0.584427272727 &nbsp; &nbsp; &nbsp;-0.183356860000 &nbsp; &nbsp; &nbsp;-0.823361106540E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">133 -0.714300000000 &nbsp; &nbsp; &nbsp; 0.714300000000 &nbsp; &nbsp; &nbsp;-0.214353590000E-01 &nbsp;-0.214353590000E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">134 -0.584427272727 &nbsp; &nbsp; &nbsp; 0.714300000000 &nbsp; &nbsp; &nbsp;-0.193220260000 &nbsp; &nbsp; &nbsp;-0.857760524450E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">135 -0.454554545455 &nbsp; &nbsp; &nbsp; 0.714300000000 &nbsp; &nbsp; &nbsp;-0.404559950000E-01 &nbsp;-0.509576078160E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">136 -0.324681818182 &nbsp; &nbsp; &nbsp; 0.714300000000 &nbsp; &nbsp; &nbsp; 0.646121640000E-01 &nbsp;-0.102609137202E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">137 -0.194809090909 &nbsp; &nbsp; &nbsp; 0.714300000000 &nbsp; &nbsp; &nbsp; 0.229917640000E-01 &nbsp; 0.114769014269E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">138 -0.649363636364E-01 &nbsp; 0.714300000000 &nbsp; &nbsp; &nbsp; 0.159083510000E-01 &nbsp; 0.177718100372E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">139 &nbsp;0.649363636364E-01 &nbsp; 0.714300000000 &nbsp; &nbsp; &nbsp; 0.118779450000E-01 &nbsp; 0.160988772696E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">140 &nbsp;0.194809090909 &nbsp; &nbsp; &nbsp; 0.714300000000 &nbsp; &nbsp; &nbsp; 0.168257350000E-01 &nbsp; 0.737867974722E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">141 &nbsp;0.324681818182 &nbsp; &nbsp; &nbsp; 0.714300000000 &nbsp; &nbsp; &nbsp; 0.495376740000E-01 &nbsp;-0.142206508913E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">142 &nbsp;0.454554545455 &nbsp; &nbsp; &nbsp; 0.714300000000 &nbsp; &nbsp; &nbsp;-0.402605800000E-01 &nbsp;-0.516336611704E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">143 &nbsp;0.584427272727 &nbsp; &nbsp; &nbsp; 0.714300000000 &nbsp; &nbsp; &nbsp;-0.182735900000 &nbsp; &nbsp; &nbsp;-0.824111794540E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">144 &nbsp;0.714300000000 &nbsp; &nbsp; &nbsp; 0.714300000000 &nbsp; &nbsp; &nbsp;-0.207679580000E-01 &nbsp;-0.207679580000E-01</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um49.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

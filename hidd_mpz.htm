@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>MPZ dialog</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="PSPRD,PSPRD over zooms" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-weight: bold;">MPZ PSPRD over ZOOMS dialog</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span><br>
+<span class="f_footnotetext">The diffraction point-spread can be plotted in several ways, all of them accessible from the menu MDI. &nbsp;The </span><span class="f_footnotetext" style="font-weight: bold;">MPZ</span><span class="f_footnotetext"> menu shows the PSPRD in a variety of forms at a single field point over all defined zooms. &nbsp;This dialog submits the </span><span class="f_footnotetext" style="text-decoration: underline;"><a href="um8613.htm#zpsprd" class="topiclink">ZPSPRD</a></span><span class="f_footnotetext"> command with all of the necessary arguments.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The arguments available on the dialog are as follows:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Number of rays</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Enter a number from 600 to 20000. &nbsp;A large number will avoid aliasing but will run more slowly.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Height</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">This entry controls the height of the individual plots when drawn in oblique-perspective form. &nbsp;If you enter a number other than 0, all of the plots will be scaled to that height. &nbsp;If you enter 0, the program will scale each picture so that the relative intensity of each image controls the height. &nbsp;A perfect image in this case has a height of about one inch.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Straight/Right/Left</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">This selection controls the view angle of the surface plots.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Show as surface/visual</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">These radio buttons control how each picture is displayed. &nbsp;The surface selection draws a pattern of lines, while the visual selection shows what the image would look like to the eye.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Magnify, Gain</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">These data allow you to zoom in on the visual form of the display. &nbsp;Magnify controls the zoom, and Gain adjusts the intensity of the picture. &nbsp;If the images are not all nearly perfect, you should enter a Gain larger than 1.0 or the image may be too faint to see clearly.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">ZOOMs</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Here you specify how many zooms to display; the number must be from 2 to the currently defined number.  </span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">HBAR, GBAR</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">These entries specify the fractional field point to be analyzed in each zoom.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">ICOL</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">This specifies which wavelengths to analyze. &nbsp;A single number in the data boxes calls for analysis at that color, while entering “M” does the analysis in all defined colors. &nbsp;Entering “P” produces a plot at only the primary color.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Here is an example of the output from ZPSPRD</span><span class="f_footnotetext" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><img src="zpsprd.png" width="774" height="574" alt="zpsprd" style="width:774px;height:574px;border:none"></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

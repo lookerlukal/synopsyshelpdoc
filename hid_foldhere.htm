@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>HID_FOLDHERE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="fold mirror,fold mirror inserting" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-weight: bold;">WorkSheet: Fold Here</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Clicking this button </span><img src="wsfold.png" width="26" height="24" alt="wsfold" style="width:26px;height:24px;border:none"><span class="f_footnotetext"> will prompt for an angle and direction, and then will insert a fold mirror and a dummy surface for coordinate rotation at the next place where you click in an airspace. &nbsp;An angle of zero degrees folds the light directly back on itself, while 90 degrees is a right-angle fold. &nbsp;You can determine which way to fold most easily by looking at the circled surface numbers on the PAD drawing: these are normally at the +Y edge of the surface.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">You can easily change the sign of the tilt angle later with the button </span><img src="mflip.png" width="26" height="24" alt="mflip" style="width:26px;height:24px;border:none"><span class="f_footnotetext">, and you can adjust the tilt angle value with the slider normally used for CV.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Caution is advised if your system is already folded elsewhere; if you click in a large airspace, the program attempts to determine between which two surfaces you have clicked -- and the click point may sometimes actually be nearer to the vertex of a different surface entirely. &nbsp;In this case, the fold mirror will not go where you intended. &nbsp;The solution is 1) to click close to a desired vertex (you can slide the mirror into its desired location later), and 2) be sure to make a checkpoint before you use this button.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Caution is also advised if you insert a fold mirror before surface 1. &nbsp;If the object is at infinity, this works well enough – although the lens drawings are oriented in the coordinate system of the (new) surface 1, which is of course at an angle, which you probably don’t want. &nbsp;But if the object is finite, the value of TH0 and YMP1 must also change, and the program does not do that for you. &nbsp;The moral is, if you want to insert a fold mirror in front of your lens, add a dummy surface there first (and adjust the object if necessary) and then insert the fold mirror in the space following the new surface 1.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">If you plane to insert a fold mirror just before the start of a ZFILE zoom group, it is also wise to first insert a dummy surface at the desired location. &nbsp;The program by default automatically assigns the inserted surface as part of that zoom group (which is how </span><span class="f_footnotetext" style="text-decoration: underline;"><a href="um1017.htm#aei" class="topiclink">AEI</a></span><span class="f_footnotetext"> can add elements to a group) -- but in this case you probably don't want the mirror to be included. &nbsp;So, after you insert the dummy surface, edit the zoom parameters to remove that surface from the group that follows it, and then fold at that dummy surface.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">You can also fold a system in command mode. &nbsp;See </span><span class="f_footnotetext" style="text-decoration: underline;"><a href="um519.htm" class="topiclink">FOLD</a></span><span class="f_footnotetext">.</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

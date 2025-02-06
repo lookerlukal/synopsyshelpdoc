@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>ASY</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ASY,lens output" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine-6" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine-6">&nbsp;</span></p>
+<p><a name="asy"></a><span class="f_mine-6" style="font-size: 14pt;">4.6 Print Asymmetries (ASY) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um45.htm" class="topiclink">Previous</a></span><span class="f_mine-6" style="font-family: 'Times New Roman';"> </span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um461.htm" class="topiclink">Next</a></span><span class="f_mine-6" style="font-family: 'Times New Roman';"> </span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">Asymmetries, including tilts, decenters, and special surface data, may be output in several formats, using the commands:</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">ASY [ </span><span class="f_mine-6" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine-6" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">ASY GLOBAL [ </span><span class="f_mine-6" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine-6" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">ASY LOCAL</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">ASY </span><span class="f_mine-6" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine-6" style="font-weight: bold;"> </span><span class="f_mine-6" style="font-weight: bold; text-decoration: underline;">JSPS</span></p>
+<p class="p_mine-6" style="margin: 0px 0px 0px 48px;"><span class="f_mine-6" style="font-weight: bold;">ASY EXTERNAL</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">The basic ASY command produces a listing of tilts and decenters, showing the rule by which they were input (RELATIVE, GLOBAL, LOCAL). &nbsp;If a surface is deformed, coefficients G1 through G22 are printed. &nbsp;Surfaces that undo a previous tilt or decenter are indicated. &nbsp;This listing is automatically produced following SPEC and PRT if the lens has asymmetries. &nbsp;An example ASY listing is given below. &nbsp;This feature is also found in the </span><span class="f_mine-6" style="font-weight: bold;">MLL</span><span class="f_mine-6"> dialog.</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> TILTS AND DECENTERS DATA</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> ______________________________________________________________________________</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> SURF TYPE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;X &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Z &nbsp; &nbsp; ALPHA &nbsp; &nbsp; &nbsp;BETA &nbsp; &nbsp; GAMMA</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> ______________________________________________________________________________</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 9 &nbsp; REL &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; 45.0000 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp;10 &nbsp; REL &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; 45.0000 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp;13 &nbsp; REL &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; 18.0000 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp;14 &nbsp; REL &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; 18.0000 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp;15 &nbsp; REL &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; 27.0000 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp;16 &nbsp; REL &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; 27.0000 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> KEY TO SURFACE TYPES</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> ____________________</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> GLB &nbsp;GLOBAL COORDINATES &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; LOC &nbsp;LOCAL COORDINATES</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> REL &nbsp;RELATIVE COORDINATES &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; REM &nbsp;REMOTE TILTS IN RELATIVE COORD.</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> SYNOPSYS AI&gt;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">If </span><span class="f_mine-6" style="font-weight: bold;">ASY GLOBAL</span><span class="f_mine-6"> is entered, a table will be printed giving the position and global Euler angles of each surface in the coordinate system of surface number 1, or surface number </span><span class="f_mine-6" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm" class="topiclink">SN</a></span><span class="f_mine-6">, if entered.  <a href="um32.htm" class="topiclink">See </a></span><span class="f_mine-6" style="text-decoration: underline;"><a href="um32.htm" class="topiclink">3.2</a></span><span class="f_mine-6">. &nbsp;An example ASY GLOBAL listing follows.</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">GLOBAL COORDINATE DATA</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> GLOBAL COORDINATE SURFACE LOCATION IN COORDINATE SYSTEM OF SURFACE &nbsp;1</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> _______________________________________________________________________________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SURF &nbsp; &nbsp; &nbsp; &nbsp;X &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Z &nbsp; &nbsp;NOTES &nbsp;ALPHA &nbsp; &nbsp; &nbsp; &nbsp;BETA &nbsp; &nbsp; &nbsp; GAMMA</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> _______________________________________________________________________________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 1.400000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 1.525000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 4 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 1.543440 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 1.668440 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 6 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 1.730680 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 7 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 1.919300 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 8 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 3.512570 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 9 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 4.069350 &nbsp; &nbsp; -45.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;10 &nbsp; &nbsp; 0.000000 -2.01638E-16 &nbsp; &nbsp; 4.069350 &nbsp; &nbsp; -90.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;11 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-1.242050 &nbsp; &nbsp; 4.069350 &nbsp; &nbsp; -90.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;12 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-1.437050 &nbsp; &nbsp; 4.069350 &nbsp; &nbsp; -90.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;13 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-4.859920 &nbsp; &nbsp; 4.069350 &nbsp; &nbsp;-108.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;14 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-4.859920 &nbsp; &nbsp; 4.069350 &nbsp; &nbsp;-126.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;15 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-2.599996 &nbsp; &nbsp; 2.427419 &nbsp; &nbsp;-153.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;16 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-2.599996 &nbsp; &nbsp; 2.427419 &nbsp; &nbsp; 180.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;17 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-2.599996 &nbsp; &nbsp; 5.709489 &nbsp; &nbsp; 180.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;18 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-2.599996 &nbsp; &nbsp; 5.904489 &nbsp; &nbsp; 180.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;19 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-2.599996 &nbsp; &nbsp; 5.904489 &nbsp; &nbsp; 180.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;20 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-2.599996 &nbsp; &nbsp; 5.904489 &nbsp; &nbsp; 180.00000 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; 0.00000</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> Unless noted, Euler angles are taken in the order alpha, beta, gamma</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">If </span><span class="f_mine-6" style="font-weight: bold;">ASY LOCAL</span><span class="f_mine-6"> is entered, the table will be in the coordinates of the previous surface. &nbsp;If two surface numbers are entered, only that portion of the lens is listed.  </span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">If the lens is in </span><span class="f_mine-6" style="text-decoration: underline;"><a href="um384.htm#external" class="topiclink">EXTERNAL</a></span><span class="f_mine-6"> mode, the </span><span class="f_mine-6" style="font-weight: bold;">ASY EXTERNAL</span><span class="f_mine-6"> command produces a listing similar to ASY GLOBAL, but in the external coordinate system rather than that of surface 1.</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um461.htm" class="topiclink">Next</a></span><span class="f_mine-6" style="font-family: 'Times New Roman';"> </span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

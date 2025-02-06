@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>center thickness control</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ACC, auto center-thickness control,ACM, center-thickness minimum control,CTC, CTT,optimization--&gt;,thickness, preventing thick elements" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="aacc"></a></p>
+<p><a name="acm"></a><span class="f_mine" style="font-weight: bold;">10.3.8 Center thickness control (ACC, ACM) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1039.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1037.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Center thicknesses may be controlled automatically with the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">ACC [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;">  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> &nbsp;[ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">ACM [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;">  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> &nbsp;[ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">in the AANT file.  </span><span class="f_mine" style="font-weight: bold;">ACC</span><span class="f_mine"> activates a control to prevent thicknesses becoming larger than </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine">, while </span><span class="f_mine" style="font-weight: bold;">ACM</span><span class="f_mine"> prevents them from becoming smaller. &nbsp;TAR is always a positive number, even if the TH is negative. Only a single target may be specified for each of these monitors, which therefore apply those targets to all varying thicknesses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This is one of several kinds of </span><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm#monitor" class="topiclink">monitors</a></span><span class="f_mine"> that operate continuously during optimization.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the event that you wish your thickness variables to stay within a given range – which is usually the case – these controls give you a convenient way to gain that control. &nbsp;You can also give limits to the variables themselves, but the automatic method has advantages and is recommended where practical. &nbsp;Thus, if your range is to be no more than 25.4 mm and no less than 2 mm, you could enter in the AANT file</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ACC 25.4 1 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">ACM 2 1 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">All glass thicknesses declared as variables will be monitored, and the merit function will be penalized if any of them violate the target, with a weight of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine">. &nbsp;The default ACC target is 1 inch, and the default ACM target is 1 lens unit, both with a weight of 1.0. &nbsp;This is a useful tool to prevent lenses from becoming too thick or thin, especially in the initial stages of a design. &nbsp;It applies the same limit to all varying thicknesses. &nbsp;The penalty is applied quadratically up to an error that is equal to </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine">, and linearly thereafter.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Be aware that there are two methods of constraining lens thicknesses. &nbsp;Hard limits are always assigned to TH variables, and you may change those limits via the TLIMIT directive. &nbsp;If the limits are violated at any iteration during optimization, the program scales the solution to put the variable exactly at the limit. &nbsp;Then it can either drop that thickness variable or allow it to keep varying, depending on the status of mode switch 1. &nbsp;This method works but is sometimes slow since some iterations accomplish very little. &nbsp;The other method is to assign very wide limits, so they are not often violated, and use the monitors described above to penalize the MF if the thicknesses stray out of the desired range. &nbsp;This method is activated automatically if switch 55 is turned on when the PANT file is read. &nbsp;The two methods often return very different results, owing to the chaotic nature of the lens design landscape, and both are worth trying.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Individual center thicknesses may also be controlled, either with boundary limits on the variables or by explicit targets in the merit function. &nbsp;Another option uses the mnemonics</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">CTC </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> … &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(Center Thickness Control)</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">CTT</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">... &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(Center Thickness Target)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">CTC</span><span class="f_mine"> provides a one-sided control similar to that available for edge thickness (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um1037.htm" class="topiclink">10.3.7</a></span><span class="f_mine">), while </span><span class="f_mine" style="font-weight: bold;">CTT</span><span class="f_mine"> gives an explicit target. &nbsp;Both of these will override any ACC or ACM control that may be in effect. &nbsp;They may be assigned to air spaces as well as lens elements (unlike ACC and ACM, which only apply to elements). &nbsp;You may enter more than a single set of surfaces numbers and targets. &nbsp;Thus,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: Courier; font-weight: bold;">CTC 9 100 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: Courier; font-weight: bold;">CTC 6.6 100 3</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will control airspace 2 and thickness 3, keeping the former no more than 9 and the latter no more than 6.6 lens units.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">As with edge-thickness aberrations, the values of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> are always entered positive.  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine"> is the desired limit (or value of) the center thickness, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> is the penalty when the value is one unit too large.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1039.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>fifth-order</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="FIFTH-order analysis,lens analysis routines--&gt;,NFIFTH" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;">&nbsp;</p>
+<p><a name="fifth"></a><span style="font-size: 14pt;">6.7 Fifth-order analysis (FIFTH) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-decoration: underline;"><a href="um68.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um66.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Third and fifth-order coefficients are produced by the commands</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> FIFTH / NFIFTH } [ ELEMENT ] &nbsp;[CHROM [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL1</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL2</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">or</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> FIFTH / NFIFTH } [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> / SURFACE ] [ FULL ] [ CHROM [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL1</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL2</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">or</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-size: 10pt; font-weight: bold;"> FIFTH / N FIFTH } [ </span><span class="f_mine" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_mine" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">JSPS</span><span class="f_mine" style="font-size: 10pt; font-weight: bold;"> / P ] [ ELEMENT / FULL ] [ CHROM [ </span><span class="f_mine" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">ICOL1</span><span class="f_mine" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_mine" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">ICOL2</span><span class="f_mine" style="font-size: 10pt; font-weight: bold;"> ] ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSPS</span><span class="f_mine"> are entered, a listing is given only for surfaces in that range. &nbsp;If the optional [ P ] is entered, the listing gives the contribution of each surface. &nbsp;If only SN is entered, the listing gives the fifth-order contribution of that surface only. &nbsp;The FULL option prints the coefficients broken down into the intrinsic and transferred parts; and if only the FIFTH or NFIFTH mnemonic is entered, only the system totals are printed. &nbsp;The CHROM option prints chromatic differences. &nbsp;NFIFTH gives aberrations normalized to F/1 in air. &nbsp;If two color numbers are entered with the mnemonic CHROM, the chromatic difference in fifth-order aberration will be printed for the entered color numbers (the letter “P” is not allowed in this case). &nbsp;Definitions of these aberrations are given in </span><span class="f_mine" style="text-decoration: underline;"><a href="appd.htm" class="topiclink">App. D</a></span><span class="f_mine">.  </span><span class="f_mine" style="font-weight: bold;">FIFTH</span><span class="f_mine"> may be run interactively from the dialog </span><span class="f_mine" style="font-weight: bold;">MFT</span><a name="65fifth"></a><span class="f_mine">. &nbsp;The output is in lens units.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program calculates the 5th-order aberrations with an algebraic method that works for all simple shapes and some of the more complex ones -- but is not applicable for all shapes. Surfaces defined as HOEs, Forbes polynomials, and the like.do not lend themselves to this calculation, so the program instead evaluates the aberrations at the final surface by tracing a set of rays and fitting the intercepts to a power series, the terms of which correspond closely to the desired aberrations. &nbsp;This approach itself has limitations however: it does not return the aberrations of only a section of the lens, so the requested surfaces, if any, must then include the entire lens. &nbsp;Also, it does not return the pupil aberrations, which are therefore unavailable with those shapes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The fifth-order aberrations are:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 42px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SA5</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">fifth-order spherical aberration</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CO5</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">tangential coma</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TI5</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">tangential astigmatism</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SI5</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">sagittal astigmatism</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PZ5</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Petzval curvature</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">DI5</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">distortion/GIHT (distortion / 1.0 with </span><span class="f_mine" style="font-weight: bold;">NFIFTH</span><span class="f_mine">)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TOBSA</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">tangential oblique spherical</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SOBSA</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">sagittal oblique spherical</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ECOMA</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">elliptical coma</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Example fifth-order output is given below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">SYNOPSYS AI&gt;FIFTH SUR </span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> ID TRIPLET &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4111 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;15-FEB-98 &nbsp; 16:16:38</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> FIFTH-ORDER ABERRATION ANALYSIS</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> FOCAL LENGTH &nbsp;ENT PUP SEMI-APER &nbsp;GAUSS IMAGE HT</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; &nbsp; &nbsp; 49.600 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8.928 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;17.936</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> SURF &nbsp; &nbsp; &nbsp; &nbsp; SPH ABERR &nbsp; &nbsp; &nbsp; COMA &nbsp;TAN ASTIG &nbsp;SAG ASTIG &nbsp; &nbsp;PETZVAL DISTORTION</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(SA5) &nbsp; &nbsp; &nbsp;(CO5) &nbsp; &nbsp; &nbsp;(TI5) &nbsp; &nbsp; &nbsp;(SI5) &nbsp; &nbsp; &nbsp;(PZ5) &nbsp;(DI5(FR))</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> _____________________________________________________________________________</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -0.01454 &nbsp; -0.02544 &nbsp; &nbsp;0.05641 &nbsp; &nbsp;0.03509 &nbsp; &nbsp;0.02976 &nbsp; &nbsp;0.00103</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -0.04628 &nbsp; &nbsp;0.22905 &nbsp; -0.81074 &nbsp; -0.17633 &nbsp; -0.01773 &nbsp; &nbsp;0.01153</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.12137 &nbsp; -0.40967 &nbsp; &nbsp;0.53676 &nbsp; &nbsp;0.12105 &nbsp; &nbsp;0.01713 &nbsp; -0.00721</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.07692 &nbsp; &nbsp;0.25777 &nbsp; &nbsp;0.86787 &nbsp; &nbsp;0.23771 &nbsp; &nbsp;0.08017 &nbsp; &nbsp;0.02960</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -0.01623 &nbsp; -0.11698 &nbsp; -0.91794 &nbsp; -0.20407 &nbsp; -0.02560 &nbsp; -0.03205</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -0.08168 &nbsp; &nbsp;0.14605 &nbsp; &nbsp;0.13102 &nbsp; &nbsp;0.05512 &nbsp; &nbsp;0.03615 &nbsp; -0.00383</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> SUM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.03956 &nbsp; &nbsp;0.08080 &nbsp; -0.13662 &nbsp; &nbsp;0.06858 &nbsp; &nbsp;0.11988 &nbsp; -0.00092</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> SURF &nbsp; &nbsp; &nbsp; &nbsp;TAN OBL SA SAG OBL SA ELLIP COMA</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(TOBSA) &nbsp; &nbsp;(SOBSA) &nbsp; &nbsp;(ECOMA)</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> ____________________________________________</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -0.00393 &nbsp; -0.02256 &nbsp; &nbsp;0.04329</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -0.51860 &nbsp; -0.14161 &nbsp; &nbsp;0.84807</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.64308 &nbsp; &nbsp;0.18812 &nbsp; -0.72980</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.28642 &nbsp; &nbsp;0.14424 &nbsp; &nbsp;0.38090</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -0.23420 &nbsp; -0.09509 &nbsp; -0.21798</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.09711 &nbsp; -0.00063 &nbsp; -0.29082</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> SUM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.26989 &nbsp; &nbsp;0.07247 &nbsp; &nbsp;0.03366</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um68.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

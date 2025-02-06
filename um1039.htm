@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>MTF aberrations</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="MTF aberrations,optimization--&gt;" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">10.3.9 MTF Aberrations &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10310.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1038.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SYNOPSYS provides an option to target the diffraction MTF directly in the merit function. &nbsp;This has proved to be a powerful way to balance residual aberrations, and can sometimes markedly improve the performance of the lens. &nbsp;Nevertheless, it must be considered a tool to be used as a last resort, rather than a standard procedure, for two reasons:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The first is that the process of evaluating the MTF (the convolution MTF routine is used for this purpose) is many times slower than the normal raytracing required during optimization. &nbsp;When optimizing MTF's one may have to wait hours rather than minutes for the optimization to finish.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The second reason is that the process can only be applied to lenses that are already quite close to the diffraction limit. This is an important restriction. &nbsp;The MTF of a lens tends to oscillate with respect to nearly every parameter involved. &nbsp;And if a lens is not perfect, the MTF will oscillate at the higher spatial frequencies as well, as shown below.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f12.png" width="396" height="294" alt="um10f12" style="width:396px;height:294px;border:none"></p>
+<p class="p_mine"><span class="f_mine">Typical MTF curves showing how the modulus oscillates with spatial frequency.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The MTF at a given frequency will also oscillate as a lens variable is changed, as shown below. &nbsp;Although less well known, this effect is intrinsic to a wave-based criterion like the MTF, and completely rules out its use as a general tool for optimization. &nbsp;Every optimization method that has enjoyed some success utilizes the first (and sometimes the second) derivative of the aberration with respect to the design variable, in order to find an improved solution. &nbsp;But if the derivative changes sign rapidly between the initial solution and the desired one, no procedure other than a random search can go from one to the other.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f13.png" width="295" height="397" alt="um10f13" style="width:295px;height:397px;border:none"></p>
+<p class="p_mine"><span class="f_mine">Plot showing how the MTF of a lens oscillates when a construction parameter is changed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To qualify for MTF optimization, the lens must already be corrected well enough so that there are no minima of the MTF curve at a frequency lower than the target frequency, and no minima of the MTF for values of the variables between the starting value and the improved solution. &nbsp;These two requirements are closely related, and satisfying the first is probably sufficient.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Suppose that the MTF in the above figure were to be corrected at point A (which does not satisfy the above rule). &nbsp;The program would try to raise the MTF value at that point, and would move the design over to point B. &nbsp;This is a local maximum, and once there, the program would stop. &nbsp;But this is not the desired maximum. &nbsp;If the starting point were to be point C, the design would succeed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To use MTF optimization to good effect, you should follow these steps:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.</span></p>
+</td>
+<td style="vertical-align:top; width:521px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Correct the lens first with individual rays or OPD's. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">GSR</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">GTR</span><span class="f_mine"> options are simple and efficient. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">GNR</span><span class="f_mine"> option will improve the lens as much as it can be improved via geometrical ray targets.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+</td>
+<td style="vertical-align:top; width:521px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Plot the MTF curve at several field points, and select a frequency lower than any minima that occur on the plots.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">3</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+</td>
+<td style="vertical-align:top; width:521px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Target the MTF to PERF at those field points and frequencies. &nbsp;If the initial lens satisfies these requirements, the program will sense and reject any solution that appears to have an MTF curve in violation of these rules. &nbsp;An improved lens should result.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The MTF calculated by the optimization program always uses the wavefront interpolation method, which is explained more fully in </span><span class="f_mine" style="text-decoration: underline;"><a href="um8631.htm" class="topiclink">Section 6.6.3.1</a></span><span class="f_mine">. &nbsp; This will employ a linear spline fit to the wavefront. &nbsp;The latter is many times slower, but is necessary if the wavefront is not well behaved.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">MTF optimization should be used with caution if you intend to use the </span><span class="f_mine" style="text-decoration: underline;"><a href="um1012.htm#kick" class="topiclink">KICK</a></span><span class="f_mine"> or ANNEAL functions. &nbsp;Those options will alter the lens to an extent that the MTF may no longer be in the vicinity of a maximum, and the procedure will not work in that case</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span><span class="f_mine"> &nbsp;You can use annealing if you are careful to request a rather low initial temperature, so the design changes but little.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Finally, we note that you should never use MTF aberrations as part of the adjustment in a <a href="um125.htm#mc" class="topiclink">Monte-Carlo</a> tolerance analysis. &nbsp;That program will almost certainly perturb the lens so it is no longer close to the optimum focus.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Input formats for MTF optimization are:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f14.png" width="390" height="112" alt="um10f14" style="width:390px;height:112px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um10311.htm#obs" class="topiclink">TAR</a></span><span class="f_mine"> is the desired MTF and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um10311.htm#obs" class="topiclink">WT</a></span><span class="f_mine"> is the relative weight.  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um10311.htm#obs" class="topiclink">OBS</a></span><span class="f_mine"> input is honored, but the obscuration must be centered (argument </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">P1</span><span class="f_mine"> is ignored).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For the MTF family of aberrations, you are permitted to enter the characters “</span><span class="f_mine" style="font-weight: bold;">PERF</span><span class="f_mine">” in place of the target value. &nbsp;The program will then substitute the approximate value of a perfect MTF at the entered spatial frequency, calculated for the paraxial F/number and major color, for an unobscured circular pupil. &nbsp;This estimate has a precision of about 1%, and works better than asking for an MTF of 1.0 (which would be very nice if you could get it!), since if the lens is close to the diffraction limit, you want the error to be a small number in order to properly balance that aberration against others that might not yet be well corrected.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ICOL</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the color number, “</span><span class="f_mine" style="font-weight: bold;">M</span><span class="f_mine">” requests a multicolor MTF, and “</span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine">” just the primary color.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">XMTF,YMTF</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specify a particular MTF direction to be controlled. &nbsp;These are recommended when only one is important.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">AMTF</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">targets the average of the XMTF and YMTF at the requested color(s), field, and spatial wavelength.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">MTF</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">targets the geometric mean of the XMTF and YMTF &nbsp;For general usage, this option is recommended.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">MTX, MTY</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">may be requested (in this order, as two aberrations) when specific targets are to be given to both the X and Y MTF at the same frequency. &nbsp;Only one calculation is performed for both.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">C/MM</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the desired MTF frequency to be controlled. If the lens is </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#afocal" class="topiclink">AFOCAL</a></span><span class="f_mine">, this entry is actually in c/mr instead of c/mm.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10310.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

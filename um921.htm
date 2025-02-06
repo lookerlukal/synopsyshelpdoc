@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um921</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="FDS" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="fds"></a><span class="f_mine" style="font-size: 14pt;">9.2.1 Find Detector Size (FDS)</span><span class="f_mine" style="font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um93.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um92.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Another use for the image model described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um91.htm" class="topiclink">Section 9.1</a></span><span class="f_mine"> is to find the radius of the circle that just encloses a given percentage of the image energy. &nbsp;You can read the same information off of the encircled energy plot, described in the next section – but here is a way to get exactly the answer you need when you don’t want to see the whole curve.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">After the model is created, enter the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">FDS </span><span class="f_mine" style="text-decoration: underline;">PERCENT</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">XOS</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">YOS</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">PERCENT</span><span class="f_mine"> is a number between 10 and 100, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XOS</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YOS</span><span class="f_mine"> give the position, at the image, of the center of the circular area to be evaluated. &nbsp;If the requested amount of energy is found within the image model, the program prints the radius of the circle that encloses it. &nbsp;If not, an informative error message is produced. &nbsp;(If </span><span class="f_mine" style="text-decoration: underline;">PERCENT</span><span class="f_mine"> is a value between 0 and 1, the program will interpret it as a </span><span class="f_mine" style="font-style: italic;">fraction</span><span class="f_mine"> rather than a percent.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For example, here is how to find the 80-percent circle for a telescope:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">GET 4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">DMOD M 1 500 &nbsp; &nbsp; &nbsp; &nbsp;; make a multicolor diffraction image model</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">FDS 80 0 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; find the 80% energy circle</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> THE RADIUS OF THE CIRCLE CENTERED AT &nbsp; &nbsp;0.000 &nbsp; &nbsp; &nbsp; 0.000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> CONTAINING &nbsp;80.00 PERCENT OF THE ENERGY IS 0.60136E-03</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="text-decoration: underline;"><a href="um93.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span> </p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

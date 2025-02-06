@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um 3342</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">um 3342</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;background:url(background-topic-header.jpg)" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   &raquo;No topics above this level&laquo;
+   </p>
+   <h1 class="p_Heading1"><span class="f_Heading1">um 3342</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <img src="hm_btn_navigate_prev_d.png" border="0"
+        ><a href="main_index.htm"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img name=main src="hm_btn_navigate_top.png" border=0 alt="Return to chapter overview"
+        ></a><img src="hm_btn_navigate_next_d.png" border="0">
+    </td>
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><span style="font-size: 14pt; font-weight: bold;">3.3.4.2. &nbsp;GRIN ENM</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; text-decoration: underline;"><a href="um14_2.htm" class="topiclink">ENM</a></span> can model environmental effects on surfaces and lenses, as explained in Section 14.2. &nbsp;To model a change of index, it defines the current lens as a special type of gradient-index material called GRIN ENM. &nbsp;This model uses the same polynomial representation of the index as that used for surface deformations by ENM:</p>
+<p>&nbsp;</p>
+<p style="margin: 7px 0px 7px 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;">INDEX = (nominal index at current color) + A2R**2 + A3R**4 + A4R**6 + A5X + A6Y + A7X**2 + A8Y**2 + A9*X*Y</span></p>
+<p style="margin: 7px 0px 7px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">where R**2 = X**2 + Y**2, R4 = R**4, and R6 = R**6.</span></p>
+<p style="margin: 7px 0px 7px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">With these data one can model the case where one side of a lens is hotter than the other, or where the rim is at a different temperature than the center, for example. &nbsp;Input for this kind of GRIN is as follows:</span></p>
+<p style="margin: 7px 0px 7px 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">SN</span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;"> GRIN ENM </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">DT</span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">N1</span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">N2</span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">N3</span></p>
+<p style="margin: 7px 0px 7px 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">A2</span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">A3</span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">A4</span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">A5</span></p>
+<p style="margin: 7px 0px 7px 24px;"><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">A6</span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">A7</span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">A8</span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">A9</span></p>
+<p style="margin: 7px 0px 7px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">DT</span><span style="font-size: 12pt; font-family: 'Times New Roman';"> is the integration step length, and </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">N1</span><span style="font-size: 12pt; font-family: 'Times New Roman';"> to </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold; text-decoration: underline;">N3</span><span style="font-size: 12pt; font-family: 'Times New Roman';"> are the nominal index values at the axis.</span></p>
+<p style="margin: 7px 0px 7px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">Note that, with all GRIN materials in SYNOPSYS, the system must have exactly one or three wavelengths defined. &nbsp;Once a material has been declared in this way, the data apply only to the current wavelengths. &nbsp;To change wavelengths, you have to go back to the system before it was modified by ENM, change the wavelengths there, and then run ENM again.</span></p>
+<p style="margin: 7px 0px 7px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;">Example:</span></p>
+<p style="margin: 7px 0px 7px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">Suppose the element at surface 6 of the relay telescope is exposed to sunlight on the top, so the index is slightly higher there. &nbsp;The input would be</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">FET 4</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">CHG</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">NTOP</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">END</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">ENM</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">DATA</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">6 2</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">0 0 0 0&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">0.002 0 0 0</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">END</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">FRINGES &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; font-weight: bold; background-color: #ffffff;">PUPIL P 0 0 5 0 0 0 &nbsp;</span></p>
+<p>&nbsp;</p>
+<p style="margin: 7px 0px 7px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">The plot that it produces is shown below. &nbsp;The fringes are not axially symmetric.</span></p>
+<p style="margin: 7px 0px 7px 0px;"><img src="clip0388.png" width="771" height="571" alt="clip0388" style="width:771px;height:571px;border:none"></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>

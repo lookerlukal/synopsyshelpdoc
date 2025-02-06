@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um8.6.1.2</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="FIS,fringes at intermediate surface" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="fis"></a><span class="f_mine" style="font-weight: bold;">8.6.1.2 Fringes at Intermediate Surface (FIS) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um862.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8_6_1_1.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The PUPIL feature described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um861.htm" class="topiclink">Section 8.6.1</a></span><span class="f_mine"> can show the fringes of a wavefront that is calculated at the final surface and drawn in a variety of ways, including as fringes. &nbsp;The location of each ray point at the fringes is taken from the ray coordinate at the </span><span class="f_mine" style="font-style: italic;">entrance pupil</span><span class="f_mine">, however, and the picture does not show any distortion of the exit pupil, if any.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The feature described in this section can plot the fringes of the wavefront at any intermediate surface in the lens, with the ray locations taken from an exact raytrace. &nbsp;Thus, it shows the position and shape of the beam at that location, along with the OPD displayed as a fringe pattern. &nbsp;It can be run from the dialog MDI.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Bear in mind that the OPDs are calculated </span><span class="f_mine" style="font-style: italic;">at</span><span class="f_mine"> the target surface, but not </span><span class="f_mine" style="font-style: italic;">on</span><span class="f_mine"> the surface. &nbsp;They give the OPD relative to a reference sphere located at that point in the lens, but ignore the actual shape of that surface. &nbsp;If it is assigned a </span><span class="f_mine" style="font-style: italic;">relative</span><span class="f_mine"> tilt, the program will emulate a tilted wavefront there with a calculated wedge in X or Y that gives the same OPD shift at each ray point as one would expect from that tilt angle.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the beam is not centered on the target surface, the entire plot is shifted in X and Y accordingly and shows the actual beam location at the surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Input is:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FIS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ISN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-weight: bold;"> { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">REF</span><span class="f_mine" style="font-weight: bold;"> / PARAX } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WX</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WY</span><span class="f_mine" style="font-weight: bold;">  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NGRID</span><span class="f_mine" style="font-weight: bold;"> [ FULL ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this input,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 54px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is a color number. &nbsp;“P” may be entered to specify the primary color, but there is no multicolor “M” for this feature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the fractional field in the Y-Z plane.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ISN</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the surface following which to find the wavefront fringes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is a scale factor. &nbsp;Entering 1.0 will draw the picture at 1x scale. &nbsp;Entering zero will produce a default picture that is about five inches across.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the fractional skew field point.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">REF</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">determines how the program will interpret the OPDs of the rays. &nbsp;If this entry is zero, the beam at the requested surface will be treated as though the lens were in AFOCAL mode at that point, and the fringes will therefore be relative to a flat reference wavefront. &nbsp;If a nonzero value is entered, that will be the distance to the center of the reference wavefront.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the word “</span><span class="f_mine" style="font-weight: bold;">PARAX</span><span class="f_mine">” is entered for </span><span class="f_mine" style="text-decoration: underline;">REF</span><span class="f_mine">, the program will calculate the location of the paraxial focus position following surface </span><span class="f_mine" style="text-decoration: underline;">ISN</span><span class="f_mine"> and will make that the reference surface. &nbsp;This option is probably easier for most users, when paraxial raytracing is meaningful.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WX</span><span class="f_mine" style="font-weight: bold;">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WY</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These entries apply an optional wedge in X and Y to the wavefront fringes. &nbsp;Here things get a little tricky, however. &nbsp;In the case of the </span><span class="f_mine" style="text-decoration: underline;"><a href="um861.htm" class="topiclink">PUPIL</a></span><span class="f_mine"> analysis, the wedge applies across the entrance pupil, which is normalized according to the pupil definition. &nbsp;But FIS shows the local wavefront at a different point, which is usually of a different size. &nbsp;So the program has to know at what aperture the requested wedge will show up, and to do this it divides the current ray position by the current clear aperture assigned to that surface (or calculated by default). &nbsp;If the wavefront nicely fills that CAO, the fringes will be as expected; if it is smaller than that value, then fewer fringes will show up.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NGRID</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry controls the grid number of the evaluation. &nbsp;The default is 100 x 100, and you may enter any number up to 500.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[FULL]</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">FIS</span><span class="f_mine"> also calculates a set of </span><span class="f_mine" style="font-weight: bold;">Zernike</span><span class="f_mine"> coefficients that model the observed fringe pattern. &nbsp;They will be printed in compact form unless the optional </span><span class="f_mine" style="font-weight: bold;">FULL</span><span class="f_mine"> is entered in word 11. &nbsp;That will produce a full listing of each polynomial.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that the Zernike polynomials are usually cast over a unit circle, which is not appropriate here, since the actual beam dimensions are likely not that size. &nbsp;So the program scales the ray coordinates on the target surface by the total beam size in X and Y, thereby normalizing the data input to the Zernike analysis code. &nbsp;You have to keep this in mind if you wish to utilize the coefficients later. &nbsp;(The X and Y parameters to the expansion are normalized by that beam size.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate this feature, we get the relay telescope out and find the fringe pattern and location at surface 11, in color 3, at full field. &nbsp;The image is formed at a distance of 12.711 inches from surface 11, so we enter this reference dimension with the input</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FETCH 4</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FIS 3 1 11 0 0 12.711.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="fis1.png" width="655" height="489" alt="fis1" style="width:655px;height:489px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that the pattern is decentered in Y, which agrees with the raytrace below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="fis2.png" width="411" height="250" alt="fis2" style="width:411px;height:250px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now we show the fringe pattern at the output of a more complex system:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="fis3.png" width="356" height="276" alt="fis3" style="width:356px;height:276px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="fis4.png" width="693" height="519" alt="fis4" style="width:693px;height:519px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this case, the output is collimated so we do not enter a </span><span class="f_mine" style="text-decoration: underline;">REF</span><span class="f_mine"> dimension. &nbsp;The input for this analysis was:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FET X16</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FIS P 1 12 0 0 &nbsp;.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Special caution is in order for </span><span class="f_mine" style="font-weight: bold;">nonsequential</span><span class="f_mine"> systems. &nbsp;FIS alters the lens according to the details of the analysis, and it can happen that an essential surface for nonsequential raytracing is no longer present. &nbsp;In that case the results will have little meaning, and you are advised to request a surface number that is not coincident with any surface declared CAPTURE, LOOSE, etc. &nbsp;This will ensure that those surfaces remain undisturbed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um862.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

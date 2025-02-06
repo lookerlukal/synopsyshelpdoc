@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>physical parameter aberrations, edge thickness</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="optimization--&gt;" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-weight: bold;">MOM – Physical Parameter Aberrations</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">In this dialog you can specify physical parameters to be controlled during optimization. &nbsp;Click on a ‘</span><span class="f_footnotetext" style="font-weight: bold;">USE’</span><span class="f_footnotetext"> button, and then select the desired target value, the weighting relative to other aberrations, and then the quantity you want to control, from the drop-down list. &nbsp;If you want a radius or thickness to move to a particular value and stay there, it is best to use this option rather than to try to simply give very tight limits to that variable and hope that the optimization will then move it to that value.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">You can also control edge thicknesses and prevent feathering with this dialog. &nbsp;SYNOPSYS controls edge feathering by calculating the separation between the intercepts of a selected ray at both sides of an element, and comparing this distance with the element thickness: if the sign has changed the lens is feathered. &nbsp;You can request that the program automatically monitor the edges of all elements whose thicknesses are varied (select the box that says “Automatically control edges …”), and you can also explicitly select which surfaces to consider and which of two rays it will trace for this purpose. &nbsp;The rays can be either the upper or lower rim rays at the full-field object. &nbsp;You can use the mnemonics </span><span class="f_footnotetext" style="font-weight: bold;">ECP</span><span class="f_footnotetext"> and </span><span class="f_footnotetext" style="font-weight: bold;">ECN</span><span class="f_footnotetext"> in a MACro, to specify the </span><span class="f_footnotetext" style="font-weight: bold;">P</span><span class="f_footnotetext">ositive or </span><span class="f_footnotetext" style="font-weight: bold;">N</span><span class="f_footnotetext">egative ray (see </span><span class="f_footnotetext" style="text-decoration: underline;"><a href="um1037.htm" class="topiclink">section 10.3.7</a></span><span class="f_footnotetext"> in the User’s Manual). &nbsp;In this dialog, click the appropriate edge-control ‘</span><span class="f_footnotetext" style="font-weight: bold;">USE</span><span class="f_footnotetext">’ box, and then click on the vertex of the first side of each element or airspace that you want to control.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Lens optimization is a delicate business, like tuning a racing car; and this is especially true of edge-control aberrations. &nbsp;It is best to start with a low weight at first, and slowly increase it until the result is satisfactory. &nbsp;If this, or any other, aberration is given excessive weight, the program will correct it at all cost, often changing the lens so drastically that it enters a whole new solution region – which you may not want to do.</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

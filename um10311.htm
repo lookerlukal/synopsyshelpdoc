@@ -1,0 +1,429 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>automatic raygrid generation</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="GSHEAR,Shear optimization" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="gnr"></a><span class="f_mine" style="font-weight: bold;">10.3.1.1 Automatic generation of ray aberrations &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10312.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1031.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The automatic ray-generating feature constructs a ray pattern of a selected type, and adds selected properties of the rays to the merit function. &nbsp;This feature (except for IPVAR) does not require the “</span><span class="f_mine" style="font-weight: bold;">M TAR WT …</span><span class="f_mine">” line described in the above section, since the target and weight of each ray or blur size is assigned by the program according to the rules implied in the pattern mnemonic. &nbsp;Input consists of one or more of the following lines:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="width:607px; border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;">GNR </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">RT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ F [ </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">XWT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> ] ] ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_t1-3" style="font-size: 10pt;">transverse coordinates</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;">GXR </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">RT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ F ] ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt;">only correct XC coordinates</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;">GYR </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">RT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ F ] ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt;">only correct YC coordinates</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;">GSR</span><span class="f_t1-3" style="font-size: 9pt;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">RT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ F ] ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt;">sagittal fan only, correct </span><span class="f_t1-3" style="font-size: 10pt; text-decoration: underline;"><a href="um10312.htm#axc" class="topiclink">XC</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:35px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:35px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;">GTR</span><span class="f_t1-3" style="font-size: 9pt;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">RT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ F ] ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:35px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt;">tangential fan only, correct </span><span class="f_t1-3" style="font-size: 10pt; text-decoration: underline;"><a href="um10312.htm#ayc" class="topiclink">YC</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:35px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:35px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;">GPR</span><span class="f_t1-3" style="font-size: 9pt;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">RT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ F [ </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">XWT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> ] ] ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:35px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt;">errors from </span><span class="f_t1-3" style="font-size: 10pt; text-decoration: underline;"><a href="um10311.htm#principal" class="topiclink">principal</a></span><span class="f_t1-3" style="font-size: 10pt;"> ray</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;">GNO </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">RT</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> [ 0 F ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 10pt; font-weight: bold;">OPD </span><span class="f_t2-2" style="font-size: 10pt;">targets</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;">GSO</span><span class="f_t2-2" style="font-size: 9pt;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">RT</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> [ 0 F ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 10pt;">sagittal fan only</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;">GTO</span><span class="f_t2-2" style="font-size: 9pt;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">RT</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> [ 0 F ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 10pt;">tangential fan only</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;">GPO</span><span class="f_t2-2" style="font-size: 9pt;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">RT</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t2-2" style="font-size: 9pt; font-weight: bold;"> [ 0 F ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 10pt;">reference at principal ray</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;">GO2 </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">RT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ 0 F ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;">OPD </span><span class="f_t1-3" style="font-size: 10pt;">targets squared</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;">GNN 0 </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt;">correction to centroid</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;">GNV 0 </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> [ 0 F ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt;">wavefront variance</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;">GPV 0 </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;"> [ 0 F ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:17px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt;">reference at principal ray</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;">GTP </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">RT</span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;"> 0 0 </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">SN</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt;">pupil aberrations on surface SN</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;">GDR 0 </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;"> [ ICOL / P ] </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">HX</span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">HY</span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold;"> [ 0 F ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt;">array to correct distortion. </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">HX</span><span class="f_t1-3" style="font-size: 10pt;"> and </span><span class="f_t1-3" style="font-size: 10pt; font-weight: bold; text-decoration: underline;">HY</span><span class="f_t1-3" style="font-size: 10pt;"> give the target XA and YA for the chef ray at full field in X and Y. &nbsp;If XPP0 is zero, only targets in Y are considered. &nbsp;If &quot;F&quot; is in word 9, both positive and negative GBARs are corrected. &nbsp;(This form does not support color &quot;M&quot;.)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;">GSHEAR </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">SHEAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">DEL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> &nbsp;[ X / Y [ F ] ]</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt;">See below.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:5px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:307px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;">M </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">TAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">WT</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> A </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> IPVAR </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 9pt; font-weight: bold; text-decoration: underline;">GBAR</span></p>
+</td>
+<td style="vertical-align:top; width:266px; height:18px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 10pt;">See below</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="rtparameter"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RT</span><span class="f_mine"> is an aperture-dependent weighting factor, from which the weight of each ray is determined as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">weight = </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> / (Xen**2 + Yen**2) **</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Xen and Yen are the fractional entrance pupil coordinates of the ray. &nbsp;If </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RT</span><span class="f_mine"> is zero, the ray weight is just equal to </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> for all rays generated. &nbsp;If </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RT</span><span class="f_mine"> is nonzero, the weighting of each ray will depend upon its fractional aperture (</span><a name="fa"></a><span class="f_mine">FA); a value of 1 will cause the rays to be weighted as 1 / FA**2. &nbsp;As a rule, a zero value tends to produce an image of high contrast, while a value of 1 produces lower contrast but higher resolution. &nbsp;Intermediate values will produce intermediate results, and you should select a value of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RT</span><span class="f_mine"> depending on the requirements of the individual lens.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A good rule to remember is that, to optimize the RMS spot size, the value of RT should be zero. &nbsp;This weights all rays equally, as they are when calculating the RMS spot. &nbsp;To get the highest MTF, on the other hand, a value up to 1.0 may work best; and when that has gone as far as it can, you can switch to MTF aberrations or the GSH method of optimizing a given OPD shear. &nbsp;For example, if you want to peak the MTF at 0.33 of cutoff, the SHEAR value would be 033. &nbsp;For maximizing the Strehl ratio with OPDs, the value should usually be 1.0, since that weight applies to the wavefront variance, from which the Strehl ratio is computed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you enter a non-zero value for </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RT</span><span class="f_mine">, the program alters the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> parameter in such a way that the overall impact of the set of rays is roughly the same as with a zero </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RT</span><span class="f_mine">. &nbsp;This is done to ensure that the balance between ray aberrations and any mechanical targets you may have requested is not greatly altered when you change the value of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RT</span><span class="f_mine">. &nbsp;Otherwise, rays near the center of the pupil might get a very large weight and force the program to upset that balance, ignoring other requirements in order to control only those rays. &nbsp;Thus, when </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> is adjusted, rays near the center will have a greater weight, while rays near the edge will have a lower weight, causing the image structure to change but also maintaining control over your mechanical or other targets. &nbsp;The value of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RT</span><span class="f_mine"> should in most cases be between 0 and 1. &nbsp;Larger values will defeat the adjustment of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> and will probably upset the balance.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If mode switch 83 is on, the weight given above is multiplied by the color weight assigned to that wavelength in the lens file.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may substitute “</span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine">” for the color number in all of the above definitions. &nbsp;This requests just the primary color. You may also use the letter &quot;</span><span class="f_mine" style="font-weight: bold;">M</span><span class="f_mine">&quot;, which causes a set of ray aberrations to be generated at all defined colors. &nbsp;If you want different weights on each color, you have to enter separate requests for each one.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The &quot;</span><span class="f_mine" style="font-weight: bold;">F</span><span class="f_mine">&quot; option on these lines causes the program to generate rays on both sides of the pupil. &nbsp;Normally, rays are traced on one side only, since most lenses exhibit bilateral symmetry and correction on one side automatically corrects the other. &nbsp;But if your lens is not symmetric, you can use this option to control the entire pupil. &nbsp;Doing so increases the time required to evaluate the MF, so it should not be requested unless needed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A </span><span class="f_mine" style="font-weight: bold;">GNR</span><span class="f_mine"> request will generate a YC and an XC aberration for each ray in a grid, the resolution of which is given by the entry </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DEL</span><span class="f_mine">. &nbsp;This entry represents the number of partitions to be made to the semi-aperture, as shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f6.png" width="525" height="456" alt="um10f6" style="width:525px;height:456px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XWT</span><span class="f_mine"> if entered, is the weight that applies to the X-component of the ray aberration, which therefore may differ from that given by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> to the Y-component. &nbsp;The default is </span><span class="f_mine" style="font-weight: bold;">XWT</span><span class="f_mine"> = </span><span class="f_mine" style="font-weight: bold;">WT</span><span class="f_mine">. &nbsp;For monochromators that disperse in the X-direction it is sometimes useful to set </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XWT</span><span class="f_mine"> to a small value and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> to a larger value.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For </span><span class="f_mine" style="font-weight: bold;">GNR</span><span class="f_mine"> requests, each ray is traced only once even though two aberrations are generated. If </span><span class="f_mine" style="font-weight: bold;">GNO</span><span class="f_mine"> is entered, a single aberration, namely the OPD of the ray, is generated for each ray.  </span><span class="f_mine" style="font-weight: bold;">GSR</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">GTR</span><span class="f_mine"> generate rays in the sagittal or tangential fan only.  </span><span class="f_mine" style="font-weight: bold;">GPR</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">GPO</span><span class="f_mine"> define the ray error with reference to </span><a name="principal"></a><span class="f_mine">the </span><span class="f_mine" style="font-style: italic;">principal</span><span class="f_mine"> ray location, rather than the chief ray. &nbsp;(The chief ray is always taken in the primary color, while the </span><span class="f_mine" style="font-style: italic;">principal ray</span><span class="f_mine"> is in the color of the rayset.) &nbsp;This is useful for designing spectrometers, where the images in several colors are widely separated. &nbsp;It is also useful when an image is sampled by several detectors, and the colors do not have to coincide because the differences can be compensated in software; in that case, you might find it useful to create a polynomial describing the mapping of the image in the various colors. &nbsp;See </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="7_17_cdist.htm" class="topiclink">CDIST</a></span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A message is printed giving the number of rays generated by these options. &nbsp;If switch 29 is turned off prior to the </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> command, the optimizing program will look for the optional </span><span class="f_mine" style="font-weight: bold;">[ P ]</span><span class="f_mine"> on the AANT command. &nbsp;If it is there, the program lists the number of rays that were generated. &nbsp;If not, then the full details of each ray are listed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If a negative number is input for </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DEL</span><span class="f_mine">, the rays will be generated on the left side of the pupil. &nbsp;If the optional </span><span class="f_mine" style="font-weight: bold;">F</span><span class="f_mine"> is included in word 9 of the request, both sides of the pupil will be traced, with twice the number of rays. &nbsp;This should be input if the lens does not exhibit bilateral symmetry.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The value of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DEL</span><span class="f_mine"> should normally be between 2 and 6. &nbsp;A value of 4 generates 26 rays, and the number goes as the square of this value. &nbsp;For most systems, a value of 4 is adequate. &nbsp;For GSR and GTR ray sets, which do not fill a grid, a larger number is sometimes appropriate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may specify individual rays at will in the same merit function as automatically generated rays. &nbsp;For example, if lateral color is a problem that is not easily controlled by the usual GNR aberrations, one might use</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">AANT</span></p>
+</td>
+<td style="vertical-align:top; width:383px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GSR .5 2 5 2 0</span></p>
+</td>
+<td style="vertical-align:top; width:383px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Corrects 5 rays in color 2, on axis</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GNR .5 1 4 1 1</span></p>
+</td>
+<td style="vertical-align:top; width:383px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Ray grid, color 1, full field</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GNR .5 1 4 2 1</span></p>
+</td>
+<td style="vertical-align:top; width:383px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">same, color 2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GNR .5 1 4 3 1</span></p>
+</td>
+<td style="vertical-align:top; width:383px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">and color 3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">M 0 10 A 1 YA 1</span></p>
+</td>
+<td style="vertical-align:top; width:383px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Corrects chromatic aberration, with higher weight</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">S 3 YA 1</span></p>
+</td>
+<td style="vertical-align:top; width:383px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">(See the next section for definitions.)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+</td>
+<td style="vertical-align:top; width:383px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This input will generate 26 rays each in three colors at the full-field point. &nbsp;The on-axis image will have a relative weight of 2, and the off-axis images a weight of 1. &nbsp;The zonal rays at each field point will be weighted more heavily than the marginal rays, by a factor of 1 / 2*FA**2, since we entered a value of .5 for </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RT</span><span class="f_mine">. &nbsp;To improve the lateral color, we specified that the rays in colors 1 and 3 at full field should have the same Y-intercept, with a weight of 10. &nbsp;(This example assumes that the lens has been set up with colors 1 and 3 for the long and short wavelengths, and color 2 for the primary color.) </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GNN</span><span class="f_mine"> corrects the rays relative to the centroid of that set of rays rather than to the chief ray intercept, and always traces over the full pupil (since the centroid of a pencil over only half the pupil is itself decentered and would be inappropriate). &nbsp;While </span><span class="f_mine" style="font-weight: bold;">GNR</span><span class="f_mine"> generates two aberrations for each ray, </span><span class="f_mine" style="font-weight: bold;">GNN</span><span class="f_mine"> generates only one aberration for the whole set: the mean squared spot size measured from the centroid. &nbsp;For best results, a lens should be optimized as far as possible with individual ray aberrations or </span><span class="f_mine" style="font-weight: bold;">GNR</span><span class="f_mine"> requests, and the </span><span class="f_mine" style="font-weight: bold;">GNN</span><span class="f_mine"> option used only to peak up the final image. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">GNN</span><span class="f_mine"> option also permits the centroid coordinates to be controlled explicitly. (See </span><span class="f_mine" style="text-decoration: underline;"><a href="um1033.htm" class="topiclink">section 10.3.3</a></span><span class="f_mine">.) &nbsp;Since the GNN option ignores the location of the chief ray, it will not automatically control later color, and specific targets should be added for that purpose.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GNV</span><span class="f_mine"> causes the variance in the wavefront to be computed for all of the generated rays. &nbsp;It is useful in the final stages of a design to peak up the performance. &nbsp;Note that neither </span><span class="f_mine" style="font-weight: bold;">GNN</span><span class="f_mine"> nor </span><span class="f_mine" style="font-weight: bold;">GNV</span><span class="f_mine"> honors a nonzero </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RT</span><span class="f_mine"> entry; all rays are weighted equally. &nbsp;The variance is taken relative to a sphere centered at the primary-color chief ray point. &nbsp;The effects of lateral color are therefore corrected automatically if the requested color is not the primary color. &nbsp;(For peaking the MTF at a given frequency, the GSHEAR option is superior.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">GPV</span><span class="f_mine"> option is similar to GNV, except that the OPD reference sphere is centered at the image</span><span class="f_mine" style="font-style: italic;"> </span><span class="f_mine">point in the requested color. &nbsp;This is the point that minimizes the variance in that color, and it is usually not exactly at the chief-ray point. &nbsp;GPV is useful when you want each color to form a sharp image, but don't care about lateral color, which is not controlled by this option. &nbsp;If all colors are to focus together, see IPVAR below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GO2</span><span class="f_mine"> is similar to GNV but is usually more powerful. &nbsp;Although minimizing the variance (with GNV) in principle should maximize the Strehl ratio, it suffers from two defects. &nbsp;First, the variance is not sensitive to the </span><span class="f_mine" style="font-style: italic;">average </span><span class="f_mine">OPD, since it is defined as the average of the squares minus the square of the average. &nbsp;So if both of these are large the program only controls the difference, and the OPDs themselves are not strongly driven toward a value of zero. &nbsp;Also, the process discards the sign information of each OPD. &nbsp;In contrast, GO2 calculates the </span><span class="f_mine" style="font-style: italic;">square of each OPD </span><span class="f_mine">and then assigns the sign of the OPD itself to the result. &nbsp;The net effect is to reduce the sum of the squares of the OPDs, which reduces the variance as well if the average is zero, while at the same time trying to reduce each OPD to zero to make this the case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GSHEAR</span><span class="f_mine"> is an alternative to MTF </span><span class="f_mine" style="text-decoration: underline;"><a href="um1039.htm" class="topiclink">aberrations</a></span><span class="f_mine">, which work but can only be used when the design is very close to perfect already. &nbsp;GSHEAR also works best if it is already close to a good solution, but it is more forgiving and can be used earlier in the process.</span><span class="f_mine">  </span><span class="f_t1-3" style="font-size: 11pt;">This form creates traces two rays for each point in the pattern, sheared in X or Y in the pupil with respect to that point. &nbsp;The purpose is to improve the convolution MTF at the entered shear value. &nbsp;It also accepts colors &quot;M&quot; and &quot;P&quot;. &nbsp;The shear value is a fraction of the semi-aperture. &nbsp;Thus, a shear of 1.0 corresponds to the cutoff frequency, and values of 0.5 or less are usually appropriate. &nbsp;The RT value does not apply to this form. &nbsp;Larger shear values produce fewer rays, since rays sheared out of the pupil are ignored.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_t1-3" style="font-size: 11pt;">The </span><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;">IPVAR</span><span class="f_t1-3" style="font-size: 11pt;"> option is another alternative to GNV. &nbsp;The latter calculates the wavefront variance over a grid of rays, where the OPD of each ray is referenced to the path length of the chief ray. &nbsp;If the image centroid is located close to the chief-ray point, this is a valid operand that should help to refine a lens that has already been optimized as well as possible with individual rays or OPDs. &nbsp;But if the peak of the diffraction pattern is shifted away from the centroid, it is better to take the wavefront variance relative to that location, which is what IPVAR does. &nbsp;Note the format: this request requires that the line contain the entries</span><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;"> M </span><span class="f_t1-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">tar</span><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_t1-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">wt</span><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;"> A ..</span><span class="f_t1-3" style="font-size: 11pt;">. as for ray aberrations, as noted in the above table. &nbsp;See </span><span class="f_t1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um868.htm#variance" class="topiclink">Section 8.6.8</a></span><span class="f_t1-3" style="font-size: 11pt;"> for a discussion of the calculation of the image point, which applies to this operand as well. &nbsp;The target should be zero, and you should adjust the weight according to the values of other elements of the MF. &nbsp;This operand involves more calculating than the other forms, so it runs more slowly. The number of rays therefore should not be excessively large; from 50 to 100 is a good range. &nbsp;The RT parameter is ignored for this operand; all rays are equally weighted. &nbsp;Do not specify this or any other variance operand for a lens that is initially not well corrected. &nbsp;It is intended only to peak up a design that is close to optimum already. &nbsp;This operand is similar to </span><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;">GPV</span><span class="f_t1-3" style="font-size: 11pt;">, described above, except that in IPVAR, all colors utilize the same image point reference, while the latter uses a different reference in each color.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="vset"></a><span class="f_mine">It makes sense only to consider rays that are in the entrance pupil and which therefore contribute to the final image, and the above options have several ways of implementing this need. &nbsp;Most of the sophisticated pupil-search options are rather time-consuming, and one would like to use them only when needed. &nbsp;For this reason there are several levels of approximation that are much faster and which may be requested where appropriate. &nbsp;The slower and more accurate methods use the WAP 2 and 3 designations, while the faster ones modify the paraxial pupil according to simple rules. &nbsp;One therefore gets a fairly accurate way to quickly optimize the lens, while expecting to change to the more accurate pupil description later, for final optimization. &nbsp;The </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine"> option is intermediate between the two; the data are found by a search, and used thereafter to modify the paraxial pupil.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="vset"></a><span class="f_mine">To use the simplest vignetting option, assign a paraxial pupil to the lens and then declare that the pupil is vignetted with the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VSET </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FRAC</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">POS</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="text-decoration: underline;">(</span><span class="f_mine">Vignetting SET).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The two parameters specify by how much the beam is reduced in size and decentered in the paraxial pupil. &nbsp;This option is appropriate when you can estimate the nature of the vignetting that you expect will show up in the final lens. &nbsp;So you design to that pupil, and then later specify the clear apertures and pupil definition that actually give that vignetting. &nbsp;This approach is very fast and often sufficiently accurate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">VSET</span><span class="f_mine"> command must appear in the </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> file before the command that generates the rays. &nbsp;The quantity </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FRAC</span><span class="f_mine"> is the fraction to which the relative Y-coordinates of all the rays are reduced at full field, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">POS</span><span class="f_mine"> is the fractional offset in the Y-direction, at full field. &nbsp;It is positive if the shift is toward the upper rim ray.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Thus, to compress the full-field ray set to 70% of its normal height and shift the center of the resulting elliptical pupil in the direction of the upper rim ray by 25% of the paraxial &nbsp;pupil radius, you would enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">VSET .7 .25</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and follow this with the </span><span class="f_mine" style="font-weight: bold;">GNR</span><span class="f_mine"> request. &nbsp;Other field points are affected in proportion, and the on-axis point is not affected. &nbsp;Only the Y-coordinate is reduced. &nbsp;Rays are distributed uniformly in the compressed pupil; the central ray of the rayset is thus shifted by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">POS</span><span class="f_mine">, but the chief ray from which the intercept errors are measured is still centered in the nominal pupil. &nbsp;If you would prefer that the chief ray be centered in the reduced and shifted pupil, then the VSET option is not recommended, and the</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"> <a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine"> option should be used instead.</span></p>
+<p class="p_mine" style="margin: 16px 0px 0px 0px;"><span class="f_mine">The main distinction between the VSET and VFIELD features is that the latter becomes a permanent part of the lens, and the reduced pupil it defines applies to all features of SYNOPSYS. &nbsp;VSET, on the other hand is a temporary setting that only applies to the ray grid geometry used for optimization. &nbsp;The intent is to give you a quick way to evaluate various vignetting factors (with VSET) during optimization – and then, when your design looks promising and you know how much vignetting will be required, you can assign the appropriate VFIELD to the lens. &nbsp;Then you can analyze the system, find the clear apertures that actually give that vignetting (with </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#cfix" class="topiclink">CFIX</a></span><span class="f_mine">), perhaps create an updated set of VFIELD parameters reflecting those apertures (with </span><span class="f_mine" style="text-decoration: underline;"><a href="um524.htm#fvf" class="topiclink">FVF</a></span><span class="f_mine">), and, if necessary, reoptimize the lens again with that pupil definition (and </span><span class="f_mine" style="font-style: italic;">no VSET</span><span class="f_mine">). &nbsp;One simple way to find the apertures giving the desired vignetting is with the WorkSheet, where you can assign and then vary the CAO of a desired surface while watching the ray fans plots to see at which CAO value the fan is properly truncated.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A current </span><span class="f_mine" style="font-weight: bold;">VSET</span><span class="f_mine"> command remains in effect until altered within the same AANT file, and for </span><span class="f_mine" style="text-decoration: underline;"><a href="um1072.htm" class="topiclink">alternate configuration</a></span><span class="f_mine"> optimization, additional </span><span class="f_mine" style="font-weight: bold;">VSET</span><span class="f_mine"> commands may be entered as required prior to each rayset request. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">VSET</span><span class="f_mine"> entry also reduces the aperture used for evaluating edge feathering with the </span><span class="f_mine" style="font-weight: bold;">ECP</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">ECN</span><span class="f_mine"> requests (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um1037.htm" class="topiclink">10.3.7</a></span><span class="f_mine">).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><a name="obs"></a><span style="font-size: 11pt;">Entry of the request</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt; font-weight: bold;">OBS </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">P1</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">R1</span><span style="font-size: 11pt; font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(</span><span style="font-size: 11pt;">or</span><span style="font-size: 11pt; font-weight: bold;"> OBSET </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">R1</span><span style="font-size: 11pt; font-weight: bold;">) &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt;">(OBScuration Set)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">will cause an obscuration at </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">P1</span><span style="font-size: 11pt;"> of fractional radius </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">R1</span><span style="font-size: 11pt;"> to be deleted from the automatically generated sets of rays.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a name="gtp"></a><span style="font-size: 11pt; font-weight: bold;">GTP</span><span style="font-size: 11pt;"> generates a TFAN of rays all passing through the center of the entrance pupil. &nbsp;The fan in this case is a collection of HBAR points. &nbsp;This feature is used to correct the spherical aberration of the pupil on a given surface. &nbsp;Be warned that if your lens uses any of the wide-angle (WAP) pupil options or the VFIELD, then the chief rays will in general </span><span style="font-size: 11pt; font-style: italic;">not</span><span style="font-size: 11pt;"> go through the center of the stop, and using the GTP feature may not make sense.</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10312.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

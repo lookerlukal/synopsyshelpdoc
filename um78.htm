@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um78</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="EFILE,ELIST" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="efile"></a><span class="f_mine" style="font-size: 14pt;">7.8 Edge description file (EFILE, ELIST)</span><span class="f_mine">  &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um79.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um77.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In order to show the edges of lens elements as they are to be manufactured, it is often necessary to define certain dimensions that are not normally part of a lens description, such as the bevel width, etc. &nbsp;This additional information is most easily created with the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="hidd_edgewizard.htm" class="topiclink">Edge Wizard</a></span><span class="f_mine">, but may also be entered with the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um310.htm" class="topiclink">RLE data</a></span><span class="f_mine">, &nbsp;or directly (and temporarily) within the data for </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um77.htm#eld" class="topiclink">ELD</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An older format for entering edge data uses the </span><span class="f_mine" style="font-weight: bold;">EFILE</span><span class="f_mine">, which is largely superseded by the Wizard. &nbsp;It has the useful options of creating a default set of edges or deleting or listing the entire set. &nbsp;For other purposes we recommend the Wizard (MEW) instead.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Once the edge data are defined, they become part of the lens description and are saved with the lens (except data entered directly into ELD, which are temporary). &nbsp;Thus they may be later edited with LE or the Edge Wizard (Command </span><span class="f_mine" style="font-weight: bold;">MEW</span><span class="f_mine">). &nbsp;The EFILE edges will be honored by the lens drawing programs </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#per" class="topiclink">PERSPECTIVE</a></span><span class="f_mine">, <a href="um72.htm#rper" class="topiclink">RPER</a></span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#rper" class="topiclink"> </a></span><span class="f_mine">, <a href="um72.htm#solid" class="topiclink">SOLID</a>,</span><span class="f_mine" style="text-decoration: underline;"> <a href="um72.htm#rsolid" class="topiclink">RSOLID</a></span><span class="f_mine">,  </span><span class="f_mine" style="text-decoration: underline;"><a href="um77.htm#eld" class="topiclink">ELD</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="umch7.htm#dwg" class="topiclink">DWG</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um710.htm#cdwg" class="topiclink">CDWG</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um52.htm#wgt" class="topiclink">WGT</a></span><span class="f_mine">, and </span><span class="f_mine" style="text-decoration: underline;"><a href="um711.htm#zdwg" class="topiclink">ZDWG</a></span><span class="f_mine">, provided that switch 39 is ON. &nbsp;Also, the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="sketchpad.htm" class="topiclink">PAD</a></span><span class="f_mine"> D and PP displays show these edges and give immediate graphical feedback when the Wizard is used.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">EFILE edges are defined by five aperture values, A, B, C, D, and E, as explained in the section on the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="hidd_edgewizard.htm" class="topiclink">Edge Wizard</a>.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="78feile"></a><span class="f_mine">The command </span><span class="f_mine" style="font-weight: bold;">EFILE CREATE</span><span class="f_mine"> creates a whole new set of edge data, based on rules similar to those described in the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um77.htm#eld" class="topiclink">ELD</a></span><span class="f_mine"> section.  </span><span class="f_mine" style="font-weight: bold;">EFILE ERASE</span><span class="f_mine"> deletes the entire set, and the command </span><span class="f_mine" style="font-weight: bold;">ELIST</span><span class="f_mine"> gives a listing of the current edge description data. &nbsp;You can also use the form</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">EFILE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">{ CREATE / LIST / ERASE }</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">or</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">EFILE CREATE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNA</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNB</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The last form generates default EFILE data only for the lens at the entered surface numbers.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">EFILE data can only be assigned to real surfaces (not dummies, with no index change), and cannot be assigned to surfaces whose shape is not rotationally symmetric or elements involving a HOE, DOE, or grating, or to surfaces declared HYPER or found to require a hyperspherical shape by the </span><span class="f_mine" style="text-decoration: underline;"><a href="um62.htm#cap" class="topiclink">CAP</a></span><span class="f_mine"> program.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are many possible combinations of aperture specifications and EFILE edge descriptions, and many, but not all, are permitted; these are described in detail below. &nbsp;Note that the rules for lenses and for mirrors are slightly different.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">LENSES:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:220px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Permitted</span></p>
+</td>
+<td style="vertical-align:top; width:238px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Not permitted</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:220px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">CAO and RAO edges, which may be decentered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">UAP type 4 (inside polygon) is permitted, and type 3 (outside polygon) is permitted only if the surface does not have an RAO aperture.</span></p>
+</td>
+<td style="vertical-align:top; width:238px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">EAO edges (will be converted by the program to CAO edges).</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">MIRRORS (in air)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Permitted</span></p>
+</td>
+<td style="vertical-align:top; width:226px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Not permitted</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">CAO and RAO edges, which may be decentered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">UAP type 4 (inside polygon) is permitted.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:226px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">UAP type 3 (outside polygon) is not supported, except with the form </span><span class="f_mine" style="font-weight: bold;">CMIRROR</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Decentered apertures may work better with </span><span class="f_mine" style="font-weight: bold;">CMIRROR</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may assign </span><span class="f_mine" style="font-weight: bold;">both EFILE edges and CAO or RAO data</span><span class="f_mine"> to a lens element or to a mirror. &nbsp;For a lens, the RAO dimensions should be the same on both sides, and the optional angles must all be zero. &nbsp;The dimensions so provided interact with the EFILE data in special ways, depending on whether they are assigned to a lens or to a mirror. &nbsp;In brief:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. Soft apertures (default CAOs) show up on drawings if the lens does not have EFILE data.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;If EFILE data are assigned, then the EFILE data show up, and soft CAOs have no effect on the drawings.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;If both EFILE and hard CAO data are assigned but the CAO is centered, the latter again has no effect. &nbsp;But </span><span class="f_mine" style="font-style: italic;">if the CAO is decentered</span><span class="f_mine">, it is treated as a cored element, which is an element made by coring out a section from a larger parent. &nbsp;In this case, the parent element is assumed to be edged as usual in accordance with the EFILE parameters, and then a circular section is cored out, with the radius and location given by the hard CAO. &nbsp;This rule is the same for both lenses and mirrors. &nbsp;This feature is intended for off-axis paraboloids, among other things.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">4. &nbsp;If both EFILE and RAO data are assigned, then lenses and mirrors are treated differently. &nbsp;Lenses will again first be edged with the circular EFILE data, and then cut off as required to fit inside the RAO rectangle. &nbsp;This applies whether the RAO is centered or not. &nbsp;For mirrors, on the other hand, the EFILE data will no longer be considered circular. &nbsp;This lets you define a rectangular mirror whose bevels on front and back extend down the length of the rectangle rather than around a circular rim, in accordance with the bevel dimensions in the EFILE data.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">5. &nbsp;The CMIRROR designation is the only one where the back of the mirror is not necessarily perpendicular to the axis. &nbsp;In this form, the back is drawn as an exact copy of the front of the mirror, but shifted in the local Z direction according to the entered mirror thickness. &nbsp;The aperture of the surface is then the common area between the parent circle and any UAP, RAO or CAO in effect, which may be decentered. &nbsp;Note that, if the apertures are decentered, this is the only valid assignment for a mirror.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate these effects, consider the examples below. &nbsp;The first is a lens with a variety of CAO and RAO data, but no EFILE data. &nbsp;The last element is a wedge with a CAO assigned. &nbsp;(Note that </span><span class="f_mine" style="text-decoration: underline;"><a href="umch7.htm#dwg" class="topiclink">DWG</a></span><span class="f_mine"> and PAD/D do not draw edges on wedged elements, while the perspective and other drawing programs do).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="et2.png" width="558" height="338" alt="ET2" style="width:558px;height:338px;border:none"><span class="f_mine"> </span><img src="et2a.png" width="538" height="366" alt="ET2a" style="width:538px;height:366px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The second picture is from </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#per" class="topiclink">RSOLID</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now we assign EFILE data to the elements (except the wedge, which does not accept those data).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="et1.png" width="557" height="325" alt="ET1" style="width:557px;height:325px;border:none"><span class="f_mine"> </span><img src="et1a.png" width="535" height="337" alt="ET1a" style="width:535px;height:337px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In these pictures you can see the EFILE edges where they fall below the CAO and RAO apertures.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The next example shows a system with two off-axis mirrors followed by a wedge and then a decentered doublet.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="et3.png" width="670" height="412" alt="ET3" style="width:670px;height:412px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The illustration below shows two elements that have been assigned an RAO as well as EFILE data. &nbsp;The last element is a pure RAO, with no EFILE in effect.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f29.png" width="719" height="536" alt="um7f29" style="width:719px;height:536px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The next example shows a lens that has been assigned a decentered RAO, with the result that most of the bottom half is cut off. &nbsp;In cases like this, or the above, it is wise to first assign the edge data with the Wizard (MEW), and then assign an RAO to the element. &nbsp;This step can also be done via the Wizard, which conveniently assigns the same RAO dimensions to both sides of the element, which is a requirement.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f30.png" width="534" height="425" alt="um7f30" style="width:534px;height:425px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ELD drawings of elements such as those shown above show only the EFILE edges, since one invariably must first edge the lens circular. &nbsp;You can then make a PER or SOLID drawing of just that element, which will show the compound shape, and annotate that drawing to give the shop the additional edging information.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Mirrors</span><span class="f_mine"> may be assigned EFILE data with an optional thickness parameter. &nbsp;The simplest way to create a rectangular edge is to assign the desired RAO first, before adding EFILE data. &nbsp;Then go to the Edge Wizard, select the surface, select the “Explicit” option (which is required for this feature), and click “Update”. &nbsp;For best results, the EFILE parameter A should equal the semi-aperture of the RAO in Y. &nbsp;If this is not the case, just click on the “-F” button, which will make points A and B equal. &nbsp;The Edge Wizard will then let you directly edit the dimensions of the resulting rectangular edge. &nbsp;To change the Y-dimension of a rectangular edge, change the EFILE parameter “C” on the dialog; to change the X-dimension, alter the data labeled “X/Y”.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="efilerao.png" width="670" height="530" alt="efilerao" style="width:670px;height:530px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The picture above shows several mirrors with RAO apertures that have been assigned EFILE edges and thicknesses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can optionally enter all of the edge parameters yourself in the RLE or CHG file, in the format given in </span><span class="f_mine" style="text-decoration: underline;"><a href="um310.htm" class="topiclink">Section 3.10</a></span><span class="f_mine">. &nbsp;The most useful of these options are</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> EFILE EX1 </span><span class="f_mine" style="text-decoration: underline;">A</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">B</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">C</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">ANG1</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> EFILE EX2 </span><span class="f_mine" style="text-decoration: underline;">E</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">D</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">ANG2</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">With this input you define points A through E and the slope angle of any flat portion. &nbsp;This may be done easily via the WorkSheet, where you can change the values with the Selection slider – but parameters changed in this way are not automatically coupled to others that have to change together. &nbsp;For that reason, </span><span class="f_mine" style="font-weight: bold;">the Wizard is really better</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The next picture shows how a </span><span class="f_mine" style="font-weight: bold;">CMIRROR</span><span class="f_mine"> can be drawn on an ELD plot. &nbsp;Surface 35 in this example is an aspheric mirror of thickness 3 mm cut from a parent of CAO 30 mm. &nbsp;The RLE entry was</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">35 EFILE CMIRROR &nbsp; &nbsp; 3.000000 &nbsp; 30.000000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">35 RAO &nbsp; &nbsp; 57.00000000 &nbsp; &nbsp; &nbsp;30.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp;17.00000000</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; background-color: #ffffff;">The input to make the drawing was</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">SN: 35</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">SCA: 1.5</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">Y1: .7</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">Y2: -1.3</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">CPLOT</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">ELD -SN SCA &nbsp; &nbsp; &nbsp; &nbsp;! Note the negative surface number. &nbsp;This defeats the usual ELD drawing, leaving room for the SOLID plots.</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">ID MIRROR 2</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">ID SAMPLE CMIRROR</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">ID OSD, LLC</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">PLOT</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">SOLID 0 90 SCA SN SN 1 Y1</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">GREY</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">PLOT</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">SOLID 10 30 SCA SN SN 1 Y2</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">GREY</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">PLOT</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt; font-family: 'Courier New Bold'; background-color: #ffffff;">QPLOT</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0170.png" width="768" height="569" alt="clip0170" style="width:768px;height:569px;border:none"></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A sample ELIST output follows.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">SYNOPSYS AI&gt;elist </span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> CURRENT EFILE DATA:</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> Surf. &nbsp; A &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;C &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ANG &nbsp; &nbsp; &nbsp; &nbsp; CAO &nbsp; &nbsp;TYPE</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; E &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ED &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;C &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ANG2 &nbsp; &nbsp; &nbsp; &nbsp;CAO</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -------------------------------------------------------------------------------</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 &nbsp; 20.218 &nbsp; &nbsp; &nbsp;0.0000 &nbsp; &nbsp; 0.12700 &nbsp; &nbsp; &nbsp;20.345 &nbsp; &nbsp; &nbsp;0.0000 &nbsp; &nbsp; &nbsp;18.313 &nbsp; &nbsp;DOWN</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 18.863 &nbsp; &nbsp; 0.46585 &nbsp; &nbsp; &nbsp;1.0160 &nbsp; &nbsp; &nbsp;20.345 &nbsp; &nbsp; &nbsp;0.0000 &nbsp; &nbsp; &nbsp;17.847</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3 &nbsp; 18.026 &nbsp; &nbsp; &nbsp;0.0000 &nbsp; &nbsp; 0.12700 &nbsp; &nbsp; &nbsp;18.153 &nbsp; &nbsp; &nbsp;0.0000 &nbsp; &nbsp; &nbsp;16.121 &nbsp; &nbsp;UP</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 15.628 &nbsp; &nbsp; &nbsp;2.3976 &nbsp; &nbsp; 0.12700 &nbsp; &nbsp; &nbsp;18.153 &nbsp; &nbsp; &nbsp;0.0000 &nbsp; &nbsp; &nbsp;14.358</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5 &nbsp; 15.889 &nbsp; &nbsp; &nbsp;0.0000 &nbsp; &nbsp; 0.12700 &nbsp; &nbsp; &nbsp;16.016 &nbsp; &nbsp; &nbsp;0.0000 &nbsp; &nbsp; &nbsp;13.857 &nbsp; &nbsp;MIX</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 12.658 &nbsp; &nbsp; &nbsp;2.2146 &nbsp; &nbsp; &nbsp;1.1430 &nbsp; &nbsp; &nbsp;16.016 &nbsp; &nbsp; &nbsp;0.0000 &nbsp; &nbsp; &nbsp;11.388</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 7 &nbsp; 13.334 &nbsp; &nbsp; &nbsp;0.0000 &nbsp; &nbsp; 0.12700 &nbsp; &nbsp; &nbsp;13.461 &nbsp; &nbsp; &nbsp;0.0000 &nbsp; &nbsp; &nbsp;12.064 &nbsp; &nbsp;EXPL</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 12.890 &nbsp; &nbsp; 0.44471 &nbsp; &nbsp; 0.12700 &nbsp; &nbsp; &nbsp;13.461 &nbsp; &nbsp; &nbsp;0.0000 &nbsp; &nbsp; &nbsp;11.620</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> CURRENT BEVEL IS &nbsp; 0.1270000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> CURRENT MARGIN IS &nbsp; &nbsp;1.270000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The figures below show a triplet drawn by the default DWG command, and then with an EFILE using only the default edge parameters produced by the CREATE option.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f25.png" width="396" height="294" alt="um7f25" style="width:396px;height:294px;border:none"></p>
+<p class="p_mine"><span class="f_mine">DWG plot with default edges.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f26.png" width="398" height="293" alt="um7f26" style="width:398px;height:293px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">DWG plot with EFILE edges, and switch 39 ON.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="78pefile"></a><span class="f_mine">It is possible for a lens to </span><span class="f_mine" style="font-weight: bold;">pick up the edge parameters</span><span class="f_mine"> from another element. &nbsp;This uses the RLE option </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> PEFILE { +/- } </span><span class="f_mine" style="text-decoration: underline;">JSN</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For example, if the lens is symmetric and the element starting at surface 8 is identical to that on surface 1, but flipped over, you would use</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">{ RLE / CHG }</span></p>
+<p class="p_mine"><span class="f_mine">…</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">8 PEFILE –1</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here, the negative surface number means that the first and second sides of the second lens are interchanged. &nbsp;If the surfaces are both mirrors, where the second side does not really exist but can be shown on drawings as though it did, a negative number causes the apparent mirror thickness to be reversed in sign.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">More information about EFILE parameters may be found in </span><span class="f_mine" style="text-decoration: underline;"><a href="um310.htm" class="topiclink">Section 3.10</a></span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="hidd_edgewizard.htm" class="topiclink">here</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um79.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

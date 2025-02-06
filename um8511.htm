@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um8511</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Foucault test,MFK" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="mfk"></a></p>
+<p><a name="hidd_ftt"></a><span class="f_mine" style="font-weight: bold;">8.5.11 Foucault Knife-edge Tool (MFK) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8512.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8510.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">The command MFK will open a special window that shows the pattern at the pupil one would get in a classic Foucault knife-edge test. &nbsp;You can select the number of rays to trace and the knife-edge scan direction, in X or Y. &nbsp;The program traces the requested number of rays in the primary color and displays the intensity distribution on the screen. &nbsp;You can scan the knife edge in X or Y with the horizontal slider and alter the focus position along the Z axis with the vertical slider. &nbsp;In this way you can simulate the test you would use to verify that a given zone focuses at the correct Z-axis position.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Although this is a geometric analysis, it makes allowance for the effect of diffraction on the results. &nbsp;By pure geometry one would expect that a given ray would either pass the knife edge or would be stopped there, and the display would be all black and white. &nbsp;But the program calculates the estimated radius of the Airy diffraction disk, based on the current FNUM and wavelength, and then convolves the ray intercept with a knife-edge trace of a perfect diffraction pattern. &nbsp;If a ray passes well clear of the edge, it gets a grayscale value of 1.0. &nbsp;if it hits well within the knife, the value is 0.0. &nbsp;If it passes (or is blocked) close to the edge, it is given a weight corresponding to the perfect knife-edge trace value at that distance. &nbsp;You can print the display or convert it into a bitmap, which can be loaded into a Graphics Window, where it may be annotated and then printed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An example MFK display is shown below. &nbsp;This system is an F/8 paraboloid of 16 inches diameter. &nbsp;The RLE file is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">RLE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">ID PARABOLOIDAL MIRROR</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">OBA 256 .5 8</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">UNI INCH</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">WAVL CDF</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">1 RD -256 CC -1 YMT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">1 REFLECTOR</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">MFK</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Notice that in this example, since the Foucault test must be performed at the center of curvature, not the infinite-object focus, that the F/number as tested is actually F/16 instead of F/8. &nbsp;You can of course use this feature for the other focus, but you must then test the actual mirror with a collimated input beam in order to see the same thing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The picture below shows the pattern when the knife is at the axial position, but shifted in Z by –0.16 inches, which is the focus point of the 0.8 zone. &nbsp;The trace at the bottom of the display helps you to identify which zone is currently in focus.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0296.png" width="656" height="654" alt="clip0296" style="width:656px;height:654px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="ronchi"></a> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 14pt; font-weight: bold;">Ronchi Test</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine">A related analysis is the Ronchi test, where instead of a single knife edge one uses a mask with a set of fine parallel lines. &nbsp;This test can also be emulated by MFK. &nbsp;Simply enter the desired line density (always in units of lines/inch), click Update, and then use the sliders as above.</p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0297.png" width="652" height="654" alt="clip0297" style="width:652px;height:654px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8512.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

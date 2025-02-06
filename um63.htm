@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>individual raytrace</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DRAY,lens analysis routines--&gt;,RAY command" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;">&nbsp;</p>
+<p><a name="ray"></a><span style="font-size: 14pt;">6.3 Raytrace (RAY)</span>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="text-decoration: underline;"><a href="um631.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um622.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">An individual ray may be traced through the lens with the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">RAY { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span><span class="f_mine" style="font-weight: bold;"> { SURF / 0 } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">or with the interactive dialog </span><span class="f_mine" style="font-weight: bold;">MRR</span><span class="f_mine">. &nbsp;The data are:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / P</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">color number, or “P” for the primary color</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">fractional object height in the Y-direction</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_mine" style="font-weight: bold;">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">fractional entrance pupil coordinates</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">fractional object height in the X-direction</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the entry </span><span class="f_mine" style="font-weight: bold;">SURF</span><span class="f_mine"> is included, a surface-by-surface printout of ray coordinates and angles is obtained. &nbsp;The columns are identified in the printout; the quantities ZZ and HH are the tangents of the projection of the ray into the X-Z and Y-Z planes, illustrated below. &nbsp;A sample RAY...SURF listing is also shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um6f1.png" width="517" height="207" alt="um6f1" style="width:517px;height:207px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">SYNOPSYS AI&gt;RAY P 1 0 1 SURF </span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> INDIVIDUAL RAYTRACE ANALYSIS</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> FRACT. OBJECT HEIGHT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; HBAR &nbsp; &nbsp; &nbsp;1.000000 &nbsp; GBAR &nbsp; &nbsp; &nbsp;0.000000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> FRACT. ENTRANCE PUPIL COORD. &nbsp; &nbsp; &nbsp; &nbsp;YEN &nbsp; &nbsp; &nbsp;1.000000 &nbsp; &nbsp;XEN &nbsp; &nbsp; &nbsp;0.000000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> COLOR NUMBER &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RAY VECTORS &nbsp; &nbsp; &nbsp; &nbsp; (X DIR TAN) &nbsp;(Y DIR TAN) &nbsp;(INC. ANG.)</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> SURF &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; X &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Z &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ZZ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; HH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;UNI</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> ___________________________________________________________________________________</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> OBJ &nbsp; &nbsp; &nbsp; 0.000000-3.639702E+11 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.363970</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 2.628849 &nbsp; &nbsp; 0.161368 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.163032 &nbsp; &nbsp;27.025235</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 2.922989 &nbsp; &nbsp;-0.034445 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.253674 &nbsp; &nbsp; 7.909269</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3 &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 4.149137 &nbsp; &nbsp;-0.455983 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.241724 &nbsp; &nbsp; 1.691139</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 4 &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 4.683535 &nbsp; &nbsp; 0.504797 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.639576 &nbsp; &nbsp;25.892397</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5 &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 7.572675 &nbsp; &nbsp; 0.087340 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.340900 &nbsp; &nbsp;33.923596</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 6 &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 7.675323 &nbsp; &nbsp;-1.861550 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.240158 &nbsp; &nbsp; 8.441947</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.00000000E+00 &nbsp; 0.10000000E+01 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; VIGNETTED AT &nbsp; 5</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> IMG &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;18.507562 &nbsp; &nbsp; 0.000000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Notice the message that this ray is vignetted at surface 5, due to a user-entered </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#um3311" class="topiclink">CAO</a></span><span class="f_mine"> on that surface. &nbsp;If the system option </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#novig" class="topiclink">NOVIG</a></span><span class="f_mine"> were selected, this message would not appear.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The final line of the RAY listing (the only line if </span><span class="f_mine" style="font-weight: bold;">SURF</span><span class="f_mine"> is not requested) gives the (X, Y, Z) ray coordinates at the last surface. &nbsp;If the lens is in </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#afocal" class="topiclink">AFOCAL</a></span><span class="f_mine"> mode, the (X, Y) coordinates are the output ray </span><span class="f_mine" style="font-style: italic;">angles</span><span class="f_mine">, in radians. &nbsp;See the above link for a discussion of the ray angle coordinate system. <a name="63tap"></a> If the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">OPD</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">is entered before the </span><span class="f_mine" style="font-weight: bold;">RAY</span><span class="f_mine"> command (and </span><span class="f_mine" style="font-weight: bold;">SURF</span><span class="f_mine"> is not requested), the final line gives the (X, Y, Z) coordinates of the </span><span class="f_mine" style="font-style: italic;">chief ray</span><span class="f_mine">, and the OPD of the requested ray. &nbsp;An example of OPD / RAY output is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">SYNOPSYS AI&gt;OPD </span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> SYNOPSYS AI&gt;RAY 2 1 0 1 </span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> OPD MODE</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> INDIVIDUAL RAYTRACE ANALYSIS</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> FRACT. OBJECT HEIGHT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; HBAR &nbsp; &nbsp; &nbsp;1.000000 &nbsp; GBAR &nbsp; &nbsp; &nbsp;0.000000</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> FRACT. ENTRANCE PUPIL COORD. &nbsp; &nbsp; &nbsp; &nbsp;YEN &nbsp; &nbsp; &nbsp;1.000000 &nbsp; &nbsp;XEN &nbsp; &nbsp; &nbsp;0.000000</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> COLOR NUMBER &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; &nbsp; &nbsp; &nbsp; CHIEF RAY COORDINATES AT IMAGE SURFACE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OPD</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; XChief &nbsp; &nbsp; &nbsp; &nbsp;YChief &nbsp; &nbsp; &nbsp; &nbsp;ZChief &nbsp; &nbsp; &nbsp; (WAVES)</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 18.393309 &nbsp; &nbsp; &nbsp;0.000000 &nbsp; &nbsp; &nbsp;1.651524</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> SYNOPSYS AI&gt;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Surface output is given for all surfaces for which </span><span class="f_mine" style="text-decoration: underline;"><a href="um3312.htm" class="topiclink">TAG</a></span><span class="f_mine"> was requested in the </span><span class="f_mine" style="font-weight: bold;">RLE</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">CHG</span><span class="f_mine"> file, even if </span><span class="f_mine" style="font-weight: bold;">SURF</span><span class="f_mine"> is not requested. &nbsp;OPD requests are not honored if </span><span class="f_mine" style="font-weight: bold;">SURF</span><span class="f_mine"> is entered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To cancel an OPD request, so that the RAY command produces transverse coordinates instead of the OPD of the ray, enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">TAP</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">before the RAY command.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The sign convention describing the locations of rays in the pupil of the lens will often be modified when the lens has a</span><span class="f_mine" style="text-decoration: underline;"><a href="um261.htm" class="topiclink"> </a></span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um261.htm" class="topiclink">real pupil</a></span><span class="f_mine">. &nbsp;If the entrance pupil is noncircular, as when a </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine"> is in effect, or when the </span><span class="f_mine" style="text-decoration: underline;"><a href="um263.htm" class="topiclink">wide-angle pupil options</a></span><span class="f_mine"> are used, then one wants the same pupil shape for skew field points as points in the meridional plane – but rotated sideways in that case. &nbsp;This requires that the coordinate system in which input rays are defined to rotate as well. &nbsp;If your goal is to control particular rays at particular skew field points, it is wise first to trace the ray in question, examine its path, and verify that it is indeed the ray you want.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the word </span><span class="f_mine" style="font-weight: bold;">DRAY</span><span class="f_mine"> is entered instead of RAY, the listing will show double-precision numbers.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um631.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

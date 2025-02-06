@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Variance-based targets</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Image point targets,IPX, IPY image location,optimization--&gt;,VARIANCE: targetting" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">10.3.1.3 Variance-based Aberrations &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10314.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10312.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The wavefront variance is a useful measure of image quality, and the <a href="um868.htm" class="topiclink">VARIANCE</a> command can calculate its value along with the standard deviation and the image point in X and Y. &nbsp;The latter two quantities give the location of the center of the reference sphere at which the variance is minimized, measured from the chief ray point in the requested color or the primary color if the analysis is multicolor. &nbsp;This is a useful approximation to the location of the peak of the diffraction pattern as long as the OPD errors are less than one wave or so. &nbsp;For lenses where the distortion is extremely important, such as for microlithography objectives, one wants to control that location and not just the location of the chief-ray intercept -- which is a more common target for correcting distortion. &nbsp;Aberrations described in this section allow one to do just that. &nbsp;The formats are:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> A { </span><span class="f_mine" style="text-decoration: underline;">ICOL</span><span class="f_mine"> /P / M } WVAR </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">GBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">NRYS</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> A { </span><span class="f_mine" style="text-decoration: underline;">ICOL</span><span class="f_mine"> /P / M } WSTD </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">GBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">NRYS</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> A { </span><span class="f_mine" style="text-decoration: underline;">ICOL</span><span class="f_mine"> /P / M } YIP </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">GBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">NRYS</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> A { </span><span class="f_mine" style="text-decoration: underline;">ICOL</span><span class="f_mine"> /P / M } &nbsp;XIP </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">GBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">NRYS</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> A { </span><span class="f_mine" style="text-decoration: underline;">ICOL</span><span class="f_mine"> /P / M } &nbsp;IPX </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">GBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">NRYS</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M </span><span class="f_mine" style="text-decoration: underline;">TAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">WT</span><span class="f_mine"> A { </span><span class="f_mine" style="text-decoration: underline;">ICOL</span><span class="f_mine"> /P / M } &nbsp;IPY </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">GBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">NRYS</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">These go into the AANT file. &nbsp;The values of </span><span class="f_mine" style="text-decoration: underline;">XIP</span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;">YIP</span><span class="f_mine"> give the distance from the reference point to the image point, which is near the peak of the diffraction pattern. &nbsp;The reference point is the chief-ray point at the requested field angle in the requested color, or in the primary color if the multicolor &quot;M&quot; is requested. &nbsp;WVAR returns the wavefront variance, and WSTD returns the square root of the variance, which is the standard deviation of the wavefront.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The quantities IPX and IPY are related but different. &nbsp;Here, the program finds the image point, as above, and then also finds the corresponding point for the on-axis object. &nbsp;The returned values are then the X and Y differences, in lens units, between the two. &nbsp;Thus, if the on-axis image is perfect the calculation returns the location of the image point at the requested field. &nbsp;If the on-axis image point has nonzero coordinates (because of axial coma, for example), the returned value is measured from </span><span class="f_mine" style="font-style: italic;">that</span><span class="f_mine"> point instead of from the vertex. &nbsp;To control distortion, therefore, one can simply target the difference between a desired image scale and the value returned by IPX or IPY.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The calculation is performed by the VARIANCE routine, which traces approximately </span><span class="f_mine" style="text-decoration: underline;">NRYS</span><span class="f_mine"> rays and finds the desired quantity.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10314.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

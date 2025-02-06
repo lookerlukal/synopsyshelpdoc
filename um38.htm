@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um38</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="lenses,lenses tilts and decenters,tilts, decenters" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-size: 14pt;">3.8 Asymmetrical Data: Tilts and Decenters</span><span class="f_mine"> &nbsp; </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um372.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um381.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_p4-10" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p4-10">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Most of the lens data input described above applies to systems with rotational symmetry. The input described below applies to non-symmetrical systems</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For best results, surface 1 should not have any tilts or decenters; although this works properly, some other features become confusing: since lens drawings are oriented according to the starting surface, if that is tilted it will skew the whole drawing (which is otherwise correct); also, global coordinates will then be with respect to the </span><span class="f_mine" style="font-style: italic;">tilted</span><span class="f_mine"> coordinate system of 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are five possible ways to input tilt and decenter data on a surface: </span><span class="f_mine" style="text-decoration: underline;"><a href="um381.htm#relative" class="topiclink">RELATIVE</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um381.htm#relative" class="topiclink">REMOTE</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um385.htm#group" class="topiclink">GROUP</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um382.htm#global" class="topiclink">GLOBAL</a></span><span class="f_mine">, and </span><span class="f_mine" style="text-decoration: underline;"><a href="um383.htm#local" class="topiclink">LOCAL</a></span><span class="f_mine">. &nbsp;All of them may be edited in the </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine"> dialog. &nbsp;In addition, the system as a whole may be given a position and orientation in some </span><span class="f_mine" style="text-decoration: underline;"><a href="um384.htm#external" class="topiclink">EXTERNAL</a></span><span class="f_mine"> coordinate system, and then analyzed in that system.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span class="f_mine">These options are summarized as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Family</span></p>
+</td>
+<td style="vertical-align:top; width:284px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Features</span></p>
+</td>
+<td style="vertical-align:top; width:199px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Restrictions</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um381.htm#relative" class="topiclink">RELATIVE</a></span></p>
+</td>
+<td style="vertical-align:top; width:284px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Simple input, automatic undo; can also decenter.</span></p>
+</td>
+<td style="vertical-align:top; width:199px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Only a single tilt direction at a time. &nbsp;Tilt axis is can be anywhere on optical axis</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um381.htm#relative" class="topiclink">REMOTE</a></span></p>
+</td>
+<td style="vertical-align:top; width:284px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Simple input, automatic undo, tilt axis can be anywhere; can also decenter.</span></p>
+</td>
+<td style="vertical-align:top; width:199px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Only a single tilt direction at a time.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um385.htm#group" class="topiclink">GROUP</a></span></p>
+</td>
+<td style="vertical-align:top; width:284px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Allows three tilt directions, automatic undo; can also decenter.</span></p>
+</td>
+<td style="vertical-align:top; width:199px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Euler order always alpha, beta, gamma.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um383.htm#local" class="topiclink">LOCAL</a></span></p>
+</td>
+<td style="vertical-align:top; width:284px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Allows three tilt and decenter directions, any Euler order</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:199px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">No automatic undo.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um382.htm#global" class="topiclink">GLOBAL</a></span></p>
+</td>
+<td style="vertical-align:top; width:284px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Allows three tilt and decenter directions, any Euler order</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:199px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">No automatic undo.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um384.htm#external" class="topiclink">EXTERNAL</a></span></p>
+</td>
+<td style="vertical-align:top; width:284px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Origin can be anywhere.</span></p>
+</td>
+<td style="vertical-align:top; width:199px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">For analysis only, not for input.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um381.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um372.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

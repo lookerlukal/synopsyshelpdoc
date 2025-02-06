@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>concepts</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="MCS (missed conic section),TIR (total internal reflection),vignetting,vignetting pupils and" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">2.6.2 Vignetting</span><span class="f_mine" style="font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um261.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um263.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To properly design or analyze a lens it is important to keep track of which rays can get through and which are vignetted. &nbsp;The approach in SYNOPSYS is first to define the entrance pupil so as to correspond as closely as practical to the real pupil of the real lens, and then to delete any vignetted rays from this pupil when analyzing the image. &nbsp;There are three situations:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 38px 0px 38px;"><span class="f_mine">1. &nbsp;If the lens has a paraxial or real pupil defined, the pupil is circular and analyis features will attempt to fill the entire pupil. &nbsp;Rays may be deleted if they exceed certain apertures.</span></p>
+<p class="p_mine" style="margin: 0px 38px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 38px 0px 38px;"><span class="f_mine">2. &nbsp;If one of the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#wap" class="topiclink">WAP</a></span><span class="f_mine"> options is in effect, the analysis features attempt to fill a pupil whose shape is found by an iterative search and is usually not circular. &nbsp;Rays may be deleted from that pupil under some conditions.</span></p>
+<p class="p_mine" style="margin: 0px 38px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 38px 0px 38px;"><span class="f_mine">3. &nbsp;If the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine"> option is in effect, then the pupil is again non-circular, but the dimensions are declared and not continuously updated.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine"> option lets you explicitly describe how the pupil changes size with field position. &nbsp;If clear apertures are involved – as they usually are – the </span><span class="f_mine" style="text-decoration: underline;"><a href="um524.htm#fvf" class="topiclink">FVF</a></span><span class="f_mine"> command can automatically generate the data for a VFIELD array that duplicates the vignetting caused by those apertures. &nbsp;In this instance, there will be little or no additional vignetting of the entering beam since the apertures have already been accounted for. &nbsp; This option is valuable mostly for analyzing a completed design, but it can also be used while a design is in progress provided one has a good idea of the nature of the vignetting pattern that one expects to get when finished.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The WAP declarations, described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um263.htm" class="topiclink">Section 2.6.3</a></span><span class="f_mine">, do much the same thing as the VFIELD option, but they do it in real time, updating the pupil shape any time a chief ray must be found, whereas the latter is set up only once.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To calculate vignetting, the program needs to know the size of the clear apertures. &nbsp;These are of two categories: user entered (HARD), and program calculated (SOFT). &nbsp;All of the image analysis features of SYNOPSYS take vignetting into account, but the calculations are based only on hard apertures. &nbsp;If you enter no clear aperture data, the program will calculate default apertures and vignetting will occur only if rays in the entrance pupil fail to trace to the image or encounter a feathered edge along the way.</span></p>
+<p class="p_p2-10"><span class="f_p2-10">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">During the preliminary stages of a design, apertures may often be ignored completely, since lens diameters and feathered surfaces change quickly during optimization and are not necessarily of importance at that stage. &nbsp;In fact, </span><span class="f_mine" style="font-style: italic;">the optimization program itself ignores clear apertures</span><span class="f_mine"> when tracing rays. &nbsp;When you design your merit function you should control only those rays that you wish to be transmitted, and control the lens in such a way and assign apertures where required afterward so that they in fact get through to the image. &nbsp;The system options </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#cfree" class="topiclink">CFREE</a></span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#cfix" class="topiclink">CFIX</a></span><span class="f_mine"> can be of use in this regard. &nbsp;If the pupil is going to be vignetted in the final lens, it is important that the merit function not contain rays in the vignetted portion. &nbsp;If you select your own rays, you can define the ray pattern exactly.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The VFIELD option, mentioned above, is one way to satisfy this requirement, since by definition the vignetting defined therein is automatically taken into account in the ray pattern. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An especially useful feature is the </span><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm#vset" class="topiclink">VSET</a></span><span class="f_mine"> parameter, which models the pupil as an ellipse, reduced in size, with a specified offset from the center of the stop, thereby approximating the shape of the vignetted pupil. &nbsp;This option is used only in the AANT file, and affects the ray grids used for optimization, but is not a permanent property of the lens. &nbsp;For a discussion of this feature, see </span><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm" class="topiclink">Section 10.3.1.1</a></span><span class="f_mine">. &nbsp;If a lens is optimized this way, it is usually simple to produce the modeled pupil later by inserting CAO's at the apertures required by that pupil model. &nbsp;(Or by transferring the data to a </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine"> parameter.) &nbsp;This feature is especially useful when one is not sure how much vignetting to allow, when starting a new design.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Edge feathering is controlled by specific requests in the merit function (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um1037.htm" class="topiclink">10.3.7</a></span><span class="f_mine">).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">After a lens has been designed with the VFIELD parameters, it is wise to delete the VFIELD and change to one of the WAP options. &nbsp;WAP 2 is especially useful, since it causes the analysis routines to fill the stop and delete any vignetted rays. &nbsp;This is a more accurate (but slower) way to evaluate what the VFIELD was modelling approximately. &nbsp;(This is also much the same as the pupil treatment in Zemax™, which fills the stop surface with a ray grid.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="mcs"></a><span class="f_mine">Most of the analysis programs in SYNOPSYS can check rays as they are traced for vignetting caused by clear aperture violations, edge feathering, or ray failures due to intersection errors (MCS) or refraction errors (TIR). &nbsp;Exceptions include the paraxial programs PXT, GHOST, NAR, BEAM, BGI, and the program FLUX, which will detect only ray failures.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optimization program requires that every ray in the merit function trace successfully to the target surface, and it will abort immediately if that is not the case. &nbsp;When that happens, there are two ways to proceed.  </span><span class="f_mine" style="text-decoration: underline;"><a href="um10312.htm#aerr" class="topiclink">Chapter 10</a></span><span class="f_mine"> describes a very quick and powerful way to correct ray failures by simply clicking on a button. &nbsp;Another way is simply to alter the lens so that the failure goes away. &nbsp;The </span><span class="f_mine" style="text-decoration: underline;"><a href="worksheet.htm" class="topiclink">WorkSheet</a></span><span class="f_mine"> is convenient for this purpose, and you can drag the sliders to change individual radii or thicknesses while you watch the ray paths.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the lens has </span><span class="f_mine" style="text-decoration: underline;"><a href="um78.htm#efile" class="topiclink">EFILE</a></span><span class="f_mine"> data defined, and switch 39 is ON, then edge-definition points A and E are also examined for vignetting.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may disable the vignetting feature, to examine a lens without regard for edge feathering, for example, with</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">NOVIG</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">in the </span><span class="f_mine" style="text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file. To reestablish vignetting, enter </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#vig" class="topiclink">VIG</a></span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine">in a CHG file.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um263.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um261.htm" class="topiclink">P</a></span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um261.htm" class="topiclink">revious</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

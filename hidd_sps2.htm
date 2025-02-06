@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>lens surface data editor spreadsheet (SPS)</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="lenses--&gt;,Spreadsheet,SPS" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p><a name="sps"></a><span class="f_BodyTextIndent3" style="font-weight: bold;">SpreadSheet (SPS) -- Editing Surface Data<a name="sps"></a></span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">The SYNOPSYS </span><span class="f_BodyTextIndent3" style="font-weight: bold;">SPS</span><span class="f_BodyTextIndent3"> spreadsheet is a convenient place to edit your lens surface data. &nbsp;To edit lens </span><span class="f_BodyTextIndent3" style="font-style: italic;">system</span><span class="f_BodyTextIndent3"> data, such as the object definition, use the command </span><span class="f_BodyTextIndent3" style="font-weight: bold;">SYS</span><span class="f_BodyTextIndent3">, or click on the ‘System Data’ button. &nbsp;Data applying to the object and the definition of the entrance pupil may be edited most conveniently with the button provided to go to the Object or Pupil Wizard, or the commands </span><span class="f_BodyTextIndent3" style="font-weight: bold;">MOW</span><span class="f_BodyTextIndent3"> or </span><span class="f_BodyTextIndent3" style="font-weight: bold;">MPW</span><span class="f_BodyTextIndent3">. </span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">Surface data can be directly edited in any of the spreadsheet boxes that do </span><span class="f_BodyTextIndent3" style="font-style: italic;">not</span><span class="f_BodyTextIndent3"> have a cyan colored background. &nbsp;Those that do indicate numbers whose value was derived from some other specification, and you must remove that specification before you will be allowed to enter a different number yourself. &nbsp;This is done by clicking on the column labeled ‘Flags’, to the left of the data box you want to change. &nbsp;Then you will get a dialog tree that lets you specify which of the many options you want to assign to that parameter. &nbsp;The leftmost column, labeled ‘Surface Flags’, is used to set many options that apply to the surface as a whole.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">If the lens has more than 50 surfaces, they will be displayed in groups that may be selected by clicking on buttons along the left margin of the dialog.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">Separate pages are provided for editing clear aperture data as well as tilt and decenter data.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">The easiest way to insert or remove surfaces is with the buttons </span><img src="padinsert.png" width="23" height="23" alt="padinsert" style="width:23px;height:23px;border:none"><span class="f_BodyTextIndent3"> , </span><img src="paddelete.png" width="24" height="20" alt="paddelete" style="width:24px;height:20px;border:none"><span class="f_BodyTextIndent3">, and </span><img src="padcut.png" width="28" height="23" alt="padcut" style="width:28px;height:23px;border:none"><span class="f_BodyTextIndent3">. &nbsp;Those buttons will insert a surface at the current line, delete the current surface, or truncate the lens at that surface, deleting all higher-numbered surfaces. &nbsp; If you click in a line below the last surface in the lens and then click the </span><img src="padinsert.png" width="23" height="23" alt="padinsert" style="width:23px;height:23px;border:none"><span class="f_BodyTextIndent3"> button, all surfaces between the lens and where you clicked will be added.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">You can also change the number of surfaces in the lens with the button </span><span class="f_BodyTextIndent3" style="font-weight: bold;">Add or remove surfaces</span><span class="f_BodyTextIndent3">. &nbsp;There you may add or remove surfaces within the lens or add surfaces to the end. &nbsp;You can also use either the command-mode options </span><span class="f_BodyTextIndent3" style="font-weight: bold; text-decoration: underline;"><a href="um527.htm#delete" class="topiclink">DELETE</a></span><span class="f_BodyTextIndent3"> and </span><span class="f_BodyTextIndent3" style="font-weight: bold; text-decoration: underline;"><a href="um527.htm#insert" class="topiclink">INSERT</a></span><span class="f_BodyTextIndent3">, or the </span><span class="f_BodyTextIndent3" style="font-weight: bold; text-decoration: underline;"><a href="worksheet.htm" class="topiclink">WorkSheet</a></span><span class="f_BodyTextIndent3"> to do the same thing.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">If you are entering a lens from scratch with the SPS editor, it is better to enter the index data first, before the radii and thicknesses are entered. &nbsp;This is because most lenses will have paraxial solves here and there, and these become singular if there is no index difference at the time the solve is requested.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">Moving around in the spreadsheet is very easy. &nbsp;Just click on a number you want to edit, and type the new value. &nbsp;Before the program can use the new value, it has to know that you are finished typing. &nbsp;You can indicate this by pressing the Return key or by clicking in any other data, or by pressing any of the arrow keys. &nbsp;In the latter case, the program will process the new data and then automatically open for editing the nearest data box found in the requested direction, if any.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">Several data types have a flag window next to the numeric data. &nbsp;Clicking there will open a dialog where you can select from a variety of options available for that data type. &nbsp;You can also open those dialogs by clicking on any surface data box (to identify the surface) and then on one of the buttons </span><img src="spswsbuttons.png" width="163" height="22" alt="spswsbuttons" style="width:163px;height:22px;border:none"><span class="f_BodyTextIndent3">.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">A special feature applies only to glass names taken from one of the glass tables. &nbsp;If you r</span><span class="f_BodyTextIndent3" style="font-style: italic;">ight-click</span><span class="f_BodyTextIndent3"> on the name, you will get a list of the contents of that catalog showing a variety of properties, and you may select a different glass by double-clicking on the name or by selecting that name and clicking the OK button.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">As is the case in all other features of SYNOPSYS, you can undo any typing you may have done by pressing Ctrl+Z while an edit box is open for editing. &nbsp;To undo changes to the lens as a whole, use Ctrl+U or F3 when there is no box open for editing. &nbsp;To redo a change after undoing it, use Ctrl+Y. &nbsp;This feature will remember your changes for a total of 10 undo levels.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">The SPS dialog displays a small box in which the lens profile or perspective drawing is drawn, for your convenience. &nbsp;You can move this box wherever you like, and when you next open SPS it will automatically go to the same place. &nbsp;In the event you want to restore the default position (when you change monitor resolution, for example) use the command DWL (Default Window Location).</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">Note that, unlike the case with other programs, the spreadsheet is </span><span class="f_BodyTextIndent3" style="font-style: italic; font-weight: bold;">not</span><span class="f_BodyTextIndent3" style="font-weight: bold;"> supposed to be open all the time. &nbsp;Use it when appropriate, and then close it so you have ready access to the other powerful tools in SYNOPSYS.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

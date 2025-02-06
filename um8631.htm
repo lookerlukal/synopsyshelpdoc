@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um8631</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="MTF,MTF convolution options" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="zmtf"></a><span class="f_mine" style="font-weight: bold;">8.6.3.1 Convolution MTF options (MTF, ZMTF, MFF, MZMTF etc.) </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8632.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um863.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are several kinds of MTF analysis available in SYNOPSYS. &nbsp;Briefly, these are:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;Convolution MTF, exact OPD (MTF), described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um8632.htm" class="topiclink">Section 8.6.3.2</a></span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;Convolution MTF, interpolate OPD (ZMTF) (see above link)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;Multifield convolution MTF, exact OPD (MFF), described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um8633.htm" class="topiclink">Section 8.6.3.3</a></span></p>
+<p class="p_mine"><span class="f_mine">4. &nbsp;Multifield convolution MTF, interpolate OPD (MZMTF) (see above link)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">5. &nbsp;Convolution MTF over field (MOF) , described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um8636.htm" class="topiclink">Section 8.6.3.6</a></span></p>
+<p class="p_mine"><span class="f_mine">6. &nbsp;Interpolation version of MOF (ZMOF) (see above link)</span></p>
+<p class="p_mine"><span class="f_mine">7. &nbsp;Through-focus convolution MTF, (TFMTF), described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um8635.htm" class="topiclink">Section 8.6.3.5</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">8. &nbsp;Fourier-transform MTF, (DMTF), described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um8634.htm" class="topiclink">Section 8.6.3.4</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">9. &nbsp;Geometric MTF, described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um853.htm" class="topiclink">Section 8.5.3</a></span></p>
+<p class="p_mine"><span class="f_mine">10. &nbsp;Through-focus geometric MTF (TFG) , described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um854.htm" class="topiclink">Section 8.5,4</a></span></p>
+<p class="p_mine"><span class="f_mine">11. &nbsp;Multifield geometric MTF (MGMTF) , described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um8510.htm" class="topiclink">Section 8.5.10</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">These options, or links to them, are found in the dialog </span><span class="f_mine" style="font-weight: bold;">MOP</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The first of these features (MTF) evaluates the MTF by sampling the pupil at a grid frequency equal to, or a multiple of, the pupil shear corresponding to the spatial frequency under analysis. &nbsp;This method is fast and accurate, but it will not handle the case where the desired spatial frequency is lower than what is implied by the base shear. &nbsp;The second family (ZMTF) interpolates the pupil wavefront aberration with a piecewise linear spline, and uses those data to approximate the OPD at each shear sample point. &nbsp;This technique works even at low frequencies, but is slower. &nbsp;In one of our tests, the MOF feature ran in about 4 seconds, while the linear fit required 54 seconds. &nbsp;The difference is smaller for the MTF and ZMTF cases. &nbsp;If you need an accurate analysis of the MTF at frequencies much lower than the diffraction cutoff, which is often the case when aberrations are large, then the interpolated forms of the analysis are recommend. &nbsp;Although this is the slowest of the options, it is more reliable at low spatial frequencies.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 38px 0px 38px;"><span class="f_mine">If you run your MTF analysis and see an error message that the frequency involved was too low, switch to the interpolation method. &nbsp;(The dialog </span><span class="f_mine" style="font-weight: bold;">MOP</span><span class="f_mine"> lets you select from these options with a mouse click.) &nbsp;This protocol also applies to the MTF calculations in </span><span class="f_mine" style="text-decoration: underline;"><a href="um12134.htm" class="topiclink">BTOL</a></span><span class="f_mine"> and for </span><span class="f_mine" style="text-decoration: underline;"><a href="um1039.htm" class="topiclink">MTF aberrations</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">As a rule, if you request a frequency less than about 1/20 of the diffraction cutoff, use the interpolation method. &nbsp;If you request an MTF </span><span class="f_mine" style="font-style: italic;">curve</span><span class="f_mine"> and specify a cutoff frequency that is less than about 1/3 of the diffraction cutoff at the F/number of your lens, you should also request the interpolation method. &nbsp;If you do not, and the program detects the low frequency error, it will print an error message, increase the frequency to an acceptable value, and suggest the interpolation option instead.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the event that the exit pupil of the lens is </span><span class="f_mine" style="font-weight: bold;">strongly non-circular</span><span class="f_mine">, a given spatial frequency at the MTF requires a different shear at the entrance pupil in X and Y. &nbsp;The program calculates these shears, but in extreme cases, the shear can be completely outside the entrance pupil in one direction or the other. &nbsp;In this case, there are not enough data points to yield a meaningful MTF, and the program will print a message advising you to lower the cutoff frequency, which reduces the shears proportionally to the fraction of the default frequency requested.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The above features may be run interactively from the dialog </span><span class="f_mine" style="font-weight: bold;">MOP</span><span class="f_mine">, or its links.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Although the convolution methods ignore polarization, they do take into account vignetting and apodization. &nbsp;(Only the DMTF version considers polarization.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The MTF calculated by the </span><span class="f_mine" style="text-decoration: underline;"><a href="um1039.htm" class="topiclink">MTF optimization</a></span><span class="f_mine"> feature and by the MTF tolerancing program </span><span class="f_mine" style="text-decoration: underline;"><a href="um12134.htm" class="topiclink">BTOL</a></span><span class="f_mine"> uses the interpolation method, and automatically selects either the exact-ray or interpolation option, depending on the spatial frequency. &nbsp;The optimization MTF, however, does not treat vignetting. &nbsp;If a vignetted pupil is to be considered, it is necessary to approximate the pupil with the </span><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm#vset" class="topiclink">VSET</a></span><span class="f_mine"> parameters during optimization (or select one of the pupil options that automatically include the effects of vignetting, such as</span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#wap" class="topiclink"> WAP 2 or 3</a></span><span class="f_mine">, or the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine"> option.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Both of these families can give the MTF at a </span><span class="f_mine" style="text-decoration: underline;"><a href="um8632.htm" class="topiclink">single frequency</a></span><span class="f_mine"> or optionally </span><span class="f_mine" style="text-decoration: underline;"><a href="um8632.htm" class="topiclink">plot</a></span><span class="f_mine"> the MTF at 21 frequencies. &nbsp;See also the forms that can plot the MTF at up to </span><span class="f_mine" style="text-decoration: underline;"><a href="um8633.htm" class="topiclink">four field points</a></span><span class="f_mine"> on the same picture, the MTF at a single frequency at </span><span class="f_mine" style="text-decoration: underline;"><a href="um8635.htm" class="topiclink">seven focus positions</a></span><span class="f_mine">, or </span><span class="f_mine" style="text-decoration: underline;"><a href="um8636.htm" class="topiclink">over the field</a></span><span class="f_mine">, described in the sections that follow.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Most of the MTF family of plots can show faint grid lines in addition to the annotated X and Y axes. &nbsp;To get the lines, turn on switch 87 before requesting the analysis. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">MOP</span><span class="f_mine"> dialog lets you select this option with a check box.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Be aware that all of the convolution MTF calculations assume that the ray grid in the exit pupil is geometrically perfect and rectangular. &nbsp;If this is not the case, the shear calculation might go to the wrong point and the MTF may not be accurate. &nbsp;This is easy to check: just ask for a footprint on the last surface and look for distortion of any kind. &nbsp;When it doubt, use the Fourier-transform MTF calculation </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um8634.htm#dmtf" class="topiclink">DMTF</a></span><span class="f_mine">, which does not rely on shearing the pupil. &nbsp;This is not an issue for most systems, which are usually well corrected, but we advise the user to keep this qualification in mind.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8632.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

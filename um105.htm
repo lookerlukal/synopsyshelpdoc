@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>mode-switch settings for</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SYNOPSYS, mode switches for" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-size: 14pt;">10.5 Modes of Operation of SYNOPSYS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1051.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um104.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The design program can operate in any of several modes of operation, which are determined by the mode switches and set with ON and OFF commands (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um29.htm" class="topiclink">2.9</a></span><span class="f_mine">). The switches that apply to optimization are</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">1-9, 12, 29-32, 61, 62, 67, 82, 83, 99</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">These apply to SYNOPSYS operation in the following ways:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes the variables that hit a boundary during optimization to be dropped for the remainder of the run. &nbsp;All variables have default boundaries, and the user may enter other values if required. &nbsp;If a variable tries to violate a boundary at a given pass, it will usually continue to do so and is better dropped. &nbsp;However, if a variable is dropped in the early passes when the variables are changing rapidly, it may later move away from that boundary if it is not dropped at that time. &nbsp;If switch one is turned off, with “</span><span class="f_mine" style="font-weight: bold;">OFF 1</span><span class="f_mine">” prior to the SYNO input, bounded variables will not be dropped.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">uses the PSD III optimization algorithm if switch 8 is also on (default). &nbsp;This seems to be the most effective mode for optimization. &nbsp;If off, the PSD II algorithm is used instead.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">3.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes subpasses to be performed to optimize a scaling factor that is applied in addition to the PSD damping, at each iteration. &nbsp;This option gives the most improvement per iteration, but requires more time per iteration. &nbsp;The default mode (2 ON) turns this off. &nbsp;On average, this option does not give a net improvement in quality or time, but you can try it if you like.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">4.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">suppresses printing of the current aberration list at each pass and subpass. See switch 29, below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">5.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">suppresses printing of the change list at each pass and subpass. &nbsp;See switch 29, below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">6.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes a listing of the aberration values during each evaluation, both for derivatives and for subpass solutions. &nbsp;This switch is OFF by default, and is not recommended for most users since the output is lengthy. &nbsp;See 29, below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">7.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes new derivative increments to be calculated after each iteration. &nbsp;The rule followed is to compute the largest aberration at each pass (A) and the largest </span><span class="f_mine" style="font-style: italic;">change</span><span class="f_mine"> of any aberration (C) due to the previous increment DQ. &nbsp;Then the new increment is given by</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_mine" style="font-weight: bold;">DQ = DQ*0.1 A / C</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This calculation is done for each variable. &nbsp;The goal is to use an increment that will result in a largest aberration change equal to about 1/10 of the largest aberration.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This option usually generates very precise derivatives, and is on by default. &nbsp;If your initial system is very poorly corrected, however, the derivatives may themselves become large and produce ray failures during optimization. &nbsp;If you see a message to this effect, you may want to turn this switch off.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">8.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes the PSD algorithm to be employed. &nbsp;Switch 2 controls which version is used.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">9.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes lengthy printout of the derivative array and matrix L to be listed each pass and subpass. &nbsp;This is not a default mode and is not recommended for most users. &nbsp;See 29, below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">29.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">suppresses nearly all printout from the optimization. &nbsp;If this mode is on (it is a default mode), switches 4, 5, 6, 9, and 31 are disabled and you will automatically receive only the following:</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" rowspan="8" style="vertical-align:top; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td style="vertical-align:top; width:10px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span></p>
+</td>
+<td style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Input images for PANT, AANT, and ACON files.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:10px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span></p>
+</td>
+<td style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">A summary of alternate configuration locations.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:10px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span></p>
+</td>
+<td style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">A summary of the mode control switches, for reference.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:10px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span></p>
+</td>
+<td style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">A list of the initial aberration values.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:10px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span></p>
+</td>
+<td style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Messages during the optimization regarding boundary violations if these cause variables to be dropped, and also GLASS variables that become pinned.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:10px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span></p>
+</td>
+<td style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The merit function each pass.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:10px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span></p>
+</td>
+<td style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The final merit function and aberration values.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:10px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span></p>
+</td>
+<td style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">A list of the variables that were not free at the end of the run.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">30.</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">activates the variable-metric option. &nbsp;This is an alternate optimization algorithm that you may wish to experiment with. &nbsp;It is recommended that switches 2 and 8 be turned OFF if this switch is ON.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">31.</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">prints a list (if 29 is OFF) of the metric parameters currently employed each pass. &nbsp;This is not intended for the casual user.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">32.</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Causes the program to accept a solution that would normally be rejected on the first pass. &nbsp;This is an effective way to overcome the limitations of the DLS method used for that pass. &nbsp;Starting with the second pass the more powerful PSD method used. &nbsp;This is a default mode.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">61</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">saves the result of the optimization in library location 10 automatically.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">62</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">compares variables with their boundaries and moves any that violate those boundaries into the valid region before optimization.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">67</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Requests double-sided derivatives. &nbsp;Although slower than the default single-sided derivatives, this option can improve convergence as the design approaches optimum.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">82</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Calculate d2f/dX2 on first iteration.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">83</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Adjust automatic raygrid aberrations according to color weights in lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:22px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">99</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p style="margin: 7px 0px 7px 0px;"><span style="font-size: 11pt;">This switch makes the optimization program honor the CORE setting. All of the search program utilize multicore processing automatically, but the SYNOPSYS command, which runs a single optimization, normally executes on a single core.</span></p>
+<p style="margin: 7px 0px 7px 0px;"><span style="font-size: 11pt;">If the process is lengthy, you might experience a speed improvement by authorizing as many cores as your PC has, and then turning this switch on. If the process runs in only a few seconds in a single core anyway, then this switch will likely make it run more slowly, rather than faster, owing to the overhead involved in starting and managing the several processes; so it should be used with discretion.</span></p>
+<p style="margin: 7px 0px 7px 0px;"><span style="font-size: 11pt;">Switch 82 is not supported in this mode, and will be turned off if on.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Compare this list with the default settings in </span><span class="f_mine" style="text-decoration: underline;"><a href="um29.htm" class="topiclink">Section 2.9</a></span><span class="f_mine">. &nbsp;If you want different settings, you may enter them in the Command Window before running the optimization, or put them in the CUSTOM MACro so they will be set at program startup.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate the use of these mode switches, suppose that we desire to optimize a lens with narrow boundaries on some variables, and wish them not to be dropped if violations are attempted. &nbsp;We would input:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">OFF 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">SYNOPSYS...</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This turns off switch 1, leaving all other switches unchanged.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A run on SYNOPSYS will terminate for any of the following reasons:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Completion of the requested number of iterations.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Improvement in the merit function less than .01% on any pass except the first.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">3.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Reduction of the merit function below 1.0E-10.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">4.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The damping became greater than </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DLIMIT</span><span class="f_mine">. &nbsp;This ordinarily does not happen, but if switch 8 is off (not default) the ordinary damped-least-squares algorithm is used, and in this case it might.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">5.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">A ray failed to get through the initial system.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">6.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">All variables became pinned to their boundaries.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">7</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The user clicked on the stop-sign toolbar button before the optimization was complete.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">If mode control switch 29 is turned OFF prior to optimization, each iteration of SYNOPSYS will print out:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">pass number.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">present merit function.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">3.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">current values of increments DQ (if 7 is ON).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">4.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">current values of SECDR (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um101.htm" class="topiclink">Section 10.1</a></span><span class="f_mine">) if 8 on.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">5.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">with 3 ON (not default), successive trial DAMP's and resulting merit functions, followed by A, B, and C in the equation</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-weight: bold;">A X**2 + B x + C = </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&Phi;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-weight: bold;">X</span><span class="f_mine"> = 1 / DAMP and </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&Phi;</span><span class="f_mine"> is the merit function. &nbsp;This gives the best apparent damping factor for that iteration, DAMP = -2 A / B, also printed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">6.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">predicted next merit function, based on a linear extrapolation from the present design.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">7.</span></p>
+</td>
+<td style="vertical-align:top; width:515px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">actual next merit function, using new solution vector.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A summary of the initial and final aberrations is provided at the start and end of the design run.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1051.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

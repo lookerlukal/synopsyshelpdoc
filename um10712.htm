@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um10712</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CUBIC, zoom interpolation,Moment, cam curve,PSERIES, zoom interpolation" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="cam"></a><span class="f_mine" style="font-weight: bold;">10.7.1.2 CAM Curve Calculation &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1072.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10711.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Before your </span><span class="f_mine" style="text-decoration: underline;"><a href="um1071.htm#zfile" class="topiclink">ZFILE</a></span><span class="f_mine"> zoom lens can be manufactured, you must prepare a table showing the position of each group at many positions through the range. &nbsp;Those data will be used by the mechanical designers to cut the cam curves that control the zoom motions. &nbsp;Calculating this table is the job of the CAM command. &nbsp;In addition, you have the option of actually </span><span class="f_mine" style="font-style: italic;">assigning</span><span class="f_mine"> the positions so calculated to the lens, which is sometimes useful, as described below, and to analyze the performance of the lens at 100 positions over the zoom range.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In practice, since all real lenses are invariably different from the nominal design, one must adjust the cam curve for each unit. &nbsp;It is common practice to assemble each unit on an optical bench, move one of the zooming groups to its cam position, and then adjust the defocus with a different group. &nbsp;The location so found will in general differ slightly from the cam value for that element, and it is that location that will be milled into the cam mechanism for that unit. &nbsp;The optional </span><span class="f_mine" style="font-weight: bold;">PFOCUS </span><span class="f_mine">or</span><span class="f_mine" style="font-weight: bold;"> DFOCUS</span><span class="f_mine"> input emulates that procedure, and is discussed below. &nbsp;The nominal curve calculated by CAM is nonetheless a good starting point. &nbsp;It is representative of the nominal design but will not correspond exactly to the best curve for each individual lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The format of the CAM command is as follows: &nbsp;(Note that these are </span><span class="f_mine" style="font-style: italic;">commands</span><span class="f_mine">, not part of the ZFILE lens input.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">CAM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">INDEX</span><span class="f_mine" style="font-weight: bold;"> [ SET / GROUP </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">nb</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">nb</span><span class="f_mine" style="font-weight: bold;"> ... / APERT / ANGLE ] &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">where INDEX is a number from 2 to 100</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">[</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold;">CAM RANK </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RANK</span><span class="f_mine" style="font-weight: bold;"> ] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="text-decoration: underline;">(</span><span class="f_mine">see below)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">[ CAM DAMPING </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DAMP</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">[ CAM EXPONENT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">EXP</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">[ CAM MACRO ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">[ CAM SCALE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ZERO</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">[ CAM SEARCH [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ELOW</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">EHIGH</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">[ CAM STATISTICS ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">[ CAM OPTIMIZE ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">[ CAM ZMAG </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">magn</span><span class="f_mine" style="font-weight: bold;"> [ ANG / APERT / COMB / NONLIN </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">exp</span><span class="f_mine" style="font-weight: bold;"> / ENDS ]]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">[ CAM CUBIC ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">[ CAM PSERIES ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">[ CAM [ PFOCUS / DFOCUS ] </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GROUP</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To create a cam curve, use the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">CAM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">INDEX</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This analysis calculates the zoom positions of all zooming groups at</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">INDEX</span><span class="f_mine"> locations, interpolating between the defined positions according to the current polynomial parameters. &nbsp;We recommend that you always correct your zoom lens over at least five zoom positions, to be sure that the image quality will be acceptable over the entire range and to locate the zoom points that keep the image in focus. &nbsp;The more points you correct, the more accurate will be the cam curve.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The command </span><span class="f_mine" style="font-weight: bold;">CAM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">INDEX</span><span class="f_mine" style="font-weight: bold;"> GROUP </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">nb</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">nb</span><span class="f_mine"> ... evaluates the cam curve only for the groups given by the numbers in words 4 and higher. &nbsp;This can be useful when one group moves by a much greater distance than the others and the limited resolution of the plot makes it hard to see the latter.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The forms </span><span class="f_mine" style="font-weight: bold;">CAM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">INDEX</span><span class="f_mine" style="font-weight: bold;"> APERT</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">CAM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">INDEX</span><span class="f_mine" style="font-weight: bold;"> ANGLE</span><span class="f_mine"> calculate the curves as above, but scale the plot differently. &nbsp;Normally, the abscissa shows zoom positions, spaced linearly from left to right. &nbsp;If the APERT form is used, the spacing is linear in aperture instead of zoom, while the ANGLE form spaces it linearly with field. &nbsp;These can be used to view how the defined zoom positions are distributed over the aperture range or field range. &nbsp;In many designs, image correction is stable at one end of the zoom but varies rapidly at the other. &nbsp;In those cases, one would like to cluster the defined zooms where more correction is needed. &nbsp;The CAM ZMAG ... form can adjust this spacing, and the </span><span class="f_mine" style="font-weight: bold;">APERT</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">ANGLE</span><span class="f_mine"> requests let you visualize how the spacing came out.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SYNOPSYS calculates the curves by finding an interpolation polynomial that best fits the current zoom data, and then applying that formula to the required positions. &nbsp;Since the cam curves are usually nonlinear and you want precision on the order of a micron, finding the best interpolation polynomial is a nontrivial exercise.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The form of the polynomial used by CAM depends on four parameters: the polynomial rank, damping, and the exponent degree, and optionally the </span><span class="f_mine" style="font-weight: bold;">CUBIC</span><span class="f_mine"> directive, all of which can also be entered in the ZFILE section of the RLE file. &nbsp;If you do not assign values to those parameters, the program will use reasonable defaults. &nbsp;Although you can optimize your lens at up to 20 zoom positions, the polynomial rank is not allowed to exceed a value of 10. &nbsp;This is to avoid intractable numerical problems that would result if you used a higher rank – which we have seen create quantities whose values varied by perhaps 20 orders of magnitude. &nbsp;That exceeds the precision of the PC, and results are then unpredictable. &nbsp;So the rank is not allowed to exceed 10.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">By default, the program selects the </span><span class="f_mine" style="font-weight: bold;">CUBIC</span><span class="f_mine"> option when the ZFILE lens is first entered, unless the lens has fewer than four zooms.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the </span><span class="f_mine" style="font-weight: bold;">PSERIES</span><span class="f_mine"> option is selected, the program by default sets the rank equal to one less than the number of zooms, with a maximum of 9. &nbsp;If the number is four or less, the rank equals that number. &nbsp;It defines the polynomial terms for a power series where the first nonlinear term is assigned an exponent that is just the current EXP value (which defaults to 0.8 for 8 or more zooms, and other values for fewer), the second term is twice this value, the third is three times, and so on. &nbsp;As a final step, it applies any entered damping factor to the normal equations before calculating the coefficients. &nbsp;(The default damping is 1.0E-7.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the </span><span class="f_mine" style="font-weight: bold;">CUBIC</span><span class="f_mine"> directive is entered, the program employs a piecewise cubic fit to the defined zoom positions instead of the power-series polynomial described above. &nbsp;In this case the values for the rank, damping, and exponent are ignored. &nbsp;The cubic fit is generally best if you have defined a large number of zooms, 15 or more typically, and if you define all 20 zooms, it gives a very smooth display when you run the ZoomSlider. &nbsp;It often works well with as few as 5 zooms defined, so it is worth trying in any case. &nbsp;If the lens has fewer than four zooms defined, then the cubic option is disabled and the power-series fit is used instead. &nbsp;Remember, the polynomial option has no information about intermediate zoom positions and you are hoping that a smooth curve will work equally well everywhere. &nbsp;If it does not, then optimizing at more zoom positions will generate that information and is recommended. &nbsp;The input </span><span class="f_mine" style="font-weight: bold;">PSERIES</span><span class="f_mine"> turns off the CUBIC option.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A further option is available for the CAM calculation: a single group may be designated a </span><span class="f_mine" style="font-weight: bold;">PFOCUS </span><span class="f_mine">or</span><span class="f_mine" style="font-weight: bold;"> DFOCUS</span><span class="f_mine"> group. &nbsp;This has no effect when designing the lens or evaluating at a given zoom position, but when the cam curve is calculated or the lens is altered via the ZoomSlider(tm), the program will alter the location of that group so as to adjust the paraxial focus. &nbsp;PFOCUS aims at maintaining perfect focus at each cam position, while DFOCUS tries to maintain the same defocus position as the nominal lens as interpolated at that position. This emulates what the assembly technician does when zoom lenses are assembled: since each lens is slightly different, the position of a selected group is usually adjusted on an optical bench over the zoom range and the cam curves then machined to the measured values, which are accurate only for that lens. &nbsp;The lens should be optimized as well as possible, and corrected at enough zoom positions to closely approximate the performance you are after, before you exercise this option. &nbsp;In other words, save it for the final analysis.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The CUBIC, PSERIES, PFOCUS, and DFOCUS settings may also be entered with the </span><span class="f_mine" style="text-decoration: underline;"><a href="um1071.htm#zfile" class="topiclink">ZFILE</a></span><span class="f_mine"> input.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To see if the cam curve is going to work as you wish, you have to test it. &nbsp;This is best done with the PAD ZoomSlider. &nbsp;When you open a ZFILE zoom lens, the zoom toolbar opens:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="zoombar.png" width="33" height="475" alt="zoombar" style="width:33px;height:475px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The bottom button is for a slider; you click it and the ZoomSlider™ opens. &nbsp;If the image does not remain in focus when you move the slider, even though it was well controlled at all of the zoom positions you optimized, you may have to change some of the parameters discussed above. &nbsp;You will find the CAM SEARCH … utility useful for this purpose. &nbsp;You select a RANK yourself and possibly a damping factor, and then type</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">CAM SEARCH [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ELOW</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">EHIGH</span><span class="f_mine"> ].</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program will calculate polynomial coefficients corresponding to the value of </span><span class="f_mine" style="text-decoration: underline;">EXP</span><span class="f_mine"> at each of 20 steps, starting at </span><span class="f_mine" style="text-decoration: underline;">ELOW</span><span class="f_mine"> and ending at </span><span class="f_mine" style="text-decoration: underline;">EHIGH</span><span class="f_mine">. &nbsp;The default range is 0.5 to 1.0. &nbsp;For each value it calculates the paraxial defocus; then it makes a graph showing the rms and peak value of that error at all zooms for all values of </span><span class="f_mine" style="text-decoration: underline;">EXP</span><span class="f_mine">. &nbsp;If the defined zoom positions all show a very small defocus individually, then those data are a good indication of the quality of the curve fit when interpolated over the whole range. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">CAM OPTIMIZE</span><span class="f_mine"> feature will automatically search for the location of the minimum RMS and peak defocus and usually return a useful result. &nbsp;If the curves are not smooth, however, and have more than one minimum, it may not find the lowest value. &nbsp;In that case you should examine the curve yourself and find the point you want. &nbsp;If the zoom slider shows the image going in and out of focus over the zoom range, even with the optimum exponent, it is a sign you should define a larger number of zooms and reoptimize.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate this feature, we designed a zoom lens that was corrected at 10 zooms, and then entered the commands</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">CAM RANK 9</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">CAM DAMP 0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">CAM SEARCH 0.8 1.1</span><span class="f_mine" style="font-family: 'Courier New';"> </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and got the plot shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="camsearch.png" width="466" height="669" alt="camsearch" style="width:466px;height:669px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here it is evident that a value of 1.0 yields the smallest deviation from the designed values. &nbsp;To verify this result, we would enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">CAM EXPONENT 1.0</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and try the zoom slider again. &nbsp;If you follow this procedure, the image quality should be relatively stable over the zoom range. &nbsp;If not, you can experiment with other values of RANK and do the search again. &nbsp;We have found that the best value of RANK is usually one less than the number of zooms. &nbsp;If RANK is equal to the number of zooms, the SEARCH results tend to jump around, and the minimum may be hard to identify. &nbsp;If it is one less, the curves are much smoother.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When you have determined the best CAM settings, save the lens; the parameters will be saved as part of the ZFILE section, and they will come back the next time you open that lens file.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The damping factor </span><span class="f_mine" style="text-decoration: underline;">DAMP</span><span class="f_mine"> may help to damp out ringing in the cam curve. &nbsp;The </span><span class="f_mine" style="text-decoration: underline;">EXP</span><span class="f_mine"> values that we have used successfully are in the range of 0.3 to 1.1. &nbsp;It is best to experiment with </span><span class="f_mine" style="text-decoration: underline;">EXP</span><span class="f_mine"> before you try the effects of </span><span class="f_mine" style="text-decoration: underline;">DAMP</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">These quantities can also be input as part of the lens file, and are easily edited in the WorkSheet. &nbsp;Click on the “Z” button, and enter the values in the same format as the command, just below the ZFILE line near the top of the edit window.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you cannot find a set of parameters that work and if the performance does not hold steady over the range, it is probably because you have not defined enough zoom positions. &nbsp;Check whether the nominal image quality at each position is similar to that at adjacent positions. &nbsp;Click on the zoom buttons on the zoom toolbar while monitoring the image analysis in PAD. &nbsp;If the shape of the TFAN curves changes markedly from one to another, then increase the number of defined zoom points and reoptimize. &nbsp;This is most easily done with the CAM … SET option, described below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 38px 0px 38px;"><span class="f_mine">If you define a great many zooms and try to control the image at each one, you may well exceed the limit of 10000 aberrations overall. &nbsp;To avoid this, we recommend that you correct your rayset at only a few of the zooms, and just control DELF at the others.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can change the number of defined zooms in the lens with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">CAM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">INDEX</span><span class="f_mine" style="font-weight: bold;"> SET</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where INDEX is a number no more than 20. &nbsp;This change utilizes the same polynomial as the CAM curve, but if that was not accurate enough, the new zoom positions will not work any better – until you optimize them. &nbsp;Then you will have a better lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">CAM SET will quit if it finds </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine"> data in effect. &nbsp;That option is useful in the initial stages of a design, when it will approximate the vignetting that will occur when real apertures are put in later. &nbsp;But when your design is near completion, if vignetting is an issue, you should fix all clear apertures and use the WAP 2 or 3 options to account for the vignetting that actually occurs – and remove the VFIELD. &nbsp;Only then can you use CAM.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">I goes without saying that the CAM feature is not appropriate for cases where the lens will only work </span><span class="f_mine" style="font-style: italic;">at</span><span class="f_mine"> the zooms settings, and not anywhere in between. &nbsp;Such a lens is often called a “click click” instead of a zoom lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The plot that is prepared by CAM is normalized so that the range of all motions is contained in a distance of exactly five inches. &nbsp;as a result, the numbers on the tic marks are not necessarily round numbers. &nbsp;If you want a different scale, use the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">CAM SCALE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ZERO</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">before creating the cam curve. &nbsp;The parameter </span><span class="f_mine" style="text-decoration: underline;">SCF</span><span class="f_mine"> is the zoom motion/inch of the plot, and </span><span class="f_mine" style="text-decoration: underline;">ZERO</span><span class="f_mine"> is the zoom motion at the bottom of the scale. &nbsp;Thus, for example, if your cam curve covers the range –77.3845 to 0, you could enter CAM SCALE 20.0 –80. &nbsp;This fits the range of 80.0 into five inches, each tic mark a multiple of 20.0, which is a nice picture. &nbsp;If you enter a scale factor of zero, the program will use its own defaults.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is an example of CAM output. &nbsp;It produces a table of cam positions (not shown) and then makes a plot of all of the motions, shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cam.png" width="578" height="782" alt="cam" style="width:578px;height:782px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">CAM can also evaluate the </span><span class="f_mine" style="font-style: italic;">performance</span><span class="f_mine"> of the lens, interpolated over the zoom range with the polynomial described above. &nbsp;This feature is called by the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">CAM MACRO</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="umch15.htm#ai" class="topiclink">AI</a></span><span class="f_mine"> mode must be on, and the data are prepared in much the same way as for </span><span class="f_mine" style="text-decoration: underline;"><a href="um15121.htm" class="topiclink">DO MACRO</a></span><span class="f_mine">, where the required value is taken from the FILE buffer and then assigned to the variable Z1. &nbsp;This command always examines exactly 100 points. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate: suppose you want the multicolor </span><span class="f_mine" style="text-decoration: underline;"><a href="um856.htm#rms" class="topiclink">RMS</a></span><span class="f_mine"> spot size at full field over the whole zoom range. &nbsp;Create a MACro that contains</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">RMS M 1 400</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">Z1 = FILE 1</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(If you do not know the location of the desired number in the FILE buffer, just run the RMS command and then ask AI to show you the buffer, with “BUFFER?” &nbsp;Location 1, in this case</span><span class="f_mine" style="font-family: 'Times New Roman';">,</span><span class="f_mine"> contains the RMS value.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Run this MACro once to test that it gives the answer you are after, and also to place the contents into the computer memory. &nbsp;Then type the command CAM MACRO to start the analysis. &nbsp;A plot of the RMS spot size over the cam range is produced. &nbsp;The default label assigned to the ordinate is “RESULT”, and you will probably want to change it. &nbsp;In this example one would use the AI sequence</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">OLABEL = “RMS SPOT”</span></p>
+<p class="p_mine"><span class="f_mine">AGAIN</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and the picture is redrawn as shown below.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The MACro should not contain another CAM command, or any command whose printed output you wish to see – since the CAM analysis is always done in QUIET mode.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The CAM MACRO feature uses the same plotting routines as </span><span class="f_mine" style="text-decoration: underline;"><a href="um1512.htm" class="topiclink">DO MACRO</a></span><span class="f_mine">, and in the event you wish to change the labels, scales, or origin of the plot, you may do so, as described in Section </span><span class="f_mine" style="text-decoration: underline;"><a href="um15124.htm" class="topiclink">15.1.2.4</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cammac.png" width="570" height="767" alt="cammac" style="width:570px;height:767px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Plot showing how CAM can evaluate image quality over the zoom range.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The CAM parameters RANK, DAMP, and EXP can be entered in the form of a command, as described in this section, and also as part of the ZFILE data in the RLE file, as mentioned in <a href="um1071.htm#zfile" class="topiclink">Section 10.7.1.</a> &nbsp;The other CAM options are only entered as commands.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Another form of the CAM command is useful if you need to control the shape of the cam curves. &nbsp;We have seen a lens with a wide zoom range whose cam curve shows wild swings of one group. &nbsp;Mathematically the lens looks great -- but that cam would be impractical to manufacture. &nbsp;In such cases there are three construction-parameter aberrations that might be useful: ZM1 to ZM3. &nbsp;These control the first, second, and third moment of the cam curve, where the moment is defined as the RSS derivative of that order. &nbsp;Thus, to control wild swings, which imply a large 3rd-derivative, one could give a target to ZM3 on a given group.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The command </span><span class="f_mine" style="font-weight: bold;">CAM STATISTICS</span><span class="f_mine"> will create a table giving some statistics of each zooming group, from which you can select the group and target. &nbsp;Here is an example: &nbsp;The cam curve below is for a zoom lens with three moving groups. &nbsp;The red curve is definitely going to be a problem.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0161.png" width="487" height="659" alt="clip0161" style="width:487px;height:659px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We run the CAM STATISTICS command and see the following:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;CAM STAT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ZOOM LENS CAM STATISTICS</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ------------------------</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ZOOM GROUP &nbsp;1 SURFACES &nbsp; 5 TO &nbsp; 8</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> MAXIMUM, MINIMUM: &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;-19.1877</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> MOMENTS 1, 2, 3: &nbsp; &nbsp;14.0532 &nbsp; &nbsp; &nbsp; 3.28001 &nbsp; &nbsp; &nbsp; 104.603</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ZOOM LENS CAM STATISTICS</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ------------------------</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ZOOM GROUP &nbsp;2 SURFACES &nbsp; 9 TO &nbsp;12</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> MAXIMUM, MINIMUM: &nbsp; &nbsp;6.89509 &nbsp; &nbsp; &nbsp;-8.68807</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> MOMENTS 1, 2, 3: &nbsp; &nbsp;10.0789 &nbsp; &nbsp; &nbsp; 3.10353 &nbsp; &nbsp; &nbsp; 140.816</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ZOOM LENS CAM STATISTICS</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ------------------------</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ZOOM GROUP &nbsp;3 SURFACES &nbsp;13 TO &nbsp;16</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> MAXIMUM, MINIMUM: &nbsp; &nbsp;25.5748 &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> MOMENTS 1, 2, 3: &nbsp; &nbsp;8.54002 &nbsp; &nbsp; &nbsp;0.635410 &nbsp; &nbsp; &nbsp;0.326696</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Indeed, group 2 has a large third moment. &nbsp;We could control this with an AANT file entry such as  </span><span class="f_mine" style="font-family: 'Courier New';">M 20 .1 A ZM3 2</span><span class="f_mine">. &nbsp;That would reduce the third moment and make the lens more practical. &nbsp;You'll have to experiment with the target and weight to get this to work -- but that's what lens designers do for a living.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the event that you wish to evaluate the lens </span><span class="f_mine" style="font-style: italic;">at</span><span class="f_mine"> each of the defined zoom positions, with no interpolation, it is not necessary to use CAM at all. &nbsp;The AI program can process input such as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">DO MACRO FOR ZOOM = 1 TO 8</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">PLOT SA3 FOR ZOOM = 3 TO 5.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">See </span><span class="f_mine" style="text-decoration: underline;"><a href="um15215.htm" class="topiclink">Section 15.2.1.5</a></span><span class="f_mine"> for information about this use of the artificial intelligence program.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Yet another form of the CAM command is </span><span class="f_mine" style="font-weight: bold;">CAM OPT</span><span class="f_mine">. &nbsp;This does automatically what CAM SEARCH allows you to do by hand: it will search for the value of the exponent which yields the lowest peak and RMS deviation from the defined zoom positions. &nbsp;If the CAM SEARCH curves are smooth, it does a good job of finding the minimum point. &nbsp;Unfortunately, those curves are sometimes erratic, probably owing to numerical round off in calculations of very large and very small numbers. &nbsp;In this case, the program finds the first local minimum when testing cases starting from the high end. &nbsp;You can easily assess the situation by requesting a search over an area centered on the value that the optimization returned. &nbsp;If the curves jump up and down, with more than a single minimum, you are better off finding the lowest minimum by eye. &nbsp;You can also experiment with the </span><span class="f_mine" style="font-weight: bold;">CAM DAMPING</span><span class="f_mine"> value. &nbsp;If you enter no value yourself (or zero), the program uses a default damping of 1.0e-7. &nbsp;You can try other values to see if the curves are smoother.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input </span><span class="f_mine" style="font-weight: bold;">CAM ZMAG </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">magn</span><span class="f_mine" style="font-weight: bold;"> [ ANG / APER / COMB / NONLIN </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">exp</span><span class="f_mine" style="font-weight: bold;"> / ENDS ]</span><span class="f_mine"> is used to adjust the zoom object specifications to correspond exactly to a desired magnification range. &nbsp;It is used only when the object height varies over the zoom range. &nbsp;Normally, the magnification is implied by the values you enter for the objects in the first and the last zoom. &nbsp;If you have used the </span><span class="f_mine" style="font-weight: bold;">CAM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">nb</span><span class="f_mine" style="font-weight: bold;"> SET</span><span class="f_mine"> command, however, the objects will have been altered in accordance with the current cam curves -- which are close but not an exact match to the defined zoom points. &nbsp;The objects therefore may depart somewhat from the magnification you desired. &nbsp;This command will redefine them. &nbsp;The distribution of object parameters is selected with the fourth argument: if </span><span class="f_mine" style="font-weight: bold;">ANG</span><span class="f_mine"> is selected, the angle of the full-field object will vary linearly over the zooms. &nbsp;If </span><span class="f_mine" style="font-weight: bold;">APER</span><span class="f_mine"> is selected, the paraxial value YMP1 will vary linearly. &nbsp;The program then adjusts the remaining parameters so that the Lagrange invariant remains constant. &nbsp;This has the effect of causing the parameter that is not designated to vary non-linearly, which in lenses with a large zoom ratio can result in very large changes in that parameter concentrated at the extreme end of the range -- which can cause problems in optimization. &nbsp;To address this issue, the </span><span class="f_mine" style="font-weight: bold;">COMB</span><span class="f_mine"> option is available; it adjusts the object to the average of the former two options, so there is less likelihood of large changes over a small range. &nbsp;In some cases, the </span><span class="f_mine" style="font-weight: bold;">NONLIN</span><span class="f_mine"> option may work even better. &nbsp;Another option is the </span><span class="f_mine" style="font-weight: bold;">ENDS</span><span class="f_mine"> request, which spaces the zooms so they are compressed at both ends of the range. See the discussion in </span><span class="f_mine" style="text-decoration: underline;"><a href="um1073.htm#zsearch" class="topiclink">ZSEARCH</a></span><span class="f_mine">. &nbsp;To simply scale the user input linearly, use the </span><span class="f_mine" style="font-weight: bold;">NONLIN</span><span class="f_mine"> option, with an exponent of 1.0.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For zoom lenses using object type OBD, the ZMAG option only supports APERT, NONLIN, and ENDS.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The ZMAG adjustment does not adjust the zoom groups themselves, however, and you are advised to run your optimization again to ensure they work over the corrected object points. &nbsp;If the object is the same for all zooms, this command is not appropriate and should not be used. &nbsp;It is available only for object types OBA, OBB, OBD, and OBC.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The magnification value you enter corresponds to the change from the first to last zooms. &nbsp;For a 10X zoom lens, for example, if zoom 1 is the wide-angle setting the magnification would be 0.1. &nbsp;If zoom 1 is the narrow-angle setting, the value would be 10.0.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Let us finish this section by observing that while the cam interpolation routines do a fairly good job of calculating the zoom shifts at points in between the defined zooms, there is usually a residual defocus here and there as you move the zoom slider. &nbsp;To get the smoothest possible zoom motion, we recommend you define 20 zooms (with CAM 20 SET), reoptimize the lens at all 20 positions (the</span><span class="f_mine" style="font-weight: bold;"> ZGROUP</span><span class="f_mine"> input to the AANT file is handy where appropriate), and then assign a cubic interpolation to the ZFILE data.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There is also a feature that will display the diffraction point-spread over zooms. &nbsp;See </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um8613.htm#zpsprd" class="topiclink">ZPSPRD</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1072.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

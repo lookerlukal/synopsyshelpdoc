@@ -1,0 +1,1532 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>parameters: defining</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CBOUNDS,CLIMIT,CUL,CUL, FUL glass limits,Derivatives, size of,FBOUNDS,FUL,Increments, control of,limits of variables,optimization--&gt;,PANT,RDR,SLIMIT,TLIMIT,VARIABLE declaration,VLIST, variable list,VY variable input,VY; variable declaration" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="pant"></a><span class="f_mine" style="font-size: 14pt;">10.2 Parameter Input (PANT)</span><span class="f_mine" style="font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um103.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1011.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Only those design parameters specifically input as variables are available to the optimizing program. &nbsp;Up to 400 variables may be specified in an input file of the form</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp;PANT [P]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">[ RDR </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FRACTION</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">[ CBOUNDS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ND1</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">VD1</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ND2</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">VD1</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">[ FBOUNDS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ND1</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">VD1</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ND2</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">VD1</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">[ CLIMIT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">UPPER</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LOWER</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">[ TLIMIT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">UPPER</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LOWER</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">[ SLIMIT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">UPPER</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LOWER</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">[ CUL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CROWNLIMIT</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">[ FUL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FLINTLIMIT</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">[ CLL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CROWNLLIMIT</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">[ FLL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FLINTLLIMIT</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VY </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">parameter</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">UPPER LIMIT</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LOWER LIMIT</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">INCREMENT</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">parameter</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> …</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Parameter</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> THRU </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST RAD ALL [ EXCEPT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ...]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST CSUM ALL &nbsp;[ EXCEPT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ...]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST CDIFF ALL &nbsp;[ EXCEPT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ...]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST TH ALL</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST TH ALL EXCEPT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ...</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST TH ALL OVER </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">VALUE</span><span class="f_mine" style="font-weight: bold;">  </span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST TH ALL OVER </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">VALUE</span><span class="f_mine" style="font-weight: bold;"> &nbsp;EXCEPT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ...</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST TH ALL GLASS </span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST TH ALL GLASS &nbsp;EXCEPT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ...</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST TH ALL GLASS &nbsp;OVER </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">VALUE</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST TH ALL GLASS &nbsp;OVER </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">VALUE</span><span class="f_mine" style="font-weight: bold;"> &nbsp; EXCEPT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ...</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST TH ALL AIR </span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST TH ALL AIR &nbsp;EXCEPT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ...</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST TH ALL AIR &nbsp;OVER </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">VALUE</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST TH ALL AIR &nbsp;OVER </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">VALUE</span><span class="f_mine" style="font-weight: bold;"> &nbsp; EXCEPT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ...</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST GLM ALL [ EXCEPT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ...]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST CC ALL [ EXCEPT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ...]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">VLIST G ALL [ EXCEPT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ...]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;"><a href="um102.htm#pantnurbs" class="topiclink">VY </a></span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#pantnurbs" class="topiclink">SN</a></span><span class="f_mine" style="font-weight: bold;"><a href="um102.htm#pantnurbs" class="topiclink"> NURBS</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;"><a href="um102.htm#pantnurbs" class="topiclink">VY </a></span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#pantnurbs" class="topiclink">SN</a></span><span class="f_mine" style="font-weight: bold;"><a href="um102.htm#pantnurbs" class="topiclink"> XNURBS</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;"><a href="um102.htm#zernvariables" class="topiclink">VY </a></span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#zernvariables" class="topiclink">SN</a></span><span class="f_mine" style="font-weight: bold;"><a href="um102.htm#zernvariables" class="topiclink"> ZERNIKE [ SYMM / RSYMM / NLSYMM / RRSYMM ]</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;"><a href="um102.htm#pantdoe" class="topiclink">VY </a></span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#pantdoe" class="topiclink">SN</a></span><span class="f_mine" style="font-weight: bold;"><a href="um102.htm#pantdoe" class="topiclink"> DOE [ SHAPE ]</a> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">UPPER LIMIT</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LOWER LIMIT</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">INCREMENT</span><span class="f_mine" style="font-weight: bold;"> ] </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;"><a href="um102.htm#pantdca" class="topiclink">VY </a></span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#pantdca" class="topiclink">SN</a></span><span class="f_mine" style="font-weight: bold;"><a href="um102.htm#pantdca" class="topiclink"> DCA [ SYMM / RSYMM ]</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">NDTEST</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Where </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">parameter</span><span class="f_mine"> is a code word identifying the parameter, taken from the list below. &nbsp;The upper and lower limits give the range through which the parameter is allowed to move, and the increment is used for calculating the derivative with the finite difference method.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">VLIST</span><span class="f_mine"> options utilizes default limits and increments for variables so entered. &nbsp;There are several flavors of the VLIST. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">ALL</span><span class="f_mine"> format, which works with many variable types, automatically scans the lens and assigns variables to those surfaces that meet certain requirements.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For RAD variables, those are:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">1. &nbsp;The surface is currently spherical or conic and not flat.</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">2. &nbsp;There are no pickups or solves assigned.</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">3. &nbsp;The object and image surfaces are not varied.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For TH variables, the requirements are:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">1. &nbsp;There are no pickups or solves involved.</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">2. &nbsp;It is not part of a HOE, DOE, or GRATING</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">3. &nbsp;It is not inside a PRISM.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For GLM variables, the requirements are:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">1. &nbsp;It does not pick up another index.</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">2. &nbsp;It is already defined a GLM material.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One can exclude surfaces from the ALL variables by declaring them following the EXCEPT mnemonic, which is in word 4 of the line. &nbsp;Thickness variables generated by the ALL request can be restricted to air spaces, glass thicknesses, or only thicknesses currently over a stated value, by selecting the appropriate option. &nbsp;Thus, if the lens has some airspaces at the default minimum value of 1 mm and you do not want those to be declared variables with the ALL format because they always want to get smaller but cannot do so, then you could declare</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">VLIST TH ALL OVER 1.1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This option examines the absolute value of the current thickness, and bypasses that variable if the value is less than the declared threshold.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">VLIST GLM ALL</span><span class="f_mine"> ... option will vary the glass model only on surfaces that already have a glass model assigned. &nbsp;This is in contrast to the form VY </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> GLM, which </span><span class="f_mine" style="font-style: italic;">forces</span><span class="f_mine"> a glass model on the requested surface whenever possible, regardless of its current status. &nbsp;If the surface does not already have an assigned model, the latter option will attempt to find model parameters that duplicate the index values currently in place. &nbsp;This search is likely to succeed only if the current wavelengths are not very different from the CDF wavelengths. &nbsp;If it fails, the variable will be deleted, and you are then advised to insert a reasonable glass model yourself before trying to use it as a variable. &nbsp;A common use of this format is when you want to replace glass models with real glasses one at a time, reoptimizing each case before changing the next. &nbsp;The VLIST ALL GLM format will then continue to vary those models remaining in the lens, but will leave any assigned glass-table glasses as they are. &nbsp;So you do not have to remove each of the affected variables, as you would if you declared the GLM variable separately.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">VLIST CC ALL</span><span class="f_mine"> ... option will vary the conic constant on all surfaces that already have a conic constant. &nbsp;These include the normal aspherics as well as Zernike surfaces, linear and cubic splines, and aspheric toroids. &nbsp;It does not apply to any of the </span><span class="f_mine" style="text-decoration: underline;"><a href="um3327.htm#uss" class="topiclink">USS</a></span><span class="f_mine"> types, some of which have a conic term assigned to a G coefficient. &nbsp;Those must be explicitly varied with the appropriate G term.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">VLIST G ALL</span><span class="f_mine"> ... option will vary all G-coefficients that are already nonzero on surfaces declared aspheric of the form </span><span class="f_mine" style="text-decoration: underline;"><a href="um33222.htm" class="topiclink">DC1</a>,</span><span class="f_mine"> etc. &nbsp;It does not vary G terms on any other surface shape; to vary those you must input explicit variables on each term of each surface. &nbsp;NURBS and ZERNIKIES, have other options as well.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">VLIST ... </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">n</span><span class="f_mine" style="font-weight: bold;"> THRU </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">m</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine">form is similar to the </span><span class="f_mine" style="font-weight: bold;">VLIST ... ALL</span><span class="f_mine"> form, except it only examines and varies variables in the specified surface range.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The VLIST options only work with parameters described in the above paragraphs.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="pantnurbs"></a><span class="f_mine">The form </span><span class="f_mine" style="font-weight: bold;">VY </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> NURBS</span><span class="f_mine"> will vary all of the G-terms that apply to the Z-coordinates of the control points. &nbsp;If the surface has been defined as symmetrical about the Y-Z plane (with the original input), only half of the terms will be varied; the other half will pick up those values. &nbsp;The surface must already be defined a </span><span class="f_mine" style="font-weight: bold;">NURBS</span><span class="f_mine"> surface type </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss15" class="topiclink">USS 15</a></span><span class="f_mine">. &nbsp;The form </span><span class="f_mine" style="font-weight: bold;">XNURBS</span><span class="f_mine"> is similar, but applies to surface type </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss24" class="topiclink">USS 24</a></span><span class="f_mine"> and varies the XLD variables.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="zernvariables"></a><span class="f_mine">The form </span><span class="f_mine" style="font-weight: bold;">VY </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ZERNIKE [ SYMM / RSYMM / NLSYMM / RRSYMM ]</span><span class="f_mine"> only works on surfaces already declared </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um33226.htm" class="topiclink">ZERNIKE</a></span><span class="f_mine">. &nbsp;It will vary the G-terms that apply to coefficients 1 through 37, unless the optional </span><span class="f_mine" style="font-weight: bold;">SYMM</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">RSYMM, RRSYMM, </span><span class="f_mine">or</span><span class="f_mine" style="font-weight: bold;"> NLSYMM</span><span class="f_mine"> is entered. &nbsp;The former will only vary terms with bilateral symmetry, the second only those with rotational symmetry, the third is like the second except it does not vary the highest-order term G 36, and the fourth is similar to the second, except it does not vary term G 2, which is linear in Y and works much the same as an alpha-tilt variable (if one also varies the tilt, the effect is redundant, to first order). &nbsp;To vary the center offset, use terms G 38 and 39; to vary the Y scale factor, use term G 51. &nbsp;To vary the unit aperture, use term G 50. &nbsp;If the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um33226.htm" class="topiclink">ZVZ</a></span><span class="f_mine"> &nbsp;option is in effect, none of these forms will vary term G 37, which is managed by that option.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="pantdoe"></a><span class="f_mine">The form </span><span class="f_mine" style="font-weight: bold;">VY </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> DOE [ SHAPE ]</span><span class="f_mine"> only works on surfaces already declare DOEs by one of four forms: &nbsp;True </span><span class="f_mine" style="font-weight: bold;"><a href="um3328.htm#doe" class="topiclink">DOEs</a></span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss16" class="topiclink">USS 16</a></span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss20" class="topiclink">USS 20</a></span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss25" class="topiclink">USS 25</a></span><span class="f_mine">. &nbsp;Types USS 16 and USS 20 contain a description of the base shape and the OPD function defining the kinoform zones. &nbsp;For these two, you may enter the optional </span><span class="f_mine" style="font-weight: bold;">SHAPE</span><span class="f_mine"> qualifier, and the program will vary only those terms describing that shape. &nbsp;If that qualifier is omitted, it will vary the terms describing the OPD function instead. &nbsp;Type USS 25 is by definition always applied to a flat substrate, and the program ignores the qualifier and varies the terms describing the OPD function. &nbsp;If the surface is a true DOE, the terms to be varied depend on which polynomial has been selected to describe the OPD function. &nbsp;If it is a G-series polynomial, it varies terms G 16 through G 31. &nbsp;If it is an S-type polynomial, the terms are 16 through 36. &nbsp;If it is an XDD polynomial, the terms go from 16 through 48. &nbsp;Zernike terms cannot at present be varied with this input format. &nbsp;(You must vary explicit LHG and RHG terms for that shape, as explained in </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3328.htm#varydoe" class="topiclink">Section 3.3.2.8</a></span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="pantdca"></a><span class="f_mine">The form </span><span class="f_mine" style="font-weight: bold;">VY S</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">N</span><span class="f_mine" style="font-weight: bold;"> DCA [ SYMM / RSYMM ]</span><span class="f_mine"> is intended for surfaces that are presently spherical, conics, or flat. &nbsp;It applies the basic aspheric terms to that surface and varies some or all of them according to the directive in word 4.  </span><span class="f_mine" style="font-weight: bold;">SYMM</span><span class="f_mine"> varies only those terms symmetric in X, ensuring bilateral symmetry.  </span><span class="f_mine" style="font-weight: bold;">RSYMM</span><span class="f_mine"> only varies terms that are rotationally symmetric.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the default mode of SYNOPSYS, the optional [ </span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine"> ] on the PANT line has no effect. &nbsp;This mode gives the minimum amount of printout during optimization, and automatically includes a listing of the input data for </span><span class="f_mine" style="font-weight: bold;">PANT</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm" class="topiclink">10.3</a></span><span class="f_mine">). &nbsp;If </span><span class="f_mine" style="text-decoration: underline;"><a href="um29.htm" class="topiclink">mode switch 29</a></span><span class="f_mine"> is turned off (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um105.htm" class="topiclink">10.5</a></span><span class="f_mine">), the program will examine the </span><span class="f_mine" style="font-weight: bold;">PANT</span><span class="f_mine"> command for the [ </span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine"> ] and will echo the input if this is present. &nbsp;If the </span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine"> is not present it will print a more lengthy, but readable, record of all variables for the run. &nbsp;In other words, if you want a very short listing, turn on switch 29. &nbsp;For an input echo, turn off 29 and include the </span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine">, and for a longer summary leave the </span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine"> off as well.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may enter upper and lower limits on each variable, and if you do not, the program will substitute defaults. &nbsp;These boundary conditions constrain the excursion of the variable. &nbsp;If a boundary is violated at a particular iteration, the program scales the solution vector so that the variable moves exactly to that boundary, and then drops that variable. &nbsp;If mode switch 1 is on, the variable remains at that value for the duration of the run. &nbsp;If the switch is off, it will again be free to move on the next iteration. &nbsp;Usually a variable will continue to violate a boundary, and it is somewhat more efficient to drop it permanently, by turning on this switch. &nbsp;At the early stages of a design, however, when the design form is not yet determined, it may be wise to turn off this switch, since a boundary violation may then be only temporary.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default boundaries for curvature and thickness variables may be set with the entries </span><span class="f_mine" style="font-weight: bold;">CLIMIT</span><span class="f_mine"> … and </span><span class="f_mine" style="font-weight: bold;">TLIMIT</span><span class="f_mine"> …. &nbsp;Default limits are +/- 5.0 for curvatures (corresponding to a radius of 0.2), while for thicknesses and airspaces the limits are 1.0e5 and 1 mm. &nbsp;The absolute value of thickness variables is compared with the limits to check for violations, as described above, so only positive limits need be entered. &nbsp;Thus, if you are designing a system with very small elements, where the thickness may be less than a millimeter, you could enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">TLIMIT 100 0.1</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">to set a smaller lower limit. &nbsp;This limit applies to all VLIST TH variables, and all VY </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> TH variables where explicit limits are not entered with the data. &nbsp;The limits must be entered </span><span class="f_mine" style="font-style: italic;">before</span><span class="f_mine"> the thickness variables are declared in order to affect those variables.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The limits applied to airspaces will be the same as the TLIMIT limits by default, but you can override those data with the </span><span class="f_mine" style="font-weight: bold;">SLIMIT</span><span class="f_mine"> input. &nbsp;The data provided will then apply to airspaces that are variables. &nbsp;For this reason the SLIMIT input, if entered, must follow TLIMIT. &nbsp;The limits must be entered </span><span class="f_mine" style="font-style: italic;">before</span><span class="f_mine"> the thickness variables are declared in order to affect those variables.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Another way of constraining a variable, which does not result in its being dropped from the variable list if a boundary is violated, is to target the value in the aberration array (</span><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm#aant" class="topiclink">AANT</a></span><span class="f_mine">). &nbsp;This type of control may give an exact target or a one-sided boundary (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um1035.htm" class="topiclink">10.3.5</a></span><span class="f_mine">). &nbsp;This is the </span><span class="f_mine" style="font-style: italic;">recommended</span><span class="f_mine"> method if you want a variable to move to a particular value and remain there, or if the variable must be constrained within a very narrow region: &nbsp;if you try to constrain a variable with a narrow region using the parameter limits, it will likely be fixed at one boundary or the other on the first pass, even though the best solution may well be elsewhere. &nbsp;For this reason it is better to give a wide boundary and control the value with the AANT file in such cases.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Proper choice of the increment size is important for success of any finite-difference program. &nbsp;Too large an increment may produce error due to nonlinearities, and too small may produce inaccuracy due to problems with numerical precision. &nbsp;Default values, described below, are usually appropriate, and these may be overridden when necessary.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The easiest way to put the best increments in effect is with mode switch 7 (which is a default). &nbsp;This switch recalculates the increments at each pass, as explained in </span><span class="f_mine" style="text-decoration: underline;"><a href="um105.htm" class="topiclink">section 10.5</a></span><span class="f_mine">. &nbsp;Provided that the initial increments succeed at the first pass, the subsequent passes will use the new values.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Although the default derivative increment sizes are usually effective, it can happen that when a parameter is perturbed, some rays fail to trace due to TIR or MCS errors somewhere. &nbsp;This occurs most often when the lenses are extremely small, and in that case one would like the default increments to be reduced by some factor. &nbsp;This is the function of the optional </span><span class="f_mine" style="font-weight: bold;">RDR</span><span class="f_mine"> input, where </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FRACTION</span><span class="f_mine"> is the reduction factor desired. &nbsp;Thus, to reduce the default increments to 1% of their normal values, one would enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">RDR 0.01</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">in the PANT file. &nbsp;This parameter affects only the starting increments, and if switch 7 is on, new values will be calculated at each iteration.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">CBOUNDS</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">FBOUNDS</span><span class="f_mine"> are used to alter the default boundaries that apply to the dispersion part (VD) of glass variables of the form GLM, GBC, and GBF. &nbsp;These data are most easily developed via the </span><span class="f_mine" style="text-decoration: underline;"><a href="gt.htm" class="topiclink">Glass Map</a></span><span class="f_mine">. &nbsp;Enter a pair of Nd and Vd values in each line, with the highest index values first, such as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">CBOUNDS 1.88 40.43 1.49 78.53 </span></p>
+<p class="p_mine"><span class="f_mine">FBOUNDS 1.92 22.16 1.50 62.67.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The boundaries so entered apply to all varying glass models except for elements designated </span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm#plastic" class="topiclink">PLASTIC</a></span><span class="f_mine">. &nbsp;In that case, narrow default boundaries will apply and the entered bounds are ignored.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you enter non-default values for these boundaries, </span><span class="f_mine" style="font-weight: bold;">be sure to also supply a value for CUL, CLL, FUL, and FLL</span><span class="f_mine">. &nbsp;Otherwise the index may stray outside of the area you have selected, and results are unpredictable.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">CUL</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">FUL</span><span class="f_mine"> give the upper limit for glass variables. &nbsp;CUL is used for GLM and GBC variables, and FUL only for GBF variables. &nbsp;The default limit for crown glass is 1.9, and for flints it is 1.92. &nbsp;If you are designing an i-Line lens, for example, for which there are no suitable glasses with an index over 1.6, this is where you can restrict glass variables to that limit. &nbsp;The input </span><span class="f_mine" style="font-weight: bold;">CLL</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">FLL</span><span class="f_mine"> similarly change the default lower limit on the index of crown and flint glasses. The default is 1.501, and you may increase that value, but do not decrease it since then the boundary enforcement calculations no longer work.  </span><span class="f_mine" style="font-weight: bold;">Be aware that these settings remain in effect until you change them or restart the program.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The example above gives the program defaults; CBOUNDS defines the crown boundary, and FBOUNDS defines the flint. &nbsp;See the above link for more information about the Glass Map and boundaries display.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The permissible entries for PAR are shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vrd" class="topiclink">RD, RAD </a></span><span class="f_mine" style="text-decoration: underline;">or</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vrd" class="topiclink"> CV</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vvzn" class="topiclink">VZN</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxg" class="topiclink">AG</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxl" class="topiclink">AL</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vth" class="topiclink">TH</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxg" class="topiclink">BG</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxl" class="topiclink">BL</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vindex" class="topiclink">INDEX</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vap1" class="topiclink">AP1 NB</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxg" class="topiclink">GG</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxl" class="topiclink">GL</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vvd" class="topiclink">VD</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vap1" class="topiclink">AP2 NB</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxg" class="topiclink">XG</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxl" class="topiclink">XL</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vglm" class="topiclink">GLASS </a></span><span class="f_mine" style="text-decoration: underline;"><a href="um102.htm#vglm" class="topiclink">or</a></span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vglm" class="topiclink"> GLM</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vth0" class="topiclink">TH0</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxg" class="topiclink">YG</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxl" class="topiclink">YL</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vgbf" class="topiclink">GBF</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vyp0" class="topiclink">YP0</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxg" class="topiclink">ZG</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxl" class="topiclink">ZL</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vgbc" class="topiclink">GBC</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vymp1" class="topiclink">YMP1</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vat" class="topiclink">AT NB</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxdc" class="topiclink">XDC NB</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vasph" class="topiclink">ASPH</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vyp1" class="topiclink">YP1</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vat" class="topiclink">BT NB</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxdc" class="topiclink">YDC NB</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vcc" class="topiclink">CC</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vlhg" class="topiclink">LHG NB</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vat" class="topiclink">GT NB</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxdc" class="topiclink">ZDC NB</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vaccom" class="topiclink">ACCOMMODATE</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vlhg" class="topiclink">RHG NB</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vbth" class="topiclink">BTH</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vgc" class="topiclink">GC NB</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vzdata" class="topiclink">ZDATA NZOOM</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vcao" class="topiclink">CAO</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vg" class="topiclink">G NB</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#gout" class="topiclink">GOUT</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxmp1" class="topiclink">XP1</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxmp1" class="topiclink">XMP1</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxe" class="topiclink">XE</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxe" class="topiclink">YE</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxe" class="topiclink">ZE</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxe" class="topiclink">AE</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxe" class="topiclink">BE</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vxe" class="topiclink">GE</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#gpa" class="topiclink">GPA</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#gpa" class="topiclink">GPB</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#gpa" class="topiclink">GPG</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vzth0" class="topiclink">ZTH0</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vpth0" class="topiclink">PTH0</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vup0" class="topiclink">UP0</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vup0" class="topiclink">UB0</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#csum" class="topiclink">CSUM</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;"><a href="um102.htm#csum" class="topiclink">CDIFF</a></span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#cax" class="topiclink">CAX</a></span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#cax" class="topiclink">CAY</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#vpgm" class="topiclink">PGM</a></span></p>
+</td>
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Default values for the limits and increments are assumed unless specific values are input, except as noted below. &nbsp;The data are defined as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:119px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vrd"></a><span class="f_mine" style="font-weight: bold;">RD, RAD, CV</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:424px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">vary the radius of curvature of surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine">. &nbsp;If the surface initially is a conic, this variable keeps the previous value of the conic constant. &nbsp;If the surface was initially flat, the radius will be set to 10**8 units before optimization.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">With any of these three, it is the curvature ( 1 / RD ) that is actually varied. &nbsp;The limits on RD therefore actually apply to the curvature, not the radius itself. &nbsp;Suppose you want the radius to be no smaller than 0.01 in absolute value. &nbsp;You must then override the default limit, which is 0.1, with the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">VY </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> RAD 0.01 –0.01.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here it looks like the upper and lower limits are reversed – but they are not. &nbsp;The upper limit on </span><span class="f_mine" style="font-style: italic;">curvature</span><span class="f_mine"> is the reciprocal of 0.01, or 100; and the lower limit is similarly –100. &nbsp;So the limits are correct when applied to the curvature, and have to be in this order to satisfy the syntax.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also specify a different default limit with the </span><span class="f_mine" style="font-weight: bold;">CLIMIT</span><span class="f_mine"> parameter, described above. &nbsp;In that case you do not have to enter explicit limits on the variable declaration line.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default increment of RD variables is 5.0E-5/CAO, which gives a slope change of about 2 arcsec. &nbsp;If the surface does not have a CAO defined, the increment is 1.0E-5.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:119px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="csum"></a><span style="font-weight: bold;">CSUM, CDIFF</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:424px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The variables </span><span class="f_mine" style="font-weight: bold;">CSUM</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">CDIFF</span><span class="f_mine"> are an alternative to RAD variables. &nbsp;If you vary the RAD on both sides of an element, you get two variables; if you vary CSUM, the program varies both radii at the same time, keeping the sum of the changes zero. &nbsp;This is therefore a change in </span><span class="f_mine" style="font-style: italic;">bending</span><span class="f_mine"> of the element. &nbsp;If you vary CDIFF, the two radii vary in a way that changes the </span><span class="f_mine" style="font-style: italic;">power</span><span class="f_mine"> but not the bending. &nbsp;Mathematically, one would expect the result of varying the two radii to be the same as varying both CSUM and CDIFF -- but in practice many subtle processes affect the results, and due to the inherently chaotic nature of lens design, you usually end up with a very different lens. &nbsp;It goes without saying that you must not vary the radii independently and also vary CSUM or CDIFF, which would probably result in a singular matrix.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This variable can only be assigned to the first side of an element, and most aspheric shapes are not allowed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:119px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vth"></a><span class="f_mine" style="font-weight: bold;">TH</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:424px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">varies a thickness or airspace. &nbsp;The default limits allow the absolute value of the variable to grow to 10 000 units or shrink to 1 mm, keeping the same sign. &nbsp;This rule gives a wide range to the variable, but the sign of the thickness is not allowed to change. If you want a thickness to be free to move to both positive and negative values, </span><span class="f_mine" style="font-style: italic;">you must enter the limits yourself.</span><span class="f_mine"> &nbsp;The default increment is 0.001.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also change the default limits with the parameter </span><span class="f_mine" style="font-weight: bold;">TLIMIT</span><span class="f_mine"> …. &nbsp;The new defaults will then apply to all VLIST TH variables, and all VY </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> TH variables where explicit limits are not entered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If a starting thickness is exactly zero, the upper limit is applied to both the maximum value, and, with a sign change, to the lower limit.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">See </span><span class="f_mine" style="text-decoration: underline;"><a href="um1038.htm#aacc" class="topiclink">Section 10,3.8 </a></span><span class="f_mine">for a discussion of how the monitors ACC and ACM can also be used to control thicknesses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:119px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vindex"></a><span class="f_mine" style="font-weight: bold;">INDEX</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:424px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">varies the index at the primary wavelength. &nbsp;The indices at other wavelengths remain </span><span class="f_mine" style="font-style: italic;">unchanged</span><span class="f_mine">. &nbsp;This variable is useful primarily in monochromatic systems, where the dispersion of the material is not important. &nbsp;The default limits on </span><span class="f_mine" style="font-weight: bold;">IND</span><span class="f_mine"> variables are (1.8, 1.46), and the default increment is 0.001. &nbsp;For polychromatic systems, the glass variables in the next section, which vary all indices according to the glass model, are more appropriate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:227px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vglm"></a><span class="f_mine" style="font-weight: bold;">VD, GLASS, GLM, GBC and GBF</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:316px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">all cause the refractive material of surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um334.htm" class="topiclink">SN</a></span><span class="f_mine"><a href="um334.htm" class="topiclink"> to be redefined as a model glass (see </a></span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm" class="topiclink">3.3.4</a></span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;"><a href="appf.htm" class="topiclink">App. F</a></span><span class="f_mine">). &nbsp;The program attempts to find values for Nd and Vd so that the modeled values of the primary, long, and short indices are the same as the initial values. &nbsp;(These variables all require at least three wavelengths.) &nbsp;The Nd and Vd so found are then available as variables, depending on input.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that the glass model is appropriate only for materials resembling typical optical glasses, and only over the wavelength range of such materials. &nbsp;Thus, you should not attempt to use it for infrared or UV work or with other materials.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can see (and adjust) the glass variable boundaries via the </span><span class="f_mine" style="text-decoration: underline;"><a href="gt.htm" class="topiclink">Glass Table Display</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Glass variables entered with a VLIST are assigned default index limits (1.5 to 1.8, except for GBF variables, which can go up to 1.92). &nbsp;If you want other limits, use the form VY … GLM, etc, and supply your limits there, or specify a different default with the CUL and FUL directives.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">See the next sections for more information about glass variables.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:161px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vvd"></a><span class="f_mine" style="font-weight: bold;">VD </span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:382px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">varies Vd only, keeping Nd unchanged. &nbsp;The limits on Vd are a function of Nd, and correspond approximately to the crown and flint boundaries of the Schott glass map. &nbsp;These boundaries can be viewed and adjusted in the </span><span class="f_mine" style="text-decoration: underline;"><a href="gt.htm" class="topiclink">Glass Table Display</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="vglm"></a><span class="f_mine" style="font-weight: bold;">GLASS</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">GLM</span><span class="f_mine"> (or </span><span class="f_mine" style="font-weight: bold;">INDEX</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">VD</span><span class="f_mine"> in succession)</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:436px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">vary both Nd and Vd independently until Vd reaches one side of the glass map. &nbsp;If this occurs, the two variables are merged and the glass moves in one dimension, up and down the appropriate boundary. &nbsp;The message &quot;GLASS PINNED, VAR. NO.___&quot; is displayed when this occurs.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The glass model will not be employed, and the dispersion will not be accepted as a variable, if less than three wavelengths are defined or if the primary wavelength exceeds 2.0 </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&mu;</span><span class="f_mine">M. &nbsp;If the initial glass is outside of the crown or flint boundary, it will be moved into it before optimization. &nbsp;The message &quot;GLASS &nbsp;MODEL CHANGES INITIAL INDICES&quot; will be printed when this occurs.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Entering variables </span><span class="f_mine" style="font-weight: bold;">INDEX</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">VD</span><span class="f_mine"> in succession is equivalent to entering </span><span class="f_mine" style="font-weight: bold;">GLM</span><span class="f_mine">.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since arbitrarily changing the initial glass properties will often lead to ray failures, one should ensure that the initial model is within or very near the boundaries before using this variable.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vgbf"></a><span class="f_mine" style="font-weight: bold;">GBF</span></p>
+</td>
+<td style="vertical-align:top; width:436px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">moves the initial glass over to the flint boundary, and subsequent optimization will move Nd and Vd together along that boundary.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vgbc"></a><span class="f_mine" style="font-weight: bold;">GBC</span></p>
+</td>
+<td style="vertical-align:top; width:436px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">moves the initial glass over to the crown boundary, and subsequent optimization will move Nd and Vd together along that boundary.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vpgm"></a><span style="font-weight: bold;">PGM</span></p>
+</td>
+<td style="vertical-align:top; width:436px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This variable turns on the plastic flag for the requested surface, and then varies the index input to the GLM glass model for that surface. &nbsp;The flag causes the usual boundaries to be ignored and instead places the model on a line passing through the area on the glass map where plastics are to be found. &nbsp;The index range is constrained to the region 1.488 to 1.663.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The line so modeled is similar to the GBF glassmap boundary set by the input FBOUNDS 1.92 12.76 1.50 80.27. &nbsp;The program automatically uses the equivalent equation.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the surface is already declared </span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm#plastic" class="topiclink">PLASTIC</a></span><span class="f_mine">, then the GLM variable does the same thing as the PGM variable.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vasph"></a><span class="f_mine" style="font-weight: bold;">ASPH</span></p>
+</td>
+<td style="vertical-align:top; width:436px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes the surface to be defined as a conic section of revolution (if it is currently spherical), and the semi-axes a and b to be made variables (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um33221.htm" class="topiclink">3.3.2.2.1</a></span><span class="f_mine">). &nbsp;Default limits are plus or minus .025, and these apply to computed values of 1 / 2b and b / 2a**2. &nbsp;(For a sphere, these correspond to radii between 0.025 and -0.025, going through infinity.) &nbsp;The default increment is 1.0E-5. &nbsp;This variable is equivalent to giving </span><span class="f_mine" style="font-style: italic;">both</span><span class="f_mine"> the RAD and CC as variables.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The command </span><span class="f_mine" style="text-decoration: underline;"><a href="um1015.htm#aaa" class="topiclink">AAA</a></span><span class="f_mine"> can automatically find the best location in a lens to introduce an aspheric surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vat"></a><span class="f_mine" style="font-weight: bold;">AT, BT, </span><span class="f_mine">and</span><span class="f_mine" style="font-weight: bold;"> GT</span></p>
+</td>
+<td style="vertical-align:top; width:436px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">vary either the alpha, beta, or gamma tilt on a surface. &nbsp;If the tilt of a collection of surfaces is to be varied, the number of surfaces to tilt together is entered as </span><span class="f_mine" style="font-weight: bold;">NB.  </span><span class="f_mine">If a tilt is already present on that surface, NB must either be the same as the previously entered group size, or zero, which will retain the previous group size. &nbsp;If no tilt is currently present, the surface is redefined as a tilted surface. &nbsp;It must not currently be </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um385.htm#group" class="topiclink">GROUP</a></span><span class="f_mine">,  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um382.htm" class="topiclink">GLOBAL</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um383.htm" class="topiclink">LOCAL</a></span><span class="f_mine">. &nbsp;Note that the rules for tilting surfaces listed in </span><span class="f_mine" style="text-decoration: underline;"><a href="um38.htm" class="topiclink">3.8</a></span><span class="f_mine"> apply, except that for tolerancing with the program </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch11.htm#tol" class="topiclink">TOL</a></span><span class="f_mine">, a single surface may have an AT, BT, and GT simultaneously (since these are used one at a time). &nbsp;If a non-zero value for AXIS (location of tilt axis) is desired, it must have been previously entered in an </span><span class="f_mine" style="font-weight: bold;">RLE</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">CHG</span><span class="f_mine"> file. &nbsp;Default limits are plus or minus 90 degrees, and the default increment is 1 mr. &nbsp;Limits may be input as angles in degrees, and the increment in radians.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vxdc"></a><span class="f_mine" style="font-weight: bold;">XDC, YDC,</span><span class="f_mine"> and</span><span class="f_mine" style="font-weight: bold;"> ZDC</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:436px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">vary the surface decenter. &nbsp;Relative decenters may be specified in the same way as tilts, described above, with the number of surfaces to decenter together given by the NB parameter. &nbsp;All three decenters may be varied for a single surface. &nbsp;Default limits are plus or minus 100 lens units, and the default increment is .001. &nbsp;This is not used for GLOBAL or LOCAL surfaces, which have other mnemonics (see below), and should not be used to vary the decenter of a surface entered with a nonzero AXIS value (see<a href="um381.htm" class="topiclink"> </a></span><span class="f_mine" style="text-decoration: underline;"><a href="um381.htm" class="topiclink">3.8.1</a></span><span class="f_mine">). &nbsp;These variables can also be used for the decenter of </span><span class="f_mine" style="text-decoration: underline;"><a href="um385.htm#group" class="topiclink">GROUP</a></span><span class="f_mine"> surfaces, and in that case you do not need to enter the fourth word since the group size will have been declared already. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vg"></a><span class="f_mine" style="font-weight: bold;">G </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span></p>
+</td>
+<td style="vertical-align:top; width:436px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes the surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> to be described as a general aspheric (see<a href="um33222.htm" class="topiclink"> </a></span><span class="f_mine" style="text-decoration: underline;"><a href="um33222.htm" class="topiclink">3.3.2.2.2</a></span><span class="f_mine">), unless it has already been defined as </span><span class="f_mine" style="text-decoration: underline;"><a href="um33223.htm" class="topiclink">TORIC</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um33224.htm" class="topiclink">BICONIC</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um33227.htm" class="topiclink">BIRADIAL</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um3324.htm" class="topiclink">HOE</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um3328.htm" class="topiclink">DOE</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um33228.htm" class="topiclink">ASTORIC</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um33226.htm" class="topiclink">ZERNIKE</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um3327.htm#uss" class="topiclink">USS</a></span><span class="f_mine">, or </span><span class="f_mine" style="text-decoration: underline;"><a href="um3325.htm" class="topiclink">GRATING</a></span><span class="f_mine">, and the specified coefficients to be varied. &nbsp;The following list gives the radially-symmetric coefficients of the general aspheric form.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">G 1 &nbsp;multiplies </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&rho;</span><span class="f_mine">**2</span></p>
+<p class="p_mine"><span class="f_mine">G 3 multiplies </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&rho;</span><span class="f_mine">**4</span></p>
+<p class="p_mine"><span class="f_mine">G 6 multiplies </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&rho;</span><span class="f_mine">**6</span></p>
+<p class="p_mine"><span class="f_mine">G 10 multiplies </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&rho;</span><span class="f_mine">**8</span></p>
+<p class="p_mine"><span class="f_mine">G 16 multiplies </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&rho;</span><span class="f_mine">**10 &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">G 18 multiplies </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&rho;</span><span class="f_mine">**12 </span></p>
+<p class="p_mine"><span class="f_mine">G 19 multiplies </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&rho;</span><span class="f_mine">**14 </span></p>
+<p class="p_mine"><span class="f_mine">G 20 multiplies </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&rho;</span><span class="f_mine">**16 </span></p>
+<p class="p_mine"><span class="f_mine">G 21 multiplies </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&rho;</span><span class="f_mine">**18 </span></p>
+<p class="p_mine"><span class="f_mine">G 22 multiplies </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&rho;</span><span class="f_mine">**20 </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&rho;</span><span class="f_mine"> = ( X**2 + Y**2 )**1/2</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since some of these coefficients multiply the aperture to a very high power, the effect of the coefficients for an aperture that is less than unity is very different than for an aperture greater than unity. &nbsp;For this reason, default increments are automatically computed based on the aperture size, unless explicitly entered on the input line. &nbsp;Switch 7, which controls the increments during optimization, is recommended if the G-terms are to be varied.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The other G terms are non-rotationally symmetric. &nbsp;Default limits for all those G-coefficients are + / - 1.0E10.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the surface has previously been defined as </span><span class="f_mine" style="font-weight: bold;">TORIC</span><span class="f_mine">, the variables RD and G 1 apply to the YZ radius and the quantity CX/2, where CX is the curvature in the X-Z plane.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the surface has previously been defined as </span><span class="f_mine" style="font-weight: bold;">BICONIC</span><span class="f_mine">, the variables G 1 and G 2 apply to the CCX and CCY conic constants.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the surface has previously been defined as a </span><span class="f_mine" style="font-weight: bold;">HOE</span><span class="f_mine">, the G variables apply as described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um3324.htm#varyhoe" class="topiclink">Section 3.3.2.4</a></span><span class="f_mine">. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the surface has previously been defined as a </span><span class="f_mine" style="font-weight: bold;">DOE</span><span class="f_mine">, the G variables apply as described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um3328.htm#varydoe" class="topiclink">Section 3.3.2.8</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the surface has been defined as an unusual surface shape (</span><span class="f_mine" style="font-weight: bold;">USS</span><span class="f_mine">), the G-terms apply in a manner that depends on the specific shape assigned. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um3327.htm#uss" class="topiclink">Section 3.3.2.7</a></span><span class="f_mine"> for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:436px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If the surface is a </span><span class="f_mine" style="font-weight: bold;">BIRADIAL</span><span class="f_mine">, variable G 1 applies to the quantity CX/2, where CX is the curvature in the X-Z plane.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the surface is </span><span class="f_mine" style="font-weight: bold;">ASTORIC</span><span class="f_mine">, the G-variables apply to powers of Y according to the table in </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um33228.htm" class="topiclink">Section 3.3.2.2.8</a></span><span class="f_mine"> and G 17 to the quantity CX/2, where CX is the curvature in the X-Z plane.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the surface is a </span><span class="f_mine" style="font-weight: bold;">ZERNIKE</span><span class="f_mine">, the G coefficients 1 through 36 apply to the terms Z 1 through Z 36. &nbsp;The term G 38 varies the X-offset of the unit circle, and G 39 varies the Y-offset.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">TH0</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">YP0</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">YMP1</span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold;">YP1</span><span class="f_mine"> vary the object parameters:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vth0"></a><span class="f_mine" style="font-weight: bold;">TH0</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">varies the object distance, as entered on the OBA line. &nbsp;See the comments under YMP1, below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vyp0"></a><span class="f_mine" style="font-weight: bold;">YP0</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">varies the object height. &nbsp;Note that a zero value of YP0 is never permitted, even as a starting point. &nbsp;The derivative increment is initially equal to YP0/10,000, which may be a large number if the object is far away and YP0 itself is very large. &nbsp;Use this form for object types OBA and OBB.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vup0"></a><span class="f_mine" style="font-weight: bold;">UP0</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">varies the object angle. &nbsp;This is intended for OPD objects (wide-angle), where the YP0 variable has little meaning since it refers to a flat object surface and OPD creates a curved one. &nbsp;It also works for OBC objects, where YP0 does not work. &nbsp;The entry UB0 also works, to follow the mnemonic allowed for aberrations.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vymp1"></a><span class="f_mine" style="font-weight: bold;">YMP1</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">varies the marginal ray height. &nbsp;Varying YMP1 or TH0 is one way to change the object-space F/number. &nbsp;(The other is to use the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#fillstop" class="topiclink">FILLSTOP</a></span><span class="f_mine"> option and vary the stop CAO.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vyp1"></a><span class="f_mine" style="font-weight: bold;">YP1</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">varies the chief-ray height on surface one (and also </span><span class="f_mine" style="font-style: italic;">removes any </span><span class="f_mine" style="font-style: italic; text-decoration: underline;"><a href="um32.htm#aps" class="topiclink">APS</a></span><span class="f_mine" style="font-style: italic;"> specificafion in effect</span><span class="f_mine">, using the current value of YP1 as a starting point). &nbsp;This feature lets you find the chief-ray position that best meets your imaging needs without knowing in advance where the stop will be. &nbsp;When the design converges, you then can examine the ray paths and select the best location for the stop.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default limits for each of these variables is plus or minus 1.0E20, and the increment is 0.001. &nbsp;For best results, infinite objects (OBB) should be redefined somewhat closer, with OBA or OBC, with TH0 = 1.0E4 or 1.0E5, prior to varying TH0 or YP0. Note that an entry for SN must appear on all parameter input including object parameters (for syntax error checking) although it is ignored in this case, as &quot;VY 0 TH0&quot;. &nbsp;Note also that if you vary the object distance you also change the object space F/number, and if this is not desired you must place a dummy surface number 1 at a convenient location and then vary 1 TH (or else use the system option OSNA (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um311.htm" class="topiclink">Section 3.1.1</a></span><span class="f_mine">.))</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um2631.htm" class="topiclink">VFIELD</a></span><span class="f_mine"> option or a real pupil is in effect, you may not vary </span><span class="f_mine" style="font-weight: bold;">YP1</span><span class="f_mine">, since the two options are incompatible.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The variable </span><span class="f_mine" style="font-weight: bold;">YP1</span><span class="f_mine"> also works for systems with wide-angle object type </span><span class="f_mine" style="font-weight: bold;">OBD</span><span class="f_mine">. &nbsp;In those systems, the value gives the height of a real ray on surface 1 instead of a paraxial ray on the tangent plane, since the latter would go to infinity at 90 degrees.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vzth0"></a><span class="f_mine" style="font-weight: bold;">ZTH0</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This variable changes the object distance for a given zoom setting. &nbsp;It is intended primarily for adjusting the object distance in </span><span class="f_mine" style="text-decoration: underline;"><a href="um125.htm#mc" class="topiclink">MC</a></span><span class="f_mine"> analysis. To vary the object distance for a lens that is </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> a zoom lens, use the TH0 variable, described above.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Unlike the ZDATA variable (which is the only other variable that can be assigned to a particular zoom setting), this one can be applied to ZOOM 1 and higher. &nbsp;(The ZDATA variable only applies to zoom 2 and higher, since in zoom 1 the offsets are always zero.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This variable lets you focus a zoom lens by adjusting the object distance. &nbsp;To focus individual zooms at the </span><span class="f_mine" style="font-style: italic;">image</span><span class="f_mine">, on the other hand, simply assign a YMT solve to the system; then all zooms will see the solve and will be refocused, and no variable is required.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The second word on the VY line in this case refers to the zoom position, not a surface number. &nbsp;The VLIST format is not available for this variable.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vpth0"></a><span class="f_mine" style="font-weight: bold;">PTH0</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This parameter varies the value of TH0, or the object distance, with special application to zoom lenses. &nbsp;When it is varied, the new value is automatically assigned to all defined zoom positions. &nbsp;It is used to model a refocus at the object, where all zooms must work at the same distance. &nbsp;(The variable ZTH0, above, is used when each zoom is allowed to adjust the object distance independently of the others.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The surface number is not important, but a number must appear in word 2. &nbsp;Thus you might enter “VY 0 PTH0”.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vxmp1"></a><span class="f_mine" style="font-weight: bold;">XMP1, XP1</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">are the same as YMP1 and YP1 but in the X-Z plane.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vcc"></a><span class="f_mine" style="font-weight: bold;">CC</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">designates the surface a conic section, and the value of ( 1 / 2b ) is varied keeping ( b / 2a**2 ) constant. &nbsp;This is an alternate way of varying a conic section that will hold the axial radius of curvature constant while varying the conic constant. &nbsp;(Note that varying </span><span class="f_mine" style="font-weight: bold;">RD</span><span class="f_mine"> on a conic will vary ( b / 2a**2 ) while keeping ( 1 / 2b ) constant.) &nbsp;Default limits are plus and minus 20 for the variable (1 / 2b), and the increment is 0.0001. &nbsp;(See </span><span class="f_mine" style="text-decoration: underline;"><a href="appc.htm" class="topiclink">App. C</a></span><span class="f_mine"> for a description of conic formulations.) &nbsp;To vary </span><span class="f_mine" style="font-style: italic;">both</span><span class="f_mine"> the radius and conic constant, use the simpler </span><span class="f_mine" style="font-weight: bold;">ASPH</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The command </span><span class="f_mine" style="text-decoration: underline;"><a href="um1015.htm#aaa" class="topiclink">AAA</a></span><span class="f_mine"> can automatically find the best location in a lens to introduce an aspheric surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vap1"></a><span class="f_mine" style="font-weight: bold;">AP1 </span><span class="f_mine">and</span><span class="f_mine" style="font-weight: bold;"> AP2</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">vary the aberration coefficients of a HOE. &nbsp;This feature may be used only if the system containing the HOE is </span><span class="f_mine" style="text-decoration: underline;"><a href="um1072.htm#acon" class="topiclink">ACON 1</a></span><span class="f_mine">, and the HOE must already have had coefficients defined for the point P1 or P2 with the input A11 or B11, etc. &nbsp;(See </span><span class="f_mine" style="text-decoration: underline;"><a href="um3324.htm" class="topiclink">section 3.3.2.4</a></span><span class="f_mine">).  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> in each case is the G-term of the aberration polynomial to be varied. &nbsp;Thus, to vary the fourth-order spherical aberration term of the beam from point P1 of the HOE on surface number 11, the input would be</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-weight: bold;">VY 11 AP1 3</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default increment is 1.0E-4, and the limits are plus and minus l.0E10.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vaccom"></a><span class="f_mine" style="font-weight: bold;">ACCOM</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">varies the accommodation of the system (which must be </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#afocal" class="topiclink">AFOCAL</a></span><span class="f_mine">). &nbsp;The last surface will be placed at a distance of 1 /</span><span class="f_mine" style="font-weight: bold;"> D</span><span class="f_mine"> from the previous surface, where </span><span class="f_mine" style="font-weight: bold;">D</span><span class="f_mine"> is the number of diopters of accommodation, and the image surface will be a spherical surface centered at the previous vertex. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm" class="topiclink">section 3.2</a></span><span class="f_mine"> for a description of this feature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vxg"></a><span class="f_mine" style="font-weight: bold;">XG through GG</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">vary the global X, Y, Z coordinates, and the global angles alpha, beta, and gamma. &nbsp;If the surface is not presently GLOBAL, it will be made so at the current location. See </span><span class="f_mine" style="text-decoration: underline;"><a href="um382.htm" class="topiclink">section 3.8.2</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vxl"></a><span class="f_mine" style="font-weight: bold;">XL through GL</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">apply to LOCAL coordinates. See </span><span class="f_mine" style="text-decoration: underline;"><a href="um383.htm" class="topiclink">section 3.8.3</a></span><span class="f_mine"> and the above.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vxe"></a><span class="f_mine" style="font-weight: bold;">XE through GE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">vary the </span><span class="f_mine" style="text-decoration: underline;"><a href="um384.htm#external" class="topiclink">EXTERNAL</a></span><span class="f_mine"> position and angles. &nbsp;EXTERNAL mode will be turned on if it is not already.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vgc"></a><span class="f_mine" style="font-weight: bold;">GC </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">applies to a </span><span class="f_mine" style="text-decoration: underline;"><a href="um3341.htm#grin" class="topiclink">GRIN</a></span><span class="f_mine"> parameter. &nbsp;The assignment of GC variables to the several kinds of GRIN input are shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">GRIN type</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;">1</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;">2</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;">3</span></p>
+</td>
+<td style="vertical-align:top; width:24px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;">4</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;">5</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;">6</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;">7</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;">8</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;">9</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t1-3"><span class="f_t1-3" style="font-size: 11pt; font-weight: bold;">10</span></p>
+</td>
+<td style="vertical-align:top; width:1px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">GC</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">11</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">12</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">13</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">14</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">15</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">16</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">17</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">18</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">19</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">20</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">21</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">22</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">23</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">24</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">25</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">26</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">27</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">28</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">29</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t2-2"><span class="f_t2-2" style="font-size: 11pt; font-weight: bold;">30</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt; font-weight: bold;">RAD or AXI</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">N1</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C3</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C4</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">N2</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C3</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C4</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">N3</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C3</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C4</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt; font-weight: bold;">URN</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">N1</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C3</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C4</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C5</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C6</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C7</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C8</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">N2</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C3</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C4</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C5</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C6</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C7</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C8</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">N3</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C3</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C4</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C5</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C6</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C7</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C8</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt; font-weight: bold;">SPHERICAL</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">N1</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C3</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C4</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C5</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">N2</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C3</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C4</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C5</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">N3</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C3</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C4</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2" style="font-size: 11pt;">C5</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t3-2"><span class="f_t3-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt; font-weight: bold;">SELFOC</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">N1</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">N2</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">N3</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt; font-weight: bold;">LUNEBERG</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">N1</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">N2</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">N3</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt; font-weight: bold;">MAXWELL</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">N1</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">N2</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">DT</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">N3</span></p>
+</td>
+<td style="vertical-align:top; width:34px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C1</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2" style="font-size: 11pt;">C2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:26px; padding:4px; border:solid 1px #000000;"><p class="p_t4-2"><span class="f_t4-2">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">For example, to vary the base index of a SELFOC at wavelength 2, you would select from the table &quot;GC 12&quot;, and to vary the radius coefficient of a spherical GRIN (which is coefficient C5) at wavelength 1, the GC number would be 7.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vbth"></a><span class="f_mine" style="font-weight: bold;">BTH</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">varies the offset from the paraxial focus, provided that the lens has a YMT solve defining the back focal distance.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vzdata"></a><span class="f_mine" style="font-weight: bold;">ZDATA </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NZOOM</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is used to move the zooming groups of ZFILE zoom lenses (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um1071.htm" class="topiclink">10.7.1</a></span><span class="f_mine">). &nbsp;In this case, the entry </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> refers to the group number, not surface number. &nbsp;To vary the position of group 2 in zoom position 3, for example you would enter </span><span class="f_mine" style="font-weight: bold;">VY 2 ZDATA 3</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vcao"></a><span class="f_mine" style="font-weight: bold;">CAO</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">varies the hard clear aperture on the surface. &nbsp;The aperture will become hard if the lens initially has program-defined apertures.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vlhg"></a><span class="f_mine" style="font-weight: bold;">LHG, RHG</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">are used to vary the left-hand and right-hand half of a G variable. &nbsp;This applies only to surfaces where two single-precision values have been encoded into the one double-precision address of G. &nbsp;The only current case is that of a HOE with Zernike coefficients; these are loaded into the G-array as follows: Coefficients ZI to Z17 of point P1 are in the left half of G 16 through G 32, while coefficients Z18 to Z34 are in the right half. &nbsp;Z35 and Z36 are in the left and right halves of term G33.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For point P2 the G address is increased by 18. &nbsp;Thus, to vary term Z 19 of point P2 of the HOE on surface 3, the input would be &quot;</span><span class="f_mine" style="font-weight: bold;">VY 3 RHG 35</span><span class="f_mine">&quot;.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="vvzn"></a><span class="f_mine" style="font-weight: bold;">VZN</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This variable changes the value of one of the AI numbers </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um15142.htm" class="topiclink">Zn</a></span><span class="f_mine">. &nbsp;It has no effect unless you are using the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um103_11.htm#clink" class="topiclink">CLINK</a></span><span class="f_mine"> aberration form, where you input a command line or re-run the alternate MACro – and the data for that command or MACro contain one or more of the symbols Z1 through Z20 – or you are using a composite definition and want the Zn values to occur in an equation. &nbsp;For example, to vary the value of Z6, one would put </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">VY 6 VZN</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">in the PANT file, and then use the characters &quot;Z6&quot; somewhere in the command or MACro, in the location where you want the numeric data to vary.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since this variable takes effect only when the command line or alternate MACro is run, and not when Zn itself is altered, the CLINK aberration should be placed at the start of the AANT file, before any other aberration that may be altered by the change in Zn.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="gout"></a><span class="f_mine" style="font-weight: bold;">GOUT</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This variable is used when you want to remove an element or change the index to that of AIR. &nbsp;It declares the surface a fixed-index type, with all index values equal to the current major index on that element, &nbsp;sets the upper limit on the index to the current CUL value, and the lower limit to 0.001. &nbsp;These limits allow the value to drop to 1.0. &nbsp;This is intended as a convenient way to see whether a lens element can be removed entirely.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(An even easier way is with the AED feature, described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um1016.htm#aed" class="topiclink">Section 10.16</a></span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If one just removes an element, the lens will usually exhibit ray failures, and it is not always simple to proceed from there. &nbsp;But if you vary the index with GOUT and target its value to 1.0 in the merit function, the lens will wind up with nearly zero power and you can then remove it without much effect. &nbsp;And if the lens cannot be removed without a serious effect on the aberrations, the optimization program will not let the index drop all the way. &nbsp;This is an indication that the element is serving a useful purpose and perhaps should be left in.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="gpa"></a><span class="f_mine" style="font-weight: bold;">GPA, GPB, GPG</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These variables change the </span><span class="f_mine" style="text-decoration: underline;"><a href="um385.htm#group" class="topiclink">group</a></span><span class="f_mine"> tilt angle. &nbsp;They only work if a group tilt has already been assigned to the requested surface (unlike the relative tilt variables AT, BT, GT, which automatically put the tilt into effect if it is not there already). &nbsp;All three directions are permitted on a given surface using the group tilt option. &nbsp;The default limits are +/- 180 degrees, and the default increment is 1 mr.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="cax"></a><span class="f_mine" style="font-weight: bold;">CAX, CAY</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These vary the decenter of a hard CAO in X or Y</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">VLIST</span><span class="f_mine"> form of parameter input allows you to input a number of surfaces having a given type of variable, such as curvature or thickness. &nbsp;When this form is used, default limits and increments will apply. &nbsp;Any valid </span><span class="f_mine" style="font-weight: bold;">PAR</span><span class="f_mine"> that does not take an extra numeric argument may be specified, for example,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">VLIST RAD 1 2 3 5</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">is acceptable, but not</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">VLIST AT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> 1 2 3... &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(</span><span class="f_mine">Invalid)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">because the </span><span class="f_mine" style="font-weight: bold;">AT</span><span class="f_mine"> variable requires the extra argument, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine">, specifying the number of surfaces to tilt as a group. &nbsp;Any number of </span><span class="f_mine" style="font-weight: bold;">VY</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">VLIST</span><span class="f_mine"> entries may be input, up to a total of 400 variables.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">By default, the program tests all the derivative increments before optimizing the lens and reduces any that cause ray failures, which is usually a good idea. &nbsp;But if you have entered your own increments with the PANT data--and want those increments to remain unchanged--the directive </span><span class="f_mine" style="font-weight: bold;">NDTEST</span><span class="f_mine"> entered following the PANT file will defeat that step.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um103.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

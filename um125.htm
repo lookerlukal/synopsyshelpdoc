@@ -1,0 +1,447 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um125</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="mc"></a><span class="f_mine" style="font-size: 14pt;">12.5 Monte-Carlo Tolerance Analysis &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1251.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um124.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The BTOL feature, described in the preceding sections, provides an efficient and practical way to derive a tolerance budget based on reasonable statistical assumptions about the lens and its image. &nbsp;It is, however, a compromise between accuracy and cost, and in order to be fast enough to be useful, the program necessarily assumes the following:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.</span></p>
+</td>
+<td style="vertical-align:top; width:642px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The relation between the lens variables and the image quality can be described by a Taylor's series of only two terms.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.</span></p>
+</td>
+<td style="vertical-align:top; width:642px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Cross terms involving second derivatives of this series are negligible.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">3.</span></p>
+</td>
+<td style="vertical-align:top; width:642px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Wedge, tilt, and decenter in the X-Z plane are equally as serious as those in the Y-Z plane.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">4.</span></p>
+</td>
+<td style="vertical-align:top; width:642px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The statistics of image quality with a large manufacturing lot are described by a normal distribution.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">5. </span></p>
+</td>
+<td style="vertical-align:top; width:642px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The toleranced parameters will follow a uniform error distribution, with the mean value equal to the nominal design value and a standard deviation given by the expected value over this distribution.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since any or all of these assumptions may be inaccurate in a given situation, provision has been made to verify the statistics of the final BTOL budget using the Monte-Carlo method.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are two forms of Monte-Carlo analysis, differing in the amount of adjustment they permit. &nbsp;MC is described in this section; the lens is repeatedly altered to simulate the random changes that occur in manufacture, always within the BTOL budget, and then sent to be reoptimized where adjustments may be used to correct defects. &nbsp;The statistics of the resulting quality and adjustment values are then made available in printed and plotted form.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A more elaborate feature called FAMC simulates a series of fabrication adjustments that a shop could use to perfect a very difficult lens. &nbsp;It is described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um1253.htm" class="topiclink">Section 12.5.3</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since MC will apply the adjustments that have been specified in an effort to compensate for all parameter errors, it cannot be used to evaluate a budget for which some adjustment(s) are applied only to a limited surface range. &nbsp;In such cases, you may find that the </span><span class="f_mine" style="text-decoration: underline;"><a href="um121.htm#bsegment" class="topiclink">SEGMENT</a></span><span class="f_mine"> option of BTOL is more convenient.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">MC honors the </span><span class="f_mine" style="text-decoration: underline;"><a href="um546.htm#core" class="topiclink">CORE</a></span><span class="f_mine"> directive. &nbsp;If you have a multicore PC, the analysis will be faster using all of the cores -- but there are restrictions: &nbsp;Since the goal of the multicore feature is to execute as quickly as possible, the program does not load all of the data required for the AI feature (which involves considerable overhead). &nbsp;As a result, you cannot define any new symbols in the MCFILE MACro. &nbsp;The program, however, will inherit and honor any symbols already defined in CORE 0. &nbsp;You may also use the &quot;Zn =&quot; format to assign quantities to the display of statistics.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To use the MC program, the following procedure is recommended:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.</span></p>
+</td>
+<td style="vertical-align:top; width:642px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Remove unwanted pickups and solves from the lens to be toleranced. &nbsp;Usually, all solves should be deleted unless they correspond very closely to the adjustments to be performed at assembly; pickups may be left alone if they reflect reality: PINs where the same glass melt is to be used for several elements, PCVs for Mangin mirrors where the same surface is traversed twice, etc.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.</span></p>
+</td>
+<td style="vertical-align:top; width:642px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Store the initial lens in the library. &nbsp;This lens will be the model for whatever adjustments you plan to use later.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">3.</span></p>
+</td>
+<td style="vertical-align:top; width:642px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Prepare your </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> input data, and put the command </span><span class="f_mine" style="font-weight: bold;">PREPARE MC</span><span class="f_mine"> before the </span><span class="f_mine" style="font-weight: bold;">GO</span><span class="f_mine"> instruction. &nbsp;If you have any adjustments, this command will create an adjustment MACro, containing the </span><span class="f_mine" style="font-weight: bold;">PANT</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> files necessary to duplicate the </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> adjustments on each simulated manufactured lens. &nbsp;It is wise to specify a confidence level of 2 or 3 sigma (e.g., </span><span class="f_mine" style="font-weight: bold;">BTOL 2</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">BTOL 3</span><span class="f_mine">) to insure adequate manufacturing success. &nbsp;If all tolerances are entered as fixed input, the </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> file may end with the </span><span class="f_mine" style="font-weight: bold;">EVAL</span><span class="f_mine"> option, rather than </span><span class="f_mine" style="font-weight: bold;">GO</span><span class="f_mine">, with a considerable saving of time.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">4.</span></p>
+</td>
+<td style="vertical-align:top; width:642px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Examine the file MCFILE.MAC when the BTOL run is finished (with the command </span><span class="f_mine" style="font-weight: bold;">LM MCFILE</span><span class="f_mine">). &nbsp;Here you will see the adjustment MACro, and you can add any other variables or targets at this time if you wish (up to a total of </span><span class="f_mine" style="font-style: italic;">four</span><span class="f_mine"> adjustments). &nbsp;The changes in each of these variables will show up later in the table of statistics and on the plot, if you request one. &nbsp;The quality descriptors, however, will be those used by BTOL, not any other that you might add to the MCFILE MACro. &nbsp;This file contains the </span><span class="f_mine" style="font-weight: bold;">PANT</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> file required to adjust the lens (if there are adjustments), and must end with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-weight: bold;">MC</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Which causes the program to loop with the next set of perturbations.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Notice the changes that MC makes to the initial lens as it simulates each manufactured unit. &nbsp;You can easily examine a sample case by adding a STORE… command at the top of the MCFILE MACro, and running only a single case. &nbsp;Then get the lens out from the location where you stored it and do a SPEC.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Although it is not necessary for you to load this MACro with the </span><span class="f_mine" style="font-weight: bold;">LM</span><span class="f_mine"> command, it is wise to run it once if there are any adjustments involved, to verify that the results are as expected before requesting a large number of cases. &nbsp;(Just ask for only one sample.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is possible to make your own MCFILE.MAC, with whatever optimization sequence you wish, and in this case you must </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> use the </span><span class="f_mine" style="font-weight: bold;">PREPARE MC</span><span class="f_mine"> instruction, or your file will be overwritten. &nbsp;If there are no adjustments (when the paraxial solves in the lens are sufficient, for example) the MC MACro should contain only a single line, “</span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine">”, to make it loop.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can add anything you want to MCFILE.MAC. &nbsp;For example, you might add a “SAVE …” command before the MC command, so that the altered lens will be saved each iteration. &nbsp;Then you can later FETCH this lens and examine it more closely to see just what changes MC made on the last iteration. &nbsp;If you make any changes to this file, however, be sure to save the file by clicking on the file-save icon </span><img src="filesave.png" width="28" height="24" alt="FileSave" style="width:28px;height:24px;border:none"><span class="f_mine">. &nbsp;Otherwise MC will not see your changes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Adding MTF aberrations to the MCFILE is never recommended, however. &nbsp;Those only work if the lens is very close to optimum already, and MC perturbs the lens so much that that is very likely no longer the case. &nbsp;So MTF aberrations will move the lens to the closest maximum of the oscillating function, which is not where you want to be.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may also incorporate nearly any parameter of the lens or its image that may be evaluated by SYNOPSYS, via the Zn parameters, and include this parameter in the statistics and histogram plots. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um1252.htm" class="topiclink">section 12.5.2</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the tolerance analysis used the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um12121.htm" class="topiclink">REOPTIMIZE</a></span><span class="f_mine"> feature, then the rules for constructing the MC MACro are somewhat different. &nbsp;See the above link for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">5.</span></p>
+</td>
+<td style="vertical-align:top; width:642px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-weight: bold;"> &nbsp; &nbsp;BTOL SAVE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">may be used to save the current </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> budget. (</span><span class="f_mine" style="font-weight: bold;">BTOL FETCH </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">nnn</span><span class="f_mine"> will get it back.) &nbsp;This command is useful if you want to </span><span class="f_mine" style="font-weight: bold;">EXIT</span><span class="f_mine"> from SYNOPSYS and start again later at the same point, to run the MC command. &nbsp;Be sure to activate exactly the same lens first, if you do this. &nbsp;The file name is taken from the current log number, thus producing a file such as “3354.BTO”, and the number must be entered when you later fetch a saved budget file.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">6.</span></p>
+</td>
+<td style="vertical-align:top; width:642px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">There are two input formats for running the Monte-Carlo simulation: where the input is all on a single line, and where you enter a data file with several lines.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To use the single-line format, enter the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">MC </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSAMPLES</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LIBLOC</span><span class="f_mine" style="font-weight: bold;"> [ QUIET ] [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">QTOL</span><span class="f_mine" style="font-weight: bold;"> {</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">QNUM</span><span class="f_mine" style="font-weight: bold;">/ALL} </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">QLIB</span><span class="f_mine" style="font-weight: bold;"> &nbsp;[ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">tstat</span><span class="f_mine" style="font-weight: bold;"> ]]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">or</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-weight: bold;">MC </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSAMPLES</span><span class="f_mine" style="font-weight: bold;"> MULTI [ QUIET ] …</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this line you give the library location into which the nominal lens will be stored, and the number of simulated units you want to evaluate. &nbsp;You can request up to 500 units in a single run. &nbsp;The other entries are described below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since this line can get rather crowded, we have provided an alternate form of input:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">MC ITEMIZE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">SAMPLES </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSAMPLES</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">LIBRARY { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LIBLOC</span><span class="f_mine" style="font-weight: bold;"> / MULTI }</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ QUIET ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ WORST { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">QNUM</span><span class="f_mine" style="font-weight: bold;"> / ALL } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">QLIB</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ MCSAVE ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ THSTATS { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">tstat</span><span class="f_mine" style="font-weight: bold;"> } ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ WEDGES { RANDOM / ALTERNATE / </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um125.htm#mcclock" class="topiclink">CLOCK</a></span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">}</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ TEST ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ NOKILL ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">GO</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optional </span><span class="f_mine" style="font-weight: bold;">QUIET</span><span class="f_mine"> will suppress the output that scrolls in the Command Window; a lengthy MC run will therefore finish more quickly. &nbsp;It is recommended that you first run a short MC run without this option, to ensure that the optimization (if any) is performing as you expect, and then a run with a larger sample, with the option requested. &nbsp;The final statistics are always shown.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">TEST</span><span class="f_mine"> option will prepare a single case, where the lens is perturbed according to the BTOL budget, but not optimized. &nbsp;The program exits with that altered lens so you can examine it and see what parameters have been altered, where the program has put wedges, tilts, and decenters, and so on. &nbsp;The program ignores the </span><span class="f_mine" style="text-decoration: underline;">NSAMPLES</span><span class="f_mine"> parameter if TEST is requested.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The</span><span class="f_mine" style="font-weight: bold;"> MCSAVE</span><span class="f_mine"> option will save a copy of each case (up to 100) as a disk file named MC_SAMPLEnnn.RLE, where nnn is the case number &nbsp;This is in case you want to examine each of the altered and reoptimized cases.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the BTOL budget was prepared with the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1214.htm" class="topiclink">MULTI</a></span><span class="f_mine"> option, then you must use the MULTI form of the MC command also. &nbsp;The program then does not get the nominal lens from the library, but instead from the files created by BTOL (which are the same as those created by the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1072.htm#rsu" class="topiclink">SSU</a></span><span class="f_mine"> command). &nbsp;All configurations involved will then be perturbed, adjusted, and analyzed in accordance with the ACON … PICKUPs in effect.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One frequently wishes to know just how good or how bad the example lenses are. &nbsp;The BTOL quality descriptors give you a number, but it is also helpful to see a </span><span class="f_mine" style="font-weight: bold;">worst case example</span><span class="f_mine"> that you can examine in detail yourself. &nbsp;This is the function of the next arguments on the MC command.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">QTOL</span><span class="f_mine"> gives the value of a quality descriptor that will trigger the worst-case sample. &nbsp;Enter a negative number if you want to catch all worst-case samples.  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">QNUM</span><span class="f_mine"> specifies which quality descriptor is to be monitored, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">QLIB</span><span class="f_mine"> gives a library location into which the example will be stored. &nbsp;If the word </span><span class="f_mine" style="font-weight: bold;">ALL</span><span class="f_mine"> is substituted for QNUM, the program will monitor all quality descriptors and capture the system with the worst value overall.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Thus, to see the example lens having the worst image at the edge of the field (which is normally descriptor number 2) one could enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">MC 100 1 QUIET -1 2 6.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here, we ask for 100 samples, the original lens is in location 1, and we do not want to watch the optimization of all 100 examples. &nbsp;The program will monitor quality descriptor number 2 and save the first example for which this descriptor has a value greater than -1 (which will be the first case, since they are all positive). &nbsp;As each case is stored, the value of QTOL is set to the latest value, so that when you are finished you have the worst case in the library – here in location 6.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This is a very useful check. &nbsp;I recently found that the worst case of a wide-angle eyepiece had a large boresight error that caused the edge of the field to shift beyond the area that was corrected. &nbsp;Simply adding a boresight aberration to the MCFILE file corrected that problem and the results were much better – simulating what the user would actually see in the presented field, not what was shifted beyond the field stop.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In multiconfiguration mode, only the first configuration will be saved.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To be valid, the MC evaluation must reflect the statistical assumptions in the BTOL analysis, particularly the assumption that the error in each parameter is equally likely to be anywhere within its tolerance range. &nbsp;This may or may not be true. &nbsp;The most common case where it is not is when a shop deliberately makes element thicknesses at the high end of the range instead of aiming at the center. &nbsp;Doing so makes sense: if the element must be reworked for some reason, there is then less chance of the thickness becoming too thin. &nbsp;But the statistics are different.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To help you evaluate the effect of this kind of shop practice, you may add one of the following statistics flags to the MC command in word 8, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">tstat</span><span class="f_mine">:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: -48px; margin: 0px 0px 0px 72px;"><span class="f_mine" style="font-weight: bold;">U </span><span class="f_mine">or</span><span class="f_mine" style="font-weight: bold;"> UNIFORM</span><span class="f_mine"> the default uniform distribution</span></p>
+<p class="p_mine" style="text-indent: -48px; margin: 0px 0px 0px 72px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: -48px; margin: 0px 0px 0px 72px;"><span class="f_mine" style="font-weight: bold;">E </span><span class="f_mine">or</span><span class="f_mine" style="font-weight: bold;"> END</span><span class="f_mine"> the thickness is always at one end or the other</span></p>
+<p class="p_mine" style="text-indent: -48px; margin: 0px 0px 0px 72px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: -14px; margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">T </span><span class="f_mine">or</span><span class="f_mine" style="font-weight: bold;"> TRIANGLE</span><span class="f_mine"> the thickness follows a triangular distribution, where it is more likely to be at the center than at the edges</span></p>
+<p class="p_mine" style="text-indent: -48px; margin: 0px 0px 0px 72px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: -48px; margin: 0px 0px 0px 72px;"><span class="f_mine" style="font-weight: bold;">H </span><span class="f_mine">or</span><span class="f_mine" style="font-weight: bold;"> HIGH</span><span class="f_mine"> the thickness is always at the high end of the tolerance range</span></p>
+<p class="p_mine" style="text-indent: -48px; margin: 0px 0px 0px 72px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: -48px; margin: 0px 0px 0px 72px;"><span class="f_mine" style="font-weight: bold;">L </span><span class="f_mine">or</span><span class="f_mine" style="font-weight: bold;"> LOW</span><span class="f_mine"> the thickness is always at the low end of the tolerance range</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">See </span><span class="f_mine" style="text-decoration: underline;"><a href="um126.htm" class="topiclink">Section 12.6</a></span><span class="f_mine"> for an example of the effects of this parameter.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the </span><span class="f_mine" style="font-weight: bold;">WEDGE</span><span class="f_mine"> option is entered (in the </span><span class="f_mine" style="font-weight: bold;">ITEMIZE</span><span class="f_mine"> form), the orientation of adjacent elements will be clocked at either a random value (either alpha or beta) or so that they alternate: the thick edge of one is aligned with the thin edge of the next, and so on. &nbsp;If no entry is given, then the program looks at the status of switch 14. &nbsp;If that switch is ON, the wedges will alternate. &nbsp;The third WEDGE option, </span><span class="f_mine" style="font-weight: bold;">CLOCK</span><span class="f_mine" style="font-family: 'Times New Roman';">,</span><span class="f_mine"> is more complicated, and is described </span><span class="f_mine" style="text-decoration: underline;"><a href="um125.htm#mcclock" class="topiclink">below</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The</span><span class="f_mine" style="font-weight: bold;"> NOKILL</span><span class="f_mine"> option is intended for very complex jobs that may run for 20 minutes or more. &nbsp;In this case, some cores may not finish when core 0 does, and after a short wait, core 0 will ask if you want to abort the other core. &nbsp;This option overrides that test, allowing all cores to finish, even if they take much longer. &nbsp;If you decide to abort the higher cores yourself, the stopsign button on the top toolbar will do the job.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">7.</span></p>
+</td>
+<td style="vertical-align:top; width:642px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">When the Monte-Carlo analysis is completed, the program will print a table giving the statistics of the image quality criteria, the linear properties </span><span class="f_mine" style="font-weight: bold;">BORESIGHT</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">MAGNIFICATON</span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold;">DISTORTION</span><span class="f_mine">, and all (up to the limit of 4) of the variables given in the PANT file in the adjustment MACro. &nbsp;If the adjustments reflect those employed by </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine">, the statistics of the MC analysis should correspond reasonably well with those predicted by </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">8.</span></p>
+</td>
+<td style="vertical-align:top; width:642px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="mc_dist"></a><span class="f_mine">A duplicate copy of the MC statistics may be listed, after the entire MC set has been run, with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_mine" style="font-weight: bold;"> &nbsp; &nbsp;MC STAT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and a plot showing a histogram of all of the parameters involved, as well as a listing, may be obtained with</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-weight: bold;"> &nbsp; MC PLOT [ DIST ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optional </span><span class="f_mine" style="font-weight: bold;">DIST</span><span class="f_mine"> plots </span><span class="f_mine" style="font-style: italic;">distribution functions</span><span class="f_mine"> instead of histograms. &nbsp;This function shows the percentage of cases that are at, or better than, the value on the abscissa. &nbsp;For most items that can be plotted, </span><span class="f_mine" style="font-style: italic;">better</span><span class="f_mine"> means smaller. &nbsp;This includes the Zn parameters as well as all of the image criteria except for STREHL and MTF, which are better when they are larger.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The last two commands are only meaningful following the MC analysis, which must follow the </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> analysis.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note: &nbsp;if your MC analysis produces more than a single page of graphical output, be sure to select </span><span class="f_mine" style="font-weight: bold;">Options | Graphics | Make New Window for each Picture</span><span class="f_mine">. &nbsp;Otherwise, each new picture erases the previous one, and you will only see the last one. &nbsp;The command form is </span><span class="f_mine" style="font-weight: bold;">GAW</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The adjustment MACro can, in principle, contain any valid SYNOPSYS commands, and you may want to examine some property of the readjusted lens by including a </span><span class="f_mine" style="font-weight: bold;">SPEC</span><span class="f_mine"> or other command to print the value of a variable, or use the image analysis programs to look at some property of the lens not considered by </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine">. &nbsp;You can perform any other tasks you wish before returning to MC. &nbsp;The only thing you must </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> do at that point is to start another </span><span class="f_mine" style="font-weight: bold;">BTOL </span><span class="f_mine">or</span><span class="f_mine" style="font-weight: bold;"> MC</span><span class="f_mine"> run or store anything in the library location of the nominal lens, since </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine"> needs to get it back after each sample is completed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">After each adjustment is made, the </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine"> command at the end of the MACro sends the program back to </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine">, which then performs the same image evaluation originally requested in the </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> analysis, and prepares the next sample. &nbsp;You can ask for, say, an </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine"> run of three or four cases to check whether the adjustments are working as you wish, and then follow this with a new </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine"> command with a larger number of samples. &nbsp;For meaningful results, the sample size should be on the order of a hundred or more (500 is the maximum). &nbsp;It is not necessary to repeat the </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> analysis if you want to do another </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine"> run; the </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> data are retained until you either </span><span class="f_mine" style="font-weight: bold;">EXIT</span><span class="f_mine"> from SYNOPSYS or do another BTOL. &nbsp;These data can also be saved and fetched, as described above, but are only valid for the original, nominal lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">All of the parameters toleranced in the BTOL budget are perturbed by MC. &nbsp;The probability distribution of each parameter is uniform within its tolerance, except for thicknesses if a </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">tstat</span><span class="f_mine"> parameter has been entered. (Thicknesses are not permitted to change sign; if the budget attempts to do this, a warning message is printed and the offending thickness is unchanged.) &nbsp;Wedge tolerances are simulated with an alpha or beta tilt on the second side of each element; irregularity is simulated with the terms </span><span class="f_mine" style="font-weight: bold;">G1</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">G5</span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold;">G15,</span><span class="f_mine"> calculated so that the resultant error is a pure cylinder of random orientation; and rolled-edge errors are simulated with term </span><span class="f_mine" style="font-weight: bold;">G16</span><span class="f_mine">, which multiplies the radius to the tenth power (and is always assigned as a rolled-</span><span class="f_mine" style="font-style: italic;">down</span><span class="f_mine"> edge); these perturbations are added to whatever general aspheric terms are already present on the surface, and cannot be applied to surfaces that do not accept deformation of the .</span><span class="f_mine" style="font-weight: bold;">DC1...</span><span class="f_mine"> type (the latter are excluded from the BTOL budget anyway). &nbsp;Element tilt is of a random amount assigned to the alpha tilt of the element (unless the element previously had a relative tilt – in this case the direction is retained and only the amount of tilt is perturbed). &nbsp;If you want to tolerance both alpha and beta tilts, use the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1211.htm#um1211" class="topiclink">GROUP</a></span><span class="f_mine"> option, which will tolerance all six degrees of freedom of element location and angle.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To simulate the practice of some optical shops where cemented elements are aligned prior to cementing so that the thickest edge of one is next to the thinnest edge of the other, turn on </span><span class="f_mine" style="text-decoration: underline;"><a href="um29.htm#switches" class="topiclink">switch 14</a></span><span class="f_mine"> prior to running MC or request the WEDGE ALTERNATE option. &nbsp;This option affects the orientation of all elements in sequence, not just cemented elements. &nbsp;(</span><span class="f_mine" style="text-decoration: underline;"><a href="um538.htm" class="topiclink">Section 5.38</a></span><span class="f_mine"> describes a separate feature that can orient wedged elements in optimized directions at assembly so as to minimize the resulting image errors.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The foregoing remarks should make clear the fact that </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine"> is more general than </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine">; since perturbations are not confined to the Y-Z plane, and the adjustments employed when </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine"> is run can be more general than those of </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine">. &nbsp;A run on </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine"> is therefore more authoritative than one on </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine">. &nbsp;You might adjust a centration in three dimensions, for example, or correct image errors and boresight simultaneously. &nbsp;In these cases you would not expect the statistics from </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine"> to duplicate those from </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> -- but even so, the </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> budget is usually adequate, as verified by </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine">, and in any case </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> is a convenient vehicle into </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is not the only vehicle, however. It may happen that you want to create your own budget from scratch, and just analyze its performance. &nbsp;In such cases, you should use the </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> entry:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">EXACT ALL</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">followed by your budget entered in the form of the </span><span class="f_mine" style="font-weight: bold;">FIX...</span><span class="f_mine"> input. &nbsp;All of your parameters must be entered, and then you type the </span><span class="f_mine" style="font-weight: bold;">EVAL</span><span class="f_mine"> instruction to prepare the budget for </span><span class="f_mine" style="font-weight: bold;">MC</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A word is in order about the changes that MC makes to your lens file for each sample. &nbsp;If you examine any of the cases created by MC, you will see general aspheric terms on each surface (to model the irregularity.) &nbsp;Element tilts and decenters are modeled with relative tilts applied to the element and the undo on the surface following. &nbsp;The wedge tolerance is applied to the second side of the element with an alpha or beta tilt and the same undo surface as the element decenter and tilt.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A caution is also in order: MC can only be run on the same configuration that was used for the BTOL analysis. Some of the definitions involved include the ACON to which they apply, and MC will not work if you try to do your analysis in a different configuration.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="mcclock"></a><span class="f_mine" style="font-weight: bold;">Clocking</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is possible for MC to take into account the benefits of clocking the elements to reduce the ill effects of wedge errors. &nbsp;The </span><span class="f_mine" style="text-decoration: underline;"><a href="um538.htm#uclock" class="topiclink">UCLOCK</a></span><span class="f_mine"> feature describes how you would calculate the optimum clocking for a given set of measured elements. &nbsp;MC can examine the statistics of the yield for a project where you plan to utilize this feature as each lens is assembled.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To use MC in this mode, you must run in the ITEMIZE fashion, and give with the input the declaration</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">WEDGE CLOCK</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This causes the program to model element tilts, which normally are given a relative alpha or beta tilt angle according to the budget, with </span><span class="f_mine" style="text-decoration: underline;"><a href="um385.htm#group" class="topiclink">group</a></span><span class="f_mine"> tilts instead. &nbsp;This convention allows the element to be assigned a gamma tilt in addition to the alpha or beta tilt. &nbsp;The gamma tilt can then be used to find the optimum clocking for a given case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program does not automatically put the required variables into the MCFILE.MAC file, however, since that file was prepared earlier by BTOL, which does not know about clocking. &nbsp;So, if you wish to use MC in this fashion, you should edit and save that file, adding the gamma tilt variables with the GPG mnemonic. &nbsp;Here are the recommended steps:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;Run BTOL, requesting PREPARE MC. &nbsp;This will create the initial file MCFILE.MAC.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;Prepare and run a MACro for MC, using the ITEMIZE and WEDGE CLOCK options and requesting a TEST case, all formatted according to the instructions in this chapter.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;Examine the lens that is produced by the TEST directive with </span><span class="f_mine" style="text-decoration: underline;"><a href="um46.htm#asy" class="topiclink">ASY</a></span><span class="f_mine">, to see which elements have been assigned a GROUP tilt. &nbsp;This will normally be declared on the first side of each element, while the second side will have a wedge angle assigned with a relative alpha or beta tilt.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">4. &nbsp;Edit the file MCFILE.MAC, and add to the PANT section lines such as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">VY 5 GPG</span></p>
+<p class="p_mine"><span class="f_mine">VY 7 GPG</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where the surface numbers are just those that have the group tilt assigned. &nbsp;The mnemonic GPG adds the group gamma tilt angle as a variable. &nbsp;Do </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> vary the gamma tilt on the first element, however, since the solution would then be underconstrained: the other elements are to be clocked relative to </span><span class="f_mine" style="font-style: italic;">that</span><span class="f_mine"> element.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">5. &nbsp;Save this file (but do not run it yourself). &nbsp;Then remove the TEST directive from the MACro you prepared for running MC, and run a single case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">6. &nbsp;If all goes well, run MC for a realistic number of cases. &nbsp;You should see improved yield as a result of the gamma-tilt variables.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate this feature, we get a tolerance budget for the following lens:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="mc1.png" width="595" height="198" alt="mc1" style="width:595px;height:198px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">BTOL 2</span></p>
+<p class="p_mine"><span class="f_mine">ADJUST 14 TH</span></p>
+<p class="p_mine"><span class="f_mine">TPR ALL</span></p>
+<p class="p_mine"><span class="f_mine">EXACT 15 WEDGE</span></p>
+<p class="p_mine"><span class="f_mine">FOCUS REAL 0</span></p>
+<p class="p_mine"><span class="f_mine">DEGR SPOT .4</span></p>
+<p class="p_mine"><span class="f_mine">PREP MC</span></p>
+<p class="p_mine"><span class="f_mine">GO</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Then we make our MC MACro:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">MC ITEMIZE</span></p>
+<p class="p_mine"><span class="f_mine">SAMP 1</span></p>
+<p class="p_mine"><span class="f_mine">LIB 3</span></p>
+<p class="p_mine"><span class="f_mine">!QUIET &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! This is commented out, for testing</span></p>
+<p class="p_mine"><span class="f_mine">WORST ALL 5</span></p>
+<p class="p_mine"><span class="f_mine">WEDGES CLOCK</span></p>
+<p class="p_mine"><span class="f_mine">TEST</span></p>
+<p class="p_mine"><span class="f_mine">GO</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">After running this MACro, the test lens has been assigned asymmetries to model the wedges and element tilts and decenters:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> TILT AND DECENTER DATA</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> LEFT-HANDED COORDINATES</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> _______________________________________________________________________________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SURF TYPE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;X &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Z &nbsp; &nbsp; ALPHA &nbsp; &nbsp; &nbsp;BETA &nbsp; &nbsp; GAMMA</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> _______________________________________________________________________________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> TILT OR DECENTER GROUP SIZE: &nbsp; 3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 GROUP &nbsp; &nbsp; &nbsp;-0.00788 &nbsp; &nbsp; -0.00324 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; -0.0051 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 REL &nbsp; &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.0217 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3 REL &nbsp; &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; -0.0056 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> TILT OR DECENTER GROUP SIZE: &nbsp; 2</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5 GROUP &nbsp; &nbsp; &nbsp; 0.04172 &nbsp; &nbsp; &nbsp;0.00873 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.0000 &nbsp; -0.0388 &nbsp; &nbsp;0.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 6 REL &nbsp; &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.0033 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> TILT OR DECENTER GROUP SIZE: &nbsp; 2</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 7 GROUP &nbsp; &nbsp; &nbsp; 0.00963 &nbsp; &nbsp; -0.01572 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.0000 &nbsp; -0.0102 &nbsp; &nbsp;0.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 8 REL &nbsp; &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; -0.0175 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> TILT OR DECENTER GROUP SIZE: &nbsp; 3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 9 GROUP &nbsp; &nbsp; &nbsp; 0.00472 &nbsp; &nbsp; &nbsp;0.02762 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; -0.0082 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;10 REL &nbsp; &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.0458 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;11 REL &nbsp; &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; -0.0203 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> TILT OR DECENTER GROUP SIZE: &nbsp; 3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;12 GROUP &nbsp; &nbsp; &nbsp; 0.01415 &nbsp; &nbsp; -0.00742 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.0000 &nbsp; -0.0179 &nbsp; &nbsp;0.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;13 REL &nbsp; &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.0540 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;14 REL &nbsp; &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; -0.0123 &nbsp; &nbsp;0.0000 &nbsp; &nbsp;0.0000</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Surfaces 1, 5, 7, 9, and 12 now have group tilt declarations. &nbsp;That means we have to vary the group gamma tilt on surfaces 5, 7, 9, and 12 (but not surface 1). &nbsp;We edit the file MCFILE.MAC, adding the new variables:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">PANT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">VY &nbsp;14 TH </span></p>
+<p class="p_mine"><span class="f_mine">VY 5 GPG</span></p>
+<p class="p_mine"><span class="f_mine">VY 7 GPG</span></p>
+<p class="p_mine"><span class="f_mine">VY 9 GPG</span></p>
+<p class="p_mine"><span class="f_mine">VY 12 GPG &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">AANT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">M &nbsp; 0.000000E+00 0.3333 &nbsp; &nbsp;A &nbsp;2 XC &nbsp;0.000 0 &nbsp;.1 &nbsp; &nbsp; &nbsp;0.000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">M &nbsp; 0.297953E-05 0.3333 SR A &nbsp;2 YC &nbsp;0.000 0 &nbsp;.1 &nbsp; &nbsp; &nbsp;0.000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">M &nbsp; 0.000000E+00 0.3333 &nbsp; &nbsp;A &nbsp;2 XC &nbsp;0.000 0 -.1 &nbsp; &nbsp; &nbsp;0.000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">M &nbsp;-0.297953E-05 0.3333 SR A &nbsp;2 &nbsp;…</span></p>
+<p class="p_mine"><span class="f_mine">…</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We save this file and then edit our MC MACro, removing the TEST directive. &nbsp;Running it once, we see no errors, so we change the SAMPLES to 100 and run it again. &nbsp;When MC has run all 100 cases, we get a plot of the statistics with MC PLOT DISTRIBUTION. &nbsp;The AANT file has refocused, and adjusted the clocking of the wedges only at the on-axis point, since that point was specified in the BTOL input. Here is the diagram for the on-axis point:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="mc2.png" width="294" height="176" alt="mc2" style="width:294px;height:176px;border:none"><span class="f_mine"> MC Statistics for WEDGE CLOCK</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For comparison, these are the plots for the other wedge options:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="mc3.png" width="292" height="178" alt="mc3" style="width:292px;height:178px;border:none"><span class="f_mine"> MC Statistics for WEDGE RANDOM</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="mc4.png" width="289" height="179" alt="mc4" style="width:289px;height:179px;border:none"><span class="f_mine"> MC Statistics for WEDGE ALTERNATE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">As expected, alternating the wedges gives better performance than assigning them at random, and clocking the wedges is better yet. &nbsp;Of course it goes without saying that, to achieve this improved yield, you must ensure that the assembly team furnishes you with the measured wedge angles of each element before they are mounted in their cells, that you run the UCLOCK feature with those input data and report the optimum clocking angles back to the technicians, and that they carefully align each element according to those angles. &nbsp;With these steps you can increase the statistical yield of your batch of lenses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It also should be obvious that this feature will help only in cases where the wedge errors are contributing a significant amount of degradation. &nbsp;If tolerances on other variables are the main source of image errors, there will be little to gain from this step.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The printout from MC includes a summary of the histogram statistics. &nbsp;For example, for the histogram below,</span></p>
+<p class="p_mine"><img src="clip0479.png" width="430" height="274" alt="clip0479" style="width:430px;height:274px;border:none"></p>
+<p class="p_mine"><span class="f_mine">The program prints</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> QUALITY STATISTICS FROM MONTE-CARLO SIMULATION</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> Total number of samples &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;500</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> Total number of parameters altered &nbsp; &nbsp;59</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> FIELD NUMBER: &nbsp; 1 QUALITY RANGE 0.4303E+00 0.8793E+00 CELL SIZE 0.1952E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> HISTOGRAM: &nbsp; &nbsp;1 &nbsp; 0 &nbsp; 1 &nbsp; 1 &nbsp; 6 &nbsp;10 &nbsp; 3 &nbsp; 8 &nbsp;13 &nbsp;11 &nbsp;21 &nbsp;28 &nbsp;24 &nbsp;28 &nbsp;41</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;43 &nbsp;48 &nbsp;52 &nbsp;57 &nbsp;42 &nbsp;28 &nbsp;22 &nbsp;12</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> AVERAGE &nbsp;0.7330E+00 MEDIAN VALUE &nbsp;0.6548E+00 PEAK &nbsp;0.7914E+00</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here you see the smallest and largest value of the property on the plot, listed as the quality range, along with the average and median value and the value at the center of the highest peak.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1251.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

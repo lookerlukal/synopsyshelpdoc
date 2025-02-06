@@ -1,0 +1,738 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Zernike surfaces</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="aspherics--&gt;,ZERNIKE surface,ZVF,ZVZ" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">3.3.2.2.6 Zernike Polynomial Surfaces</span><span class="f_p3-10" style="font-size: 11pt;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p3-10" style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33225.htm" class="topiclink">Previous</a></span><span class="f_p3-10" style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span class="f_p3-10" style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33227.htm" class="topiclink">Next</a></span><span class="f_p3-10" style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span class="f_p3-10" style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(These options go into an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file, and may be entered interactively with the dialog </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">A surface may be defined a ZERNIKE surface with the input</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 48px;"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> ZERNIKE [ </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">AP</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> [ </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">XOS</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YOS</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> [ </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YSCALE</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> ] ] ]</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 48px;"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 48px;"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">ZERNIKE </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">COEFF</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 48px;"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 48px;"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">ZERNIKE </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">COEFF</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10" style="text-indent: 48px;"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">…</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">where up to 37 coefficients are entered on a succession of input lines. &nbsp;Each </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span><span class="f_p3-10" style="font-size: 11pt;"> gives the Zernike polynomial number, and </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">COEFF</span><span class="f_p3-10" style="font-size: 11pt;"> is the value of that coefficient. &nbsp;The ZERNIKE polynomials are orthogonal over the unit radius circle.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">The size of the unit circle can be scaled to an aperture of radius AP (default is AP = 1). &nbsp;The program does this by scaling the radial coordinate as R**2 = (X**2 + Y**2) / AP**2. &nbsp;A typical use of this option is to get the coefficients from an interferogram (see </span><span class="f_p3-10" style="font-size: 11pt; text-decoration: underline;"><a href="um8661.htm#zcoe" class="topiclink">ZCOE</a></span><span class="f_p3-10" style="font-size: 11pt;">) and then to model the surface on, say, a perfect paraboloid so as to simulate the measured wavefront for evaluation or correction. &nbsp;This aperture can also be declared a variable with term G 50.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">The surface defined by the Zernike terms is normally centered at the vertex of the surface. &nbsp;But it is possible to decenter the polynomial; to do so, enter the desired coordinates of the center point in </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">XOS</span><span class="f_p3-10" style="font-size: 11pt;"> and </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YOS</span><span class="f_p3-10" style="font-size: 11pt;">. &nbsp;These data may also be declared variables or targets in optimization with the mnemonics G 38 and G 39.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">The zones are normally calculated with unity scale in both X and Y, making zones with no azimuth term circular. &nbsp;But you can also input an optional scale factor in Y in word 6 of the declaration. &nbsp;Then the value of Y at any point on the surface is divided by </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YSCALE</span><span class="f_p3-10" style="font-size: 11pt;"> before the polynomial is calculated. &nbsp;This term can be varied with G 51.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">The theory of the Zernike expansion requires a constant term as well as the polynomials. &nbsp;Some of the other terms contribute a Z-component even at the axis, and the shape that results does not necessarily pass through the vertex point, as one might expect. &nbsp;Term G 37 applies a constant to the expansion and can be used to move the actual center point to the vertex plane. &nbsp;It can be varied by including that G term in the variable list, and controlled by targeting the Z coordinate of the surface at the center. &nbsp;It can also be controlled by the declaration</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span style="width:48px">&nbsp;</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">sn</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> ZVZ</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">in the RLE or CHG file. &nbsp;The program will then automatically adjust term G 37 so the surface has a sag of zero at the coordinates (0,0).</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">To remove this declaration and let term G 37 be free to vary, use</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span style="width:48px">&nbsp;</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">sn</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> ZVF.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">Zernike terms may be applied to a surface that also has a spherical curvature and conic constant. &nbsp;The surface sag is the sum of the contributions of the latter plus the polynomials.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">One frequently needs to add only terms with </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">bilateral symmetry</span><span class="f_p3-10" style="font-size: 11pt;">. &nbsp;For convenience, those terms are listed here:</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">2 3 4 7 8 10 11 14 15 16 19 20 23 24 26 27 30 31 34 35 36 37.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">The terms with </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">rotational symmetry</span><span class="f_p3-10" style="font-size: 11pt;"> are as follows:</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">3 8 15 24 35 36 37.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">The </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">SPS </span><span class="f_p3-10" style="font-size: 11pt;">dialog has a subdialog that lists the current terms alongside the equation of each one. &nbsp;You can also access that dialog from the WorkSheet by selecting the desired surface and then clicking the Curvature Dialog button </span><img src="clip0298.png" width="22" height="23" alt="clip0298" style="width:22px;height:23px;border:none"><span class="f_p3-10" style="font-size: 11pt;">.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt;">The Zernike polynomials used in SYNOPSYS are as follows: (angle A is measured from the X-axis and R is the radius vector length)</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_t1-6" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_t1-6" style="font-size: 11pt;"> &nbsp; &nbsp; &nbsp; &nbsp;Order &nbsp; &nbsp; Polynomial</span></p>
+<p class="p_t1-6"><span class="f_t1-6">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">1</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">RCOS(A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">2</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">RSIN(A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">3</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">2R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">- 1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">4</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">COS(2A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">5</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">SIN(2A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">6</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(3 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">- 2) R COS(A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">7</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(3 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">- 2) R SIN(A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">8</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">6R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">- 6R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">+ 1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">9</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">3 </span><span class="f_t2-3" style="font-size: 11pt;">COS(3A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">10</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">3 </span><span class="f_t2-3" style="font-size: 11pt;">SIN(3A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">11</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(4 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">- 3) R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">COS(2A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">12</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(4 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">- 3) R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">SIN(2A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">13</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(10R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">- 12R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2</span><span class="f_t2-3" style="font-size: 11pt;">+3) R COS(A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">14</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(10 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">- 12R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">+3) R SIN(A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">15</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">20R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">6 </span><span class="f_t2-3" style="font-size: 11pt;">- 30R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">+ 12R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">- 1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">16</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">COS(4A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">17</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">SIN(4A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">18</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(5 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">-4) R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">3 </span><span class="f_t2-3" style="font-size: 11pt;">COS(3A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">19</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(5 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">- 4) R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">3 </span><span class="f_t2-3" style="font-size: 11pt;">SIN(3A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">20</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(15 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">- 20R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">+ 6) R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">COS(2A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">21</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(15 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">- 20 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">+ 6) R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">SIN(2A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">22</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(35R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">6 </span><span class="f_t2-3" style="font-size: 11pt;">- 60R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">+ 30R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">- 4) R COS(A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">23</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(35R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">6 </span><span class="f_t2-3" style="font-size: 11pt;">- 60R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">+ 30R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">- 4) R SIN(A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">24</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">70R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">8 </span><span class="f_t2-3" style="font-size: 11pt;">- 140R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">6 </span><span class="f_t2-3" style="font-size: 11pt;">+ 90R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">- 20R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">+ 1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">25</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">5 </span><span class="f_t2-3" style="font-size: 11pt;">COS(5A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">26</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">5 </span><span class="f_t2-3" style="font-size: 11pt;">SIN(5A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">27</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(6 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">- 5) R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">COS(4A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">28</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(6 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">- 5) R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">SIN(4A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">29</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(21R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">- 30R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">+ 10) R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">3 </span><span class="f_t2-3" style="font-size: 11pt;">COS(3A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">30</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(21 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">-30 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">+ 10) R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">3 </span><span class="f_t2-3" style="font-size: 11pt;">SIN(3A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">31</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(56R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">6 </span><span class="f_t2-3" style="font-size: 11pt;">- 105R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">+ 60R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">- 10) R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">COS(2A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">32</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(56 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">6 </span><span class="f_t2-3" style="font-size: 11pt;">- 105 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">+ 60 R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">- 10) R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">SIN(2A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">33</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(126R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">8 </span><span class="f_t2-3" style="font-size: 11pt;">- 280R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">6 </span><span class="f_t2-3" style="font-size: 11pt;">+ 210R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">- 60R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">+ 5) R COS(A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">34</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">(126R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">8 </span><span class="f_t2-3" style="font-size: 11pt;">- 280K**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">6 </span><span class="f_t2-3" style="font-size: 11pt;">+ 210R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">4 </span><span class="f_t2-3" style="font-size: 11pt;">- 60R**</span><span class="f_t2-3" style="font-size: 11pt; vertical-align: super;">2 </span><span class="f_t2-3" style="font-size: 11pt;">+ 5) R SIN(A)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">35</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">252.0*R10-630.0*R8+560.0*R6-210.0*R4+30.0*R2-1.0</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">36</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">924.0*R12-2772.0*R10+3150.0*R8-1680.0*R6+420.0*R4-42.0*R2+1.0</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:54px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">37</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:4px; border:solid 1px #000000;"><p class="p_t2-3"><span class="f_t2-3" style="font-size: 11pt;">1.0</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">To vary any of the coefficients (in the PANT file) enter</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-7" style="margin: 0px 0px 0px 57px;"><span class="f_p5-7" style="font-size: 11pt; font-weight: bold;">VY </span><span class="f_p5-7" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p5-7" style="font-size: 11pt; font-weight: bold;"> G </span><span class="f_p5-7" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p8-5"><span class="f_p8-5">where </span><span class="f_p8-5" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_p8-5"> is the coefficient number to be varied. &nbsp;Note that the surface must be defined as a Zernike surface before the PANT file is read, since the meaning of the G-variables depends on the current shape.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">For reference, the pictures below illustrate the shape of each polynomial. &nbsp;These were created with the commands</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5" style="margin: 0px 0px 0px 24px;"><span class="f_p8-5" style="font-family: 'Courier New';">ADEF 1 FRING 0 0</span></p>
+<p class="p_p8-5" style="margin: 0px 0px 0px 24px;"><span class="f_p8-5" style="font-family: 'Courier New';">SPRO 1 0 .0001 </span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">where the aspheric was assigned to surface 1. &nbsp;The &quot;best-fitting sphere&quot; in all cases was declared flat, so you see only the raw Zernike term. &nbsp;One often must select, for example, only those terms that are symmetric in X -- if the system is folded in Y and must retrain bilateral symmetry. &nbsp;Thus, term 1 is not symmetric, while term 2 is, and so on. &nbsp;You can pick out the ones you wish to use from these pictures.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>1</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0035.png" width="490" height="363" alt="clip0035" style="width:490px;height:363px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0036.png" width="494" height="364" alt="clip0036" style="width:494px;height:364px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>2</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0037.png" width="498" height="367" alt="clip0037" style="width:498px;height:367px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0038.png" width="494" height="365" alt="clip0038" style="width:494px;height:365px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>3</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0039.png" width="495" height="365" alt="clip0039" style="width:495px;height:365px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0040.png" width="496" height="368" alt="clip0040" style="width:496px;height:368px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>4</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0041.png" width="494" height="366" alt="clip0041" style="width:494px;height:366px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0042.png" width="496" height="368" alt="clip0042" style="width:496px;height:368px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>5</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0043.png" width="494" height="366" alt="clip0043" style="width:494px;height:366px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0044.png" width="497" height="369" alt="clip0044" style="width:497px;height:369px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>6</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0045.png" width="496" height="367" alt="clip0045" style="width:496px;height:367px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0046.png" width="497" height="368" alt="clip0046" style="width:497px;height:368px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>7</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0047.png" width="498" height="368" alt="clip0047" style="width:498px;height:368px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0048.png" width="496" height="368" alt="clip0048" style="width:496px;height:368px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>8</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0049.png" width="497" height="366" alt="clip0049" style="width:497px;height:366px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0050.png" width="496" height="367" alt="clip0050" style="width:496px;height:367px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>9</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0051.png" width="495" height="366" alt="clip0051" style="width:495px;height:366px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0052.png" width="495" height="367" alt="clip0052" style="width:495px;height:367px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>10</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0053.png" width="496" height="365" alt="clip0053" style="width:496px;height:365px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0054.png" width="495" height="365" alt="clip0054" style="width:495px;height:365px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>11</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0055.png" width="498" height="367" alt="clip0055" style="width:498px;height:367px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0056.png" width="496" height="367" alt="clip0056" style="width:496px;height:367px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>12</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0057.png" width="497" height="368" alt="clip0057" style="width:497px;height:368px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0058.png" width="497" height="368" alt="clip0058" style="width:497px;height:368px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>13</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0059.png" width="499" height="368" alt="clip0059" style="width:499px;height:368px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0060.png" width="496" height="365" alt="clip0060" style="width:496px;height:365px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>14</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0061.png" width="494" height="366" alt="clip0061" style="width:494px;height:366px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0062.png" width="494" height="363" alt="clip0062" style="width:494px;height:363px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>15</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0063.png" width="496" height="367" alt="clip0063" style="width:496px;height:367px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0064.png" width="496" height="365" alt="clip0064" style="width:496px;height:365px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>16</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0065.png" width="493" height="365" alt="clip0065" style="width:493px;height:365px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0066.png" width="495" height="366" alt="clip0066" style="width:495px;height:366px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>17</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0067.png" width="495" height="366" alt="clip0067" style="width:495px;height:366px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0068.png" width="495" height="367" alt="clip0068" style="width:495px;height:367px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>18</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0069.png" width="494" height="366" alt="clip0069" style="width:494px;height:366px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0070.png" width="496" height="366" alt="clip0070" style="width:496px;height:366px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>19</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0071.png" width="494" height="367" alt="clip0071" style="width:494px;height:367px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0072.png" width="496" height="367" alt="clip0072" style="width:496px;height:367px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>20</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0073.png" width="495" height="368" alt="clip0073" style="width:495px;height:368px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0074.png" width="495" height="366" alt="clip0074" style="width:495px;height:366px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>21</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0075.png" width="493" height="367" alt="clip0075" style="width:493px;height:367px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0076.png" width="498" height="368" alt="clip0076" style="width:498px;height:368px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>22</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0077.png" width="497" height="367" alt="clip0077" style="width:497px;height:367px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0078.png" width="495" height="365" alt="clip0078" style="width:495px;height:365px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>23</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0079.png" width="498" height="368" alt="clip0079" style="width:498px;height:368px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0080.png" width="497" height="366" alt="clip0080" style="width:497px;height:366px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>24</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0081.png" width="497" height="368" alt="clip0081" style="width:497px;height:368px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0082.png" width="494" height="367" alt="clip0082" style="width:494px;height:367px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>25</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0083.png" width="496" height="367" alt="clip0083" style="width:496px;height:367px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0084.png" width="497" height="368" alt="clip0084" style="width:497px;height:368px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>26</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0085.png" width="496" height="367" alt="clip0085" style="width:496px;height:367px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0086.png" width="494" height="365" alt="clip0086" style="width:494px;height:365px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>27</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0087.png" width="496" height="367" alt="clip0087" style="width:496px;height:367px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0088.png" width="495" height="368" alt="clip0088" style="width:495px;height:368px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>28</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0089.png" width="497" height="365" alt="clip0089" style="width:497px;height:365px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0090.png" width="496" height="368" alt="clip0090" style="width:496px;height:368px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>29</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0091.png" width="495" height="366" alt="clip0091" style="width:495px;height:366px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0092.png" width="496" height="366" alt="clip0092" style="width:496px;height:366px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>30</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0093.png" width="497" height="367" alt="clip0093" style="width:497px;height:367px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0094.png" width="495" height="366" alt="clip0094" style="width:495px;height:366px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>31</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0095.png" width="496" height="366" alt="clip0095" style="width:496px;height:366px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0096.png" width="494" height="365" alt="clip0096" style="width:494px;height:365px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>32</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0097.png" width="497" height="366" alt="clip0097" style="width:497px;height:366px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0098.png" width="494" height="365" alt="clip0098" style="width:494px;height:365px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>33</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0099.png" width="495" height="367" alt="clip0099" style="width:495px;height:367px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0100.png" width="495" height="365" alt="clip0100" style="width:495px;height:365px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>34</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0101.png" width="494" height="366" alt="clip0101" style="width:494px;height:366px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0102.png" width="496" height="365" alt="clip0102" style="width:496px;height:365px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>35</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0103.png" width="497" height="366" alt="clip0103" style="width:497px;height:366px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0104.png" width="495" height="369" alt="clip0104" style="width:495px;height:369px;border:none"></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:75px; padding:0px;"><p>36</p>
+</td>
+<td style="vertical-align:top; width:447px; padding:0px;"><p><img src="clip0105.png" width="497" height="366" alt="clip0105" style="width:497px;height:366px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:0px;"><p><img src="clip0106.png" width="495" height="365" alt="clip0106" style="width:495px;height:365px;border:none"></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33227.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um33225.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

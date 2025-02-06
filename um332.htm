@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um332</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="curvature options,NULL shape,shape, of surface,surface shape options" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">3.3.2 Curvature Options &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3312.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3321.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(These options go into an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file, and may be entered interactively with the dialog </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">Many kinds of surface shapes may be described in SYNOPSYS. &nbsp;In some cases,</span><span class="f_c1" style="vertical-align: sub;"> </span><span class="f_c1">more than a single descriptor may be specified, producing a compound surface. &nbsp;The basic shapes available include the following; prisms are described in </span><span class="f_c1" style="text-decoration: underline;"><a href="um39.htm" class="topiclink">section 3.9</a></span><span class="f_c1">. &nbsp;Pickups and solves are discussed in </span><span class="f_c1" style="text-decoration: underline;"><a href="um3321.htm" class="topiclink">section 3.3.2.1</a></span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:202px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um3321.htm" class="topiclink">flat</a></span></p>
+</td>
+<td style="vertical-align:top; width:244px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um3325.htm" class="topiclink">grating</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:202px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um3321.htm" class="topiclink">spherical</a></span></p>
+</td>
+<td style="vertical-align:top; width:244px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um33225.htm" class="topiclink">linear spline</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:202px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um33221.htm" class="topiclink">conic section of revolution</a></span></p>
+</td>
+<td style="vertical-align:top; width:244px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um33225.htm" class="topiclink">cubic spline</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:202px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um33226.htm" class="topiclink">Zernike polynomial</a></span></p>
+</td>
+<td style="vertical-align:top; width:244px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um33227.htm" class="topiclink">biradial conic</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:202px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um33224.htm" class="topiclink">biconic</a></span></p>
+</td>
+<td style="vertical-align:top; width:244px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um1726.htm" class="topiclink">flat polarizer</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:202px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um33223.htm" class="topiclink">toric</a></span></p>
+</td>
+<td style="vertical-align:top; width:244px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um33228.htm" class="topiclink">aspheric toroid</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:202px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um3324.htm" class="topiclink">holographic</a></span></p>
+</td>
+<td style="vertical-align:top; width:244px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um3323.htm" class="topiclink">Fresnel</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:202px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um33222.htm" class="topiclink">power-series deformation</a></span></p>
+</td>
+<td style="vertical-align:top; width:244px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um3327.htm" class="topiclink">unusual surface shapes</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:202px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="text-decoration: underline;"><a href="um3326.htm" class="topiclink">non-circular zone surface</a></span></p>
+</td>
+<td style="vertical-align:top; width:244px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">A surface may be declared any of these shapes in an RLE file, but once it has been so declared you cannot assign a different kind of shape to the surface without first removing the shape designation that is already present (unless the present shape is flat or spherical).</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">This procedure allows building of compound shapes in some cases. &nbsp;If a surface already has a curvature and a conic constant, for example, then entering a new value for the RAD or CV merely changes that quantity – but leaves the previous CC (conic constant) unchanged. &nbsp;To redefine the surface as spherical (without an additional conic constant) use </span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left; text-indent: 48px;"><a name="332sph"></a><span class="f_c1" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_c1" style="font-weight: bold;"> SPH.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">To remove the current shape designation, leaving the surface flat (and available for a different shape) it can be NULLed with the input</span></p>
+<p>&nbsp;</p>
+<p class="p_p4-10" style="text-indent: -8px; margin: 0px 0px 0px 51px;"><span class="f_p4-10">&nbsp;</span></p>
+<p><a name="null"></a><span class="f_p4-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p4-10" style="font-size: 11pt; font-weight: bold;"> NULL</span></p>
+<p>&nbsp;</p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">in the </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_c1"> file, or with a sentence such as &quot;surface 6 = NULL&quot;, entered in AI mode (see </span><span class="f_c1" style="text-decoration: underline;"><a href="umch15.htm" class="topiclink">chapter 15</a></span><span class="f_c1">). &nbsp;Once nulled, the surface may be assigned any other shape.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">The rules regarding compound shapes are as follows:</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_c1"><span class="f_c1">1.</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">A conic constant may be added to a sphere, Zernike, spline, or aspheric toroid.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_c1"><span class="f_c1">2.</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">Power-series deformation terms may be added to a flat, sphere, conic section, or aspheric toroid.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_c1"><span class="f_c1">3.</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">Any shape except holographic, DOE, grating, or polarizer may be declared a Fresnel surface (and the substrates of HOEs and gratings are allowed).</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_c1"><span class="f_c1">4.</span></p>
+</td>
+<td style="vertical-align:top; width:509px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">All other shapes are uniquely described by their own mnemonics.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3321.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3312.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

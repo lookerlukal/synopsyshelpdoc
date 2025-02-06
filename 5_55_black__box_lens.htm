@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>5.55 Black Box lens</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="BBOX,BBX file,Black box lens file,Encrypting a lens" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">5.55 Black Box lens</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;background:url(background-topic-header.jpg)" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   &raquo;No topics above this level&laquo;
+   </p>
+   <h1 class="p_Heading1"><span class="f_Heading1">5.55 Black Box lens</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <img src="hm_btn_navigate_prev_d.png" border="0"
+        ><a href="main_index.htm"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img name=main src="hm_btn_navigate_top.png" border=0 alt="Return to chapter overview"
+        ></a><img src="hm_btn_navigate_next_d.png" border="0">
+    </td>
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><span style="font-size: 11pt;">SYNOPSYS can create an encrypted lens file that can be referenced in another RLE file in a way that hides the lens data. The lens will function as usual and can be raytraced, but the data in the encrypted section cannot be listed or shown on lens drawings. &nbsp;In this way you can send proprietary lens information to another user and he can evaluate the performance or insert your lenses into his system -- but he cannot see the data in that section in listings or graphics.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">To create a blackbox file, the lens must be current. &nbsp;Then type the command</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">BBOX </span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold; text-decoration: underline;">JSSS</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;"> </span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold; text-decoration: underline;">JSPS</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;"> '</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold; text-decoration: underline;">FILENAME</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">'</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The program will prompt for a password that can be used to decrypt the file. &nbsp;The password as well as the file name </span><span style="font-size: 11pt; font-weight: bold;">must be entered with quote marks</span><span style="font-size: 11pt;"> and must consist of no more than 14 characters.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The program reports that the file was created and tells the number of surfaces involved.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The portion of the current lens from surfaces </span><span style="font-size: 11pt; text-decoration: underline;">JSSS</span><span style="font-size: 11pt;"> through </span><span style="font-size: 11pt; text-decoration: underline;">JSPS</span><span style="font-size: 11pt;"> will be encoded and written to the named file, which will be named </span><span style="font-size: 11pt; text-decoration: underline;">FILENAME</span><span style="font-size: 11pt;">.BBX. &nbsp;You can send that file to a third party, who can then insert the data into his system.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The encrypted portion must begin and end with flat surfaces. &nbsp;Rays will be traced up to the first, and from the last of those surfaces. &nbsp;It is a good idea to delete all pickups and solves in the encoded section, since the results when it is inserted into a different system are otherwise unpredictable, although the file can pick up data within that file itself. &nbsp;In other words, the encoded section should be completely self contained. &nbsp;Also, if any materials in that section are assigned fixed index values -- and the system into which it is inserted uses different wavelengths, those index values will then be incorrect. &nbsp;Only surface data are encoded; system data, including wavelengths, object specifications, stop declaration, etc. are not included. &nbsp;It is your responsibility to ensure that those data are defined in the inserted system in a way that makes sense.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">To insert the data, use the format</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold; text-decoration: underline;">SN</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;"> BBOX '</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold; text-decoration: underline;">FILENAME</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">'</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">in an RLE file. </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The user can now raytrace the system with the added elements. You cannot change any of the lens data within a BBOX section, but you can specify the TH before and after the group.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">When you send the data file to another user, be sure to document the number of surfaces in the file and the stop location if it is in that section. &nbsp;Then he will know how to structure his new system when those surfaces are added.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">There are restrictions. &nbsp;You cannot edit or FLIP the encrypted surfaces, and if you REVERSE the entire lens you cannot then save that file and hope to reopen it, because the data in the encrypted file are not reversed. &nbsp;Likewise, if you SCALE the system, you cannot save and fetch it successfully. &nbsp;Since many of the operations of SYNOPSYS save and fetch the lens in the background, those will not return the scaled lens. &nbsp;In other words, don't reverse or scale a system with a BBOX section.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">To decrypt the file, enter the command</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">BBOX DECRYPT</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The program will prompt for the password, and if it matches the original, the file is decrypted and thereafter becomes a normal lens file. &nbsp;If you declare more than a single BBOX section in a system, the decryption function is disabled.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-weight: bold;">Example:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here we GET the lens in library location 7 and make a black-box version of surfaces 2 through 18 called BBTEST. The password is QWERTY.</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GET 7</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CHG&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">19 SIN &nbsp; &nbsp; &nbsp; &nbsp;!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;put flat surfaces after</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">2 SIN &nbsp; &nbsp; &nbsp; &nbsp;!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;and before section to be encrypted</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">BBOX 2 20 'BBTEST'</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">'QWERTY'</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> --- GET 7</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> Get lens no. &nbsp;7 &nbsp; &nbsp; &nbsp; &nbsp;ID KOSO LENS 1:1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;119</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; GIHT &nbsp; &nbsp; &nbsp; &nbsp; FOCL &nbsp; &nbsp; &nbsp; &nbsp; FNUM &nbsp; &nbsp; &nbsp; &nbsp; BACK &nbsp; &nbsp; &nbsp; &nbsp; TOTL &nbsp; &nbsp; &nbsp; &nbsp; DELF</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; -0.54640 &nbsp; &nbsp; &nbsp;1.59177 &nbsp; &nbsp; &nbsp;4.57056 &nbsp; &nbsp; &nbsp;2.47910 &nbsp; &nbsp; &nbsp;1.32340 &nbsp; &nbsp; &nbsp;0.00000</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> --- BBOX 2 18 'BBTEST'</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;">ENTER PASSWORD, IN QUOTE MARKS</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> --- 'QWERTY'</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;">BLACKBOX FILE CREATED, WITH &nbsp;16 SURFACES</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0346.png" width="972" height="250" alt="clip0346" style="width:972px;height:250px;border:none"></p>
+<p><span style="font-size: 11pt;">Now we create a new system where this lens will start at surface 6. &nbsp;We assign a desired airspace before and after the group, in this case duplicating the values in the original lens. &nbsp;We also assign the stop to the original surface, which is now number 15.</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">RLE</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">ID TEST BBOX</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">OBA 2.5 0.55 .2717</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">WAVL 1 .94 .875</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">APS 15</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">6 BBOX &quot;BBTEST&quot;</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">4 TH .1286</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">24 TH .1286</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">25 YMT</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">26</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;">EXECUTING MACRO DEFAULT.MAC</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> --- RLE</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> --- ID TEST BBOX</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> --- APS 14</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> --- WAVL 1 .94 .875</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> --- &nbsp;OBA &nbsp;2.5 0.55 0.2717 0.1195085181 0 0 0.2717</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> --- 5 TH .1286</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> --- 6 BBOX 'BBTEST'</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;">BLACK BOX LENS DATA FOUND IN FILE; NUMBER OF SURFACES = &nbsp;16</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> --- 23 TH 2.4791</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> --- 24</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> --- END</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; GIHT &nbsp; &nbsp; &nbsp; &nbsp; FOCL &nbsp; &nbsp; &nbsp; &nbsp; FNUM &nbsp; &nbsp; &nbsp; &nbsp; BACK &nbsp; &nbsp; &nbsp; &nbsp; TOTL &nbsp; &nbsp; &nbsp; &nbsp; DELF</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; -0.54640 &nbsp; &nbsp; &nbsp;1.59177 &nbsp; &nbsp; &nbsp;4.57056 &nbsp; &nbsp; &nbsp;2.47910 &nbsp; &nbsp; &nbsp;1.32341 &nbsp;2.11285E-06</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;">Lens number &nbsp; &nbsp;10 ID TEST BBOX</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p><img src="clip0348.png" width="1056" height="241" alt="clip0348" style="width:1056px;height:241px;border:none"></p>
+<p><span style="font-size: 11pt;">The same lens is now current, but you cannot see the data in listings or graphics. &nbsp;Ray paths are shown correctly up to the surface</span><span style="font-size: 11pt; font-style: italic;"> </span><span style="font-size: 11pt;">before the group and past the surface after</span><span style="font-size: 11pt; font-style: italic;">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The only purpose of this feature is to hide proprietary lens file data from someone to whom you send the BBX file. &nbsp;Most of the features of SYNOPSYS will work on these systems, but output is suppressed for the affected surfaces.</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="text-decoration: underline;"><a href="um5_54.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="5_56_csag.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>

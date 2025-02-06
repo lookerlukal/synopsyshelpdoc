@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>targetted raytrace</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="lens analysis routines--&gt;,raytrace,raytrace targetted,TARGET, targetted raytrace" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p>&nbsp;</p>
+<p><a name="tray"></a></p>
+<p><a name="target"></a><span style="font-weight: bold;">6.3.1 Targetted Raytrace (TARGET) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-decoration: underline;"><a href="um632.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um63.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SYNOPSYS can find the ray that intercepts a given surface at a specified location. &nbsp;The input is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">TARGET { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">X</span><span class="f_mine" style="font-weight: bold;"> / CAO } { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Y</span><span class="f_mine" style="font-weight: bold;"> / CAO } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-weight: bold;"> [ SURF ].</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">X</span><span class="f_mine" style="font-weight: bold;"> / CAO }</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">desired coordinates of the ray on surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine">.  </span><span class="f_mine" style="font-weight: bold;">CAO</span><span class="f_mine"> requests the value given on the </span><span class="f_mine" style="font-weight: bold;">CAP</span><span class="f_mine"> listing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Y</span><span class="f_mine" style="font-weight: bold;"> / CAO }</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">same as above, in the Y-direction.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ SURF ]</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes a surface-by-surface listing of the ray path.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">TARGET</span><span class="f_mine"> ignores CAO's, but will indicate if the ray fails to trace or encounters feathered edges between surfaces not tilted or decentered. &nbsp;It can be run interactively from the dialog </span><span class="f_mine" style="font-weight: bold;">MRR</span><span class="f_mine">.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An example of </span><span class="f_mine" style="font-weight: bold;">TARGET</span><span class="f_mine"> output is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">SYNOPSYS AI&gt;TARGET 2 1 0 .25 3 0 SURF </span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> ID COOKE TRIPLET F/4.5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7960 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;15-FEB-98 &nbsp; 14:57:00</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> TARGETTED RAYTRACE ANALYSIS</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> FRACT. OBJECT HEIGHT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; HBAR &nbsp; &nbsp; &nbsp;1.000000 &nbsp; GBAR &nbsp; &nbsp; &nbsp;0.000000</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> RAY COORD. ON SURFACE NO. &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Y &nbsp; &nbsp; &nbsp;0.250000 &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;X &nbsp; &nbsp; &nbsp;0.000000</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> FRACT. ENTRANCE PUPIL COORD. &nbsp; &nbsp; &nbsp; &nbsp;YEN &nbsp; &nbsp; &nbsp;0.022424 &nbsp; &nbsp;XEN &nbsp;1.832440E-26</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> COLOR NUMBER &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RAY VECTORS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(X DIR TAN) &nbsp; (Y DIR TAN)</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> SURF &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; X &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Z &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ZZ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;HH</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">___________________________________________________________________________</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> OBJ &nbsp; &nbsp; &nbsp; 0.000000 -3.639702E+11 &nbsp; &nbsp; &nbsp;0.000000 &nbsp;1.017921E-37 &nbsp; &nbsp; &nbsp;0.363970</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 1 &nbsp; 1.017921E-25 &nbsp; &nbsp; -2.793946 &nbsp; &nbsp; &nbsp;0.182363 -1.906584E-27 &nbsp; &nbsp; &nbsp;0.271015</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 2 &nbsp; 9.836748E-26 &nbsp; &nbsp; -2.307154 &nbsp; &nbsp; -0.021459 -3.899216E-27 &nbsp; &nbsp; &nbsp;0.484777</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 3 &nbsp; 7.779946E-26 &nbsp; &nbsp; &nbsp;0.250000 &nbsp; &nbsp; -0.001636 -5.429018E-28 &nbsp; &nbsp; &nbsp;0.286182</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 4 &nbsp; 7.711534E-26 &nbsp; &nbsp; &nbsp;0.610624 &nbsp; &nbsp; &nbsp;0.008484 &nbsp;1.693685E-27 &nbsp; &nbsp; &nbsp;0.522865</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 5 &nbsp; 8.548517E-26 &nbsp; &nbsp; &nbsp;3.194513 &nbsp; &nbsp; &nbsp;0.015541 &nbsp;8.534512E-28 &nbsp; &nbsp; &nbsp;0.293853</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> &nbsp; 6 &nbsp; 8.703375E-26 &nbsp; &nbsp; &nbsp;3.727705 &nbsp; &nbsp; -0.419970 -2.010631E-27 &nbsp; &nbsp; &nbsp;0.335858</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT"> IMG &nbsp;-7.566616E-28 &nbsp; &nbsp; 18.392331 &nbsp; &nbsp; &nbsp;0.000000</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um632.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

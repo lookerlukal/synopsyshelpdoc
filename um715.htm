@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um715</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="FSC, forward scattering,Scattering" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><span class="f_mine" style="font-size: 14pt;">7.15</span><a name="hidd_mfs"></a><span class="f_mine" style="font-size: 14pt;"> Forward scattering (FSC) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">  </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um714.htm#um714" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="7_16_xcolor.htm" class="topiclink">Next</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SYNOPSYS can model the scattering on a surface due to dust or pits, and show the ray pattern that emerges in a variety of ways. &nbsp;The input is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">FSCATTER </span><span class="f_mine" style="text-decoration: underline;">ISN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">NRYS</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">ANGLE</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">TSCF</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">MODE</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">STAT</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">[ PER </span><span class="f_mine" style="text-decoration: underline;">EL</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">AZ</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">SCF</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">JSSS</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">JSPS</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">RAY { </span><span class="f_mine" style="text-decoration: underline;">ICOL</span><span class="f_mine">/P } </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">XEN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">YEN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">GBAR</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">RAY ...</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature may also be run from the dialog </span><span class="f_mine" style="font-weight: bold;">MFS</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;">ISN</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the surface at which to scatter light</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;">NRYS</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the number of scattered rays to model</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;">ANGLE</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the semi-angle of the scattering cone</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;">TSCF</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is a drawing scale factor; interpretation depends on the </span><span class="f_mine" style="text-decoration: underline;">MODE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;">MODE</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Here is where you request the kind of analysis you want.</span></p>
+<p class="p_mine"><span class="f_mine">1 = display spots at the image</span></p>
+<p class="p_mine"><span class="f_mine">2 = make an oblique-perspective view of the pattern</span></p>
+<p class="p_mine"><span class="f_mine">3 = show the pattern as colored boxes</span></p>
+<p class="p_mine"><span class="f_mine">4 = show ray paths on a </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#per" class="topiclink">PERSPECTIVE</a></span><span class="f_mine"> drawing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;">STAT</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This selects the statistics of the scattered rays:</span></p>
+<p class="p_mine"><span class="f_mine">1 = center weighted</span></p>
+<p class="p_mine"><span class="f_mine">2 = uniform</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">PER...</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If you request mode 4, this is where you enter the perspective arguments. &nbsp;The PER command must be placed before any RAY commands.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">RAY...</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This defines the input ray. &nbsp;You may enter as many RAY commands as you wish.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program will trace the ray defined by the arguments of the RAY command up to surface </span><span class="f_mine" style="text-decoration: underline;">ISN</span><span class="f_mine">. &nbsp;At that point it will create a pencil of </span><span class="f_mine" style="text-decoration: underline;">NRYS</span><span class="f_mine"> rays, centered on the requested ray, and attempt to propagate those rays to the final surface. &nbsp;The cone of rays will depart from the direction of the input ray following surface </span><span class="f_mine" style="text-decoration: underline;">ISN</span><span class="f_mine">, by a random angle, adjusted for the selected statistics, not more than </span><span class="f_mine" style="text-decoration: underline;">ANGLE</span><span class="f_mine">. &nbsp;When all rays are accounted for, it makes a drawing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the lens is in VIG mode, all scattered rays are tested and deleted if they exceed any user-defined apertures. &nbsp;In NOVIG mode, only rays that fail to trace are deleted.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In MODE 1, the picture resembles a footprint, where all rays that reach the final surface are shown. &nbsp;The </span><span class="f_mine" style="text-decoration: underline;">TSCF</span><span class="f_mine"> factor gives the scale of the picture, where a value of 2.0 means twice scale, and so on.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">MODE 2 formats the pattern as an oblique-perspective view, where the local ray density is indicated by the height of the pattern. &nbsp;In this case, </span><span class="f_mine" style="text-decoration: underline;">TSCF</span><span class="f_mine"> gives the height, in inches, of the highest peak on the pattern. &nbsp;The area of the final surface that is displayed is taken from the current CAO of the final surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">MODE 3 creates an array of colored boxes showing the local ray density at each point. &nbsp;The scale </span><span class="f_mine" style="text-decoration: underline;">TSCF</span><span class="f_mine"> is ignored for this format, and the image scale is taken from the current CAO of the last surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">MODE 4 creates a PERSPECTIVE drawing of the lens. &nbsp;The path of the requested ray is shown up to surface ISN, and the scattered rays are shown emanating from that point. &nbsp;The scale of the drawing is taken from the PER input in this case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is reasonable to request several thousand rays for modes 1 through 3, and more rays make a smoother picture. &nbsp;In mode 4, however, it is best to request only a few hundred, since the drawing becomes quite cluttered with a larger number.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">FSC works for nonsequential systems, but only up to the scatter point. &nbsp;Thereafter, the scattered rays are traced sequentially.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A separate feature can model a diffuser, where every ray arriving at a given surface is scattered according to the same algorithm. &nbsp;This is the </span><span class="f_mine" style="text-decoration: underline;"><a href="um3327.htm#uss10" class="topiclink">USS type 10</a></span><span class="f_mine"> surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here are examples of the modes, using the sample lens from library location 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="fscat0.png" width="473" height="319" alt="fscat0" style="width:473px;height:319px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">GET 1</span></p>
+<p class="p_mine"><span class="f_mine">CHG</span></p>
+<p class="p_mine"><span class="f_mine">VIG</span></p>
+<p class="p_mine"><span class="f_mine">CFIX</span></p>
+<p class="p_mine"><span class="f_mine">9 CAO 22</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">FSCATTER 7 10000 20 3 1 1</span></p>
+<p class="p_mine"><span class="f_mine">PER 0 0 3 1 123</span></p>
+<p class="p_mine"><span class="f_mine">RAY P 0 0 1 </span></p>
+<p class="p_mine"><span class="f_mine">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="fscat1.png" width="453" height="612" alt="fscat1" style="width:453px;height:612px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here we have made all of the apertures hard (with CFIX), and entered a CAO on surface 9 that is larger than the default (so we can see rays scattered at a larger angle). &nbsp;The rays are scattered from surface 7. &nbsp;We asked for 10,000 rays inside a cone of 40 degrees total angle. &nbsp;The listing and plot show that of these, only 8954 arrived at the final surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The same input, but mode 2 this time, gives the picture below. &nbsp;Here, it is easier to see the central concentration. &nbsp;These examples use the center-weighted statistics: in this case, the cone is divided into concentric shells, and the number of rays in each shell is a constant. &nbsp;Since the central shell has the smallest angular area, the ray density there is therefore higher than in the outer shells. &nbsp;This models the usual case in forward scattering where narrow-angle scattering is more intense than is wide-angle.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="fscat2.png" width="645" height="481" alt="fscat2" style="width:645px;height:481px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The third example, in mode 3, is the same, but shown with colored boxes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="fscat3.png" width="448" height="599" alt="fscat3" style="width:448px;height:599px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For mode 4, we request only 200 rays.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="fscat4.png" width="637" height="478" alt="fscat4" style="width:637px;height:478px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The picture below shows what is produced with MODE 1 and STAT 2 with 20000 rays requested. &nbsp;Here, the rays are uniformly distributed throughout the scatter cone, and the nonuniformity is due to obliquity effects at the final surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="fscat5.png" width="468" height="631" alt="fscat5" style="width:468px;height:631px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now we will use this feature to examine the effects of dust inside an eyepiece.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="fscat6.png" width="928" height="547" alt="fscat6" style="width:928px;height:547px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">At HBAR = 0.7, shown on the drawing, the ray at surface 9 is very near the focal point. &nbsp;We want to see whether a dust particle located there would appear sharply in focus to the user.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">GET 9</span></p>
+<p class="p_mine"><span class="f_mine">CHG</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">FSCATTER 9 2000 20 100 1 1</span></p>
+<p class="p_mine"><span class="f_mine">PER 0 0 1 2 18</span></p>
+<p class="p_mine"><span class="f_mine">RAY P .7 0 0 </span></p>
+<p class="p_mine"><span class="f_mine">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="fscat7.png" width="438" height="590" alt="fscat7" style="width:438px;height:590px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The scattered rays are indeed collected in a small group, but the angular size of that group is about 0.25 radians, which is about 14 degrees as seen by the eye. &nbsp;So this particular dust particle will not be a serious problem.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="7_16_xcolor.htm" class="topiclink">Next</a></span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

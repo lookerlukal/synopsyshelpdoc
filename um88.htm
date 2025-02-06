@@ -1,0 +1,1165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um88</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="image anaysis mapping function,MAP,QMAP,SAG, listing in global coordinates" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="map"></a><span class="f_mine" style="font-size: 14pt;">8.8 Mapping Function &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um881.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um87.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The MAP feature will evaluate of a variety of properties of the lens system as a function of either field of view or location within the entrance pupil. &nbsp;An elementary use of this feature might be to show the spot diagram at several field points, but several less obvious uses are of interest: you might map the local HOE grating frequency at many points in the pupil at a given object coordinate. &nbsp;You could see a picture showing the local angle of incidence of, say, the chief ray at a particular surface over many field points, or map the OPDs of a grid of rays over the pupil.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Output may be plotted either in digital or analog fashion. &nbsp;You can store a set of mapped data, create a second set, and plot the differences between the two sets – thereby mapping the convergence difference in a binocular system, for example. &nbsp;Mapping positions may correspond to actual coordinates at a surface or the image – or to exploded positions that are a function of initial coordinates rather than final ones. &nbsp;Up to 20,000 rays may be requested and processed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">MAP</span><span class="f_mine"> may be run interactively from the dialog </span><span class="f_mine" style="font-weight: bold;">MMA</span><span class="f_mine">. &nbsp;There are a total of 19 items that may be mapped. &nbsp;These can take numerous directives that control what is displayed and in what way. &nbsp;The table below summarizes the allowed combinations. &nbsp;(Y means the data are required, “~” means optional, and N means not allowed. &nbsp;The column P234 refers to ray grid geometry other than square. &nbsp;These are similar to the PUP 2, 3, and 4 options for footprints. &nbsp;The SPOT , IPDISTORTION, and VAR plots always utilize a square grid.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 48px 0px 48px;"><span class="f_mine" style="font-weight: bold;">Note: we do not require SYNOPSYS users to study this chart. &nbsp;It is provided only for your reference. &nbsp;The MMA dialog does the work for you. &nbsp;As you select items in that dialog, other items are enabled or disabled according to the rules, and you don’t have to worry about them. &nbsp;After that, the command LMM will load the command sequence into a MACro editor, all properly formatted, and you can save that job as a MACro if you want to.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="width:599px; border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">No.</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">name</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">over FOV</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">over pupil</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">on surface</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">multicolor</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">circle</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">cscale</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">P234</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Digital</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Actual</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">SPT, SPOT</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">FOOT</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">3</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">YA</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">4</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">XA</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">5</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">[R][H]DIST</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">6</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">ZZ</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">7</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">HH</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">8</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">OPD</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">9</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">UNI</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">10</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">HFREQ</span></p>
+<p class="p_mine"><span class="f_mine">GFREQ</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">11</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">SAG</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">SURF</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">12</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">ZA</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">13</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">PUPIL</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">14</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">TRANS</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">15</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">POLAR</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">16</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">HSFRE</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">~</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">17</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">RMS</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">18</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">VAR</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">19</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">IPDISTOR</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">20</span></p>
+</td>
+<td style="vertical-align:top; width:79px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">GSAG</span></p>
+</td>
+<td style="vertical-align:top; width:38px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:74px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:45px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:39px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+<td style="vertical-align:top; width:59px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Y</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One can ask for any allowed set of conditions with a file of the following form:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">[Q]MAP </span><span class="f_mine" style="text-decoration: underline;">name</span><span class="f_mine"> OVER { FOV / PUPIL } [ ON SURFACE </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">FGRID { RECT </span><span class="f_mine" style="text-decoration: underline;">NHBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">NGBAR</span><span class="f_mine"> /  &nbsp; &nbsp; &nbsp; &nbsp;! to specify the field grid</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">CRECT </span><span class="f_mine" style="text-decoration: underline;">NHBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">NGBAR</span><span class="f_mine"> / </span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">CIRCLE </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> /</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">POINT </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">GBAR</span><span class="f_mine"> / </span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">DIAMOND </span><span class="f_mine" style="text-decoration: underline;">NHBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">NGBAR</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">CUSTOM </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">GBAR</span><span class="f_mine"> [ ICOL ] ...</span></p>
+<p class="p_mine"><span class="f_mine">}</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RGRID { CREC </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> /  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! to specify the ray grid</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">MCIRCLE </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> / </span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">CIRCLE </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> / </span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">POINT </span><span class="f_mine" style="text-decoration: underline;">XEN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">YEN</span><span class="f_mine"> /</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">RECT </span><span class="f_mine" style="text-decoration: underline;">NX</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">NY</span><span class="f_mine"> /</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">ICIRCLE </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> </span></p>
+<p class="p_mine"><span class="f_mine">}</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">[ COLOR {ICOL / P / M } ]</span></p>
+<p class="p_mine"><span class="f_mine">[ GIHT </span><span class="f_mine" style="text-decoration: underline;">GIHT</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">[ SCALE </span><span class="f_mine" style="text-decoration: underline;">TSCF</span><span class="f_mine"> ] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! controls location of each diagram</span></p>
+<p class="p_mine"><span class="f_mine">[ ESCALE </span><span class="f_mine" style="text-decoration: underline;">REF</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span class="f_mine">[ SCALE AUTO ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">[ ANALOG </span><span class="f_mine" style="text-decoration: underline;">ASCF</span><span class="f_mine"> &nbsp;[ CIRCLE / CSCALE ] &nbsp;] &nbsp; &nbsp; &nbsp; &nbsp;! controls size and display format of each diagram</span></p>
+<p class="p_mine"><span class="f_mine">[ EANALOG </span><span class="f_mine" style="text-decoration: underline;">REF</span><span class="f_mine"> &nbsp;[ CIRCLE / CSCALE ] &nbsp;]</span></p>
+<p class="p_mine"><span class="f_mine">[ ANALOG AUTO [ CIRCLE / CSCALE ] &nbsp;]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">[ DIGITAL ]</span></p>
+<p class="p_mine"><span class="f_mine">[ KEEP ]</span></p>
+<p class="p_mine"><span class="f_mine">[ DIFFERENCES ]</span></p>
+<p class="p_mine"><span class="f_mine">[ SLANT </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span class="f_mine">[ REFHBAR </span><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">[ BINOCULAR { LEFT / RIGHT } ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">{ PRINT [ FULL ] / PLOT / GO }</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are two basic forms of MAP: over the field of view (</span><span class="f_mine" style="font-weight: bold;">FOV</span><span class="f_mine">) and over the pupil (</span><span class="f_mine" style="font-weight: bold;">PUPIL</span><span class="f_mine">). &nbsp;(An additional form, described below, maps the surface SAG over a surface.) &nbsp;These two kinds can be requested for those arguments listed above. &nbsp;For example, to map the footprint on surface 6 as a function of field point, you might enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">MAP FOOTPRINT OVER FOV ON SURFACE 6</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and follow this with the appropriate selection of parameters.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Numerous optional data items are listed above, and each has a default that depends on the other options that are selected.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Some requests also produce a line of statistics at the top of the plot, giving the maximum, minimum, and average of the data plotted.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The mnemonic </span><span class="f_mine" style="font-weight: bold;">QMAP</span><span class="f_mine"> runs MAP in quiet mode, where no diagnostic or analysis results are displayed. &nbsp;If you are not confident that your input is meaningful, it is best to run with MAP instead of QMAP, so you can see error and warning messages on the Command Window.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Notice that a particular surface number </span><span class="f_mine" style="font-style: italic;">must</span><span class="f_mine"> be given for some requests, </span><span class="f_mine" style="font-style: italic;">may</span><span class="f_mine"> be given for others, and </span><span class="f_mine" style="font-style: italic;">may not</span><span class="f_mine"> be given for yet others. &nbsp;Where optional, the default is the image surface. &nbsp;Where required, any surface number </span><span class="f_mine" style="font-style: italic;">except</span><span class="f_mine"> the image surface is permitted. &nbsp;The easiest way to sort out the possibilities is with the </span><span class="f_mine" style="font-weight: bold;">MMA</span><span class="f_mine"> dialog, where each selection affects which of the others are enabled. &nbsp;The possibilities are distinguished in the above general format description. &nbsp;In most cases, if you map over the field, you can specify only a single ray (with RGRID POINT ...) &nbsp;and if you map over the pupil you can specify only a single field point (with FGRID POINT ...) &nbsp;Exceptions are the SPOT, FOOTPRINT, TRANS, RMS, IPDIST and VAR plots, which are plotted over the field but where the RGRID data give the number of the ray grid to trace.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The mnemonics are:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ZZ</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:618px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the tangent of the local X-Z angle of a ray after reflection or refraction.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">HH</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:618px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the tangent of the local Y-Z angle of a ray after reflection or refraction.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">UNI</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:618px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the incidence angle, in degrees, of a ray at the requested surface, measured from the surface normal.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">FOOT</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:618px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives a footprint of rays at a surface. &nbsp;If the ray selection CREC is selected, the rays are traced over a square grid, bounded at the unit circle unless the lens has been declared RPUPIL. &nbsp;If switch 90 is ON, the ray grid will be hexapolar instead of square. &nbsp;The other ray patterns are not necessarily square and ignore switch 90.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:118px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">XA, YA, and ZA</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:568px; padding:4px; border:solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:618px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">are the actual (X,Y,Z) local coordinates of a ray intersection at a surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="88sag"></a><span class="f_mine" style="font-weight: bold;">SAG</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:618px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the same as ZA, except that it can be evaluated over the whole surface, at the current CAO, instead of over those locations where a set of rays hits that surface. &nbsp;To exercise this option, use the form “OVER SURFACE...”.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:154px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">HFREQ, GFREQ, HSFREQ</span></p>
+</td>
+<td style="vertical-align:top; width:522px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:609px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">give the local </span><span class="f_mine" style="text-decoration: underline;"><a href="um3324.htm#hoe" class="topiclink">HOE</a></span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;"><a href="um3325.htm#grating" class="topiclink">GRATING</a></span><span class="f_mine"> frequency at the designated ray point. &nbsp;The frequency is taken at the last HOE or GRATING encountered by the ray, but the plot may be on any surface. &nbsp;The result is always in cy/mm, regardless of lens units. &nbsp;The form HSFREQ gives the frequency at the surface; the others give the frequency normal to the fringe plane.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SPT</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">SPOT</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:609px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="88spt"></a><span class="f_mine">These map the spot diagram. &nbsp;The number of rays traced in each color is adjusted to represent the spectral weighting, if a multicolor analysis is requested. &nbsp;The program also draws, for reference, the size of the Airy diffraction disk, calculated for the major color and the actual F/number in X and Y at the center image point. &nbsp;This may be defeated by turning on switch 80. &nbsp;Color output is produced if switch 35 is on. &nbsp;Realistic colors may be obtained by turning on switch 85 as well. &nbsp;This evaluation is always performed at the final image. &nbsp;Switch 90 will produce a hexapolar ray grid if the ray pattern CREC is selected.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To see the spot diagrams in reasonable colors, the display must show a black background. &nbsp;In that case it can combine rays of differing colors using the logic red + blue + green = white. &nbsp;If the display has a white background, on the other hand, then a good image would show up as white on white, and would be hard to see. &nbsp;For this reason, the program does not then combine colors, but instead overlays the colors, making the last-drawn color determine the color of any one pixel. &nbsp;If switch 85 is on, it will draw a black box behind the fiducials first, and the combined colors are then shown correctly even with a white background.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the display is shown with a black background and you click the Print button, the program by default switches to a white background, to avoid showing a black page with thin colored lines – which are usually hard to see – and to avoid wasting a large amount of expensive toner.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The BINOCULAR option has its own rules: there is no black box behind the picture in that case. &nbsp;But if you want to see your SPT map with combined colors, you can still do it. &nbsp;Simply turn on switch 92, and ask for a black background, before you click the Print button. &nbsp;That switch makes the printout honor the black background setting.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[R][H]DIST</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:609px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">selects one of four types of distortion analysis. &nbsp;The basic </span><span class="f_mine" style="font-weight: bold;">DIST </span><span class="f_mine">gives the difference in X and Y between the final chief-ray intercept and the ideal point, based on the magnitude of GIHT, divided by GIHT. &nbsp;This is a normalized distortion, as is that given by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um75.htm" class="topiclink">DIS</a></span><span class="f_mine">. &nbsp;Skew object points are scaled by the X-GIHT or by the ratio XP0/YP0.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the </span><span class="f_mine" style="font-weight: bold;">RDIST</span><span class="f_mine"> form is used, the output is in lens units, rather than normalized, for FOCAL lenses, and in angular units otherwise.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the </span><span class="f_mine" style="font-weight: bold;">HDIST</span><span class="f_mine"> form is used, the analysis ignores the value of GIHT and scales the result to the field point given by the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">REFHBAR</span><span class="f_mine"> input. &nbsp;This is appropriate when paraxial mode is turned off, when the axis ray intercept is nonzero, or when you wish to define the image at a certain field point as the “zero distortion” point, and examine the departure of other field points from that measure. &nbsp;For example, if your lens shows strong 3</span><span class="f_mine" style="vertical-align: super;">rd</span><span class="f_mine"> order distortion, you might give a reference HBAR of 0.7, which says, in effect, that the </span><span class="f_mine" style="font-style: italic;">magnification</span><span class="f_mine"> has been altered so that the 0.7 field point goes where it does with no distortion. &nbsp;Then the MAP analysis will show how the magnification of other points in the field varies from that value – which is just the distortion of those points with respect to that magnification. &nbsp;Why bother? &nbsp;Well, the resulting distortion is only a fraction of the paraxial value, and if you have to meet a spec, this is a quite honest way to do so.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">the </span><span class="f_mine" style="font-weight: bold;">RHDIST</span><span class="f_mine"> form is a combination of the above two options.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">OPD</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:609px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the optical path difference of the requested ray.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PUPIL</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:609px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">plots a map of ray coordinates in the entrance pupil over the FOV. &nbsp;This form is always shown in exploded view.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="88trans"></a><span class="f_mine" style="font-weight: bold;">TRANS</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:609px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">There are two forms of transmission evaluation in MAP, depending on whether the analysis is over a grid of field points or a grid of pupil points.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the FGRID specifies a set of field points (OVER FOV), the result gives the transmission at each field point when the requested grid of rays is traced. &nbsp;In this case, the calculation takes into account reflection losses, if polarization mode is in effect, as well as vignetting losses. &nbsp;Apodization is always considered, but absorption losses are </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> considered in this case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the analysis is for a set of rays over the pupil from a single object point, then the transmission is calculated for each ray individually, and all losses are considered, including absorption, along that ray path.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Other features that can evaluate transmission are </span><span class="f_mine" style="text-decoration: underline;"><a href="um539.htm#tn" class="topiclink">TN</a></span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um534.htm#gtrans" class="topiclink">GTRANS</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um536.htm#rtrans" class="topiclink">RTRANS</a></span><span class="f_mine">, which are conveniently found in the menu MTR.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">POLAR</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:609px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">plots the polarization. See </span><span class="f_mine" style="text-decoration: underline;"><a href="umch17.htm" class="topiclink">chapter 17</a></span><span class="f_mine">. &nbsp;This feature lets you monitor how the polarization changes from surface to surface. &nbsp;Just include the “ON SURFACE </span><span class="f_mine" style="text-decoration: underline;">NB</span><span class="f_mine">” with the input. &nbsp;It requires that polarization mode be on.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that the program shows a projection of the polarization state on the local X-Y plane. &nbsp;It does not show the Z-component, if any. &nbsp;If the ray arrives at a surface at a steep angle, this causes the X-Y projection to appear foreshortened.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RMS</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:609px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The number of rays traced in this case is taken from the RGRID input with a ray count equal to the product of NX and NY. &nbsp;If fewer than 100 rays result, the program substitutes a ray number of 2000. &nbsp;This form is always shown in exploded view.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">VAR</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:609px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">calculates the wavefront variance over the field. &nbsp;The ray grid is controlled in the same was as for the RMS analysis. &nbsp;This form is always shown in exploded view.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">IPDIST</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:609px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">plots distortion after taking into account the location of the diffraction image point. &nbsp;This is intended primarily for extremely demanding applications where distortion must be controlled to a fraction of a micron. &nbsp;The image point is the location of the peak of the diffraction pattern measured from the reference ray, which is either the chief ray in the requested color or in the primary color for multicolor analysis. &nbsp;Even if the chief rays are mapped without any distortion, if the image point varies over the field, the user will perceive distortion in the image.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program finds the image point for each field angle to be analyzed, subtracts the image point location at the on-axis image, and compares the result to an ideal location on a grid where the distance from center to edge is the difference in the chief-ray intercepts from the center to the top of the field. &nbsp;The difference between the two is then taken as the distortion for that field point.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the lens shows a constant offset from the chief-ray intercept (because of coma that is constant over the field, for example) this analysis shows that the overall distortion may be very small since all field points are displaced by the same amount.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The calculation only makes sense if the image is corrected to within about one or two waves; otherwise the image point may not correspond to a peak of the diffraction pattern. &nbsp;(It actually refers to the point where the wavefront variance is minimized, which is at the peak for small errors.)</span><br>
+<span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For more information about the image point, see the section on the <a href="um868.htm" class="topiclink">VARIANCE</a> command.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="88gsag"></a><span class="f_mine" style="font-weight: bold;">GSAG</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:609px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This calculates the SAG of the surface over a grid of points and returns the locations in global coordinates. &nbsp;It can be used to create a point cloud that can be input to some CAD programs for modeling the shape.  </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">FGRID</span><span class="f_mine"> entry defines the grid pattern in object space (the field grid) for mapping over the FOV, and may also define the object point for mapping over the pupil. &nbsp;Input is shown above.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RECT</span></p>
+</td>
+<td style="vertical-align:top; width:607px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">defines a rectangular FOV with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NHBAR</span><span class="f_mine"> points in the vertical (Y) field and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NGBAR</span><span class="f_mine"> in the skew (X) field. &nbsp;The default takes 5 points in the meridional plane. &nbsp;A skew field must have been defined in the lens data if any skew points are to be analyzed. &nbsp;This map includes the extreme points if the number is greater than one, and will include the zero coordinate if the number is odd.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the lens does not have a skew field defined, you can click the button “Define skew field” to set XP0 equal to YP0. &nbsp;Then you can request a nonzero GBAR field.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CRECT</span></p>
+</td>
+<td style="vertical-align:top; width:607px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is similar to RECT except that any (fractional) field points lying outside a unit circle are deleted. &nbsp;If XPP0 equals YPP0, this results in a circular field map. &nbsp;For best results, the grid numbers should be odd.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CIRCLE</span></p>
+</td>
+<td style="vertical-align:top; width:607px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">samples a circle of points around the periphery of the field.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">POINT</span></p>
+</td>
+<td style="vertical-align:top; width:607px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">samples a single field point at the entered coordinates. &nbsp;This defines the single field point when mapping over the pupil.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">DIAMOND</span></p>
+</td>
+<td style="vertical-align:top; width:607px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option crops the RECT grid to points that lie on a diamond whose vertices are at the top, bottom, and both sides. &nbsp;It is intended for the common case where the field is square or rectangular and you have defined the full-field point (YP0) to equal the distance from the axis to the corner point. &nbsp;That scheme lets you control the aberrations over the field while doing all of your design and analysis in the meridional plane – which is more convenient than modeling the actual field shape. &nbsp;The field will be mapped showing a square field as a square, tipped at 45 degrees. &nbsp;A rectangular field is shown as a tipped square in exploded view, and as a tilted rectangle in actual view.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CUSTOM</span></p>
+</td>
+<td style="vertical-align:top; width:607px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry lets you specify your own set of field points. &nbsp;Follow this line with a set of additional lines, each giving the</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;">HBAR</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">GBAR</span><span class="f_mine"> [ </span><span class="f_mine" style="text-decoration: underline;">ICOL</span><span class="f_mine"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">of the next point, up to a total of 50 field points. &nbsp;The default color is the primary color. &nbsp;This option is not available in the MMA dialog, so you must create an input MACro to use it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The ray grid defined by </span><span class="f_mine" style="font-weight: bold;">RGRID</span><span class="f_mine"> is used for mapping over the </span><span class="f_mine" style="font-weight: bold;">PUPIL</span><span class="f_mine"> and also defines the rayset used for mapping </span><span class="f_mine" style="font-weight: bold;">SPT</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">PUPIL</span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold;">TRANS</span><span class="f_mine"> over the </span><span class="f_mine" style="font-weight: bold;">FOV, </span><span class="f_mine">and the single ray required when mapping most items over the FOV. &nbsp;It is defined by the </span><span class="f_mine" style="font-weight: bold;">RGRID</span><span class="f_mine"> input, shown above.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CRECT</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:628px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">traces a square grid of rays filling the pupil, with a grid number of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine">. &nbsp;The grid is masked to a unit circle unless the lens has been declared </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#rpupil" class="topiclink">RPUPIL</a></span><span class="f_mine">. &nbsp;Turning on switch 90 gives a hexapolar grid instead of a square grid.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RECT</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:628px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">traces a rectangular grid grid, as PUP 2 in </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um84.htm#trace" class="topiclink">TRACE</a></span><span class="f_mine">. &nbsp;This option works even if the lens has been declared </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#cpupil" class="topiclink">CPUPIL</a></span><span class="f_mine">. &nbsp;The grid numbers in X and Y can be different. &nbsp;Switch 90 does not apply to this choice.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">MCIRCLE</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:628px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">traces the maximum circle of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> rays that will get through the system, expanding or contracting each ray as necessary &nbsp;This is similar to PUP 3 in <a href="um84.htm#trace" class="topiclink">TRACE</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CIRCLE</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:628px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives a circle of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> rays around the outside of the pupil. &nbsp;The circle will contract as necessary to clear all sources of vignetting, but will not expand. &nbsp;This is similar to PUP 4 in</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"> <a href="um84.htm#trace" class="topiclink">TRACE</a></span><span class="f_mine">. &nbsp;The circle will be a rectangle if RPUPIL is in effect.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:124px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ICRCIRCLE</span></p>
+</td>
+<td style="vertical-align:top; width:565px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:628px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is similar to </span><span class="f_mine" style="font-weight: bold;">MCIRCLE</span><span class="f_mine">, except that the center ray is at the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#icr" class="topiclink">ICR</a></span><span class="f_mine"> point &nbsp;rather than at the center of the pupil. &nbsp;This is useful in cases where the latter ray will not trace.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">POINT</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:628px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives a single ray at the entered fractional pupil coordinates. &nbsp;This defines the ray when mapping over the field of view (FOV).  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Other input options are as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:202px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[COLOR { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / P / M} ]</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:503px; padding:4px; border:solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:118px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:586px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">defines the color number of the rays. Default is the primary color.  </span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine"> is the primary color, and </span><span class="f_mine" style="font-weight: bold;">M</span><span class="f_mine"> produces a multicolor analysis over all defined wavelengths</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:118px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ GIHT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> ] </span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:586px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives a desired image height with which to compare the ray coordinates for HDIST requests. The default is the paraxial value.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:118px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ SCALE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TSCF</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:586px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives a desired mapping scale factor for plots. &nbsp;The default is unity scale. Thus, if the </span><span class="f_mine" style="text-decoration: underline;">TSCF</span><span class="f_mine"> is 100, the locations are magnified by 100x. &nbsp;This refers to the </span><span class="f_mine" style="font-style: italic;">location</span><span class="f_mine"> of each pattern, whereas the </span><span class="f_mine" style="font-style: italic;">size </span><span class="f_mine">of the pattern is controlled by the analog scale, described below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For example, if you ask for a </span><span class="f_mine" style="text-decoration: underline;">TSCF</span><span class="f_mine"> of 10.0, then one inch on the plot equals 2.54 mm or 0.1 inch, while a </span><span class="f_mine" style="text-decoration: underline;">TSCF</span><span class="f_mine"> of 1.0 would equal 25.4 mm or one inch.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:118px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ ESCALE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">REF</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:586px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the inverse of the above. &nbsp;The REF dimension is that dimension, in lens units, that shows up as 1 inch on the plot</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">At a </span><span class="f_mine" style="text-decoration: underline;">REF</span><span class="f_mine"> of 10, if the lens is in MM, one inch on the plot would equal 0.3937 in., or 10 mm.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:118px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ SCALE AUTO ]</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:586px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If this form is entered, the program will automatically select a scale that fits the first fiducial within a square of about 4.8 inches on a side. &nbsp;Since this point is usually at the corner of the array, the other points then usually fit as well. &nbsp;However, this may not always be the case, and if any of the fiducials are too far from the center of the picture, or out of the field entirely, you can enter an explicit SCALE yourself.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:118px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ANALOG </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ASCF</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:586px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the scale factor for the individual diagrams to be drawn at each fiducial point. &nbsp;Thus an ASCF of 100 would draw the patterns at 100x scale.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">CIRCLE</span><span class="f_mine"> option applies to all forms that return a single number; if selected, the data are drawn as a circle whose radius equals that value. &nbsp;If not selected, the data are plotted as a line.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">CSCALE</span><span class="f_mine"> option draws a colored box at the fiducial location, scaled from blue (smallest value) to red (largest). &nbsp;This option works best for large grid numbers.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:118px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">EANALOG </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">REF</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:586px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This form gives the reference dimension of the pattern that will be scale to 1 inch on the plot.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:118px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ANALOG AUTO</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:586px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes the program to automatically scale the diagrams so that they fit on the picture. &nbsp;This adjusts the first diagram displayed (normally near the corners of the array) so the size is about 1 inch. &nbsp;If the number of fiducials is large, the patterns may overlap at this resulting scale, however, and you may then want to repeat the analysis with a larger EANALOG scale.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ ACTUAL / EXPLODED ]</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:528px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:595px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">these determine whether the position of each data map point (the fiducial) is given by the actual coordinates of the ray at the surface, or is given by the distribution specified in the FGRID or RGRID requests (</span><span class="f_mine" style="font-weight: bold;">EXPLODED</span><span class="f_mine">). For requests without a surface number entered, the default is EXPLODED.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Be aware that there are three different rules that determine where the program places the individual fiducials on the page, when ACTUAL is requested:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;For FOCAL lenses, the location is a function of the geometric chief-ray position. &nbsp;Distortion is defined as a departure from a fixed ratio between the ray position and the field point. &nbsp;In this case the mapping is a function of the tangents of the ray angles.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;For AFOCAL systems, the fiducial location is given by the ray </span><span class="f_mine" style="font-style: italic;">angle</span><span class="f_mine">, not the tangent, and distortion is defined as a departure from a strict proportionality between that angle and the object angle.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;For eyepiece designs, one does not want to measure distortion in terms of ray angles. &nbsp;The APERFECT option offers another way to set up this kind of system. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um751.htm" class="topiclink">Section 7.5.1</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the requested MAP is EXPLODED and over the FOV, the program will add scale bars in X and Y to the picture. &nbsp;The scale marks will be in linear units if the object has been defined with types A, C, F, and L, and in angular units otherwise.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:238px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;"> [ DIGITAL / ANALOG [ ASCF ] ]</span></p>
+</td>
+<td style="vertical-align:top; width:457px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:595px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specify whether the value calculated for the requested parameter at the requested sample point is numbered on the plot or drawn as a diagram whose length or direction gives the desired information. &nbsp;If </span><span class="f_mine" style="font-weight: bold;">ANALOG</span><span class="f_mine"> is requested, the vector data are scaled by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ASCF</span><span class="f_mine"> with a default of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TSCF</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ KEEP ]</span></p>
+</td>
+<td style="vertical-align:top; width:567px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes the program to store the array of mapped data. &nbsp;Valid only for single-color analysis.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ DIFFERENCES ]</span></p>
+</td>
+<td style="vertical-align:top; width:567px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes the previous data (stored with </span><span class="f_mine" style="font-weight: bold;">KEEP</span><span class="f_mine">) to be subtracted from the current data before the latter are printed or plotted. &nbsp;Valid only for single-color analysis.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[SLANT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;">]</span></p>
+</td>
+<td style="vertical-align:top; width:567px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">requests that the plotted data be arranged on the page in slanted rows, so that the data vectors do not mask each other.  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> is the tangent of the slant angle. &nbsp;Applies to </span><span class="f_mine" style="font-weight: bold;">EXPLODED</span><span class="f_mine"> views only. &nbsp;The analog CIRCLE option gives another way to avoid overlapping lines.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ REFHBAR </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+</td>
+<td style="vertical-align:top; width:567px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies the fractional field point to be used as a reference by the </span><span class="f_mine" style="font-weight: bold;">DIST</span><span class="f_mine"> analysis, described above.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">BINOCULAR ...</span></p>
+</td>
+<td style="vertical-align:top; width:567px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">only applies to a map of spot diagrams over the field. &nbsp;The color of the spot diagrams is taken from word 2, where LEFT will cause them to be drawn in blue, and RIGHT in red. &nbsp;The purpose is to enable you to superimpose two maps, each showing what you would see with one eye located at the appropriate pupil position, and see how things line up. &nbsp;To combine the two maps, you will have to use the </span><span class="f_mine" style="text-decoration: underline;"><a href="um1314.htm#cplot" class="topiclink">CPLOT</a></span><span class="f_mine"> feature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature only makes sense if you select the option to map actual positions, not exploded.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PRINT [ FULL ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:567px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives a printed tabulation of data instead of a plot. &nbsp;The calculated data values are printed either in the form of an array of the dimensions given by the sample geometry, or in a list (</span><span class="f_mine" style="font-weight: bold;">FULL</span><span class="f_mine">) where at each sample point the (X,Y) coordinates and the calculated data value are printed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PLOT</span></p>
+</td>
+<td style="vertical-align:top; width:567px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies plotted output.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GO</span></p>
+</td>
+<td style="vertical-align:top; width:567px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives neither printed nor plotted output. &nbsp;This is intended when a large number of points are to be saved with the </span><span class="f_mine" style="font-weight: bold;">KEEP</span><span class="f_mine"> command, and the next run will obtain the desired results with </span><span class="f_mine" style="font-weight: bold;">DIFFERENCES</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">A special form of input can map the surface sag over a grid of points in the surface. &nbsp;The input is</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt; font-weight: bold;">MAP SAG OVER SURFACE ON SURFACE </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">This form does not involve raytracing, and the grid is defined relative to the clear aperture size (in X and Y) at the surface, rather than at the intersection points of a grid of rays as is the case with the OVER PUPIL and OVER FOV options. &nbsp;The choices EXPLODED, PRINT, etc. are all available for this form as well. &nbsp;The form </span><span class="f_mine" style="font-weight: bold;">GSAG</span><span class="f_mine"> also calculates the surface sag, but converts the (X,Y,Z) coordinates of each point to the coordinates of surface 1 before listing the output. &nbsp;The output is therefore in global coordinates and is useful for modeling an aspheric surface located at an arbitrary position within the system. &nbsp;If the form </span><span class="f_mine" style="font-weight: bold;">PRINT FULL</span><span class="f_mine"> is selected, a table of the global coordinates will be printed and can be captured and even used as input for a CAD program for modeling the system.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Examples of MAP</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The first example will display spot diagrams over the field.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">GET 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! get the relay telescope</span></p>
+<p class="p_mine"><span class="f_mine">CHG</span></p>
+<p class="p_mine"><span class="f_mine">CFOV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;! change to circular field</span></p>
+<p class="p_mine"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">MAP SPOT OVER FOV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">FGRID CREC 7 7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">RGRID CREC 22 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">COLOR M &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">SCALE AUTO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">ANALOG AUTO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">ACTUAL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">PLOT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="map01.png" width="538" height="727" alt="map01" style="width:538px;height:727px;border:none"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">Now we get a map showing the RMS spot size for the same field points.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">QMAP RMS OVER FOV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">FGRID CREC 7 7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">RGRID CREC 22 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">COLOR M &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">SCALE AUTO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">ANALOG AUTO CIRCLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">EXPLODED &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">PLOT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="map02.png" width="491" height="660" alt="map02" style="width:491px;height:660px;border:none"></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">Here is a multicolor map of the distortion over the field:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">MAP DIST OVER FOV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">FGRID CREC 7 7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">RGRID POINT 0 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">COLOR M &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">SCALE AUTO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">ANALOG AUTO CIRCLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">ACTUAL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">PLOT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0142.png" width="574" height="743" alt="clip0142" style="width:574px;height:743px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The next map shows the OPD at three colors for a single object point, mapped over the locations of each ray on surface 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">MAP OPD OVER PUPIL ON SURFACE 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">FGRID POINT 0 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">RGRID CREC 7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">COLOR M &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">SCALE AUTO &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">ANALOG AUTO CIRCLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">ACTUAL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">PLOT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="map04.png" width="545" height="726" alt="map04" style="width:545px;height:726px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This example shows the polarization of the light after encountering an Amici prism, which has an uncoated roof surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">FETCH AMICI</span></p>
+<p class="p_mine"><span class="f_mine">MAP POLAR OVER PUPIL ON SURF 7</span></p>
+<p class="p_mine"><span class="f_mine">EXPLODED</span></p>
+<p class="p_mine"><span class="f_mine">ANALOG AUTO</span></p>
+<p class="p_mine"><span class="f_mine">SCALE AUTO</span></p>
+<p class="p_mine"><span class="f_mine">RGRID CREC 10 </span></p>
+<p class="p_mine"><span class="f_mine">FGRID POINT</span></p>
+<p class="p_mine"><span class="f_mine">PLOT</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><img src="map05.png" width="361" height="482" alt="map05" style="width:361px;height:482px;border:none"></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here is an example of a plot using the </span><span style="font-size: 11pt; font-weight: bold;">CSCALE</span><span style="font-size: 11pt;"> option. &nbsp;The distortion in this case varies from 0.0 to 0.01397 over the field.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">FETCH 1</span></p>
+<p><span style="font-size: 11pt;">CHG</span></p>
+<p><span style="font-size: 11pt;">CFOV</span></p>
+<p><span style="font-size: 11pt;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">MAP DIST OVER FOV </span></p>
+<p><span style="font-size: 11pt;">EXPLODED</span></p>
+<p><span style="font-size: 11pt;">ANALOG AUTO CSCALE</span></p>
+<p><span style="font-size: 11pt;">SCALE AUTO</span></p>
+<p><span style="font-size: 11pt;">RGRID POINT 0 0 </span></p>
+<p><span style="font-size: 11pt;">FGRID CREC 44 44</span></p>
+<p><span style="font-size: 11pt;">PLOT</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0162.png" width="577" height="774" alt="clip0162" style="width:577px;height:774px;border:none"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um881.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

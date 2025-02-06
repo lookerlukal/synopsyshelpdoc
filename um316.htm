@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um316</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Illumination object,LED, object for" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="obi"></a><span class="f_mine" style="font-weight: bold;">3.1.6 Illumination Array (OBI) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um315.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um317.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">Object type OBI is similar to </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um313.htm" class="topiclink">OBL</a></span><span style="font-size: 11pt;"> (Lambertian source), but it adds significant functionality. &nbsp;You describe a single light-emitting diode (or LED), as for that type, and then you define the dimensions of an array that will encompass a collection of such sources. &nbsp;In addition, each LED source will be mounted in a reflector whose dimensions you must provide.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Input for this object type, which must be entered in the RLE file, is as follows:</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt; font-weight: bold;">OBI </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">TH0</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YP0</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ANGLE</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">XS</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YS</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NX</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NY</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-11"><span class="f_p2-11">The first three arguments are the same as for object OBL: the distance from the LED to the vertex of surface 1 (</span><span class="f_p2-11" style="font-weight: bold;">TH0</span><span class="f_p2-11">), the radius of the circular LED (</span><span class="f_p2-11" style="font-weight: bold;">YP0</span><span class="f_p2-11">), and the semi angle in degrees of the cone of light emitted by the latter (</span><span class="f_p2-11" style="font-weight: bold;">ANGLE</span><span class="f_p2-11">). &nbsp;This angle must be less than 90 degrees. &nbsp;Since there is little light emitted at extreme angles, we recommend a value no more than about 80 degrees. &nbsp;The ray distribution from a single LED will model the cos**4 falloff from a lambertian source, as with object type OBL.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The other arguments define the array:  </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">XS</span><span style="font-size: 11pt;"> and </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YS</span><span style="font-size: 11pt;"> are the spacing in X and Y between adjacent LEDs, and </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NX</span><span style="font-size: 11pt;"> and </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NY</span><span style="font-size: 11pt;"> give the number of LEDs in the rows and columns. &nbsp;NX and NY must both be odd numbers, ensuring that there is a central LED.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">This format is intimately associated with the data that you must enter for surface 1, which will describe the shape and apertures of the central reflector. &nbsp;The vertex will be located at a distance of </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um331.htm#cao" class="topiclink">TH0</a></span><span style="font-size: 11pt;"> from the LED, and you must supply a<a href="um331.htm#cao" class="topiclink"> </a></span><span style="font-size: 11pt; text-decoration: underline;"><a href="um331.htm#cao" class="topiclink">CAO</a></span><span style="font-size: 11pt;"> to limit the size of the surface. &nbsp;The program automatically puts the INTERCEPT FAR directive into effect and makes the surface a REFLECTOR, so you do not have to provide those declarations yourself.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">The program automatically declares the system parameter LRAYS, since we want the light to consist of real rays (not strange rays) after reflecting from surface 2 and going to the right. &nbsp;Do not change this setting. &nbsp;There is no option to put the object on the right with light going to the left, with this object description.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Certain features are not permitted on either surface 0 or surface 1 when you use object OBI: &nbsp;You may not put any tilt or decenter on them, a </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span style="font-size: 11pt;"> is not permitted, and you may not assign a stop surface other than surface 1, which is the default. &nbsp;Surface 1 may not be declared an array. &nbsp;The system cannot be REVERSEd, but it can be SCALEd. &nbsp;In the event you want to examine multiple bounces in the reflector, as illustrated in an example below, you must declare the system NOSEQUENTIAL. &nbsp;You do not have to assign any nonsequential properties to the reflector itself however, since those will be automatic. &nbsp;All OPD-based analysis is disabled, since that makes no sense with an illumination system. &nbsp;If you request a </span><span style="font-size: 11pt; text-decoration: underline;"><a href="umch5.htm#sag" class="topiclink">SAG</a></span><span style="font-size: 11pt;"> calculation for surface 1, the return will indicate a failure if the aperture point is not contained between the CAI and CAO of the surface. &nbsp;(This is how the program knows not to draw anything in between the reflectors in the array.)</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">To evaluate the performance of an OBI system, you can declare which LED is active with the command</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt;">OBI INDEX </span><span style="font-size: 11pt; text-decoration: underline;">JX</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">JY</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">where </span><span style="font-size: 11pt; text-decoration: underline;">JX</span><span style="font-size: 11pt;"> and </span><span style="font-size: 11pt; text-decoration: underline;">JY</span><span style="font-size: 11pt;"> are (0,0) at the center and take values either positive or negative for other LEDs. &nbsp;This command can be entered almost anywhere, even within a data file, lens file, or in the WorkSheet. &nbsp;The declaration remains in effect until it is changed or a different lens is entered or recalled.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">For example, if the array were defined as (7,5), giving seven LEDs in the rows (in X) and five in the columns (in Y), then </span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt;">OBI INDEX 0 0 </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">would activate the central LED, and </span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt;">OBI INDEX 3 2</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">would activate one of the corners. &nbsp;The opposite corner would be</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt;">OBI INDEX -3 –2</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The following illustration shows how the index values are defined.</span></p>
+<p>&nbsp;</p>
+<p><img src="obi4.png" width="743" height="470" alt="obi4" style="width:743px;height:470px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here is an example of such a system:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">RLE</span></p>
+<p><span style="font-size: 11pt;">ID OBI EXAMPLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 23828</span></p>
+<p><span style="font-size: 11pt;"> LOG &nbsp; &nbsp;23828</span></p>
+<p><span style="font-size: 11pt;"> WAVL .6562700 .5875600 .4861300</span></p>
+<p><span style="font-size: 11pt;"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p><span style="font-size: 11pt;"> UNITS MM  </span></p>
+<p><span style="font-size: 11pt;"> OBI &nbsp;-1. 0.5 &nbsp;80. &nbsp;14. &nbsp;14. &nbsp;7. &nbsp;5. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-size: 11pt;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-size: 11pt;"> LRAYS</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 0 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 CAO &nbsp; &nbsp; &nbsp;6.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 CAI &nbsp; &nbsp; &nbsp;2.01000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 RAD &nbsp; &nbsp; &nbsp;2.0000000000000 &nbsp; TH &nbsp; &nbsp; 100 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 CC &nbsp; &nbsp; -1.00000000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 2 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 2 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 2 RAO 200 100</span></p>
+<p><span style="font-size: 11pt;"> END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">OBI INDEX 0 0</span></p>
+<p><span style="font-size: 11pt;">RSOL 10 20 2 0 123 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-size: 11pt;">PLOT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-size: 11pt;">RED &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p><span style="font-size: 11pt;">PUP 2 1 21 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-size: 11pt;">TRACE P 0 0 21 </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">OBI INDEX 1 -2</span></p>
+<p><span style="font-size: 11pt;">GREEN</span></p>
+<p><span style="font-size: 11pt;">TRACE P 0 0 21 </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">OBI INDEX -3 2</span></p>
+<p><span style="font-size: 11pt;">BLUE</span></p>
+<p><span style="font-size: 11pt;">TRACE P 0 0 21 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p><span style="font-size: 11pt;">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p><img src="obi1.png" width="910" height="664" alt="obi1" style="width:910px;height:664px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here we have declared pupil type 2 (a 1 x 21 TFAN of rays), and then added those rays to the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um72.htm#rsolid" class="topiclink">RSOLID</a></span><span style="font-size: 11pt;"> drawing at three LED locations: the center (0,0) in red, location (1,-2) in green, and finally (-3,2) in blue. &nbsp;Notice that the ray distributions are not identical; we have declared an RAO aperture on surface 2, which vignettes some of the rays.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The next example shows a set of three sources, each contained within a cone, which is modeled as a very short-radius hyperboloid. &nbsp;The system is declared NOSEQUENTIAL, so we see multiple reflections within each cone. &nbsp; We make a drawing using the default pupil pattern (PUP 1) with 200 rays requested, in three colors, from the three LEDs.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">RLE</span></p>
+<p><span style="font-size: 11pt;">ID NONSEQUENTIAL OBI EXAMPLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 23881</span></p>
+<p><span style="font-size: 11pt;"> LOG &nbsp; &nbsp;23881</span></p>
+<p><span style="font-size: 11pt;"> WAVL .6562700 .5875600 .4861300</span></p>
+<p><span style="font-size: 11pt;"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p><span style="font-size: 11pt;"> GLOBAL</span></p>
+<p><span style="font-size: 11pt;"> NOSEQUENTIAL</span></p>
+<p><span style="font-size: 11pt;"> UNITS MM  </span></p>
+<p><span style="font-size: 11pt;"> OBI &nbsp;-5. 0.5 &nbsp;80. &nbsp;14. &nbsp;14. &nbsp;1 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p><span style="font-size: 11pt;"> LRAYS</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 0 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 CAO &nbsp; &nbsp; &nbsp;6.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 CAI &nbsp; &nbsp; &nbsp;0.26400000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 RAD &nbsp; &nbsp; &nbsp;0.0020000000000 &nbsp; TH &nbsp; &nbsp; 100 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 CC &nbsp; &nbsp; -1.04500000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 2 RAO &nbsp; &nbsp;200.00000000 &nbsp; &nbsp; 100.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 2 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 2 AIR</span></p>
+<p><span style="font-size: 11pt;"> END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">RSOL 10 20 2 0 123 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-size: 11pt;">PLOT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-size: 11pt;">BLUE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p><span style="font-size: 11pt;">PUP 1 200</span></p>
+<p><span style="font-size: 11pt;">OBI INDEX 0 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p><span style="font-size: 11pt;">TRACE P 0 0 200 </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">OBI INDEX 0 0</span></p>
+<p><span style="font-size: 11pt;">RED</span></p>
+<p><span style="font-size: 11pt;">TRACE P 0 0 200 </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">OBI INDEX 0 -1</span></p>
+<p><span style="font-size: 11pt;">GREEN</span></p>
+<p><span style="font-size: 11pt;">PUPIL 1 200</span></p>
+<p><span style="font-size: 11pt;">TRACE P 0 0 200 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p><span style="font-size: 11pt;">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p>&nbsp;</p>
+<p><img src="obi2.png" width="878" height="678" alt="obi2" style="width:878px;height:678px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Let us look at the path of a single ray within the top cone:</span></p>
+<p>&nbsp;</p>
+<p><img src="obi3.png" width="616" height="257" alt="obi3" style="width:616px;height:257px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here you can see the three reflections for this ray. &nbsp;Other rays may encounter a different number, or no, reflections.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">One can evaluate the ray distribution in several ways. &nbsp;One is to make a footprint on the final surface.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">PUPIL 1 400</span></p>
+<p><span style="font-size: 11pt;">RED</span></p>
+<p><span style="font-size: 11pt;">OBI IND 0 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-size: 11pt;">PLOT 2 1 0 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-size: 11pt;">TRACE P 0 0 400 </span></p>
+<p><span style="font-size: 11pt;">OBI IND 0 1</span></p>
+<p><span style="font-size: 11pt;">BLUE </span></p>
+<p><span style="font-size: 11pt;">TRACE P 0 0 400</span></p>
+<p><span style="font-size: 11pt;">OBI IND 0 -1 </span></p>
+<p><span style="font-size: 11pt;">GREEN</span></p>
+<p><span style="font-size: 11pt;">TRACE P 0 0 400 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p><span style="font-size: 11pt;">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-size: 11pt;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p><img src="obi5.png" width="266" height="367" alt="obi5" style="width:266px;height:367px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">One can also use the image dissection routine to see how the ray density varies with location:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">OBI INDEX 0 1</span></p>
+<p><span style="font-size: 11pt;">GMODEL P 0 9000 1 0 0 AXIS</span></p>
+<p><span style="font-size: 11pt;">OBI INDEX 0 0</span></p>
+<p><span style="font-size: 11pt;">GMODEL P 0 9000 1 0 ADD AXIS</span></p>
+<p><span style="font-size: 11pt;">OBI INDEX 0 -1</span></p>
+<p><span style="font-size: 11pt;">GMODEL P 0 9000 1 0 ADD AXIS</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">FOR RECTANGLE</span></p>
+<p><span style="font-size: 11pt;">SIZE 5 5</span></p>
+<p><span style="font-size: 11pt;">VARY Y POSITION FROM -50 TO 50</span></p>
+<p><span style="font-size: 11pt;">PLOT</span></p>
+<p>&nbsp;</p>
+<p><img src="obi6.png" width="508" height="731" alt="obi6" style="width:508px;height:731px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here we made a composite geometric model of the ray pattern for each of the three sources, and then examined that model by passing a rectangular detector of dimensions 5x5 mm across the model from bottom to top.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Yet another useful feature is </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um8512.htm#ipat" class="topiclink">IPAT</a></span><span style="font-size: 11pt;">, which plots the illumination pattern at the final surface.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">One can easily add an array of lenslets to the OBI array. &nbsp;Here is an example:</span></p>
+<p>&nbsp;</p>
+<p><img src="obi7.png" width="790" height="919" alt="obi7" style="width:790px;height:919px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The system uses the ARRAY feature to create a set of small lenses:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">RLE</span></p>
+<p><span style="font-size: 11pt;">ID OBI EXAMPLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 23988</span></p>
+<p><span style="font-size: 11pt;"> FNAME 'OBI_WITH_LENS_ARRAY.RLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p><span style="font-size: 11pt;"> LOG &nbsp; &nbsp;23988</span></p>
+<p><span style="font-size: 11pt;"> WAVL .6562700 .5875600 .4861300</span></p>
+<p><span style="font-size: 11pt;"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p><span style="font-size: 11pt;"> UNITS MM  </span></p>
+<p><span style="font-size: 11pt;"> OBI &nbsp;-1. 0.5 &nbsp;80. &nbsp;14. &nbsp;14. &nbsp;1. &nbsp;5. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-size: 11pt;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-size: 11pt;"> LRAYS</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 0 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 CAO &nbsp; &nbsp; &nbsp;6.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 CAI &nbsp; &nbsp; &nbsp;2.01000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 RAD &nbsp; &nbsp; &nbsp;2.0000000000000 &nbsp; TH &nbsp; &nbsp; 14.70730880 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 CC &nbsp; &nbsp; -1.00000000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 1 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 2 RAO &nbsp; &nbsp; 14.00000000 &nbsp; &nbsp; &nbsp;67.82980000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 2 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;7.71839952</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 2 GLM &nbsp; &nbsp; &nbsp;1.50000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 50.00000000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 3 RAO &nbsp; &nbsp; 14.00000000 &nbsp; &nbsp; &nbsp;67.82980000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 3 CV &nbsp; &nbsp; -0.0974400118000 &nbsp; TH &nbsp; &nbsp; 54.30686570 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 3 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 3 ARRAY &nbsp; &nbsp;1 &nbsp; 5 &nbsp; 14.00000 &nbsp; &nbsp; &nbsp; 14.0000 &nbsp;  </span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 4 RAO &nbsp; &nbsp; 20.00000000 &nbsp; &nbsp; 100.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 4 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p><span style="font-size: 11pt;"> &nbsp; 4 AIR</span></p>
+<p><span style="font-size: 11pt;"> END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">RSOL 0 0 1.5 0 123</span></p>
+<p><span style="font-size: 11pt;">PLOT</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">RED</span></p>
+<p><span style="font-size: 11pt;">OBI INDEX 0 2</span></p>
+<p><span style="font-size: 11pt;">PUP 2 1 21</span></p>
+<p><span style="font-size: 11pt;">TRA P 0 0 21</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">MAGENTA</span></p>
+<p><span style="font-size: 11pt;">OBI INDEX 0 1</span></p>
+<p><span style="font-size: 11pt;">PUP 2 1 21</span></p>
+<p><span style="font-size: 11pt;">TRA P 0 0 21</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">GREEN</span></p>
+<p><span style="font-size: 11pt;">OBI INDEX 0 0</span></p>
+<p><span style="font-size: 11pt;">PUP 2 1 21</span></p>
+<p><span style="font-size: 11pt;">TRA P 0 0 21</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">BLUE</span></p>
+<p><span style="font-size: 11pt;">OBI INDEX 0 -1</span></p>
+<p><span style="font-size: 11pt;">PUP 2 1 21</span></p>
+<p><span style="font-size: 11pt;">TRA P 0 0 21</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">CYAN</span></p>
+<p><span style="font-size: 11pt;">OBI INDEX 0 -2</span></p>
+<p><span style="font-size: 11pt;">PUP 2 1 21</span></p>
+<p><span style="font-size: 11pt;">TRA P 0 0 21</span></p>
+<p><span style="font-size: 11pt;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Notice that a ray from the lower source enters the lenslet </span><span style="font-size: 11pt; font-style: italic;">above</span><span style="font-size: 11pt;"> that source; this situation is also mirrored at the top source. &nbsp;Other rays would do the same, except they are vignetted by the RAO on surface 4 and are therefore deleted. &nbsp;Notice also that this system does not require the nonsequential raytrace: all of the lenslets are contained in a single surface, number 3, and there are no multiple bounces in the reflectors.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Still, one might choose to examine the system in nonsequential mode. &nbsp;Here, we show a custom fan of 55 rays, </span></p>
+<p>&nbsp;</p>
+<p><img src="obi8.png" width="495" height="732" alt="obi8" style="width:495px;height:732px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Note that some rays seem to stop at the first surface of the lenslet. &nbsp;The raysets defined by any of the PUP options only contain rays that reach the last surface, and those rays did not, so they were deleted from the set. &nbsp;But if you request an </span><span style="font-size: 11pt; font-style: italic;">individual</span><span style="font-size: 11pt;"> ray instead of a set of rays, then in nonsequential mode the path of that ray will be shown, even if it is later vignetted, and you can see the TIR that occurs at the array. &nbsp;An example is shown below.</span></p>
+<p>&nbsp;</p>
+<p><img src="obi9.png" width="217" height="576" alt="obi9" style="width:217px;height:576px;border:none"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; text-decoration: underline;"><a href="um317.htm" class="topiclink">Next</a></span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um315.htm" class="topiclink">previous</a></span></p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

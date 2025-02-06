@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um3321</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="curvature pickups and solves,CV,PCV,Pickup, radius,RD, RAD" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">3.3.2.1 Spherical Surfaces &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um332.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3322.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(These options go into an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file, and may be entered interactively with the dialog </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> { RD / RAD } </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">radius of curvature. &nbsp;This entry will make the base curve spherical. &nbsp;If the radius value exceeds 1.0E10, the surface will be considered flat.</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> CV </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">reciprocal radius, or curvature. &nbsp;This also makes the base curve spherical or flat.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> PCV </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> [ </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">M</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> [ </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">B</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> ] ]</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">pickup curvature of surface NB. &nbsp;A negative value of NB reverses the curvature, and the constants M and B may be used to scale and offset the results. &nbsp;(CV = CV(NB)*M + B) &nbsp;Any type of surface shape may be picked up except HOEs, DOEs, and GRATINGs, but the parameters M and B affect only the spherical and conic parameters a and c<a href="appc.htm" class="topiclink"> (see </a></span><span class="f_p3-10" style="font-size: 11pt; text-decoration: underline;"><a href="appc.htm" class="topiclink">App. C</a></span><span class="f_p3-10" style="font-size: 11pt;">).</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p><a name="umc"></a><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> UMC </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">solves for the spherical curvature giving the specified value of the paraxial axial marginal ray angle with respect to the optical axis, after refraction or reflection at this surface.  </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span><span class="f_p3-10" style="font-size: 11pt;"> is the tangent of the desired angle. &nbsp;To yield a desired F/number, enter (1/2FNUM) for NB. &nbsp;The angle (see section</span><span class="f_p3-10" style="font-size: 11pt; text-decoration: underline;"><a href="um254.htm" class="topiclink"> 2.5.4</a></span><span class="f_p3-10" style="font-size: 11pt;">) will have the same sign as </span><span class="f_p3-10" style="font-size: 11pt; text-decoration: underline;">NB</span><span class="f_p3-10" style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p><a name="upc"></a><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> UPC </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">curvature solve for the paraxial principal ray angle after refraction or reflection. </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span><span class="f_p3-10" style="font-size: 11pt;"> is the tangent of the desired angle. &nbsp;To produce a telecentric system, for example, you would enter &quot;UPC 0&quot;.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p><a name="ymc"></a><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> YMC </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">curvature solve for the paraxial marginal ray height on the next surface.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p><a name="ypc"></a><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> YPC </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">curvature solve for the paraxial principal ray height on the next surface.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p><a name="ncop"></a><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> NCOP</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">removes any curvature pickups or solves on this surface, keeping the latest value.</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><a name="3321vmc"></a><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">VMC, VPC,</span><span class="f_p3-10" style="font-size: 11pt;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">XMC, XPC</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">are used in the same way as UMC, UPC, YMC, and YPC, except that they refer to the X-Z plane rather than the Y-Z plane. &nbsp;These options produce a spherical surface, but the (paraxial) effects of preceding non-spherical surfaces are taken into account. &nbsp;In the event of a conflict, the Y-Z solves take precedence over the X-Z. &nbsp;Entering any of these options automatically turns on the XPXT option.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-10"><a name="3321amy"></a><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;">AMY</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">turns on the aplanatic solve for the specified surface based on the marginal ray.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><a name="3321apy"></a><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> APY</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">turns on the aplanatic solve for that surface based on the principal ray.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><a name="3321imy"></a><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> IMY </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">is an angle of incidence solve for the marginal ray.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><a name="3321ipy"></a><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> IPY </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">is an angle of incidence solve for the principal ray.</span></p>
+<p class="p_p3-10"><a name="3321ccy"></a><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> CCY</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">gives a surface concentric about the principal ray.</span></p>
+<p class="p_p3-10"><span class="f_p3-10">&nbsp;</span></p>
+<p class="p_p3-10"><a name="3321amx"></a><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> AMX, APX, IMX, IPX, CCX</span></p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 96px;"><span class="f_p3-10" style="font-size: 11pt;">are used in the same way as AMY, APY, IMY, IPX, and CCY, except that they refer to the X-Z plane rather than the Y-Z plane. &nbsp;In the event of a conflict, the Y-Z solve takes precedence over the X-Z solve.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The above options control the spherical radius of the entered surface. &nbsp;Most of the aspheric surface shape options cannot be assigned to such a surface. &nbsp;You are permitted, however, to add a conic section, </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um33222.htm" class="topiclink">power-series</a></span><span style="font-size: 11pt;"> terms of the form DC1, etc., or a </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um33226.htm" class="topiclink">Zernike</a></span><span style="font-size: 11pt;"> polynomial to a surface controlled by a solve.</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3322.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um332.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

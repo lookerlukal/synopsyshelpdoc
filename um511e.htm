@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um511e</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="REVERSE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;">&nbsp;</p>
+<p><a name="reverse"></a><span style="font-size: 14pt;">5.11 Lens Reversal (REVERSE)</span>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="text-decoration: underline;"><a href="um512.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um510.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">The command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">REVERSE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will cause the entire lens to be reversed, end for end. &nbsp;If tilts or decenters are present, the program will:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">1. Convert all surfaces to GLOBAL coordinates.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">2. Find the global positions in the coordinates of the last surface.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">3. Reverse the lens.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">4. Assign new global coordinates all surfaces by inverting the position matrix just found.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">5. Change all of the new global coordinates to relative, if possible.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The new object position corresponds to the previous image position, and will be at infinity if the previous lens was AFOCAL. &nbsp;Similarly, if the previous object distance was infinite, the reversed system will be AFOCAL. &nbsp;A paraxial pupil goes into effect, and you should change this to a real pupil if you need to. &nbsp;The reversed lens will not have a WAP or OBG, and you should insert these if desired. &nbsp;All pickups and solves are deleted, freezing the previous values of the design. &nbsp;Prisms are reversed properly, but the prism flag is removed (</span><span class="f_mine" style="text-decoration: underline;"><a href="um39.htm" class="topiclink">see 3.9</a></span><span class="f_mine">). &nbsp;HOEs and GRATINGs cannot be reversed, although DOEs can.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um1071.htm#zfile" class="topiclink">ZFILE</a></span><span class="f_mine"> zoom lenses can be reversed, with some restrictions. &nbsp;The surfaces, group definitions, and zoom motions are all reversed – but the resulting lens will be in either FOCAL or AFOCAL mode, depending on the object settings for the previous zoom 1 (and only zoom 1). &nbsp;This means that if zoom number 1 used the OBB object (at infinity) while zoom 2 was assigned a finite object (with OBA), which is perfectly legal, the reversed lens will be AFOCAL at all zooms, and the finite object in zoom 2 will not turn into a finite image distance after reversal, as you might expect. &nbsp;Also, you can </span><span class="f_mine" style="text-decoration: underline;"><a href="um522.htm#flip" class="topiclink">FLIP</a></span><span class="f_mine"> a range of surfaces in a ZFILE zoom lens, as long as the range includes none of the zoom groups, or else includes a single, entire, group. &nbsp;The object coordinates in each zoom are taken from the paraxial image properties of that zoom before reversal. &nbsp;If those properties differ from the real-ray properties, you will have to edit the reversed lens and modify those properties.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program makes little attempt to sort out and reverse the logic involved with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch18.htm" class="topiclink">nonsequential</a></span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine">mode. &nbsp;You will therefore have to edit your lens afterwards, declaring the appropriate surfaces LOOSE, CAPTURE, and so on, in whatever way makes sense after the lens is reversed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To reverse only a portion of a lens, see </span><span class="f_mine" style="font-weight: bold;">FLIP</span><span class="f_mine">, in </span><span class="f_mine" style="text-decoration: underline;"><a href="um522.htm" class="topiclink">section 5.22</a></span><span class="f_mine">. &nbsp;The </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="worksheet.htm" class="topiclink">WorkSheet</a></span><span class="f_mine"> program can also flip an element, with immediate graphical feedback.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um512.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

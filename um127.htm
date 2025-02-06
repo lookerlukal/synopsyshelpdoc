@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um127</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="BTOL format summary" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-size: 14pt;">12.7 BTOL Format Summary &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um126.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> <a href="um128.htm" class="topiclink">Next</a> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For the convenience of users who are familiar with the concepts of BTOL, this section summarizes the input formats. &nbsp;Links to the individual topics may be found </span><span class="f_mine" style="text-decoration: underline;"><a href="umch12.htm" class="topiclink">here</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-style: italic; font-weight: bold;">Input file structure:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; height:476px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">[ BTOL [ </span><span style="font-size: 9pt; text-decoration: underline;">CRITERION</span><span style="font-size: 9pt;"> [ MULTI ] ] ]</span></p>
+<p><span style="font-size: 9pt;">[ BTOL { SAVE / FETCH / LIST } ]</span></p>
+<p><span style="font-size: 9pt;">[ BTOL </span><span style="font-size: 9pt; text-decoration: underline;">CRITERION</span><span style="font-size: 9pt;"> 0 RECALC ]</span></p>
+<p><span style="font-size: 9pt;">[ BTOL SORT ]</span></p>
+<p style="text-indent: -48px; margin: 0px 0px 0px 48px;"><span style="font-size: 9pt;">[ BTOL BUDGET { PTH { AIR / GLASS } / PCV }</span></p>
+<p>RANGE <span style="font-style: italic; font-weight: bold;">list</span> <span style="text-decoration: underline;">RANGE</span></p>
+<p>FIX <span style="font-style: italic; font-weight: bold;">list</span> <span style="text-decoration: underline;">TOLERANCE</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt;">[ DAMPING </span><span style="font-size: 9pt; text-decoration: underline;">D</span><span style="font-size: 9pt;"> ]</span></p>
+<p><span style="font-size: 9pt;">[ FOV </span><span style="font-size: 9pt; text-decoration: underline;">NFOV</span><span style="font-size: 9pt;"> ]</span></p>
+<p><span style="font-size: 9pt;">[ MONO [ </span><span style="font-size: 9pt; text-decoration: underline;">ICOL</span><span style="font-size: 9pt;"> ] ]</span></p>
+<p><span style="font-size: 9pt;">[ FWT </span><span style="font-size: 9pt; text-decoration: underline;">WT</span><span style="font-size: 9pt;"> </span><span style="font-size: 9pt; text-decoration: underline;">WT</span><span style="font-size: 9pt;"> </span><span style="font-size: 9pt; text-decoration: underline;">WT</span><span style="font-size: 9pt;"> ]</span></p>
+<p><span style="font-size: 9pt;">[ FWAV </span><span style="font-size: 9pt; text-decoration: underline;">WAVELENGTH</span><span style="font-size: 9pt;"> ]</span></p>
+<p><span style="font-size: 9pt;">[ OBSET { </span><span style="font-size: 9pt; text-decoration: underline;">CAI</span><span style="font-size: 9pt;"> &nbsp;/ </span><span style="font-size: 9pt; text-decoration: underline;">P1</span><span style="font-size: 9pt;"> </span><span style="font-size: 9pt; text-decoration: underline;">R1</span><span style="font-size: 9pt;"> } ]</span></p>
+<p><span style="font-size: 9pt;">[ IMAX </span><span style="font-size: 9pt; text-decoration: underline;">FRACTION</span><span style="font-size: 9pt;"> ]</span></p>
+<p><span style="font-size: 9pt;">[ GRID </span><span style="font-size: 9pt; text-decoration: underline;">NB</span><span style="font-size: 9pt;">]</span></p>
+<p><span style="font-size: 9pt;">[ { POWER / ZERNIKE } ]</span></p>
+<p><span style="font-size: 9pt;">[ ZOOM { ALL / NB NB … } ]</span></p>
+<p><span style="font-size: 9pt;">[ UCF </span><span style="font-size: 9pt; text-decoration: underline;">NFOV</span><span style="font-size: 9pt;"> / </span><span style="font-size: 9pt; text-decoration: underline;">HBAR</span><span style="font-size: 9pt;"> </span><span style="font-size: 9pt; text-decoration: underline;">GBAR</span><span style="font-size: 9pt;"> / </span><span style="font-size: 9pt; text-decoration: underline;">HBAR</span><span style="font-size: 9pt;"> </span><span style="font-size: 9pt; text-decoration: underline;">GBAR</span><span style="font-size: 9pt;"> … ]</span></p>
+<p><span style="font-size: 9pt;">[ PREPARE &nbsp;[ MC / ELD ] ]</span></p>
+<p><span style="font-size: 9pt;">[ ACON </span><span style="font-size: 9pt; text-decoration: underline;">NB</span><span style="font-size: 9pt;"> ]</span></p>
+<p><span style="font-size: 9pt;">[ NODMESS ]</span></p>
+<p><span style="font-size: 9pt;">[ SEGMENT ]</span></p>
+<p><span style="font-size: 9pt;">[ DEFAULTS ]</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt;">ZAW &nbsp; &nbsp; { UNIFORM</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 9pt;"> FNUM</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 9pt;"> </span><span style="font-size: 9pt; text-decoration: underline;">NB</span><span style="font-size: 9pt;"> </span><span style="font-size: 9pt; text-decoration: underline;">WT</span><span style="font-size: 9pt;"> &nbsp;}</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt;">(variable attributes)</span></p>
+<p><span style="font-size: 9pt;">(adjustment requests)</span></p>
+<p><span style="font-size: 9pt;">(quality descriptors)</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 9pt; font-family: 'Times New Roman';">{</span><span class="f_mine" style="font-size: 9pt;"> EVALUATE / GO }</span></p>
+</td>
+<td style="vertical-align:top; width:281px; height:476px; padding:4px; border:solid 1px #000000;"><p><span style="font-style: italic; font-weight: bold;">Variable attributes:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p>[ INCLUDE<span style="font-weight: bold;"> </span><span style="text-decoration: underline;">JSSS</span> THRU <span style="text-decoration: underline;">JSPS</span> ]</p>
+<p>&nbsp;</p>
+<p>[ EXCLUDE <span style="text-decoration: underline;">SN</span> THRU <span style="text-decoration: underline;">SN</span> ]</p>
+<p>[ EXCLUDE … ]</p>
+<p>&nbsp;</p>
+<p>[ RANGE { <span style="font-style: italic; font-weight: bold;">list</span><span style="font-weight: bold;"> </span><span style="font-family: 'Times New Roman';">} </span><span style="text-decoration: underline;">DMAX</span> ]</p>
+<p>[ FIX &nbsp;{ <span style="font-style: italic; font-weight: bold;">list</span><span style="font-weight: bold;"> </span><span style="font-family: 'Times New Roman';">} </span><span style="text-decoration: underline;">TOL</span> ]</p>
+<p>&nbsp;</p>
+<p>[ EXACT ALL ]</p>
+<p>[ EXACT ALL<span style="font-style: italic; font-weight: bold;"> list</span> ]</p>
+<p>[ EXACT { { <span style="font-style: italic; font-weight: bold;">list </span><span style="font-family: 'Times New Roman';">}</span> <span style="text-decoration: underline;">SN</span> <span style="text-decoration: underline;">SN</span> <span style="text-decoration: underline;">SN</span> }…]</p>
+<p>[ EXACT <span style="text-decoration: underline;">SN</span> { <span style="font-style: italic; font-weight: bold;">list</span><span style="font-weight: bold;"> </span><span style="font-family: 'Times New Roman';">}</span> ]</p>
+<p>&nbsp;</p>
+<p>[ RANGE <span style="text-decoration: underline;">SN</span> { <span style="font-style: italic; font-weight: bold;">list</span><span style="font-weight: bold;"> </span><span style="font-family: 'Times New Roman';">}</span> <span style="text-decoration: underline;">DMAX</span> ]</p>
+<p>[ FIX <span style="text-decoration: underline;">SN</span> { <span style="font-style: italic; font-weight: bold;">list</span><span style="font-weight: bold;"> </span><span style="font-family: 'Times New Roman';">}</span> <span style="text-decoration: underline;">TOL</span> ]</p>
+<p>[ TPR &nbsp;{ <span style="text-decoration: underline;">SN</span> <span style="text-decoration: underline;">SN</span> <span style="text-decoration: underline;">SN</span> … / ALL } ]</p>
+<p>[ PFTEST { <span style="text-decoration: underline;">SN</span> <span style="text-decoration: underline;">SN</span> <span style="text-decoration: underline;">SN</span> ... / ALL ) ]</p>
+<p>[ GROUP { LEFT / RIGHT } <span style="text-decoration: underline;">SN</span> <span style="text-decoration: underline;">SN</span> ]</p>
+<p>[ THC <span style="text-decoration: underline;">SN</span> <span style="text-decoration: underline;">SN</span> ]</p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt;">[ CEMENT </span><span class="f_mine" style="font-size: 10pt; text-decoration: underline;">SN</span><span class="f_mine" style="font-size: 10pt;"> </span><span class="f_mine" style="font-size: 10pt; text-decoration: underline;">SN</span><span class="f_mine" style="font-size: 10pt;"> … ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-style: italic; font-weight: bold;">Modifying a previous budget:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt;">BTOL MODIFY</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt;">[ ALL </span><span class="f_mine" style="font-size: 10pt; text-decoration: underline;">MULTIPLIER</span><span class="f_mine" style="font-size: 10pt;"> ]</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt;">[ </span><span class="f_mine" style="font-size: 10pt; font-style: italic; font-weight: bold;">list</span><span class="f_mine" style="font-size: 10pt;"> </span><span class="f_mine" style="font-size: 10pt; text-decoration: underline;">MULTIPLIER</span><span class="f_mine" style="font-size: 10pt;"> ]</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt;">...</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt;">BTOL EDIT </span><span class="f_mine" style="font-size: 10pt; text-decoration: underline;">filename</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where</span><span class="f_mine" style="font-style: italic;"> </span><span class="f_mine" style="font-style: italic; font-weight: bold;">list</span><span class="f_mine"> is one of:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RAD</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RD</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CV</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TH</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">INDEX</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">VNO</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">WEDGE</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TILT</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">IRREG</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CONIC</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RFR</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">THI</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">DECENT</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">XDC</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1211.htm#brl1" class="topiclink">RL1, RL2</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">WTR</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TTR</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SSD </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">YDC</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">REDGE</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PEP</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PAX</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PAY</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PFTEST</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-style: italic; font-weight: bold;">Quality descriptors:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p>TOL WAVE<span style="font-weight: bold;"> </span><span style="text-decoration: underline;">VARIANCE</span></p>
+<p>TOL WAF <span style="text-decoration: underline;">VAR</span> <span style="text-decoration: underline;">VAR</span> <span style="text-decoration: underline;">VAR</span> …</p>
+<p>DEGRADE WAVE <span style="text-decoration: underline;">FRACTION</span></p>
+<p>DEGRADE WAF <span style="text-decoration: underline;">VAR</span> <span style="text-decoration: underline;">VAR</span> …</p>
+<p>&nbsp;</p>
+<p>TOL [X/Y]SPOT <span style="text-decoration: underline;">VARIANCE</span></p>
+<p>TOL SPF <span style="text-decoration: underline;">VAR</span> <span style="text-decoration: underline;">VAR</span> <span style="text-decoration: underline;">VAR</span> …</p>
+<p>DEGRADE [X/Y]SPOT <span style="text-decoration: underline;">FRACTION</span></p>
+<p>DEGRADE SPF <span style="text-decoration: underline;">VAR</span> <span style="text-decoration: underline;">VAR</span> …</p>
+<p>&nbsp;</p>
+<p>TOL STREHL <span style="text-decoration: underline;">VALUE</span></p>
+<p>TOL STF <span style="text-decoration: underline;">VALUE</span> <span style="text-decoration: underline;">VALUE</span> …</p>
+<p>DEGRADE STREHL <span style="text-decoration: underline;">FRACTION</span></p>
+<p>DEGRADE STF <span style="text-decoration: underline;">NB</span> <span style="text-decoration: underline;">NB</span> …</p>
+<p>&nbsp;</p>
+<p>TOL { MTF / YMTF / TMTF / SMTF / XMTF } <span style="text-decoration: underline;">FREQ</span> <span style="text-decoration: underline;">MTF</span></p>
+<p>TOL { MFF / YMFF / TMFF / SMFF / XMFF } <span style="text-decoration: underline;">FREQ</span> <span style="text-decoration: underline;">MTF</span> <span style="text-decoration: underline;">MTF</span> …</p>
+<p>TOL { MSF / YMSF / TMSF / SMSF / XMSF } <span style="text-decoration: underline;">MTF</span> <span style="text-decoration: underline;">FREQ</span> <span style="text-decoration: underline;">FREQ</span> …</p>
+<p>DEGRADE { MTF / YMTF / TMTF / SMTF / XMTF } <span style="text-decoration: underline;">FREQ</span> <span style="text-decoration: underline;">FRACTION</span></p>
+<p>DEGRADE { MFF / YMFF / TMFF / SMFF / XMFF } <span style="text-decoration: underline;">FREQ</span> <span style="text-decoration: underline;">FRACTION</span> …</p>
+<p>DEGRADE { MSF / YMSF / TMSF / SMSF / XMSF } <span style="text-decoration: underline;">FRACTION </span> <span style="text-decoration: underline;">FREQ</span> <span style="text-decoration: underline;">FREQ</span> …</p>
+<p>&nbsp;</p>
+<p>[ TOL MAGNIFICATION <span style="text-decoration: underline;">MTOL</span> ]</p>
+<p>[ TOL DISTORTION <span style="text-decoration: underline;">DTOL</span> ]</p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt;">[ TOL BORESIGHT </span><span class="f_mine" style="font-size: 10pt; text-decoration: underline;">BTOL</span><span class="f_mine" style="font-size: 10pt;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-style: italic; font-weight: bold;">Adjustment requests:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p>[ ADJUST<span style="font-weight: bold;"> </span><span style="text-decoration: underline;">SN</span> <span style="font-style: italic; font-weight: bold;">name</span> [ <span style="text-decoration: underline;">AJMAX</span> [ { ALL / EACH } ZOOM ] ]</p>
+<p>[ APPLY <span style="text-decoration: underline;">JSSS</span> <span style="text-decoration: underline;">JSPS</span> ]</p>
+<p>[ FOCUS { REAL <span style="text-decoration: underline;">HBAR</span> <span style="text-decoration: underline;">GBAR</span> / ALL / EACH } ]</p>
+<p>[ REOPTIMIZE <span style="text-decoration: underline;">NPASSES</span> [ QUIET ] ]</p>
+<p class="p_footer"><span class="f_footer">[ ATABLE ]</span></p>
+<p class="p_footer"><span class="f_footer">&nbsp;</span></p>
+<p>where <span style="font-style: italic; font-weight: bold;">name</span> is one of:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p>RD</p>
+</td>
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p>TH <span style="text-decoration: underline;">NSURF</span></p>
+</td>
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p>TILT <span style="text-decoration: underline;">NSURF</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p>RAD</p>
+</td>
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p>THI <span style="text-decoration: underline;">NSURF</span></p>
+</td>
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p>DEC <span style="text-decoration: underline;">NSURF</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p>CV</p>
+</td>
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p>XDC <span style="text-decoration: underline;">NSURF</span></p>
+</td>
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p>YDC <span style="text-decoration: underline;">NSURF</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p>TH0</p>
+</td>
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><p>ACCOM</p>
+</td>
+<td style="vertical-align:top; width:108px; padding:4px; border:solid 1px #000000;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine"><a href="um128.htm" class="topiclink">Next</a> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

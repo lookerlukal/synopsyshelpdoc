@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um12122</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="adjustments, finding most sensitive,ATABLE, finding adjustments" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">12.1.2.2 Finding the Best Adjustments &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1213.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um12121.htm" class="topiclink">Previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The previous sections have described how to declare a parameter as an adjustment for BTOL – but before you can do that, you have to identify which variable(s) will do the most good. &nbsp;This section describes a procedure that can help.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When a lens is manufactured and the image is not as good as in the nominal design, it is usually the low-order image errors that predominate. &nbsp;Thus a well-corrected lens will exhibit third-order spherical aberration and axial coma as a result of manufacturing errors, even though both of those errors would be small or zero if the tolerances were small enough. &nbsp;The most useful adjustments therefore are often those that most strongly affect those aberrations. &nbsp;A very simple mode of BTOL will examine all reasonable groups that could be used for airspace and decenter adjustments and print a table showing the effectiveness of each. &nbsp;The effect is given in OPD units per unit of perturbation.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To use this feature, enter a file of the form</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">BTOL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">ATABLE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">GO</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program will search for groups that do not violate the many rules that can prevent use of certain variables, such as a global specification within the group. &nbsp;Only those thicknesses and decenters that are otherwise available to BTOL are considered, although the group size may be any number that does not violate another rule. &nbsp; If the lens contains any surfaces affected by tilts or decenters, or declared GLOBAL, the groups are not allowed to span those surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> Here is an example:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="btolalist.png" width="698" height="316" alt="btolalist" style="width:698px;height:316px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We would like to identify which element or group we should adjust in Y and in Z to compensate for manufacturing errors. &nbsp;Entering the input shown above, we get</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">CHANGE IN SA3 AND GIHT FOR AXIAL SHIFT OF LENS GROUPS</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">CONFIGURATION 1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;FIRST &nbsp; LAST &nbsp; &nbsp;GROUP &nbsp;EFFECT/UNIT &nbsp; &nbsp; &nbsp;GIHT/UNIT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp;-4.47976 &nbsp; &nbsp; &nbsp; -0.113658</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; 5 &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp;-4.47976 &nbsp; &nbsp; &nbsp; -0.113658</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; 7 &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; 3.42527 &nbsp; &nbsp; &nbsp; -0.123959</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp; 8 &nbsp; &nbsp; 4.44051 &nbsp; &nbsp; &nbsp; -0.128045</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp; &nbsp;10 &nbsp; &nbsp;0.175995 &nbsp; &nbsp; &nbsp; -0.100403</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;12 &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp;0.175995 &nbsp; &nbsp; &nbsp; -0.100403</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; 5 &nbsp; &nbsp; &nbsp; 1 &nbsp; -0.285002E-05 &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; 7 &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; 7.87846 &nbsp; &nbsp; &nbsp; -0.101629E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp; 5 &nbsp; &nbsp; 8.89641 &nbsp; &nbsp; &nbsp; -0.142598E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp; &nbsp; 7 &nbsp; &nbsp; 4.65279 &nbsp; &nbsp; &nbsp; &nbsp;0.132414E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp;12 &nbsp; &nbsp; &nbsp; 8 &nbsp; &nbsp; 4.65279 &nbsp; &nbsp; &nbsp; &nbsp;0.132414E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 7 &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; 1.01820 &nbsp; &nbsp; &nbsp; -0.409443E-02</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 7 &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp;-3.23192 &nbsp; &nbsp; &nbsp; &nbsp;0.234260E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 7 &nbsp; &nbsp; &nbsp;12 &nbsp; &nbsp; &nbsp; 5 &nbsp; &nbsp;-3.23192 &nbsp; &nbsp; &nbsp; &nbsp;0.234260E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;-4.25012 &nbsp; &nbsp; &nbsp; &nbsp;0.275182E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp;12 &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp;-4.25012 &nbsp; &nbsp; &nbsp; &nbsp;0.275182E-01</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp; &nbsp;12 &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">CHANGE IN AXIAL COMA FOR DECENTER OF LENS GROUPS</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">CONFIGURATION 1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;FIRST &nbsp; LAST &nbsp; &nbsp;GROUP &nbsp;EFFECT/UNIT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp;-41.6375</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; 5 &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp;-41.6375</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; 7 &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; 133.829</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp; 8 &nbsp; &nbsp; 141.563</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp; &nbsp;10 &nbsp; &nbsp; 17.5907</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp;12 &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp; 17.5907</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; &nbsp; 7 &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; 175.466</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; 183.200</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; 59.2277</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; &nbsp;12 &nbsp; &nbsp; &nbsp; 7 &nbsp; &nbsp; 59.2277</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 8 &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; 7.73412</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 8 &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp;-116.238</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 8 &nbsp; &nbsp; &nbsp;12 &nbsp; &nbsp; &nbsp; 5 &nbsp; &nbsp;-116.238</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp;10 &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp;-123.972</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp;10 &nbsp; &nbsp; &nbsp;12 &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp;-123.972</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">From the first listing we see that the most sensitive group for compensating spherical aberration consists of the elements enclosed by airspaces 4 and 9. &nbsp;This has the effect of moving surfaces 6 through 9 along the Z axis. &nbsp;(The thickness of surface 5, which is also an airspace, was not selected by the program because BTOL will not automatically tolerance it – since it follows another airspace that is already toleranced.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">From the second group we see that the most sensitive group to control axial coma is again surfaces 6 through 9. &nbsp;It would be safe to start with these two adjustments for the actual BTOL analysis. &nbsp;Keep in mind that here we only examine two aberrations, while a realistic adjustment has to compensate for everything else that can go wrong with the image as well. &nbsp;For that reason, you may have to experiment with other candidates from the above listing, before you settle on a particular adjustment to use.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1213.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

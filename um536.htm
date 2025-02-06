@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um536</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="RTRANS" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="rtrans"></a><span class="f_mine" style="font-size: 14pt;">5.36 Transmission along a ray (RTRANS) &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="text-decoration: underline;"><a href="um535.htm" class="topiclink">Previous</a></span><span class="f_mine"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um537.htm" class="topiclink">Next</a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The transmission of an optical system may be calculated by several features of SYNOPSYS, itemized in </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um539.htm" class="topiclink">Section 5.39</a></span><span style="font-size: 11pt;">. &nbsp;The easiest way to run these options is via the menu </span><span style="font-size: 11pt; font-weight: bold;">MTR</span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">The command </span><span class="f_mine" style="font-weight: bold;">RTRANS</span><span class="f_mine">, in this section, will calculate the </span><span class="f_mine" style="font-style: italic;">absorption</span><span class="f_mine"> along the path of a given ray through the entire system. &nbsp;It dos not consider vignetting, apodization, or coatings. &nbsp;This feature requires all optical materials to be from one of the glass tables and have transmission coefficients assigned. &nbsp;If this is not the case for any lens, the program will ignore that material and issue a warning message.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The format is the same as the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um63.htm" class="topiclink">RAY</a></span><span style="font-size: 11pt;"> command:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">RTRANS { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span><span class="f_mine" style="font-weight: bold;"> { SURF / 0 } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / P</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">color number, or “P” for the primary color</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">fractional object height in the Y-direction</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_mine" style="font-weight: bold;">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">fractional entrance pupil coordinates</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:94px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">fractional object height in the X-direction</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">If </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SURF</span><span style="font-size: 11pt;"> is entered, the program will itemize the transmission at each element. &nbsp;An example follows.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">SYNOPSYS AI&gt;RTRANS 3 0 0 1 SURF </span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">SYSTEM TRANSMISSION ALONG SELECTED RAY</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">SURF. &nbsp;PATH LENGTH &nbsp;THIS PATH &nbsp; CUMULATIVE</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">------------------------------------------</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 &nbsp; &nbsp;14.6111 &nbsp; &nbsp; &nbsp;1.0000 &nbsp; &nbsp; &nbsp;1.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 6 &nbsp; &nbsp;5.99471 &nbsp; &nbsp; &nbsp;0.9998 &nbsp; &nbsp; &nbsp;0.9998</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 8 &nbsp; &nbsp;5.05732 &nbsp; &nbsp; &nbsp;0.9986 &nbsp; &nbsp; &nbsp;0.9984</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;10 &nbsp; &nbsp;6.13605 &nbsp; &nbsp; &nbsp;0.9944 &nbsp; &nbsp; &nbsp;0.9928</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">TRANSMISSION ALONG RAY: &nbsp; 0.992823E+00</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_mine"><span class="f_mine">You can also evaluate the transmission through a single element, as described in <a href="um550.htm" class="topiclink">Section 5.50</a>.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um537.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

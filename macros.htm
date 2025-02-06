@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>MACros</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="MACros" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><span style="font-weight: bold;">MACros</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p><span style="font-family: Helv;">MACros are sequences of SYNOPSYS command or AI sentences, entered in a special editor window and usually saved to disk.</span></p>
+<p>&nbsp;</p>
+<p>You can have any number of MACro editor windows open at the same time. &nbsp;Much of the work you do in SYNOPSYS will require several lines of input, and it is much easier to accomplish what you want if you prepare a MACro first. Then you can easily rerun or edit the MACro if necessary, and save it to disk for use at another time.</p>
+<p>&nbsp;</p>
+<p>The command <span style="font-weight: bold;">EE</span> (Excellent Editor) will open the most recent MACro editor window, or create a new one if none exists. &nbsp;A new one will be blank, while an existing one will contain the same data as before.</p>
+<p>&nbsp;</p>
+<p>The command <span style="font-weight: bold;">GDS</span> (Get Data Set) will automatically rerun the most recently run MACro. &nbsp;This is automatically stored in memory when you run it with the button <img src="runmacro.png" width="26" height="24" alt="runmacro" style="width:26px;height:24px;border:none">.</p>
+<p>&nbsp;</p>
+<p>The command <span style="font-weight: bold;">GADS</span> (Get Alternate Data Set) will automatically rerun the MACro that was most recently run as an <span style="font-style: italic;">alternate</span> MACro. This is automatically stored in memory when you run it with the button <img src="runaltmacro.png" width="26" height="25" alt="runaltmacro" style="width:26px;height:25px;border:none">.</p>
+<p>&nbsp;</p>
+<p>The command <span style="font-weight: bold;">LM</span> <span style="text-decoration: underline;">filename</span> (Load MACro) will load the named MACro file into an editor. &nbsp;This will use the most recently opened editor window, if any, or a new one if there are none.</p>
+<p>&nbsp;</p>
+<p>The command <span style="font-weight: bold;">LAM</span> <span style="text-decoration: underline;">filename</span> (Load Alternate MACro) will load the named MACro file into a new editor window. &nbsp;This will not alter any other editor windows that may be open.</p>
+<p>&nbsp;</p>
+<p>The command <span style="font-weight: bold;">EM</span> <span style="text-decoration: underline;">filename</span> (Execute MACro) will immediately execute the named MACro without opening an editor.</p>
+<p>&nbsp;</p>
+<p>The command <span style="font-weight: bold;">EAM</span> <span style="text-decoration: underline;">filename</span> (Execute Alternate MACro) will immediately execute the named MACro without opening an editor. &nbsp;This form uses the alternate memory, which leaves intact the main MACro memory. &nbsp;Its main use is within a MACro, to permit that MACro to call another as a subroutine so that control will return when the other has finished. &nbsp;Placing an EM command inside a MACro (instead of EAM) would execute (and overwrite) that MACro, and would not then return.</p>
+<p>&nbsp;</p>
+<p>The command <span style="font-weight: bold;">PMA</span> <span style="text-decoration: underline;">filename</span> (Print MACro) will show the contents of the named MACro on the Command Window, where it can be printed. &nbsp;(You can also just click the print button on the EE editor toolbar to print a MACro.)</p>
+<p>&nbsp;</p>
+<p>The command <span style="font-weight: bold;">LMM</span> (Load Menu MACro) will load the MACro editor with the commands that duplicate the most recent action performed by a dialog. &nbsp;This makes it easy to create a MACro that will do what you last did via the dialog. &nbsp;Then you can execute or save that MACro, giving you a convenient way to do that particular task again.</p>
+<p>&nbsp;</p>
+<p>The command <span style="font-weight: bold;">LLB</span> (Load Line Buffer) will load the MACro editor with the last 20 commands that were typed into the Command Window.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">MACro editor Toolbar:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p><img src="runmacro.png" width="26" height="24" alt="runmacro" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;Saves the MACro file with the most recent name and runs it.</p>
+<p>&nbsp;</p>
+<p><img src="openmacro.png" width="26" height="24" alt="openmacro" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;Opens a named MACro.</p>
+<p>&nbsp;</p>
+<p><img src="listfiles.png" width="29" height="25" alt="listfiles" style="width:29px;height:25px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;Opens a dialog where you can select from a saved MACro file.</p>
+<p>&nbsp;</p>
+<p><img src="savemacroas.png" width="26" height="24" alt="savemacroas" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;Saves the MACro file, prompting for a new name.</p>
+<p>&nbsp;</p>
+<p><img src="savelog.png" width="25" height="26" alt="savelog" style="width:25px;height:26px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;Saves the MACro with a name equal to the current log number. &nbsp;This does not rename the MACro itself, but only saves a copy with the numeric name. &nbsp;This feature is intended to help you document your lenses. &nbsp;The button appears in two places, on the main window toolbar and on the MACro editor toolbar. &nbsp;When you have run the optimization program and get a lens that you want to save, click on that button in both places. &nbsp;Now you have an RLE file and a MAC file with the same name, making it easy to see how you got there. &nbsp;If you have also run <span style="text-decoration: underline;"><a href="umch12.htm#btol" class="topiclink">BTOL</a></span>, the command BTOL SAVE will save a copy of the tolerance budget with the same name and a file type .BTO. &nbsp;This is how you can create a complete record of your work.</p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p><img src="fileprnt.png" width="28" height="24" alt="FilePrnt" style="width:28px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;Prints the MACro.</p>
+<p>&nbsp;</p>
+<p><img src="newmacrowindow.png" width="26" height="24" alt="newmacrowindow" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;Opens a new MACro window. You can have any number open at a time.</p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p><img src="erasemacro.png" width="26" height="24" alt="erasemacro" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;Erases the contents of the current editor.</p>
+<p>&nbsp;</p>
+<p><img src="noname.png" width="26" height="24" alt="noname" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;Renames the MACro DEFAULT.MAC. &nbsp;This is useful if you want to make a change and run it without replacing the original MACro on disk.</p>
+<p>&nbsp;</p>
+<p><img src="closemacfile.png" width="25" height="25" alt="closemacfile" style="width:25px;height:25px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;You should never have to use this button. &nbsp;It is intended for abnormal situations where the program has not closed the file and won’t let you save it. &nbsp;This closes it.</p>
+<p>&nbsp;</p>
+<p><img src="coach.png" width="24" height="26" alt="coach" style="width:24px;height:26px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;This button opens a dialog that describes most of the formats that apply to creating an optimization MACro. &nbsp;It has buttons for the general format, variable definitions, merit function, and more.</p>
+<p>&nbsp;</p>
+<p><img src="eevariables.png" width="25" height="23" alt="eevariables" style="width:25px;height:23px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;This button opens a dialog where you can select variables for optimization. &nbsp;When you close the dialog, the variable definitions are pasted into the MACro at the current cursor position.</p>
+<p>&nbsp;</p>
+<p><img src="eerays.png" width="24" height="24" alt="eerays" style="width:24px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;Opens the MOM Standard Raygrid dialog, where you can select the raysets you wish to optimize. &nbsp;When you close this dialog, the requested rayset data are pasted into the MACro editor at the current cursor position. &nbsp;This will help you to define your merit function with just a few mouse clicks.</p>
+<p>&nbsp;</p>
+<p><img src="eereadymade.png" width="24" height="23" alt="eereadymade" style="width:24px;height:23px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;This button opens the MOM Prepared Merit Function dialog, where you can select one of seven ready-made sets of rays. &nbsp;This is the easiest way to get the definition of the ray sets you want into the MACro, since it requires but two clicks. &nbsp;When you return, those definitions are pasted into the editor at the cursor position. &nbsp;So be sure to position the cursor inside the AANT file portion of the MACro before you use this feature.</p>
+<p>&nbsp;</p>
+<p><img src="bbicon.png" width="26" height="22" alt="bbicon" style="width:26px;height:22px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;This button opens a dialog where you can select from some &quot;bare-bones&quot; raysets. These do not come with monitor mnemonics and provide a quick way to create raysets automatically.</p>
+<p>&nbsp;</p>
+<p><img src="monitor.png" width="27" height="25" alt="monitor" style="width:27px;height:25px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;This button opens a dialog where you can select from a set of nine quantities to be monitored continuously during optimization. &nbsp;These are used to control feathered edges, clear apertures, and the like.</p>
+<p>&nbsp;</p>
+<p>Be aware that the data that return from the above two dialogs are intended to be part of an <a href="um103.htm#aant" class="topiclink">AANT</a> file, which defines the merit function. &nbsp;If you are not familiar with the structure of the AANT and <a href="um102.htm#pant" class="topiclink">PANT</a> files, be sure to read about them in the User's Manual before using this button.</p>
+<p>&nbsp;</p>
+<p><img src="help.png" width="27" height="25" alt="help" style="width:27px;height:25px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;Opens this help dialog.</p>
+<p>&nbsp;</p>
+<p>}<img src="clip0168.png" width="27" height="26" alt="clip0168" style="width:27px;height:26px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;This button loads the contents of the MACro editor into the computer’s memory. &nbsp;This happens automatically whenever you click the run button – but you might want to load it but not run it yet. &nbsp;Then you can run it later with the <span style="font-weight: bold; text-decoration: underline;"><a href="um132.htm#gds" class="topiclink">GDS</a></span> command or with the AI feature <span style="text-decoration: underline;"><a href="um15121.htm" class="topiclink">DO MACRO ….</a></span><span style="font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p><img src="runaltmacro.png" width="26" height="25" alt="runaltmacro" style="width:26px;height:25px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;Works the same as the <img src="runmacro.png" width="26" height="24" alt="runmacro" style="width:26px;height:24px;border:none"> button, except that the MACro is run as the <span style="font-style: italic;">alternate</span> MACro. &nbsp;The only difference is the program keeps a copy of the contents of the MACro in an alternate buffer, different from the buffer used for the main MACro. &nbsp;After the main MACro is run, you can re-run it, even if the editor has been closed, with the command <span style="font-weight: bold; text-decoration: underline;"><a href="um132.htm#gds" class="topiclink">GDS</a></span>. &nbsp;If the MACro is run as the <span style="font-style: italic;">alternate</span>, the command to re-run it is GADS (Get Alternate Data Set). &nbsp;This command is permitted in a <span style="font-weight: bold; text-decoration: underline;"><a href="um103_11.htm#clink" class="topiclink">CLINK</a></span> aberration, and it provides a way to run nearly any sequence of commands <span style="font-style: italic;">during optimization</span>, while the main MACro is busy with the optimization input itself.</p>
+<p>&nbsp;</p>
+<p><img src="clip0169.png" width="29" height="26" alt="clip0169" style="width:29px;height:26px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;Activates automatic scanning after most edits to identify comment lines, which are then shown in green. &nbsp;This lets you quickly identify lines that will and will not be processed when the MACro is run. &nbsp;If this button is not selected, the file will not be scanned automatically, but you can force it to scan for comments at any time by clicking in the text with the right mouse button.</p>
+<p>&nbsp;</p>
+<p><img src="clip0431.png" width="46" height="25" alt="clip0431" style="width:46px;height:25px;border:none"> &nbsp;These buttons only work if you have selected a line or lines of text. &nbsp;The first one adds the comment character &quot;!&quot; to column 1 of each selected line, while the second removes that character if present. &nbsp;The selection should begin at column 1 of a line. &nbsp;This is a quick way to comment out or uncomment a group of lines.</p>
+<p>&nbsp;</p>
+<p>For more information about MACros, see <span style="font-weight: bold; text-decoration: underline;"><a href="um132.htm" class="topiclink">Section 13.2</a></span> of the User’s Manual.</p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>HIDD_CELLTIETO</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Cell Tie to" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-weight: bold;">Cell Tie to dialog</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">This dialog provides an easy way to establish the dimensions of cell parts.  </span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 6px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Target: OD, ID, Cell start, Cell end</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Select the cell dimension you wish to tie to something else.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Source: Surface</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Here you control the parameter by reference to a lens surface dimension. &nbsp;EFILE point C is just the lens OD, while the sag at a given Y would be used to put a shoulder on a part that just touched the lens at that point. &nbsp;EFILE point A is the break between the surface and the flat portion (or bevel if there is no flat.) &nbsp;Note that the lens must have </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um310.htm#um310" class="topiclink">EFILE</a></span><span class="f_footnotetext"> edges defined to use this option.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Source: Part</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">This lets you tie a dimension of a part to another dimension of another part. &nbsp;Since parts must be contiguous for the drawing editor to consider them parts of a larger piece, this option is used to render that so.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">If the cell that is the source of the dimension has a nonzero slope angle, you may want to specify whether to pick up the value at the start or end of that part – or at a position midway that corresponds to the start point of the target part. &nbsp;Simply select the appropriate radio button.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Honor clearance</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">This box adds twice the clearance specified in the Cell Editor to a lens OD before tying that dimension to a cell ID. &nbsp;The clearance value is thus the </span><span class="f_footnotetext" style="font-style: italic;">radial</span><span class="f_footnotetext"> separation between the two parts.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">OK</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">This completes the data transfer and returns you to the Cell Editor. &nbsp;Note that any ties that you create here are not pickups in the sense of lens files. &nbsp;They are a </span><span class="f_footnotetext" style="font-style: italic;">one-time</span><span class="f_footnotetext"> data transfer only, and if you later change the source dimensions, the target does </span><span class="f_footnotetext" style="font-style: italic;">not</span><span class="f_footnotetext"> automatically change to keep up. &nbsp;You have to go to the Tie-to dialog once more to pick up the new values.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Cancel</span></p>
+</td>
+<td style="vertical-align:top; width:449px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Click here to return to the Cell Editor without changing anything.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

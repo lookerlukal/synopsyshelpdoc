@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um538</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="clocking errors,UCLOCK,Wedge errors, aligning" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="uclock"></a><span class="f_mine" style="font-size: 14pt;">5.38 Clocking element wedge errors &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="text-decoration: underline;"><a href="um537.htm" class="topiclink">Previous</a></span><span class="f_mine"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um539.htm" class="topiclink">Next</a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">When lens elements are manufactured, all dimensions are in error by some amount, and to offset the effects of these errors, one often resorts to adjusting the lens in some way. &nbsp;Perhaps the simplest adjustment is to orient the lenses in their cells so that the effect of the wedge error in one is compensated by the others. &nbsp;One practice is to alternate the orientation of the elements, aligning the thick edge of one with the thin edge of the next, and so on.  </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um125.htm#mc" class="topiclink">MC</a></span><span style="font-size: 11pt;"> can evaluate the statistics of a batch of lenses that are aligned in this way, according to the state of switch 14. &nbsp;A better idea is to clock the individual elements at angles that are computed to minimize the overall effect.  </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um125.htm#mcclock" class="topiclink">MC</a></span><span style="font-size: 11pt;"> can also evaluate the statistics of that process. &nbsp;By “clock” we mean the orientation of the thickest edge with respect to the local Y-axis, which we call 12:00 or zero clock angle.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">This procedure can be very effective. &nbsp;The UCLOCK feature will calculate the best angles and provide a list and a plot of the results. &nbsp;Input is as follows:</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">UCLOCK [ QUIET / LOUD / TEST [ MONO ] ]</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">[ WEIGHT </span><span style="font-size: 11pt; text-decoration: underline;">WBORE</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">WDISP</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">WCOMA</span><span style="font-size: 11pt;"> ]</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt; text-decoration: underline;">SN</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">WEDGE</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt; text-decoration: underline;">SN</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">WEDGE</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">…</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">GO</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">[ UCLOCK [ LIST / PLOT ] ]</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The surface numbers </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN </span><span style="font-size: 11pt;">in the above list must all be at the </span><span style="font-size: 11pt; font-style: italic;">second</span><span style="font-size: 11pt;"> side of each element to be considered. &nbsp;The </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">WEDGE</span><span style="font-size: 11pt;"> value is the measured wedge angle, in arcminutes. &nbsp;The program assigns the entered wedge to the element specified, and also assigns a gamma tilt to the first side of the element. &nbsp;It then varies the gamma-rotation of each wedge in the list so that the accumulated effects of the wedge errors are minimized.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">All of the surfaces to be assigned a tilt or rotation must be free of tilts or decenters when the command is issued.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">By default, the defects to be minimized include the real-ray coordinates of the axis ray in X and Y at the image (to model boresight error), the separation between the rays in the long and short colors for the on-axis object (to model dispersion at the axis), and axial coma, which is approximated with coefficients number 9 and 14 in the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um866.htm#coe" class="topiclink">COE</a></span><span style="font-size: 11pt;"> expansion of the wavefront.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The relative weights of these items can be entered with the </span><span style="font-size: 11pt; font-weight: bold;">WEIGHT</span><span style="font-size: 11pt;"> parameters, which have default values of 1.0. &nbsp;If </span><span style="font-size: 11pt; font-weight: bold;">MONO</span><span style="font-size: 11pt;"> is specified, or the lens has fewer than three wavelengths defined, the dispersion effect is ignored. &nbsp;The optional </span><span style="font-size: 11pt; font-weight: bold;">QUIET</span><span style="font-size: 11pt;"> input suppresses output from the optimization but displays the results. &nbsp;The default is LOUD. &nbsp;A listing and a plot are produced by default, and you can request another copy with the additional input shown above.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The optional </span><span style="font-size: 11pt; font-weight: bold;">TEST</span><span style="font-size: 11pt;"> input adds the specified wedges to the elements, but then stops, letting you evaluate the effect of the wedges on image quality, with no clocking.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-weight: bold;">Cemented groups</span><span style="font-size: 11pt;"> are treated somewhat differently: you can assign a wedge to the second side of each element as usual, but the program only calculates the clock angle of the group as a whole, not of the individual components. &nbsp;For this reason, it is wise to enter the wedge with opposite signs on the components, which is common shop practice and which is recommended. &nbsp;Then the program will clock the orientation of the group. &nbsp;The result is a list of the optimum clock angles for each element, as well as a plot showing the orientations.  </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">To illustrate this feature, let us start with the lens saved as X33.RLE.</span></p>
+<p>&nbsp;</p>
+<p><img src="uclock.png" width="704" height="280" alt="uclock" style="width:704px;height:280px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">First, let us examine the effect of wedges with the orientations implied by the input, without clocking. &nbsp;Here, we assume that the elements have been manufactured and the wedge angles measured. &nbsp;The angles are given in the data below. &nbsp;Because surfaces 3, 11, and 14 are each on the second element of a cemented pair, we have specified a negative wedge angle, as pointed out above, for those surfaces. &nbsp;The input is</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">FETCH X33</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">UCLOCK TEST </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">WEIGHT 1 1 1</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">2 4.2</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">3 -6</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">6 1.5</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">8 6.3</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">10 4.8</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">11 -2.1</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">13 6.6</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">14 -4.2</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">GO</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here, we assign the wedge of the first part of the first doublet, surfaces 1 and 2, to surface 2, the second side of that element. &nbsp;The wedge on the second part goes on surface 3, which is the second side of the second element, and so on. &nbsp;The wedges are now assigned (but not clocked, due to the TEST input), and we run the PSPRD command to see the effect.</span></p>
+<p>&nbsp;</p>
+<p><img src="uclock2.png" width="524" height="414" alt="uclock2" style="width:524px;height:414px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here we see a sizable amount of axial coma introduced by the wedge errors. &nbsp;We wish to eliminate this error by clocking the elements. &nbsp;To do so we rerun the UCLOCK command, replacing TEST with QUIET. &nbsp;(The FETCH command is repeated, since UCLOCK requires untilted surfaces to start with.)</span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">FETCH X33</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">UCLOCK QUIET</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">WEIGHT 1 1 1</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">2 4.2</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">3 -6</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">…</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 11pt;">GO</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Output is shown below.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">--- FETCH X33</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; GIHT &nbsp; &nbsp; &nbsp; &nbsp; FOCL &nbsp; &nbsp; &nbsp; &nbsp; FNUM &nbsp; &nbsp; &nbsp; &nbsp; BACK &nbsp; &nbsp; &nbsp; &nbsp; TOTL &nbsp; &nbsp; &nbsp; &nbsp; DELF</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; 22.22211 &nbsp; &nbsp;254.00119 &nbsp; &nbsp; &nbsp;5.00002 &nbsp; &nbsp; 69.73485 &nbsp; &nbsp;163.00000 &nbsp; &nbsp; -0.00085</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">Lens number &nbsp; &nbsp;10 ID 8-ELEMENT TELEPHOTO</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> --- UCLOCK QUIET</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> --- WEIGHT 1 1 1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> --- 2 4.2</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> --- 3 -6</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">CLOCKING OF WEDGE ON SURFACE &nbsp; 3 DEFEATED DUE TO PREVIOUS TILT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> --- 6 1.5</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> --- 8 6.3</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> --- 10 4.8</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> --- 11 -2.1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">CLOCKING OF WEDGE ON SURFACE &nbsp;11 DEFEATED DUE TO PREVIOUS TILT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> --- 13 6.6</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> --- 14 -4.2</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">CLOCKING OF WEDGE ON SURFACE &nbsp;14 DEFEATED DUE TO PREVIOUS TILT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> --- GO</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">OPTIMUM CLOCKING OF WEDGED ELEMENTS IS AS FOLLOWS:</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">BORESIGHT WEIGHT = &nbsp; 1.0000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">DISPERSION WEIGHT = &nbsp; 1.0000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">AXIAL COMA WEIGHT = &nbsp; 1.0000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;No. &nbsp;SURF &nbsp;WEDGE, MIN &nbsp; &nbsp;RADIANS &nbsp; &nbsp; &nbsp;DEGREES</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 &nbsp; &nbsp; 2 &nbsp; &nbsp;4.20000 &nbsp; &nbsp; &nbsp;0.00122 &nbsp; &nbsp; &nbsp;0.07000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 &nbsp; &nbsp; 3 &nbsp; -6.00000 &nbsp; &nbsp; -0.00175 &nbsp; &nbsp; -0.10000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3 &nbsp; &nbsp; 6 &nbsp; &nbsp;1.50000 &nbsp; &nbsp; &nbsp;0.00044 &nbsp; &nbsp; &nbsp;0.02500</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 4 &nbsp; &nbsp; 8 &nbsp; &nbsp;6.30000 &nbsp; &nbsp; &nbsp;0.00183 &nbsp; &nbsp; &nbsp;0.10500</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5 &nbsp; &nbsp;10 &nbsp; &nbsp;4.80000 &nbsp; &nbsp; &nbsp;0.00140 &nbsp; &nbsp; &nbsp;0.08000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 6 &nbsp; &nbsp;11 &nbsp; -2.10000 &nbsp; &nbsp; -0.00061 &nbsp; &nbsp; -0.03500</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 7 &nbsp; &nbsp;13 &nbsp; &nbsp;6.60000 &nbsp; &nbsp; &nbsp;0.00192 &nbsp; &nbsp; &nbsp;0.11000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 8 &nbsp; &nbsp;14 &nbsp; -4.20000 &nbsp; &nbsp; -0.00122 &nbsp; &nbsp; -0.07000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">RESIDUAL BORESIGHT ERROR, IN LENS UNITS: &nbsp; 0.09665201</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">RESIDUAL DISPERSION ERROR, IN LENS UNITS: &nbsp; 0.00726944</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">RESIDUAL AXIAL COMA, IN WAVES: &nbsp; 0.00581089</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">UNCLOCKED BORESIGHT ERROR, IN LENS UNITS: &nbsp; 0.23229099</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">UNCLOCKED DISPERSION ERROR, IN LENS UNITS: &nbsp; 0.01107232</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">UNCLOCKED AXIAL COMA, IN WAVES: &nbsp; 1.22869658</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> --- UCLOCK PLOT</span></p>
+<p>&nbsp;</p>
+<p><img src="uclock1.png" width="508" height="736" alt="uclock1" style="width:508px;height:736px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The output confirms that the program did not clock the second of each cemented doublet, since there was already a tilt on the first side of the element. &nbsp;This is the meaning of the </span><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">DEFEATED</span><span style="font-size: 11pt;"> comment.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The picture above shows a graphical display of the results: &nbsp;Element 1 (and 2, since this is a cemented doublet) by default has its wedge oriented at zero degrees, that is, the thickest portion of the element is at the top, or 12:00 o’clock (the first element is always unclocked). &nbsp;The third element (surfaces 5 and 6) has a wedge of 1.5 arcminutes, and the clocking gamma tilt of 137.92 degrees is assigned to surface 5, with a group size of 2. &nbsp;(You can check the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um46.htm#asy" class="topiclink">ASY</a></span><span style="font-size: 11pt;"> listing if you are curious.) &nbsp;Element four (7 and 8), with a wedge of 6.3 arcminutes, is clocked at –14.33 degrees, and so on. &nbsp;These data will guide the assembly technician when the elements are put into the cell.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The listing shows an improvement in all of the measures that are controlled: the boresight error went from 0.2323 with no clocking to 0.0966 with the gamma tilts in effect. &nbsp;Let’s see how the image has improved as a result of this clocking. &nbsp;Here is another PSPRD of the clocked lens. &nbsp;As hoped, the axial coma has been much reduced.</span></p>
+<p>&nbsp;</p>
+<p><img src="uclock3.png" width="668" height="526" alt="uclock3" style="width:668px;height:526px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">It goes without saying that you must be ready and able to run this program as each lens is assembled, in order to take advantage of improvements like these.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Finally, note that UCLOCK creates and runs a special MACro to reoptimize the system. &nbsp;As a consequence, if you try commands like FINAL or SYNOPSYS, the program will not report on or run the last optimization that you ran yourself, which you might have expected, since the new optimization has overwritten those data.</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">You may run your UCLOCK command file via the MACro editor, but do not run it as the alternate MACro. &nbsp;UCLOCK creates its own alternate MACro to do the optimization, so this must be vacant.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optimization in UCLOCK works better if switch 67 is turned on and will turn it on temporarily if it was not on already.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um539.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

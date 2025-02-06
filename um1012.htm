@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1012</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ESCAPE from local minimum" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="kick"></a></p>
+<p><a name="anneal"></a><span class="f_mine" style="font-size: 14pt;">10.12 Simulated Annealing &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1013.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1011e.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optimization methods in SYNOPSYS and other programs all suffer to some degree from the effects of so-called </span><span class="f_mine" style="font-style: italic;">local minima</span><span class="f_mine">. &nbsp;It sometimes happens that the merit function must </span><span class="f_mine" style="font-style: italic;">increase</span><span class="f_mine"> slightly before the lens can move into a region of a better solution. &nbsp;This can result from a too-coarse raygrid, or from boundary conditions that cause a run to terminate prematurely because an important variable has reached a limit and cannot move anymore, even though a more distant solution might well move that variable away from the offending limit. &nbsp;Sometimes a better local minimum is only a short distance away, but one cannot get there simply by going downhill.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is often helpful, once the design has reached a point where further optimization does not yield substantial improvement, to perturb the design and reoptimize. &nbsp;The situation is analogous to stress-relief in metallurgy, where one must raise the temperature of the metal and then slowly cool it in order to relieve internal stress. &nbsp;Adding energy allows molecules to jump out of local energy minima, and they preferentially find their way to a lower-energy state.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Lens optimization can benefit from the same procedure, which we call </span><span class="f_mine" style="font-style: italic;">simulated annealing</span><span class="f_mine">. &nbsp;When optimization stagnates, there are three options available:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">KICK </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TEMPERATURE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">ESCAPE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">PUSH</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AREA</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">ANNEAL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TEMPERATURE</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">COOLING</span><span class="f_mine" style="font-weight: bold;"> [QUIET / 0] [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">PASSES</span><span class="f_mine" style="font-weight: bold;"> [ FREE ] ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">KICK</span><span class="f_mine"> command perturbs the lens by altering each active variable by an amount found by multiplying the current derivative increment by the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TEMPERATURE</span><span class="f_mine">, and taking a random fraction of this amount. &nbsp;When all variables have been so altered, the lens is reoptimized using the same merit function as before. &nbsp;If the value of the merit function that results is lower than before, the new lens is retained, and if not, the previous lens is restored. &nbsp;You can also run the KICK option by clicking on the toolbar button </span><img src="kick.png" width="23" height="23" alt="kick" style="width:23px;height:23px;border:none"><span class="f_mine">. &nbsp;In this case the temperature is the same as whatever resulted from the last KICK or ANNEAL, with a minimum of 1 degree and a default of 500.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">ESCAPE</span><span class="f_mine"> command endeavors to escape from a local minimum by adding a new aberration whose value is a function of how much each variable differs from its starting value. &nbsp;It then runs the same optimization as before, deleting any previous aberrations that explicitly target any of the variables. This should move the design away from that local minimum. &nbsp;Then you can try the original optimization again, hoping it will find a lower minimum this time. &nbsp;There is no guarantee that the process will work any better than KICK, but you are encouraged to try it if the problem proves very difficult.  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">PUSH</span><span class="f_mine"> is a weighting factor applied to the new aberration, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AREA</span><span class="f_mine"> determines how far from the current value you want to target each variable. &nbsp;The default values are both 1.0, but you will probably need higher values to have any effect. &nbsp;You will have to experiment to see what works best.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Both KICK and ANNEAL utilize the same variables and merit function as were employed on the most recent optimization run, and it is wise to use them soon after you run it, to ensure that those data are current and appropriate. &nbsp;(Some features do their own optimization in the background, and if any of those have been run since your own optimization, then you will re-run </span><span class="f_mine" style="font-style: italic;">that</span><span class="f_mine"> one instead of your own, which you probably don’t want.) &nbsp;You can override the number of optimization passes to be executed, however, with the optional </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">PASSES</span><span class="f_mine"> argument on the ANNEAL command. &nbsp;So if your optimization specified, say, 200 passes, but you want the ANNEAL to run for 20 passes at each temperature, that is the place to change that parameter.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optional </span><span class="f_mine" style="font-weight: bold;">FREE</span><span class="f_mine"> in word 6 activates a special mode that frees all glass model variables that have become pinned to a boundary, at every cycle of annealing, so that both the INDEX and VNUM are again separate variables. &nbsp;Sometimes a glass model that has become pinned will work better if it leaves the boundary, which is not normally allowed. &nbsp;Starting a new optimization run initially frees all GLM variables in the PANT file, and starting a new ANNEAL run also restores those variables -- but only at the start of that run. &nbsp;Most annealing runs work better if this option is </span><span class="f_mine" style="font-style: italic;">not </span><span class="f_mine">selected, since in most cases those models that want to violate a boundary continue to do so and are better left pinned to that boundary (where they become GBC or GBF variables). &nbsp;But if the initial lens is not well constructed, the glass models may want to leave the boundary later in the run, and if not free they will not be able to do so and you might miss a good solution. &nbsp;So use this option only when your lens configuration is expected to change significantly during the run.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">ANNEAL</span><span class="f_mine"> command performs the process iteratively, lowering the temperature by the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">COOLING</span><span class="f_mine"> rate each time. &nbsp;You can also run the ANNEAL process by clicking on the toolbar button </span><img src="anneal.png" width="24" height="23" alt="anneal" style="width:24px;height:23px;border:none"><span class="f_mine">. &nbsp;This will open a dialog where you enter the temperature and cooling rate. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">QUIET</span><span class="f_mine"> option suppresses output in the Command Window until the annealing is complete, which is a good idea since many iterations are usually involved, and you can also select the </span><span class="f_mine" style="font-weight: bold;">FREE</span><span class="f_mine"> option there if you wish. &nbsp;The bulb on the bottom of the thermometer functions as an alternate stop button. &nbsp;In the event that the usual stop icon is not visible, clicking on the bulb will stop the annealing process at the end of the current cycle.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If a variable (other than glass models) has become pinned to a boundary, it will be again be available to both of these options in subsequent cycles though the optimization program. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you have reason to believe that the GLM variables have already reached a good choice of glasses, it is sometimes a good idea to remove those variables, optimize, and anneal again. &nbsp;Then things usually go faster, since considerable effort is expended on adjusting variable changes when they are near a boundary, and this is especially true for GLM variables, which have four boundaries rather than the usual two.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You will have to experiment with these features to find a temperature that works with your lens. &nbsp;Since the perturbation in KICK is a multiple of the derivative increment, the results will depend on the magnitude of any increments that you may have entered yourself in the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um102.htm#pant" class="topiclink">PANT</a></span><span class="f_mine"> file. &nbsp;And if switch 7 is on, the derivative increments are recalculated at each iteration so as to reflect the changing sensitivity of each variable – and the resulting increments will be used by ANNEAL as well. &nbsp;As a rule, a higher temperature is usually required if switch 7 is on, since the increments in that case are usually smaller than the defaults.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You must have performed an optimization run on the current lens before you can use these features.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the event that the program does not complete the annealing procedure – because of a power failure, for example, you can easily get the best solution thus far without starting over. &nbsp;Just FETCH the file KICK1.DAT for configuration 1, KICK2.DAT for 2, and so on. &nbsp;If you terminate an annealing run by clicking the stop button, the program will reload the best solution that it encountered thus far in the run.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Use of the </span><span class="f_mine" style="text-decoration: underline;"><a href="um1039.htm" class="topiclink">MTF</a></span><span class="f_mine"> targets in optimization is not recommended if you want to KICK the lens. &nbsp;The random changes will very likely move the design to a state where the MTF is no longer near a maximum, and the process does not work well after that. &nbsp;GSHEAR aberrations are recommended instead in this situation.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1013.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

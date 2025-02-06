@@ -1,0 +1,779 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>tmch4</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="text-align: center;"><span style="font-size: 18pt; font-style: italic; font-weight: bold;">Chapter 4</span></p>
+<p class="p_heading3-2" style="text-align: center; border-top: none; border-right: none; border-left: none;"><span class="f_heading3-2">Analyzing the Lens and its Image</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">In this chapter you are going to perform a variety of analysis tasks on the triplet you stored in the lens library at the end of Chapter 2, and, just as an exercise, </span><span style="font-size: 11pt; font-style: italic;">without</span><span style="font-size: 11pt;"> using input commands. &nbsp;Some users </span><span style="font-size: 11pt;">dislike</span><span style="font-size: 11pt;"> any kind of command language, so here is how to proceed if you are one of them.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">First, get out the lens. &nbsp;Don’t type </span><span style="font-size: 11pt; font-weight: bold;">GET 1</span><span style="font-size: 11pt;"> – that’s a command, and it’s too easy. &nbsp;Instead, click on the SideBar button that can access the library:</span></p>
+<p>&nbsp;</p>
+<p><img src="tm4f0.png" width="240" height="190" alt="tm4f0" style="width:240px;height:190px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Then click on the lens ID in location 1:</span></p>
+<p>&nbsp;</p>
+<p><img src="tm4f1.png" width="348" height="146" alt="tm4f1" style="width:348px;height:146px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">and then click the OK button. &nbsp;Now make a drawing. &nbsp;Click the button</span></p>
+<p>&nbsp;</p>
+<p><img src="tm4f2.png" width="108" height="252" alt="tm4f2" style="width:108px;height:252px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">and your drawing pops up. (If you skipped that step, here is the RLE file for that lens, which you can paste into the EE editor and run:)</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;RLE</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">ID COOKE TRIPLET F/4.5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 48935</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;WAVL .6562700 .5875600 .4861300</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;UNITS MM &nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;OBB &nbsp;0.000000 &nbsp; &nbsp; 20.00000 &nbsp; &nbsp; &nbsp;5.55500 &nbsp; &nbsp; -2.98488 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;0.00000 &nbsp; &nbsp; &nbsp;5.55500</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 0 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 1 CAO &nbsp; &nbsp; &nbsp;5.55550000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 1 CV &nbsp; &nbsp; &nbsp;0.0465247200000 &nbsp; TH &nbsp; &nbsp; &nbsp;2.00000000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 1 N1 1.61726800 N2 1.62040602 N3 1.62755182</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 1 CTE &nbsp; 0.630000E-05</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 1 GTB S &nbsp; &nbsp;'SK16 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 2 CAO &nbsp; &nbsp; &nbsp;5.55550000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 2 CV &nbsp; &nbsp; -0.0080620000000 &nbsp; TH &nbsp; &nbsp; &nbsp;5.25509000 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 3 CAO &nbsp; &nbsp; &nbsp;5.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 3 RAD &nbsp; &nbsp;-19.1051750000000 &nbsp; TH &nbsp; &nbsp; &nbsp;1.25000000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 3 N1 1.61164000 N2 1.61659000 N3 1.62848000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 3 GID 'GLASS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 4 CAO &nbsp; &nbsp; &nbsp;5.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 4 CV &nbsp; &nbsp; &nbsp;0.0454970000000 &nbsp; TH &nbsp; &nbsp; &nbsp;4.93473000 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 5 CAO &nbsp; &nbsp; &nbsp;5.55550000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 5 CV &nbsp; &nbsp; &nbsp;0.0030457000000 &nbsp; TH &nbsp; &nbsp; &nbsp;2.25000000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 5 N1 1.61726800 N2 1.62040602 N3 1.62755182</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 5 CTE &nbsp; 0.630000E-05</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 5 GID 'SK16 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 5 PIN &nbsp; &nbsp;1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 6 CAO &nbsp; &nbsp; &nbsp;5.55550000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 6 RAD &nbsp; &nbsp;-16.7537700000000 &nbsp; TH &nbsp; &nbsp; 43.24391424 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 6 TH &nbsp; &nbsp; &nbsp;43.24391424</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 6 YMT &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; 7 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;END</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">(If rays seem to miss the lenses, you can turn off switch 65. &nbsp;This is one way to adjust the incoming rays to clear the apertures. &nbsp;The WAP 2 option, which you read about in Chapter 3 is another way, and it applies to all ray tracing, not just to drawings. &nbsp;(We seldom use the switch 65 option for that reason.) &nbsp;You'll learn about the SYNOPSYS mode switches in Chapter 5.)</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0196.png" width="583" height="427" alt="clip0196" style="width:583px;height:427px;border:none"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">If you got the </span><span style="font-size: 11pt; font-weight: bold;">MPL</span><span style="font-size: 11pt;"> menu when you clicked on the SideBar, it’s because that button was sent to a dialog instead of a </span><span style="font-size: 11pt; font-weight: bold;">DWG</span><span style="font-size: 11pt;"> command. &nbsp;See </span><span style="font-size: 11pt; text-decoration: underline;"><a href="tmch2.htm" class="topiclink">Chapter 2</a></span><span style="font-size: 11pt;"> for a review of how that works.  </span></p>
+<p>&nbsp;</p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">Let’s get the path of the axial marginal ray through this lens, and explore the menu item “EZ Menus”. &nbsp;Click there, and follow the menu tree as follows:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">EZ Menus</span><span style="font-size: 11pt; font-family: 'Courier New';">|</span><span style="font-size: 11pt;">Menu Tree</span><span style="font-size: 11pt; font-family: 'Courier New';">|</span><span style="font-size: 11pt;">Geometric Image Analysis</span><span style="font-size: 11pt; font-family: 'Courier New';">|</span><span style="font-size: 11pt;">MRR</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">(If you want to get there faster, you can just type </span><span style="font-size: 11pt; font-weight: bold;">MRR</span><span style="font-size: 11pt;">.)</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">When you see the </span><span style="font-size: 11pt; font-weight: bold;">MRR</span><span style="font-size: 11pt;"> dialog, click on the “RAY” button -- it’s already got the number “1” in the box for fractional Y-aperture. &nbsp;And here’s the result.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">--- RAY P 0 0 1 SURF 0</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> INDIVIDUAL RAYTRACE ANALYSIS</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> FRACT. OBJECT HEIGHT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; HBAR &nbsp; &nbsp; &nbsp;0.000000 &nbsp; GBAR &nbsp; &nbsp; &nbsp;0.000000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> FRACT. ENTRANCE PUPIL COORD. &nbsp; &nbsp; &nbsp; &nbsp;YEN &nbsp; &nbsp; &nbsp;1.000000 &nbsp; &nbsp;XEN &nbsp; &nbsp; &nbsp;0.000000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> COLOR NUMBER &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RAY VECTORS &nbsp; &nbsp; &nbsp; &nbsp; (X DIR TAN) &nbsp;(Y DIR TAN) &nbsp;(INC. ANG.)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SURF &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; X &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Z &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ZZ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; HH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;UNI</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ___________________________________________________________________________________</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;OBJ &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.000000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 5.555000 &nbsp; &nbsp; 0.730235 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-0.101581 &nbsp; &nbsp;14.977803</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 5.438131 &nbsp; &nbsp;-0.119267 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-0.195041 &nbsp; &nbsp; 8.313063</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 4.494489 &nbsp; &nbsp;-0.536188 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-0.023403 &nbsp; &nbsp;24.642827</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 4.442071 &nbsp; &nbsp; 0.453553 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.090534 &nbsp; &nbsp;10.319169</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 4.851013 &nbsp; &nbsp; 0.035838 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.050030 &nbsp; &nbsp; 6.019650</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;6 &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 4.924757 &nbsp; &nbsp;-0.740164 &nbsp; &nbsp; 0.000000 &nbsp; &nbsp;-0.111804 &nbsp; &nbsp;14.230431</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;IMG &nbsp; &nbsp; &nbsp; 0.000000 &nbsp; &nbsp; 0.007164 &nbsp; &nbsp; 0.000000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> Type &lt;ENTER&gt; to return to dialog.</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p>&nbsp;</p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">Notice the advice just above the prompt: “</span><span style="font-family: 'Courier New'; font-weight: bold;">Type &lt;ENTER&gt; to return to dialog</span><span style="font-size: 11pt;">.” &nbsp;When you see this message and press the &lt;Enter&gt; key you automatically go </span><span style="font-size: 11pt; font-style: italic;">back to the same dialog</span><span style="font-size: 11pt;">. &nbsp;Often you will need to repeat your last action, changing a scale factor or something, and this makes it easy; you don’t have to navigate the menu tree again. &nbsp;On the other hand, if you type anything </span><span style="font-size: 11pt; font-style: italic;">other</span><span style="font-size: 11pt;"> than the &lt;Enter&gt; key, the program treats that as any other input command.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">If you’re not a whiz at running Windows, here are some tips: If you’ve opened a dialog but don’t want to run it, you can just press the &lt;Esc&gt; key. &nbsp;That’s the same as clicking the Cancel button. &nbsp;If you’ve resized a window, say a graphics window, and you want it to come back with the same size for your next picture, </span><span style="font-size: 11pt; font-style: italic;">don’t close it</span><span style="font-size: 11pt;">. &nbsp;You can get it out of the way by clicking the minimize button, and the next picture will open it again at the same size (provided you have selected </span><span style="font-size: 11pt; font-weight: bold;">Options</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">|</span><span style="font-size: 11pt; font-weight: bold;">Graphics</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">|</span><span style="font-size: 11pt; font-weight: bold;">Reuse Graphics Window</span><span style="font-size: 11pt;">). &nbsp;You can also alter the default size of graphics windows with the menu items </span><span style="font-size: 11pt; font-weight: bold;">Options | Graphics | Set Device Scale and Offset</span><span style="font-size: 11pt;">. &nbsp;Move the lower right slider to adjust the size.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Let’s make a through-focus spot diagram. &nbsp;Click on the </span><span style="font-size: 11pt; font-weight: bold;">MGI</span><span style="font-size: 11pt;"> sidebar button, which should send you to the </span><span style="font-size: 11pt; font-weight: bold;">MGI</span><span style="font-size: 11pt;"> dialog, which handles most geometric image analysis. &nbsp;I’m not going to give you a picture of the button this time. &nbsp;You have to learn to find them – but here’s a hint: it’s on the SideBar, looks like rays coming to a focus and then diverging, it's 17</span><span style="font-size: 11pt; vertical-align: super;">th</span><span style="font-size: 11pt;"> from the bottom, and the tooltip says “MGI”. &nbsp;Click it, and then click the button on the </span><span style="font-size: 11pt; font-weight: bold;">MGI</span><span style="font-size: 11pt;"> dialog that opens up that says “MTS”. &nbsp;(If you </span><span style="font-size: 11pt; font-style: italic;">don’t</span><span style="font-size: 11pt;"> hate command language input, you could have just typed </span><span style="font-size: 11pt; font-weight: bold;">MTS</span><span style="font-size: 11pt;"> to get there quicker, or </span><span style="font-size: 11pt; font-weight: bold;">MGI</span><span style="font-size: 11pt;"> if you remembered only that mnemonic.)</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The numbers that SYNOPSYS has put into the data boxes are not quite suitable for this lens. &nbsp;Change the “Scale/inch” box to read .05, and the “Defocus Amount” to 0.2. &nbsp;Click Execute, and your through-focus spot diagram appears in a Graphics Window. &nbsp;(This and many other features will also work if you enter zero for the scale factor; in these cases the program will find a reasonable default scale for you.)</span></p>
+<p>&nbsp;</p>
+<p><img src="tm4f5.png" width="650" height="513" alt="tm4f5" style="width:650px;height:513px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Drag the corner of this window to enlarge it, and then click the “Dark Background” button, if the background is currently white. &nbsp;The picture looks much nicer this way (and you can set </span><span style="font-size: 11pt; font-weight: bold;">Options</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">|</span><span style="font-size: 11pt; font-weight: bold;">Graphics</span><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">|</span><span style="font-size: 11pt; font-weight: bold;">Black Background</span><span style="font-size: 11pt;"> to make this the default). &nbsp;Click on the “Print” button. &nbsp;Your hardcopy still has a white background, to save ink. &nbsp;But are the spots too small? &nbsp;Some printers can make a </span><span style="font-size: 11pt; font-style: italic;">very</span><span style="font-size: 11pt;"> small dot, which is hard to see, and you may want to enlarge it. &nbsp;Click on the “Pen Width” button </span><img src="setpenwidth.png" width="26" height="24" alt="setpenwidth" style="width:26px;height:24px;border:none"><span style="font-size: 11pt;">, select a large value, and make another hard copy. &nbsp;Try the “Plot Placement” button. &nbsp;This lets you put four pictures on the same page (but you have to feed the paper in again for each picture). &nbsp;If you later want full-scale hardcopy, be sure to click the “Plot Full Scale” button first. &nbsp;There are several other ways to combine pictures, described in the User’s Manual in </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1314.htm" class="topiclink">Section 13.14</a></span><span style="font-size: 11pt;">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">There are more options to try out. &nbsp;Go back to the </span><span style="font-size: 11pt; font-weight: bold;">MTS</span><span style="font-size: 11pt;"> dialog, and click on the button in the corner that looks like </span><img src="switches.png" width="32" height="16" alt="switches" style="width:32px;height:16px;border:none"><span style="font-size: 11pt;">. &nbsp;This shows a subset of the SYNOPSYS mode-control switches that apply to that feature. &nbsp;The example above shows the results when switch 27 is ON: the spots are shown as single dots. &nbsp;If this switch is OFF, the different colors are plotted with a small symbol instead of a dot. &nbsp;If you make black-and-white hardcopy, this is the only way to tell the colors apart. &nbsp;The command </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um85.htm" class="topiclink">SSSIZE NB</a></span><span style="font-size: 11pt;"> lets you control the size of the spot symbol, too. &nbsp;You’ll see this switch button in most of the SYNOPSYS dialogs. In </span><span style="font-size: 11pt; text-decoration: underline;"><a href="tmch5.htm" class="topiclink">Chapter 5</a></span><span style="font-size: 11pt;"> you’ll see other uses for the mode switches.</span></p>
+<p>&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;">&nbsp;</p>
+<p><a name="tm4l2"></a><span style="font-size: 14pt;">More AI Symbol Substitution</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Any sequence of up to three characters followed by a colon and a space may be used as a new command (except the </span><span class="f_p1-3" style="font-size: 11pt; font-style: italic; font-weight: bold;">&quot;$&quot;</span><span class="f_p1-3" style="font-size: 11pt; font-style: italic;">,</span><span class="f_p1-3" style="font-size: 11pt; font-style: italic; font-weight: bold;"> &quot;;&quot;</span><span class="f_p1-3" style="font-size: 11pt; font-style: italic;">,</span><span class="f_p1-3" style="font-size: 11pt; font-style: italic; font-weight: bold;"> </span><span class="f_p1-3" style="font-size: 11pt;">and</span><span class="f_p1-3" style="font-size: 11pt; font-style: italic; font-weight: bold;"> “!” </span><span class="f_p1-3" style="font-size: 11pt;">characters -- these denote a </span><span class="f_p1-3" style="font-size: 11pt; font-style: italic;">comment </span><span class="f_p1-3" style="font-size: 11pt;">line and are otherwise unprocessed). You can make up to 100 symbols, each doing a normal SYNOPSYS task, or an Al sentence -- which I will illustrate with the following example. Type, in command mode:</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">CHG</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">3 GTB S</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">F4</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">XX: PLOT BACK FOCUS FOR WAVL = .4 TO .8</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">XX</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Here we did the following: first, the fixed-index glass on surface 3 of the triplet was changed to the catalog glass F4, which lets the program calculate a new index value when the wavelength is changed, and then the symbol &quot;XX&quot; was defined as shown above. &nbsp;Since the triplet has a YMT solve on the final airspace, the back focus position will always stay at the paraxial focus as we change the wavelength. &nbsp;Now, when you execute the new command &quot;XX&quot;, the AI program will change the wavelength in steps, calculate new index values each time, find the new back focus distance, and prepare a plot of that versus the parameter that was varying: the wavelength. &nbsp;You don’t </span><span class="f_p1-3" style="font-size: 11pt; font-style: italic;">have</span><span class="f_p1-3" style="font-size: 11pt;"> to make a symbol to do tasks like this, of course. &nbsp;You could just type the sentence. &nbsp;But it’s a useful tool. &nbsp;Here’s the resulting picture:</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><img src="clip0197.png" width="431" height="577" alt="clip0197" style="width:431px;height:577px;border:none"></p>
+<p class="p_p3-1" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p3-1">&nbsp;</span></p>
+<p><a name="tm4l3"></a><span class="f_p3-1" style="font-size: 14pt;">Al Loops</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">The above command is an example of an Al loop. &nbsp;In Chapter 1 you explored some of the capabilities of Al, looked at the vocabulary lists on the monitor, and used Al to ask about and change certain lens parameters. &nbsp;Executing loops is one of the main uses of Al, since it will let you print or plot a variety of quantities as a function of each other or of a third quantity. &nbsp;In the command you have just created, &quot;XX&quot;, you see the implied loop &quot;FOR WAVL = .4 TO .8&quot;. Several formats are valid for expressing loops, such as:</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt;">...as...varies from...to...</span></p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 0px 0px 49px;"><span class="f_p4-2" style="font-size: 11pt;">for... equals ... to...</span></p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 0px 0px 49px;"><span class="f_p4-2" style="font-size: 11pt;">plot...vs...for...=...to...</span></p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 0px 0px 49px;"><span class="f_p4-2">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">In the example command XX, the program will vary the wavelength from .4 uM to .8 uM in 20 steps (giving 21 data points). &nbsp;You can change the default number of steps by entering an AI</span><span class="f_p1-3" style="font-size: 11pt; font-style: italic;"> </span><span class="f_p1-3" style="font-size: 11pt;">sentence such as</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">STEPS = 100</span><span class="f_p2-3" style="font-size: 11pt;">.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">You can also change the origin, scale, and annotation of these plots. &nbsp;The annotation you see was taken automatically from the input sentence. &nbsp;Let us redo this plot with different labels.</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">olabel = &quot;clearance&quot;</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">ALAB IS 'WAVL, uM'</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">AGAIN</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">The plot is redrawn with the new labels.</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">There are several synonyms you might use.</span></p>
+<p>&nbsp;</p>
+<p class="p_p5-1" style="text-align: left; margin: 0px 0px 0px 41px;"><span class="f_p5-1" style="font-size: 11pt;">OLABEL = …</span></p>
+<p class="p_p5-1" style="text-align: left; margin: 0px 0px 0px 41px;"><span class="f_p5-1" style="font-size: 11pt;">label of ordinate is …</span></p>
+<p class="p_p5-1" style="text-align: left; margin: 0px 0px 0px 41px;"><span class="f_p5-1" style="font-size: 11pt;">ordinate label equals …</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">and similarly for abscissa labels. &nbsp;The command &nbsp;&quot;AGAIN&quot; redraws the plot (using the same data as before).</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Sentences such as</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt;">PSCALE = .1 BY .05</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt;">ORIGIN IS .3, 43.2</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">will change the (X,Y) scale factor (size per inch) and origin to the requested values. </span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">If you change either the scale or origin, the values you enter remain in effect until you change them again; to get back to the defaults, enter</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt;">PSCALE = 0 BY 0.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Since a scale of zero is never meaningful, this produces the default once again.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">There is yet another variety of Al loop, using MACros, that is even more flexible, that you will see in </span><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="tmch5.htm" class="topiclink">Chapter 5</a></span><span class="f_p1-3" style="font-size: 11pt;">. &nbsp;For now, we want to explore some more of the image analysis features.</span></p>
+<p>&nbsp;</p>
+<p class="p_p3-1" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p3-1">&nbsp;</span></p>
+<p><a name="tm4l4"></a><span class="f_p3-1" style="font-size: 14pt;">Image Analysis Features</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">As you have probably gathered from the examples given so far, there is usually more than one way to perform a given task with SYNOPSYS. &nbsp;For the commands you entered in the previous sections you have already used several:</span></p>
+<p>&nbsp;</p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p4-2" style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p4-2" style="font-size: 11pt;">Command-mode input in real time</span></p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p4-2" style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p4-2" style="font-size: 11pt;">Command entered into a MACro</span></p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p4-2" style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p4-2" style="font-size: 11pt;">Clicking a button in a dialog</span></p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p4-2" style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p4-2" style="font-size: 11pt;">Defining a new command with the desired mnemonic and arguments.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">I will now describe several other image-analysis features, most of which can be run using all of these methods, but for simplicity I will show them here as real-time commands. &nbsp;These commands all branch automatically to the image analysis section of SYNOPSYS, where you will see the prompt</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">IMAGE&gt;.</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1">&nbsp;</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">You can also enter the optional command </span><span class="f_p7-1" style="font-size: 11pt; font-weight: bold;">IMAGE</span><span class="f_p7-1" style="font-size: 11pt;"> to go there, but this is normally not necessary.</span></p>
+<p>&nbsp;</p>
+<p class="p_p3-1" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p3-1">&nbsp;</span></p>
+<p><a name="tm4l5"></a><span class="f_p3-1" style="font-size: 14pt;">Footprint Plots</span></p>
+<p class="p_p3-1" style="text-align: left;"><span class="f_p3-1">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Let us make a footprint plot showing the ray pattern on the last lens surface. &nbsp;(If you prefer to use the dialog </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">MFP</span><span class="f_p1-3" style="font-size: 11pt;">, the procedure is self explanatory -- but here is the command form.) &nbsp;Type the following:</span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_p8-1"><span class="f_p8-1" style="font-size: 11pt; font-weight: bold;">PLOT 6 10</span></p>
+<p class="p_p8-1"><span class="f_p8-1">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:280px; padding:4px; border:solid 1px #000000;"><p class="p_p8-1"><span class="f_p8-1" style="font-size: 11pt;">plot on surface 6, 10X scale</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_p8-1"><span class="f_p8-1" style="font-size: 11pt; font-weight: bold;">TRACE 2 1 0 200</span></p>
+<p class="p_p8-1"><span class="f_p8-1">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:280px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">trace 200 rays in color 2 at full field</span></p>
+<p class="p_p8-1"><span class="f_p8-1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:4px; border:solid 1px #000000;"><p class="p_p8-1"><span class="f_p8-1" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p class="p_p8-1"><span class="f_p8-1">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:280px; padding:4px; border:solid 1px #000000;"><p class="p_p8-1"><span class="f_p8-1" style="font-size: 11pt;">and draw the picture.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p9-1" style="text-align: left;"><span class="f_p9-1" style="font-size: 11pt;">Here is the general format of the footprint feature:</span></p>
+<p class="p_p9-1" style="text-align: left;"><span class="f_p9-1">&nbsp;</span></p>
+<p class="p_p9-1" style="text-align: left;"><img src="tm4f7.png" width="497" height="275" alt="tm4f7" style="width:497px;height:275px;border:none"></p>
+<p class="p_p9-1" style="text-align: left;"><span class="f_p9-1">&nbsp;</span></p>
+<p class="p_p9-1" style="text-align: left;"><span class="f_p9-1" style="font-size: 11pt;">The input you typed to make the footprint did not include the &quot;PUP...&quot; portion, which lets you select a ray pattern; the plot therefore shows the default (PUP 1), a rectangular grid contained within the entrance pupil with a grid spacing calculated to get as close as possible to the entered </span><span class="f_p9-1" style="font-size: 11pt; text-decoration: underline;">NRYS</span><span class="f_p9-1" style="font-size: 11pt;"> without exceeding this value.  </span><span class="f_p9-1" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p9-1" style="font-size: 11pt;"> is the fractional object height in the Y-direction, and </span><span class="f_p9-1" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p9-1" style="font-size: 11pt;"> is the same in the X-direction. &nbsp;The picture on the left below shows the results.</span></p>
+<p class="p_p9-1" style="text-align: left;"><span class="f_p9-1">&nbsp;</span></p>
+<p class="p_p9-1" style="text-align: left;"><img src="clip0203.png" width="428" height="578" alt="clip0203" style="width:428px;height:578px;border:none"><img src="clip0201.png" width="430" height="578" alt="clip0201" style="width:430px;height:578px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Due to vignetting at the edge of the field, we do not see the requested number of rays. &nbsp;The picture on the right, resembling a baseball, shows the footprint resulting from the sequence</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">PUP 4 40</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">PLOT 6 10</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">TRACE 2 1 0 40</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">TRACE 2 -1 0 40</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3">&nbsp;</span></p>
+<p class="p_p3-1" style="text-align: left;"><span class="f_p3-1" style="font-size: 11pt;">where we have asked for PUP 4, giving a circle of rays at the edge of the pupil. &nbsp;The four PUP options are as follows: (1) is the default rectangular grid; (2) is a grid with specified numbers in the X and Y directions (&quot;PUP 2 1 20&quot; would request a I by 20 grid, essentially a TFAN distribution); (3) gives a circle of </span><span class="f_p3-1" style="font-size: 11pt; text-decoration: underline;">NRYS</span><span class="f_p3-1" style="font-size: 11pt;"> rays, as large as will get through the system, reduced as required to clear apertures and feathered edges (and which can become infinite if there are no apertures entered!); and (4) is a circle that can be reduced but cannot grow. &nbsp;The entry </span><span class="f_p3-1" style="font-size: 11pt; text-decoration: underline;">NRYS</span><span class="f_p3-1" style="font-size: 11pt;"> on the TRACE command is overridden by any of the PUP options except 1 -- but a number greater than 1 is required, so the requested number, 40, is repeated.</span></p>
+<p class="p_p3-1" style="text-align: left;"><span class="f_p3-1">&nbsp;</span></p>
+<p class="p_p3-1" style="text-align: left;"><img src="tm4f10.png" width="573" height="170" alt="tm4f10" style="width:573px;height:170px;border:none"></p>
+<p class="p_p3-1" style="text-align: left;"><span class="f_p3-1">&nbsp;</span></p>
+<p class="p_p3-1" style="text-align: left;"><span class="f_p3-1" style="font-size: 11pt;">Before going on to some other image analysis features, let us look more closely at the input for the footprint. &nbsp;The second example shows two superimposed footprints, from the top and bottom of the field; you can easily add as many field points to the plot as you wish. &nbsp;However, suppose you want to add field points to the right and left of the meridional plane, using the GBAR part of the TRACE command. &nbsp;If you were to enter a nonzero GBAR in these examples it would not work, however, because the lens currently has no skew field defined. &nbsp;In other words, to use the GBAR argument in any of the SYNOPSYS commands, the original lens description must declare a value for XP0 or UXP0<a href="tmch3.htm" class="topiclink"> (see the syntax in </a></span><span class="f_p3-1" style="font-size: 11pt; text-decoration: underline;"><a href="tmch3.htm" class="topiclink">Chapter 3</a></span><span class="f_p3-1" style="font-size: 11pt;">).</span></p>
+<p class="p_p3-1" style="text-align: left;"><span class="f_p3-1">&nbsp;</span></p>
+<p class="p_p2-3" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p2-3">&nbsp;</span></p>
+<p><a name="tm4l6"></a><span class="f_p2-3" style="font-size: 14pt;">Geometric Image Evaluation</span></p>
+<p>&nbsp;</p>
+<p class="p_p3-1" style="text-align: left;"><span class="f_p3-1" style="font-size: 11pt;">Now we will ask for some of the geometric image evaluation options. &nbsp;You made a through-focus spot diagram earlier, using the menus. &nbsp;Let us now get just a single spot diagram. &nbsp;(The dialog for this is also found in </span><span class="f_p3-1" style="font-size: 11pt; font-weight: bold;">MGI</span><span class="f_p3-1" style="font-size: 11pt;">.)</span></p>
+<p class="p_p3-1" style="text-align: left;"><span class="f_p3-1">&nbsp;</span></p>
+<p class="p_p3-1" style="text-align: left;"><span class="f_p3-1" style="font-size: 11pt; font-weight: bold;">SPT 2 .75 200 .02 &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p3-1" style="font-size: 11pt;">color 2, .75 field, 200 rays, scale .02 mm/inch</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p3-1" style="text-align: left;"><span class="f_p3-1" style="font-size: 11pt; font-style: italic; text-decoration: underline;">General format:</span></p>
+<p class="p_p7-1" style="margin: 0px 96px 0px 0px;"><span class="f_p7-1">&nbsp;</span></p>
+<p class="p_p7-1" style="margin: 0px 96px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">SPT { </span><span class="f_p7-1" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p7-1" style="font-size: 11pt;"> / M / P } </span><span class="f_p7-1" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p7-1" style="font-size: 11pt;"> </span><span class="f_p7-1" style="font-size: 11pt; text-decoration: underline;">NRYS</span><span class="f_p7-1" style="font-size: 11pt;"> [ </span><span class="f_p7-1" style="font-size: 11pt; text-decoration: underline;">SCF</span><span class="f_p7-1" style="font-size: 11pt;"> </span><span class="f_p7-1" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p7-1" style="font-size: 11pt;"> [ </span><span class="f_p7-1" style="font-size: 11pt; text-decoration: underline;">YSCF</span><span class="f_p7-1" style="font-size: 11pt;"> ] ]</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p7-1" style="text-indent: -150px; margin: 0px 60px 0px 120px;"><span class="f_p7-1">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 6px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span></p>
+</td>
+<td style="vertical-align:top; width:424px; padding:4px; border:solid 1px #000000;"><p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">is the color number, or “M” for multicolor (see </span><span class="f_p7-1" style="font-size: 11pt; text-decoration: underline;"><a href="tmch4.htm#tm4l7" class="topiclink">below</a></span><span class="f_p7-1" style="font-size: 11pt;">) or “P” for the </span><span class="f_p7-1" style="font-size: 10pt;">primary</span><span class="f_p7-1" style="font-size: 11pt;"> color.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HBAR</span></p>
+</td>
+<td style="vertical-align:top; width:424px; padding:4px; border:solid 1px #000000;"><p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">is the fractional field in the Y-direction</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NRYS</span></p>
+</td>
+<td style="vertical-align:top; width:424px; padding:4px; border:solid 1px #000000;"><p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">is the approximate number of rays in the spot</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SCF</span></p>
+</td>
+<td style="vertical-align:top; width:424px; padding:4px; border:solid 1px #000000;"><p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">is the scale factor (units/inch on the plot). Enter zero for default.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">GBAR</span></p>
+</td>
+<td style="vertical-align:top; width:424px; padding:4px; border:solid 1px #000000;"><p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">is the fractional skew field point.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p9-1" style="text-align: left;"><span class="f_p9-1">&nbsp;</span></p>
+<p class="p_p9-1" style="text-align: left;"><span class="f_p9-1" style="font-size: 11pt;">We will follow this with a geometric MTF. &nbsp;There are four kinds of MTF available in SYNOPSYS; this one is intended for cases where diffraction effects can be safely ignored. &nbsp;The dialog for all of the MTF features can be found in </span><span class="f_p9-1" style="font-size: 11pt; font-weight: bold;">MOP</span><span class="f_p9-1" style="font-size: 11pt;">.</span></p>
+<p>&nbsp;</p>
+<p class="p_p9-1" style="text-align: left;"><span class="f_p9-1" style="font-size: 11pt; font-weight: bold;">FCO 30</span></p>
+<p class="p_p9-1" style="text-align: left;"><span class="f_p9-1" style="font-size: 11pt; font-weight: bold;">GMTF 2 1 300 0 0 P</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p3-1" style="text-align: left;"><span class="f_p3-1" style="font-size: 11pt; font-style: italic; text-decoration: underline;">General format:</span></p>
+<p class="p_p3-1" style="text-align: left;"><span class="f_p3-1">&nbsp;</span></p>
+<p class="p_p8-1" style="margin: 0px 192px 0px 0px;"><span class="f_p8-1" style="font-size: 11pt;">[ FCO </span><span class="f_p8-1" style="font-size: 11pt; text-decoration: underline;">FREQ</span><span class="f_p8-1" style="font-size: 11pt;"> </span><span class="f_p8-1" style="font-size: 11pt; text-decoration: underline;">]</span></p>
+<p class="p_p8-1" style="margin: 0px 192px 0px 0px;"><span class="f_p8-1">&nbsp;</span></p>
+<p class="p_p8-1" style="margin: 0px 192px 0px 0px;"><span class="f_p8-1" style="font-size: 11pt;">GMTF { </span><span class="f_p8-1" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p8-1" style="font-size: 11pt;"> / M / P } </span><span class="f_p8-1" style="font-size: 11pt; text-decoration: underline;">HBAR</span><span class="f_p8-1" style="font-size: 11pt;"> </span><span class="f_p8-1" style="font-size: 11pt; text-decoration: underline;">NRYS</span><span class="f_p8-1" style="font-size: 11pt;"> 0 </span><span class="f_p8-1" style="font-size: 11pt; text-decoration: underline;">GBAR</span><span class="f_p8-1" style="font-size: 11pt;"> [ P ]</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">This example sets the cutoff frequency to 30 cy/mm and requests a single-color GMTF at full field. &nbsp;It is best to specify a cutoff when using the GMTF option; otherwise the program will calculate a default based on the overall size of the spot diagram,</span><span class="f_p1-3" style="font-size: 11pt; vertical-align: sub;"> </span><span class="f_p1-3" style="font-size: 11pt;">which for the GMTF can give an unexpected value. &nbsp;(In the case of the </span><span class="f_p1-3" style="font-size: 11pt; font-style: italic;">diffraction-based MTF, </span><span class="f_p1-3" style="font-size: 11pt;">discussed below, the default cutoff is usually appropriate.) </span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">The input arguments for the GMTF command are similar to those for SPT. &nbsp;The optional </span><span class="f_p1-3" style="font-size: 11pt; font-style: italic; font-weight: bold;">&quot;</span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">P&quot;</span><span class="f_p1-3" style="font-size: 11pt;"> at the end requests plotted output; otherwise only a table of MTF values is produced. &nbsp;If you have not already done so, enter the above data now.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-3">&nbsp;</span></p>
+<p><a name="tm4l7"></a><span class="f_p1-3" style="font-size: 14pt;">Multicolor Analysis</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 0px;"><span class="f_p2-3">&nbsp;</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 0px;"><span class="f_p2-3" style="font-size: 11pt;">You should by now remember the meaning of the bracketed argument</span></p>
+<p>&nbsp;</p>
+<p class="p_p3-1" style="text-align: left; margin: 0px 0px 0px 36px;"><span class="f_p3-1" style="font-size: 11pt;">{ </span><span class="f_p3-1" style="font-size: 11pt; text-decoration: underline;">ICOL</span><span class="f_p3-1" style="font-size: 11pt;"> / M / P }</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">In this example we entered the color number 2 for the &quot;ICOL&quot; choice. &nbsp;The letter &quot;M&quot;, requests a multicolor analysis, and the letter “P” specifies the primary color. &nbsp;The colors are assigned a unique color order by the </span><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="umch3.htm#corder" class="topiclink">CORDER</a></span><span class="f_p1-3" style="font-size: 11pt;"> sequence, which you can read about by following that link. &nbsp;“P” is the first color in this order, and for this lens, it is, of course, color 2.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">The multicolor data may be entered in a dialog as well; type </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">MMC</span><span class="f_p1-3" style="font-size: 11pt;">, or click that button in any of the other image analysis dialogs that will link you to it. &nbsp;Another powerful feature, </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="hidd_spectrumwizard.htm" class="topiclink">Spectrum Wizard</a></span><span class="f_p1-3" style="font-size: 10pt;">,</span><span class="f_p1-3" style="font-size: 11pt;"> will show the spectral emission curve of a variety of light sources and the sensitivity curves of a variety of detectors -- and then combine the two and transfer the resulting wavelengths and weights to the lens. &nbsp;Type </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="hidd_spectrumwizard.htm" class="topiclink">MSW</a></span><span class="f_p1-3" style="font-size: 11pt;"> to access this feature, or use the menu</span><span class="f_p1-3" style="font-size: 10pt;"> </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">Wizard | Spectrum Wizard</span><span class="f_p1-3" style="font-size: 11pt;">.</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-3" style="font-size: 14pt;">Other Geometric Analysis Commands</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="umch8.htm" class="topiclink">Chapter 8</a></span><span class="f_p1-3" style="font-size: 11pt;"> of the User's Manual describes several other geometric analysis options,</span><span class="f_p1-3" style="font-size: 11pt; vertical-align: sub;"> </span><span class="f_p1-3" style="font-size: 11pt;">including a through-focus GMTF (dialog </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">MTG</span><span class="f_p1-3" style="font-size: 11pt;">), an automatic RMS spot-size focusing option </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">FOCUS</span><span class="f_p1-3" style="font-size: 11pt;">, and a command that prints the </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">RMS</span><span class="f_p1-3" style="font-size: 11pt;"> spot size, standard deviation, and centroid coordinates of a spot diagram. &nbsp;These may be found in the dialog </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">MGI</span><span class="f_p1-3" style="font-size: 11pt;">.</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-3">&nbsp;</span></p>
+<p><a name="tm4l8"></a><span class="f_p1-3" style="font-size: 14pt;">Diffraction-Theoretic Options</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">In a well-corrected lens the effects of diffraction can significantly affect the properties of the image, and SYNOPSYS has many features that can analyze those effects. &nbsp;The dialog </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">MDI</span><span class="f_p1-3" style="font-size: 11pt;"> shows options that will perform many of them and lead you to others as well.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">The first one we will examine is the pupil drawing,</span><span class="f_p1-3" style="font-size: 11pt; vertical-align: sub;"> </span><span class="f_p1-3" style="font-size: 11pt;">which shows the shape of the emerging wavefront as either an oblique-perspective, contour plot, as a color map, or fringe pattern. The complete format is shown in </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um861.htm#pupil" class="topiclink">Section 8.6.1</a></span><span class="f_p1-3" style="font-size: 11pt;">. &nbsp;After that we will look at the point spread function plot.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-3">&nbsp;</span></p>
+<p><a name="tm4l9"></a><span class="f_p1-3" style="font-size: 14pt;">Pupil Drawing</span></p>
+<p>&nbsp;</p>
+<p><span style="width:45px">&nbsp;</span><span style="font-size: 11pt; font-weight: bold;">PUPIL P 1 0 -2</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p style="margin: 0px 192px 0px 0px;"><span style="font-size: 11pt; font-style: italic; text-decoration: underline;">General format:</span></p>
+<p style="margin: 0px 192px 0px 0px;">&nbsp;</p>
+<p style="margin: 0px 192px 0px 0px;"><span style="width:45px">&nbsp;</span><span style="font-size: 11pt; font-weight: bold;">PUPIL { </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span><span style="font-size: 11pt; font-weight: bold;"> / P } </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HBAR</span><span style="font-size: 11pt; font-weight: bold;"> 0 </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SCF</span><span style="font-size: 11pt; font-weight: bold;"> [ </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">WX</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">WY</span><span style="font-size: 11pt; font-weight: bold;"> ]</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">This lens has over two waves of aberration at full field, so a scale factor of 2 was entered to make the drawing shown on the left (negative in this example because the OPD's are negative and the plot shows up better if the wavefront appears </span><span class="f_p1-3" style="font-size: 11pt; font-style: italic;">above </span><span class="f_p1-3" style="font-size: 11pt;">the plane of the drawing). &nbsp;The lens also has much vignetting; let us redo this plot in NOVIG mode, shown on the right.</span></p>
+<p>&nbsp;</p>
+<p class="p_p3-1" style="text-align: left; margin: 0px 0px 0px 40px;"><span class="f_p3-1" style="font-size: 11pt; font-weight: bold;">CHG</span></p>
+<p class="p_p3-1" style="text-align: left; margin: 0px 0px 0px 40px;"><span class="f_p3-1" style="font-size: 11pt; font-weight: bold;">NOVIG</span></p>
+<p class="p_p5-1" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p5-1" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p class="p_p5-1" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p5-1">&nbsp;</span></p>
+<p class="p_p5-1" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p5-1" style="font-size: 11pt; font-weight: bold;">PUPIL 2 1 0 -2.</span></p>
+<p class="p_p5-1" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p5-1">&nbsp;</span></p>
+<p class="p_p5-1" style="text-align: left; margin: 0px 0px 0px 39px;"><img src="clip0198.png" width="504" height="371" alt="clip0198" style="width:504px;height:371px;border:none"><img src="clip0199.png" width="503" height="367" alt="clip0199" style="width:503px;height:367px;border:none"></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p><span style="font-size: 11pt;"> </span><span class="f_p1-3" style="font-size: 11pt;">The same wavefront can be shown as a contour plot or with fringes:</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">CONTOUR</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-3" style="font-size: 11pt; font-weight: bold;">PUPIL 2 1 0 -2</span></p>
+<p>&nbsp;</p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1">&nbsp;</span></p>
+<p class="p_p3-1" style="text-align: left; margin: 0px 192px 0px 0px;"><span class="f_p3-1" style="font-size: 11pt; font-style: italic; text-decoration: underline;">General format:</span></p>
+<p class="p_p3-1" style="text-align: left; margin: 0px 192px 0px 0px;"><span class="f_p3-1">&nbsp;</span></p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 192px 0px 0px;"><span class="f_p4-2" style="font-size: 11pt; font-weight: bold;">[ CONTOUR [ </span><span class="f_p4-2" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SCF </span><span class="f_p4-2" style="font-size: 11pt; font-weight: bold;">] ]</span></p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 192px 0px 0px;"><span class="f_p4-2" style="font-size: 11pt; font-weight: bold;">[ FRINGES ]</span></p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 192px 0px 0px;"><span class="f_p4-2" style="font-size: 11pt; font-weight: bold;">[ CLEVEL [ </span><span class="f_p4-2" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">GRID</span><span class="f_p4-2" style="font-size: 11pt; font-weight: bold;"> ] ]</span></p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 192px 0px 0px;"><span class="f_p4-2" style="font-size: 11pt; font-weight: bold;">[ ZLEVEL [ </span><span class="f_p4-2" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">GRID</span><span class="f_p4-2" style="font-size: 11pt; font-weight: bold;"> ] ]</span></p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 192px 0px 0px;"><span class="f_p4-2" style="font-size: 11pt; font-weight: bold;">PUPIL …</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p style="margin: 0px 192px 0px 0px;">&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Here we did not enter a scale factor (OPD per contour level) so the program divides the peak-to-peak wavefront into ten levels. &nbsp;The FRINGE option is useful as long as the wavefront slope is not too steep. &nbsp;Individual fringes are separated by one wavelength.</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><img src="clip0192.png" width="517" height="382" alt="clip0192" style="width:517px;height:382px;border:none"></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">There is also an option to show color levels. &nbsp;Here is that plot, with vignetting turned back on:</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><img src="clip0325.png" width="678" height="506" alt="clip0325" style="width:678px;height:506px;border:none"></p>
+<p class="p_p1-3" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-3">&nbsp;</span></p>
+<p><a name="tm4l10"></a><span class="f_p1-3" style="font-size: 14pt;">Point-Spread Function Plot</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Another frequently used diffraction option is the point-spread function plot. &nbsp;This represents the diffraction pattern as a &quot;light mountain&quot;, whose height is everywhere proportional to the local image intensity. &nbsp;Since this lens has over two waves of aberration at the edge of the field, the point-spread function will be very broad and not particularly suitable for the next feature. &nbsp;So let us stop down the lens first, improving the image quality, and then look at the diffraction image. &nbsp;We will use Al for this change. &nbsp;The </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">boldface type </span><span class="f_p1-3" style="font-size: 11pt;">is the input; the rest is program output:</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">SYNOPSYS AI&gt;</span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">YMP1?</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">The marginal ray height on surface 1 (YMP1) is &nbsp; &nbsp; &nbsp; &nbsp;5.55500000</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">SYNOPSYS AI&gt;</span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">YMP1 = 2.5</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">The marginal ray height on surface 1 (YMP1) is &nbsp; &nbsp; &nbsp; &nbsp;2.50000000</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">SYNOPSYS AI&gt;</span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">FNUM?</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">The F/number or 1/Beam Diam. in afocal mode (FNUM) is &nbsp; &nbsp; &nbsp; &nbsp;9.99970376</span></p>
+<p>&nbsp;</p>
+<p class="p_p9-1" style="text-align: left;"><span class="f_p9-1" style="font-size: 11pt;">The F/4.5 triplet is now an F/10 triplet, and a quick look at the OPDs shows about one-half of a wave of aberration (output not shown):</span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt; font-weight: bold;">OPD</span></p>
+</td>
+<td style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">makes the next </span><span style="font-size: 11pt; font-weight: bold;">RAY</span><span style="font-size: 11pt;"> or fan command give OPDs</span><span style="font-size: 11pt; font-weight: bold;">.</span><span style="font-size: 11pt;"> &nbsp;&quot;TAP&quot; changes back to transverse aberrations.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt; font-weight: bold;">TFA 3 2 1</span></p>
+</td>
+<td style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">This calculates a tangential fan of rays; </span><span style="font-size: 11pt; font-weight: bold;">SFAN</span><span style="font-size: 11pt;"> would give a sagittal fan.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p class="p_p9-1" style="text-align: left;"><span class="f_p9-1" style="font-size: 11pt;">Now we can request the point-spread plot. &nbsp;Type the input:</span></p>
+<p>&nbsp;</p>
+<p class="p_p10" style="margin: 0px 0px 0px 39px;"><span class="f_p10" style="font-size: 11pt; font-weight: bold;">PSPRD 2 1 600 0 0 3.5 L</span></p>
+<p class="p_p11-1" style="margin: 0px 0px 0px 0px;"><span class="f_p11-1">&nbsp;</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p11-1" style="margin: 0px 96px 0px 0px;"><span class="f_p11-1" style="font-size: 11pt; font-style: italic; text-decoration: underline;">General format.</span></p>
+<p class="p_p11-1" style="margin: 0px 96px 0px 0px;"><span class="f_p11-1">&nbsp;</span></p>
+<p class="p_p12" style="margin: 0px 96px 0px 0px;"><span class="f_p12" style="font-size: 11pt; font-weight: bold;">[ CONTOUR ]</span></p>
+<p class="p_p12" style="margin: 0px 96px 0px 0px;"><span class="f_p12" style="font-size: 11pt; font-weight: bold;">[ PSVISUAL [ </span><span class="f_p12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">MAGN</span><span class="f_p12" style="font-size: 11pt; font-weight: bold;"> [ </span><span class="f_p12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">GAIN</span><span class="f_p12" style="font-size: 11pt; font-weight: bold;"> ] ] ]</span></p>
+<p class="p_p12" style="margin: 0px 96px 0px 0px;"><span class="f_p12" style="font-size: 11pt; font-weight: bold;">[W/L]PSPRD { </span><span class="f_p12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_p12" style="font-size: 11pt; font-weight: bold;"> / M / P } </span><span class="f_p12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_p12" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NRYS</span><span class="f_p12" style="font-size: 11pt; font-weight: bold;"> 0 G</span><span class="f_p12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">BAR</span><span class="f_p12" style="font-size: 11pt; font-weight: bold;"> [ </span><span class="f_p12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HT</span><span class="f_p12" style="font-size: 11pt; font-weight: bold;"> [ R / L [ C ] ] ]</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p12" style="margin: 0px 96px 0px 0px;"><span class="f_p12">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_p12" style="margin: 0px 17px 0px 0px;"><span class="f_p12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NRYS</span></p>
+</td>
+<td style="vertical-align:top; width:364px; padding:4px; border:solid 1px #000000;"><p class="p_p12" style="margin: 0px 17px 0px 0px;"><span class="f_p12" style="font-size: 11pt;">From 400 to 600 rays is usually adequate; if aberrations are large, use up to 20000.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_p12" style="margin: 0px 17px 0px 0px;"><span class="f_p12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HT</span></p>
+</td>
+<td style="vertical-align:top; width:364px; padding:4px; border:solid 1px #000000;"><p class="p_p12" style="margin: 0px 96px 0px 0px;"><span class="f_p12" style="font-size: 11pt;">height of central line, in inches</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_p12" style="margin: 0px 27px 0px 0px;"><span class="f_p12" style="font-size: 11pt; font-weight: bold;">R / L</span></p>
+</td>
+<td style="vertical-align:top; width:364px; padding:4px; border:solid 1px #000000;"><p class="p_p12" style="margin: 0px 27px 0px 0px;"><span class="f_p12" style="font-size: 11pt;">optional rotation, about 45 degrees right or left</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:88px; padding:4px; border:solid 1px #000000;"><p class="p_p12" style="margin: 0px 96px 0px 0px;"><span class="f_p12" style="font-size: 11pt; font-weight: bold;">C</span></p>
+</td>
+<td style="vertical-align:top; width:364px; padding:4px; border:solid 1px #000000;"><p class="p_p12" style="margin: 0px 21px 0px 0px;"><span class="f_p12" style="font-size: 11pt;">requests colors on the plot showing which wavelengths go where.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p12" style="margin: 0px 96px 0px 0px;"><span class="f_p12">&nbsp;</span></p>
+<p class="p_p12" style="margin: 0px 96px 0px 0px;"><img src="clip0326.png" width="645" height="475" alt="clip0326" style="width:645px;height:475px;border:none"></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">For this image it was wise to specify a desired image height (</span><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um862.htm" class="topiclink">HT</a></span><span class="f_p1-3" style="font-size: 11pt;">) because with so much aberration the peak would otherwise be quite low. &nbsp;The default height given to a perfect unvignetted image is about 4.5 inches, and this is reduced in the presence of aberrations to show the relative intensity reduction in such images. &nbsp;You can see in the above syntax that there is also a provision for plotting the image with contour lines or as a visual intensity display. &nbsp;This command has three other flavors as well: </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;"><a href="um862.htm" class="topiclink">WPSPRD</a></span><span class="f_p1-3" style="font-size: 11pt;"><a href="um862.htm" class="topiclink"> and </a></span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;"><a href="um862.htm" class="topiclink">LPSPRD</a></span><span class="f_p1-3" style="font-size: 11pt;">, which show a wide-area image and a longitudinal slice, and a mode to show the image as a solid, shown below. &nbsp;These options are described in the User’s Manual in </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um862.htm#psprd" class="topiclink">Section 8.6.2</a></span><span class="f_p1-3" style="font-size: 11pt;">..</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><img src="clip0327.png" width="552" height="376" alt="clip0327" style="width:552px;height:376px;border:none"></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">This is a good time to mention a very friendly feature. &nbsp;If you’re overwhelmed by the command syntax – &nbsp;but don’t want to have to drill down through a menu tree to reach the feature you want to run – there is a third way. &nbsp;First, go to the dialog you want and run the desired command. &nbsp;(We mentioned the MRR dialog above, so go back there now (type MRR), and once again trace the ray as you did before.) &nbsp;Then type</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span style="width:48px">&nbsp;</span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">LMM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p1-3" style="font-size: 11pt;">( Load Menu MACro).</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">The MACro editor opens up with the RAY command already there (you can also run this command from the MACro option on the top toolbar). &nbsp;Most of the dialogs work this way. &nbsp;When you have a dialog set up with the data you want for running a desired feature, and run that dialog, the LMM command formats the input needed to reproduce that analysis. &nbsp;Then just run the MACro to do it again, or save it with any name you want. &nbsp;Even define a symbol to execute that MACro. &nbsp;You have just customized SYNOPSYS!</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p2-3" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p2-3">&nbsp;</span></p>
+<p><a name="tm4l11"></a><span class="f_p2-3" style="font-size: 14pt;">HELP Features</span></p>
+<p class="p_p2-3" style="text-align: left; margin: 0px 0px 0px 0px;"><span class="f_p2-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Here is another very helpful feature of SYNOPSYS. Suppose you want to ask for a </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">PSPRD</span><span class="f_p1-3" style="font-size: 11pt;"> plot in a </span><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="macros.htm" class="topiclink">MACro</a></span><span class="f_p1-3" style="font-size: 11pt;">. &nbsp;You remember that the mnemonic for the point-spread function is &quot;PSPRD&quot; – but you forget the rest of the arguments. &nbsp;Of course you could go to the </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">MDI</span><span class="f_p1-3" style="font-size: 11pt;"> menu, where the format is on the screen, or navigate the Help files – but there are three other options:  </span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">1. &nbsp;You can type </span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">HELP PSPRD</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">into the Command Window to go immediately to that section of the Help file.</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">2. &nbsp;You can simply </span><span class="f_p1-3" style="font-size: 11pt; font-style: italic;">enter the mnemonic without any data</span><span class="f_p1-3" style="font-size: 11pt;">. &nbsp;This activates the instant help feature of SYNOPSYS, which gives the following response:</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p3-1" style="text-align: left;"><span class="f_p3-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">PSPRD</span></p>
+<p>&nbsp;</p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 0px 0px 0px;"><span class="f_p4-2" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">PHYSICAL OPTICS ANALYSIS</span></p>
+<p>&nbsp;</p>
+<p class="p_p4-2" style="text-align: left; margin: 0px 0px 0px 0px;"><span class="f_p4-2" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">Polarization is off, coatings are ignored.</span></p>
+<p class="p_p5-1" style="text-align: left; margin: 0px 0px 0px 0px;"><span class="f_p5-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;">FORMAT: [W/L]PSPRD {ICOL/M/P} HBAR NRYS 0 GBAR [HT [R/L [C [FD]]]]</span></p>
+<p class="p_p5-1" style="text-align: left; margin: 0px 0px 0px 0px;"><span class="f_p5-1" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ---- &nbsp; &nbsp; &nbsp;---- ---- &nbsp; ---- &nbsp;-- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Most of the commands to SYNOPSYS have an instant HELP</span><span class="f_p1-3" style="font-size: 11pt; font-style: italic;"> </span><span class="f_p1-3" style="font-size: 11pt;">feature. &nbsp;If a command requires arguments and you leave them off, the program responds with the format of that command. &nbsp;(If a command has no arguments, or all optional arguments, this of course does not work.) &nbsp;Some of the file header commands also have a prompted mode if you type just the mnemonic: try typing </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">TFS</span><span class="f_p1-3" style="font-size: 11pt;"> without the arguments you entered before. &nbsp;The rest will be prompted.</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">3. &nbsp;The third option is perhaps the easiest of all. &nbsp;As soon as you type the command, “PSPRD” in this case, look at the lower-right corner of your screen. &nbsp;There you will see the </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">TrayPrompt</span><span class="f_p1-3" style="font-size: 11pt;">,</span><span class="f_p1-3" style="font-size: 11pt;"> which shows the format of that command in the system tray.  </span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">This feature monitors what you type into the Command Window and the MACro editor, and it automatically displays the format of any single-line command that it recognizes, while you are typing. &nbsp;Here, the format of the displayed prompt is somewhat different, since the tray cannot show underlined words – so instead, we show user-entered numeric data with </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">lowercase</span><span class="f_p1-3" style="font-size: 11pt;"> letters instead of with underlines. &nbsp;Here is the TrayPrompt for the above command:</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><img src="trayprompt.png" width="375" height="29" alt="trayprompt" style="width:375px;height:29px;border:none"></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">You can also display the TrayPrompt just by </span><span style="font-size: 11pt; font-style: italic;">selecting</span><span style="font-size: 11pt;"> the command mnemonic in the MACro editor.  </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Whenever anything appears in the tray, you can press the F2 key to instantly bring up the Help file section on that topic. &nbsp;(This is different from the F1 key, which shows the topic related to the current open window.) &nbsp;So complete information is just one keystroke away.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-3">&nbsp;</span></p>
+<p><a name="tm4l12"></a><span class="f_p1-3" style="font-size: 14pt;">Diffraction MTF Features</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">You have already seen the geometric MTF feature </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">GMTF</span><span class="f_p1-3" style="font-size: 11pt;">, so now let us make a diffraction MTF plot.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">SYNOPSYS has two kinds of diffraction MTF. &nbsp;One kind uses a Fourier-transform of the point-spread function and is called &quot;</span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">DMTF</span><span class="f_p1-3" style="font-size: 11pt;">&quot;. &nbsp;Since this is not often used, I will describe the other, which is a convolution type. &nbsp;All of the MTF options are easily accessed via the </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">MOP</span><span class="f_p1-3" style="font-size: 11pt;"> dialog.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">The simplest form of diffraction MTF gives just a listing of the MTF in the sagittal and tangential directions at a given field and spatial frequency. &nbsp;(“Tangential” means resolution in the Y-direction at the image, and “Sagittal” means in the X-direction.) &nbsp;With the triplet still stopped down to F/10, we will enter the following sequence, giving the MTF at a frequency of 25 c/mm in color 2 at full field.</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">MTF 2 1 25</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> Polarization is off, coatings are ignored.</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SHEAR TO: &nbsp; &nbsp;25.000 C/MM &nbsp; &nbsp; 446 RAYS AT &nbsp; &nbsp;0.58756 uM, WEIGHT &nbsp; &nbsp; 1.000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> CONVOLUTION MTF AT FREQUENCY &nbsp; 25.00 C/MM REL. FIELD (Y,X) &nbsp; 1.0000 &nbsp;0.0000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; X MTF &nbsp; &nbsp;Y MTF &nbsp; X-PHASE &nbsp;Y-PHASE &nbsp;AVERAGE &nbsp; &nbsp; X-PERFECT-Y</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; 0.413 &nbsp; &nbsp;0.436 &nbsp; &nbsp;0.032 &nbsp;-15.972 &nbsp; &nbsp;0.424 &nbsp; &nbsp;0.803 &nbsp; &nbsp;0.776</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">The last two columns give the MTF that would result if the OPDs were all zero. &nbsp;Because of vignetting, the X and Y MTFs are unequal.</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left; margin: 0px 114px 0px 38px;"><span class="f_p1-3" style="font-size: 11pt; font-style: italic; text-decoration: underline;">General Format:</span></p>
+<p class="p_p1-3" style="text-align: left; margin: 0px 114px 0px 38px;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left; margin: 0px 114px 0px 38px;"><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">{ MTF / ZMTF } { </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;"> / M / P } </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">FREQ</span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;"> 0 </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;"> [ P ]</span></p>
+<p class="p_p7-1" style="margin: 0px 0px 0px 0px;"><span class="f_p7-1" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p1-3" style="text-align: left; margin: 0px 192px 0px 0px;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">The optional [ P ] in this format will make a plot. &nbsp;This feature is described at length in the </span><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um8631.htm" class="topiclink">User’s Manual</a></span><span class="f_p1-3" style="font-size: 10pt;">,.</span></p>
+<p class="p_p1-3" style="text-align: left; margin: 0px 102px 0px 0px;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-3">&nbsp;</span></p>
+<p><a name="tm4l13"></a><span class="f_p1-3" style="font-size: 14pt;">Other Image Analysis Features</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">There are many other image analysis features, both geometric and diffraction-based, and all of the formats are given in Chapter 8 of the </span><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="umch8.htm" class="topiclink">User’s Manual</a></span><span class="f_p1-3" style="font-size: 11pt;">. &nbsp;Perhaps the best way to become familiar with them is to explore the </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">MGI </span><span class="f_p1-3" style="font-size: 11pt;">and </span><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">MDI</span><span class="f_p1-3" style="font-size: 11pt;"> dialogs. &nbsp;Here are some links to the User’s Manual.</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">General:</span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="hidd_mit.htm#mit" class="topiclink">MIT</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">This is a dialog that can show the effect of geometric aberrations as well as diffraction on a variety of extended targets.</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="hidd_mit2.htm" class="topiclink">MIF</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Shows diffraction point-spread function and 3-D MTF, can be rotated to view from any angle.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">Geometric:</span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um853.htm#gmtf" class="topiclink">GMTF</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Fourier-transform MTF</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um851_1.htm#spt" class="topiclink">SPT</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Single spot diagram</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um852.htm#kni" class="topiclink">KNI</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Knife-edge plot</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um855.htm#focus" class="topiclink">FOCUS</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Find best RMS focus position</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um856.htm#rms" class="topiclink">RMS</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">RMS spot size, centroid location</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um857.htm#gmodel" class="topiclink">GMODEL</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Makes a mathematical model of the spot diagram, for later analysis</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um851_2.htm#tfs" class="topiclink">TFS</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Through-focus spot diagram</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um854.htm#tfg" class="topiclink">TFG</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Through-focus geometric MTF plots</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; font-weight: bold;">Diffraction:</span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um8634.htm#dmtf" class="topiclink">DMTF</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Fourier-transform MTF; honors polarization, coatings</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um861.htm#pupil" class="topiclink">PUPIL</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Shows the shape of the exit wavefront</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um862.htm#psprd" class="topiclink">PSPRD</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Plots diffraction point-spread function</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um864.htm#dmodel" class="topiclink">DMODEL</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Makes a mathematical model of the diffraction pattern, for later analysis</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um868.htm#variance" class="topiclink">VAR</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Wavefront variance, standard deviation, Strehl ratio.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um867.htm#partc" class="topiclink">PARTC</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Partial-coherence analysis</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um94.htm#diff" class="topiclink">DIFF</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Special diffraction plot</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um8632.htm#mtf" class="topiclink">MTF</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Convolution MTF curves</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um8632.htm#mtf" class="topiclink">ZMTF</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Interpolated version of the above</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um8633.htm#mff" class="topiclink">MFF</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Multifield MTF plot</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um8633.htm#mzmtf" class="topiclink">MZMTF</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Interpolated version of the above</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um8635.htm#tfmtf" class="topiclink">TFMTF</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">Through-focus convolution MTF</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:95px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt; text-decoration: underline;"><a href="um8636.htm#mof" class="topiclink">MOF</a></span></p>
+</td>
+<td style="vertical-align:top; width:467px; padding:4px; border:solid 1px #000000;"><p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="font-size: 11pt;">MTF plotted over the field at a single frequency</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3">&nbsp;</span></p>
+<p class="p_p1-3" style="text-align: left;"><span class="f_p1-3" style="text-decoration: underline;"><a href="tmch5.htm" class="topiclink">To Chapter 5</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

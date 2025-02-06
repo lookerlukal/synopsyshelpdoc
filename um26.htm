@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um26</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="stops, vignetting" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="vignetting"></a><span class="f_mine" style="font-size: 14pt;">2.6 Stops </span><span class="f_mine">–</span><span class="f_mine" style="font-size: 14pt;"> Pupils </span><span class="f_mine">–</span><span class="f_mine" style="font-size: 14pt;"> Vignetting &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um254.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um261.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Rays to be traced by SYNOPSYS are usually specified by fractional object and entrance pupil coordinates. &nbsp;Because the definition of the entrance pupil is central to most of the features of SYNOPSYS, there are a number of options that can be selected to define its position, size, and shape. &nbsp;For an introduction to this complex topic, see the </span><span class="f_mine" style="text-decoration: underline;"><a href="tmch3.htm" class="topiclink">Tutorial Manual</a></span><span class="f_mine">. &nbsp;The options are summarized in </span><span class="f_mine" style="text-decoration: underline;"><a href="um266.htm" class="topiclink">section 2.6.6</a></span><span class="f_mine">. &nbsp;Once your lens is set up with any kind of pupil definition, you will find that the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="hidd_pupilwizard.htm" class="topiclink">Pupil Wizard</a></span><span class="f_mine"> will greatly assist you in finding the best pupil for your needs. &nbsp;Just type the command </span><span class="f_mine" style="font-weight: bold;">MPW</span><span class="f_mine"> to bring up that feature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default pupil is described by the paraxial quantities YMP1 and YP1, which are shown below. &nbsp;This pupil is a circle at right angles to the optical axis. &nbsp;In cases where the input beam is not circular, does not have the same size off axis as on axis, or when the path of the real chief ray does not follow the paraxial chief ray closely, other options are required. &nbsp;The available options, which are described in detail in the following sections, are listed below. &nbsp;Most of them may be entered interactively with the </span><span class="f_mine" style="font-weight: bold;">SYS</span><span class="f_mine"> dialog or the Pupil Wizard.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="tm3f4.png" width="511" height="269" alt="tm3f4" style="width:511px;height:269px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Summary of Pupil Options</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. Pupil position options</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">a. Paraxial pupil, YP1 entered explicitly (this </span><span class="f_mine" style="font-style: italic;">implies </span><span class="f_mine">a stop surface)</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">b. Paraxial pupil, YP1 found by tracing paraxial ray to stop</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">c. Real pupil, real YP1 found by tracing real ray to stop</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">d. Real pupil + WAP 2 or WAP 3</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. Pupil size and shape options</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">a. Paraxial pupil, YMP1 entered explicitly</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">b. Paraxial pupil, YMP1 found by FILLSTOP at stop</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">c. WAP 1 option: tilts circular pupil</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">d. WAP 2 option: finds real YMP1, XMP1 by real-ray search at stop CAO</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">e. WAP 3 option: finds real YMP1, XMP1; and chief ray, not necessarily at stop surface</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">f. </span><span class="f_mine" style="text-decoration: underline;"><a href="um10311.htm#vset" class="topiclink">VSET</a></span><span class="f_mine"> parameter to shrink, offset pupil for optimization</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">g. </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine"> table to scale, offset pupil for analysis or optimization.</span></p>
+<p class="p_p2-10"><span class="f_p2-10">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The simplest pupil is the paraxial pupil. &nbsp;The geometry describing the parameters YMP1 and YP1 is determined during a </span><span class="f_mine" style="text-decoration: underline;"><a href="umch6.htm#pxt" class="topiclink">paraxial raytrace</a></span><span class="f_mine"> of the system, which is automatically performed whenever the lens is input or changed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program determines at that time the paraxial intercept of the full-field chief ray at surface 1; this is the ray that passes through the center of the surface that has been designated the aperture stop. &nbsp;The intercept height is called YP1, and its value, along with the paraxial marginal ray height, or semi-aperture YMP1, is used to determine where all other rays hit surface 1 as they encounter the lens system. &nbsp;For an arbitrary ray, the Y-coordinate on the vertex plane of surface 1 is given by</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">Y = YP1*HBAR + YMP1*YEN.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where the notation &quot;HBAR&quot; refers to the fractional field in the meridional (Y-Z) plane, and &quot;YEN&quot; to the fractional aperture of the ray in the Y-direction, a convention followed throughout this manual. &nbsp;A similar calculation holds in the X-direction, where the quantities involved are GBAR, XP1, XMP1, and XEN, if those quantities are present in the lens.</span></p>
+<p class="p_p2-10"><span class="f_p2-10">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The value of YP1 may be specified in four ways: if a surface is declared a stop surface in the lens file with the mnemonic </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#aps" class="topiclink">APS</a></span><span class="f_mine">, the value of YP1 is found by the paraxial program. &nbsp;If no stop has been declared, an explicit value for YP1 may be entered with the object specification, as described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um311.htm" class="topiclink">section 3.1.1</a></span><span class="f_mine">. &nbsp;If no value is entered (and no APS declared), then YP1 is equal to zero, and surface number one in effect becomes the stop. &nbsp;And if a negative surface number is declared with the APS entry, a REAL PUPIL is in effect., and YP1 will be corrected to the real-ray value any time a real ray is traced.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the object specification gives a skew field dimension, the paraxial chief ray coordinate is computed in both X and Y.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um261.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um253.htm" class="topiclink">P</a></span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um254.htm" class="topiclink">revious</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

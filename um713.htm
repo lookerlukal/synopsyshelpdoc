@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um713</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Tolerances,Tolerances adding to drawings,USE BTOL" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-size: 14pt;">7.13 Adding Tolerances to your Drawings (USE BTOL) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um714.htm#um714" class="topiclink">Next</a></span><span class="f_mine" style="font-size: 14pt;"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um712.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The tolerancing program </span><span style="font-size: 11pt; text-decoration: underline;"><a href="umch12.htm#btol" class="topiclink">BTOL</a></span><span style="font-size: 11pt;"> will calculate a sophisticated tolerance budget for your lens and print a table showing the results. &nbsp;Often you will want to prepare element manufacturing and assembly drawings with those data included, and it would be convenient if the program added them to the drawings for you. &nbsp;There a problem with this idea, however: Whereas BTOL gives you a budget according to a flexible set of user requirements, there is much about the lens mounting design and the capabilities of your optics shop that it does not know about. &nbsp;For these reasons, you will always want to study the BTOL output carefully to ensure that it is reasonable under your particular circumstances, and you might wish to change the budget in some cases from what BTOL has calculated.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Examples where you will modify the tolerance budget yourself are easy to imagine. &nbsp;A modern optics manufacturer will usually have a numerically-controlled lathe, which can make the lens cell with mechanical precision that is much greater than what you can require from the lens makers. &nbsp;In this case, you would assign all of an airspace tolerance to the sag tolerance on an element, if that sag affects the airspace. &nbsp;If your shop is not so modern, on the other hand, the tolerances on the lens cell might have to be larger – because that is all your shop can do – and then you would reduce the sag tolerance on the lens that fits into that cell. &nbsp;Perhaps two elements should share a sag tolerance, and so on.</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">So it is not wise for the program to simply add the raw BTOL tolerance values to your element drawing: once the drawing is annotated, it is not easy to change the numbers. &nbsp;It is easy, however to edit the lines of text that you add yourself with the Annotation Editor (Click on the button </span><img src="afile.png" width="24" height="23" alt="afile" style="width:24px;height:23px;border:none"><span class="f_mine"> when the graphics window is open.), so the program adds the required tolerance data in that form instead.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The </span><span style="font-size: 11pt; font-weight: bold;">USE BTOL</span><span style="font-size: 11pt;"> command, which may be entered before an </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um77.htm#eld" class="topiclink">ELD</a></span><span style="font-size: 11pt;"> or </span><span style="font-size: 11pt; text-decoration: underline;"><a href="umch7.htm#dwg" class="topiclink">DWG</a></span><span style="font-size: 11pt;"> command, will read the data file that is saved by BTOL and transfer all of the tolerances found in that file to the element drawn by ELD or to the assembly tolerances on DWG drawings. &nbsp;Since those lines of annotation are formatted in the same way as text lines created by the annotation editor, you can select, edit, repostion, or delete them if you wish.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">We will illustrate this feature with the lens in library location 1, the infrared MIT lens.  </span></p>
+<p>&nbsp;</p>
+<p><img src="um7f38.png" width="477" height="307" alt="um7f38" style="width:477px;height:307px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">First, we create a tolerance budget.</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">GET 1</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">CHG</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">NCOP</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">END</span></p>
+<p style="margin: 0px 0px 0px 38px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">SPEC</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">BTOL 2</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">RANGE 3 RL1 .1</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">RANGE 5 RL2 .1</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">DEGRADE SPOT .2</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">TPR ALL</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">GO</span></p>
+<p style="margin: 0px 0px 0px 38px;">&nbsp;</p>
+<p class="p_mine"><span class="f_mine">This input causes BTOL to create a data file named BTOL_ELD.DAT, in the current lens directory.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Now let’s make an element drawing of the second element;</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">USE BTOL</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">ELD 3</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">ID EXAMPLE LENS NAME</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">ID ELEMENT 2</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">ID YOUR COMPANY NAME</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span style="font-size: 11pt;">PLOT</span></p>
+<p style="margin: 0px 0px 0px 38px;">&nbsp;</p>
+<p><img src="um7f39.png" width="955" height="705" alt="um7f39" style="width:955px;height:705px;border:none"></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">Now you see the tolerances that apply to this element, taken directly from the BTOL file, in their proper place on the drawing. &nbsp;Here is an assembly drawing:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">USE BTOL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">DWG -2</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><img src="um7f40.png" width="876" height="648" alt="um7f40" style="width:876px;height:648px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here, the tilt, decenter, and airspace tolerances are annotated for you.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program will position these annotation lines across the top and bottom portions of the plot, using space that is adequate for 15 lens elements. &nbsp;If your lens contains more than 15 element, you may have to move things around a bit to avoid overlap -- or else draw your lens in sections.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">It goes without saying that you must ensure that the lens that you are drawing must be the same one for which the tolerance budget was calculated. &nbsp;The program does not check this for you, so be careful.</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um714.htm#um714" class="topiclink">Next</a></span><span style="font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

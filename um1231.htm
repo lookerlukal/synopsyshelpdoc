@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1231</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Segmented tolerances,Tolerancing,Tolerancing segmented" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">12.3.1 Segmented Tolerancing &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um124.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um123.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One occasionally has to find tolerances for a very complicated system, where one would like to perform adjustments on separate modules before the entire system is assembled. &nbsp;This involves more steps than a normal BTOL analysis, but is nonetheless quite feasible.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The process is to run BTOL several times, once for each module.  </span><span class="f_mine" style="font-style: italic;">The entire system</span><span class="f_mine"> is in place each time, and one isolates the module in question with the INCLUDE option (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um1211.htm" class="topiclink">Section 12.1.1</a></span><span class="f_mine">) and includes the optional </span><span class="f_mine" style="font-weight: bold;">SEGMENT</span><span class="f_mine"> in the BTOL input. &nbsp;For each analysis, give the adjustments that apply only to that module, and be sure that the quality descriptor is </span><span class="f_mine" style="font-style: italic;">the same</span><span class="f_mine"> for each analysis. &nbsp;The allowed degradation specified in each case should be a fraction of the total allowed degradation, and when all of the budgets are prepared, the total effect on the image can be found as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the BTOL output for each segment, locate the section that summarizes the statistical influence of the segment you have included in that analysis:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> PARTIAL CONTRIBUTIONS FOR SEGMENTED TOLERANCES</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; REL. Y-HEIGHT &nbsp;REL. X-HEIGHT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ANTICIPATED STATISTICS</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OF QUALITY DESCRIPTOR</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(HBAR) &nbsp; &nbsp; &nbsp; &nbsp; (GBAR) &nbsp; &nbsp; &nbsp; NOMINAL &nbsp; MEAN CHANGE &nbsp; VARIANCE &nbsp; &nbsp;ZOOM</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; ___________________________________________________________________________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0.000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.000 &nbsp; &nbsp; &nbsp; 0.00405 &nbsp; 5.37284E-04 &nbsp; 1.70040E-06 &nbsp; &nbsp;1</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.000 &nbsp; &nbsp; &nbsp; 0.09136 &nbsp; &nbsp; &nbsp; 0.00118 &nbsp; 1.88869E-04 &nbsp; &nbsp;1</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0.500 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.000 &nbsp; &nbsp; &nbsp; 0.01629 &nbsp; 6.33853E-04 &nbsp; 9.68619E-06 &nbsp; &nbsp;1</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this list there are several numbers you must record.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">First, identify which field point is nearest to its tolerance, which you can locate by reading the section SUMMARY OF OPTICAL PERFORMANCE. &nbsp;Then, add the mean change at that field point for all segments. &nbsp;Next, add the variance for all segments. &nbsp;Take the square root of this number, and you have the multiple deviation for them all. &nbsp;Lastly, add the nominal value, mean change, and multiple deviation that you just calculated. &nbsp;That is the quality of the entire system at the requested confidence level. &nbsp;If it is higher or lower than you would like, simply run BTOL again on one or more segments, adjusting the allowed quality in the other direction and again finding the expected total quality. &nbsp;This process should converge quickly.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There is one more complication, however. &nbsp;If the quality descriptor you specified is the Strehl ratio or the MTF, the descriptor that is printed in the segmented tolerances section is in fact the </span><span class="f_mine" style="font-style: italic;">inverse</span><span class="f_mine"> of the actual quality. &nbsp;So just invert the answer you got in the previous paragraph. &nbsp;This complication is necessary because, in this case, a better lens has a </span><span class="f_mine" style="font-style: italic;">higher</span><span class="f_mine"> value of the quality, whereas for the spot size or wavefront variance, a better lens has a </span><span class="f_mine" style="font-style: italic;">smaller</span><span class="f_mine"> value. &nbsp;To make the statistics work out, we have to invert things in this case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this manner, you might, for example, plan to adjust the objective lens of a periscope separately, then each of a set of relay modules, and finally the eyepiece at the end. &nbsp;This works best if it is feasible to make the adjustment of each module as it is assembled, so be sure to design them to yield a recognizable image when tested separately, and to plan your adjustment strategy to include all modules.</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um124.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

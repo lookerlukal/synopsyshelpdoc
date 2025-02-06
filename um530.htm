@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um530</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DMASK – DOE exposure mask,DOE exposure mask" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p>&nbsp;</p>
+<p><a name="dmask"></a><span style="font-size: 14pt;">5.30 DOE Fringe Pattern DMASK &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-decoration: underline;"><a href="um529.htm" class="topiclink">Previous</a></span> <span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um531.htm" class="topiclink">Next</a></span><span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">DMASK </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ISN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">MODE</span><span class="f_mine" style="font-weight: bold;"> &nbsp;[ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GRID</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CAO</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SIGN</span><span class="f_mine" style="font-weight: bold;"> ] &nbsp;[ X ] ] ] ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Will create a picture showing the fringe pattern associated with the polynomial terms assigned to a </span><span class="f_mine" style="text-decoration: underline;"><a href="um3328.htm#doe" class="topiclink">DOE</a></span><span class="f_mine"> or some kinds of USS shapes &nbsp;This pattern can be used as a mask to create the DOE with photolithographic methods.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ISN</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The surface number, which must be a DOE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">MODE</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The type of fringe pattern to show. &nbsp;See below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GRID</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Resolution of fringe pattern. &nbsp;This is limited primarily by available memory and your patience. &nbsp;For adequate quality, 1000 or more may be required. &nbsp;See comments, below. &nbsp;The default is 1000.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The ZONE option uses 10 000 points, if the OPD function is axially symmetric.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CAO</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The clear aperture to show. &nbsp;Default is the current aperture assigned to the </span><span class="f_mine" style="font-style: italic;">substrate </span><span class="f_mine">of the DOE (i.e., the next surface). &nbsp;Enter zero for the default. &nbsp;For a DOE of type <a href="um3327.htm#uss16" class="topiclink">USS 16</a>, 20, and 25 it is the CAO of the surface itself.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SIGN</span></p>
+</td>
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This controls the sign of the fringes; +1 is normal, while –1 reverses the sign of the OPD function.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The available MODEs are as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">GRAY</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LEVEL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">B0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">B1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">B2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">B3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZONES</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[X/Y]PROFILE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">OPD</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A </span><span class="f_mine" style="text-decoration: underline;"><a href="um3328.htm#doe" class="topiclink">DOE</a></span><span class="f_mine"> is a diffractive optical element, modeled as a </span><span class="f_mine" style="text-decoration: underline;"><a href="um3324.htm#hoe" class="topiclink">HOE</a></span><span class="f_mine"> but with simpler input, or as shape <a href="um3327.htm#uss16" class="topiclink">USS 16</a>, <a href="um3327.htm#uss20" class="topiclink">20</a>, <a href="um3327.htm#uss25" class="topiclink">25</a>, <a href="um3327.htm#uss26" class="topiclink">26</a>, or <a href="um3327.htm#uss27" class="topiclink">27</a>. &nbsp;It resembles a Fresnel lens in that the desired curve is assigned to a series of small wedge-shaped grooves, but differs from the latter because the groove height is on the order of a wavelength of light. &nbsp;It is typically manufactured by machining grooves into a mold or directly into the part – or by photolithographic methods in which the wedges are built up in a series of thin layers, each of which is a fraction of the total groove height.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are two ways to simulate a wedge-shaped groove. &nbsp;In the figure below, curve A is the OPD function to be built into the DOE. &nbsp;Curve B is the same function, modulus 1 wavelength. &nbsp;This is the curve that will appear in the </span><span class="f_mine" style="font-weight: bold;">GRAY</span><span class="f_mine"> option. &nbsp;The step function shown in C is an example of one way to approximate the desired wedge shape with four layers applied in turn to the substrate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um5f10.png" width="346" height="178" alt="um5f10" style="width:346px;height:178px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To make the part as shown in C, one would make four separate DMASK plots, with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LEVEL</span><span class="f_mine"> equal to 0.2, 0.4, 0.6, and 0.8, and then transfer the picture to a transparency for the photolithographer.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="530binary"></a><span class="f_mine">A more sophisticated way to prepare the masks is to consider the binary representation of the height at each point with four bits. &nbsp;The figure below shows how one can superimpose four masks, each representing the area of the fringe with a given bit equal to one, and model 16 discrete steps in the wedge. &nbsp;The </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">MODE</span><span class="f_mine"> options B0 through B3 select the mask of bits 0 through 3, respectively. &nbsp;Elements described in this manner are termed </span><span class="f_mine" style="font-style: italic;">binary optics</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um5f12.png" width="518" height="249" alt="um5f12" style="width:518px;height:249px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">ZONES</span><span class="f_mine"> option draws only the location of the boundary of each zone. &nbsp;It is intended as a reference for verifying that the vendor understands the OPD function. &nbsp;A table is produced showing the location of each zone boundary.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A sample DMASK plot is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um5f11.png" width="425" height="319" alt="um5f11" style="width:425px;height:319px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The physical height of the individual grooves must be calculated so that the top level gives rise to exactly one wavelength of OPD shift at the construction wavelength of the DOE. &nbsp;For transmission DOEs immersed in AIR, this is just the wavelength/(index-1), where </span><span class="f_mine" style="font-style: italic;">index</span><span class="f_mine"> is that of the emulsion of the substrate, while for reflective DOEs it is one-half of the wavelength. &nbsp;This height is given on the DMASK plot, for reference. &nbsp;To understand the sign of the pattern, observe that a positive OPD contribution of the DOE </span><span class="f_mine" style="font-style: italic;">advances</span><span class="f_mine"> the wavefront. &nbsp;Thus, material should be </span><span class="f_mine" style="font-style: italic;">removed</span><span class="f_mine"> from a lens surface or </span><span class="f_mine" style="font-style: italic;">added to</span><span class="f_mine"> a mirror surface if the OPD function is positive, and the opposite if negative. &nbsp;You may enter a value of -1 for </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SIGN</span><span class="f_mine"> to flip the OPD function before the zones are plotted.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the event that a DOE is immersed in a medium other than AIR, with index Nimmersed, the blaze height H as given on the plot must be modified. &nbsp;The height is then given by Himmersed = Hair * (Ndoe - 1.0) / (Ndoe - Nimmersed).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">PROFILE</span><span class="f_mine"> option shows a (Y-Z) cross section of the OPD function, modulus 1 wave, at a scale where the fringe height is one inch. &nbsp;(The optional X input produces an X-Z profile.) &nbsp;This picture may be used to verify that the sign of the DOE is understood: it shows the zones as either bowl-shaped or hill-shaped, as seen below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um5f14.png" width="723" height="538" alt="um5f14" style="width:723px;height:538px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since the substrate is on the right in this example, it is clear that the central zone forms a hill, not a bowl.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the aspheric terms of the DOE are all circularly symmetric and the substrate of the DOE has only a circular (or no) clear aperture assigned, then the DMASK zones are themselves perfect circles. &nbsp;In this common case, the program samples the OPD function at 10,000 points on a single radius and generates the complete circles from these data. &nbsp;In this case, with the exception of the GRAY option, the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GRID</span><span class="f_mine"> entry is ignored, and the calculation is very quick. &nbsp;The output resolution is then limited primarily by the granularity of the printout device. &nbsp;If these conditions are not met, the program will sample the entire area of the DOE at a mesh given by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GRID</span><span class="f_mine">. &nbsp;This feature is more general but takes far longer, and the resolution is just that of the grid.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The faster method also prints the number of discrete rings that have been plotted, to help you ascertain whether your technology is capable of producing the part.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">OPD</span><span class="f_mine"> mode plots the OPD function, from the axis to the CAO. &nbsp;It can be useful if you want to check for inflection points.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the surface has a base curve in addition to the DOE, the output from DMASK is a projection of the zone pattern onto the X-Y plane, not looking normal to the surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the surface has been declared a multilayer DOE with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss" class="topiclink">USS 20</a></span><span class="f_mine">, the part is actually made in two sections, with different materials, and with the same zone locations but different blaze heights. &nbsp;These heights are typically much higher than is the case with a DOE with AIR on one side, and the sections are mounted very close to each other. &nbsp;The DMASK plot shows the heights before and after the DOE surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um531.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

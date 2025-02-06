@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>tmch9</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_p6-6" style="text-align: center; margin: 0px 0px 0px 0px;"><span class="f_p6-6" style="font-size: 18pt; font-style: italic; font-weight: bold;">Chapter 9</span></p>
+<p class="p_p6-6" style="text-align: center; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p6-6" style="font-size: 18pt; font-weight: bold;">A Worked-out Example</span></p>
+<p class="p_p6-6" style="text-align: center; margin: 0px 0px 0px 0px;"><span class="f_p6-6">&nbsp;</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">In this chapter I will work through an imaginary problem, utilizing many features not yet discussed in this Tutorial – but linking to the relevant sections of the User’s Manual when this occurs, so you don’t get more confused than necessary.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">We are going to design a 6-element camera lens, from scratch. &nbsp;It is always a good idea to start with a perfect lens, but since the designer usually doesn’t have one, you usually have to start with a poor one. &nbsp;In this example we will start with a </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-style: italic;">ver</span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">y poor one, which should be interesting. &nbsp;Here is the problem. &nbsp;In this case we will enter a very bad starting lens and then improve it. &nbsp;(You can also do this job with <a href="um1014.htm#dsearch" class="topiclink">DSEARCH</a>, which is better and faster, but since it is a good idea to learn how the program works, here we do it by hand.)</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Focal length 25 mm</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">F/number 2.25</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Field of view +/- 20 degrees</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Total cell length not more than 55 mm</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Back focal distance not less than 7 mm</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Visible spectrum</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p class="p_heading1-12"><span class="f_heading1-12">Step 1: creating a starting point</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Turn on switch 24, so your new lens will be in units of MM by default.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">ON 24</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Type </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-weight: bold; text-decoration: underline;"><a href="um363.htm" class="topiclink">NLE</a></span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> (New LEns). &nbsp;Click Yes at the prompt, and open the PAD display. &nbsp;You see a lens with two dummy surfaces.  </span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="tm9f1.png" width="762" height="461" alt="tm9f1" style="width:762px;height:461px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">First we will declare the required object parameters. &nbsp;Open the WorkSheet by clicking on the button</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="worksheet.png" width="30" height="29" alt="worksheet" style="width:30px;height:29px;border:none"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Then click the button</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="clip0214.png" width="25" height="26" alt="clip0214" style="width:25px;height:26px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">to open the </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-weight: bold; text-decoration: underline;"><a href="hidd_pupilwizard.htm" class="topiclink">Pupil Wizard</a></span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">. &nbsp;Enter the field angle (20) into the angle box, and the entering beam radius in the “Fix the pupil radius …” box. &nbsp;This number should be 5.5555, found by calculating 25/(2.25 * 2). This gives the value of the quantity YMP1. &nbsp;Leave the stop on surface 1, where it is by default. &nbsp;The PAD display shows a larger-diameter system, and we want to increase the separation between the surfaces, so there will be room for the next steps. &nbsp;Click surface 1 if the WorkSheet does not display those data, and change the thickness to 100:</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="tm9f4.png" width="604" height="156" alt="tm9f4" style="width:604px;height:156px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Then click the Update button.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="tm9f5.png" width="762" height="461" alt="tm9f5" style="width:762px;height:461px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Now we are going to add six lens elements. &nbsp;Click the button </span><img src="wsbuild.png" width="27" height="26" alt="wsbuild" style="width:27px;height:26px;border:none"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> to activate the Build (RL) cursor. &nbsp;Now you are going to click six times, with either the left or right (L,R) buttons, on the axis, starting near the left surface and ending near the right. &nbsp;Click in this order:</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">L L R L L R</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="tm9f6.png" width="762" height="461" alt="tm9f6" style="width:762px;height:461px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">You have just used the Build (RL) option, which adds weak lenses, positive with a left-click, and negative with a right-click, to insert the elements we are planning to use. &nbsp;To turn off this tool, click</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="arrow.png" width="26" height="24" alt="arrow" style="width:26px;height:24px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">when you are finished.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Of course this is a very poor lens at the moment, but that is the point of this exercise. &nbsp;Now we want to get rid of the dummy surface 1 that the NLE command put there. &nbsp; In the Worksheet edit box, type</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">1 SOUT</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="tm9f7.png" width="311" height="115" alt="tm9f7" style="width:311px;height:115px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">(It does not matter which surface number is displayed. &nbsp;The edit box submits a CHG file to SYNOPSYS, and you can put anything there that you could enter in that file yourself.) &nbsp;Click the Update button, and the first dummy surface is gone.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Now, in the Worksheet editor, type</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">12 YMT.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">The scale changes, and you can fix the drawing at 1x scale by clicking the button</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="padtop.png" width="26" height="24" alt="padtop" style="width:26px;height:24px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">and entering the number 1 in the top left box and clicking OK.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">The lens is now at the paraxial focus. &nbsp;Make a checkpoint, by clicking on the button </span><img src="checkpoint.png" width="26" height="24" alt="checkpoint" style="width:26px;height:24px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="tm9f8.png" width="680" height="412" alt="tm9f8" style="width:680px;height:412px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Your lens may or may not look like the example here; it depends on just </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-style: italic;">where</span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> you clicked when you built your lens. &nbsp;Never mind; proceed ahead, and if your results get nowhere, go back and create a new example.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Now we have our horrible lens, and it’s time to optimize it. &nbsp;Close the WorkSheet and type EE, to open a MACro editor.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Type the following into the EE editor:</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">STORE 9</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">PANT</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">END</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">AANT</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">END</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">SNAP</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">SYNO 20</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">This creates the input for optimization – but with no variables and no merit function yet. </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-weight: bold;"> Put the cursor </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-style: italic; font-weight: bold;">at the blank line</span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-weight: bold;"> following the PANT command</span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">. &nbsp;Then find the toolbar buttons at the top of the editor window that look like</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="eemombuttons.png" width="74" height="29" alt="eemombuttons" style="width:74px;height:29px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">and click the leftmost (the delta symbol). &nbsp;Click the three buttons that say ALL</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="tm9f9.png" width="728" height="584" alt="tm9f9" style="width:728px;height:584px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Click “Back to MACro editor”, and the required PANT entries appear where they should.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">PANT</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">VLIST RAD 1 2 3 4 5 6 7 8 9 10 11 12  </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">VLIST TH 1 2 3 4 5 6 7 8 9 10 11  </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">VLIST GLM 1 3 5 7 9 11  </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">A power user could do this even faster by just typing the data in the editor:</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">PANT</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">VLIST RAD ALL</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">VLIST TH ALL</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">VLIST GLM ALL</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">This form will vary all radii that are not flat or controlled by a pickup or solve, all thicknesses not controlled by a pickup or solve, and all glasses currently assigned a glass model.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Now for the merit function. &nbsp;Click in the line below the AANT entry in your MACro, and then click the rightmost of the three buttons shown above. &nbsp;This opens the MOM dialog where you just click “Back to MACro Editor”, to get the default, which is ready-made merit function 6, the most useful for most purposes. &nbsp;Your MACro now looks like this:</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">STORE 9</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">PANT</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">VY 1 YP1</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">VLIST RAD 1 2 3 4 5 6 7 8 9 10 11 12  </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">VLIST TH 1 2 3 4 5 6 7 8 9 10 11  </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">VLIST GLM 1 3 5 7 9 11  </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">END</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">AANT</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">AEC </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">ACC </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">GSR .5 10 5 M 0 </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">GNR .5 2 3 M .7 </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">GNR .5 1 3 M 1 </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">END</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">SNAP</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">SYNO 20</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Now add another variable, the paraxial quantity YP1. &nbsp;(This refers to what we have been calling YPP1, but meets the 3-character rule for input.) &nbsp;The lens currently has the stop on surface 1, which is probably not the best place for it. &nbsp;This variable will let the stop move to wherever it wants to be.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">PANT</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">VY 1 YP1</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">VLIST RAD 1 2 3 4 5 6 7 8 9 10 11 12  </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">VLIST TH 1 2 3 4 5 6 7 8 9 10 11  </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">VLIST GLM 1 3 5 7 9 11  </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3" style="font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Add three more lines to the MACro, asking for the FNUM to be 2.25, and then requesting that the total cell length not exceed 55 mm. &nbsp;This is done with the LUL entry, which means, &quot;Limit., Upper Limit&quot;, with a target value (55), a relative weight (.1) and a window size (1). &nbsp;You can read about these entries in <a href="um10351.htm" class="topiclink">Section 10.3.5.1</a>. &nbsp;Then add the LLL line, requesting that the back focus distance remain larger than 7 mm.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">AANT</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">AEC </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">ACC </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">M 2.25 1 A FNUM</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">LUL 55 .1 1 A TOTL</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">LLL 7 .1 1 A BACK</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">GSR .5 10 5 M 0 </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">GNR .5 2 3 M .7 </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">GNR .5 1 3 M 1  </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">END</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">SNAP</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span class="f_ImageCaption" style="font-size: 12pt; font-family: 'Courier New';">SYNO 20</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Click the Checkpoint button again, in case you want to come back to this point later. &nbsp;(If you do, just click the button to the left of the checkpoint button, and your lens comes back.)</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="checkpoint.png" width="26" height="24" alt="checkpoint" style="width:26px;height:24px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Now click the RUN MACro button, </span><img src="runmacro.png" width="26" height="24" alt="runmacro" style="width:26px;height:24px;border:none"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">, and watch the PAD display.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">The lens has changed, but is not particularly good yet. &nbsp;(Remember, this was a </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-style: italic;">very poor</span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> starting point!) &nbsp;Click the Run button again, to get some more iterations.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="clip0125.png" width="740" height="465" alt="clip0125" style="width:740px;height:465px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Click the </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-weight: bold; text-decoration: underline;"><a href="um1012.htm" class="topiclink">Anneal button</a></span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> </span><img src="anneal.png" width="24" height="23" alt="anneal" style="width:24px;height:23px;border:none"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">, click the Quiet option, and then OK. &nbsp;The program loops for a while, and the lens keeps improving. &nbsp;When it looks like it’s not getting better, click the stopsign</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p style="text-indent: -72px; margin: 0px 0px 0px 72px;"><img src="clip0407.png" width="28" height="28" alt="clip0407" style="width:28px;height:28px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Now click the Run button on the EE editor again. &nbsp;The reason for this is because we are varying the glass model parameters in this exercise, and whenever a glass reaches the crown or flint boundary of the glassmap, it </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-style: italic;">sticks</span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> there, going up and down but never leaving that boundary. &nbsp;After the annealing feature has run for a while, it is possible that some glasses that became pinned to a boundary early on would work better elsewhere now. &nbsp;Running the original MACro again frees all of the glass variables, and they can go wherever works best. &nbsp;Then run the annealing feature again.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">The lens now looks like this: &nbsp;(Your results may differ from this, due to the random changes made in the annealing phase. &nbsp;But the quality should be similar.)</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="clip0126.png" width="732" height="463" alt="clip0126" style="width:732px;height:463px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Maybe we can improve it further. &nbsp;There are lots of things we could try. &nbsp;Let’s improve the image at the edge of the field. &nbsp;The ready-made merit function gave a lower weight to that point. &nbsp;Let us change the weight from 1 to 2 at that point:</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-family: 'Courier New';">AANT</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-family: 'Courier New';">AEC </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-family: 'Courier New';">ACC </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-family: 'Courier New';">M 2.25 1 A FNUM</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-family: 'Courier New';">GSR .5 10 5 M 0  </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-family: 'Courier New';">GNR .5 2 3 M .7 </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-family: 'Courier New';">GNR .5 </span><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">2</span><span style="font-size: 12pt; font-family: 'Courier New';"> 3 M 1  </span></p>
+<p style="margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-size: 12pt; font-family: 'Courier New';">END</span></p>
+<p style="margin: 0px 0px 0px 24px;"><img src="clip0127.png" width="732" height="466" alt="clip0127" style="width:732px;height:466px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">This is a fair lens already, but it would be interesting to start out with a different arrangement of elements – or just to repeat the whole procedure, since the anneal process never repeats itself exactly. &nbsp;The program has put positive and negative power in places where the starting system had the opposite, which is interesting. &nbsp;Look at the glass models that we have so far. &nbsp;Click on the PAD button</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="glasstable.png" width="27" height="25" alt="glasstable" style="width:27px;height:25px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">and then click OK, to show the default Schott </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-weight: bold; text-decoration: underline;"><a href="gt.htm" class="topiclink">glassmap</a></span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">. &nbsp;Then click the “Preferred” radio button, and look at the map.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="clip0128.png" width="554" height="391" alt="clip0128" style="width:554px;height:391px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">The crowns are spread along the left boundary, while surface 7 is the only glass at the flint boundary. &nbsp;It’s time for another checkpoint.</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">&nbsp;</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">(You can look at the boundaries themselves; just click on the “Boundaries” button, and you get this:</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">&nbsp;</span></p>
+<p><img src="clip0129.png" width="810" height="553" alt="clip0129" style="width:810px;height:553px;border:none"></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">&nbsp;</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">These boundaries can be edited, with the sliders shown, in case you want to restrict the variables to a different region.)</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">But we notice that the current F/number is 2.257, not the 2.25 we were after. &nbsp;All of the targets in the merit function get traded off with each other, and the program found this to be the best balance, given the weights currently entered. &nbsp;Let’s force the issue. &nbsp;Change the lens with</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">10 UMC -.2222</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">(in the WorkSheet edit box) and reoptimize, after deleting the variable for that radius and the target for the F/number. &nbsp;(Remember: the angle is 1/(2*FNUM), negative because the ray is going downward.) &nbsp;Not much changes.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">The lens is nearly finished. &nbsp;We go back to the glass table and select a glass to assign to a lens. &nbsp;(Click the button that says “Full name” to see the glass names.) &nbsp;We see that surface 1 has a glass model that is close to glass type N-LASF44, and surface 5 is close to N-LAK33A. &nbsp;Click the red dot for N-LASF44, and enter the number 1 in the “Surface” box, if it is not there already. &nbsp;(Or click on the PAD drawing at surface 1.)  </span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="clip0131.png" width="375" height="270" alt="clip0131" style="width:375px;height:270px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Then click the “Properties” button.  </span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="tm9f27.png" width="741" height="552" alt="tm9f27" style="width:741px;height:552px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">The box that pops up lets you see many of the properties of the selected glass type. &nbsp;Close the Properties dialog. &nbsp;If the glass is suitable for your project, click the “Apply” button. &nbsp;(There is also a button called “Apply + Adjust”, which changes the radii of the element so the focal length does not change when the index is altered – but since you have your own optimization MACro ready, which is probably better, do not use this button here.) &nbsp;Surface 1 now has been assigned glass type N-LASF44. &nbsp;Suppose you feel that the price of that glass is too high. &nbsp;(It is listed as 13.33 times the price of BK7, a number that cannot be taken too literally, since prices fluctuate frequently.) &nbsp;Let’s see what else is available. &nbsp;Click the “Graph” button, and then the radio button for the price.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="tm9f28.png" width="268" height="218" alt="tm9f28" style="width:268px;height:218px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Now you see that there are no glasses in this area much cheaper than the one selected.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="clip0132.png" width="464" height="316" alt="clip0132" style="width:464px;height:316px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">See the circle with the number “5”? &nbsp;In case you are lost at this point, that is the location on the glassmap of the </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-style: italic;">model glass</span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> currently on surface 5.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Close the Glass Table Display dialog, and look at your lens. &nbsp;There is a very slight change in image quality, which is expected. &nbsp;So delete the variable for the GLM of surface 1, and reoptimize. &nbsp;Repeat this process with the other elements, until all lenses are assigned a glass type. &nbsp;If you want to select glass from a different vendor, click the “Select Table” button. &nbsp;Then you can compare the properties of their glasses, such as price, and choose your favorite.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Let’s assume this lens meets our goals. &nbsp;The stop is now close to surface 5, but has not been formally declared. &nbsp;Using the WorkSheet, we enter</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">APS 5</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">and see again that not much changes. &nbsp;If some additional tweaking were required, we would be careful to delete the variable declaration for YP1 first – or the stop would not stay where we just put it.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">This lens has a rather thick second element, which in a real project we would give some more attention to. &nbsp;But for this exercise, let us go to the </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-weight: bold; text-decoration: underline;"><a href="hidd_edgewizard.htm" class="topiclink">Edge Wizard</a></span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> and set up the edge parameters that would be appropriate for real lenses. &nbsp;In PAD, click on the button</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="mewbutton.png" width="27" height="25" alt="mewbutton" style="width:27px;height:25px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">and then click</span><span class="f_BodyText-1" style="font-weight: bold;"> Create all</span><span class="f_BodyText-1">, and Update. &nbsp;(The edges we are defining in this step are only shown if switch 39 is on, but you will get a chance to turn it on if it is not.)</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="tm9f18.png" width="299" height="300" alt="tm9f18" style="width:299px;height:300px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Drag the top of the dialog down, so you expose the lens drawing shown in PAD, then move the cursor near surface 3 and scroll the mouse wheel &nbsp;This enlarges the display, and you can adjust the size until you see the edge clearly. &nbsp;If the edge data for surface 3 are not displayed, click in PAD near the vertex of that surface. </span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="clip0134.png" width="468" height="619" alt="clip0134" style="width:468px;height:619px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">In this case, the second element is concave, convex, and you can read the current values of the dimensions A through E on the dialog. &nbsp;Notice that points D and E are the same, but less than C. &nbsp;The default has put a small bevel on side 2 of the element – which you probably don’t need since it is a moderately steep surface. &nbsp;Click the “-B” button to the left of the data box for D, and then the “-F” button. &nbsp;The first click changed the dimension from C to D to zero, eliminating the bevel. &nbsp;But point E was still below, creating a small flat area extending to the edge. &nbsp;The second click deletes this too. &nbsp;That element is now defined as we want. &nbsp;Surface 3 is too close to surface 2, so we will put a bevel and flat area there, &nbsp;Click the lower spin button to the right of coordinate A a few time, and then adjust B the same way. &nbsp;Now there is a nice edge there,</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="clip0135.png" width="87" height="84" alt="clip0135" style="width:87px;height:84px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Click the “Next el.” button, and you see the data for element 3. &nbsp;You can also click in the PAD display to jump around, always selecting the </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-style: italic;">first</span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> surface of the element. &nbsp;Look at each element, adjusting the values of the five points until all elements look the way you want them to. &nbsp;(Your optimization results may differ from the lens shown, but you get the idea.)</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Once the edge definitions are created, they are saved with the lens, and you can see the format in the LEO listing, with mnenonics EFILE …. &nbsp; But please do not try to edit those data directly. &nbsp;Use the Wizard. &nbsp;This is because many of the data numbers are coupled, and the Wizard sorts it all out better than you can. &nbsp;Be warned.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">This is the time to create a tolerance budget, with BTOL – but we have already said enough about that feature, and we won’t repeat it here. &nbsp;Let’s assume that you have run BTOL and have the budget in hand. &nbsp;If it should turn out that the tolerances were too tight, and the lens too expensive for that reason, you are encouraged to read </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; text-decoration: underline;"><a href="um1013.htm" class="topiclink">Section 10.13</a></span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">, which explains how you can define some additional aberrations that will sometimes loosen your tolerances.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Assuming the edges are satisfactory, we will make an element drawing that shows the tolerances on the element. &nbsp;The simplest way is to tell </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-weight: bold;">ELD</span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> to USE BTOL, as explained in <a href="um77.htm#eld" class="topiclink">Section 7.7</a>. &nbsp;For this lesson we show how to do it manually, for cases where you want to add somewhat different numbers.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Create a new MACro:</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">ELD 3</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">ID ELEMENT 2</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">ID SAMPLE LENS</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">ID YOUR COMPANY</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">END</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">Run this, and the picture appears.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="clip0136.png" width="675" height="500" alt="clip0136" style="width:675px;height:500px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Here's how to put a tolerance value on the drawing. &nbsp;While the drawing is the active window, click the button </span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="afile.png" width="24" height="23" alt="afile" style="width:24px;height:23px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">and then click the same button on the Annotation Editor. &nbsp;Click </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-style: italic;">on your drawing</span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> in the box that says “Radius tolerance”, and when the next dialog opens, type “TESTPLATE” into the edit box.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="clip0138.png" width="563" height="410" alt="clip0138" style="width:563px;height:410px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">(In a real design job, we would have matched all of the radii to the testplates of the selected vendor, with the </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-weight: bold; text-decoration: underline;"><a href="um1010.htm#tpm" class="topiclink">TPM</a></span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> feature, so this is usually appropriate.) &nbsp;The requested annotation now shows up on the drawing.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="clip0137.png" width="406" height="275" alt="clip0137" style="width:406px;height:275px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">If the new annotation is not exactly where you wanted it, click the button </span><img src="tm9f33.png" width="28" height="26" alt="tm9f33" style="width:28px;height:26px;border:none"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">, on the Annotation editor toolbar, which makes all of the annotation sprout handles. &nbsp;Then click and drag on the handle you want to move until it is in the right place.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Continue in this fashion until all tolerances are entered in the appropriate boxes. &nbsp;Then save your drawing, by clicking on the Save button, supplying a name when requested. &nbsp;Make a drawing for element 1 by changing your MACro to </span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">ELD 1</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">ID ELEMENT 1</span></p>
+<p style="margin: 0px 0px 0px 38px;"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">…</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">and continue until all drawings are prepared. &nbsp;We usually finish by making a DWG drawing of the whole system, shown without rays (by giving a </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-style: italic;">negative</span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> scale factor, such as DWG –2) and then entering the airspace dimensions and tolerances, or the tilt and decenter tolerances for each element – all with the Annotation Editor. &nbsp;These drawings then show assembly tolerances, as shown in the following example. &nbsp;(The DWG program can also USE BTOL to add the tolerances automatically.) &nbsp;Here is an example of how this can look; in this case we entered all of the data manually:</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="tm9f32.png" width="714" height="359" alt="tm9f32" style="width:714px;height:359px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">The above instructions show you how to add tolerances to your drawings yourself. &nbsp;You can read about the USE BTOL command, which does the work for you, in </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; text-decoration: underline;"><a href="um713.htm" class="topiclink">Section 7.13</a></span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">The design job is done.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">There are tons of features you could use to analyze the lens, but this Tutorial would become way too long if I showed them all. &nbsp;Let me just do one. &nbsp;We will make a set of diffraction MTF curves at several field points. &nbsp;Type </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-weight: bold; text-decoration: underline;"><a href="um8633.htm" class="topiclink">MMF</a></span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> in the Command Window, and click the box that says “Use this cutoff frequency”. &nbsp;Enter the number 100 in the data box to the right, click the “Interpolate OPDs” box, and select the multicolor option.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="clip0536.png" width="610" height="348" alt="clip0536" style="width:610px;height:348px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Click the Execute button, and the plot appears.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="clip0140.png" width="682" height="505" alt="clip0140" style="width:682px;height:505px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Here, we selected the interpolation option because the desired cutoff frequency is lower than &frac12; of the diffraction cutoff. &nbsp;(If you try this example but do </span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial; font-style: italic;">not</span><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> select that option, the program will evaluate out to a higher frequency, and then give you a warning message. &nbsp;Very low MTF frequencies require a convolution evaluation with a very small shear, and the default MTF raygrid is too coarse. &nbsp;The interpolated option lets you specify a finer grid, up to 80x80, which is the default here.)</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">Here’s a useful trick. &nbsp;Suppose you want to run this MTF evaluation many times. &nbsp;You do not have to enter data into the MMF dialog each time. &nbsp;Immediately after running it, type </span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">LMM</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">into the Command Window. &nbsp;A MACro editor opens up, showing the command-mode input for the analysis you have just run.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><img src="tm9f30.png" width="319" height="224" alt="tm9f30" style="width:319px;height:224px;border:none"></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">If you want to save this MACro so you can quickly get it back, click the button </span><img src="tm9f31.png" width="33" height="29" alt="tm9f31" style="width:33px;height:29px;border:none"><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;"> and enter a name in the File Save dialog that opens. &nbsp;Most of the dialogs that you will use to create SYNOPSYS evaluations or plots can generate the command-mode input in this way, ready to be rerun or saved in this manner.</span></p>
+<p><span class="f_Normal-3">&nbsp;</span></p>
+<p><span class="f_Normal-3" style="font-size: 11pt; font-family: Arial;">If you have followed along this far, you probably feel you do not need any further instruction. &nbsp;That was my goal, and congratulations.</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

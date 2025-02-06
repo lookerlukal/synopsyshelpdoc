@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>HIDD_EDGEWIZARD</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Edge Wizard,MEW,Wizard,Wizard edge" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-weight: bold;">Edge Wizard Dialog</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The Edge Wizard dialog can help you create and edit the parameters that define the geometry of the edge of a lens element. These data can also be entered in the RLE or CHG file, but most users will prefer the Wizard because it lets you watch the edges change as you click on spin buttons in the dialog. You can access the Wizard by clicking on the PAD button </span><img src="mewbutton.png" width="27" height="25" alt="mewbutton" style="width:27px;height:25px;border:none"><span class="f_footnotetext">, with the menu </span><span class="f_footnotetext" style="font-weight: bold;">Wizard | Edge-definition wizard</span><span class="f_footnotetext">, or the command </span><span class="f_footnotetext" style="font-weight: bold;">MEW</span><span class="f_footnotetext"> (menu Edge Wizard). When the dialog opens, you select a lens by clicking on the </span><span class="f_footnotetext" style="font-style: italic;">first</span><span class="f_footnotetext"> side of an element in the PAD display, or by entering the desired surface number and clicking “Update”. Switch 39 must be ON for these edges to be shown. &nbsp;You can navigate to successive elements with the buttons “Prev. El.” &nbsp;and “Next El.”.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">If the lens element does not have any </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um310.htm#um310" class="topiclink">EFILE</a></span><span class="f_footnotetext"> data when you start the Wizard, you can create a default starting edge by selecting “Explicit” and clicking “Update”. Or you can click “Create all” to generate starting edges for the entire lens. Initially, the newly created edges will be declared EXPLICIT (see below). Edge data cannot be assigned to lenses where the second side is tilted or decentered with respect to the first, or for other special conditions that will be explained in the dialog. </span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Edges can be assigned to one of seven categories:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:110px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">OFF</span></p>
+</td>
+<td style="vertical-align:top; width:512px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">No EFILE data are in effect.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:110px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">UP</span></p>
+</td>
+<td style="vertical-align:top; width:512px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Edges can change as the lens changes, in accordance with rule set 1, below.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:110px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">DOWN</span></p>
+</td>
+<td style="vertical-align:top; width:512px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Edges follow rule set 2.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:110px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">MIXED</span></p>
+</td>
+<td style="vertical-align:top; width:512px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Edges follow rule set 3</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:110px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">EXPLICIT</span></p>
+</td>
+<td style="vertical-align:top; width:512px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Edge data are fixed at the entered values. This mode is best for cemented surfaces.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:110px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">EXPLICIT MIRROR</span></p>
+</td>
+<td style="vertical-align:top; width:512px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Same as EXPLICIT, except the back surface of the mirror is drawn as well.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:110px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">COPY MIRROR</span></p>
+</td>
+<td style="vertical-align:top; width:512px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Used for mirrors where the back surface is a copy of the front surface.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Categories 6 and 7 apply to mirrors in air. You may change the current category of an element by selecting the appropriate radio button and clicking “Update”.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Edges are drawn in accordance with the data assigned to six points, called A through E in the figure below, and optional angles </span><span class="f_footnotetext" style="font-weight: bold;">ANG1</span><span class="f_footnotetext"> and </span><span class="f_footnotetext" style="font-weight: bold;">ANG2</span><span class="f_footnotetext">. &nbsp;These angles specify the slope of the normally flat portions from A to B and D to E, in degrees, and are usually set to zero. &nbsp;(The bevels are always at 45 degrees.) &nbsp;If you want to specify a conical portion, for when you grind the back of a mirror at an angle to the axis that is not 90 degrees, for example, then use a non-zero ANG1 or ANG2. &nbsp;A positive angle on either side slopes that face into the lens. &nbsp;( An example is given in the installation directory SYNOPSYS\USER in the file 4.RLE.)</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><img src="um7f22.png" width="499" height="308" alt="um7f22" style="width:499px;height:308px;border:none"></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">For convex surfaces, points A and B, (or E and D) should normally be coincident unless the lens is molded in plastic with a flange that extends beyond the clear aperture. The lens system as a whole has two other parameters, the </span><span class="f_footnotetext" style="font-weight: bold;">MARGIN</span><span class="f_footnotetext"> and </span><span class="f_footnotetext" style="font-weight: bold;">BEVEL</span><span class="f_footnotetext">, which are used by some but not all of the EFILE options. The rules applying to these options are as follows:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">1.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">For the </span><span class="f_footnotetext" style="font-weight: bold;">UP</span><span class="f_footnotetext"> option, point A is found by starting at the clear aperture of the surface and adding the current MARGIN. Initially, point B is at the same place, and point C is found by adding the local BEVEL to point B. The local BEVEL is set equal to the system BEVEL on a create operation, but afterward can be changed independently. The same procedure is done for the second side of the element, and the values of C are compared. The larger value is then assigned to both surfaces, and the side that had the smaller C is adjusted so that the new point B (or D) is below the new C by the BEVEL, and if convex, point A (or E) goes to that point as well. Concave surfaces acquire a face dimension AB (or ED) when adjusted. This option redefines the edges whenever the clear apertures of either side, or the MARGIN, changes. You can enter explicit values for the bevels and face dimensions in the Wizard. </span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">2.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">The </span><span class="f_footnotetext" style="font-weight: bold;">DOWN</span><span class="f_footnotetext"> option works from the top down; a value of C is entered by the user, and ponts B and D are found by going down by the current BEVEL dimension. A face value may be entered as well, and points A and E are then placed that distance below the start of the bevel. This option does not employ the current MARGIN</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">3.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">The </span><span class="f_footnotetext" style="font-weight: bold;">MIXED</span><span class="f_footnotetext"> option combines the above two: point C is entered explicitly, and then points B and D are found by subtracting the local BEVEL dimensions. Points A and E are found by adding the system MARGIN to the current clear aperture of the surface, except for convex surfaces, where the face dimension is kept at zero.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">4.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">The </span><span class="f_footnotetext" style="font-weight: bold;">EXPLICIT</span><span class="f_footnotetext"> option differs in several respects from those listed above. Points A through E are entered explicitly (although the Wizard will alter them if necessary to keep the bevel and face dimensions positive). These dimensions are therefore independent of the clear apertures on either side of the element, and care must be exercised to ensure that the edges clear these apertures. The most important difference, however, is that with this option, points D and E and angle ANG2 are </span><span class="f_footnotetext" style="font-style: italic;">independent</span><span class="f_footnotetext"> of the geometry of the second surface itself. This is important when dealing with</span><span class="f_footnotetext" style="font-weight: bold;"> cemented elements</span><span class="f_footnotetext">.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Let me explain. Once assigned to a surface, the edge geometry becomes part of the lens file and is saved with the lens. But the RLE file data refer to a single surface at a time, not to a whole element. You may enter data in the RLE file that define the dimensions AB and BC for </span><span class="f_footnotetext" style="font-style: italic;">that</span><span class="f_footnotetext"> surface, and then for the next, and so on. But the drawing programs require points A through E on the </span><span class="f_footnotetext" style="font-style: italic;">first</span><span class="f_footnotetext"> side of each element before they can draw the lens properly. So options UP through MIXED have to transfer the missing data from the second to the first side to complete the description. All this is transparent to the user, but it has the consequence that the edges of a cemented surface are coupled in a way that is often undesirable. So for cemented elements the EXPLICIT option is strongly recommended.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">5.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">The </span><span class="f_footnotetext" style="font-weight: bold;">EXPLICIT MIRROR</span><span class="f_footnotetext"> option is used for mirrors in air, where you want to emulate the thickness and geometry of the rear surface (which is not present in the lens file). &nbsp;The usual EFILE entries for points D and E then apply to the rear surface, and you can enter and change the mirror thickness as well as the slope angle on the flat portion between points D and E. &nbsp;Rectangular outside aperture data (RAO) will be shown if present, and the current CAO if not. &nbsp;You cannot show a combination of circular and rectangular shapes for mirrors, as you can on lenses. &nbsp;The EFILE format for this type is </span><span class="f_footnotetext" style="text-decoration: underline;">SN</span><span class="f_footnotetext"> EFILE MIRROR </span><span class="f_footnotetext" style="text-decoration: underline;">THICKNESS</span><span class="f_footnotetext">. &nbsp;The normal EFILE coordinates A,B,C,D,E apply to the front and back of the mirror and are entered in the usual manner, or with the Wizard.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">6.</span></p>
+</td>
+<td style="vertical-align:top; width:502px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">The rear surface of a mirror defined with the above option is normal to the axis, as is the second side of all EFILE elements. &nbsp;If a mirror is strongly curved or decentered -- or has a UAP aperture -- the</span><span class="f_footnotetext" style="font-weight: bold;"> COPY MIRROR</span><span class="f_footnotetext"> option is recommended instead. &nbsp;The rear surface then is assigned a copy of the geometry of the front side, separated from it by the entered thickness. &nbsp;It is thus not necessarily axially symmetric or centered. &nbsp;The EFILE format for this type is given by </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_footnotetext" style="font-weight: bold;"> EFILE CMIRROR </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">THICKNESS</span><span class="f_footnotetext" style="font-weight: bold;"> </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;">PARENTCAO</span><span class="f_footnotetext">. &nbsp;If the parent CAO is not large enough to cover the entire area of the active surface (as given by CAO and RAO data) the surface will only extend to the size of the parent. &nbsp;Thus you can define a combination of circular and rectangular edges for this type.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">If EFILE data are in effect, then points A and E are tested along with any hard CAO that may be assigned to a surface, when </span><span class="f_footnotetext" style="font-weight: bold;">vignetting</span><span class="f_footnotetext"> is evaluated. &nbsp;The other EFILE points are ignored.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">For convenience, we have provided four buttons labeled &quot;</span><span class="f_footnotetext" style="font-weight: bold;">-B</span><span class="f_footnotetext">&quot; and &quot;</span><span class="f_footnotetext" style="font-weight: bold;">-F</span><span class="f_footnotetext">&quot; on the Wizard.  </span><br>
+<span class="f_footnotetext">These buttons will make the value of the current bevel or flat portion of the corresponding side go to zero.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The button &quot;</span><span class="f_footnotetext" style="font-weight: bold;">This element</span><span class="f_footnotetext">&quot; redefines the drawing at the top of the PAD screen, showing only the currently selected element. &nbsp;The button &quot;</span><span class="f_footnotetext" style="font-weight: bold;">This range</span><span class="f_footnotetext">&quot; draws the selected range of surface numbers. &nbsp;Use these buttons only if you want to </span><span class="f_footnotetext" style="font-style: italic;">redefine</span><span class="f_footnotetext"> the display. &nbsp;If you just want to redraw the picture, use the &quot;</span><span class="f_footnotetext" style="font-weight: bold;">Update</span><span class="f_footnotetext">&quot; button instead.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The button &quot;</span><span class="f_footnotetext" style="font-weight: bold;">No CAOs</span><span class="f_footnotetext">&quot; has been provided to remove any user-entered CAO data on the selected element. &nbsp;Normally one will specify </span><span class="f_footnotetext" style="font-style: italic;">either</span><span class="f_footnotetext"> hard CAOs </span><span class="f_footnotetext" style="font-style: italic;">or</span><span class="f_footnotetext"> EFILE edges – but not both, to control the edge dimension explicitly. &nbsp;The reason for this is that once the EFILE data are entered, they fill the function that the hard CAO data fill when EFILE data are not present. &nbsp;They govern the edge that appears on drawings, and are honored when vignetting is tested. &nbsp;And if the CAO data are allowed to float (i.e., if hard CAOs are removed), some of the EFILE options (UP, MIXED) float along with them – which is a nice feature. &nbsp;And last, if you alter the EFILE data in the Wizard such that points A or E fall </span><span class="f_footnotetext" style="font-style: italic;">inside</span><span class="f_footnotetext"> the clear aperture, you will see a warning message on the Wizard. &nbsp;It is therefore helpful if the aperture data represent that needed by the rays, which is the case with default apertures, but not necessarily true with user-entered hard apertures. &nbsp;This button saves you the trouble of removing the CAOs using a different window.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The button “</span><span class="f_footnotetext" style="font-weight: bold;">Set CAOs”</span><span class="f_footnotetext"> does the opposite: &nbsp;Clicking here will transfer the dimensions of points A and E to hard clear apertures on both sides of the element. &nbsp;The main use of this feature is when you have created exactly the amount of vignetting you want, using EFILE edges, and now you want to create a </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_footnotetext"> description of the resulting vignetting. &nbsp;The command </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um524.htm#fvf" class="topiclink">FVF</a></span><span class="f_footnotetext"> will do that for you – but that feature looks at the CAO data, not the EFILE data. &nbsp;Once the data are transferred, FVF will do the job. &nbsp;If the active surface is a mirror in AIR, only one surface acquires CAO data in response to this button.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">A checkbox on the dialog lets you assign an EFILE edge pickup to the selected surface. &nbsp;See the link below for an explanation.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">For a description of the other options related to the EFILE, see section 7.8 of the </span><span class="f_footnotetext" style="text-decoration: underline;"><a href="um78.htm" class="topiclink">User’s Manual</a></span><span class="f_footnotetext" style="font-family: 'Times New Roman';">.</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

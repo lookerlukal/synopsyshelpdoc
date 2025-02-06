@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um83</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="apertures,apertures influence on image analysis" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-size: 14pt;">8.3 Influence of Apertures on Image Analysis</span><span class="f_mine" style="font-family: 'Times New Roman';"> &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um84.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um82.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">All of the image analysis programs honor user-entered apertures, although the geometric analysis features, such as the spot diagram, cannot show apodization.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The number of rays that pass through the system must not exceed 20,000. &nbsp;If many rays are vignetted, it is permissible to request more than this number when using the image analysis features, as long as the apertures eliminate the excess rays and the transmitted number is within the limit. &nbsp;In the case where most of the pupil is vignetted, however, this procedure can require tracing many more rays than are actually needed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="obsi"></a><span class="f_mine">For cases in which a large obstruction blocks most of the rays, for example, it is more efficient to eliminate the unused portion of the pupil before the rays are traced, rather than to trace a large number of rays, most of which are then discarded. &nbsp;For this purpose the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">OBS [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">P1</span><span class="f_mine" style="font-weight: bold;"> ] </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">R1</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">should be used, where </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">P1</span><span class="f_mine"> is the fractional position in the pupil, measured along the Y axis, of the center of the obscuration, whose fractional radius is </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">R1</span><span class="f_mine">. &nbsp;All rays within that portion of the pupil are skipped during the raytracing part of the image analysis.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input </span><span class="f_mine" style="font-weight: bold;">OBS</span><span class="f_mine"> is distinct from the </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#um3311" class="topiclink">CAl</a></span><span class="f_mine"> specification in that the latter is entered into the original lens file (with RLE) and its effect is automatically taken into account by the image analysis and footprint programs (by tracing and discarding rays), while the </span><span class="f_mine" style="font-weight: bold;">OBS</span><span class="f_mine"> entry applies only to the group of image or footprint commands which immediately follows it. &nbsp;Rays vignetted at the CAI surface are traced, while rays vignetted by OBS are not.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In cases involving a narrow beam passing through a much larger lens, the value of </span><span class="f_mine" style="text-decoration: underline;"><a href="um311.htm" class="topiclink">YMP1</a></span><span class="f_mine"> should be about the same size as the beam. &nbsp;You should avoid the practice of specifying a large value of YMP1 and a small CAO to restrict the beam size, since this is wasteful of computer resources; it makes no sense to trace 20,000 rays to generate a vignetted pupil containing 50, for example. &nbsp;A second reason why the input beam should match the transmitted beam is that the diffraction-theoretic analysis options, described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um86.htm" class="topiclink">section 8.6</a></span><span class="f_mine">, first determine the F/number of the full aperture before generating the image model. &nbsp;This reference is then used to determine the theoretical image dimensions and the sampling area. &nbsp;If this does not match the actual image size – because a vignetted aperture produces a larger diffraction pattern – the sampling may be incomplete.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You are also cautioned that the final beam should have a large enough number of rays to properly describe the image or wavefront. &nbsp;If you attempt to calculate a geometric MTF using an image of but 10 or 20 rays, for example, the coarse distribution will result in large unpredictable variations in the MTF at higher frequencies. &nbsp;An image containing 400 or more rays is often adequate. &nbsp;The upper limit is 20,000.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the lens has </span><span class="f_mine" style="text-decoration: underline;"><a href="um312.htm" class="topiclink">OBG</a></span><span class="f_mine"> input (gaussian input beam), the IMAGE programs will automatically apodize the beam so as to take account of the gaussian intensity falloff with beam radius, and a message to this effect appears in the printout. &nbsp;It is therefore not necessary for you to input any of the </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#um3311" class="topiclink">UAP</a></span><span class="f_mine"> options in order to model the falloff.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um84.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>tmch5</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_Title"><span class="f_Title" style="font-size: 18pt; font-weight: bold;">Chapter 5</span></p>
+<p style="text-align: center; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span style="font-size: 18pt; font-weight: bold;">Finishing Up the Basics</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">In the last four chapters you have learned how to run many useful features of SYNOPSYS. &nbsp;In the process I showed typical examples of each feature, but in order not to get bogged down in details I avoided going over all of the optional input and special cases that may actually be important in some circumstances. &nbsp;I recommend that before you try any feature on your own you read the section in the </span><span class="f_p1-4" style="font-size: 11pt; text-decoration: underline;"><a href="um.htm" class="topiclink">User's Manual</a></span><span class="f_p1-4" style="font-size: 11pt;"> describing that feature. &nbsp;There you will find a great deal more information than what is presented here, some of which may be just what you are looking for.</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-4" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p2-4">&nbsp;</span></p>
+<p><a name="tm5l2"></a><span class="f_p2-4" style="font-size: 14pt;">SYNOPSYS Mode Switches</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">You have seen some examples of the use of the mode-control switches in the earlier chapters. &nbsp;Open up the </span><span style="font-size: 11pt; font-weight: bold;">MSS</span><span style="font-size: 11pt;"> dialog and see for yourself what options are there. </span></p>
+<p>&nbsp;</p>
+<p class="p_heading1-5"><span class="f_heading1-5">Defaults:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">There are currently 98 switches that are in use. &nbsp;When you start SYNOPSYS the program turns on a default set:</span></p>
+<p>&nbsp;</p>
+<p class="p_heading1-5"><span class="f_heading1-5">ON </span><span class="f_mine" style="font-weight: bold;">2 4 5 7 8 27 29 32 39 45 54 65 91 95 97.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">If this is not what you want, you can put your favorite settings into a MACro, which you name </span><span style="font-size: 11pt; font-weight: bold;">CUSTOM</span><span style="font-size: 11pt;">. &nbsp;This will be run automatically when you start the program. &nbsp;If you later change any of these switch settings while you are running SYNOPSYS and want to restore the values you set at startup, type the command </span><span style="font-size: 11pt; font-weight: bold;">RESET</span><span style="font-size: 11pt;">. &nbsp;This command will execute the startup sequence, which runs the MACro </span><span style="font-size: 11pt; font-weight: bold;">SYSTART</span><span style="font-size: 11pt;"> and also calls the MACro </span><span style="font-size: 11pt; font-weight: bold;">CUSTOM</span><span style="font-size: 11pt;">, to enable any settings that you have placed there. &nbsp;(SYSTART is replaced at each update, while CUSTOM is not, so your settings are more permanent if placed there.) </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here are some settings that you may find useful. &nbsp;A listing of all of the switches and their effect is given in </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="appb.htm" class="topiclink">App. B</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:47px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt; font-weight: bold;">ON</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt; font-weight: bold;">OFF</span></p>
+</td>
+<td style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt; font-weight: bold;">Effect</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:47px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">24</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><br>
+</td>
+<td style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">Default UNITS will be mm instead of inches</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:47px; padding:4px; border:solid 1px #000000;"><br>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">27</span></p>
+</td>
+<td style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">To get spots drawn as symbols instead of a single dot, turn this OFF</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:47px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">55</span></p>
+</td>
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><br>
+</td>
+<td style="vertical-align:top; width:455px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">DMODEL, PSPRD use 2x finer sampling of image (but 4X slower)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">You can print the current switch settings with the command </span><span style="font-size: 11pt; font-weight: bold;">SSW</span><span style="font-size: 11pt;">.  </span></p>
+<p>&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;">&nbsp;</p>
+<p><a name="tm5l3"></a><span style="font-size: 14pt;">Startup MACro SYSTART</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">This is what you will find if you load the startup MACro into an editor. &nbsp;(The command LM SYSTART will load it.)</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">&nbsp;</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">! DEFAULT SYNOPSYS(tm) STARTUP MACRO FILE</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">!</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">! TO CUSTOMIZE YOUR INSTALLATION, PUT SETTINGS</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">! INTO A MACRO NAMED CUSTOM.MAC, WHICH WILL BE CALLED</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">! BY THIS MACRO WHENEVER SYNOPSYS IS STARTED.</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">!</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">LOG</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">ON 10 28 35 41 42 62 64</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">AI</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">FF: FINAL 5</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">TT: EM TEST</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">BELL OFF</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">EAM ICONS</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">EAM CUSTOM</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">PLB</span></p>
+<p class="p_BodyText-1" style="margin: 0px 0px 0px 24px;"><span class="f_BodyText-1" style="font-family: 'Courier New'; font-weight: bold;">ZDS</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">&nbsp;</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2" style="font-size: 11pt;">Here the </span><span class="f_p3-2" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um23.htm#log" class="topiclink">LOG</a></span><span class="f_p3-2" style="font-size: 11pt;"> command increments the current LOG number (giving you an index number for your lenses automatically), and some switches are turned ON.  </span><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">AI</span><span class="f_p3-2" style="font-size: 11pt;"> mode is turned on, and some useful symbols are defined. &nbsp;Then the toolbar symbols are defined by running the file </span><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">ICONS.MAC</span><span class="f_p3-2" style="font-size: 11pt;">, and any custom settings you put into the MACro </span><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">CUSTOM.MAC</span><span class="f_p3-2" style="font-size: 11pt;"> are set by running that file. &nbsp;Then the contents of the current lens library are listed on the screen. &nbsp;All installations should have a default SYSTART.MAC, and you should not create or edit it yourself. &nbsp;It will be overridden by each update, if it is in the default USER directory, and you are advised to put your custom settings into the CUSTOM MACro instead.</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">&nbsp;</span></p>
+<p class="p_BodyText-1"><span class="f_BodyText-1">Now suppose you always want to turn on switches 24 and 55. &nbsp;To do so, you would put these settings into </span><span class="f_BodyText-1" style="font-weight: bold;">CUSTOM.MAC</span><span class="f_BodyText-1" style="font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-4" style="text-align: left; margin: 0px 0px 0px 40px;"><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">ON 24 55</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2">&nbsp;</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2" style="font-size: 11pt;">The command </span><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">EAM, </span><span class="f_p3-2" style="font-size: 11pt;">which you saw in the startup MACro, deserves comment. &nbsp;This means “Execute Alternate MACro”, and provides a way for one MACro to call another, as you might call a subroutine. &nbsp;This loads the second MACro into memory and runs it, and then returns to the calling MACro to continue where it left off. &nbsp;You can also </span><span class="f_p3-2" style="font-size: 11pt; font-style: italic;">chain</span><span class="f_p3-2" style="font-size: 11pt;"> MACros by placing an </span><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">EM</span><span class="f_p3-2" style="font-size: 11pt;"> </span><span class="f_p3-2" style="font-size: 11pt; text-decoration: underline;">filename</span><span class="f_p3-2" style="font-size: 11pt;"> at the end of one to call the other -- but that form will not return.</span></p>
+<p>&nbsp;</p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2" style="font-size: 11pt;">Incidentally, the </span><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">LOG</span><span class="f_p3-2" style="font-size: 11pt;"> command can be entered like any other command any time you want. &nbsp;It is sometimes useful during a long session to keep track of the many stages of your lens development, since the log number becomes a part of the lens ID and shows up on listings and plots. &nbsp;We generally put the command at the start of our optimization MACros, so each resulting lens gets a unique number.</span></p>
+<p>&nbsp;</p>
+<p class="p_p4-3" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p4-3">&nbsp;</span></p>
+<p><a name="tm5l4"></a><span class="f_p4-3" style="font-size: 14pt;">Keeping Track of your Lenses and MACros</span></p>
+<p>&nbsp;</p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2" style="font-size: 11pt;">After you have used SYNOPSYS for a while, you will probably have several dozen MACros and lens files saved on disk. &nbsp;There are a number of commands and menus to help you organize and use these files.</span></p>
+<p>&nbsp;</p>
+<p class="p_p4-3" style="text-align: left;"><span class="f_p4-3" style="font-size: 11pt; font-weight: bold;">Saving your Lens as an RLE File</span></p>
+<p class="p_p4-3" style="text-align: left;"><span class="f_p4-3">&nbsp;</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2" style="font-size: 11pt;">Since the lens library can hold only ten lenses, you will frequently need to save your data in another form. &nbsp;With the triplet still current, enter the command</span></p>
+<p>&nbsp;</p>
+<p class="p_p5-2" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p5-2" style="font-size: 11pt; font-weight: bold;">SAVE</span><span class="f_p5-2" style="font-size: 11pt;"> </span><span class="f_p5-2" style="font-size: 11pt; font-weight: bold;">TRIPLET</span></p>
+<p>&nbsp;</p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2" style="font-size: 11pt;">The lens will be converted by SYNOPSYS into an </span><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">RLE</span><span class="f_p3-2" style="font-size: 11pt;"> file and saved as a file with the name &quot;TRIPLET.RLE&quot;. &nbsp;You can enter any name you want, as long as it starts with a letter, or else is made entirely of numbers, </span><span class="f_p3-2" style="font-size: 11pt; font-style: italic;">without </span><span class="f_p3-2" style="font-size: 11pt;">punctuation or special symbols. &nbsp;The current release allows up to 64 characters in a filename. &nbsp;If you leave off the filename, SYNOPSYS will prompt you for it. &nbsp;Once a lens has been saved in this way, SYNOPSYS keeps track of the name you used, and after that you can then just type SAVE to save it again with the same name. &nbsp;You can also click on the toolbar button </span><img src="filesave.png" width="28" height="24" alt="FileSave" style="width:28px;height:24px;border:none"><span class="f_p3-2" style="font-size: 11pt;">, which saves the lens with the most recent name – or calls up the File Save As dialog, if you have not yet entered one. &nbsp;To save with a different name, you can also use the </span><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">File</span><span class="f_p3-2" style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold;">|</span><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">Save Lens As</span><span class="f_p3-2" style="font-size: 11pt;"> menu. &nbsp;To get the lens back again, type</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p1-4" style="font-size: 10pt; font-weight: bold;">FETCH TRIPLET</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">You can save any number of lens files in this way. Now type the commands</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-4" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p1-4" style="font-size: 10pt; font-weight: bold;">DIR RLE </span></p>
+<p class="p_p1-4" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p1-4" style="font-size: 10pt; font-weight: bold;">DIR MAC</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">The first DIRectory command will list the ID's of all of the lenses you have SAVEd (a total of one so far, in addition to those the installation has saved for you), and the second will give the names of all of your MACros. &nbsp;There are eight different kinds of file that the DIR command can list; type </span><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">DIR</span><span class="f_p2-4" style="font-size: 11pt;"> and look at the TrayPrompt to see the list.</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">There are also </span><span class="f_p2-4" style="font-size: 11pt; font-style: italic;">dialogs </span><span class="f_p2-4" style="font-size: 11pt;">that tell you about your files; if you type the command </span><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">MLB</span><span class="f_p2-4" style="font-size: 11pt;"> you will see the </span><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">PLB</span><span class="f_p2-4" style="font-size: 11pt;"> display in a dialog window; you click on a location in the library, select either the GET or the STORE option, and click OK. &nbsp;The menu </span><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">MWL</span><span class="f_p2-4" style="font-size: 11pt;"> gives a scrollable window with the ID's of all your SAVEd lenses along with a preview drawing pane; again, you select the line with the desired lens and click OK to FETCH the lens (or double-click the name). </span></p>
+<p>&nbsp;</p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">MACros are manipulated in several ways. You have already saved a MACro from within the editor with the </span><img src="filesave.png" width="28" height="24" alt="FileSave" style="width:28px;height:24px;border:none"><span class="f_p2-4" style="font-size: 11pt;"> button. &nbsp;You can get a dialog showing all of your saved MACros with the </span><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">MWM</span><span class="f_p2-4" style="font-size: 11pt;"> command; from there you can either run or edit the file that you select. &nbsp;When the EE editor is open, you can click on the toolbar button </span><img src="clip0328.png" width="27" height="28" alt="clip0328" style="width:27px;height:28px;border:none"><span class="f_p2-4" style="font-size: 11pt;"> to open a window with a list of all your saved MACros. &nbsp;When you select one from the list, a preview is shown in the editor, helping you identify the one you are after.</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">Other useful commands are</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:106px; padding:4px; border:solid 1px #000000;"><p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">LM</span><span class="f_p2-4" style="font-size: 11pt;"> </span><span class="f_p2-4" style="font-size: 11pt; text-decoration: underline;">filename</span></p>
+</td>
+<td style="vertical-align:top; width:425px; padding:4px; border:solid 1px #000000;"><p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">to load the current editor with that file</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:106px; padding:4px; border:solid 1px #000000;"><p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">EM</span><span class="f_p2-4" style="font-size: 11pt;"> </span><span class="f_p2-4" style="font-size: 11pt; text-decoration: underline;">filename</span></p>
+</td>
+<td style="vertical-align:top; width:425px; padding:4px; border:solid 1px #000000;"><p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">to immediately execute that MACro, without opening the editor</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:106px; padding:4px; border:solid 1px #000000;"><p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">GDS</span></p>
+</td>
+<td style="vertical-align:top; width:425px; padding:4px; border:solid 1px #000000;"><p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">to rerun the last MACro that has been run</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:106px; padding:4px; border:solid 1px #000000;"><p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">GADS</span></p>
+</td>
+<td style="vertical-align:top; width:425px; padding:4px; border:solid 1px #000000;"><p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">to rerun the last MACro that has been run with the Run Alternate MACro button.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">SYNOPSYS keeps the lens file separate from the MACro you will use for optimization (described in </span><span class="f_p2-4" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="tmch6.htm" class="topiclink">Chapter 6</a></span><span class="f_p2-4" style="font-size: 11pt;">) as well as the files that the tolerancing program can save. &nbsp;This offers some advantages – but sometimes you will want to keep this information together. &nbsp;There is an easy way. &nbsp;Type SAVE LOG to save your lens with a filename that is just the current LOG number. &nbsp;(You can also click the button  </span><img src="savelog.png" width="25" height="26" alt="savelog" style="width:25px;height:26px;border:none"><span class="f_p2-4" style="font-size: 11pt;"> &nbsp;to do the same thing.) &nbsp;Click the same button on the EE editor toolbar, and a copy of the current MACro is saved with the same name. &nbsp;After you have run your tolerance analysis (described in Chapter 8), type BTOL SAVE and your tolerance budget is also saved with the same name. &nbsp;You have just documented the current state of your project.</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-4">&nbsp;</span></p>
+<p><a name="tm5l5"></a><span class="f_p1-4" style="font-size: 14pt; font-weight: bold;">MACro Loops</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">One more word about MACros before we go on to some very friendly features found in the SketchPAD program. &nbsp;Sometimes you will want a MACro to perform a given task a number of times, with one or more of the data entries varying each time. &nbsp;There are two basic ways to accomplish this in SYNOPSYS; the first way is simply to put a GDS command at the end of the MACro. &nbsp;When the program gets there it will loop back to the beginning. &nbsp;What keeps it from looping forever? &nbsp;You must arrange that when the program reaches a given line in the MACro it will stop and request operator input. &nbsp;This is done with the command </span><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">&quot;NEW&quot;</span><span class="f_p2-4" style="font-size: 7pt; font-style: italic; font-weight: bold;"> </span><span class="f_p2-4" style="font-size: 11pt;">at that place within the MACro.</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:167px; padding:4px; border:solid 1px #000000;"><p class="p_heading1-5" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_heading1-5">MACro 1</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">CHG</span></p>
+<p><span style="font-size: 11pt;">NEW</span></p>
+<p><span style="font-size: 11pt;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">VAR 2 1 300</span></p>
+<p><span style="font-size: 11pt;">GDS</span></p>
+</td>
+<td style="vertical-align:top; width:352px; padding:4px; border:solid 1px #000000;"><p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here is an example of a MACro that loops. &nbsp;The program will wait for your input when it gets to the NEW line inside the CHG file. &nbsp;You could then enter, for example, “</span><span style="font-size: 11pt; font-weight: bold;">2 TH 5.26</span><span style="font-size: 11pt;">”, and the CHG file would then continue and the image analysis would be performed. &nbsp;Then it would loop back to the beginning and ask for another NEW line of input. &nbsp;When you have run all of the cases you want, just type </span><span style="font-size: 11pt; font-weight: bold;">EDS</span><span style="font-size: 11pt;"> and then </span><span style="font-size: 11pt; font-weight: bold;">END</span><span style="font-size: 11pt;">. &nbsp;(The EDS ends the MACro execution, and END gets you out of the CHG file.)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p class="p_p5-2" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p5-2">&nbsp;</span></p>
+<p><a name="tm5l6"></a><span class="f_p5-2" style="font-size: 14pt;">AI MACro Loops</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">The second basic way to do loops of this kind is with an Al sentence, and it is much more powerful. &nbsp;You have already seen some of the &quot;Plot... for... = ... to ...&quot; loops that Al can do. &nbsp;It can also do a MACro within a loop:</span></p>
+<p>&nbsp;</p>
+<p class="p_p6-2" style="margin: 0px 0px 0px 53px;"><span class="f_p6-2" style="font-size: 11pt; font-weight: bold;">Do macro for 2 th = 5.0 to 6.0</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">The MACro can contain anything except another “DO MACro&quot; or an Al loop sentence, and when it is finished, AI increments the variable (2 TH in this example) and starts over. </span><span class="f_p1-4" style="font-size: 11pt; font-style: italic;">To use this feature, you first have to either run the MACro yourself at least once,</span><span class="f_p1-4" style="font-size: 11pt;"> which puts the contents into memory, or you can click the button</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;"> </span><img src="loadthismacro.png" width="23" height="25" alt="loadthismacro" style="width:23px;height:25px;border:none"><span class="f_p1-4" style="font-size: 11pt;"> </span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">which does the same thing. &nbsp;Then enter the “DO MACRO …” sentence.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">It is also simple to ask Al to pick up a given quantity when it is in the loop and use it as data for a plot. For example:</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-4" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">DO MACRO AS THICKNESS 2 VARIES FROM 5 TO 6</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<p class="p_p3-2" style="text-align: left; margin: 0px 288px 0px 38px;"><span class="f_p3-2" style="font-size: 11pt; font-style: italic;">MACro:</span></p>
+<p class="p_p3-2" style="text-align: left; margin: 0px 288px 0px 38px;"><span class="f_p3-2">&nbsp;</span></p>
+<p class="p_p4-3" style="text-align: left; margin: 0px 288px 0px 38px;"><span class="f_p4-3" style="font-size: 11pt; font-weight: bold;">ORDINATE = SA3</span></p>
+<p class="p_p4-3" style="text-align: left; margin: 0px 288px 0px 38px;"><span class="f_p4-3" style="font-size: 11pt; font-weight: bold;">ABSCISSA IS BACK FOCUS</span></p>
+<p class="p_p4-3" style="text-align: left; margin: 0px 288px 0px 0px;"><span class="f_p4-3">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">Here, Al will run the MACro loop and pick up the third-order spherical aberration for the ordinate of the plot. &nbsp;The abscissa will be the back focus, and the two will therefore be plotted as a function of thickness 2. &nbsp;Of course, for this simple example it would not be necessary to use a MACro at all; Al could just as easily</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-4" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">PLOT SA3 VS BACK FOR 2 TH EQUAL 5 TO 6,</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">but there are times when you want to plot something that is not in the </span><span class="f_p1-4" style="font-size: 11pt; font-weight: bold;">AI</span><span class="f_p1-4" style="font-size: 9pt; font-style: italic;"> </span><span class="f_p1-4" style="font-size: 11pt;">vocabulary, and then the MACro loop is needed. &nbsp;To show how this works, first type a command like </span><span class="f_p1-4" style="font-size: 11pt; font-weight: bold;">EDGE</span><span class="f_p1-4" style="font-size: 11pt;">. &nbsp;Then ask AI</span><span class="f_p1-4" style="font-size: 9pt; font-style: italic;"> </span><span class="f_p1-4" style="font-size: 11pt;">to show you the BUFFER:</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">BUFFER?</span></p>
+<p class="p_p2-4" style="text-align: left; margin: 0px 0px 0px 39px;"><span class="f_p2-4">&nbsp;</span></p>
+<p class="p_p5-2" style="text-align: left; margin: 0px 0px 0px 0px;"><span class="f_p5-2" style="font-size: 10pt; font-family: 'Courier New';">The current FILE BUFFER contains</span></p>
+<p class="p_t7"><span class="f_t7" style="font-size: 10pt; font-family: 'Courier New';"> &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp;1.1451577 &nbsp; &nbsp; &nbsp; &nbsp;EDGE TH</span></p>
+<p class="p_t7"><span class="f_t7" style="font-size: 10pt; font-family: 'Courier New';"> &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp;4.7136868 &nbsp; &nbsp; &nbsp; &nbsp;EDGE TH</span></p>
+<p class="p_t7"><span class="f_t7" style="font-size: 10pt; font-family: 'Courier New';"> &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp;2.4921436 &nbsp; &nbsp; &nbsp; &nbsp;EDGE TH</span></p>
+<p class="p_p5-2" style="text-align: left; margin: 0px 0px 0px 0px;"><span class="f_p5-2" style="font-size: 8pt; font-weight: bold;"> </span><span class="f_p5-2" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;"> </span><span class="f_p5-2" style="font-size: 10pt; font-family: 'Courier New';"> &nbsp; 4</span><span class="f_p5-2" style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold;"> …</span></p>
+<p class="p_p5-2" style="text-align: left; margin: 0px 0px 0px 0px;"><span class="f_p5-2">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">Many of the SYNOPSYS commands that produce a list or table of numbers put a copy of these data into a FILE BUFFER. &nbsp;You can ask Al to show you the buffer, as above, or just a single entry:</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p11-2" style="text-align: left; margin: 0px 0px 0px 0px;"><span class="f_p11-2" style="font-size: 11pt; font-weight: bold;">WHAT IS FILE 1?</span></p>
+<p class="p_p11-2" style="text-align: left; margin: 0px 0px 0px 56px;"><span class="f_p11-2">&nbsp;</span></p>
+<p class="p_t8"><span class="f_t8" style="font-size: 11pt; font-family: 'Courier New';">FILE NUMBER 1  &nbsp; &nbsp; &nbsp; &nbsp;EDGE TH. &nbsp; &nbsp; 1.1451577</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">With these data Al can plot nearly anything; here is how to plot the edge thickness between surfaces 2 and 3 as a function of thickness 2:</span></p>
+<p class="p_p11-2" style="text-align: left; margin: 0px 0px 0px 56px;"><span class="f_p11-2">&nbsp;</span></p>
+<p class="p_p11-2" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p11-2" style="font-size: 11pt; font-weight: bold;">DO MACRO FOR 2 TH = 5 T0 6</span></p>
+<p class="p_p11-2" style="text-align: left; margin: 0px 0px 0px 56px;"><span class="f_p11-2">&nbsp;</span></p>
+<p class="p_p12-1" style="text-align: left; margin: 0px 288px 0px 38px;"><span class="f_p12-1" style="font-size: 11pt; font-style: italic;">MACro:</span></p>
+<p class="p_p12-1" style="text-align: left; margin: 0px 288px 0px 38px;"><span class="f_p12-1">&nbsp;</span></p>
+<p class="p_p12-1" style="text-align: left; margin: 0px 288px 0px 38px;"><span class="f_p12-1" style="font-size: 10pt;">EDGE</span></p>
+<p class="p_p12-1" style="text-align: left; margin: 0px 288px 0px 38px;"><span class="f_p12-1" style="font-size: 10pt;">ORDINATE IS FILE 2</span></p>
+<p class="p_p12-1" style="text-align: left; margin: 0px 288px 0px 0px;"><span class="f_p12-1">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">Since file number 2 is the desired edge thickness, the ordinate of the plot contains the desired value, and the abscissa is by default the loop variable: 2 TH.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">These examples of the Al MACro loop capability should give you an idea of the resources you have available. &nbsp;I recommend you study </span><span class="f_p1-4" style="font-size: 11pt; text-decoration: underline;"><a href="umch15.htm" class="topiclink">Chapter 15</a></span><span class="f_p1-4" style="font-size: 11pt;"> of the User's Manual, where many more possibilities are discussed.</span></p>
+<p>&nbsp;</p>
+<p class="p_p13" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p13">&nbsp;</span></p>
+<p><a name="tm5l7"></a><span class="f_p13" style="font-size: 14pt;">The SketchPAD </span></p>
+<p>&nbsp;</p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">Now we will explore some of the options available in the </span><span class="f_p1-4" style="font-size: 11pt; text-decoration: underline;"><a href="sketchpad.htm" class="topiclink">SketchPAD</a></span><span class="f_p1-4" style="font-size: 11pt;"> program. &nbsp;This is a feature that shows you the lens and its image in real time, automatically updating as the lens is changed during optimization or in other ways. &nbsp;Get out the triplet, and either type </span><span class="f_p1-4" style="font-size: 11pt; font-weight: bold;">PAD</span><span class="f_p1-4" style="font-size: 11pt;"> or click on the button </span><img src="sketchpad.png" width="26" height="24" alt="sketchpad" style="width:26px;height:24px;border:none"><span class="f_p1-4" style="font-size: 11pt;">. &nbsp;You will see the SketchPAD display, with a lens drawing on the top and a set of rayfans on the bottom.</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><img src="tm5f2.png" width="835" height="599" alt="tm5f2" style="width:835px;height:599px;border:none"></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2" style="font-size: 11pt;">There are seven kinds of display that you can ask for in PAD, and the display you see is the default. &nbsp;You can easily select what you want. &nbsp;Click on the button </span><img src="padbottom.png" width="26" height="24" alt="padbottom" style="width:26px;height:24px;border:none"><span class="f_p3-2" style="font-size: 11pt;">, and then click the option “RayFAN plots”, click on “Multicolor”, and then on OK. &nbsp;This selection is just the default, so the display does not change.</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">The set of FANS shown on the screen is drawn to a default scale of .1 mm per unit height, determined by tracing a few rays (since you entered no scale factor yourself). &nbsp;The three curves for colors 1,2, and 3 lie nearly on top of each other, and since this lens is well corrected for color; the numbers at the ends of the fans curves are similarly superimposed. &nbsp;Note that rays vignetted by the clear apertures are indicated by separated dots, rather than by connected lines. &nbsp;You can still use the command window while the PAD display is open, or click on any of the toolbar buttons. &nbsp;Type the following lines</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_p1-4" style="font-size: 11pt; font-weight: bold;">CHG</span></p>
+<p class="p_p1-4" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_p1-4" style="font-size: 11pt; font-weight: bold;">NOVIG</span></p>
+<p class="p_p1-4" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_p1-4" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">And then click the button </span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><img src="padup.png" width="24" height="23" alt="padup" style="width:24px;height:23px;border:none"><span class="f_p1-4" style="font-size: 11pt;">.  </span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">You will see the fans plots become continuous lines, since you just turned off the vignetting test, and rays that exceed the clear apertures now trace through the lens. &nbsp;Any time the PAD window is redrawn, it updates the display with the current lens. &nbsp;And if you close the display and later reopen it, the same choice of displays is shown again.</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">It is also possible to specify the kind of PAD display you want by typing into the Command Window. &nbsp;Here you just type </span><span class="f_p1-4" style="font-size: 11pt; font-weight: bold;">PAD</span><span class="f_p1-4" style="font-size: 11pt;">, and then one of the following, and PAD will prompt you for the other parameters it needs.</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">PAD</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">activates the SketchPAD display. &nbsp;The prompt changes to PAD&gt;.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">D</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of a Y-Z-profile drawing</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">PP</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of a perspective drawing</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">P</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of a paraxial drawing</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">F</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of a transverse rayfan display</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">FP</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">same as F, but sagittal fan is over the full pupil</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">O</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of an OPD rayfan display</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">OP</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">same as O, but sagittal fan is over the full pupil</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">S</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of a spot diagram display</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">A</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of a display of astigmatic field curves</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">X</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">erases the requested portion; used to show only one display instead of two</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">U</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">updates the display</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">ZOOM</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">zooms a ZFILE zoom lens to the zoom position in the 2</span><span class="f_BodyTextIndent3" style="vertical-align: super;">nd</span><span class="f_BodyTextIndent3"> word</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">END</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">ends the PAD interactive sequence (but does not close the display)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">For the experienced user, it is possible to remember the sequence of prompted input you use for these features, and then enter </span><span class="f_p1-4" style="font-size: 11pt; font-style: italic;">that</span><span class="f_p1-4" style="font-size: 11pt;"> sequence into a MACro. &nbsp;That way you can set up PAD the way you want it automatically, from the MACro.  </span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">If you want to save the display format you have defined so you can get it back later, type the commands </span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left; margin: 0px 0px 0px 38px;"><span class="f_p1-4" style="font-size: 11pt; font-weight: bold;">SSU</span><span class="f_p1-4" style="font-size: 11pt;"> (Save SetUp) or SPL (Save PAD Layout). &nbsp;The former saves both lenses and the PAD layout; the latter just the latter.</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">Then, when you want to restore it or when you start SYNOPSYS again, just type </span><span class="f_p1-4" style="font-size: 11pt; font-weight: bold;">RSU</span><span class="f_p1-4" style="font-size: 11pt;"> (Restore SetUp) and you will get back the lens and the display just as you defined it -- or RPL, which restores the PAD layout but does not get the lenses back. &nbsp;You can define up to five different display formats for a given lens, using the buttons</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;"> </span><img src="pad1to5.png" width="119" height="27" alt="pad1to5" style="width:119px;height:27px;border:none"><span class="f_p1-4" style="font-size: 11pt;">, </span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">and these also come back with RSU and RPL.</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-4">&nbsp;</span></p>
+<p><a name="tm5l8"></a><span class="f_p1-4" style="font-size: 14pt;">Changing the Lens in PAD</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">Pad also contains several features that let you change the lens and immediately see the effects on the image. &nbsp;One useful tool is the button </span><img src="le.png" width="26" height="24" alt="le" style="width:26px;height:24px;border:none"><span class="f_p1-4" style="font-size: 11pt;"> (which also appears in the SideBar); this opens the LE lens editor, where you can change anything in the lens, and when you exit from the editor (with the button </span><img src="runmacro.png" width="26" height="24" alt="runmacro" style="width:26px;height:24px;border:none"><span class="f_p1-4" style="font-size: 11pt;">) the display is updated. &nbsp;This option replaces the </span><span class="f_p1-4" style="font-size: 11pt; font-style: italic;">entire</span><span class="f_p1-4" style="font-size: 11pt;"> lens with what is in the editor when you run it, so be sure not to delete anything important.</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-4">&nbsp;</span></p>
+<p><a name="tm5l9"></a><span class="f_p1-4" style="font-size: 14pt;">WorkSheet Program</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">By far the most convenient way to edit your lens is with the Worksheet(tm) program. &nbsp;First you must make a drawing on the top of the screen, if you have requested one of the other displays, since Worksheet will let you select surfaces to edit by just clicking on the lens drawing, and the drawing must be there. &nbsp;When you have either a D, P, or PP display on top, click on the WorkSheet button </span><img src="worksheet.png" width="30" height="29" alt="worksheet" style="width:30px;height:29px;border:none"><span class="f_p1-4" style="font-size: 11pt;">.</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><img src="tm5f4.png" width="707" height="179" alt="tm5f4" style="width:707px;height:179px;border:none"></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2" style="font-size: 11pt;">The WorkSheet is highly interactive. &nbsp;The edit box shows the data for surface 1 at the moment. &nbsp;Click in the PAD display on a different surface (always click on the </span><span class="f_p3-2" style="font-size: 11pt; font-style: italic;">vertex</span><span class="f_p3-2" style="font-size: 11pt;">, just past the surface you want). &nbsp;Now you see the data for that surface. &nbsp;Click the Checkpoint button</span><img src="checkpoint.png" width="26" height="24" alt="checkpoint" style="width:26px;height:24px;border:none"><span class="f_p3-2" style="font-size: 11pt;"> so you can easily go back if you need to, Click in the edit box, and change a number, then click on the “Update” button. &nbsp;The picture is updated, along with the image display, if any, which is on the lower part of PAD. &nbsp;Now click the “Undo” button  </span><img src="undo.png" width="26" height="24" alt="undo" style="width:26px;height:24px;border:none"><span class="f_p3-2" style="font-size: 11pt;"> – and the lens is restored. &nbsp;You can create a checkpoint any time by clicking the button, which then operates like a one-level undo. &nbsp;(SYNOPSYS also has a 10-level undo feature, using </span><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">Ctrl+Z</span><span class="f_p3-2" style="font-size: 11pt;"> (for text boxes) and</span><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;"> Ctrl+U</span><span class="f_p3-2" style="font-size: 11pt;"> or</span><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;"> F3</span><span class="f_p3-2" style="font-size: 11pt;"> (for lens changes) – but these do not capture Worksheet changes. &nbsp;See </span><span class="f_p3-2" style="font-size: 11pt; text-decoration: underline;"><a href="um1318.htm" class="topiclink">Chapter 13</a></span><span class="f_p3-2" style="font-size: 11pt;">.) &nbsp;WorkSheet only changes the data in the edit window, not the whole lens, although you can enter data for any surface in the edit window, in the format that goes into an RLE file; you are not restricted to editing only the surface that is currently selected.</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2">&nbsp;</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2" style="font-size: 11pt;">With the original triplet on the display, click on surface 3, and then click on the thumb of the slider on the right that says “Slide element”. &nbsp;Hold the mouse button down and slide this thumb to the left, slowly. &nbsp;See the lens slide on the PAD drawing, and the ray paths and image change along with it.</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2">&nbsp;</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2" style="font-size: 11pt;">To edit the object and system data, click one of the buttons </span><img src="clip0023.png" width="47" height="25" alt="clip0023" style="width:47px;height:25px;border:none"><span class="f_p3-2" style="font-size: 11pt;"> to open the Object or Pupil Wizard, or </span><img src="object.png" width="26" height="24" alt="object" style="width:26px;height:24px;border:none"> <span class="f_p3-2" style="font-size: 11pt;"> to see the data in the WorkSheet editor. &nbsp;Now you can edit those data. &nbsp;You can also select a surface (or the system data) by entering the number (or 0) into the data box above the word “Curvature”, and then clicking “Update”. &nbsp;Other WorkSheet toolbar buttons let you insert and remove surfaces and elements and perform other common tasks such as inserting fold mirrors or prisms..</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-4">&nbsp;</span></p>
+<p><a name="tm5l10"></a><span class="f_p1-4" style="font-size: 14pt;">Mapping Function Utility</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">To end this chapter I will describe briefly another of the IMAGE options. &nbsp;This one lets you map your choice of one of 20 different quantities as a function of pupil position or field position. &nbsp;With the original triplet the current lens, enter the following input:</span></p>
+<p class="p_p3-2" style="text-align: left; margin: 0px 0px 0px 40px;"><span class="f_p3-2">&nbsp;</span></p>
+<p class="p_p3-2" style="text-align: left; margin: 0px 0px 0px 40px;"><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">MAP PUPIL OVER FOV</span></p>
+<p class="p_p3-2" style="text-align: left; margin: 0px 0px 0px 40px;"><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">FGRID RECT 5 1</span></p>
+<p class="p_p3-2" style="text-align: left; margin: 0px 0px 0px 40px;"><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">RGRID CIRCLE 20</span></p>
+<p class="p_p3-2" style="text-align: left; margin: 0px 0px 0px 40px;"><span class="f_p3-2" style="font-size: 11pt; font-weight: bold;">PLOT</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">The results are shown below.</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<p class="p_p2-4" style="text-align: left;"><img src="clip0205.png" width="446" height="600" alt="clip0205" style="width:446px;height:600px;border:none"></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">In this example you specified a field grid (FGRID) of 5 by 1 points and a ray grid (RGRID) consisting of a circle of 20 rays. &nbsp;Look at the general input format for </span><span class="f_p2-4" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um88.htm#map" class="topiclink">MAP</a></span><span class="f_p2-4" style="font-size: 11pt;"> to see all of the possibilities, and then type </span><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">MMA</span><span class="f_p2-4" style="font-size: 11pt;"> to see the dialog, which puts most of these options on the screen.</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">There are more features in MAP than I can explain in a Tutorial Manual, but here are the basics: &nbsp;Some of the functions </span><span class="f_p2-4" style="font-size: 11pt; font-style: italic;">can </span><span class="f_p2-4" style="font-size: 11pt;">be specified at a given surface, others </span><span class="f_p2-4" style="font-size: 11pt; font-style: italic;">must </span><span class="f_p2-4" style="font-size: 11pt;">be, and still others </span><span class="f_p2-4" style="font-size: 11pt; font-style: italic;">cannot </span><span class="f_p2-4" style="font-size: 11pt;">be. &nbsp;The grids that apply to the points in the field and points in the pupil are defined as follows:</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<p class="p_p2-4" style="text-align: left;"><img src="tm5f6.png" width="552" height="202" alt="tm5f6" style="width:552px;height:202px;border:none"></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">The ray grid (RGRID) is identical to the field grid FGRID except that there are two kinds of circles: CIRCLE and MCIRCLE. &nbsp;CIRCLE is like the PUP 4 option in TRACE, described in </span><span class="f_p2-4" style="font-size: 11pt; text-decoration: underline;"><a href="tmch4.htm" class="topiclink">Chapter 4</a></span><span class="f_p2-4" style="font-size: 11pt;">. &nbsp;This circle will contract to pass clear apertures and feathered edges, but cannot expand. &nbsp;MCIRCLE is like PUP 3: it can both expand and contract.</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">In the </span><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">MMA</span><span class="f_p2-4" style="font-size: 11pt;"> dialog you will see the options </span><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">ACTUAL</span><span class="f_p2-4" style="font-size: 11pt;"> and </span><span class="f_p2-4" style="font-size: 11pt; font-weight: bold;">EXPLODED</span><span class="f_p2-4" style="font-size: 11pt;">. &nbsp;These determine whether the plot shows each pattern at the actual position where it would appear on the selected surface (or image plane), or is shown mapped into the FGRID or RGRID pattern. &nbsp;For example, see the following two cases.</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:257px; padding:4px; border:solid 1px #000000;"><p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">MAP UNI OVER PUPIL ON SURF 3</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">FGRID POINT 1 0</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">RGRID CREC 11 11</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">ACTUAL</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">SCALE 20</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">ANALOG</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">PLOT</span></p>
+</td>
+<td style="vertical-align:top; width:305px; padding:4px; border:solid 1px #000000;"><p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">CHG</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">CFOV</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">END</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">MAP DISTORTION OVER FOV</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">FGRID REC 9 9</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">EXPLODED</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">ANALOG 10</span></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4" style="font-size: 11pt;">PLOT</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px -7px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px -7px;"><img src="clip0194.png" width="433" height="582" alt="clip0194" style="width:433px;height:582px;border:none"><img src="clip0195.png" width="431" height="581" alt="clip0195" style="width:431px;height:581px;border:none"></p>
+<p class="p_p2-4" style="text-align: left;"><span class="f_p2-4">&nbsp;</span></p>
+<p class="p_p3-2" style="text-align: left;"><span class="f_p3-2" style="font-size: 11pt;">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="font-size: 11pt;">In the first we mapped the incidence angle of a grid of rays from the full-field object point on surface 3. &nbsp;The position of each fiducial is scaled to the actual ray position on the surface, at 20X magnification. &nbsp;The angles are shown in analog fashion (as angles). &nbsp;The pattern is noncircular due to vignetting. &nbsp;In the second case we first redefined the field as circular with the CHG parameter &quot;CFOV&quot;, since the lens originally had no skew field defined. &nbsp;This makes XP0 equal to YP0, and the MAP sequence then shows the distortion of the lens mapped into object space, again in analog fashion at 1000X scale. &nbsp;(In the first example, SCALE refers to the distribution of the fiducials; in the second, the ANALOG scale of 1000 refers to the length of the lines.)</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4">&nbsp;</span></p>
+<p class="p_p1-4" style="text-align: left;"><span class="f_p1-4" style="text-decoration: underline;"><a href="tmch6.htm" class="topiclink">To Chapter 6</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

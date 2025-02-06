@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>umch3</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-size: 14pt; font-family: 'Times New Roman'; font-style: italic; font-weight: bold;">SYNOPSYS User’s Manual &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um311.htm" class="topiclink">Next </a><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_p1-13" style="margin: 0px 0px 0px 0px;"><span class="f_p1-13" style="font-size: 14pt; font-family: 'Times New Roman'; font-style: italic; font-weight: bold;">Chapter 3</span></p>
+<p class="p_p1-13" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-13">&nbsp;</span></p>
+<p class="p_p1-13" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-13">&nbsp;</span></p>
+<p><a name="rle"></a><span class="f_p1-13" style="font-size: 14pt; font-weight: bold;">3.0 LENS DATA INPUT</span></p>
+<p class="p_p1-13" style="margin: 0px 0px 0px 0px;"><span class="f_p1-13">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The specifications for a lens are initially entered into SYNOPSYS by means of a data file of the structure described below. &nbsp;Lens units are in inches unless switch 24 is ON (making the default units mm) – or unless units other than inches are specifically declared (</span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm" class="topiclink">see 3.2</a></span><span class="f_mine">). &nbsp;Most lens file data may optionally be entered by interactive input to the dialogs </span><span class="f_mine" style="font-weight: bold;">SYS</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine">, although it is faster to enter them as described below.</span></p>
+<p class="p_p2-11"><span class="f_p2-11">&nbsp;</span></p>
+<p class="p_c1" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_c1">&nbsp;</span></p>
+<p><a name="um31"></a><span class="f_c1" style="font-size: 14pt;">3.1 RLE Data: &nbsp;System Input to RLE</span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_c1" style="font-weight: bold;">RLE</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 48px;"><a name="id"></a><span class="f_c1" style="font-weight: bold;">ID [sample lens ident.]</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_c1" style="font-weight: bold;">[ID1 ' text '] </span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_c1" style="font-weight: bold;">[ID2 ' </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">text</span><span class="f_c1" style="font-weight: bold;"> '] </span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_c1" style="font-weight: bold;">[ID3 ' </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">text</span><span class="f_c1" style="font-weight: bold;"> ']</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_c1" style="font-weight: bold;">[ID4 ' </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">text</span><span class="f_c1" style="font-weight: bold;"> ']</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_c1" style="font-weight: bold;">[ID5 ' text ']</span></p>
+<p class="p_c1" style="margin: 0px 0px 0px 48px;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 24px;"><img src="um3f1.png" width="517" height="437" alt="um3f1" style="width:517px;height:437px;border:none"></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_c1" style="font-weight: bold;">[ LOG </span><span class="f_c1" style="font-weight: bold; text-decoration: underline;">lognumber</span><span class="f_c1" style="font-weight: bold;"> ]</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_c1" style="font-weight: bold;">[ ILINE ]</span></p>
+<p class="p_c1" style="text-align: left; margin: 0px 0px 0px 48px;"><span class="f_c1" style="font-weight: bold;">END</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="font-weight: bold;">RLE</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">Read LEns.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="font-weight: bold;">ID</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">Enter up to 33 characters of lens identification. &nbsp;The log number of the most recent run in which the lens was changed is also output whenever the lens ID is printed or plotted. &nbsp;ID1 to ID5 give up to 5 additional lines of lens identification, which may contain up to 76 characters, which are listed in the RLE and LEO files. &nbsp;These lines will appear in the LE editor, where they may be changed, and also in a special dialog that you can reach via the Worksheet or with the command </span><span class="f_c1" style="font-weight: bold;">ID</span><span class="f_c1">. &nbsp;The Al program can also change or display the current ID, with input of the form ID = 'example lens file', or ID?</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">You can also annotate lens files as you save them, and the annotation will be displayed when the files are opened again. &nbsp;See </span><span class="f_c1" style="text-decoration: underline;"><a href="um372.htm" class="topiclink">Section 3.7.2</a></span><span class="f_c1" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="3wavl"></a><span class="f_c1" style="font-weight: bold;">WAVL</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">Use this command to input three or five wavelengths, in uM; the first three </span><span class="f_c1" style="text-decoration: underline;">NB</span><span class="f_c1"> entries are for long, middle, and short wavelengths. The CDF option automatically enters </span><span class="f_c1" style="font-family: 'Times New Roman';">0</span><span class="f_c1">.6563, </span><span class="f_c1" style="font-family: 'Times New Roman';">0</span><span class="f_c1">.5876, and </span><span class="f_c1" style="font-family: 'Times New Roman';">0</span><span class="f_c1">.4861 um; these are also the default wavelengths. &nbsp;Entering </span><span class="f_c1" style="font-weight: bold;">GHI</span><span class="f_c1"> specifies 0.4358, 0.4047, and 0.365 um, in the ultraviolet.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">With this option, the second wavelength is </span><span class="f_c1" style="font-style: italic;">always</span><span class="f_c1"> the primary color, and you must enter either three or five numbers. Weights are automatically set to unity for all wavelengths, but may be changed with WT1 input (or afterwards with MMC or SYS).</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">If the arguments do not specify three or five wavelengths, the program will interpret the line as WA1 input.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="3wa1"></a><span class="f_c1" style="font-weight: bold;">WA1, WA2</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">These options permit entry of any number of wavelengths from one to 10. &nbsp;Weights are set to unity, and may be changed with the WT1 and WT2 input. &nbsp;The color order is </span><span class="f_c1" style="font-style: italic;">not</span><span class="f_c1"> set with this input.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">At least one wavelength must be entered if the WA1 format is used. &nbsp;To enter seven wavelengths, for example, one could use</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1" style="font-family: 'Courier New';">WA1 .8 .75 .7 .65 .6</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1" style="font-family: 'Courier New';">WA2 .55 .5</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="3wt"></a><span class="f_c1" style="font-weight: bold;">WT1, WT2</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">Use these options to enter the spectral weights of each of the entered wavelengths. &nbsp; Any number except zero may be assigned to any wavelength. &nbsp;To suppress any given color, use a very small weight, but not zero. &nbsp;Thus, to evaluate the above data where you plan to filter out the light at 0.65 uM, you would enter</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1" style="font-family: 'Courier New';">WT1 1 1 1 .0001 1</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1" style="font-family: 'Courier New';">WT2 1 1</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="corder"></a><span class="f_c1" style="font-weight: bold;">CORDER</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">This input determines the color order: the first entry is the </span><span class="f_c1" style="font-weight: bold;">primary </span><span class="f_c1">color, which is used for paraxial raytracing and any paraxial solves that may be in effect. &nbsp;It also is the color at which the chief-ray point is found for image analysis. &nbsp;The second and third are the </span><span class="f_c1" style="font-weight: bold;">long</span><span class="f_c1"> and </span><span class="f_c1" style="font-weight: bold;">short</span><span class="f_c1"> colors, which give the wavelengths at which third-order chromatic aberration is calculated. &nbsp;Multicolor image analysis is performed on all wavelengths, in this order. &nbsp;If only the three required arguments are input, the program will fill in the remaining colors automatically. &nbsp;The color order is automatically set to (2 1 3) with the WAVL option, but is not set by the WA1 and WA2 options, for which a separate CORDER input is required.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="font-weight: bold;">LOG</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">Whenever you enter or change a lens, it is assigned a lens number that is the same as the current </span><span class="f_c1" style="text-decoration: underline;"><a href="um23.htm#log" class="topiclink">LOG</a></span><span class="f_c1"> number. &nbsp;This helps you keep track of which run created which lens, and the number is printed with the SPEC and other listings. &nbsp;When you save a lens and then get it back another time, the lens is assigned a new log number, not necessarily the one that was in effect when it was first generated.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">If you then wish to document the lens, you probably want the original log number to appear on the listings, not the current one. &nbsp;If so, just put this line in a CHG file. &nbsp;The lens number will be set to the entered value.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><a name="iline"></a><span class="f_c1" style="font-weight: bold;">ILINE</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">This is a system specification intended for lenses that work in the ultraviolet region of the spectrum. &nbsp;Modern microlithography lenses require finer resolution than can be obtained with light in the visible spectrum and instead work at shorter wavelengths near the iLine (0.395 uM). &nbsp;But the default glass model utilized by GLM does not accurately describe real glasses in that region.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">Activating this option puts into effect an alternate set of interpolation coefficients for GLM elements that is a closer match to the behavior of real glasses in the UV.  </span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">This option only works if three or more wavelengths are defined, and none specify a value greater than 0.45 uM.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">If this option is selected, some of the glass-map analysis features are disabled, since they need the index at the C line (0.6563 um), which is outside the range of the new coefficients.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">To remove this declaration, use NILINE in a CHG file.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="font-weight: bold;">WPOWER</span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">Input power to a microlithography lens.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1" style="font-weight: bold;">DCYCLE </span></p>
+</td>
+<td style="vertical-align:top; width:443px; padding:4px; border:solid 1px #000000;"><p class="p_c1" style="text-align: left;"><span class="f_c1">Duty cycle for a microlithography lens.</span></p>
+<p class="p_c1" style="text-align: left;"><span class="f_c1">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">Whenever new wavelength data are entered, the program </span><span class="f_mine" style="font-weight: bold;">COLOR</span><span class="f_mine"> (</span><span class="f_mine" style="text-decoration: underline;"><a href="um56.htm" class="topiclink">see 5.6</a></span><span class="f_mine">) is automatically called following the </span><span class="f_mine" style="font-weight: bold;">RLE</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> input to calculate indices of refraction for all media for which glass model, glass table, or glass coefficients (</span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm#glm" class="topiclink">GLM</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm#gtb" class="topiclink">GTB</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm#glass" class="topiclink">GLASS</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um334.htm#gdf" class="topiclink">GDF</a></span><span class="f_mine">) have been specified. &nbsp;If any material has a fixed index, it is an error to input more wavelengths than indices, and care must be exercised to ensure that if wavelengths are changed the indices are also changed to correspond.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um311.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="umch3.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

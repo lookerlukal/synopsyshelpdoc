@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um523</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="glass,glass finding closest real glass,IRG" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;">&nbsp;</p>
+<p><a name="irg"></a><span style="font-size: 14pt;">5.23 Insert Real Glass (IRG)</span>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="text-decoration: underline;"><a href="um524.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um522.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SYNOPSYS can substitute a real glass type for any other, or for a glass model.  </span><span class="f_mine" style="text-decoration: underline;"><a href="um547.htm#arglass" class="topiclink">ARGLASS</a></span><span class="f_mine"> can replace any or all of the model glasses subject to certain selection criteria, while IRG operates on a single surface at a time.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">IRG </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> {S / O / H / F / U / C / G / R / M / P / N } [ AUTO ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">glassname</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will replace the current glass at surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> with the named glass. &nbsp;The program then submits an optimization job that varies curvatures as necessary in order to maintain the focal length of the lens and the ratio of powers of the two surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The catalog from which the glass is taken is given by one of the following letters:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:52px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">S</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Schott</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:52px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">O</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Ohara</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:52px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">H</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Hoya</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:52px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">F</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Corning France</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:52px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">U</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Unusual</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:52px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">C</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Custom</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:52px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">G</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Guangming</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:52px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">R</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">LZOS</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:52px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">M</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Sumita</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:52px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">P</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Private catalog</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:52px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">N</span></p>
+</td>
+<td style="vertical-align:top; width:136px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Nikon glass</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">AUTO</span><span class="f_mine"> option causes a search through the named glass catalog for the closest glass match. &nbsp;In this case the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">glassname</span><span class="f_mine"> on the following line is not allowed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The feature </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um531.htm#gsearch" class="topiclink">GSEARCH</a></span><span class="f_mine"> can substitute names glasses for selected elements and reoptimize automatically.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The glass-table </span><span class="f_mine" style="text-decoration: underline;"><a href="gt.htm" class="topiclink">display</a></span><span class="f_mine"> in PAD can show an entire catalog, and you can insert a selected glass with just a few mouse clicks. &nbsp;This is much easier to use than the IRG command. &nbsp;Really.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may run your IRG command file via the MACro editor, but do not run it as the alternate MACro. &nbsp;IRG creates its own alternate MACro to do the optimization, so this must be vacant.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um524.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

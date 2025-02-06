@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um69</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="STRAIN calculation" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="strain"></a><span class="f_mine" style="font-size: 14pt;">6.9 Strain Evaluation (STRAIN) </span><span class="f_mine">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-size: 10pt; text-decoration: underline;"><a href="um68.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-size: 10pt;"> </span><span class="f_mine" style="font-size: 10pt; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">STRAIN</span><span class="f_mine"> evaluation provides information that may be helpful in deciding how to modify a lens in order to improve its performance. &nbsp;The idea is that, if a given element contributes a large amount of some 3</span><span class="f_mine" style="vertical-align: super;">rd</span><span class="f_mine"> or 5</span><span class="f_mine" style="vertical-align: super;">th</span><span class="f_mine">- order aberration, it will be difficult for the other elements to compensate exactly – while, if the individual contribution is small, the compensation need not be so exact. &nbsp;This feature evaluates the aberrations of each element in the lens and prepares a table giving the values of the aberrations, the power of the element, and the sum of the squares of the aberrations listed, identified as the “STRAIN”. &nbsp;It can optionally produce a plot of the results. &nbsp;Input is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">STRAIN [ P ].</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If your goal is to improve the lens and you can allow an additional element, from this table you can identify which element has the largest strain and should be split. &nbsp;Doing so allows the power of that element to be shared by two elements, each with presumably smaller aberrations. &nbsp;Conversely, if the lens performance is adequate and your goal is to attempt to simplify the design by removing an element, then you should examine the table to see which element shows the smallest strain. &nbsp;If that element also has relative little power, it is a good bet you can remove it from the lens and reoptimize. &nbsp;The </span><span class="f_mine" style="text-decoration: underline;"><a href="um1016.htm#aed" class="topiclink">AED</a></span><span class="f_mine"> feature is a very handy way to alter the lens so the element can be deleted without destroying the image correction.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An element with a large strain is also an element that will have tight tolerances. &nbsp;This table can identify such elements, so you will know the problem areas before you spend time calculating a budget with </span><span class="f_mine" style="text-decoration: underline;"><a href="umch12.htm#btol" class="topiclink">BTOL</a></span><span class="f_mine">. &nbsp;You can examine the individual aberrations of such elements, in the listing, and perhaps improve things by controlling the value of the largest contributors to the strain. &nbsp;The strain of an element can be controlled during optimization with the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#astrain" class="topiclink">STRAIN</a></span><span class="f_mine"> aberration, and individual contributions can be controlled as well, as the following example shows.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um6f5.png" width="755" height="462" alt="um6f5" style="width:755px;height:462px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">SYNOPSYS AI&gt;STRAIN </span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">OPTICAL STRAIN ANALYSIS</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">FORMAT:</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; SA3 &nbsp; &nbsp; &nbsp; &nbsp;CO3 &nbsp; &nbsp; &nbsp;TI3 &nbsp; &nbsp; &nbsp; SI3 &nbsp; &nbsp; &nbsp; PET &nbsp; &nbsp; &nbsp; DIS &nbsp; &nbsp; &nbsp; PAC &nbsp; &nbsp; &nbsp; PLC</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; SA5 &nbsp; &nbsp; &nbsp; &nbsp;CO5 &nbsp; &nbsp; &nbsp;TOBSA &nbsp; &nbsp; SOBSA &nbsp; &nbsp; ECOMA &nbsp; &nbsp; TI5 &nbsp; &nbsp; &nbsp; SI5 &nbsp; &nbsp; &nbsp; DI5</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;1: SURFACES &nbsp; 1 TO &nbsp; 2; POWER = &nbsp; 0.326842E-02 STRAIN = &nbsp; 0.458184E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.32963 &nbsp;-0.44829 &nbsp;-0.19213 &nbsp;-0.11985 &nbsp;-0.08371 &nbsp;-0.00215 &nbsp;-0.08204 &nbsp; 0.28812</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.00890 &nbsp;-0.01915 &nbsp;-0.00837 &nbsp;-0.00323 &nbsp;-0.00095 &nbsp; 0.00068 &nbsp; 0.00046 &nbsp; 0.00001</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p class="p_heading1-4"><span class="f_heading1-4">ELEMENT NO. &nbsp;2: SURFACES &nbsp; 2 TO &nbsp; 3; POWER = &nbsp;-0.222515E-03 STRAIN = &nbsp; 0.249804E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.16071 &nbsp; 0.36521 &nbsp;-0.25520 &nbsp;-0.08378 &nbsp; 0.00193 &nbsp; 0.00266 &nbsp; 0.00159 &nbsp;-0.13445</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.01190 &nbsp; 0.01253 &nbsp;-0.00455 &nbsp;-0.00338 &nbsp; 0.00501 &nbsp;-0.00227 &nbsp;-0.00035 &nbsp; 0.00000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;3: SURFACES &nbsp; 5 TO &nbsp; 6; POWER = &nbsp; 0.489307E-02 STRAIN = &nbsp; 0.430209E+02</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -5.82816 &nbsp; 2.56679 &nbsp;-0.32687 &nbsp;-0.16034 &nbsp;-0.07707 &nbsp;-0.00038 &nbsp; 0.43509 &nbsp; 0.01053</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -1.20491 &nbsp; 0.78540 &nbsp;-0.24995 &nbsp;-0.06720 &nbsp; 0.03731 &nbsp;-0.00067 &nbsp; 0.00015 &nbsp; 0.00000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;4: SURFACES &nbsp; 7 TO &nbsp; 8; POWER = &nbsp;-0.838548E-02 STRAIN = &nbsp; 0.603173E+02</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;6.73840 &nbsp;-3.26425 &nbsp; 0.57085 &nbsp; 0.27316 &nbsp; 0.12432 &nbsp; 0.00069 &nbsp;-1.19934 &nbsp;-0.02662</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;1.29122 &nbsp;-0.81178 &nbsp; 0.25883 &nbsp; 0.07354 &nbsp;-0.04727 &nbsp; 0.00122 &nbsp;-0.00024 &nbsp; 0.00000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;5: SURFACES &nbsp; 9 TO &nbsp;10; POWER = &nbsp; 0.250200E-02 STRAIN = &nbsp; 0.279729E+00</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT" style="font-size: 8pt;"> -0.19559 &nbsp;-0.06620 &nbsp; 0.02058 &nbsp;-0.02762 &nbsp;-0.05172 &nbsp;-0.00390 &nbsp; 0.38376 &nbsp; 0.29225</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.01839 &nbsp;-0.00899 &nbsp;-0.00766 &nbsp;-0.00191 &nbsp; 0.00720 &nbsp; 0.00169 &nbsp; 0.00039 &nbsp; 0.00000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;6: SURFACES &nbsp;10 TO &nbsp;11; POWER = &nbsp; 0.384306E-02 STRAIN = &nbsp; 0.152366E+01</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -1.05139 &nbsp;-0.09548 &nbsp;-0.06601 &nbsp;-0.05859 &nbsp;-0.05488 &nbsp;-0.00010 &nbsp; 0.62091 &nbsp; 0.04831</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.09895 &nbsp;-0.02504 &nbsp; 0.00067 &nbsp;-0.00221 &nbsp;-0.00442 &nbsp; 0.00010 &nbsp; 0.00026 &nbsp; 0.00000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;7: SURFACES &nbsp;12 TO &nbsp;13; POWER = &nbsp;-0.566707E-02 STRAIN = &nbsp; 0.131740E+01</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.70069 &nbsp; 0.68476 &nbsp; 0.35937 &nbsp; 0.21073 &nbsp; 0.13640 &nbsp; 0.00317 &nbsp;-0.36406 &nbsp;-0.16432</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.05169 &nbsp; 0.04671 &nbsp; 0.02543 &nbsp; 0.01382 &nbsp; 0.01151 &nbsp; 0.00343 &nbsp; 0.00031 &nbsp; 0.00002</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;8: SURFACES &nbsp;13 TO &nbsp;14; POWER = &nbsp; 0.754151E-03 STRAIN = &nbsp; 0.775733E-01</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.03702 &nbsp; 0.10846 &nbsp;-0.12065 &nbsp;-0.04765 &nbsp;-0.01115 &nbsp; 0.00218 &nbsp;-0.07260 &nbsp;-0.20541</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.00059 &nbsp; 0.00245 &nbsp;-0.00330 &nbsp;-0.00056 &nbsp; 0.00117 &nbsp; 0.00000 &nbsp;-0.00006 &nbsp; 0.00000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">From this table we see that the strain is largest on elements 3 and 4 (which turn out to have very tight tolerances). &nbsp;Note the value of SA3 on element 4, 6.73. &nbsp;Let us see what happens if we give a target to this aberration, with the entry</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-family: 'Courier New';">M 3 .01 A SECTION SA3 7 8</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">in the AANT file. &nbsp;The lens changes to</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um6f6.png" width="755" height="462" alt="um6f6" style="width:755px;height:462px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The STRAIN calculation has changed considerably:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">SYNOPSYS AI&gt;STRAIN </span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">OPTICAL STRAIN ANALYSIS</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">FORMAT:</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; SA3 &nbsp; &nbsp; &nbsp; &nbsp;CO3 &nbsp; &nbsp; &nbsp;TI3 &nbsp; &nbsp; &nbsp; SI3 &nbsp; &nbsp; &nbsp; PET &nbsp; &nbsp; &nbsp; DIS &nbsp; &nbsp; &nbsp; PAC &nbsp; &nbsp; &nbsp; PLC</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; SA5 &nbsp; &nbsp; &nbsp; &nbsp;CO5 &nbsp; &nbsp; &nbsp;TOBSA &nbsp; &nbsp; SOBSA &nbsp; &nbsp; ECOMA &nbsp; &nbsp; TI5 &nbsp; &nbsp; &nbsp; SI5 &nbsp; &nbsp; &nbsp; DI5</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;1: SURFACES &nbsp; 1 TO &nbsp; 2; POWER = &nbsp; 0.189360E-02 STRAIN = &nbsp; 0.193654E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.04149 &nbsp;-0.19801 &nbsp;-0.11019 &nbsp;-0.06982 &nbsp;-0.04963 &nbsp;-0.00215 &nbsp;-0.22350 &nbsp; 0.28857</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.00044 &nbsp;-0.00370 &nbsp;-0.00139 &nbsp;-0.00056 &nbsp;-0.00048 &nbsp; 0.00040 &nbsp; 0.00027 &nbsp; 0.00001</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;2: SURFACES &nbsp; 2 TO &nbsp; 3; POWER = &nbsp; 0.100276E-02 STRAIN = &nbsp; 0.303274E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.21154 &nbsp; 0.39909 &nbsp;-0.25883 &nbsp;-0.09697 &nbsp;-0.01604 &nbsp; 0.00269 &nbsp; 0.06426 &nbsp;-0.13478</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.00658 &nbsp; 0.00992 &nbsp;-0.00953 &nbsp;-0.00319 &nbsp; 0.00673 &nbsp;-0.00188 &nbsp;-0.00023 &nbsp; 0.00000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;3: SURFACES &nbsp; 5 TO &nbsp; 6; POWER = &nbsp; 0.461373E-02 STRAIN = &nbsp; 0.146566E+01</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.59063 &nbsp; 0.86312 &nbsp;-0.38991 &nbsp;-0.17853 &nbsp;-0.07284 &nbsp;-0.00013 &nbsp; 0.42092 &nbsp; 0.00524</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.03366 &nbsp; 0.04688 &nbsp;-0.03956 &nbsp;-0.01261 &nbsp; 0.01929 &nbsp;-0.00162 &nbsp;-0.00001 &nbsp; 0.00000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;4: SURFACES &nbsp; 7 TO &nbsp; 8; POWER = &nbsp;-0.802174E-02 STRAIN = &nbsp; 0.437621E+01</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;1.28469 &nbsp;-1.19044 &nbsp; 0.57555 &nbsp; 0.27012 &nbsp; 0.11740 &nbsp; 0.00200 &nbsp;-0.93599 &nbsp;-0.04606</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.06809 &nbsp;-0.05666 &nbsp; 0.05995 &nbsp; 0.02041 &nbsp;-0.02392 &nbsp; 0.00206 &nbsp; 0.00008 &nbsp; 0.00001</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;5: SURFACES &nbsp; 9 TO &nbsp;10; POWER = &nbsp; 0.164606E-02 STRAIN = &nbsp; 0.148867E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.13982 &nbsp;-0.05063 &nbsp; 0.07110 &nbsp; 0.00232 &nbsp;-0.03208 &nbsp;-0.00357 &nbsp; 0.25348 &nbsp; 0.23731</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.00817 &nbsp;-0.00089 &nbsp;-0.00349 &nbsp;-0.00132 &nbsp; 0.00017 &nbsp; 0.00154 &nbsp; 0.00033 &nbsp;-0.00001</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;6: SURFACES &nbsp;10 TO &nbsp;11; POWER = &nbsp; 0.313810E-02 STRAIN = &nbsp; 0.401845E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.40577 &nbsp; 0.12258 &nbsp;-0.07608 &nbsp;-0.05444 &nbsp;-0.04362 &nbsp; 0.00035 &nbsp; 0.45952 &nbsp;-0.01063</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.01549 &nbsp;-0.00004 &nbsp; 0.00181 &nbsp;-0.00044 &nbsp;-0.00062 &nbsp; 0.00040 &nbsp; 0.00020 &nbsp; 0.00000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;7: SURFACES &nbsp;12 TO &nbsp;13; POWER = &nbsp; 0.405218E-02 STRAIN = &nbsp; 0.755555E-01</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.00127 &nbsp; 0.03295 &nbsp; 0.17187 &nbsp;-0.00771 &nbsp;-0.09750 &nbsp;-0.00292 &nbsp;-0.06884 &nbsp; 0.17497</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.00000 &nbsp; 0.00014 &nbsp; 0.00069 &nbsp;-0.00011 &nbsp;-0.00064 &nbsp; 0.00093 &nbsp; 0.00040 &nbsp; 0.00001</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ELEMENT NO. &nbsp;8: SURFACES &nbsp;13 TO &nbsp;14; POWER = &nbsp;-0.122158E-01 STRAIN = &nbsp; 0.186701E+00</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.00856 &nbsp;-0.06743 &nbsp; 0.00258 &nbsp; 0.12183 &nbsp; 0.18146 &nbsp; 0.01491 &nbsp;-0.21016 &nbsp;-0.29944</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> -0.00010 &nbsp;-0.00107 &nbsp;-0.00106 &nbsp; 0.00171 &nbsp; 0.00380 &nbsp; 0.01486 &nbsp; 0.00363 &nbsp; 0.00066</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now the lens has entered a different solution region, and the value of SA3 is even lower than we requested. &nbsp;The largest strain is now 4.37, while before it was 60.3. &nbsp;We would expect looser tolerances on this version of the lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optional “P” in the command line produces a plot, which lets you quickly identify opportunities. &nbsp;Here is an example, which is part of a microscope objective:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="strain01.png" width="448" height="355" alt="strain01" style="width:448px;height:355px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="strain02.png" width="784" height="595" alt="strain02" style="width:784px;height:595px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Looking at the lens drawing, one would never suspect that the element at surface 9 is not doing much work and can be deleted. &nbsp;But the STRAIN plot shows that the power and strain are both very low on that element. &nbsp;So we put an </span><span class="f_mine" style="text-decoration: underline;"><a href="um1016.htm#aed" class="topiclink">AED</a></span><span class="f_mine"> command at the top of the optimization MACro and reoptimized. &nbsp;This case required a great many passes, since the output end has a high NA and is very sensitive to construction changes – but eventually the merit function approached its previous value and we were able to delete that element.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

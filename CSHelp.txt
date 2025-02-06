@@ -1,0 +1,19 @@
+.topic 131631
+
+Glass Data Dialog
+
+The Glass Data dialog shows the glass attributes for a selected material, along with a graph of the material transmission.  You can reach this dialog from PAD by clicking the button , and then by clicking on a glass symbol and then the Properties button, or else with the cursor selection .  Then just click on a glass symbol and the dialog appears.  (Another feature lists glass attributes on the Command Window.  See Section 5.25.)  A sample is shown below.
+
+
+
+These data must be interpreted with caution.  The optical glass manufacturers have not agreed on the definition or range of the environmental attributes such as acid sensitivity, etc., and the listed numbers therefore cannot be directly compared with those from a different vendor – although a low value means a more stable glass than does a high value, in any one catalog.  The listed price is the ratio of the cost of the glass to that of glass type BK7; the value listed is not necessarily current, since vendors update their price list frequently.
+
+The displayed material transmission must be viewed as no more than a rough approximation showing the useful range of the material.  The algorithm models transmission by interpolating between data points provided by a vendor, but in some cases the materials listed are available from a variety of vendors, and the properties of their product can differ from those of other vendors.  You are therefore urged to consult the technical data provided by the vendor you plan to purchase from, if the exact transmission properties are critical to your project.  A sample of one of the U materials is shown below.
+
+
+
+The listed data for materials in the U catalog show two different wavelength ranges.  In the above example, the “Wavl. range “ tells you that the index data coefficients are valid over the range from 0.2 to 2.2 uM, while the “Transmission data range” says that the transmission function is valid from 0.3 to 2.0 uM.  These two ranges are different for most of the materials, depending on what kind of curves the vendor has supplied.
+.topic 131459
+Progress bar
+
+This display shows a progress bar to tell you how far along the program has gotten while performing a lengthy procedure.

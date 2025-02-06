@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Zoom Bar</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ZDATA,ZFILE,ZGROUP: useage,zoom lenses: the ZFILE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="zfile"></a><span class="f_mine" style="font-weight: bold;">10.7.1 ZFILE zoom lenses &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10711.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um107.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A lens can be defined a </span><span class="f_mine" style="font-weight: bold;">ZFILE</span><span class="f_mine"> zoom lens with the following input, which must be placed into the </span><span class="f_mine" style="font-weight: bold;">RLE</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">CHG</span><span class="f_mine"> file after all other lens data.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZFILE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NGROUPS</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(number of zooming groups)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ COBJ ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ CAM RANK </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RANK</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ CAM DAMP </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DAMP</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ CAM EXPONENT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">EXP</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ RSOLVES ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ ZCSTOP]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ CUBIC ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ ZFOCUS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TH0</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DT</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GIHT</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FIRST</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LAST</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp;[ PFOCUS / DFOCUS ] &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(surface numbers enclosing first group)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FIRST</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LAST</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp;[ PFOCUS / DFOCUS ] &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(second group, etc.)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">…</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZOOM 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(defines zoom position 2. &nbsp;The nominal lens is zoom 1.)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ FNO </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FNUM</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">[ {</span><span class="f_mine" style="font-weight: bold;"> OBA / OBB / OBC … / OBSAME } ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZDATA </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ZD1</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ZD2</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ZD3</span><span class="f_mine" style="font-weight: bold;"> …</span><span class="f_mine"> (gives shift along the axis of all the groups)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZOOM 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(defines zoom position 3, etc.)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">…</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(this ends the </span><span class="f_mine" style="font-weight: bold;">RLE</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">CHG</span><span class="f_mine"> file)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this input, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NGROUPS</span><span class="f_mine"> is the number of moving elements or groups of elements. &nbsp;It must be from 1 to 10. &nbsp;The groups themselves are defined by additional data, one set for each group, giving the surface numbers that enclose the group, with the input </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FIRST</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LAST</span><span class="f_mine">. &nbsp;The optional </span><span class="f_mine" style="font-weight: bold;">PFOCUS</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">DFOCUS</span><span class="f_mine"> may be used to designate a single group for adjustment by the <a href="um10712.htm#cam" class="topiclink">CAM</a> calculation to maintain paraxial focus. &nbsp;See that link for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The CAM command can also set some of the above declarations. &nbsp;See the above link for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Each zoom may be assigned its own object specifications, for cases where the object itself changes between zooms; or all zooms may be assigned the same object as zoom 1. &nbsp;In that case, use the </span><span class="f_mine" style="font-weight: bold;">COBJ</span><span class="f_mine"> entry to signify a constant object. &nbsp;If object data are not entered for any individual zoom -- and COBJ is not in effect -- that zoom will be assigned the same object as zoom 1. &nbsp;Thus, each zoom can get a different object, which may or may not be the same as zoom 1. &nbsp;COBJ acts like a pickup; if the object in zoom 1 is changed, all zooms will also change.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There is a practical advantage in designing the lens in such a way that the image geometry is constant rather than the object geometry. &nbsp;Then you can use the </span><span class="f_mine" style="font-weight: bold;">CAM ZMAG </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">magn</span><span class="f_mine"> <a href="um10712.htm#cam" class="topiclink">feature</a> to adjust the magnification if necessary, as well as the </span><span class="f_mine" style="font-weight: bold;">ZGROUP</span><span class="f_mine"> option in the AANT file, which applies the same aberration definitions to all (or a selected set of) zoom groups.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may enter optional data </span><span class="f_mine" style="font-weight: bold;">RANK</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">DAMP</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">EXP</span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold;">CUBIC</span><span class="f_mine">, which will affect how the <a href="um10712.htm#cam" class="topiclink">CAM</a> calculation executes a polynomial curve fit to the entered data. &nbsp;See that link for more information.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="zfocus_zfile"></a><span class="f_mine">The optional </span><span class="f_mine" style="font-weight: bold;">ZFOCUS</span><span class="f_mine"> entry will adjust the zoom lens to focus at a different object distance. &nbsp;Enter the desired new value of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TH0</span><span class="f_mine">, the surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSN</span><span class="f_mine"> whose airspace is to be altered to focus at that distance, and the desired axial shift of the first group, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DT</span><span class="f_mine">. &nbsp;This option only makes sense if all zooms utilize the same object distance. &nbsp;Thus, if group 1 consists of surfaces 1 through 4 and you want to focus the lens at 3000 mm by shifting that group by 20 mm, you would enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">ZFOCUS 3000 4 20</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ZFOCUS is also a <a href="um1071.htm#zfocus" class="topiclink">command</a>, and it can be included in an AANT file as well, for correcting aberrations at the altered object conjugate.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program alters the object distance and the specified airspace and reduces the paraxial object height YPP0 by the same ratio as TH0, which keeps about the same object angle. &nbsp;But this may not yield exactly the same GIHT as before, since the focal length of the lens also changes when the airspace is adjusted. &nbsp;The optional </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GIHT</span><span class="f_mine"> entry causes the program to find the new GIHT and then adjust YPP0 by the ratio, resulting in a new GIHT that is very close to the entered value. &nbsp;If this word is omitted, the program does not do the final adjustment. &nbsp;That would be appropriate when roughing out a lens and the focal length and GIHT are initially not well controlled.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optional </span><span class="f_mine" style="font-weight: bold;">RSOLVES</span><span class="f_mine"> input causes thickness solves to be active only in zoom 1. &nbsp;This means that if zoom 1 has a YMT solve, for example, the last surface will be at the paraxial focus in that zoom -- but not necessarily in the others. &nbsp;If this entry is not present, then thickness solves will be active in all zooms. &nbsp;(Curvature solves are always active only in zoom 1.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Many designers prefer to put the aperture stop at the last group, since then the CAO there will apply to all zooms and they all yield the same F/number. &nbsp;But assigning the stop to a different group can sometimes produce a lens with attractive mechanical properties, smaller apertures, and the like. &nbsp;But in this case the proper aperture on the (moving) stop will likely vary over the zoom range. &nbsp;To enable this kind of design, we have implemented a special parameter, </span><span class="f_mine" style="font-weight: bold;">ZCSTOP</span><span class="f_mine">, which goes in the ZFILE section of the RLE file. &nbsp;(The lens must also have the CSTOP directive in effect for this to work.) &nbsp;Then, to achieve a desired F/number, which can itself vary over the zoom, one adjusts the YMP1 parameter in the ZFILE object definition at each zoom so as to yield that F/number. &nbsp;With the ZCSTOP directive in place, the program will then recalculate the stop CAO at each zoom, according to the paraxial beam diameter there, and if the lens is assigned WAP types 2 or 3, the beam of real rays will be adjusted so it just fills that stop aperture. &nbsp;To remove the ZCSTOP directive, enter NZCSTOP in the ZFILE section of the RLE file.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When the groups have been defined, the zoom positions must be entered. &nbsp;Up to a maximum of 20 positions may be described. &nbsp;Each zoom setting requires zoom position data for each group and optionally an object definition for that zoom. &nbsp;The object data are in the same format as an </span><span class="f_mine" style="font-weight: bold;">RLE</span><span class="f_mine"> object input line using the mnemonics </span><span class="f_mine" style="font-weight: bold;">OBA</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">OBB</span><span class="f_mine">, or </span><span class="f_mine" style="font-weight: bold;">OBC</span><span class="f_mine">. &nbsp;If the object in all &nbsp;zooms is identical to that in the first zoom or is controlled by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#fillstop" class="topiclink">FILLSTOP</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">FFIELD</a></span><span class="f_mine"> options, no object data need be entered for any zoom. &nbsp;You may use the mnemonic </span><span class="f_mine" style="font-weight: bold;">OBSAME</span><span class="f_mine"> instead of an object specification, which also picks up the object data from zoom 1. &nbsp;Those system options, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#cstop" class="topiclink">CSTOP</a></span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">,</span><span class="f_mine"> can in some cases maintain the desired object geometry, and they will be honored in each zoom position if they are in effect in ZOOM 1. &nbsp;Note that the &quot;</span><span class="f_mine" style="font-weight: bold;">OBSAME</span><span class="f_mine">&quot; option is not like a pickup; it gets values only when it is first entered, not continuously during optimization.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A restriction applies to object type OBC: if any zoom uses this type,</span><span class="f_mine" style="font-style: italic;"> all</span><span class="f_mine"> zooms must use it -- or the zoom slider will not work. &nbsp;Object types OBA and OBB can be mixed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may also enter</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um2631.htm" class="topiclink">VFIELD</a></span><span class="f_mine"> data for each zoom. &nbsp;Just enter the parameters with your input, following the object specification line.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The object line, if any, is followed by one or more lines beginning with the mnemonic </span><span class="f_mine" style="font-weight: bold;">ZDATA</span><span class="f_mine">, defining the zoom shift in that zoom of each group according to the values of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ZD1</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ZD2</span><span class="f_mine">, and so on. &nbsp;Note that these data begin with zoom 2; the starting lens is always considered to be zoom 1. &nbsp;The ZDATA do not give the new airspaces; they give the location of each group relative to its position in zoom 1. &nbsp;Users of other programs should keep this in mind; those programs may define zoom positions by specifying the new airspaces, which is not the case with SYNOPSYS.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Paraxial curvature solves will apply only to zoom position 1, but thickness solves are normally active in all zooms. &nbsp;Therefore, if the final airspace is assigned a YMT solve, be aware that that airspace </span><span class="f_mine" style="font-style: italic;">will be different</span><span class="f_mine"> in each zoom position. &nbsp;If you want it to be the same in all zooms, either use the </span><span class="f_mine" style="font-weight: bold;">RSOLVES</span><span class="f_mine"> option, or do not assign a YMT solve, but instead control the defocus in the AANT file for ZOOM 1. &nbsp;Then all zooms will utilize the thickness that result.  </span><span class="f_mine" style="font-style: italic;">Never</span><span class="f_mine"> declare the image surface as a zoom group if it is also controlled by a YMT solve. &nbsp;Then there would be two different rules applying to the back focus distance, and they would fight each other. &nbsp;Use either a solve or a zoom setting, but not both.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We have had good results in cases where the number of zoom positions is between 5 and 10, but the most appropriate value depends on the situation. &nbsp;It is better to correct at too many zooms than too few.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is an example: in the lens shown below, elements three and five are zoomed to change the magnification of a laser expander. &nbsp;The input beam is the same in all zooms, and since this is an optically compensated zoom lens the two elements always zoom by the same amount.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f18.png" width="551" height="194" alt="um10f18" style="width:551px;height:194px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input for this case might be as follows</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">RLE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">… &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(lens description)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZFILE 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">5 6</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">9 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZOOM 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZDATA .5 .5</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZOOM 3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZDATA 1.0 1.0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZOOM 4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZDATA 1.5 1.5</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZOOM 5</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZDATA &nbsp;2. 2.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 48px 0px 48px;"><span class="f_mine">To make sure that this lens is indeed optically compensated, one would have to include the </span><span class="f_mine" style="font-style: italic;">difference</span><span class="f_mine"> between the group zooms in the AANT file, with a target of zero, as follows (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um1033.htm" class="topiclink">Section 10.3.3</a></span><span class="f_mine">):</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">AANT</span></p>
+<p class="p_mine"><span class="f_mine">…</span></p>
+</td>
+<td style="vertical-align:top; width:274px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">M 0 10 A ZDATA 1 2</span></p>
+</td>
+<td style="vertical-align:top; width:274px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">; the zoom of group 1 at zoom 2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">S ZDATA 2 2</span></p>
+</td>
+<td style="vertical-align:top; width:274px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">; is equal to group 2 at zoom 2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">M 0 10 A ZDATA 1 3</span></p>
+</td>
+<td style="vertical-align:top; width:274px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">; do the same at zoom 3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">S ZDATA 2 3</span></p>
+</td>
+<td style="vertical-align:top; width:274px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">…</span></p>
+</td>
+<td style="vertical-align:top; width:274px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">and so on</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="zoombar"></a><span class="f_mine">When the lens has been defined by the </span><span class="f_mine" style="font-weight: bold;">RLE</span><span class="f_mine"> file, it may be stored and retrieved with the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um371.htm#store" class="topiclink">STORE</a></span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">GET</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um372.htm#save" class="topiclink">SAVE</a></span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold;">FETCH</span><span class="f_mine"> commands – and the zoom data remain with the lens. &nbsp;To analyze the lens in a desired zoom position, enter the command (in command mode)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">ZOOM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> is one of the previously defined zoom positions, or else click on the right toolbar:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="zoombar.png" width="33" height="475" alt="zoombar" style="width:33px;height:475px;border:none"><span class="f_mine"> (This toolbar is only visible when the current lens is a ZFILE zoom lens.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When this command is read or the toolbar button is clicked, the program substitutes the object data for that zoom position, and moves the zooming elements the desired amount. &nbsp;For example, the command &quot;</span><span class="f_mine" style="font-weight: bold;">ZOOM 2</span><span class="f_mine">&quot; with the above lens would add 0.5 to the thickness (airspace) of surface 4 and subtract the same amount from thickness 6, and then repeat this for the second zooming element – thereby changing thicknesses 8 and 10. &nbsp;To go back to the first position 1, enter &quot;</span><span class="f_mine" style="font-weight: bold;">ZOOM 1</span><span class="f_mine">&quot;. &nbsp;The </span><span class="f_mine" style="text-decoration: underline;"><a href="umch15.htm#ai" class="topiclink">Al</a></span><span class="f_mine"> program will print the current zoom position with the question &quot;</span><span class="f_mine" style="font-weight: bold;">ZOOM?</span><span class="f_mine">&quot;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is therefore simple to go from one zoom to another, but there are several restrictions: the program will not permit you to make changes to a ZFILE zoom lens that is not in zoom position 1. &nbsp;If you did, and then entered the ZOOM command to go to another zoom, the lens might not be correct since the zooms are all referred to zoom 1, not to the one you changed. &nbsp;The one exception is in the WorkSheet, where you can alter the zoom data on a given group with a slider. &nbsp;In this case, if the lens is not currently in zoom 1 and you click on or select a surface that is the start of a zoom group, the top slider (normally for CV) becomes redefined as a zoom slider, and the position of that group in the current zoom can then be altered with that slider. &nbsp;(You can also change any of the ZFILE data from the WorkSheet by clicking on the button </span><img src="wszfile.png" width="24" height="20" alt="wszfile" style="width:24px;height:20px;border:none"><span class="f_mine"> while in zoom 1. &nbsp;Near the top of those data you will also find the CAM RANK, DAMP and EXPONENT values currently in effect, and which you can alter if you wish.) &nbsp;If the lens is not in zoom 1 and you try to change anything else in the WorkSheet, the program will not let you. &nbsp;Change to zoom 1 first, please.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To change the data in a ZFILE zoom lens, therefore, you must first go to zoom 1, make the change, and then zoom to the desired position. &nbsp;Alternatively, you can remove the ZFILE characteristic with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">ZFIX</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">when in command mode. &nbsp;Once fixed in this way, the lens becomes an ordinary lens that may be changed in any way – but not zoomed. &nbsp;Note that this input is a separate </span><span class="f_mine" style="font-style: italic;">command</span><span class="f_mine">, and not part of an RLE or CHG file.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="zfocus"></a><span class="f_mine">When the </span><span class="f_mine" style="font-style: italic;">command form</span><span class="f_mine"> of </span><span class="f_mine" style="font-weight: bold;">ZFOCUS</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TH0</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSN</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DT</span><span class="f_mine"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GIHT</span><span class="f_mine"> ] is entered, the program alters the object thickness and position of the focusing group, as described above. &nbsp;Then you can analyze the image at the new conjugate. &nbsp;To restore the nominal parameters, enter the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">ZFOCUS OFF</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Be aware that the ZFOCUS options will alter the specified TH, and if you use A</span><span class="f_mine" style="font-weight: bold;">EI </span><span class="f_mine">to insert any elements before that TH, the thickness will then not apply where it did before, since now that location has a different surface number. &nbsp;So, if you want to use AEI, be sure to give a surface range that does not include the front group..</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The bottom button on the zoom toolbar opens a small dialog with a horizontal slider that becomes active when the PAD display is open. &nbsp;Dragging the slider to the left or right will zoom the lens in small increments, interpolated between the zooms actually defined, to let you keep track of the image quality over the whole range. &nbsp;This is a good way to check whether there will be image problems at zoom settings that were not controlled in the merit function. &nbsp;This feature uses the same interpolation as the </span><span class="f_mine" style="text-decoration: underline;"><a href="um10712.htm#cam" class="topiclink">CAM</a></span><span class="f_mine"> routine, and you should read that section to be aware of the way the program fits a polynomial and the effect of the CAM RANK, DAMPING, and EXPONENT input, which apply to the zoom slider as well as to the CAM curve.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If a ZFILE zoom lens is stored or saved, the program puts it into zoom 1 first. &nbsp;The program </span><span class="f_mine" style="text-decoration: underline;"><a href="um511e.htm#reverse" class="topiclink">REVERSE</a></span><span class="f_mine"> will attempt to reverse the lens and the zoom adjustments, although some conditions are not treated, such as a zoomed image plane. &nbsp;As for all reversals, you are advised to check the results, especially the object definitions afterwards.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In configuration 1, zoom 1, you can edit all parameters in the WorkSheet editor. &nbsp;In other zooms, the sliders are disabled, as is the Update button. &nbsp;In other words, if you want to change anything in the zoom lens, put it in zoom 1 first. &nbsp;This restriction ensures that the other zoom positions, which get their nominal data from zoom 1, will be shifted properly.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you are in a zoom </span><span class="f_mine" style="font-style: italic;">other than</span><span class="f_mine"> 1 and click on the first surface of a zoom group, the top slider becomes active and controls the zoom position of that group in that zoom.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="zfileshadow"></a><span class="f_mine">Special rules apply when a ZFILE zoom lens is subject to </span><span class="f_mine" style="font-style: italic;">thermal shadowing</span><span class="f_mine">. &nbsp;The shadowed copy is put into an alternate configuration according to the </span><span class="f_mine" style="text-decoration: underline;"><a href="um59.htm#therm" class="topiclink">ATS</a></span><span class="f_mine"> data, and the rules for which changes are allowed are then more restrictive than otherwise.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you change to an alternate configuration that contains a thermal shadow of the lens in ACON 1, the zoom toolbar is then not available. &nbsp;You must change zooms in configuration 1 to make the shadowed lens go to that zoom. &nbsp;You should not attempt to edit other parameters of the shadowed lens either, since they will revert to the shadowed variables from ACON 1 whenever you activate that configuration. &nbsp; In other words, use the shadowed version to check the layout and image quality – but don’t try to edit any parameters in that configuration independently.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">See the </span><span class="f_mine" style="text-decoration: underline;"><a href="um10711.htm" class="topiclink">next section</a></span><span class="f_mine"> regarding the use of ZFILE variables in optimization.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="zout"></a><span class="f_mine">A summary of the ZFILE zoom data is listed by the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">ZOUT [ FULL ].</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The summary includes all of the ZFILE data, including the object descriptions, if the optional </span><span class="f_mine" style="font-weight: bold;">FULL</span><span class="f_mine"> is included. &nbsp;Otherwise, a brief summary is given as shown below.</span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;"> ZFILE ZOOM LENS HAS &nbsp; &nbsp; &nbsp;2 ZOOMING GROUPS, &nbsp; &nbsp; &nbsp;5 ZOOMS</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;"> GROUP DEFINITIONS (FIRST,LAST):</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;"> ( 5, 6) ( 9,10)</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;"> ZOOM SHIFTS BY ZOOM NUMBER:</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;"> GROUP: &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;"> ----------------------------------</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;1 &nbsp; &nbsp; &nbsp;0.000000 &nbsp; &nbsp; &nbsp;0.000000</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;2 &nbsp; &nbsp; &nbsp;0.500000 &nbsp; &nbsp; &nbsp;0.500000</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;3 &nbsp; &nbsp; &nbsp;1.000000 &nbsp; &nbsp; &nbsp;1.000000</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;4 &nbsp; &nbsp; &nbsp;1.500000 &nbsp; &nbsp; &nbsp;1.500000</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;5 &nbsp; &nbsp; &nbsp;2.000000 &nbsp; &nbsp; &nbsp;2.000000</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Courier New'; font-weight: bold;"> ----------------------------------</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program </span><span class="f_mine" style="font-weight: bold;">PAD</span><span class="f_mine"> will accept the command </span><span class="f_mine" style="font-weight: bold;">ZOOM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> at the PAD&gt; prompt, thereby changing the zoom and updating the display (or you can click on the zoombar, shown above), and a composite drawing of all of the defined zoom positions may be obtained with the mnemonic</span><span class="f_mine"><a href="um711.htm#zdwg" class="topiclink"> </a></span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um711.htm#zdwg" class="topiclink">ZDWG</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To alter the ZDATA in a ZFILE zoom lens, either use the </span><span class="f_mine" style="font-weight: bold;">LE</span><span class="f_mine"> (lens edit) feature (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um362.htm" class="topiclink">3.6.2</a></span><span class="f_mine">), click on the WorkSheet toolbar button </span><img src="wszfile.png" width="24" height="20" alt="wszfile" style="width:24px;height:20px;border:none"><span class="f_mine">, or use the zoom data slider described above. &nbsp;If you enter the ZFILE mnemonic in a </span><span class="f_mine" style="font-weight: bold;">CHG</span><span class="f_mine"> session, you must reenter the </span><span class="f_mine" style="font-style: italic;">entire file</span><span class="f_mine"> of data, so it is easier to let </span><span class="f_mine" style="font-weight: bold;">LE</span><span class="f_mine"> and the WorkSheet prepare the current file for you, and then just edit this file with your new data.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One sometimes needs to analyze the performance of a zoom lens when the object distance is changed. &nbsp;The simplest way is to use the </span><span class="f_mine" style="font-weight: bold;">ZFOCUS</span><span class="f_mine"> command, as described above, which changes the object distance and a designated airspace that is used for range focusing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="zfz"></a><span class="f_mine">It is possible to analyze a ZFILE zoom lens affected by a change in temperature. &nbsp;The </span><span class="f_mine" style="text-decoration: underline;"><a href="um59.htm#therm" class="topiclink">THERM</a></span><span class="f_mine"> program can be used for the purpose, and the ATS (activate thermal shadowing) option is useful. &nbsp;This will put a shadowed version of the lens in an alternate configuration, with dimensions altered by the temperature difference. &nbsp;It will not be a zoom lens, however. &nbsp;(The ZFILE data are not changed with temperature, so they would be inappropriate if used intact.) &nbsp;But if you change the zoom setting of ACON 1, the new spacings will be transferred (and subject to thermal expansion) to the shadowed ACON, which will therefore model the lens, at the new zoom setting, at the new temperature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="text-decoration: underline;">AI</span><span class="f_mine"> program can evaluate any property of interest, looping over the zoom positions. &nbsp;It can also examine and change individual zoom positions -- with some restrictions. &nbsp;The AI input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">FIND ZDATA 1 2</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will show the zoom position of group 1 in zoom 2. &nbsp;You can also change things. &nbsp;For example,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">Z1 = ZDATA 2 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">= Z1 + 1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">Z2 = FILE 1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">ZDATA 2 3 = Z2</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">or</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">ZDATA 2 3 = -44.5</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; background-color: #ffffff;">AI can also return the number of currently defined zooms, for example, FIND NZOOMS, or Z1 = NZOOMS.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; background-color: #ffffff;">AI does not support more complicated constructions, however, such as INCREASE ZDATA 2 3 BY 1.1 or ZDATA 2 3 = FILE 1. &nbsp;The AI sentence can only contain numbers, the Zn parameters, and the ZFILE data.</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10711.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

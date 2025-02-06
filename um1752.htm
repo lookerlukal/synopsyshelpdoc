@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1752</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Quarter, half-wave plates,Waveplates,WPLATE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">17.5.2 Quarter-Wave, Half-Wave Plates &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1751.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Quarter-wave and half-wave plates are optical elements used to convert one polarization state into another. &nbsp;They are typically made of a birefringent material such as crystal quartz, where the index of refraction changes with the direction of polarization of the light relative to a unique axis within the crystal. &nbsp;(See </span><span class="f_mine" style="text-decoration: underline;"><a href="um175.htm" class="topiclink">Section 17.5</a></span><span class="f_mine"> for a discussion of the properties of these materials.) &nbsp;A waveplate can be made from a single element of such a material by orienting the (flat) surfaces parallel to the crystal axis and adjusting the thickness so that the phase retardation between the polarizations parallel to and perpendicular to the axis is exactly one quarter (or one half) of a wave. &nbsp;If such an element is inserted into a linearly polarized collimated beam with the crystal axis at 45 degrees with respect to the polarization direction, the transmitted beam will show circular polarization instead of linear.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It turns out that the required thickness is too small for a single element, however, for mechanical reasons; so these elements are typically made from two thicker elements whose axes are at right angles. &nbsp;The retardance of one is cancelled almost completely by the other, leaving a quarter (or half) of a wave net effect owing to a slight difference in their thicknesses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A rigorous analysis of a waveplate requires a ray to be split into two components, with two polarizations, and the paths and retardance calculated separately. &nbsp;Although SYNOPSYS cannot actually split a ray into two parts having different paths, it is possible to model these elements very closely in a single path. &nbsp;If the crystal axis is perpendicular to the optical axis (as it is in waveplates), and if the surfaces are flat, then the exit points of the two components, were they traced independently, would closely coincide at the exit face, and the refraction directions would exactly coincide as well. &nbsp;It is therefore possible to trace only one ray path and to calculate the phase difference that would occur along the other path – and then to recombine the polarization components with this phase difference accounted for. &nbsp;In this way SYNOPSYS can analyze both the image-forming and polarization properties of these elements.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input (in the RLE or CHG file) is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> WPLATE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">THICKNESS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RETARDANCE</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> CRQUARTZ / CALCITE }</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To use these elements, you must allow a total of three surfaces, all flat. &nbsp;The program will calculate the thicknesses of both halves of the element, each nearly equal to one-half of THICKNESS, but differing by a quantity DELTA, where</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">DELTA = RETARDANCE * WAVELENGTH / (No – Ne).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">No and Ne are the ordinary and extraordinary refractive indices, and the wavelength is that of color number </span><span class="f_mine" style="text-decoration: underline;">ICOL</span><span class="f_mine">, or the primary color if </span><span class="f_mine" style="text-decoration: underline;">ICOL</span><span class="f_mine"> is not entered. &nbsp;It is not necessary to give a thickness or index to either of the two components of the waveplate, since these are generated by the program. &nbsp;(But PXT mode must be on.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For a quarter-wave plate, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RETARDANCE</span><span class="f_mine"> is 0.25; and for a half-wave plate it would be 0.5. &nbsp;The material is specified on the following line, and both the ordinary and extraordinary indices are then obtained from the glass tables.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In a real waveplate, the thicknesses and surface figures are held to very tight tolerances, since the retardation would be in error otherwise. &nbsp;If any of the surfaces involved are curved, then in general the rays are not perfectly recombined after they are split, and the WPLATE feature of SYNOPSYS is then not appropriate, although it will show the polarization along one path (where the first half is extraordinary and the second is ordinary.) &nbsp;The BIREF feature of the previous section can show the double image, but not the change in polarization. &nbsp;(It can tell you how much of a given polarization gets through, but cannot combine two results into a single ray, as can the waveplate feature.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since waveplates are invariably used at an orientation of 45 degrees tilt in the gamma direction, the program defines the two halves with the crystal axes rotated to these angles. &nbsp;It is therefore not necessary for you to rotate the element in gamma yourself, if this is the orientation you want.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Be aware that if you change the wavelengths in a system containing a WPLATE, the thicknesses of the waveplate will automatically change following the above rules as applied to the new wavelength and indices of refraction. &nbsp;If you change the wavelengths in such a way that color </span><span class="f_mine" style="text-decoration: underline;">ICOL</span><span class="f_mine"> is no longer present in the lens, the program will then change the WPLATE specification to a BIREF, with the same thickness as before. &nbsp;You can thus raytrace through the material – but you cannot evaluate its polarization properties.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">WPLATE and BIREF index data cannot be transferred from one ACON to another with the ACON PICKUPS file; those specifications must be entered manually. &nbsp;It is unwise to pickup the thicknesses in such cases, since the values are implied by the WPLATE specification itself and the pickup is not relevant.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

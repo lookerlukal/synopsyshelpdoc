@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um139</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DXF file, saving a plot as,HARDCOPY,HPGL file, saving a plot as,IGES file, saving RPER plot,Postscript file, saving a plot as" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><span class="f_mine" style="font-size: 14pt;">13.9 Saving a plot as an HPGL, DXF, or Postscript file &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um138.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="hpgl"></a><a name="postscript"></a><span class="f_mine">There are three ways to create a dxf file to be opened by a third-party program such as AutoCAD. &nbsp;The first is described in this section; it only applies to 2D pictures. &nbsp;The second uses the </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#per" class="topiclink">RPER</a></span><span class="f_mine"> wire-frame rendering, while the third is created with </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#dsolid" class="topiclink">DSOLID</a></span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">After a plot is displayed on the screen, you can optionally save it in HPGL, DXF, or Postscript format. &nbsp;These formats cannot be read by SYNOPSYS, but can be imported into some third-party applications that can read this kind of file. &nbsp;Some of these applications can also translate the file into numerous other graphics formats.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The commands are</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">HARDCOPY HPGL</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">HARDCOPY DXF</span></p>
+<p class="p_mine"><span class="f_mine">and</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">HARDCOPY POST.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You have some control over the name: the actual name is just the second argument of the command, of which the first three characters must be “HPG”, “DXF”, or “POS”. &nbsp;So you could create a file named “HPGLENS1.PLT” with the command </span><span class="f_mine" style="font-weight: bold;">HARD HPGLENS1</span><span class="f_mine">, or a file “POST55.PS” with the command </span><span class="f_mine" style="font-weight: bold;">HARD POST55</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the application you use to read the HPGL file allows you to map the pen numbers to colors, to get the same colors as on the SYNOPSYS display, map them as follows. &nbsp;(This applies only to HPGL and POST files; for DXF files with color, you must use the DXF button on the RPER dialog; see below.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">black</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">red</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">3</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">blue</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">4</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">magenta</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">5</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">cyan</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">6</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">green</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">7</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">black</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="iges"></a><span class="f_mine">You cannot save an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um72.htm#rper" class="topiclink">RPER</a></span><span class="f_mine"> plot with the HARDCOPY command – but you can turn it into a DXF file by clicking on the button </span><img src="rperdxf.png" width="24" height="23" alt="rperdxf" style="width:24px;height:23px;border:none"><span class="f_mine"> or an IGES file by clicking the button </span><img src="rperiges.png" width="24" height="23" alt="rperiges" style="width:24px;height:23px;border:none"><span class="f_mine">. &nbsp;These files will contain all of the 3-D information, and the picture can be rotated by those commercial CAD programs with that capability. &nbsp;The DXF format will show the picture at the current display angles, while the IGES format initially will show the lens at angles (0,0). &nbsp;Also, the greyscale of the FRINGES or PSVISUAL and MIT plots cannot at present be converted with this command. &nbsp;A dxf solid model may be prepared with the command </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm#dsolid" class="topiclink">DSOLID</a></span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1310.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

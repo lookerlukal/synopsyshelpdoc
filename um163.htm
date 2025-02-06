@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um163</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Dobrowolski,FILM:,FILM: DESIGN MODE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-size: 14pt;">16.3 Design Mode &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um164.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um162.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The design program is divided into three modes of operation: it can build up a stack starting with just the substrate definition; it can accept a starting stack and add layers to it; or it can merely optimize the starting stack. &nbsp;Data formats are as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ WAVL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LAMBDA0</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ ANGLE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANGLE</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ DI </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">THETA</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ KSD { 1 / 2 } ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ TNET </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">T1</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">T2</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">T3</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">T4</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ NNET </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">N1</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">N2</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">N3</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">N4</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ TLIM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LO</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HI</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ NLIM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LO</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HI</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ BUILD &plusmn;</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">No</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Nf</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">K</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ ID identification ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ ADD &plusmn;</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ FIX ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">PANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">SN ( 1 / 0 ) ( 1 / 0 )</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">SN ( 1 / 0 ) ( 1 / 0 )</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">…</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">AANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GRW </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LLOW</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LHIGH</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">reflectance target generation, over wavelength</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GTW </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LLOW</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LHIGH</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">transmission target generation</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GRA </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ALOW</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AHIGH</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">reflection as function of angle</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GTA </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ALOW</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AHIGH</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">transmission as function of angle</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RAVE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WAVL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">(average reflectance)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RSP </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WAVL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TARS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TARP</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WTS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WTP</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">(S and P reflectance)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TAVE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WAVL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">(average transmission)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TSP </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WAVL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TARS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TARP</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WTS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WTP</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">(S and P transmission)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RP </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WAVL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TARS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TARP</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WTS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WTP</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">(phase change, reflection)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PDR </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WAVL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">(phase difference, reflection)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TP </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WAVL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TARS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TARP</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WTS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WTP</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">(phase change, transmission)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PDT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WAVL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">(phase difference, transmission)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SYNOPSYS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NPASSES</span></p>
+</td>
+<td style="vertical-align:top; width:398px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The first four of these entries will create a set of targets automatically. &nbsp;Thus, to minimize reflection over the range 0.4 to 0.8, one could enter GRW 0 0 50 .4 .8. &nbsp;The total number of targets to be controlled must not exceed 50.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The method used to build the stack is from Dobrowolski (Appl. Opt., Aug. 1965, P. 937). &nbsp;The program adds layers to the substrate or current stack two at a time, selecting the best pair from a net of four thicknesses and indices, giving 16 possibilities, and adding these to either the air-stack or stack-substrate interface. &nbsp;After the best choice is added, the stack is optimized for a number of iterations, and then the whole process is repeated until the desired stack size is reached. &nbsp;The program will delete layers that become too thin and consolidate adjacent layers whose indices are close. &nbsp;When the design is finished, the program can optionally insert the closest matching actual material index at each layer, chosen from a </span><span class="f_mine" style="text-decoration: underline;"><a href="um163.htm#filmfix" class="topiclink">stored table</a></span><span class="f_mine">, and reoptimize the stack. &nbsp;Input data are described below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">WAVL, ANGLE</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:376px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">are the same as in the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um161.htm" class="topiclink">RFILM</a></span><span class="f_mine"> file, for when there is no starting stack (</span><span class="f_mine" style="font-weight: bold;">BUILD</span><span class="f_mine">).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td rowspan="20" style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">DI</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:376px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">defines the position of the phase-angle discontinuity, for use when controlling phase changes. &nbsp;Phase angles are defined between zero and </span><span class="f_mine" style="text-decoration: underline;">THETA</span><span class="f_mine"> - 360), and the default THETA is 180 degrees.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">KSD</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:376px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">can take values of 1 or 2. &nbsp;1 adds layers only next to the substrate, while 2 adds layers next to the incident medium. &nbsp;The default can add at either location, selecting the better place each time layers are added. &nbsp;No KSD should be entered for this case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TNET</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:376px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the four values to the thickness net. &nbsp;The default net is .1, .2, .3, .4 waves. &nbsp;A value of zero may be entered for the first number; if entered elsewhere the net is terminated at that point.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">NNET</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:376px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives four index values for the net. &nbsp;The default values are 1.38, 1.62, 1.86, and 2.1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TLIM</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:376px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">defines the thickness limits during optimization. &nbsp;They must be outside of the thickness net. &nbsp;Default limits are 0 to 1 wave.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">NLIM</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:376px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the limits to the index. &nbsp;Defaults are 1.38 to 2.10.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PANT</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:376px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the file header command for the variable definition file. &nbsp;The format is different from that in SYNOPSYS lens files: for every surface to be varied the surface number is entered along with two numbers. &nbsp;The first applies to the thickness of that layer, which will be varied if the number is 1 and held fixed if it is 0. &nbsp;The second number applies to the index. &nbsp;Note that the </span><span class="f_mine" style="font-weight: bold;">PANT</span><span class="f_mine"> file is needed only if a starting stack is entered. &nbsp;If the BUILD option is selected, no </span><span class="f_mine" style="font-weight: bold;">PANT</span><span class="f_mine"> file is needed since all parameters are assumed to be variables as they are added. &nbsp;Layer number 1 is the incident medium, and variables begin with layer 2.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">BUILD</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:376px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes the program to construct the entire stack given only the incident and substrate indices, and the number of layers. &nbsp;If </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> is negative, only the thicknesses will be varied as they are added. </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">No</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine">is the refractive index of the incident medium; </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Nf</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">K</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine">are the real and (optional) imaginary parts of the substrate index. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> If the word </span><span class="f_mine" style="font-weight: bold;">ALUMINUM</span><span class="f_mine"> is entered in word 4 of this command, the program will automatically update the index and K values at each wavelength analyzed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The BUILD process will attempt to add layers up to the specified number – but only as long as doing so improves the performance. &nbsp;If adding additional layers and optimizing results in no improvement, the process stops at that point. &nbsp;(However, if the stack then has less than &frac12; of the requested number of layers, the process continues, but may fail to improve the stack – and you may have to abort the process with the stopsign button </span><img src="clip0407.png" width="28" height="28" alt="clip0407" style="width:28px;height:28px;border:none"><span class="f_mine">.) &nbsp;Since layers are added two at a time and sometimes removed, the final number of layers will not necessarily equal the requested number.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ID ...</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:376px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is an optional stack identification.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ADD</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:376px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes the requested number of layers to be added to a starting stack. &nbsp;Negative </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> varies only thicknesses.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="filmfix"></a><span class="f_mine" style="font-weight: bold;">FIX</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:376px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes the program to substitute the closest real material for each of the layers after optimization and reoptimize varying only the thicknesses. &nbsp;The materials available are:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:103px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td style="vertical-align:top; width:127px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;">Material</span></p>
+</td>
+<td style="vertical-align:top; width:303px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="text-decoration: underline;">Index</span></p>
+</td>
+<td style="vertical-align:top; width:11px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:103px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td style="vertical-align:top; width:127px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">MgF2</span></p>
+</td>
+<td style="vertical-align:top; width:303px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.38</span></p>
+</td>
+<td style="vertical-align:top; width:11px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:103px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td style="vertical-align:top; width:127px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">SiO2</span></p>
+</td>
+<td style="vertical-align:top; width:303px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.47</span></p>
+</td>
+<td style="vertical-align:top; width:11px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:103px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td style="vertical-align:top; width:127px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">ThF4</span></p>
+</td>
+<td style="vertical-align:top; width:303px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.52; this material has two index ranges: 0.27 to 0.7 and 4 to 12 um. &nbsp;Other ranges will use other materials.</span></p>
+</td>
+<td style="vertical-align:top; width:11px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:103px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td style="vertical-align:top; width:127px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">CeF3</span></p>
+</td>
+<td style="vertical-align:top; width:303px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.64</span></p>
+</td>
+<td style="vertical-align:top; width:11px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:103px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td style="vertical-align:top; width:127px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">CeO2</span></p>
+</td>
+<td style="vertical-align:top; width:303px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.74</span></p>
+</td>
+<td style="vertical-align:top; width:11px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:103px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td style="vertical-align:top; width:127px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">HfO2</span></p>
+</td>
+<td style="vertical-align:top; width:303px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.0</span></p>
+</td>
+<td style="vertical-align:top; width:11px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:103px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td style="vertical-align:top; width:127px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">ZrO2</span></p>
+</td>
+<td style="vertical-align:top; width:303px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.1</span></p>
+</td>
+<td style="vertical-align:top; width:11px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:103px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td style="vertical-align:top; width:127px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">TAO5</span></p>
+</td>
+<td style="vertical-align:top; width:303px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.154</span></p>
+</td>
+<td style="vertical-align:top; width:11px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">AANT</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the file header command defining the quantities to be controlled by the design program.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RAVE</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the average reflectance at the entered wavelength and angle.  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">TAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine">is the desired value and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine">the relative weight.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RSP</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies the desired reflectance for the S- and P-polarized components, individually.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TAVE</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the average transmittance.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TSP</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the reflectance in S- and P-polarization.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RP</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the phase change for S and P.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PDR</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine">the phase difference on reflection.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TP</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the phase change on transmission.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PDT</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the phase difference on transmission.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">ends the aberration definition file.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Up to 50 targets may be specified in the </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> file.  </span><span class="f_mine" style="font-weight: bold;">SYNOPSYS </span><span class="f_mine">initiates the optimization program. &nbsp;When finished, the program automatically goes to common mode. Optimization may be terminated prior to completion of the requested number of iterations or accumulation of the requested number of layers, by clicking on </span><img src="clip0407.png" width="28" height="28" alt="clip0407" style="width:28px;height:28px;border:none"><span class="f_mine"> after optimization has begun.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um164.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

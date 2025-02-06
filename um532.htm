@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um532</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="F/NUMBER, real,FN; f/number" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p>&nbsp;</p>
+<p><a name="fn"></a><span style="font-size: 14pt;">5.32 F/number calculation &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-decoration: underline;"><a href="um531.htm" class="topiclink">Previous</a></span> <span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um533.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">Among the quantities calculated and printed by the paraxial raytrace </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch6.htm#pxt" class="topiclink">PXT</a></span><span class="f_mine"> is the system F/number, but the value displayed applies only at the center of the field and is based on paraxial rays rather than real rays. &nbsp;Another feature is available to find the F/number in both X and Y at a given field point, using real rays instead of paraxial rays. &nbsp;The angle PHI between the upper and lower rim rays is calculated, and the effective F/number is then given by</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-weight: bold;">FNUM = 0.5/SIN(0.5*PHI).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program finds the angle in the X-direction by tracing the skew rays to the right and left of the chief ray. &nbsp;Input is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">FN </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">HBAR and GBAR have their usual meaning; fractional field points in Y and X. &nbsp;A sample output is shown below. &nbsp;The calculation is performed at all wavelengths that have been defined in the lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">SYNOPSYS AI&gt;FN 1 0 </span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">F/NUMBER AT REL. FIELD (HBAR,GBAR) &nbsp;1.0000 0.0000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> WAVELENGTH &nbsp; &nbsp;TANGENTIAL &nbsp; &nbsp; SAGITTAL</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.656270 &nbsp; &nbsp; 11.694085 &nbsp; &nbsp; 11.667210</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.587560 &nbsp; &nbsp; 11.732389 &nbsp; &nbsp; 11.708724</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.486130 &nbsp; &nbsp; 11.798257 &nbsp; &nbsp; 11.782950</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">A second form will plot the effective F/numbers at 21 points over the field in the major color. &nbsp;Input is</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt; font-weight: bold;">FN PLOT</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">For example, here is the plot for a lens with cos**4 darkening (plus some distortion). &nbsp;The F/number increases near the edge of the field.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> --- FN PLOT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">EFFECTIVE F/NUMBER OVER FIELD</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;FIELD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TANGENTIAL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SAGITTAL</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">__________________________________________</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; &nbsp; 3.06167 &nbsp; &nbsp; &nbsp; &nbsp; 3.06167</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.500000E-01 &nbsp; &nbsp; 3.06763 &nbsp; &nbsp; &nbsp; &nbsp; 3.06397</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.100000 &nbsp; &nbsp; &nbsp; &nbsp; 3.08626 &nbsp; &nbsp; &nbsp; &nbsp; 3.07108</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.150000 &nbsp; &nbsp; &nbsp; &nbsp; 3.11966 &nbsp; &nbsp; &nbsp; &nbsp; 3.08361</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.200000 &nbsp; &nbsp; &nbsp; &nbsp; 3.17059 &nbsp; &nbsp; &nbsp; &nbsp; 3.10246</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.250000 &nbsp; &nbsp; &nbsp; &nbsp; 3.24115 &nbsp; &nbsp; &nbsp; &nbsp; 3.12862</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.300000 &nbsp; &nbsp; &nbsp; &nbsp; 3.33056 &nbsp; &nbsp; &nbsp; &nbsp; 3.16298</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.350000 &nbsp; &nbsp; &nbsp; &nbsp; 3.43169 &nbsp; &nbsp; &nbsp; &nbsp; 3.20608</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.400000 &nbsp; &nbsp; &nbsp; &nbsp; 3.52712 &nbsp; &nbsp; &nbsp; &nbsp; 3.25794</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.450000 &nbsp; &nbsp; &nbsp; &nbsp; 3.58763 &nbsp; &nbsp; &nbsp; &nbsp; 3.31795</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.500000 &nbsp; &nbsp; &nbsp; &nbsp; 3.57829 &nbsp; &nbsp; &nbsp; &nbsp; 3.38493</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.550000 &nbsp; &nbsp; &nbsp; &nbsp; 3.47544 &nbsp; &nbsp; &nbsp; &nbsp; 3.45737</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.600000 &nbsp; &nbsp; &nbsp; &nbsp; 3.29142 &nbsp; &nbsp; &nbsp; &nbsp; 3.53367</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.650000 &nbsp; &nbsp; &nbsp; &nbsp; 3.10963 &nbsp; &nbsp; &nbsp; &nbsp; 3.61242</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.700000 &nbsp; &nbsp; &nbsp; &nbsp; 3.11424 &nbsp; &nbsp; &nbsp; &nbsp; 3.69296</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.750000 &nbsp; &nbsp; &nbsp; &nbsp; 3.46773 &nbsp; &nbsp; &nbsp; &nbsp; 3.77614</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.800000 &nbsp; &nbsp; &nbsp; &nbsp; 4.12376 &nbsp; &nbsp; &nbsp; &nbsp; 3.86298</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.850000 &nbsp; &nbsp; &nbsp; &nbsp; 4.89719 &nbsp; &nbsp; &nbsp; &nbsp; 3.95130</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.900000 &nbsp; &nbsp; &nbsp; &nbsp; 5.59365 &nbsp; &nbsp; &nbsp; &nbsp; 4.03607</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;0.950000 &nbsp; &nbsp; &nbsp; &nbsp; 6.18340 &nbsp; &nbsp; &nbsp; &nbsp; 4.11539</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1.00000 &nbsp; &nbsp; &nbsp; &nbsp; 7.02478 &nbsp; &nbsp; &nbsp; &nbsp; 4.19986</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0510.png" width="404" height="534" alt="clip0510" style="width:404px;height:534px;border:none"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um533.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

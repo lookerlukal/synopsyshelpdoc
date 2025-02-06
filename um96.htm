@@ -1,0 +1,509 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um96</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="diffractive propagation,DPROP, command" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="dprop"></a><span class="f_mine" style="font-weight: bold;">9.6</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold;">Diffractive Propagation (DPROP) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um95.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um97.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um86.htm" class="topiclink">Chapter 6</a></span><span class="f_mine"> describes a number of diffraction-analysis features that calculate and analyze the final image. &nbsp;All of those features employ geometric raytracing to characterize the exiting beam of the lens and find the exiting wavefront shape. &nbsp;This shape is then input to the diffraction-integral routines that produce the final answer. &nbsp;This chapter describes a feature that can perform diffractive transfer from one surface to the next within a lens, not just at the final image. &nbsp;It is therefore more general, but it also has many restrictions and must be used carefully. &nbsp;It is also a great deal slower to run.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Consider the case where a group of lenses forms an image on a pinhole, and the light that passes through then goes on to another lens group. &nbsp;The beam geometry one sees after the pinhole can differ markedly from that before, owing to diffraction at the small opening, and this difference strongly affects the beam properties thereafter. &nbsp;This is an example of the kind of problem that DPROP is designed to handle.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">But it is a very time-consuming process to evaluate a diffraction integral at each surface in a system, and for that reason DPROP divides the surfaces into two categories. &nbsp;The first applies to surfaces where the beam going to the next surface is well described by simple geometric raytracing, and one would gain no useful information by considering diffraction in that interval. &nbsp;In this section we will call such surfaces &quot;G&quot; surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The other category is the &quot;D&quot; surface, where one would expect that the beam geometry on the next would be strongly affected by diffraction, and simple geometric raytracing will not suffice. &nbsp;Consider a telescope objective; clearly one can ignore diffraction as the light passes from the first to the second surface of the objective lens, but one cannot ignore it at the final image surface. &nbsp;In this example, only the surface before the image would qualify as a D surface to DPROP.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is necessary to draw the line somewhere so the program can distinguish the two cases, and we have decided on a useful compromise, the details explained below. &nbsp;This rule avoids wasting time where diffraction is not an issue.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate the importance of this distinction, consider what happens if we actually try to get the diffraction pattern as light goes from the first to the second side of an objective lens. &nbsp;In this case, the fringes would appear only around the edge of the beam, with extremely fine structure over a very narrow band. &nbsp;To evaluate this pattern would require getting several million data points, which would take a very long time. &nbsp;But one gets essentially the same answer from geometric propagation, which is very fast. &nbsp;So the case where the calculation is most expensive is the case where it is the least useful. &nbsp;That is why we separate the two cases.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are circumstances when one in fact does wish to evaluate the diffraction over a larger area, however; see below for comments.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For reference, the patch taken upon diffraction propagation is a function of the diameter of the diffraction blur, which is defined as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:442px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Blur = wavl * TH / APERTURE, where wavl is the wavelength, TH is the separation from the previous surface, and APERTURE is the diameter of the beam there.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When tracing through a G surface, normal raytracing is performed. &nbsp;But following a D surface, the diffraction integral is evaluated over the patch mentioned above, and a </span><span class="f_mine" style="font-style: italic;">completely new</span><span class="f_mine"> raygrid is created. &nbsp;For this reason, one cannot say that a particular ray has progressed from the object to the image. &nbsp;The beam may be vignetted somewhere, reducing the number of rays, but following the next diffraction the raygrid is redefined so as to cover the new diffraction area, and a whole new set of rays is generated. &nbsp; The angles of these rays are derived by looking at the phase of each ray at its new point and then dithering the point in X and Y so as to obtain a wavefront slope. &nbsp;Then each ray in that raygrid goes to the next surface. &nbsp;This is an important distinction to be borne in mind: the concept of a given ray must be discarded. &nbsp;New rays are continually generated (and vignetted) as the light passes through the lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The area covered by the diffraction pattern so derived is not always equal to the patch defined above, however. &nbsp;If the target surface has a CAO defined that is smaller than this, then the smaller area is used. &nbsp;And if the geometrical beam size is larger than this patch, which can happen in some instances, then the larger size is used.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are many restrictions to this feature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;Polarization and coatings are ignored.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;Only FOCAL systems are presently considered (but the output wavefront may be evaluated in AFOCAL systems.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;There is no multicolor option.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">4. &nbsp;For reasons outlined below, it is useful to assign hard apertures to all surfaces and set the system in VIG mode. &nbsp;This is to avoid unforeseen caustics in the beam and to increase the ray density where it matters, namely in the part of the beam that is actually used. &nbsp;Failure to do can result in spurious artifacts obscuring the desired output.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Input for this feature is as follows</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ DPROP THRESHOLD </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">THRESHOLD</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ DPROP REGION </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">REGION</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ DPROP WINDOW </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">DPROP { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ISTOP</span><span class="f_mine" style="font-weight: bold;">  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">request</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HT</span><span class="f_mine" style="font-weight: bold;"> { L / R } [ RESAMPLE &nbsp;[ SMOOTH [ F/Q ]]]]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">request</span><span class="f_mine"> is one of </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[X]SLICE</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option evaluates a Y-Z profile [or X-Z profile] of the beam intensity falling on the vertex plane of surface </span><span class="f_mine" style="text-decoration: underline;">ISTOP</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SURFACE</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This plots a perspective view of the wavefront falling on the vertex plane of </span><span class="f_mine" style="text-decoration: underline;">ISTOP</span><span class="f_mine">. &nbsp;The image area so displayed varies depending on whether the beam is evaluated via G or D transfer. &nbsp;See below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GEOM</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This plots the geometric ray pattern falling on the vertex plane of </span><span class="f_mine" style="text-decoration: underline;">ISTOP</span><span class="f_mine">, ignoring diffraction. &nbsp;It is intended to enable you to compare the geometric beam geometry with that produced by diffraction effects. &nbsp;There will only be a difference, of course, if the surface before </span><span class="f_mine" style="text-decoration: underline;">ISTOP</span><span class="f_mine"> is a D surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also use this option to simply examine the beam geometry at the target surface, to check for vignetting or to examine whether the ray grid has become distorted and will require resampling. &nbsp;The ray pattern following a D surface is always uniform, and since the GEOM option will turn off diffraction propagation to that surface, it will show the geometric pattern one would get otherwise.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">FRINGES</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option shows the diffraction fringes of the beam falling </span><span class="f_mine" style="font-style: italic;">on</span><span class="f_mine"> surface </span><span class="f_mine" style="text-decoration: underline;">ISTOP</span><span class="f_mine">, not at the vertex plane. &nbsp;To show a fringe properly one needs at least three samples per fringe, and because the program samples a grid of 70x70 rays; they are displayed clearly only if the number of fringes is less than about six.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">MODEL</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This converts the image on surface ISTOP into a </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um864.htm" class="topiclink">DMODEL</a></span><span class="f_mine">, which can then be further evaluated by the programs in </span><span class="f_mine" style="text-decoration: underline;"><a href="um91.htm" class="topiclink">Sections 9.1 to 9.3</a></span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">MTF</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option performs a </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um8634.htm" class="topiclink">DMTF</a></span><span class="f_mine"> evaluation of the image on surface </span><span class="f_mine" style="text-decoration: underline;">ISTOP</span><span class="f_mine">. &nbsp;This lets you see the effect of a pinhole on the diffraction MTF of the lens. &nbsp;(But polarization is not considered in this case.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">VISUAL</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This shows the appearance of the beam. &nbsp;This, the GEOM, and FRINGES options are the only DPROP options that show the relative dimensions of the beam in X and Y. &nbsp;(The others show the beam normalized in both directions.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:89px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">LIST</span></p>
+</td>
+<td style="vertical-align:top; width:473px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option performs the same evaluation as the FRINGES option, but instead of producing a picture of the diffraction fringes it generates a list of all of the points in the picture. &nbsp;The result contains up to 4,900 lines of output describing, over a 70x70 grid of points, the grid numbers in X and Y, the location of the sample in X and Y, the intensity of that sample, and the phase MOD(1 wave). &nbsp;This output is intended to be captured into a file (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um1310.htm#pon" class="topiclink">PON</a></span><span class="f_mine">) for processing by third-party software.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The other arguments have their usual meaning: </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine"> is the color number, </span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine"> is the primary color, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine"> are the fractional fields in Y and X (which probably should always be zero for this feature); </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HT</span><span class="f_mine"> is the height of the SURFACE plot, and </span><span class="f_mine" style="font-weight: bold;">L / R</span><span class="f_mine"> request a left or right view angle of that surface.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optional requests </span><span class="f_mine" style="font-weight: bold;">THRESHOLD</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">REGION</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">WINDOW</span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold;">RESAMPLE</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">SMOOTH</span><span class="f_mine"> are discussed below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="96quick"></a><span class="f_mine">Since DPROP can take some time to complete, we have provided a </span><span class="f_mine" style="font-weight: bold;">quick mode</span><span class="f_mine">, which runs many times faster – with some restrictions. &nbsp;If you type “</span><span class="f_mine" style="font-weight: bold;">Q</span><span class="f_mine">” in word 11 of the command, the system will run in this mode. &nbsp;If you type “</span><span class="f_mine" style="font-weight: bold;">F</span><span class="f_mine">”, you will get the full analysis mode. &nbsp;If you request neither, the system will examine the lens to see if it can be analyzed in quick mode, and will do so if possible. &nbsp;In any case, the decision is posted to the Command Window output.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Quick mode propagates only one half of a meridional fan of rays through the system, and converts that fan into a complete pupil map where required for a diffraction calculation or the user output request. &nbsp;In many cases, the quick mode runs about 60 times faster than full mode, so it is a good idea to use it where possible. &nbsp;Systems that the automatic test will </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> run in quick mode are those where:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;The requested field point is not on the axis.</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;One or more surfaces use a shape more complex than flat, spherical, or conic.</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;There is an asymmetry in the lens, such as a tilt or decenter, a noncircular aperture or obstruction, or unusual aperture.</span></p>
+<p class="p_mine"><span class="f_mine">4. &nbsp;The pupil is not circular.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In other words, the entire problem must have axial symmetry. &nbsp;In this case, the small number of rays analyzed supply information for the entire pupil. &nbsp;In most cases, the analysis output is almost identical for both modes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You will sometimes want to force the Q mode, however, even if the automatic selection wants the other. &nbsp;For example, if your system has an aspheric element, and all of the terms are zero except for odd powers of aperture, then it actually is axially symmetric and Q mode will work just fine. &nbsp;The automatic test does not examine the individual terms, so you simply put the “Q” in word 11.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">And sometimes you will have to force the F mode too. &nbsp;Suppose there is a D surface where all of the energy is concentrated right at the center. &nbsp;There are then very few rays in the quick-mode ray set that have much energy, and when the program rebuilds the wavefront it does not have enough information to accurately describe the small pattern. &nbsp;In such cases the program will display an error message alerting you to the situation, and you are then advised to run in F mode for that case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When the program decides whether to use geometric or diffraction propagation on a particular surface, it utilizes the constants </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">THRESHOLD</span><span class="f_mine">,</span><span class="f_mine">  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">REGION</span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WINDOW</span><span class="f_mine">, as follows: </span><span class="f_mine"> It estimates the size of the diffraction expansion at the next surface and multiplies that value by </span><span class="f_mine" style="text-decoration: underline;">WINDOW</span><span class="f_mine">. &nbsp;Then it compares the result with the geometric size on the next surface, and if it is larger, it marks that surface for diffractive propagation. &nbsp;That step requires doing the diffraction integral over an area at the next surface equal to the geometric size plus (</span><span class="f_mine" style="text-decoration: underline;">REGION</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine">times the diffraction size). &nbsp;In the process, it ignores any pupil samples whose amplitude is below </span><span class="f_mine" style="text-decoration: underline;">THRESHOLD</span><span class="f_mine">. &nbsp;Thus it tends to use geometric propagation where diffraction makes little difference, and only examines an area (given by </span><span class="f_mine" style="text-decoration: underline;">REGION</span><span class="f_mine">) where the energy is likely to be large. &nbsp;It makes no sense to sample way out in the diffraction pattern, where the energy is low and the phases are chaotic when coarsely sampled. &nbsp;In short, a larger </span><span class="f_mine" style="text-decoration: underline;">WINDOW</span><span class="f_mine"> increases the likelihood of using D propagation, and a larger </span><span class="f_mine" style="text-decoration: underline;">REGION</span><span class="f_mine"> will see more of the faint fringes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Experience has shown that the precision of the calculation degrades rapidly as more surfaces are traced via diffraction. &nbsp;Each integral is somewhat noisy, and that result becomes the source of the next integral, which multiplies that noise. &nbsp;It is therefore best to arrange for only a few cases where diffraction is needed. &nbsp;More than three instances is problematic.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Let us illustrate some uses of DPROP. &nbsp;Consider the following system:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0173.png" width="784" height="170" alt="clip0173" style="width:784px;height:170px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here we focus a collimated beam down to an image at surface 4, and then reimage it onto surface 9. &nbsp;Two lenses are involved, at surfaces 1 and 6. &nbsp;The other surfaces will be explained below. &nbsp;Here is the input for this case. &nbsp;Aspherics are used to give a diffraction-limited image at both focal planes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';">RLE</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';">ID DPROP TEST PERFECT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;521</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> FNAME 'DPROP.RLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> WAVL .6562700 .5875600 .4861300</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> UNITS INCH</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> OBB &nbsp;0.00 &nbsp; &nbsp;0.00010 &nbsp; &nbsp;1.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;1.00000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 0 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 1 RAD &nbsp; &nbsp; 21.5936383382863 &nbsp; TH &nbsp; &nbsp; &nbsp;0.50000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 1 CC &nbsp; &nbsp; -7.77007024</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 1 N1 1.51432237 N2 1.51680005 N3 1.52237643</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 1 GTB S &nbsp; &nbsp;'BK7 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;1 DC1 &nbsp;0.0000000E+00 2.1536359E-06-1.8065450E-07 0.0000000E+00 0.0000000E+00</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;1 DC2 &nbsp;0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;1 DC3 &nbsp;0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 2 RAD &nbsp; &nbsp;-19.9711533714400 &nbsp; TH &nbsp; &nbsp; &nbsp;0.74812200</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 2 CC &nbsp; &nbsp; -0.32225149</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 2 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 3 RAD &nbsp; &nbsp; 19.2519000000000 &nbsp; TH &nbsp; &nbsp; 19.25190000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 3 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 4 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;9.00000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 4 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 5 RAD &nbsp; &nbsp; -9.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;1.00000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 5 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 6 PIN &nbsp; &nbsp;1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 6 RAD &nbsp; &nbsp; &nbsp;2.7488764757138 &nbsp; TH &nbsp; &nbsp; &nbsp;0.50000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 6 CC &nbsp; &nbsp; -1.06463498</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 6 GID 'PICKUP &nbsp;'</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;6 DC1 &nbsp;0.0000000E+00-9.4993432E-04 1.5394436E-05 0.0000000E+00 0.0000000E+00</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;6 DC2 &nbsp;0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp;6 DC3 &nbsp;0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 7 RAD &nbsp; &nbsp;-55.1912656837387 &nbsp; TH &nbsp; &nbsp; &nbsp;2.01579000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 7 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 8 RAD &nbsp; &nbsp; &nbsp;7.9000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;7.98421000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 8 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 9 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> &nbsp; 9 AIR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 8pt; font-family: 'Courier New';"> END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since many decisions made by DPROP involve comparing the beam size with the current CAO -- and not sampling outside that area -- we now want to declare a fixed CAO all surfaces. &nbsp;Then we alter the CAO on surface 4 (which is at an intermediate image and is therefore close to zero) to a reasonable size.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CHG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CFIX</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">4 CAO .0005</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now we will do is look at the beam profile at surface 3. &nbsp;This is a dummy surface that does not have to be there at all – unless we want to look at the wavefront </span><span class="f_mine" style="font-style: italic;">fringes</span><span class="f_mine"> there. &nbsp;DPROP is different from the other diffraction programs in several respects: First, it does not involve a chief ray. &nbsp;Second, one cannot describe the shape of the wavefront in the usual sense. &nbsp;Initially, of course, in this example, the beam is a plane wave, but as soon as it undergoes any diffraction within the lens, the only description that remains is the intensity and </span><span class="f_mine" style="font-style: italic;">phase</span><span class="f_mine"> at each ray point. &nbsp;The overall curvature of the wavefront is nowhere described.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This means that if we want to look at the fringe pattern, say, at surface 3, where the beam is converging to a focus at surface 4, the program cannot automatically compare the wavefront to a reference sphere centered at some chief-ray point. &nbsp;Instead, we must put a </span><span class="f_mine" style="font-style: italic;">radius of curvature</span><span class="f_mine"> on surface 3 corresponding to the reference sphere with respect to which we want the fringes defined. &nbsp;Since there is no chief ray involved, there is no reference sphere either, until we define one. &nbsp;If we do </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> want to evaluate the wavefront at surface 3, then that surface need not be present in the lens at all; the diffraction propagation would work fine between the lens and surface 4 whether the extra surface were there or not. &nbsp;We enter the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">DPROP P 0 0 3 SLICE </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0336_zoom79.png" width="405" height="544" alt="clip0336" style="width:405px;height:544px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This picture is quite boring. &nbsp;Since the wavefront there is perfectly uniform, we see a straight line. &nbsp;Let us view it as a surface:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">DPROP P 0 0 3 SURF 2 R</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0337_zoom90.png" width="627" height="465" alt="clip0337" style="width:627px;height:465px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now we see a circular box. &nbsp;This example was run </span><span class="f_mine" style="font-style: italic;">without</span><span class="f_mine"> the optional </span><span class="f_mine" style="font-weight: bold;">SMOOTH</span><span class="f_mine"> directive, and the program simply plots each data point as it is. &nbsp;Some plots look better if the data are interpolated and smoothed, but this is not one of them. &nbsp;The curves jump from zero to a large value instantaneously, and the smoothing function employed would try to draw a smooth curve – which would oscillate at the jump.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">SURFACE</span><span class="f_mine"> option works in a peculiar manner. &nbsp;If the beam falling on surface 3 were the result of diffraction from surface 2 (which is not the case here) then the program would evaluate the wavefront at the latter surface and then go to the </span><span class="f_mine" style="text-decoration: underline;"><a href="um862.htm" class="topiclink">WPSPRD</a></span><span class="f_mine"> program, which draws the picture. &nbsp;If the beam at 3 is the result of G transfer, as in this case, then the program displays the beam geometry that DPROP calculates, not the WPSPRD picture. &nbsp;The difference relates mainly to the area at the image that is shown; a WPSPRD display is a square area about 12 times the diameter of the Airy disk, while the DPROP area is </span><span class="f_mine" style="text-decoration: underline;">REGION</span><span class="f_mine"> times the diffraction blur in </span><span class="f_mine" style="font-style: italic;">both</span><span class="f_mine"> X and Y. &nbsp;If the two dimensions are different, as shown below, then the data are compressed in one direction so that the display appears to be square, and the extent of the pattern in X and Y is given on the plot.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This distinction exists only when SURF has been requested at a surface. &nbsp;While the beam is propagating </span><span class="f_mine" style="font-style: italic;">within</span><span class="f_mine"> a system, the beam geometry is always calculated by DPROP, and the X and Y extents are not necessarily equal. &nbsp;Why the distinction? &nbsp;WPSPRD shows a smoother picture, and rays are traced over a 60 by 60 grid. &nbsp;This oversampling gives a more pleasing display – while the DPROP beam contains only the information required to propagate yet further.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the above example, we observe that the top of the circular box is flat, showing that the beam has uniform intensity there.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">With DPROP we can look at the diffraction pattern within the lens. &nbsp;Here is how to show the intensity profile on surface 4:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">DPROP P 0 0 4 SLICE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0338_zoom82.png" width="422" height="570" alt="clip0338" style="width:422px;height:570px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This is a perfect Airy disk. &nbsp;Here we did not specify the optional parameters, so we got the defaults: THRESHOLD = 0.01, REGION = 2.0, and WINDOW = 10.0.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now we will show the more attractive SURFACE option, which traces more rays (60 by 60) and smooths the curves. &nbsp;Here is such a plot, calculated for surface 9:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP WINDOW 5</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP REGION 4</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP THRE .05</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP P 0 0 9 SURF 3 L&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0182.png" width="643" height="475" alt="clip0182" style="width:643px;height:475px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since there is little vignetting of the image at surface 4, you would think that the beam profile on 5 or 6 would look just like it did on surface 3. &nbsp;Here is the SURFACE output for surface 6:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP WINDOW 12</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP REGION 4</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP THRE .05</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP P 0 0 6 SURF 3 L&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0339_zoom93.png" width="644" height="476" alt="clip0339" style="width:644px;height:476px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">That's odd;the beam is not uniform anymore. &nbsp;What happened? &nbsp;Well, remember that the diffraction pattern on 4 was not carried to infinity, as nature would have it. &nbsp;When we truncate at 4 times the blur, we lose high-frequency information.  </span><span class="f_mine" style="font-style: italic;">This</span><span class="f_mine"> is the beam that is required to produce a diffraction pattern at surface 9 that is </span><span class="f_mine" style="font-style: italic;">also</span><span class="f_mine"> truncated at the same size – as it will be. &nbsp;So we lost nothing of importance.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now let's look at the fringe pattern on surface 8:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP WINDOW 5</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP REGION 4</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP THRE .05</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP P 0 0 8 FRINGE&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0340_zoom89.png" width="614" height="450" alt="clip0340" style="width:614px;height:450px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Look at the lens file, given above, and you will notice that surface 8 is not </span><span class="f_mine" style="font-style: italic;">exactly</span><span class="f_mine"> concentric with the wavefront. &nbsp;Thickness 8 is not equal to radius 8. &nbsp;You can give the program any reference sphere radius you want, and here we chose a radius that yields about four fringes when compared with the converging beam. &nbsp;If the radius exactly matched the thickness, in this case, we would get no fringes at all. &nbsp;That would be boring too.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Look at the printout from this example:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">--- DPROP P 0 0 8 FRING</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> DIFFRACTIVE PROPAGATION FROM SURFACE &nbsp; 3 TO &nbsp; 4</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> DIFFRACTIVE PROPAGATION FROM SURFACE &nbsp; 4 TO &nbsp; 5</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program has noted that it used diffractive propagation from surface 3 to 4, and from 4 to 5. &nbsp;Those are the only cases in this example where diffraction plays a significant role. &nbsp;It can happen, however, that the program does not automatically select the D option when you think it should. &nbsp;If the first singlet in this example were altered so that the first image had about three waves of aberration, then the size test could fail and the program would treat surface 3 as a G surface. &nbsp;You can still force it to utilize diffractive propagation, however, even in such cases. &nbsp;There is a surface option that goes in an RLE or CHG file for this purpose:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> DPROP [ D / G / A ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If we wanted to force surface 3 to be a D surface, we would enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">CHG</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">3 DPROP D</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">G</span><span class="f_mine"> selection </span><span class="f_mine" style="font-style: italic;">prevents</span><span class="f_mine"> a surface from triggering the diffraction calculation. &nbsp;Why would you use it? &nbsp;Suppose your lens has a dummy surface, at which the rays have to back up and then come forward again. &nbsp;This is a common occurrence – but if it happened that the surfaces involved were all D surfaces, then the program would diffract the beam both going and coming from the dummy. &nbsp;This makes no physical sense, and you would certainly want to declare the dummy a G surface in such a case. &nbsp;To </span><span class="f_mine" style="font-weight: bold;">restore the surface default</span><span class="f_mine"> test, enter only </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> DPROP.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Sometimes you need to analyze the beam profile at a location not close to an image, using the </span><span class="f_mine" style="font-weight: bold;">D</span><span class="f_mine"> surface option, where the program would default to G. &nbsp;In such cases, the program will calculate the grid density required to avoid aliasing, and if it exceeds the default raygrid, it will automatically subdivide the grid up to 10 times. &nbsp;If a larger number of subdivisions is required, the program will print a warning message – but will not exceed 10. &nbsp;If you require 10 times more ray points in both X and Y, the analysis will take about 100 times longer, and now you are looking at runs that require hours instead of minutes, so the program sets a limit.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The third selection on this surface option, </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine">, will override the program’s selection of the area over which to evaluate the diffraction. &nbsp;The default rule is to use the diffraction area defined above unless the geometric blur is larger; then it uses the latter size, but enlarges it by the size of the expected diffraction pattern. &nbsp;If the surface has a hard aperture that is </span><span class="f_mine" style="font-style: italic;">smaller</span><span class="f_mine"> than the size otherwise calculated, then that size is used instead. &nbsp;In the event that you want to force the program to fill a given CAO or RAO, regardless of the above considerations, then you must enter the </span><span class="f_mine" style="font-weight: bold;">A</span><span class="f_mine"> option – and of course enter a hard aperture with CAO or RAO.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="96rule"></a><span class="f_mine">As a rule, diffractive propagation is never appropriate where the distance between surfaces is small. &nbsp;If the </span><span class="f_mine" style="font-style: italic;">default</span><span class="f_mine"> selection of D or G is not what you want, be cautious about overriding it. &nbsp;Suppose an image plane has a window just in front, and you want to find the image by diffraction. &nbsp;The distance to the diffraction image from the surface preceding it is then probably too small, and you should add a dummy surface a larger distance away, before the image surface. &nbsp;DPROP does not make the Debye approximation, as do the other diffraction analysis features, which are described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um86.htm" class="topiclink">Chapter 8</a></span><span class="f_mine">. &nbsp;Since accurate results require a pupil at infinity, you have to make it yourself. &nbsp;Infinity is not required, of course – just a distance that is large compared to the diffraction image area that is evaluated.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now we will put a small aperture at surface 4, and examine the effects on the beam thereafter. &nbsp;To make it more interesting, we will put a </span><span class="f_mine" style="font-style: italic;">rectangular</span><span class="f_mine"> aperture at the pinhole:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP THRESH .01</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP REGION 1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP WINDOW 2</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CHG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CFREE</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">4 RAO .00005 .1&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP P 0 0 6 GEOM</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0184.png" width="448" height="602" alt="clip0184" style="width:448px;height:602px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Because the X-dimension is smaller than the image at 4, the beam diffracts in the X-direction more than in Y. &nbsp;Here it is in 3-D:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0187.png" width="615" height="455" alt="clip0187" style="width:615px;height:455px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Wait a minute! &nbsp;This picture shows the beam with circular symmetry. &nbsp;What happened? &nbsp;Well, it's not circular at all. &nbsp;Look at the dimensions: in Y the extent is 0.957 inches, while in X it is 9.095. &nbsp;so it is almost 10 times longer in X than in Y.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This is a good place to try the VISUAL option. &nbsp;If you do so, you will see the image much larger in X than Y.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0186.png" width="485" height="126" alt="clip0186" style="width:485px;height:126px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We chose to make the above picture at surface 6 to illustrate the points just mentioned. &nbsp;Surface 5 is a G surface, and the wavefront on 6 is calculated by DPROP. &nbsp;If we were to make the same plot on surface 5, which follows a D surface, then the wavefront would be sent to the </span><span class="f_mine" style="text-decoration: underline;"><a href="um862.htm" class="topiclink">WPSPRD</a></span><span class="f_mine"> feature, which would show a square area at its usual extent of about 12 times the Airy disk diameter. &nbsp;Here is what that looks like;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0188.png" width="671" height="496" alt="clip0188" style="width:671px;height:496px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Gaussian Beams</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Another use of the DPROP feature is to examine the profile of a Gaussian beam at selected points in the system. &nbsp;The comments above all apply, and there is an additional consideration as well.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In </span><span class="f_mine" style="text-decoration: underline;"><a href="um312.htm" class="topiclink">Section 3.1.2</a></span><span class="f_mine"> you read that it is generally wise to locate the second surface of an OBG system at a large distance from the waist, which is always at surface 1. &nbsp;If the beam were to propagate through several windows or mirrors and then eventually hit a lens, one would then like a dummy surface 2 at the distance from the waist that is equal to the combined separations up to the lens. &nbsp;The reason for this is that the program then describes the real-ray behavior between the waist and the lens in a way that closely matches the Gaussian-beam path, which expands between the two, and one may ray-trace and analyze such a system with confidence. &nbsp;(A quick comparison of a real ray with the </span><span class="f_mine" style="text-decoration: underline;"><a href="um512.htm" class="topiclink">BEAM</a></span><span class="f_mine"> output will verify that this is the case.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One can also place surface 2 coincident with the waist, and in this case the program traces collimated real rays into the system. &nbsp;The BEAM output is exactly the same in either case, but the real-ray paths do not match the first-order BEAM paths as closely, and for this reason, this option is not recommended with OBG systems.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In cases where the beam passes through several windows before encountering a lens, one would like to model the diffractive propagation all along the way. &nbsp;This presents a problem, however. &nbsp;Even if the total throw distance is large, if there are many intervening surfaces, the program may very well declare some or all of them to be G surfaces, because the expected diffraction expansion from each to the next is below the limit. &nbsp;In such cases one could declare them D surfaces explicitly and wait a long time for all of the diffraction calculations to finish. &nbsp;A more practical approach is to put a dummy surface 2 at the lens distance, and declare all the intermediate surfaces G except for surface 1. &nbsp;Then there is but a single diffraction integral to evaluate, and speed and accuracy are enhanced.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">DPROP honors the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um312.htm#mode" class="topiclink">MODE</a></span><span class="f_mine"> option; the waist radius of the incoming beam is reduced from the specified Wo value by the factor M2, and the position of the mode center is shifted according to </span><span class="f_mine" style="font-weight: bold;">XMODE</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">YMODE</span><span class="f_mine"> in the RLE file. &nbsp;One can thus simulate the performance of a lens with a variety of laser modes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="96resamp"></a><span class="f_mine" style="font-weight: bold;">Resampling</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The paragraphs above all deal with the common situation where the ray distribution over the beam is given by a linear square grid. &nbsp;There is another class of systems where this distribution is intentionally altered in order to change the flux distribution, for example, when one wishes to convert the Gaussian profile of a laser into something more uniform.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Such a situation requires an additional processing step if the resultant intensity profile is to be correctly displayed. &nbsp;The flux on each ray is unchanged by the redistribution, while the flux </span><span class="f_mine" style="font-style: italic;">density</span><span class="f_mine"> is altered. &nbsp;Thus the program must convert from one to the other before a SLICE or SURFACE analysis is displayed – and it must also convert the uniform ray spacing into the redistributed spacing for a FRINGE analysis. &nbsp;The program only executes these extra steps if the optional </span><span class="f_mine" style="font-weight: bold;">RESAMPLE</span><span class="f_mine"> is included in the command.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To perform these steps, the program creates an entirely new ray grid, finding the amplitude at each newly created ray by generating a polynomial to the locations of nearby rays and taking the slope of that function. &nbsp;This procedure works well except in cases where the ray pattern on the target surface contains a caustic or isolated narrow spikes. &nbsp;The intensity is singular at a caustic and the curve fitting is not accurate, and narrow spikes do not provide enough sample points for a smooth interpolation. &nbsp;The program will print a warning message if a caustic is detected.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Caustics are a serious problem that occurs most often in systems used to reshape a laser beam. &nbsp;To avoid it, it is wise to </span><span class="f_mine" style="font-weight: bold;">assign a CAO to all elements</span><span class="f_mine"> before running DPROP. &nbsp;That way the beam will be vignetted at those apertures, and the caustic is avoided if it resulted from rays outside the useful aperture.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Keep in mind that resampling is never needed for the beam immediately following a D surface since the ray geometry is accounted for in the diffraction integral </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is an example of the effects of resampling on a system that needs it. &nbsp;The RLE file is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID GAUSSIAN LASER EXAMPLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;13195</span></p>
+<p class="p_mine"><span class="f_mine"> FNAME 'OBG.RLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> LOG &nbsp; &nbsp;13195</span></p>
+<p class="p_mine"><span class="f_mine"> WA1 .3640000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> WT1 1.00000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS MM  </span></p>
+<p class="p_mine"><span class="f_mine"> OBG &nbsp; 0.37350000 &nbsp; &nbsp; &nbsp; 1.0000000 &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> MARGIN &nbsp; &nbsp; &nbsp; 1.270000</span></p>
+<p class="p_mine"><span class="f_mine"> BEVEL &nbsp; &nbsp; &nbsp; 0.254001</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 0 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 CAO &nbsp; &nbsp; &nbsp;2.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 RAD &nbsp; &nbsp; 15.4620752933784 &nbsp; TH &nbsp; &nbsp; &nbsp;1.00000001</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 N1 1.53644185</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 GTB S &nbsp; &nbsp;'BK7 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 CAO &nbsp; &nbsp; &nbsp;2.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 RAD &nbsp; &nbsp;-10.4308243767682 &nbsp; TH &nbsp; &nbsp; &nbsp;2.33506913 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 CAO &nbsp; &nbsp; &nbsp;2.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 RAD &nbsp; &nbsp; -1.2554681676415 &nbsp; TH &nbsp; &nbsp; &nbsp;5.24414000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 CC &nbsp; &nbsp;-14.21205147</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 N1 1.53644185</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 GID 'BK7 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 PIN &nbsp; &nbsp;2</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 5 CV &nbsp; &nbsp; &nbsp;0.0850898663801 &nbsp; TH &nbsp; &nbsp; &nbsp;1.00000001 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 5 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 6 CV &nbsp; &nbsp; -0.1720229180926 &nbsp; TH &nbsp; &nbsp; &nbsp;8.80000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 6 N1 1.53644185</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 6 GID 'BK7 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 6 PIN &nbsp; &nbsp;4</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 7 CV &nbsp; &nbsp; -0.1513610554256 &nbsp; TH &nbsp; &nbsp;960.86170944 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 7 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 8 CV &nbsp; &nbsp; -0.0185129524937 &nbsp; TH &nbsp; &nbsp; &nbsp;3.69638650</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 8 N1 1.53644185</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 8 GID 'BK7 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 8 PIN &nbsp; &nbsp;4</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 9 RAD &nbsp; &nbsp;-56.2087262441606 &nbsp; TH &nbsp; &nbsp; &nbsp;1.00000001 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 9 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;10 RAD &nbsp;1.8114187644394E+06 &nbsp; TH &nbsp; &nbsp; &nbsp;5.06269211</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;10 N1 1.53644185</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;10 GID 'BK7 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;10 PIN &nbsp; &nbsp;8</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;11 RAD &nbsp; -236.4255980367810 &nbsp; TH &nbsp; &nbsp;853.68746400 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;11 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;11 CV &nbsp; &nbsp; &nbsp;-0.00422966</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;11 UMC &nbsp; &nbsp; -0.05000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;12 CAO &nbsp; &nbsp; &nbsp;0.02000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;12 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp;12 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This system uses a strong aspheric element to redistribute the Gaussian beam energy so it is nearly uniform. &nbsp;Here is the ray pattern on surface 11, rendered by the ordinary footprint option:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="dprop10.png" width="482" height="653" alt="dprop10" style="width:482px;height:653px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The rays are now concentrated near the outside of the aperture. &nbsp;Since the grid is no longer uniform, this lens will require resampling. &nbsp;If we request a SURF analysis on surface 11 – with no resampling – it looks like the input Gaussian:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP THRESH .01</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP REGION 1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP WINDOW 2</span></p>
+<p><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold; background-color: #ffffff;">DPROP P 0 0 11 SURF 3 R 0 0</span></p>
+<p class="p_mine"><img src="dprop11.png" width="651" height="488" alt="dprop11" style="width:651px;height:488px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This plot says that the intensity of each ray at each point follows this curve. &nbsp;What it does not show is that the energy </span><span class="f_mine" style="font-style: italic;">density</span><span class="f_mine"> has been altered by the new distribution since the rays are no longer evenly spaced.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To show that we must use the RESAMPLE option. &nbsp;This remaps the rays into a uniform grid, altering the intensity of each ray according to the local energy density. &nbsp;This shows how the effects of the laser beam shaper produce a more uniform intensity.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="dprop12.png" width="649" height="481" alt="dprop12" style="width:649px;height:481px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Sometimes you want to see the analysis both with and without any resampling. &nbsp;If you compare a SLICE both ways, for example, you will see how much effect a change in ray distribution has on the beam profile. &nbsp;If you know your system does not exhibit significant changes to the ray grid geometry, which you can check with the GEOM option, then you do not need to use the RESAMPLE option, and you will save a little processing time.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It will be instructive to look at the diffraction pattern at the final image. &nbsp;Remember that the image formed by a beam with a Gaussian envelope is itself a Gaussian. &nbsp;In this case, however, since the beam has been made uniform, the image shows the diffraction rings that one expects from a uniform pupil.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP THRESH .01</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP REGION 4</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">DPROP WINDOW 2</span></p>
+<p><span style="font-size: 11pt; font-family: 'Courier New'; font-weight: bold; background-color: #ffffff;">DPROP P 0 0 12 SURF 3 R 0 0</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0189.png" width="668" height="495" alt="clip0189" style="width:668px;height:495px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(Since this example required diffraction propagation only up to the final image, one gets similar results with the </span><span class="f_mine" style="text-decoration: underline;"><a href="um862.htm#psprd" class="topiclink">PSPRD</a></span><span class="f_mine"> program, which is many times faster.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Let us finish with a more complicated example. &nbsp;Here, we have converted a Gaussian laser beam into one with a profile that is approximately flat on top, and then compressed it in the X direction (with cylinders or prisms) so as to fit the entrance aperture of a YAG crystal. &nbsp;The question is: What is the beam profile at the</span><span class="f_mine" style="font-style: italic;"> output</span><span class="f_mine"> end of the slab? &nbsp;This example will illustrate several issues not mentioned above. &nbsp;First, let us compare beam profiles at the entrance to the slab, and at the exit, with the VISUAL option:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="dprop13.png" width="203" height="560" alt="dprop13" style="width:203px;height:560px;border:none"><img src="dprop14.png" width="175" height="557" alt="dprop14" style="width:175px;height:557px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Clearly, diffraction has played a role that perhaps we did not expect. &nbsp;In this example, the beam is narrow in X (requiring a diffraction calculation) but wider in Y (ordinarily </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> requiring it.) &nbsp;But you can’t have it both ways; the program will do the diffraction calculation in both axes, and in so doing, it finds that in order to avoid aliasing it needs a much finer raygrid in Y than in X. &nbsp;It doesn’t actually </span><span class="f_mine" style="font-style: italic;">trace</span><span class="f_mine"> more rays, but when it does the diffraction integral, it subdivides the beam in the Y direction by a factor of 9, as indicated by the message</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">TO PREVENT ALIASING, THE BEAM HAS BEEN SUBDIVIDED IN Y BY &nbsp;9</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This analysis therefore takes about nine times longer to run than usual.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is a case where we probably </span><span class="f_mine" style="font-style: italic;">don’t </span><span class="f_mine">want to use the RESAMPLE option. &nbsp;Remember, the beam following a D surface is always a rectilinear rectangular grid, so resampling will not change anything by converting it to one. &nbsp;In fact, we would probably </span><span class="f_mine" style="font-style: italic;">lose</span><span class="f_mine"> information, because when resampling, the program fits the data everywhere to a piecewise cubic function, and this inevitably does some smoothing all by itself. &nbsp;Also, the SMOOTH option, which only applies to SURF output, has no effect on this VISUAL analysis and need not be requested.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um97.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

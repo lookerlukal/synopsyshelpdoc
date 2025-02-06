@@ -1,0 +1,626 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>specifying individual rays</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DSLOPE aberration,ERROR aberration,FLUX aberration,HBRAGG aberration,HEFFIC aberration,HFREQ aberration,HH aberration,HHE aberration,HHG aberration,HHL aberration,HSFREQ aberration,OPD aberration,OPL aberration,OPP aberration,optimization,optimization subtracting rays,optimization--&gt;,PL aberration,RA aberration,Ray aberrations,Ray, correcting individual,RC aberration,UNI aberration,UNR aberration,XA aberration,XC aberration,XE aberration,XG aberration,XL aberration,XP aberration,YA aberration,YC aberration,YE aberration,YG aberration,YL aberration,YP aberration,ZA aberration,ZE aberration,ZG aberration,ZL aberration,ZZ aberration,ZZE aberration,ZZG aberration,ZZL aberration" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><span style="font-size: 11pt; font-weight: bold;">10.3.1.2 User-specified ray aberrations &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10313.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10311.htm" class="topiclink">Previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">You may specify individual rays for correction with the following input (after the </span><span style="font-size: 11pt; font-weight: bold;">M</span><span style="font-size: 11pt;">, </span><span style="font-size: 11pt; font-weight: bold;">MF</span><span style="font-size: 11pt;">, </span><span style="font-size: 11pt; font-weight: bold;">L</span><span style="font-size: 11pt;"> or </span><span style="font-size: 11pt; font-weight: bold;">LL</span><span style="font-size: 11pt;"> line.)</span></p>
+<p>&nbsp;</p>
+<p style="text-indent: 48px;"><span style="font-size: 11pt; font-family: 'Times New Roman'; font-weight: bold;">{</span><span style="font-size: 11pt; font-weight: bold;"> A / S / MUL / DIV } { </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span><span style="font-size: 11pt; font-weight: bold;"> / P } </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">name</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HBAR</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">XEN</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YEN</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">GBAR</span><span style="font-size: 11pt; font-weight: bold;"> [ </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span style="font-size: 11pt; font-weight: bold;"> ]</span></p>
+<p style="text-indent: 48px;">&nbsp;</p>
+<p><span style="font-size: 11pt;">where </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">name</span><span style="font-size: 11pt;"> is one of the following:</span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p>&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#aya" class="topiclink">YA</a></span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#aza" class="topiclink">ZA</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#ara" class="topiclink">RA</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arxg" class="topiclink">XG</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arxl" class="topiclink">XL</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p>&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#ayc" class="topiclink">YC</a></span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#aopd" class="topiclink">OPD</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arc" class="topiclink">RC</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arxg" class="topiclink">YG</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arxl" class="topiclink">YL</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p>&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#ayp" class="topiclink">YP</a></span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#aopp" class="topiclink">OPP</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#ahfreq" class="topiclink">HFREQ</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arxg" class="topiclink">ZG</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arxl" class="topiclink">ZL</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p>&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#axa" class="topiclink">XA</a></span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#azz" class="topiclink">ZZ</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#ahbragg" class="topiclink">HBRAGG</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#azzg" class="topiclink">ZZG</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arxl" class="topiclink">ZZL</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p>&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#axc" class="topiclink">XC</a></span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_heading1-9"><span class="f_heading1-9" style="text-decoration: underline;"><a href="um10312.htm#ahh" class="topiclink">HH</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#aheffic" class="topiclink">HEFFIC</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#azzg" class="topiclink">HHG</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arxl" class="topiclink">HHL</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p>&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#axp" class="topiclink">XP</a></span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#dslope" class="topiclink">DSLOPE</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#ahsf" class="topiclink">HSFREQ</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#aflux" class="topiclink">FLUX</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#apl" class="topiclink">PL</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p>&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arxe" class="topiclink">XE</a></span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arxe" class="topiclink">YE</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arxe" class="topiclink">ZE</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arxe" class="topiclink">ZZE</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#arxe" class="topiclink">HHE</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p>&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#aerr" class="topiclink">ERROR</a></span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#auni" class="topiclink">UNI</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#auni" class="topiclink">UNR</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#aopl" class="topiclink">OPL</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#aillum" class="topiclink">ILLUM</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:4px; border:solid 1px #000000;"><p>&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#aizz" class="topiclink">IZZ</a></span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#aihh" class="topiclink">IHH</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p><span style="font-weight: bold; text-decoration: underline;"><a href="um10312.htm#rslope" class="topiclink">RSLOPE</a></span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p>&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt; font-weight: bold;">A</span><span style="font-size: 11pt;">, </span><span style="font-size: 11pt; font-weight: bold;">S</span><span style="font-size: 11pt;">, </span><span style="font-size: 11pt; font-weight: bold;">MUL</span><span style="font-size: 11pt;">, and </span><span style="font-size: 11pt; font-weight: bold;">DIV</span><span style="font-size: 11pt;"> determine how this component of the aberration is to be combined with any previous components to form the combination (added to, subtracted from, multiplied by, or divided into). &nbsp;Special aberration forms are available for controlling edge feathering in complex cases. &nbsp;See </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um10312.htm#rclear" class="topiclink">RCLEAR</a></span><span style="font-size: 11pt;">, below.</span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p class="p_heading2-3"><span class="f_heading2-3" style="text-decoration: underline;">ICOL</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">is the color number. &nbsp;You may substitute “</span><span style="font-size: 11pt; font-weight: bold;">P</span><span style="font-size: 11pt;">” for the primary color, but you may </span><span style="font-size: 11pt; font-style: italic;">not</span><span style="font-size: 11pt;"> use “M”.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="aya"></a><span style="font-size: 11pt; font-weight: bold;">YA</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">is the actual value of the Y coordinate of the ray. &nbsp;Note that transverse quantities such as this become angular quantities if the lens is </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um32.htm#afocal" class="topiclink">AFOCAL</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="ayc"></a><span style="font-size: 11pt; font-weight: bold;">YC</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the Y coordinate of the ray with respect to that of the chief ray in the primary color</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="ayp"></a><span style="font-size: 11pt; font-weight: bold;">YP</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">is the Y coordinate of the ray with respect to that of the principal ray in the requested color.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="axa"></a><span style="font-size: 11pt; font-weight: bold;">XA</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">is the actual value of the X coordinate of the ray.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="axc"></a><span style="font-size: 11pt; font-weight: bold;">XC</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">is the X coordinate of the ray with respect to that of the chief ray in the primary color.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="axp"></a><span style="font-size: 11pt; font-weight: bold;">XP</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">is the X coordinate of the ray with respect to that of the principal ray in the requested color.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="aza"></a><span style="font-size: 11pt; font-weight: bold;">ZA</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">is the actual value of the Z coordinate of the ray.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="aopd"></a><span style="font-size: 11pt; font-weight: bold;">OPD</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">is the optical path difference, in waves at the wavelength of the requested color, between the path of the ray and that of the principal ray in that color, taking the chief-ray point in the primary color as the center of the OPD reference sphere. &nbsp;The sphere may or may not be projected to infinity, depending on whether the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um86.htm#debye" class="topiclink">Debye</a></span><span style="font-size: 11pt;"> approximation is in effect.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p class="p_heading2-3"><a name="aopp"></a><span class="f_heading2-3">OPP</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">is the OPD of the ray, taking the intercept of the </span><span style="font-size: 11pt; font-style: italic;">principal</span><span style="font-size: 11pt;"> ray in the requested color as the center of the reference sphere, rather than that of the chief ray (in the primary color).</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="ara"></a><span style="font-size: 11pt; font-weight: bold;">RA</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the radial distance from the optical axis to the ray intercept. &nbsp;It is always positive.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="arc"></a><span style="font-size: 11pt; font-weight: bold;">RC</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">is the radial distance from the ray intercept to that of the chief ray in the primary color. &nbsp;It is always positive.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="azz"></a><span style="font-size: 11pt; font-weight: bold;">ZZ</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">is the tangent of the angle of the projection of the ray path onto the X-Z plane, after refraction at the surface.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="ahh"></a><span style="font-size: 11pt; font-weight: bold;">HH</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">is the tangent of the ray path projection in the Y-Z plane, after refraction at the surface.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="auni"></a><span style="font-size: 11pt; font-weight: bold;">UNI,</span></p>
+<p><span style="font-size: 11pt; font-weight: bold;">UNR</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt; font-weight: bold;">UNI</span><span style="font-size: 11pt;"> is the ray angle from the surface normal </span><span style="font-size: 11pt; font-style: italic;">before</span><span style="font-size: 11pt;"> refraction at the surface, in degrees, and always positive.  </span><span style="font-size: 11pt; font-weight: bold;">UNR</span><span style="font-size: 11pt;"> is the angle </span><span style="font-size: 11pt; font-style: italic;">after</span><span style="font-size: 11pt;"> refraction. &nbsp;These quantities are intended to make it simple to prevent very steep ray intercepts, which introduce very high-order aberrations and usually impede convergence of the optimization program. &nbsp;Just give a reasonable target angle, such as 60 or 70 degrees, if the current angles exceed those values. &nbsp;Other options that can influence steep angles are the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um10312.htm#dslope" class="topiclink">DSLOPE</a></span><span style="font-size: 11pt;"> aberration and </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um103_12.htm" class="topiclink">ASC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="ahfreq"></a><span style="font-size: 11pt; font-weight: bold;">HFREQ</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p><span style="font-size: 11pt;">is the local grating frequency of the HOE or grating last encountered by the ray, in cy/mm. &nbsp;This is measured normal to the fringe plane.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="ahsf"></a><span style="font-size: 11pt; font-weight: bold;">HSFREQ</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Is the grating frequency measured along the surface, not normal to the fringe plane.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="aflux"></a><span style="font-size: 11pt; font-weight: bold;">FLUX</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the difference between the flux level at the given ray/surface intercept and that at the axis point, divided by the on-axis flux; this gives the fractional change in the value of the flux. &nbsp;This calculation includes cos**4 falloff and apodization as well as Gaussian falloff if the system is in OBG mode or if the Gaussian version of OBA is used. &nbsp;A value less than zero indicates a lowered flux at that zone.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature can be used to control the beam mapping required to change a Gaussian beam into a flat-top beam. &nbsp;To do so, simply target the FLUX to zero at several zones. &nbsp;This will then minimize the departure from flatness of the beam at those points.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Bear in mind that this will not work very well if the requested surface follows a diffracting aperture, such as a pinhole, since the flux on the following surfaces is not governed solely by geometric optics in that case. &nbsp;Also, it cannot be used to correct for the cos**4 since it compares the result to that at the chief ray, not the optical axis. &nbsp;to correct that, use the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ILLUM</span><span class="f_mine"> aberration</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There is also a </span><span class="f_mine" style="text-decoration: underline;"><a href="um53.htm#flux" class="topiclink">FLUX</a></span><span class="f_mine"> command to analyze the flux uniformity.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p class="p_heading2-3"><a name="arxg"></a><span class="f_heading2-3">XG, YG, ZG</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">are the global (X,Y,Z) coordinates of the ray.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p><a name="azzg"></a><span style="font-size: 11pt; font-weight: bold;">ZZG, HHG</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">are the global angle tangents (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um10312.htm#azz" class="topiclink">ZZ</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um10312.htm#ahh" class="topiclink">HH</a></span><span class="f_mine"> above).</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="arxl"></a><span class="f_mine" style="font-weight: bold;">XL, YL, ZL, ZZL, HHL</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">are the corresponding local (X,Y,Z) coordinates and angle tangents.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="arxe"></a><span class="f_mine" style="font-weight: bold;">XE, YE, ZE, ZZE, HHE</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">are the corresponding </span><span class="f_mine" style="text-decoration: underline;"><a href="um384.htm#external" class="topiclink">EXTERNAL</a></span><span class="f_mine"> (X,Y,Z) coordinates and angle tangents.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="aerr"></a><a name="fix"></a><span class="f_mine" style="font-weight: bold;">ERROR</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This aberration is very different from all of the others, and </span><span class="f_mine" style="font-style: italic;">should only be used by itself, with no other aberrations defined</span><span class="f_mine">. &nbsp;Its purpose is to correct a lens that currently gives ray failures and cannot therefore be optimized normally. &nbsp;You should probably never request this aberration yourself, but use the automatic versions, described below, instead.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SYNOPSYS makes it easy to run this feature. &nbsp;If your optimization will not work because of ray failures, </span><span class="f_mine" style="font-style: italic;">immediately</span><span class="f_mine"> click on the button </span><img src="rayfix.png" width="25" height="22" alt="rayfix" style="width:25px;height:22px;border:none"><span class="f_mine">. &nbsp;The program will create and run a quick optimization where the first offending ray in your AANT file is corrected with an ERROR attribute, using the current variables in the most recent PANT file. &nbsp;When it is finished, that ray should trace completely. &nbsp;The program then automatically issues the </span><span class="f_mine" style="text-decoration: underline;"><a href="um132.htm#gds" class="topiclink">GDS</a></span><span class="f_mine"> command, which reruns the last MACro, which should be your optimization MACro. &nbsp;(Be sure not to put a GET or FETCH at the start of that MACro; you want to start with the lens that the ERROR aberration has improved.) &nbsp;Use this process only after first attempting to run an optimization and encountering a ray failure, and only when the optimization files were entered in the form of a MACro.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Although the offending ray will usually trace after this step, it is of course possible that other rays will still fail. &nbsp;If so, just repeat the process by again clicking on the button. &nbsp;This will correct the first ray that still fails, and in this manner you may get them all to trace. &nbsp;For faster convergence, it is best to put the most demanding rays at the start of the AANT file, so they will be fixed early on. &nbsp;The rest of the rays should be okay thereafter. &nbsp;Of course, a lens may be so badly constructed that you cannot get rays to go through even after using this feature many times, so it is not guaranteed to work. &nbsp;But we have had excellent results with it in most cases.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This button only works if the variables currently defined are able to fix the ray failure, however. &nbsp;If not, you may have to make a completely new MACro, with just this aberration, and include a new set of variables that you believe will be effective. &nbsp;(It is probably easier at this point to alter the lens with the WorkSheet sliders until you get reasonable results, however.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you anticipate that one or more rays will fail to trace, you can simplify things somewhat by adding, in word four of the SYNOPSYS command, the word FIX. &nbsp;Thus,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SYNOPSYS 20 0 FIX</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Then, when the initial system fails, the program will automatically run the fixing routine, looping until all rays trace. &nbsp;If it does not converge in a reasonable amount of time, you can abort the process with the stopsign button </span><img src="clip0407.png" width="28" height="28" alt="clip0407" style="width:28px;height:28px;border:none"><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To implement your own error aberration, first determine which ray is the most in error. &nbsp;(Usually it will be the full-field upper rim ray; ask for a </span><span class="f_mine" style="text-decoration: underline;"><a href="um64.htm#tfan" class="topiclink">TFAN</a></span><span class="f_mine"> and see which side is most vignetted.) &nbsp;Then put a single aberration in your merit function:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">M 1 1 A P ERROR 1 0 1</span><span class="f_mine"> &nbsp; &nbsp;(for that ray)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The error that gets corrected is just the value of the argument of the square root that is ultimately generating the MCS or TIR error because it is negative. &nbsp;In this example we give it a positive target, and the program drives the lens toward that value. &nbsp;It does not matter whether it ever reaches the target, however, because as soon as the ray traces without error the merit function becomes zero and the run terminates. &nbsp;Then you can optimize with your usual merit function.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A caution is in order: &nbsp;If you use the Fix ray button </span><img src="rayfix.png" width="25" height="22" alt="rayfix" style="width:25px;height:22px;border:none"><span class="f_mine"> to run this feature, then when the error correction process completes, it has to restore the original variables and merit function definition. &nbsp;To do so, it reruns the last MACro, which we presume contained the PANT and AANT files. It then skips all entries in that file except for the PANT, AANT, DAMPING, SNAP, and SYNOPSYS commands, so that anything coming before that, such as a GET command, will not alter the lens that has been corrected.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="dslope"></a><span class="f_mine" style="font-weight: bold;">DSLOPE</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">DSLOPE</span><span class="f_mine"> aberration traces a ray to find the intercept coordinates on the target surface. &nbsp;The return value is then the absolute value of the slope angle of the surface itself at that intercept, in degrees. &nbsp;This is intended to help avoid excessively steep surfaces that might be difficult to coat uniformly. &nbsp;Thus, to make surface 12, currently too steep, flatten to a slope of 45 degrees at the chief-ray point, one would use</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">M 45 1 A P DSLOPE 1 0 0 0 12</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also control the steepness of all surfaces in the lens with the automatic slope control, described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um103_12.htm" class="topiclink">Section 10.3.12</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One can evaluate the current slope of all surfaces with the command </span><span class="f_mine" style="text-decoration: underline;"><a href="um544.htm#slope" class="topiclink">SLOPE</a></span><span class="f_mine">. &nbsp;It is a good idea to know the slope value before trying to control it with this aberration. &nbsp;Then try to change it in small steps. &nbsp;(Too large a sudden change will probably alter the lens so much that your otherwise excellent design is nowhere to be found.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#cslopeabrn" class="topiclink">CSLOPE</a></span><span class="f_mine"> construction parameter operand finds the current slope at the aperture given by the current CAO, rather than along a requested ray. &nbsp;See that link for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:126px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="rslope"></a><span class="f_mine" style="font-weight: bold;">RSLOPE</span></p>
+</td>
+<td style="vertical-align:top; width:585px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This aberration is intended for controlling a shape so that is does not become hyperhemispheric. &nbsp;It differs from DSLOPE in two ways: &nbsp;First the slope angle is measured relative to the optical axis, rather than to the vertex plane. &nbsp;So exactly at the hemisphere point the slope is zero. &nbsp;Second, it finds the surface sag by tracing the given ray and a neighboring ray, taking the Z-components of the intercepts instead of just finding the sags at that Y-intercept, as DSLOPE does.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Giving a target larger than zero, or a limit larger than zero, can penalize a solution that becomes hyperbolic and thereby avoid that situation.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="ahbragg"></a><span class="f_mine" style="font-weight: bold;">HBRAGG</span></p>
+</td>
+<td style="vertical-align:top; width:636px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the difference between the ray intercept angle at a HOE and the construction angle – which is the Bragg angle. &nbsp;This is an angle, in radians, and applies to the last HOE that was traced. &nbsp;If the construction and playback wavelengths are not the same, the Bragg angle is automatically adjusted to account for the difference.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="aheffic"></a><span class="f_mine" style="font-weight: bold;">HEFFIC</span></p>
+</td>
+<td style="vertical-align:top; width:636px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the product of the S-plane HOE efficiencies along the ray. &nbsp;For HOEs, this uses the Kogelnik approximation and includes both wavelength and angle effects. &nbsp;To see the results of this or the previous aberration following an intermediate HOE, in a multi-HOE system, specify a surface number just after the HOE to be considered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For simple DOEs (with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss16" class="topiclink">USS 16</a></span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss25" class="topiclink">USS 25</a></span><span class="f_mine">), the efficiency is calculated with scalar diffraction theory. &nbsp;In this case, it is possible to control the efficiency by varying the blaze depth, as described in the section on that shape.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="apl"></a><span class="f_mine" style="font-weight: bold;">PL</span></p>
+</td>
+<td style="vertical-align:top; width:636px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the physical length along the ray between the given surface and the previous surface. &nbsp;This aberration is always positive, regardless of the ray direction. &nbsp;Compare this with the OPL aberration, below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="aopl"></a><span class="f_mine" style="font-weight: bold;">OPL</span></p>
+</td>
+<td style="vertical-align:top; width:636px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the optical path length between any two surfaces. &nbsp;Here you need to enter </span><span class="f_mine" style="font-style: italic;">two</span><span class="f_mine"> surface numbers instead of one, such as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New'; font-weight: bold;">M 55.2 1 A P OPL 0 0 1 0 4 9</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This example targets the path along the axial marginal ray between surfaces 4 and 9 to a value of 55.2. &nbsp;The calculation multiplies the physical path by the local index in the requested color. &nbsp;This feature currently does not work for </span><span class="f_mine" style="font-style: italic;">strange rays</span><span class="f_mine">, which always go the wrong way, or for GRINs, where the path is curved and the index changes everywhere. &nbsp;Only the physical path is considered, not any phase alteration that may result from a HOE, GRATING, or DOE.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="aillum"></a><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ILLUM</span></p>
+</td>
+<td style="vertical-align:top; width:636px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This aberration will compare the illumination at a given field point to that at the axis point. &nbsp;The program finds the solid angle between extreme rays at the 0.1 zone and entered </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine">, finds the angle between the chief ray and the optical axis (which is the surface normal if the image surface is flat and untilted), factors in the COS**4 darkening at that field point, and compares the result to the on-axis case. &nbsp;The aberration that returns is the ratio of the two. &nbsp;A value of 1.0 would thus mean the illumination is the same at that field point as on the axis.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program ignores the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span><span class="f_mine"> parameters in this case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This calculation is less precise than the ILLUM </span><span class="f_mine" style="font-style: italic;">command</span><span class="f_mine">, which takes into account the VSET parameter, absorption losses, coating effects, and traces a large grid of rays. &nbsp;Still, it is usually close enough to be a useful indication of how uniform the illumination will be. &nbsp;Since it assumes the image plane is flat, it may not be appropriate for a curved image surface. &nbsp;It also assumes the ray grid at the exit pupil is a linear mapping of the grid at the entrance pupil, which is often not exactly the case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="aizz"></a><span class="f_mine" style="font-weight: bold;">IZZ</span></p>
+</td>
+<td style="vertical-align:top; width:636px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This is the ZZ coordinate of the ray between the object and surface 1.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="aihh"></a><span class="f_mine" style="font-weight: bold;">IHH</span></p>
+</td>
+<td style="vertical-align:top; width:636px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This is the HH coordinate of the ray between the object and surface 1.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span></p>
+</td>
+<td style="vertical-align:top; width:636px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the fractional object height in the Y direction.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XEN</span></p>
+</td>
+<td style="vertical-align:top; width:636px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the fractional entrance pupil coordinate in the X direction.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YEN</span></p>
+</td>
+<td style="vertical-align:top; width:636px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the fractional entrance pupil coordinate in the Y direction.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span></p>
+</td>
+<td style="vertical-align:top; width:636px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the fractional object height in the X direction.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span></p>
+</td>
+<td style="vertical-align:top; width:636px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the surface number on which the ray intercept is to be computed. &nbsp;The default surface is the image plane. &nbsp;This should not be entered for OPD requests, which are only valid at the image.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="scr"></a><span class="f_mine">To save computing time, the program checks whether the chief ray required by an XC, YC, RC, OPD, or FLUX aberration has already been traced for the previous ray aberration, and will automatically reuse its coordinates if possible. &nbsp;The optional </span><span class="f_mine" style="font-weight: bold;">SCR</span><span class="f_mine"> entry on the </span><span class="f_mine" style="font-weight: bold;">M / L</span><span class="f_mine"> request will force the program to reuse the last chief-ray coordinate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="sr"></a><span class="f_mine">The optional </span><span class="f_mine" style="font-weight: bold;">SR</span><span class="f_mine"> entry on the </span><span class="f_mine" style="font-weight: bold;">M / L</span><span class="f_mine"> request will cause the program to reuse the previous ray. &nbsp;For example, both the XA and YA could be given separate targets in separate aberrations.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a name="vclear"></a><span class="f_mine" style="font-size: 16pt; font-weight: bold;">Controlling Ray Clearances</span></p>
+<p>&nbsp;</p>
+<p><span class="f_mine">Two kinds of operands are available to control the clearance between ray intercepts on different surfaces. &nbsp;The first will calculate the global Z-separation between ray points on all adjacent surfaces, except dummies. &nbsp;This uses input of the form</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><a name="rclear"></a><span class="f_mine" style="font-weight: bold;">RCLEAR </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">tar</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">wt</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">window</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">jsss</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">jsps</span><span class="f_mine" style="font-weight: bold;"> { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">icol</span><span class="f_mine" style="font-weight: bold;"> / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">hbar</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">xen</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">yen</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">gbar</span></p>
+<p>&nbsp;</p>
+<p><span class="f_mine">The program creates an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um10351.htm" class="topiclink">LLL</a></span><span class="f_mine"> aberration for each pair of surfaces in the range from </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">jsss</span><span class="f_mine"> to </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">jsps</span><span class="f_mine">, along the specified ray, targeting the difference in the ZG coordinates of the pair. &nbsp;See the link to LLL for a description of the algorithm used. &nbsp;This is intended for situations involving tilted or decentered surfaces, which are not monitored by the simpler AEC monitor. &nbsp;It is not useful in cases where the optical axis is strongly tilted away from the global Z axis. &nbsp;Another aberration type, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#lsx" class="topiclink">LSX, LSY, LSZ</a></span><span class="f_mine"> may be useful in such cases. &nbsp;RCLEAR ignores dummy surfaces (no index break), so the image surface will not be included in the surfaces to be tested. &nbsp;If clearance to the image is to be controlled, use an aberration made of the difference in ZG coordinates along a selected ray instead.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="f_mine">Another special form of ray aberration can control the clearance between the ray segment between two adjacent surfaces and the vertex of any other surface. &nbsp;The formats are</span></p>
+<p style="text-indent: 48px;">&nbsp;</p>
+<p style="text-indent: 48px;"><span style="font-size: 11pt; font-weight: bold;">A { </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span><span style="font-size: 11pt; font-weight: bold;"> / P } VCLEARANCE </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HBAR</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">XEN</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YEN</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">GBAR</span><span style="font-size: 11pt; font-weight: bold;">  </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNR</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNV</span></p>
+<p style="text-indent: 48px;">&nbsp;</p>
+<p style="text-indent: 48px;"><span style="font-size: 11pt; font-weight: bold;">A { </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span><span style="font-size: 11pt; font-weight: bold;"> / P } SCLEARANCE </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HBAR</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">XEN</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YEN</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">GBAR</span><span style="font-size: 11pt; font-weight: bold;">  </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNR</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNV</span></p>
+<p style="text-indent: 48px;">&nbsp;</p>
+<p style="text-indent: 48px;"><span style="font-size: 11pt; font-weight: bold;">A { </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span><span style="font-size: 11pt; font-weight: bold;"> / P } YCLEARANCE </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HBAR</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">XEN</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YEN</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">GBAR</span><span style="font-size: 11pt; font-weight: bold;">  </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNR</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNV</span></p>
+<p style="text-indent: 48px;">&nbsp;</p>
+<p style="text-indent: 48px;"><span style="font-size: 11pt; font-weight: bold;">A { </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span><span style="font-size: 11pt; font-weight: bold;"> / P } CCLEARANCE </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HBAR</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">XEN</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">YEN</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">GBAR</span><span style="font-size: 11pt; font-weight: bold;">  </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNR</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNV</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">These forms will trace the requested ray, find its coordinates on surfaces </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNR</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNR</span><span class="f_mine">+1 and convert those points to the coordinates of surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNV</span><span class="f_mine">. &nbsp;A simple calculation then yields the intercept point of the ray, extended as necessary, with the vertex plane at surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNV</span><span class="f_mine">. &nbsp;The goal is to avoid the case where surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNV</span><span class="f_mine"> gets in the way of the beam between </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNR</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNR</span><span class="f_mine">+1. &nbsp;The target for the </span><span class="f_mine" style="font-weight: bold;">VCLEARANCE</span><span class="f_mine"> form is the absolute value of the distance from the vertex to the ray intercept with the vertex plane, and is always positive. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">SCLEARANCE</span><span class="f_mine"> form finds the intersection of the ray with the actual surface instead of the vertex plane, and returns the absolute value of the distance of that point from the axis of surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNV</span><span class="f_mine">. &nbsp; </span><span class="f_mine" style="font-weight: bold;">YCLEARANCE</span><span class="f_mine"> returns the Y-coordinate only, of the ray at the actual surface, with the current sign. &nbsp;The program automatically turns on </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#globalp" class="topiclink">GLOBAL</a></span><span class="f_mine"> mode if the above aberrations are requested -- except when running </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1017.htm#aei" class="topiclink">AEI</a></span><span class="f_mine">. &nbsp;To run that feature, be sure to activate GLOBAL mode before running AEI if the lens has no tilts or decenters (which turn on that mode).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">CCLEARANCE</span><span class="f_mine"> form finds the absolute value of the distance from the ray intercept to the center of the CAO of surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNV</span><span class="f_mine">. &nbsp;This is useful when the CAO is decentered, which is usually the case if the surface has the </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#dccr" class="topiclink">DCCR</a></span><span class="f_mine"> attribute, and one wants the ray to clear the decentered aperture, never mind where the vertex is. &nbsp;This is easily managed with input such as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">M 1.5 1 A P CCLEAR 1 0 1 0 5 3</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">S CAO 3</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this example, the full-field chief ray from surface 5 to 6, if it intercepts surface 3, will be kept a distance of 1.5 units outside the CAO of surface 3.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The above options do a good job keeping elements and mirrors out of the way of the beam from other elements or mirrors -- but they will not see an interference when the offending surface is not in the way of the requested ray, but obstructs other rays between the tested surfaces. &nbsp;This can occur, for example, if a small mirror is completely inside the beam elsewhere in the system, so none of the rays at the extreme field points intercepts that mirror. &nbsp;A simple way to control this situation is the </span><span class="f_mine" style="font-weight: bold;">GCLEARANCE</span><span class="f_mine"> option. &nbsp;This is a geometrical evaluation that tests whether the top, center, or bottom of the CAO on </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNV</span><span class="f_mine"> is geometrically inside the quadrilateral formed by the extreme rays on surfaces SNR and SNR+1. &nbsp;The format is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p style="text-indent: 48px;"><span style="font-size: 11pt; font-weight: bold;">A ( </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span><span style="font-size: 11pt; font-weight: bold;"> / P ) GCLEARANCE </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNR</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNV</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">No rays or fields are input with this option (and are ignored if entered) since it always traces the upper and lower rim rays at HBAR = 1 and -1 to find the size of the quadrilateral. &nbsp;Also, the target value is always zero, since the calculation does not return a value if the three points are entirely outside this area. &nbsp;The error is largest when a given point is near the center of the quadrilateral and approaches zero as the point reaches the boundary. &nbsp;We have had good results when controlling both the CCLEAR and GCLEAR at the same time. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Another option uses the mnemonic </span><span style="font-size: 11pt; font-weight: bold;">CNCLEARANCE</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold;">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p style="text-indent: 48px;"><span style="font-size: 11pt; font-weight: bold;">A { </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ICOL</span><span style="font-size: 11pt; font-weight: bold;"> / P } CNCLEARANCE </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HBAR</span><span style="font-size: 11pt; font-weight: bold;"> 0 0  </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">GBAR</span><span style="font-size: 11pt; font-weight: bold;">  </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNR</span><span style="font-size: 11pt; font-weight: bold;"> </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNV</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This form is similar to the above, but only examines the center of the CAO. &nbsp;Thus, if the rays used by the other clearance options do not intersect with that surface (so those controls have no effect), the fact that the surface itself is inside this area will produce an aberration that may be controlled.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is an example of the use of these features:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0033.png" width="386" height="539" alt="clip0033" style="width:386px;height:539px;border:none"><span class="f_ImageCaption">s</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This is a folded system, and we see that the beam from surface 4 to 5 is partly blocked by the lens at surface 2. &nbsp;The aperture at surface 2 (given by EFILE data in this case) is 27.5 mm. &nbsp;We want the offending ray to stay at least that distance from the axis of surface 2. &nbsp;We will vary the tilt angle of the mirrors at surfaces 3 and 4 as well as three separations. &nbsp;If the angle changes by too much, it is possible for the ray at the opposite side of the field to get blocked by surface 3, so we control that too. &nbsp;Here is our optimization MACro:</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">PANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">VY 3 AT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">VY 4 AT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">VLIST TH 2 3 4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">AANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">M 28 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">A P SCLEAR 1 0 -1 0 4 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">LLL 35 1 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">A P VCLEAR -1 0 -1 0 4 3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">AEC </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">ACC </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">GSR .5 10 5 P 0 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">GSR .5 10 5 1 0 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">GSR .5 10 5 3 0 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">GNR .5 2 3 P .7 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">GNR .5 2 3 1 .7 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">GNR .5 2 3 3 .7 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">GNR .5 1 3 P 1 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">GNR .5 1 3 1 1 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">GNR .5 1 3 3 1 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">SNAP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-family: 'Courier New';">SYNO 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The SCLEAR aberration says that the program should monitor the segment of the full-field lower rim ray between surfaces 4 and 5 and keep the intersection of that segment with surface 2 at a distance of 28 mm from the axis of 2. &nbsp;The lower rim ray at the bottom of the field between surfaces 4 and 5 must clear the vertex of 3 by 35 mm or more. &nbsp;(In this example, we give exact targets for the first and a <a href="um10351.htm" class="topiclink">lower limit</a> for the second.) &nbsp;If the ray does not intersect the vertex plane between the two intersections at </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNR</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNR</span><span class="f_mine">+1, the returned value of VCLEAR equals the target, so the error is zero. If the ray does not intercept the surface of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNV</span><span class="f_mine">, the SCLEAR error is again zero.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">After running this optimization, the lens has changed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0034.png" width="369" height="560" alt="clip0034" style="width:369px;height:560px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now the beam has shifted and just clears the apertures of surfaces 2 and 3.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Some cautions are in order. &nbsp;The VCLEAR calculation is performed on the vertex plane of the target surface, not the actual surface, which is appropriate when the surface is flat or nearly so. If the surface is strongly curved, use the SCLEAR version. &nbsp;And one must allow extra space for the lens cell or other supporting structure in most cases, which we did not do in this example</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10313.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

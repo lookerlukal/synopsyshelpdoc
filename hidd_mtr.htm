@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>HIDD_MTR</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-weight: bold;">Lens transmission calculation:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The dialog </span><span class="f_footnotetext" style="font-weight: bold;">MTR</span><span class="f_footnotetext"> shows several features of SYNOPSYS that can calculate the transmission of the system, each in a different way and each considering a different set of effects. &nbsp;These are:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">1.  </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um173.htm#pray" class="topiclink">PRAY</a></span><span class="f_footnotetext">, which only works if the lens is in polarization mode, and calculates the polarization vectors at the image and optionally at each surface. &nbsp;This models coatings only, finding reflection losses.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">2.  </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um536.htm#rtrans" class="topiclink">RTRANS</a></span><span class="f_footnotetext">, which traces the requested ray and calculates the amount of absorption along the path, ignoring other losses.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">3.  </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um84.htm#trace" class="topiclink">TRACE</a></span><span class="f_footnotetext">, which traces a grid of rays and reports the fraction of the rays entering the pupil that reach the image. &nbsp;It models vignetting and apodization only.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">4.  </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um84.htm#trace" class="topiclink">PTRACE</a></span><span class="f_footnotetext">, which is the same as TRACE except it also models reflection losses at coatings. &nbsp;The lens must be in polarization mode.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">5.  </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um539.htm#tn" class="topiclink">TN</a></span><span class="f_footnotetext">, which models all effects, excluding the obliquity of the beam at the image (which has no effect on the T/number).</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">6.  </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um95.htm#illum" class="topiclink">ILLUM</a></span><span class="f_footnotetext">, which includes all effects, including obliquity.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">7.  </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um534.htm#gtrans" class="topiclink">GTRANS</a></span><span class="f_footnotetext">, which calculates the absorption of a single element.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">More information about these features is given in </span><span class="f_footnotetext" style="font-size: 11pt; text-decoration: underline;"><a href="um539.htm" class="topiclink">Section 5.39</a></span><span class="f_footnotetext" style="font-size: 11pt;">.</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

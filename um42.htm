@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>PRT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="lens output,PRT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine-6" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine-6">&nbsp;</span></p>
+<p><a name="prt"></a><span class="f_mine-6" style="font-size: 14pt;">4.2 Print Data (PRT) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um411.htm" class="topiclink">Previous</a></span><span class="f_mine-6" style="font-family: 'Times New Roman';"> </span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um43.htm" class="topiclink">Next</a></span><span class="f_mine-6" style="font-family: 'Times New Roman';"> </span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">The command</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><img src="um4f2.png" width="299" height="268" alt="um4f2" style="width:299px;height:268px;border:none"></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">prints the lens data in floating-point format. &nbsp;This output contains more significant digits than </span><span class="f_mine-6" style="text-decoration: underline;"><a href="um41.htm#spec" class="topiclink">SPEC</a></span><span class="f_mine-6">, and also lists the exact indices at all wavelengths. &nbsp;The optional </span><span class="f_mine-6" style="font-weight: bold;">[SYS]</span><span class="f_mine-6"> gives just system information (object code, APS, etc.), and </span><span class="f_mine-6" style="font-weight: bold;">[SURF]</span><span class="f_mine-6"> just the surface data. &nbsp;If a surface number is entered, only a single line giving the data for that surface is printed, and if two surface numbers are given with </span><span class="f_mine-6" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine-6">, </span><span class="f_mine-6" style="font-weight: bold; text-decoration: underline;">JSPS</span><span class="f_mine-6">, that portion of the lens is listed. &nbsp;A surface with a TAG </span><span class="f_mine-6" style="font-weight: bold; text-decoration: underline;">(</span><span class="f_mine-6"><a href="um3312.htm" class="topiclink">see </a></span><span class="f_mine-6" style="text-decoration: underline;"><a href="um3312.htm" class="topiclink">3.3.12</a></span><span class="f_mine-6">) is indicated with a &quot;T&quot;, and data for a tagged surface will be output even if a different surface number or [SYS] is entered. &nbsp;A PRT listing is automatically followed by an </span><span class="f_mine-6" style="text-decoration: underline;"><a href="um46.htm#asy" class="topiclink">ASY</a></span><span class="f_mine-6"> or ASY GLOBAL (if the optional </span><span class="f_mine-6" style="font-weight: bold;">GLOBAL</span><span class="f_mine-6"> is entered) listing (see below) if tilts, decenters, or deformations are present in the lens, and if the lens is in </span><span class="f_mine-6" style="text-decoration: underline;"><a href="um384.htm#external" class="topiclink">EXTERNAL</a></span><span class="f_mine-6"> mode and </span><span class="f_mine-6" style="font-weight: bold;">EXTERNAL</span><span class="f_mine-6"> is entered, the output will include an ASY EXTERNAL. &nbsp;A sample PRT listing is shown below. &nbsp;This feature is also found in the </span><span class="f_mine-6" style="font-weight: bold;">MLL</span><span class="f_mine-6"> dialog.</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p class="p_mine-6"><span class="f_mine-6">You can defeat the listing of the surface flags (“S”, “P”, etc.) by turning on switch 74.</span></p>
+<p class="p_mine-6"><span class="f_mine-6">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">ID TRIPLET F/2.8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1898 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10-JUL-99 &nbsp; 15:31:36</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> PRT LISTING</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SYSTEM SPECIFICATIONS</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> _______________________________________________________________________________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> OBJECT DISTANCE &nbsp; &nbsp;(TH0) &nbsp; 1.000000E+12 &nbsp;OBJECT HEIGHT &nbsp; &nbsp;(YPP0) -3.639702E+11</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> MARG RAY HEIGHT &nbsp; (YMP1) &nbsp; &nbsp; &nbsp; 8.928000 &nbsp;CHIEF RAY HEIGHT (YPP1) &nbsp; &nbsp; -4.331911</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> MARGINAL RAY ANGLE(UMP0) &nbsp; 5.115367E-10 &nbsp;CHIEF RAY ANGLE &nbsp;(UPP0) &nbsp; &nbsp; 20.000000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> WAVL (uM) .6562700 .5875600 .4861300</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> WEIGHTS &nbsp; 1.000000 1.000000 1.000000</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> COLOR ORDER &nbsp; &nbsp;2 &nbsp; 1 &nbsp; 3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> UNITS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MM</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> APERTURE STOP SURFACE (APS) &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp;SEMI-APERTURE &nbsp; &nbsp; 6.78978</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> FOCAL MODE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ON</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> MAGNIFICATION &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -4.99972E-11</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> POLARIZATION AND COATINGS ARE IGNORED.</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SURFACE DATA</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> _______________________________________________________________________________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SURF &nbsp; &nbsp; &nbsp; &nbsp; RADIUS &nbsp; &nbsp; &nbsp;THICKNESS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;N1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; N2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; N3</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> _______________________________________________________________________________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> OBJ &nbsp; &nbsp; &nbsp; &nbsp;INFINITE &nbsp; &nbsp; &nbsp; INFINITE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AIR</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 &nbsp; &nbsp; &nbsp; 24.125650 &nbsp; &nbsp; &nbsp; &nbsp;7.48759 &nbsp; &nbsp; &nbsp; 1.783314 &nbsp; &nbsp; &nbsp; 1.788309 &nbsp; &nbsp; &nbsp; 1.799920</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 &nbsp; &nbsp; &nbsp;291.327395 &nbsp; &nbsp; &nbsp; &nbsp;4.43491 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AIR</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3 &nbsp; &nbsp; &nbsp;-46.439859 &nbsp; &nbsp; &nbsp; &nbsp;3.95742 &nbsp; &nbsp; &nbsp; 1.720848 &nbsp; &nbsp; &nbsp; 1.728251 &nbsp; &nbsp; &nbsp; 1.746482</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 4 &nbsp; &nbsp; &nbsp; 20.566216 &nbsp; &nbsp; &nbsp; &nbsp;6.18597 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AIR</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5 &nbsp; &nbsp; &nbsp; 61.646360 &nbsp; &nbsp; &nbsp; &nbsp;4.25531 &nbsp; &nbsp; &nbsp; 1.783314 &nbsp; &nbsp; &nbsp; 1.788309P &nbsp; &nbsp; &nbsp;1.799920</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 6 &nbsp; &nbsp; &nbsp;-34.584704 &nbsp; &nbsp; &nbsp; 35.46455S &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;AIR</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> IMG &nbsp; &nbsp; &nbsp; &nbsp;INFINITE</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> KEY TO SYMBOLS</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> ______________</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> A &nbsp;SURFACE HAS TILTS AND DECENTERS &nbsp; &nbsp;B &nbsp;TAG ON SURFACE</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> G &nbsp;SURFACE IS IN GLOBAL COORDINATES &nbsp; L &nbsp;SURFACE IS IN LOCAL COORDINATES</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> O &nbsp;SPECIAL SURFACE TYPE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; P &nbsp;ITEM IS SUBJECT TO PICKUP</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> S &nbsp;ITEM IS SUBJECT TO SOLVE</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p class="p_mine-6"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um43.htm" class="topiclink">Next</a></span><span class="f_mine-6" style="font-family: 'Times New Roman';"> </span><span class="f_mine-6" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

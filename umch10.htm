@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>algorithm</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="um10"></a><span class="f_mine" style="font-size: 14pt; font-family: 'Times New Roman'; font-style: italic; font-weight: bold;">SYNOPSYS User’s Manual &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um101.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 14pt; font-family: 'Times New Roman'; font-style: italic; font-weight: bold;">Chapter 10</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_p1-11" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-11" style="font-size: 18pt; font-weight: bold;">10.0 AUTOMATIC DESIGN PROGRAM</span></p>
+<p class="p_p1-11" style="margin: 0px 0px 0px 0px;"><span class="f_p1-11">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Automatic optimization is performed on SYNOPSYS using the PSD algorithm</span><span class="f_mine" style="vertical-align: super;">(1,2)</span><span class="f_mine">, which is superior to the familiar damped-least-squares (DLS) method. &nbsp;This method has proved to be one of the most versatile and powerful methods for optimizing a nonlinear system ever discovered.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_mine"><span class="f_mine">The program is versatile because it allows you to specify many kinds of quantities as &quot;aberrations&quot; to be controlled during the design of a lens, including construction parameters, paraxial quantities, object or pupil coordinates, ray intercepts, optical path differences, and even the diffraction MTF. &nbsp;Using convenient mnemonic names, you can combine these quantities in arithmetic sums, differences, quotients, etc., specifying explicit targets or one-sided boundaries for the result, or give an equation describing the quantity you wish to control. &nbsp;You can select from an automatically generated set of rays with flexible weightings, or construct your own merit function with rays you select yourself.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">By assigning proper weights to each of the components of the merit function, it is possible to evaluate the tradeoff between image quality and mechanical requirements such as overall length or lens diameters. &nbsp;By manipulating the weights, you can push the design toward any desired balance among residual defects. &nbsp;Using such a tool it is possible to design an optimum system, and not merely an optimum image.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program is powerful because the algorithm consistently converges faster than the DLS method or its other variants. &nbsp;Automatic features control the damping, second derivative approximation, derivative increment, variable metric, and boundary conditions. &nbsp;It is seldom necessary for you to input anything other than the starting lens, variable list, and merit function definition.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Many of the most useful features of the optimization program can be run from interactive dialogs that begin with </span><span class="f_mine" style="font-weight: bold;">MOM</span><span class="f_mine">. &nbsp;This feature provides a convenient way for a beginner to exercise many of the optimization possibilities, and by studying the commands and data that MOM produces, one can quickly learn the formats required to run with the faster command mode, which will be preferred by experienced users.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input for an optimization run is organized into several sections, which must be entered in sequence. &nbsp;The order is not important, but you must not break the sequence with a command not related to optimization. &nbsp;If you do so, the program will reinitialize all of the optimization settings when you reenter with the other sections.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The sections are as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:172px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ACON </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> PICKUPS</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">…</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">PANT</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">…</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">AANT</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">…</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">(other directives)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">SYNOPSYS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NPASS</span><span class="f_mine" style="font-weight: bold;"> …</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:274px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">For </span><span class="f_mine" style="text-decoration: underline;"><a href="um1072.htm#acon" class="topiclink">multiconfiguration</a></span><span class="f_mine"> work</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Variable </span><span class="f_mine" style="text-decoration: underline;"><a href="um102.htm#pant" class="topiclink">parameter</a></span><span class="f_mine"> definitions</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm#aant" class="topiclink">Merit function</a></span><span class="f_mine"> definition</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Begin </span><span class="f_mine" style="text-decoration: underline;"><a href="um104.htm" class="topiclink">optimization</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:172px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:274px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The only commands that may interrupt this sequence are the </span><span class="f_mine" style="text-decoration: underline;"><a href="quiet.htm" class="topiclink">QUIET</a></span><span class="f_mine">, LOUD, </span><span class="f_mine" style="text-decoration: underline;"><a href="um1072.htm#acon" class="topiclink">ACON</a></span><span class="f_mine">, and ON and OFF commands.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that optimization data are not part of the lens definition itself, as is the case in some other software packages. &nbsp;The input described above is usually entered in a MACro editor and saved with a desired file name. &nbsp;It is very easy to create a number of such files, one optimizing with transverse aberrations, another with OPDs, and so on – and then to switch from one to another just by running that MACro. &nbsp;We see no reason to associate one particular set of data with the lens file in a way that makes it clumsy to switch to another set. &nbsp;But you can also associate any desired MACro with the final lens, for archival purposes, with the toolbar button </span><img src="savelog.png" width="25" height="26" alt="savelog" style="width:25px;height:26px;border:none"><span class="f_mine">, which appears on the main toolbar as well as the MACro editor toolbar. &nbsp;Clicking on the former saves the lens with a name equal to the current </span><span class="f_mine" style="text-decoration: underline;"><a href="um23.htm#log" class="topiclink">LOG</a></span><span class="f_mine"> number and a file type of .RLE, while the latter saves the MACro with the same name and a type .MAC.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate this format, here is an example of a very simple optimization MACro:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">PANT   &nbsp; &nbsp; &nbsp; &nbsp;; DEFINE THE VARIABLE PARAMETERS</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">VLIST RAD 1 2 3 4 6 </span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">VY 1 TH 20 3</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">VY 2 TH</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">VY 3 TH 20 3</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">VY 5 TH</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">VLIST GLM 1 3</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">AANT   &nbsp; &nbsp; &nbsp; &nbsp;; DEFINE THE ABERRATIONS TO BE CORRECTED</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">AEC  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; AUTOMATIC EDGE CONTROL</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">ACC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; AUTOMATIC CENTER THICKNESS CONTROL</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">GSR .5 5 3 2 0</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">GNR .5 1 3 2 .5</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">GNR .5 1 3 2 .7</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">GNR .5 1 3 2 1.</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">GSR .5 5 2 1 0</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">GSR .5 5 2 3 0</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">GNR .5 1 2 1 1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">GNR .5 1 2 3 1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">SNAP  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; REQUEST SNAPSHOTS AS OPTIMIZATION RUNS</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 10pt; font-family: 'Courier New';">SYNO 25  &nbsp; &nbsp; &nbsp; &nbsp;; REQUEST OPTIMIZATION FOR 25 PASSES</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The data in the above lines are described in the later sections of this manual.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="vertical-align: super;">I</span><span class="f_mine"> </span><a name="um10l1"></a><span class="f_mine">D.C. Dilworth, Appl. Opt. </span><span class="f_mine" style="font-weight: bold;">17</span><span class="f_mine">, 3372 (1978)</span></p>
+<p class="p_mine"><span class="f_mine" style="vertical-align: super;">2</span><span class="f_mine"> D.C. Dilworth &quot;Automatic Lens Optimization: Recent Improvements&quot;, SPIE </span><span class="f_mine" style="font-weight: bold;">554</span><span class="f_mine">, 191, (1985).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um101.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

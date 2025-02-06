@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um132</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="EE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-size: 14pt;">13.2 the MACro Editor &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1312.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um132_1.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Much of your input to SYNOPSYS will consist of a set of commands that you will want to run more than once. &nbsp;For this purpose it is most convenient to create a </span><span class="f_mine" style="text-decoration: underline;"><a href="macros.htm" class="topiclink">MACro</a></span><span class="f_mine">. &nbsp;You can open as many MACro editors as you want, each containing a different set of commands, and then run them at any time just by clicking on the </span><span class="f_mine" style="font-weight: bold;">RUN MACro</span><span class="f_mine"> button </span><img src="runmacro.png" width="26" height="24" alt="runmacro" style="width:26px;height:24px;border:none"><span class="f_mine"> or the </span><span class="f_mine" style="font-weight: bold;">RUN Alternate MACro</span><span class="f_mine"> button </span><img src="runaltmacro.png" width="26" height="25" alt="runaltmacro" style="width:26px;height:25px;border:none"><span class="f_mine">. &nbsp;You can assign names to any or all of them, and the contents will be saved on disk whenever you click on the </span><span class="f_mine" style="font-weight: bold;">SAVE MACro</span><span class="f_mine"> button </span><img src="filesave.png" width="28" height="24" alt="FileSave" style="width:28px;height:24px;border:none"><span class="f_mine"> – or when you run them. &nbsp;A MACro may contain any number of lines of data.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When the editor opens a file, or when you make certain changes to the file in the editor, it scans the contents to identify lines that are commented out or are part of a </span><span class="f_mine" style="text-decoration: underline;"><a href="um132_2.htm" class="topiclink">SKIP</a></span><span class="f_mine"> section; those lines are then displayed in a different color. &nbsp;This makes it easy to distinguish lines that will be run from those that will be skipped. &nbsp;There is some overhead involved, however, and if your file is quite long, you may notice a delay after each line is typed. &nbsp;If that is a problem, just turn off the automatic scanning by deselecting the button </span><img src="clip0169.png" width="29" height="26" alt="clip0169" style="width:29px;height:26px;border:none"><span class="f_ImageCaption" style="font-size: 11pt; font-weight: normal;">, which is selected by default. &nbsp;You can also turn it off with switch 41. &nbsp;(If you turn it off, you can still scan for comments; just &lt;right-click&gt; whenever you want to update the comment scan.) &nbsp;Note that this feature is only intended to help you read your MACros; the command parser works whether the file is scanned or not.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_ImageCaption" style="font-size: 11pt; font-weight: normal;">The scan also tries to identify lines that start with a valid SYNOPSYS command, and those that are located are displayed in red type with a grey background. &nbsp;This is a convenient way to distinguish lines that are commands from lines of data or AI sentences. &nbsp;The process is not perfect, however, since it has to determine if a given input line is a command or is part of an input file -- in which case it is rendered as usual. &nbsp;To do so, it looks for the end line of that file, usually END, PLOT, or GO. When that line is found, it can again identify commands that follow. &nbsp;But if you structure an input line with a form such as &nbsp;&quot;</span><span style="font-family: 'Courier New Bold'; color: #7b0000; background-color: #dedede;">chg</span><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">/2 dec 31.75 0 0 1/end&quot;,&nbsp;</span><span class="f_ImageCaption" style="font-size: 11pt; font-weight: normal;">for example, the &quot;end&quot; will not be found on a lower line. &nbsp;So this kind of formatting is not recommended.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_ImageCaption" style="font-size: 11pt; font-weight: normal;">Lines in the MACro that begin with a comment character &quot;!&quot; or &quot;;&quot; will be skipped, as noted above. &nbsp;If you want to comment out a group of lines, simply select those lines and then click the Comment button </span><img src="clip0429.png" width="22" height="23" alt="clip0429" style="width:22px;height:23px;border:none"><span class="f_ImageCaption" style="font-size: 11pt; font-weight: normal;"> on the editor toolbar. &nbsp;The selected lines will all get a &quot;!&quot; character in column one. &nbsp;To uncomment a group of lines, select the group and click the Remove Comment button </span><img src="clip0430.png" width="23" height="23" alt="clip0430" style="width:23px;height:23px;border:none"><span class="f_ImageCaption" style="font-size: 11pt; font-weight: normal;">. &nbsp;Any leading &quot;!&quot; or &quot;;&quot; characters will be deleted from those lines. &nbsp;(For this to work, the selection should start at the </span><span class="f_ImageCaption" style="font-size: 11pt; font-style: italic; font-weight: normal;">beginning</span><span class="f_ImageCaption" style="font-size: 11pt; font-weight: normal;"> of a line.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="ee"></a><span class="f_mine">The command </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">EE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will open the most recently used editor window, or a new one if there is none.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can load a new MACro editor with a named MACro with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">LM</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"> filename</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(Load Macro …)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="em"></a><span class="f_mine">Where </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">filename</span><span class="f_mine"> is the name of a MACro that was previously saved. &nbsp;You can run a saved MACro (without loading it into an editor first) with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">EM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">filename</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(Execute Macro … )</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and you can load a MACro into the computer’s </span><span class="f_mine" style="font-style: italic;">memory</span><span class="f_mine"> with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">LTM </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">filename</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="text-decoration: underline;">(</span><span class="f_mine">Load This Macro …)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This command does not load the file into an editor, and does not open the editor. &nbsp;It is intended for when you wish to run the MACro at a later time with the GDS command or with a DO MACRO loop. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um15121.htm" class="topiclink">Section 15.1.2.1</a></span><span class="f_mine"> for a description of this powerful feature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="gds"></a><span class="f_mine">Once you have run a MACro, you can re-run it, even if the editor has been closed, with</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">GDS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(Get Data Set)</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="eam"></a><span class="f_mine">A MACro can call another MACro in a chain fashion, if you put the </span><span class="f_mine" style="font-weight: bold;">EM …</span><span class="f_mine"> command at the end of the file, specifying the new filename, and it can also run another MACro and then </span><span class="f_mine" style="font-style: italic;">return</span><span class="f_mine"> to where it left off if the command is </span><span class="f_mine" style="font-weight: bold;">EAM …</span><span class="f_mine"> (Execute Alternate Macro). &nbsp;To re-run the alternate MACro, the command is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">GADS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(Get Alternate Data Set).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you want to </span><span class="f_mine" style="font-style: italic;">erase</span><span class="f_mine"> the memory copy of the last MACro (which is used by the </span><span class="f_mine" style="font-weight: bold;">GDS</span><span class="f_mine"> command), use the </span><span class="f_mine" style="font-weight: bold;">ZDS</span><span class="f_mine"> (Zero Data Set) command.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also use the Windows menus and toolbar features to do many of these same things: When a MACro window is active, the </span><span class="f_mine" style="font-weight: bold;">File</span><span class="f_mine"> menu gives options to open a saved MACro file (in the same window) or to save the current contents. &nbsp;In addition, the MACro </span><span class="f_mine" style="font-style: italic;">menu item</span><span class="f_mine"> contains similar tools, as do some of the </span><span class="f_mine" style="text-decoration: underline;"><a href="afx_hidw_toolbar.htm" class="topiclink">top toolbar buttons</a></span><span class="f_mine">  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="data"></a><span class="f_mine">It is sometimes useful to prepare a MACro entirely with commands. &nbsp;The sequence is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">DATA</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">(any lines you want in your MACro)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">…</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">EDS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(End Data Set)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">EDS</span><span class="f_mine"> command can also be put into a MACro created with an editor. &nbsp;The result is that execution of the MACro is </span><span class="f_mine" style="font-style: italic;">terminated</span><span class="f_mine"> when the </span><span class="f_mine" style="font-weight: bold;">EDS</span><span class="f_mine"> line is reached. &nbsp;This is a convenient way to disable a MACro partway through, when you do not want the whole thing to execute.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A MACro prepared in this way exists only in memory, not in a MACro editor. &nbsp;It can be executed with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">GDS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(Get Data Set).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="llb"></a><span class="f_mine">It is sometimes convenient to rerun the most recent commands that were typed into the Command Window. &nbsp;The command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">LLB, ELB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(Load Line Buffer, Edit Line Buffer)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will load the last 20 commands into an editor. &nbsp;You can also click on the menu </span><span class="f_mine" style="font-weight: bold;">MACros | Show the last 20 commands.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The command </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">PMA</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"> filename</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine">(Print MACro)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Will print the MACro on the Command Window, but does not execute it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="lmm"></a><span class="f_mine">The command </span><span class="f_mine" style="font-weight: bold;">LMM</span><span class="f_mine"> will load the MACro editor with a copy of the commands that were most recently produced by a SYNOPSYS dialog. &nbsp;Then you can change, run, or save the file without going to the dialog again.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um132_1.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

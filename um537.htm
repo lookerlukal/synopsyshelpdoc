@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um537</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Illumination systems" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-size: 14pt;">5.37 Illumination systems &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="text-decoration: underline;"><a href="um536.htm" class="topiclink">Previous</a></span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;"><a href="um538.htm" class="topiclink">Next</a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Nearly all of the features of SYNOPSYS are designed to deal with image-forming systems, where the goal is usually to obtain resolution as sharp as possible. &nbsp;Another class of systems deals with illumination, and here the goal is to collect energy in an efficient manner and distribute it to a particular location with a desired uniformity.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Such systems may set up with the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um311.htm#obl" class="topiclink">OBL</a></span><span style="font-size: 11pt;"> or </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um316.htm#obi" class="topiclink">OBI</a></span><span style="font-size: 11pt;"> object descriptor, which model a Lambertian source that automatically includes obliquity effects. &nbsp;All of the features of SYNOPSYS that deal with geometric raysets may then be employed to analyze such systems, but image-analysis tools such as the MTF and all OPD-based analysis have little meaning, and those tools should not be used with this object.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The OBL object consists of a single LED with no reflector around it, while the OBI models an array of LEDs, each of which has a reflector.  </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">It is possible also possible to define your own reflector with object type OBL, although it is quite complicated, as shown in the following example. &nbsp;Here, the light source is an LED with an active area of radius 0.049 inches. &nbsp;We collect the light with a conical mirror and then pass it though a toroidal lens, which spreads the light in X more than in Y, which we give as a goal to illustrate things. &nbsp;Here is the RLE file of this system:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt;">RLE</span></p>
+<p><span style="font-size: 9pt;">ID LAMBERTIAN OBJECT WITH CONE</span></p>
+<p><span style="font-size: 9pt;"> WA1 .625</span></p>
+<p><span style="font-size: 9pt;"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p><span style="font-size: 9pt;">NOSEQUENTIAL</span></p>
+<p><span style="font-size: 9pt;">UNITS INCH</span></p>
+<p><span style="font-size: 9pt;"> OBL 0.003 0.049 &nbsp;80. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p><span style="font-size: 9pt;">  </span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 0 AIR</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 1 LOOSE</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 1 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; -0.27248800</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 1 AIR</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 2 INTERSECT FAR</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 2 MBOUNCE</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 2 CAPTURE</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 2 LOOSE</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 2 CAO &nbsp; &nbsp; &nbsp;0.40000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 2 CAI &nbsp; &nbsp; &nbsp;0.06500000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 2 RAD &nbsp; &nbsp; &nbsp;0.0020000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;1.88000000</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 2 CC &nbsp; &nbsp; -1.04515000</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 2 REFLECTOR</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 3 CAPTURE</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 3 CAO &nbsp; &nbsp; &nbsp;1.25000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 3 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00952965</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 3 AIR</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 4 CAO &nbsp; &nbsp; &nbsp;0.45000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 4 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.12427800</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 4 GLM &nbsp; &nbsp; &nbsp;1.50000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 50.00000000</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 5 CAO &nbsp; &nbsp; &nbsp;0.45000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 5 CV &nbsp; &nbsp; -0.4343390000000 &nbsp; TH &nbsp; &nbsp;118.00000000</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 5 AIR</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 5 TORIC &nbsp; &nbsp; &nbsp;1.01859000</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 6 RAO &nbsp; &nbsp;136.26000000 &nbsp; &nbsp; &nbsp;41.60000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 6 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p><span style="font-size: 9pt;"> &nbsp; 6 AIR</span></p>
+<p><span style="font-size: 9pt;">END</span></p>
+<p>&nbsp;</p>
+<p><img src="illum1.png" width="802" height="607" alt="illum1" style="width:802px;height:607px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The PAD drawings above show the system in YZ-profile on top and XZ on the bottom, and we have requested a fan of 21 rays in the same plane in order to show the paths. &nbsp;Let us comment on this lens file before we show the analysis.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">1. We use </span><span style="font-size: 11pt; text-decoration: underline;"><a href="umch18.htm" class="topiclink">nonsequential raytracing</a></span><span style="font-size: 11pt;">, because within the cone, modeled as a very eccentric hyperboloid on surface 2, the light may experience from zero to three reflections (and more, if we change the cone angle).</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">2. &nbsp;Since light is propagating away from the vertex of the cone, we specify INTERSECT FAR for that surface. &nbsp;Remember, rays always have two intersections with a conic section, and the default is the one closest to the vertex. &nbsp;Here we want the other.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">3. &nbsp;Surface 2 is both CAPTURE and LOOSE, since rays to and from that surface can have differing histories. &nbsp;It is also MBOUNCE, to allow reflections from that surface to itself.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">4. &nbsp;Here is a very subtle point. &nbsp;Note that the object distance is quite small, 0.003 inches in this case. &nbsp;Here’s why: &nbsp;Light is always assumed to go from the object to surface 1, even in nonsequential mode. &nbsp;If the object distance were much larger, then rays at steep angles would hit that surface a long way off axis. &nbsp;(That is why an angle of 90 degrees is forbidden: the intercept would be at infinity.) &nbsp;But if that intercept were to be </span><span style="font-size: 11pt; font-style: italic;">outside</span><span style="font-size: 11pt;"> the cone, then the light could never find its way back inside and the rays would fail to trace. &nbsp;This small value ensures that the rays leaving surface 1 are within the cone.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Let us make a footprint at a distant surface, to check on the ray distribution. &nbsp;We specify several points on the LED and several thousand rays at each point. &nbsp;Here is the command form, tracing 3000 rays from 12 field points:</span></p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUPIL 1 3000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PLOT 6 .05 0 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE P 0 0 3000</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE P 1 0 3000</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE P .5 0 3000 &nbsp;&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE P -1 0 3000</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE P -.5 0 3000</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE P 0 .7 3000</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE P 0 -.7 3000 &nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE P 0 .3 3000</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE P 0 -.3 3000 &nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE P 0 1 3000</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE P 0 -1 3000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-size: 11pt;"> </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Here is the result:</span></p>
+<p><img src="clip0341.png" width="541" height="176" alt="clip0341" style="width:541px;height:176px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The rectangle is the RAO of the target surface. &nbsp;To evaluate the light distribution, the easiest way is to create a </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um857.htm#gmodel" class="topiclink">GMODEL</a></span><span style="font-size: 11pt;"> and then sweep a small detector over the model with </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um93.htm#for" class="topiclink">FOR</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Although this example offers a good lesson in some of the fine points of using SYNOPSYS, this problem would be much more easily solved with object type OBI. &nbsp;See </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um316.htm" class="topiclink">Section 3.1.6</a></span><span style="font-size: 11pt;"> for an example.</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um538.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

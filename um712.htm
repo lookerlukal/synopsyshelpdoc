@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um712</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Distortion, grid,GDIS" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="gdis"></a><span class="f_mine" style="font-size: 14pt;">7.12 Grid distortion (GDIS)  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um713.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um7_11.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">There are several features in SYNOPSYS that will analyze and show the distortion properties of your lens. &nbsp;The command </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um75.htm" class="topiclink">DIS</a></span><span style="font-size: 11pt;"> will plot the distortion in the Y direction, and </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um88.htm#map" class="topiclink">MAP</a></span><span style="font-size: 11pt;"> can show the distortion across the field in several ways. &nbsp;Also, the field blur menu (MFB) can show what a selected target would look like when imaged by the lens.</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">This option can also be found in the menu </span><span class="f_mine" style="font-weight: bold;">MRR</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">For the common case where you want to see how a grid of lines would be distorted, a simpler feature is available. &nbsp;The command is</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt;">GDIST [ </span><span style="font-size: 11pt; text-decoration: underline;">NGRID</span><span style="font-size: 11pt;"> [ G/0  </span><span style="font-size: 11pt; text-decoration: underline;">SCF</span><span style="font-size: 11pt;"> ] ].</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">The program traces the chief ray in the major color over a grid of field points, constrained within a circle if the lens has CFOV declared, and rectangular if the lens is declared RFOV, and plots the positions of each point. &nbsp;If you include the optional [G], the program will superimpose a grid showing the paraxial locations of the same rays, allowing you to easily see the difference. &nbsp;The grid number is entered in </span><span class="f_mine" style="text-decoration: underline;">NGRID</span><span class="f_mine">, and must be between 1 and 99 if entered; the default is 31.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the lens does not have a skew field defined (which is a requirement for this feature), the program will temporarily change the field to circular. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#cfov" class="topiclink">CFOV</a></span><span class="f_mine">. &nbsp;If this is not appropriate, the Pupil Wizard (MPW) is a good place to define the data as you wish.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the lens is FOCAL, the plot shows the (X,Y) locations of each ray intercept at the image. &nbsp;If it is AFOCAL, the plot shows the reduced angles </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&Phi;</span><span class="f_mine"> and </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&Psi;</span><span class="f_mine"> (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#afocal" class="topiclink">Section 3.2</a></span><span class="f_mine">).  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">the plot is scaled so that the real-ray grid fits on the page. &nbsp;In the event that distortion is so large that the paraxial grid extends beyond the page, you can reduce the overall scale with the optional </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span><span class="f_mine"> in word 4, where 0.5 means half the usual size.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The picture below shows an example of a GDIS analysis.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um7f37.png" width="767" height="566" alt="um7f37" style="width:767px;height:566px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Some more examples of the use of this feature are given in </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um751.htm" class="topiclink">Section 7.5.1</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um713.htm" class="topiclink">Next</a></span><span style="font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

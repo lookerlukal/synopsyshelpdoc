@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um546</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CORE,Multicore operation,Threads, multiple" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="core"></a><span class="f_mine" style="font-size: 14pt;">5.46 Multicore Operation (CORE) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um545.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um547.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For years the makers of computer chips strived to produce ever-faster CPUs, but recently they have encountered a wall that makes it impractical to increase clock speed much more than they already have. &nbsp;Faster chips push electrons through wires faster, increasing the I</span><span class="f_mine" style="vertical-align: super;">**2</span><span class="f_mine">R heating loss – and they are close to the melting point already.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For this reason, the current trend is to manufacture processors with more than a single CPU on the chip. &nbsp;In principle, this arrangement can run programs many times faster than can be done on a single core; in practice, however, the gains that most users experience are modest at best. &nbsp;According to Amdahl’s law, if a program contains sections that must be run in serial fashion (on a single core), then those sections do not run faster no matter how many cores are in the PC. &nbsp;If half of the code must be serial, then the maximum speed improvement is a factor of two.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">But even a modest improvement is attractive when you are running a lengthy process, so beginning with Version 14 of SYNOPSYS™, we have enabled multicore support for some features.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="text-decoration: underline;"><a href="um1014.htm#dsearch" class="topiclink">DSEARCH</a></span><span class="f_mine" style="font-family: 'Times New Roman';">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um1073.htm#zsearch" class="topiclink">ZSEARCH</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um1017.htm#aei" class="topiclink">AEI</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um1019.htm" class="topiclink">ADA</a></span><span class="f_mine">,</span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="text-decoration: underline;"><a href="um1015.htm#aaa" class="topiclink">AAA</a></span><span class="f_mine">,</span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;"><a href="um531.htm#gsearch" class="topiclink">GSEARCH</a></span><span class="f_mine">, and </span><span class="f_mine" style="text-decoration: underline;"><a href="um125.htm#mc" class="topiclink">MC</a></span><span class="f_mine"> programs honor the multicore setting. &nbsp;The difference in speed is significant: if you have, say eight cores, then DSEARCH will run almost eight times faster.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The command is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">CORE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NCORES</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where NCORES is the number of cores you want to enable. &nbsp;If </span><span class="f_mine" style="text-decoration: underline;">NCORES</span><span class="f_mine"> is zero, the program will run in serial mode. &nbsp;The value can be any number up to 32 (or more if your license authorizes a higher number). &nbsp;Modern PCs with hyperthreading technology can run two processes on a single core, so an 8-core PC can run 16 processes -- but the speed gain will be less than that, since each process pair has to share a single core and only some operations can be done in parallel.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you request more cores than are physically installed in your PC, the program will display a warning message. &nbsp;You can still run the requested number of processes, but &nbsp;individual cores will then have to run more than a single one, which will likely result in slower processing, rather than faster, since there is extra overhead involved in distributing the chores among them.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Strictly speaking, </span><span class="f_mine" style="text-decoration: underline;">NCORES</span><span class="f_mine"> specifies the number of </span><span class="f_mine" style="font-style: italic;">processes</span><span class="f_mine"> the system creates, and the operating system decides which cores to use for which process. &nbsp;So the number actually used does not necessarily equal the number requested.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="c99static"></a><a name="syno_core"></a><span class="f_mine" style="font-weight: bold;">Multicore SYNOPSYS optimization</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The above comments apply to the multicore feature of the </span><span class="f_mine" style="font-style: italic;">search</span><span class="f_mine"> programs. &nbsp;It is also possible to utilize multiple cores when running an ordinary optimization with the SYNOPSYS command. &nbsp;To use this feature, the desired number of cores must first be requested with the CORE command, and then </span><span class="f_mine" style="font-weight: bold;">switch 99 should be turned on</span><span class="f_mine">. &nbsp;That will implement special routines in the optimization program that farm out individual variables to the several cores when derivatives are calculated, which greatly speeds thing up since those calculations are performed in parallel.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="c99"></a><span class="f_mine">It is possible to specify a different number of cores to be used when running a multicore optimization via switch 99. &nbsp;By default, this is the same number as the number of cores requested by the CORE command, but you may authorize a different number with the command. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold;">C99 </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">number</span><span class="f_mine"> </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program spawns </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">number</span><span class="f_mine"> additional processes when the optimization starts.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are two other options that affect this type of multicore optimization. &nbsp;The command </span><span class="f_mine" style="font-weight: bold;">CORE STATIC</span><span class="f_mine"> will launch the higher cores and leave them running after it finishes an optimization run. &nbsp;The command </span><span class="f_mine" style="font-weight: bold;">CORE VOLATILE</span><span class="f_mine"> causes each higher core to terminate when the run is finished. &nbsp;Thus, when running the annealing program, the STATIC option should run faster since it avoids the overhead required to start and stop each higher core at each temperature. &nbsp;But those processes then remain active when the annealing has completed. &nbsp;To close them, you must click the stopsign button on the top toolbar. &nbsp;The default is VOLATILE.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You are encouraged to experiment with the C99 parameter, to see which value gives you the fastest optimization.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For the search programs, we have seen a significant speed improvement when using all available cores, and we recommend you authorize the maximum in your PC. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The C99 value is limited to no more than 16, to ensure program stability.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um547.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

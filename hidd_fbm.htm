@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>HIDD_FBM</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Field blur, geometric,MFB" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p><a name="mfb"></a><span class="f_footnotetext" style="font-weight: bold;">MFB Field Blur Menu</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">SYNOPSYS has several features to evaluate the performance of a lens over a finite field. &nbsp;The Image Tools Menu (</span><span class="f_footnotetext" style="text-decoration: underline;"><a href="hidd_mit.htm" class="topiclink">MIT</a></span><span class="f_footnotetext">) can evaluate the effect of aberrations and diffraction on the image of a variety of extended targets. &nbsp;This feature assumes that the extent of the target is sufficiently small that the image quality is unchanged over that target. &nbsp;This condition is known as </span><span class="f_footnotetext" style="font-style: italic;">isoplanatism</span><span class="f_footnotetext">. &nbsp;Another feature can plot the diffraction point-spread over the field. &nbsp;This is </span><span class="f_footnotetext" style="text-decoration: underline;"><a href="hidd_mof.htm" class="topiclink">MPF</a></span><span class="f_footnotetext">. &nbsp;Another feature, </span><span class="f_footnotetext" style="text-decoration: underline;"><a href="um88.htm#map" class="topiclink">MAP</a></span><span class="f_footnotetext">, provides a way to combine both goals: you can analyze the performance over an extended field, and get high-resolution geometric images at each point at the same time.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The </span><span class="f_footnotetext" style="font-weight: bold;">Field Blur Menu (MFB)</span><span class="f_footnotetext"> can generate a variety of targets, including grids of points and lines, and then evaluate what the image of this target would look like. &nbsp;It can also evaluate the image of an extended source, such as a bitmap image of a photograph. &nbsp;The calculation does not assume isoplanatism, and is valid over the entire field.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The MFB feature first samples the requested image with a resolution of 400 x 400 pixels, and then traces a pencil of rays from each of 400 x 400 points at the image plane, each starting from the object point that is conjugate to that image point. &nbsp;The end points of each of these rays then accumulate in the bins at the image, and the total distribution of those rays is displayed as the processed image.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Because the resolution of the process (1/400 of the total object extent) is rather coarse by optical standards, it is unlikely that diffraction effects will ever turn out to be so large that they have a noticeable effect on the ray distribution. &nbsp;For this reason, MFB is a purely geometric analysis. &nbsp;It will show very nicely, however, the appearance of a target that is distorted by the lens, and this is its main application.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The program works in one of two modes: &nbsp;If the lens exhibits axial symmetry, the aberrations of any point in the field are duplicated at the point opposite the axis, and the program only has to sample 1/8 of the total object extent. &nbsp;If there are any tilts, decenters, non-symmetric aspheric terms, global coordinates, or decentered apertures in the system, however, it must evaluate the image quality at each object point independently, a process that takes about eight times longer.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Because the program must trace rays from skew field points for this feature, it will automatically alter the object description if necessary so that this becomes possible. &nbsp;If the lens has no skew field at all, the program will reduce the value of YP0 by 0.707 and create a value of XP0 that is equal to this amount. &nbsp;Thus, the lens then has a rectangular (square) field of view, the corners of which are at the same off-axis distance as the original meridional object, so the new square object is </span><span class="f_footnotetext" style="font-style: italic;">inscribed</span><span class="f_footnotetext"> inside the a circle whose radius is the original YP0.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">If the lens has a nonzero skew field originally, the program simply alters the value of XP0 so that it is equal to the original value of YP0, making the field square.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">The program then evaluates the field points over the resulting values of YP0 and XP0. &nbsp;If the lens has the </span><span class="f_footnotetext" style="text-decoration: underline;"><a href="um32.htm#cfov" class="topiclink">CFOV</a></span><span class="f_footnotetext"> attribute set, the program discards all field points that fall outside a circle inscribed in this square field of view.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">There are numerous buttons in the MFB dialog:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">SPOTS B/W</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Creates a grid of small spots in black on a white background.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">SPOTS W/B</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">A grid of white spots on a black background</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">GRID B/W</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">A grid of black lines on a white background.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">GRID W/B</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">A grid of white lines on a black background.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Circles</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Here you can specify the size and spacing of a grid of circles. &nbsp;The arguments give the number of pixels of the radius and spacing, which must be from 1 to 400. &nbsp;The screen is scaled so that the full-field point is at 200 pixels from the center.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Squares</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Here you can specify the size and spacing of a grid of squares. &nbsp;The arguments give the number of pixels of the width and spacing, which must be from 1 to 400. &nbsp;The screen is scaled so that the full-field point is at 200 pixels from the center.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Open Bitmap</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">This button displays the File Open dialog, where you can select a file with the extension .bmp. &nbsp;The program will discard any bits that exceed the 400 x 400 pixel size of the object array, so for best results you should use your graphics program’s resize feature to resample a larger image at this resolution, and then save the result. &nbsp;A smaller file will only partially fill the object array.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Load from Clipboard</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">If a bitmap file has been placed on the Windows Clipboard, this button will load it into the object array, subject to the same size considerations noted above.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Show Raw</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Displays the raw object array.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Process/</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Show Processed</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Combines the object bitmap with the spot diagram of the lens at each field point. &nbsp;After processing is complete, this button changes to Show Processed, letting you flip from the raw to the processed image easily.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Print</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">This button prints an image of the entire dialog on the selected printer.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Help</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Opens this section of the SYNOPSYS help file.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Close</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Closes the dialog.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Image Tools</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Opens the MIT dialog, which is suitable for high-resolution analysis of an isoplanatic image patch.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><img src="bmpbutton.png" width="24" height="24" alt="BMPBUTTON" style="width:24px;height:24px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Clicking on this button puts a bitmap copy of the displayed image area on the Windows Clipboard, from which it can be imported into any graphics program.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">Dither</span></p>
+</td>
+<td style="vertical-align:top; width:401px; padding:4px; border:solid 1px #000000;"><p class="p_footnotetext"><span class="f_footnotetext">If this box is checked, the program will interpolate the region near each object point, producing a display that is somewhat smoother than otherwise. &nbsp;This effect is most pronounced when processing the grid options.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Be aware that if you click the Print button, the program creates a bitmap copy of the dialog on the Clipboard, and then prints it – and if you later want to load from the Clipboard, the </span><span class="f_footnotetext" style="font-style: italic;">new</span><span class="f_footnotetext"> file will show up, which is most likely not what you had in mind.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Here is an example of the raw and processed images from MFB:</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><img src="mfbraw.png" width="551" height="508" alt="mfbraw" style="width:551px;height:508px;border:none"><span class="f_footnotetext"> </span><img src="mfbproc.png" width="548" height="509" alt="mfbproc" style="width:548px;height:509px;border:none"></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">MFB only works with object types OBA, OBB, OBC, OBF, FINITE, and INFINITE.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">If your lens is </span><span class="f_footnotetext" style="font-weight: bold;">monochromatic</span><span class="f_footnotetext">, you might expect that the displayed image will show up in that single color. &nbsp;But that will happen only if you first change your photo to black &amp; white. The reasons are complicated, related to the fact that we cannot display that single wavelength, but have to simulate it with the (RGB) color coordinates of that wavelength. &nbsp;If the target is B&amp;W, the problem goes away.</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

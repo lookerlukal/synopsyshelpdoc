@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>UM10.21</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="AGT,Aspherics,Aspherics Automatic test and assign" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">UM10.21</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;background:url(background-topic-header.jpg)" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   &raquo;No topics above this level&laquo;
+   </p>
+   <h1 class="p_Heading1"><span class="f_Heading1">UM10.21</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <img src="hm_btn_navigate_prev_d.png" border="0"
+        ><a href="main_index.htm"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img name=main src="hm_btn_navigate_top.png" border=0 alt="Return to chapter overview"
+        ></a><img src="hm_btn_navigate_next_d.png" border="0">
+    </td>
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><span style="font-size: 16pt; font-weight: bold;">10.21 Automatic test for G-variables (AGT) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1020.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p>The aspheric shapes in SYNOPSYS are expressed by a set of G-terms, the number depending on the shape involved. &nbsp;Zernike surfaces, for example, allow 39 such variables. &nbsp;When one suspects that adding aspheric terms to a given surface will improve the merit function (and it usually does), one must decide which terms to use; not all terms are equally useful. &nbsp;Of course, one can simply vary all allowed terms for a given shape, but that is not always a good idea. &nbsp;If some terms are actually doing little good, it is best not to vary them. &nbsp;The raytrace and optimization usually run faster if fewer terms are involved. &nbsp;The <span style="font-weight: bold; text-decoration: underline;"><a href="um1015.htm#aaa" class="topiclink">AAA</a></span> feature can determine where in your lens an asphere will do the most good. &nbsp;AGT is used to determine which G-terms are most effective on a given surface.</p>
+<p>&nbsp;</p>
+<p>Input is as follows:</p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-weight: bold;">AGT </span><span style="font-weight: bold; text-decoration: underline;">LLIB</span><span style="font-weight: bold;"> [ QUIET / 0 ] </span><span style="font-weight: bold; text-decoration: underline;">SN</span><span style="font-weight: bold;"> </span><span style="font-weight: bold; text-decoration: underline;">DELQ</span><span style="font-weight: bold;"> </span><span style="font-weight: bold; text-decoration: underline;">GN</span><span style="font-weight: bold;"> </span><span style="font-weight: bold; text-decoration: underline;">GN</span><span style="font-weight: bold;"> </span><span style="font-weight: bold; text-decoration: underline;">GN</span><span style="font-weight: bold;"> ...</span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-weight: bold;">PANT</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-weight: bold;">...</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-weight: bold;">END</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-weight: bold;">AANT</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-weight: bold;">...</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-weight: bold;">END</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-weight: bold;">[ SNAP ]</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-weight: bold;">[ DAMP ]</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-weight: bold;">SYNOPSYS </span><span style="font-weight: bold; text-decoration: underline;">NPASS</span></p>
+<p>&nbsp;</p>
+<p>In this input, <span style="font-weight: bold; text-decoration: underline;">LLIB</span> is the library location that will receive the final lens.  <span style="font-weight: bold; text-decoration: underline;">SN</span> is the surface number in the current lens to test, <span style="font-weight: bold; text-decoration: underline;">DELQ</span> is the minimum allowed fractional improvement to the merit function required before a given term is accepted, and the <span style="font-weight: bold; text-decoration: underline;">GN</span> are the terms to be tested. &nbsp;This line must be followed by the usual PANT and AANT files plus the optimization commands. &nbsp;Up to 20 G-terms may be tested at a time.</p>
+<p>&nbsp;</p>
+<p>The program will first optimize the current lens with the entered variables and merit function. &nbsp;Then it applies each of the G-terms to surface <span style="font-weight: bold; text-decoration: underline;">SN</span> in turn, optimizes the lens with this added variable, and if the fractional improvement in the merit function is greater than <span style="font-weight: bold; text-decoration: underline;">DELQ</span>, that lens is retained and the next G-variable is investigated. &nbsp;If the improvement is less than the threshold, that G-term is dropped and the next one in the list is tested.</p>
+<p>&nbsp;</p>
+<p>When the process completes, the lens with the terms that were retained becomes current and is saved in <span style="font-weight: bold; text-decoration: underline;">LLIB</span>.</p>
+<p>&nbsp;</p>
+<p>Some cautions: &nbsp;First, save this feature for when the lens is as good as it is likely to get otherwise. &nbsp;It makes no sense to add aspherics to a lens that was still improving without them. &nbsp;AGT will first optimize it with no added terms, but you should do that task yourself beforehand to be sure you are really at the optimum. &nbsp;Second, when you see which terms were useful, you must add those terms yourself to the PANT file. &nbsp;They remain in the lens, but they are not automatically added to the list of variables in the PANT file afterward. &nbsp;Third, the terms you enter should make sense with the current surface shape. &nbsp;If a surface has no aspheric terms, the program will interpret the G-terms as ordinary aspherics as described in <span style="text-decoration: underline;"><a href="um33222.htm" class="topiclink">Section 3.3.2.2.2</a></span>. &nbsp;If the surface has a different aspheric shape, that shape is retained and additional terms are applied as described above. &nbsp;Lastly, we have found that this feature may not be appropriate for Zernike surfaces. &nbsp;One can indeed often improve the image substantially by using that shape, but adding a single term by itself, as AGT does, can fail to see the improvement one gets by applying several terms at the same time.</p>
+<p>&nbsp;</p>
+<p>Example:</p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;AGT.MAC</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GET 6 &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;THE STARTING LENS</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">AGT 5 0 6 .01 3 6 10 &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;CHECK IF TERMS G 3, G 6, AND G 10 WILL BE USEFUL</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PANT P &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;DEFINE THE VARIABLE PARAMETERS</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VLIST RAD 1 2 3 4 6&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY 1 TH 20 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY 2 TH</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY 3 TH 20 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY 5 TH</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VLIST GLM 1 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">AANT P &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;DEFINE THE ABERRATIONS TO BE CORRECTED</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">AEC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;AUTOMATIC EDGE CORRECTION</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">ACC &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;AUTOMATIC CENTER THICKNESS CONTROL</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 3 2 0</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 3 2 .5</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 3 2 .7</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 3 2 1.</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 2 1 0</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 2 3 0</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 2 1 1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR .5 1 2 3 1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">SNAP&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;REQUEST SNAPSHOTS AS OPTIMIZATION RUNS</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">SYNO 44 ;</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;REQUEST OPTIMIZATION FOR 44 PASSES</span></p>
+<p>&nbsp;</p>
+<p>If the merit function improves by more than 0.01 of its previous value, the term in question will be retained. &nbsp;In this example term G 10 was not retained because it did not improve the merit function by the required amount.</p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>

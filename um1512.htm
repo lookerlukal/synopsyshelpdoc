@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1512</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="graphics,graphics AI parametric plots,graphics origin,ORIGIN of AI plots,SCALE, AI plot scale command" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="plot"></a><span class="f_mine" style="font-weight: bold;">15.1.2 Parametric Plots, Listings</span><span class="f_mine" style="font-size: 14pt;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1511.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um15121.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">AI</span><span class="f_mine"> can analyze the values of two parameters as a third (or one of the two) is varied incrementally, and plot or print the results. &nbsp;You may input the number of steps as well as the scales and labels of the two plot axes. &nbsp;The default STEPS is 20, and the scales are adjusted automatically unless entered explicitly. &nbsp;You can run this feature with a single line of input, as described below, or with a MACro, described in the </span><span class="f_mine" style="text-decoration: underline;"><a href="um15121.htm" class="topiclink">next</a></span><span class="f_mine"> section.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_example"><span class="f_example">Plot HH on surface 2 VS FOCL for 3 RAD = 1.2 to 3.4 at full field</span></p>
+<p class="p_example"><span class="f_example">Print the SAG of 1 versus aperture for apert equal .1 to .2</span></p>
+<p class="p_example"><span class="f_example">&nbsp;</span></p>
+<p class="p_example"><span class="f_example">MULTI Plot YA for YEN = 0 to 1</span></p>
+<p class="p_example"><span class="f_example">Add plot ZA on 2 for YEN = 0 to 1</span></p>
+<p class="p_example"><span class="f_example">end</span></p>
+<p class="p_example"><span class="f_example">&nbsp;</span></p>
+<p class="p_example"><span class="f_example">Plot BACK as the object distance varies from 500 to 1000.</span></p>
+<p class="p_example"><span class="f_example">Plot the spherical aberration for a conic const on 6 = 0 to 1</span></p>
+<p class="p_example"><span class="f_example">What is STEPS?</span></p>
+<p class="p_example"><span class="f_example">STEPS = 100</span></p>
+<p class="p_example"><span class="f_example">SCALE?</span></p>
+<p class="p_example"><span class="f_example">SCALE =.001 by 50.</span></p>
+<p class="p_example" style="margin: 0px 0px 0px 0px;"><span class="f_example">&nbsp;</span></p>
+<p class="p_example" style="margin: 0px 38px 0px 38px;"><span class="f_example" style="font-weight: normal;">Note that the SCALE directive above would be confused with the </span><span class="f_example" style="font-weight: normal; text-decoration: underline;"><a href="um58.htm" class="topiclink">SCALE</a></span><span class="f_example" style="font-weight: normal;"> </span><span class="f_example" style="font-style: italic; font-weight: normal;">command</span><span class="f_example" style="font-weight: normal;"> if you did not have the “=” sign or another verb that clearly makes it an AI sentence.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="addplot"></a><span class="f_mine" style="font-weight: bold;">AI</span><span class="f_mine"> allows you to add another plotted curve to a previous plot, but first you have to make sure that it does not show the first plot before you make the second. &nbsp;In the above examples, the third line makes a plot with the verb “</span><span class="f_mine" style="font-weight: bold;">multi plot</span><span class="f_mine">” instead of “</span><span class="f_mine" style="font-weight: bold;">plot</span><span class="f_mine">”. &nbsp;This allows the fourth line to add a curve to the plot made by the third line, and the </span><span class="f_mine" style="font-weight: bold;">END</span><span class="f_mine"> statement following it then shows the picture. &nbsp;The abscissa of the second (and subsequent) plot should be the same as on the first plot, to guarantee the same horizontal scale factor for the two curves (or an explicit scale may be entered for the first plot)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The last sentence in the above examples will cause the plot scale to be. 001/inch on the abscissa (horizontal axis), and 50./inch on the ordinate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">SCALE = 0 by 0</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">restores the default automatic scaling of both axes and also restores the default automatic origin location.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Another directive can reuse the previous scale when plotting more than one curve on a single page with the input ADD PLOT … or ADD DO MACRO…. &nbsp;If you want the scale and origin of the added data on both axes to be the same as the previous data, you may use the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">SCALE = LAST</span><span class="f_mine" style="font-family: 'Times New Roman';">,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">which may be entered after the first plot command is executed, but before the second. &nbsp;The program will reuse the scale and origin for all following AI plots until the defaults are restored as described above.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Setting the plot origin and labeling of axes are automatic, unless explicit requests are entered. &nbsp;To specify a particular origin, which is frequently needed when a particular scale is entered, enter a sentence such as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:527px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Origin = 2, 15</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-style: italic;">or</span></p>
+</td>
+<td style="vertical-align:top; width:527px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Set the origin equal -1 by 10.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The origin, like the scale, remains in effect until default scaling is requested by entering zero scale for both axes. &nbsp;Note that </span><span class="f_mine" style="font-weight: bold;">ORIGIN = 0, 0</span><span class="f_mine"> does </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> restore the default automatic origin location: it places the origin at exactly (0, 0).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate the use of some of these features, consider the eyepiece shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um15f4.png" width="194" height="219" alt="um15f4" style="width:194px;height:219px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This is a very wide-angle eyepiece, and we want to see how well the exit pupil is controlled. &nbsp;If rays from any part of the field do not enter the eye, the field will have a dark “kidney bean” defect there. &nbsp;To monitor where the chief ray in three colors hits surface 26, we can make a MACro as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New';">STO 9</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New';">CHG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New';">NOP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New';">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New';">SCALE = 0, .2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New';">ORIGIN = 0, -0.5</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New';">MULTI PLOT YA IN COLOR 2 ON 26 FOR HBAR = 0 TO 1 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New';">COLOR RED</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New';">ADD PLOT YA IN COLOR 1 ON 26 FOR HBAR = 0 TO 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New';">COLOR BLUE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New';">ADD PLOT YA IN COLOR 3 ON 26 FOR HBAR = 0 TO 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New';">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-family: 'Courier New';">GET 9</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">Here, we first save the lens in library location 9, because we want to delete a curvature solve on surface 25 (with NOP) and then restore the lens when we are done. &nbsp;Then we set a fixed scale and origin for the plot and make three curves, showing the chief-ray intercept across the field in three colors. &nbsp;Here is the plot that is produced:</span></p>
+<p>&nbsp;</p>
+<p><img src="um15f5.png" width="542" height="729" alt="um15f5" style="width:542px;height:729px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The axis labels are taken by the program from the data plotted, and are usually satisfactory. &nbsp;In some cases, however, such as when the variable is the </span><span class="f_mine" style="font-weight: bold;">AIParameter</span><span class="f_mine"> (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um15122.htm" class="topiclink">15.1.2.2</a></span><span class="f_mine">) you will prefer to enter your own label. &nbsp;To do so, enter a sentence such as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">Label of ordinate = 'Relative field point'</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">Abscissa label equals 'Here is a sample label'</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">OLAB = ‘This is the ordinate’</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">Change ALABEL to 'and this is the abscissa'</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A character string up to 24 characters long may be given, </span><span class="f_mine" style="font-style: italic;">and must be put in quote or apostrophe</span><span class="f_mine"> </span><span class="f_mine" style="font-style: italic;">marks.  </span><span class="f_mine">The mnemonics </span><span class="f_mine" style="font-weight: bold;">OLAB</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">ALAB</span><span class="f_mine"> may be assigned the desired string, which will then appear on the next plot. &nbsp;(The axis labels are entered before the </span><span class="f_mine" style="font-weight: bold;">PLOT</span><span class="f_mine"> command.) &nbsp;The labels are in effect for only a single plot, and must be reentered if the same labels are needed for the next plot. &nbsp;A picture may be replotted with a different scale or origin, or with different labels</span><span class="f_mine" style="font-family: 'Times New Roman';">,</span><span class="f_mine"> by entering the new labels or data and then typing </span><span class="f_mine" style="font-weight: bold;">AGAIN</span><span class="f_mine"> -- see </span><span class="f_mine" style="text-decoration: underline;"><a href="um15124.htm" class="topiclink">15.1.2.4</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A sample </span><span class="f_mine" style="font-weight: bold;">AI</span><span class="f_mine"> plot is shown below, produced by the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">STEPS = 100</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">PLOT YA ON 18 FOR A REL FIELD OF -1 TO 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um15f1.png" width="296" height="398" alt="um15f1" style="width:296px;height:398px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um15121.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

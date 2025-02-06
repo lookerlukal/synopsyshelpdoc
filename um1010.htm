@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>automatic testplate matching</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="optimization--&gt;,testplates, automatically fitting to a lens,TPM" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="tpm"></a><span class="f_mine" style="font-size: 14pt;">10.10 Automatic Testplate Matching (TPM) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1011e.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1093.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When a design has been optimized sufficiently to permit manufacture, it is good practice to fit the surfaces to existing tooling to reduce manufacturing costs and tolerances on those surfaces that can be matched from the tolerance budget. &nbsp;This section describes the input to the TPM feature, which can also be run from the dialog </span><span class="f_mine" style="font-weight: bold;">MMT</span><span class="f_mine">. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Assuming that the testplate list has been stored in the correct format (see below), you then perform an additional optimization where, instead of the “</span><span class="f_mine" style="font-weight: bold;">SYNOPSYS ...</span><span class="f_mine">&quot; command, you enter a file of the form</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um10f23.png" width="652" height="381" alt="um10f23" style="width:652px;height:381px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this input,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="width:569px; border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">MATCH</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:460px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives either a list of surface numbers whose radii of curvature are to be matched, if possible, to the testplate list, specifies that all radii (except the image surface) are to be matched except for those radii whose surfaces are entered, or causes only those radii that are explicitly varied in the current PANT file to be matched. &nbsp;Additional </span><span class="f_mine" style="font-weight: bold;">MATCH</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">EXCEPT</span><span class="f_mine"> input is permitted on successive lines, if necessary.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">LIST</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:460px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">followed by the testplate list name on the next line, specifies the list to be used. &nbsp;These data must have been previously prepared and stored with the entered filename and a file type of &quot;.TPL&quot;. &nbsp;The format of the list is as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Line 1: any identification you wish</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Line 2: UNITS { INCH / CM / MM }</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Line 3: first (smallest) radius of curvature, diameter of tool</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Line 4: next radius, diameter, and so on.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The maximum number of entries in the list is 10000. &nbsp;The radii of curvature may be in inches, CM, or MM. &nbsp;State the appropriate unit in the second line of the file. &nbsp;Enter the Radii in increasing order; an error message will be printed if this is not the case.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um136.htm" class="topiclink">DIR</a></span><span class="f_mine"> command can list all of the available testplates lists. &nbsp;To list the contents of the selected testplate list, turn on switch 43 before running TPM. &nbsp;You can get just a list without actually matching anything with the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">TPM PRINT</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">listname</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This form does not require setting switch 43.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">LIBRARY</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:460px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives a library location, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LLOC</span><span class="f_mine">, where the results of each successful match will be stored. &nbsp;The surfaces are matched one at a time, and if a given surface cannot be matched, the last successful match is retrieved from the library before continuing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TEST</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:460px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies how closely a given surface must match a testplate before it will be considered a candidate for matching. &nbsp;The criterion may be either a fraction of the curvature (</span><span class="f_mine" style="font-weight: bold;">POWER</span><span class="f_mine">) or a given number of waves of sag difference </span><span class="f_mine" style="font-weight: bold;">(WAVES) </span><span class="f_mine">at the clear aperture. (Default  </span><span class="f_mine" style="font-weight: bold;">POW 0.1</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SELECT</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:460px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">indicates whether the matching program will prefer surfaces that are closest to matching at each iteration, or those that are farthest (but still within the entered TEST). &nbsp;In many cases, a larger number of total matches results from FAR. &nbsp;(Default = </span><span class="f_mine" style="font-weight: bold;">FAR</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PREOPT</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:460px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes the program to: 1. optimize the system with all radii </span><span class="f_mine" style="font-weight: bold;">FREE </span><span class="f_mine">prior to matching any testplates; 2. </span><span class="f_mine" style="font-weight: bold;">FIX</span><span class="f_mine"> any curvatures that match a testplate to + / - .001% prior to an initial optimization, with all other variable radii free; or 3. perform no initial preoptimization (</span><span class="f_mine" style="font-weight: bold;">NONE</span><span class="f_mine">). (Default = FIX.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:166px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">DEGRADE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FRACTION</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:376px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the fractional degradation that will be permitted relative to the initial merit function when deciding whether to accept the results of a trial match and reoptimization. (Default = </span><span class="f_mine" style="font-weight: bold;">DEGRADE 0.05</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">MERIT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">MERIT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the maximum allowed value of the merit function as each surface is matched. &nbsp;Those trial matches that exceed this value after reoptimization will be rejected. &nbsp;Either </span><span class="f_mine" style="font-weight: bold;">DEGRADE</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">MERIT</span><span class="f_mine"> may be input, but not both.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PASSES</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the number of iterations to be performed with each trial match. &nbsp;The default is 5 iterations.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:118px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">DFRACT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">FRACT</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:412px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This specifies the minimum diameter of a testplate that is to be considered, expressed as a fraction of the lens diameter (which is twice the CAO of the surface). &nbsp;Thus, a F</span><span class="f_mine" style="text-decoration: underline;">RACT</span><span class="f_mine"> of 0.7 means that the testplate must cover at least 70% of the surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GO</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:430px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">initiates the matching procedure.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">At the conclusion of the matching process, a summary is printed giving the status of each surface (matched or not), and the final lens is placed into the lens library at location</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LLOC</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that curvatures with pickups or solves are not matched.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You do not have to input your PANT and AANT files with the TPM input if they have already been run with a previous optimization; those data are retained until you exit from SYNOPSYS – but we recommend that you include those files anyway since some other features of the program run an optimization behind the scenes, which will overwrite the files you intended to use.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The TPM command has an optional entry &quot;</span><span class="f_mine" style="font-weight: bold;">MULTI</span><span class="f_mine">&quot;, as does optimization and BTOL tolerancing. &nbsp;This entry is required if the merit function is set up for multiconfiguration optimization, and will cause the program to honor any ACON declarations that may be in the </span><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm#aant" class="topiclink">AANT</a></span><span class="f_mine"> file. &nbsp;But the radii to be matched are taken only from ACON 1 in those cases. &nbsp;Other configurations will pick up those radii if they are in the range of a pickup list, but otherwise the radii in the other configurations are not addressed by TPM.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">DFRAC</span><span class="f_mine"> input applies only to testplate lists that contain the diameter of the tool. &nbsp;Many lists do not. &nbsp;Those testplates with no diameter information are always allowed to match a surface, if the radius is otherwise close enough; the default </span><span class="f_mine" style="text-decoration: underline;">FRACT</span><span class="f_mine"> is 0.75.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">While it is useful to find a tool that is large enough to cover the lens surface, one should not necessarily reject smaller ones: it is better, we feel, to have a good, if smaller, match, than to have none at all, since it is much easier and faster to make a new testplate if you already have a smaller one in hand with exactly the right radius.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the event that one or more surfaces are not matched to a testplate due to the excessive value of the MF when matched, it sometimes helps to reoptimize the lens for a few cycles and then try to match testplates again. &nbsp;The problem surfaces will then be matched first, if SELECT FAR is selected, which is usually a good idea, and the others will try to compensate. &nbsp;We often succeed in matching all radii in this way.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Why do so many vendors have testplate lists that are poorly measured? &nbsp;The assumptions centered around testplate matching assume that the measurement errors are too small to worry about, and if this is not true, the whole business of calculating a tolerance budget falls apart. &nbsp;Many vendors do not understand the logic behind lens tolerancing, and feel that if they remake or remeasure a testplate, and the radius is then within the tolerances on the print, they have done all that is necessary. &nbsp;But this is not true. &nbsp;A discussion of the topic is given in </span><span class="f_mine" style="text-decoration: underline;"><a href="um126.htm" class="topiclink">Section 12.6</a></span><span class="f_mine">, and a .pdf file of the same text will be found in the C:\SYNOPSYS directory, ready to be sent to vendors who do not yet get it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1011e.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

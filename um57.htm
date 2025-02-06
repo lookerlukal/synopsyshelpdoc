@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um57</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="aspherics,aspherics fitting to interferogram data,DEF deformation fit,Interferogram, fitting to,SFIT,ZE4,ZERNIKE fit" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;">&nbsp;</p>
+<p><a name="def"></a></p>
+<p><a name="zernike"></a></p>
+<p><a name="sfit"></a><span style="font-size: 14pt;">5.7 SFIT Surface fit to data &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-decoration: underline;"><a href="um58.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um56.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="pointcloud"></a><span class="f_mine">SYNOPSYS can calculate the coefficients required to model a surface when you want the shape to match a table of (X,Y,Z) coordinates such as might be produced by a digitized interferogram. &nbsp;Most of the surface shapes available in the program can be so matched. &nbsp;(If the shape is rotationally symmetric, you can also use </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="5_56_csag.htm" class="topiclink">CSAG</a></span><span class="f_mine">, with simpler input.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are two scenarios for using SFIT. &nbsp;The first is when you have a set of (XYZ) coordinates over a surface and want to find a shape that fits them as closely as possible. &nbsp;That option uses the </span><span class="f_mine" style="font-weight: bold;">REPLACE</span><span class="f_mine"> directive. &nbsp;The second is for when a surface has been manufactured and the errors are measured over a grid of points. &nbsp;In that case, when </span><span class="f_mine" style="font-weight: bold;">ADD</span><span class="f_mine"> is selected the data do not give the actual shape, only the shape errors.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The several shapes that are supported by SFIT utilize those two options in different ways. &nbsp;The POWER and ZERNIKE options will replace all aspheric terms if REPLACE is selected -- but will not alter the current CV or CC. &nbsp;If </span><span class="f_mine" style="font-weight: bold;">ADD</span><span class="f_mine"> is selected, the current aspheric contribution is sampled over a grid given by the (X,Y) input data, and the resulting value is then </span><span class="f_mine" style="font-style: italic;">added</span><span class="f_mine"> to the DZ data entered for that point. &nbsp;Then the program runs an optimization, targeting the aspheric contribution to the sag to the sum.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">All other shapes replace the entire shape with the data that best fit the entered values, again using those values as is for the </span><span class="f_mine" style="font-weight: bold;">REPLACE</span><span class="f_mine"> option, and adding the DZ values to each calculated sag of the starting system for the </span><span class="f_mine" style="font-weight: bold;">ADD</span><span class="f_mine"> option. &nbsp;If neither is selected, the default is </span><span class="f_mine" style="font-weight: bold;">REPLACE</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">SFIT [ L [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">D</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">APS</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">APD</span><span class="f_mine" style="font-weight: bold;"> ] ] ]  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">[ COORD { XY / YX / MXY / XMY / MXMY / MYX / YMX / MYMX } ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">[ &nbsp;ADD / REPLACE ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">shape</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">rank</span><span class="f_mine" style="font-weight: bold;">  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">slot ]</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">X</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Y</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DZ</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">… &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine"> (up to 10000 coordinates, deformations)</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The coordinate system used in SYNOPSYS has Y pointing up and X pointing toward you, with Z to the right. &nbsp;In the event that the engineers measuring the surface sag employ a different set of axes, you can specify that system with the </span><span class="f_mine" style="font-weight: bold;">COORD</span><span class="f_mine"> input. &nbsp;The default is XY, which is the system just mentioned. &nbsp;If the measured data have the vertical axis listed first, then the YX option might be appropriate. &nbsp;And if either axis points in the opposite direction, then the M options would be appropriate. Those change the sign of X or Y before the curve fit is started. The Z-direction is in all cases along the measuring axis giving the sag.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The desired shape must be entered along with the surface number. &nbsp;In this input, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">shape</span><span class="f_mine"> is one of</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">shape</span></p>
+</td>
+<td style="vertical-align:top; width:230px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Terms added and varied</span></p>
+</td>
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Notes</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">POWER</span></p>
+</td>
+<td style="vertical-align:top; width:230px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Basic 22-term power series</span></p>
+</td>
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Keeps RAD and CC, varies the aspheric terms.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ZERNIKE</span></p>
+</td>
+<td style="vertical-align:top; width:230px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Adds 36 Zernike polynomials</span></p>
+</td>
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Keeps RAD and CC, varies the Zernike terms.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ZE4</span></p>
+</td>
+<td style="vertical-align:top; width:230px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Adds 4 Zernike polynomials</span></p>
+</td>
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Same as Zernike otherwise; see below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">BICONIC</span></p>
+</td>
+<td style="vertical-align:top; width:230px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">G 1 and G 2</span></p>
+</td>
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Surface must be biconic coming in; the paraxial curvature is not altered.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TORIC</span></p>
+</td>
+<td style="vertical-align:top; width:230px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">G 1, RAD</span></p>
+</td>
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Must be toric coming in; varies the radius in both X and Y.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">BIRAD</span></p>
+</td>
+<td style="vertical-align:top; width:230px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">RAD, G 1 and G 2</span></p>
+</td>
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Must be birad coming in; varies parameters a, b, and c.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:83px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">USS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">nb</span><span class="f_mine" style="font-weight: bold;"> ...</span></p>
+</td>
+<td style="vertical-align:top; width:230px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Varies with the type selected</span></p>
+</td>
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This option automatically NULLS the surface and then assigns the requested USS shape. &nbsp;All terms representing that shape are varied. &nbsp;See below for comments. &nbsp;REPLACE and ADD are supported.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If a surface is to be described with a 22-term power-series deformation polynomial (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um33222.htm" class="topiclink">3.3.2.2.2</a></span><span class="f_mine">) or a Zernike polynomial with either 4 (see below) or 36 terms (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um33226.htm" class="topiclink">3.3.2.2.6</a></span><span class="f_mine">), the coefficients can be calculated in a least-squares manner so as to approximate the data read from an interferogram. &nbsp;These deformations may apply in addition to any spherical or conic curve on the surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the </span><span class="f_mine" style="font-weight: bold;">[ L ]</span><span class="f_mine"> is included, the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DZ</span><span class="f_mine"> deformation input is assumed to be in the same units as the lens. &nbsp;If any other entry, or blank, is in word 2, the DZ information is assumed to be in waves at the wavelength of the primary color. &nbsp;The optional </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">D</span><span class="f_mine"> is a damping factor that may be used to prevent singularity in the event the deformation input underconstrains the polynomial, which is solved by the optimization program. &nbsp;It is preferable to enter a large enough array of deformations to overconstrain the solution, however.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> is the number of the surface to which the data will be assigned. &nbsp;The optional entry </span><span class="f_mine" style="font-weight: bold;">APS</span><span class="f_mine"> is a reference aperture, used by the Zernike coefficients, which will be orthogonal (default is a unit circle) over this aperture, and by some of the USS shapes, and </span><span class="f_mine" style="font-weight: bold;">APD</span><span class="f_mine"> is the dimension on the interferogram at full aperture. &nbsp;If APS is not equal to APD, the (X,Y) interferogram coordinates will automatically be scaled so that a position at APD becomes equal to APS. &nbsp;If </span><span class="f_mine" style="text-decoration: underline;"><a href="um29.htm" class="topiclink">switch13</a></span><span class="f_mine"> is turned ON prior to DEF, a listing of the input file and a table of deformations calculated with the coefficients is also produced, which may be compared with the original input data to check the accuracy of the curve fit.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Any deformation data (DC1 etc.) previously on the surface are removed prior to calculating the new coefficients in REPLACE mode.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An additional term, a constant, is present for the Zernike curve fit. &nbsp;It is printed as coefficient 37 and then discarded.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The option to fit only the first four terms of the Zernike coefficients (</span><span class="f_mine" style="font-weight: bold;">ZE4</span><span class="f_mine">) is intended for diagnosing surface shape errors. &nbsp;If the aperture is a uniform circle, the full Zernike expansion is valid and one can simply read the first three terms, which give the tilt and defocus of the surface. &nbsp;If the aperture is obscured or noncircular, however, the Zernike coefficients are no longer orthogonal over that aperture, and to get accurate values of the first three one should specify the ZE4 option. &nbsp;(The fourth term is a piston coefficient, which has to be calculated but has little physical meaning.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you want your coefficients to be ideal Zernike terms, with the special mathematical properties of this expansion, be sure to give the CAO of the surface for the parameter APS. &nbsp;If you do not, the coefficients lose their special meaning – but are still valid for representing the shape of the surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss" class="topiclink">USS</a></span><span class="f_mine"> shapes include various polynomials, including Forbes polynomials of types A and B. &nbsp;In this case, the value for </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">APS</span><span class="f_mine"> should be the maximum aperture of the surface, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">APD</span><span class="f_mine"> is the equivalent aperture of the input data. &nbsp;This will be scaled to the former before the surface is fitted. &nbsp;These shapes submit an optimization run to SYNOPSYS, giving targets to the SAG of the surface at each entered data point, scaled and augmented as described above. &nbsp;Not all USS shapes can be calculated by SFIT; a message will be displayed if you ask for one that is not supported.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program creates a MACro of the optimization data and saves it with the name SFIT_OPT.MAC. &nbsp;You can open that MACro, edit whatever you want, and then run it if you need to optimize the system again.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The shapes </span><span class="f_mine" style="font-weight: bold;">USS 15</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">24 </span><span class="f_mine">are yet more complicated. &nbsp;Those are NURBS surfaces, and the program has to know what grid number to use when constructing the nodes. &nbsp;That number should appear in word 4 of the surface line, with a default of 9, meaning a 9x9 array of points. &nbsp;The nodes will be generated over an area extending in X and Y by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">APS</span><span class="f_mine">. &nbsp;In both of these cases, the USS shape contains the entire shape, including the influence of the former CV and CC, if any, in ADD mode. &nbsp;It is also wise to run the annealing program when SFIT finishes, since these shapes often converge slowly and the results may not indicate where the true minimum is to be found. &nbsp;Type </span><span class="f_mine" style="font-weight: bold;">USS 24</span><span class="f_mine"> also needs a slot number, from 1 to 5, which can be entered in word 5 of the surface line. &nbsp;Thus, you might enter 5 USS 24 9 2 to put the data for a 9 x 9 grid into slot 2. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Type </span><span class="f_mine" style="font-weight: bold;">USS 21</span><span class="f_mine">, which goes up to the 30th power of aperture, is problematic. &nbsp;Applying that shape to a large aperture surface can result in floating-point overflow, which will usually crash the optimization program. &nbsp;For this reason, SFIT only varies the first 18 (out of 32) terms with this shape. &nbsp;If the results are satisfactory and you want to vary yet more terms, open the file SFIT_OPT, add additional variables as needed, and run the file again.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Be aware that any curve-fitting routine must deal with two contradictory requirements: you want the fit to be as accurate as possible – while at the same time you invariably give it inaccurate data. &nbsp;Physical measurements, or the results of digitizing an interferogram, have only limited accuracy. &nbsp;Because of these conflicts, a curve that accurately duplicates all of the input data points may show pronounced ringing. &nbsp;That is, the curve </span><span class="f_mine" style="font-style: italic;">in between</span><span class="f_mine"> those data points may be wildly oscillating, while the points themselves are very accurate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are two general ways to deal with this conflict. &nbsp;The first is to give a damping factor with the input request. &nbsp;The effect of this parameter is to penalize the fit according to the magnitude of the coefficients: a larger damping yields lower coefficients and a smoother curve. &nbsp;The fit may not be as accurate at the entered points, but there will be less ringing in between those points, and the result may well be more accurate than the input data. &nbsp;A second way, which applies in the case of the Zernike fit, is to give a unit aperture size somewhat larger than the actual CAO. &nbsp;This causes the program to fit the data with a polynomial where all of the spatial wavelengths are larger compared to the smaller real aperture. &nbsp;The result is again less ringing. &nbsp;You will have to experiment with these approaches, checking the RSS fit error and the smoothness of the fit, as seen by the </span><span class="f_mine" style="text-decoration: underline;"><a href="um861.htm#pupil" class="topiclink">PUPIL</a></span><span class="f_mine"> or </span><span class="f_mine" style="text-decoration: underline;"><a href="um511.htm#sprofile" class="topiclink">SPROFILE</a></span><span class="f_mine"> features.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that previous releases used the commands DEF, ZERNIKE, and ZE4. &nbsp;Those formats are still honored, but you are advised to use the new format instead.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Lastly, be aware that entering a very large set of coordinates is probably not a good idea. &nbsp;One user wanted to fit over 6000 data points (and the program will accept up to 10000). &nbsp;But consider that any optical surface that requires so many points to model is likely so bumpy that is it useless. &nbsp;Optics wants smooth surfaces with gentle curves. &nbsp;Even steep aspheres can be modeled well with from 200 to 1000 points. &nbsp;More than that is just a waste of time. &nbsp;And you will indeed waste time waiting for the results if you ask for so many data points..</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um58.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

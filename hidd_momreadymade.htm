@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>HIDD_MOMREADYMADE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-weight: bold;">MOM – Select from a Ready-Made Merit Function Dialog</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">This dialog lets you select from one of several prepared merit functions. &nbsp;Although you will probably need to make adjustments as you see how well they work with your lens, these are very handy for getting started.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Most lenses work well with selection 6. &nbsp;This specifies an SFAN of five rays on axis, in three colors, and a grid of three rays in both X and Y at field points 0. 0.7, and 1.0, also in three colors. &nbsp;This option traces more rays than do selections 1 through 5, but will correct for chromatic differences in the aberrations, which the former will not.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Selections 1 and 2 are for monochromatic systems, while selections 3, 4, and 5 correct three colors by targeting the difference in ray intercept points in the long and short wavelengths, and a grid or fan of rays in the primary color.  </span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Selection 5 has a finer grid than selection 4 and is useful when the lens shows high-order aberrations.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Selections 1 and 3 correct the image at just the on-axis point.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Selection 7 is intended for systems without axial symmetry. &nbsp;It traces over both halves of the pupil, and corrects the on-axis point as well as the full-field points in both HBAR and GBAR. &nbsp;You will probably want to add several more field points to the merit function if you select this option, but this depend on the characteristics of your lens.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">Number 8 is intended for systems near the diffraction limit. &nbsp;It is often a good idea in that case to include a combination of both transverse aberrations and OPD targets in the merit function. &nbsp;But the relative weights must be carefully adjusted: an OPD error of one wave is usually much better than an image blur of one inch. &nbsp;So the program finds a useful weighting for the OPD errors, based on the current F/number of the lens and the wavelength. &nbsp;You are of course encouraged to adjust the resulting weights as you see how things progress during optimization.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">None of these options utilizes MTF optimization or a host of other possibilities, all of which are described in the User’s Manual in </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="umch10.htm" class="topiclink">Chapter 10</a></span><span class="f_footnotetext" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">If you leave the boxes monitoring edge feathering and center thickness checked, your lens will probably turn out looking pretty reasonable. &nbsp;You can control these quantities more explicitly with the Physical Parameters dialog, or with the AANT file entries </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um1037.htm#aec" class="topiclink">AEC</a></span><span class="f_footnotetext"> and </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um1038.htm#aacc" class="topiclink">ACC</a></span><span class="f_footnotetext">. </span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">You can also select a box to keep the slope angle at the edge of surfaces under 60 degrees, if any of your lenses tend to get excessively steep. &nbsp;When the data show up in the merit function, you can adjust the target angle if you wish, with the AANT entry </span><span class="f_footnotetext" style="font-weight: bold; text-decoration: underline;"><a href="um103_12.htm#asc" class="topiclink">ASC</a></span><span class="f_footnotetext" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

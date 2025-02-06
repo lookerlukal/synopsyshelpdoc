@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um543</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CMIRROR,DMIRROR,Duplicating with mirror image" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p>&nbsp;</p>
+<p><a name="dmirror"></a><span style="font-size: 14pt;">5.43 Duplicate and Mirror (DMIRROR, CMIRROR)</span>  &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um542.htm" class="topiclink">Previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um544.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program can easily perform the common task where you want an exact copy of your lens, flipped so as to make a mirror image of the lens and put at the end. &nbsp;There are two forms: DMIRROR makes a flipped copy, and CMIRROR creates a duplicate where the light returns through a copy that is not flipped after reflecting at a mirror;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Input for the first form is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">DMIRROR </span><span class="f_mine" style="text-decoration: underline;">ISN</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;">ISN</span><span class="f_mine"> is the surface number about which the system will be mirrored.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature may be run from the dialog </span><span class="f_mine" style="font-weight: bold;">MUT</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is an example. &nbsp;This is a three-element lens that is approximately telecentric at the image. &nbsp;We want to duplicate and mirror the system about the image plane, which is surface number 8.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="dmirr1.png" width="646" height="257" alt="dmirr1" style="width:646px;height:257px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">After the command </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">DMIRROR 8</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">the system is duplicated as requested.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="dmirr2.png" width="636" height="234" alt="dmirr2" style="width:636px;height:234px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are restrictions. &nbsp;No HOEs, DOEs, or GRATINGs can appear in the affected lenses, and no tilts, decenters, or GLOBAL or LOCAL surfaces can be involved. &nbsp;In other words, this is for very simple cases only. &nbsp;The mirrored surfaces will all be assigned pickups of the original surfaces so mirror symmetry will be maintained if you change the first section. &nbsp;If the object is type OBB (infinite object usually), the output from DMIRROR will be AFOCAL. &nbsp;Otherwise the last thickness is taken from the value of TH0. &nbsp;This thickness is not assigned a pickup, however, so if you want to maintain the paraxial focus you must add the YMT solve yourself.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the more general case, where the above restrictions are not observed, you can still make a mirrored copy of the lens – but you have to use different features. &nbsp;Here is one procedure:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;Load the starting lens into two ACONs, say 1 and 2.</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;Switch to ACON 2 and execute the REVERSE command. &nbsp;This is more general and allows the forbidden items.</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;Use the LE command to put a copy of this reversed system in the editor.</span></p>
+<p class="p_mine"><span class="f_mine">4. &nbsp;In the editor, drag-select and copy (Ctrl + C) all of the lines starting with surface 1, but not the object and system data.</span></p>
+<p class="p_mine"><span class="f_mine">5. &nbsp;Switch to ACON 1, make a checkpoint, and open the WorkSheet.</span></p>
+<p class="p_mine"><span class="f_mine">6. &nbsp;Note the surface number of the last surface, in the above case this would be number eight.</span></p>
+<p class="p_mine"><span class="f_mine">7. &nbsp;In the Worksheet edit pane, below the text for surface 8, enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ADD 8</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and then paste the copied lines. &nbsp;Click Update, and the reversed lenses are added to the current one.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">8. &nbsp;You are almost done. &nbsp;This procedure has copied the data but has not added any pickups. &nbsp;The only parameter that is not correct is thickness 8, which we did not specify yet. &nbsp;So add</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">8 PTH 7,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">click Update, and you are done.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Be sure to check your lens after these steps, or after the DMIRROR command, to be sure that the object and image are where you want them, and to check whether any GLOBAL surfaces were put where they should not be. &nbsp;(They are located relative to surface 1, not the mirrored surface.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Input for the second form is much the same:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">CMIRROR </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ISN</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">In this case, the program duplicates the lens and superimposes it on the original, after adding a mirror at </span><span style="font-size: 11pt; text-decoration: underline;">ISN</span><span style="font-size: 11pt;">. &nbsp;Here is an example:</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0190.png" width="680" height="187" alt="clip0190" style="width:680px;height:187px;border:none"></p>
+<p><span style="font-size: 11pt;">We enter the command CMIRROR 7, to fold the system at a mirror to be inserted at the current surface 7. &nbsp;Now the system has 15 surfaces, and the light retraces its steps from the image back out the front end. &nbsp;The system is placed in AFOCAL mode, since the input was collimated. &nbsp;Here is the new system:</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0191.png" width="681" height="184" alt="clip0191" style="width:681px;height:184px;border:none"></p>
+<p><span style="font-size: 11pt;">Some restrictions apply here as well: no HOEs, DOEs or GRATINGs. &nbsp;The duplicated surfaces are all assigned pickups and are coincident with the originals, so one can tolerance the first half and expect the duplicate part will remain a duplicate.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um544.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

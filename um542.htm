@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Zemax: converting input file</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Zemax, converting input file,ZMCONVERT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p>&nbsp;</p>
+<p><a name="zmconvert"></a><span style="font-size: 14pt;">5.42 Zemax input file converter (ZMCONVERT) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um543.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um541.htm" class="topiclink">Previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">The command </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">ZMCONVERT [ ZOOM ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will open a dialog where you can select a disk file with the extension “.zmx”. &nbsp;This is the output file produced by the lens design program Zemax™. &nbsp;SYNOPSYS™ can open this file and in most cases convert the data to the SYNOPSYS RLE format. &nbsp;When it finishes, it opens the new file in a MACro editor where you can examine the results, make any changes necessary, and then run the file. &nbsp;The file to be opened must reside in the current working directory.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 48px 0px 48px;"><span class="f_mine" style="font-weight: bold;">Disclaimer: &nbsp;Since Zemax™ is a third-party program over which we have no control and for which the data are not fully transparent, we make no guarantee that the results of the conversion to SYNOPSYS format will be complete or accurate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Keep in mind that both SYNOPSYS and ZM are very large programs, and each has some features not present in the other. &nbsp;The converter will capture as much of the file data as practical and issue a warning message if it cannot convert an important item. &nbsp;These usually involve surface types that are not supported – but the glass tables, GRIN definitions, and some system properties differ between the two programs, so the conversion may be incomplete. &nbsp;Some parameters are deemed not important and are skipped entirely. &nbsp;One should therefore carefully examine the result from ZMCONVERT to be sure that the lens model is complete and accurate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A ZM file may also contain tolerance data and a description of the merit function that produced the lens. &nbsp;SYNOPSYS places those data in separate files, since the lens file is simply a lens description file and nothing else. &nbsp;So the converter ignores those data as well.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Nonetheless, all of the most common optical parameters are captured satisfactorily, and most users will find that reading a file from ZM is quite practical.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You will notice that systems with tilts or decenters are much more cumbersome in ZM, which has only coordinate breaks without an automatic undo and lacks the sophistication of the SYNOPSYS tilt and decenter options. &nbsp;(We have an example where ZM required 12 surfaces to describe a geometry that SYNOPSYS can do with 6.) &nbsp;So one of the tasks you may elect to do after running the conversion program is to redefine the geometry in a less simplistic way. &nbsp;The program will locate surfaces that Zemin uses to reverse a tilt or decenter elsewhere, and implement those as a group tilt or decenter on the originating surface, which will simplify things a bit.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You should also review the system properties, real-pupil, and clear aperture definitions to see if they are appropriate. &nbsp;The object and system parameters are set according to the definitions in the zmx file, according to the following rules:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 48px 0px 48px;"><span class="f_mine">1. &nbsp;A real pupil is put into effect, a hard CAO is put on the stop surface, and the system is put in WAP 3 mode.</span></p>
+<p class="p_mine" style="margin: 0px 48px 0px 48px;"><span class="f_mine">2. &nbsp;If the object distance was described as “infinite”, the system uses object OBB.</span></p>
+<p class="p_mine" style="margin: 0px 48px 0px 48px;"><span class="f_mine">3. &nbsp;If the field angle exceeds 70 degrees, the system uses the OBD object.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For some lenses, these rules may not be optimum, and you should therefore check (and alter if necessary) those declarations if that is the case. &nbsp;If the ZM file specified a field of zero (which is not allowed in SYNOPSYS) the program will instead call for a very small, but nonzero, field. &nbsp;If the lens is so strangely constructed that all of the rays are vignetted at any field point, which some ZM users seem to think is a good idea, then the WAP 3 pupil search will fail. &nbsp;In this case, you should change to a paraxial pupil (WAP 0, APS </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine">).  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Zemax allows you to imply the object height by giving the image height, either paraxially or with real rays. &nbsp;The conversion does not honor this option (although SYNOPSYS can do much the same with the FFIELD option) because most of the conversions we have tested involve different glass names, and the solve becomes meaningless unless the lenses are the same.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The object description that is produced is always OBA, OBB, or OBD. &nbsp;If the entering beam has a high NA, you should consider changing to the OBF format, which is intended for such cases.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program converts text lines into ID, ID1, and SID lines. &nbsp;The character set that is permitted in ZM is different from that used in SYNOPSYS, however. &nbsp;Almost any character will actually work in those lines, which the converter surrounds with quote marks to disable any attempt by the parser to interpret them. &nbsp;If any of those lines actually </span><span class="f_mine" style="font-style: italic;">contain</span><span class="f_mine"> a quote mark, however, it must be deleted before running the RLE file, or you will get a parsing error.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SYNOPSYS echoes the zmx file in the Command Window, and when the conversion is finished you are advised to scroll back and examine the listing to see if any warning messages appear. &nbsp;When the conversion program encounters a glass type, it examines all of the glass tables except the custom table to see if any of the names match. &nbsp;If the name is not found, the program substitutes a glass model (GLM) for that material and issues a warning message. &nbsp;But often the correct glass is indeed available, with a different name. &nbsp;For example, if the zmx file calls for glass type LAH66, it will not be found because the SYNOPSYS glass table contains the replacement glass S-LAH66 in the Ohara catalog. &nbsp;If you see a message of this kind, it is usually easy to insert the correct glass yourself. &nbsp;Most unusual materials will be converted to the SYNOPSYS equivalent from the U catalog automatically, with a somewhat different name in most cases. &nbsp;If no match is found, the program reads the index and dispersion data from the GLAS data in the zmx file, and assigns those to the glass model. &nbsp;But we have seen cases where those Zemin data do not correspond to the actual glass properties at all, and so all such cases must be carefully examined to see if the results make sense.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">AFOCAL systems are modeled in ZM with a PARAXIAL surface type (a perfect lens) following the collimated output. &nbsp;SYNOPSYS converts this to the APERFECT declaration, which does much the same thing – but most users will prefer to change this to a native AFOCAL declaration, which is, for us anyway, more intuitive.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SYNOPSYS input specifies the definition of the full-field point, whereas ZM gives a list of field points that are available for optimization and analysis. &nbsp;SYNOPSYS looks for the maximum field in that list and declares that the full-field point, and any other point that you may need is therefore automatically available, as usual, with the HBAR parameter. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ZM does not have a native zoom-lens feature, and has to apply the multiconfiguration capability to model them, whereas SYNOPSYS models zoom lenses in a single configuration. &nbsp;Since the ZM input file does not distinguish between pure zoom and multiconfiguration lenses, and it would be incorrect to try to construct a ZFILE zoom lens if the system were multiconfiguration instead, you must declare the lens to be a real zoom lens by putting the word “</span><span class="f_mine" style="font-weight: bold;">ZOOM</span><span class="f_mine">” in word 2 of the ZMCONVERT command if that is the case.  </span><span class="f_mine" style="font-weight: bold;">If this entry is omitted, the conversion will ignore any multiconfiguration data found in the ZM file</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span><br>
+<span class="f_mine">If the ZOOM entry is present, the conversion program will attempt to construct ZFILE data that duplicate the zoom lens. &nbsp;Be sure to check the result carefully to be sure that the right elements move and by the right amount. &nbsp;Note: the ZDATA parameters will be different from the thickness changes given in the ZM file. &nbsp;The latter measures each element position from where the previous thickness change placed it – while SYNOPSYS automatically reverses any zoom motion at the next element, so further zoom motions are measured from the nominal position, not the shifted position. &nbsp;We find this protocol much more simple and friendly, and we do not understand how users of ZM can put up with their clumsy protocol.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ZM supports many very strange surface shapes, some of which are not compatible with SYNOPSYS. &nbsp;We doubt that anybody has used most of them, but if you have a system that requires one, please let us know and we will work on it. &nbsp;Our policy is not to support features that will very likely never be used, but to respond quickly to requests that are actually needed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The coordinate geometry in ZM is right-handed, while the default in SYNOPSYS is left-handed. &nbsp;We elected to convert ZM files to the latter orientation, since SYNOPSYS users are more familiar with it.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Some of the data items in a ZM file that are not at present converted actually are compatible with SYNOPSYS, but have not yet been addressed, primarily because this is a new feature and we are still in the process of collecting example files. &nbsp;Users whose files are not fully converted are advised to send us an example, and we will enhance the conversion as required. &nbsp;Your comments are encouraged, as well as your assistance.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um543.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

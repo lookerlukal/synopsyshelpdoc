@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um3325</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="grating"></a><span class="f_mine" style="font-weight: bold;">3.3.2.5 Gratings &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3324.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3326.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_c1"><span class="f_c1">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(These options go into an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file, and may be entered interactively with the dialog </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The grating described in this section is modeled as a HOE, requiring two surfaces; a simpler form of plane grating is type </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um3327.htm#uss27" class="topiclink">USS 27</a></span><span class="f_mine">, which takes only a single surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">A grating may be considered a special case of a transmission HOE, where both illuminating points are at infinity and the fringes are parallel and of constant separation. &nbsp;This kind of surface may be input with the input</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p9-4" style="margin: 0px 0px 0px 48px;"><span class="f_p9-4" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p9-4" style="font-size: 11pt; font-weight: bold;"> GRATING { X / Y } </span><span class="f_p9-4" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">L/MM</span><span class="f_p9-4" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p9-4" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ORDER</span><span class="f_p9-4" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p9-4" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">CWAV</span><span class="f_p9-4" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p9-4" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">HIN</span><span class="f_p9-4" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p9-4" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">VNUM</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">where the entry X indicates that diffraction takes place in the X-Z plane (fringes parallel to theY axis) and Y indicates diffraction in the Y-Z plane. &nbsp;The grating frequency in lines/mm is given, as well as the order. &nbsp;The rules for entering a grating are exactly the same as those for HOEs, described in the </span><span class="f_p8-5" style="text-decoration: underline;"><a href="um3324.htm" class="topiclink">previous section</a></span><span class="f_p8-5">, except that only a single line of input is required instead of the several lines necessary for the latter. &nbsp;Briefly summarized, these rules are:</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">1.</span></p>
+</td>
+<td style="vertical-align:top; width:478px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">Two surfaces are required for a grating. &nbsp;The first is a dummy given no index difference, curvature or thickness. &nbsp;This surface is assigned the GRATING input. &nbsp;The second of the two surfaces defines the shape, CAO, and the index of the substrate. &nbsp;If reflective, the second surface must be so declared. &nbsp;A coating may be assigned to the second surface.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+<p class="p_p8-5"><span class="f_p8-5">Tilts, decenters, and global or local coordinates are assigned to the </span><span class="f_p8-5" style="font-style: italic;">first</span><span class="f_p8-5"> of the two surfaces.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">2.</span></p>
+</td>
+<td style="vertical-align:top; width:478px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">The program will calculate the blaze angle that gives 100% efficiency at the wavelength </span><span class="f_p8-5" style="text-decoration: underline;">CWAV</span><span class="f_p8-5">, and will calculate the diffraction efficiency at any other wavelength according to the values of &nbsp;the index of the emulsion as given by </span><span class="f_p8-5" style="font-weight: bold; text-decoration: underline;">HIN</span><span class="f_p8-5">,, and the dispersion as given by the Abbe number </span><span class="f_p8-5" style="font-weight: bold; text-decoration: underline;">VNUM</span><span class="f_p8-5">., calculated at the actual wavelengths in the lens, not necessarily the C, d, F lines. &nbsp;The result will be calculated by the </span><span class="f_p8-5" style="text-decoration: underline;"><a href="um173.htm#pray" class="topiclink">PRAY</a></span><span class="f_p8-5"> command.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">3.</span></p>
+</td>
+<td style="vertical-align:top; width:478px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">A grating order of -1 will diffract light in the +Y or +X direction.</span></p>
+<p class="p_p8-5"><span class="f_p8-5">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">4.</span></p>
+</td>
+<td style="vertical-align:top; width:478px; padding:4px; border:solid 1px #000000;"><p class="p_p8-5"><span class="f_p8-5">To remove a grating, do </span><span class="f_p8-5" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_p8-5" style="font-weight: bold;"> NDEF</span><span class="f_p8-5">; and then enter the new specifications.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-weight: bold;">Example grating:</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0450_zoom146.png" width="495" height="237" alt="clip0450" style="width:495px;height:237px;border:none"></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;">RLE</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;">ID GRATING_REAL FLAT </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> WAVL .6000000 .5000000 .4000000</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> POLARIZATION LINEAR Y</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> UNITS MM  </span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> OBB &nbsp;0.000000 &nbsp; 10.00000 &nbsp; &nbsp;1.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;1.00000</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 0 AIR</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 GRA Y &nbsp; &nbsp; &nbsp; &nbsp;500.0000 &nbsp; -1 &nbsp; &nbsp; &nbsp; 0.500000 &nbsp; &nbsp; &nbsp;1.500000 &nbsp; &nbsp; 50.000000</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 COATING PERF</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp;1.00000000E-06</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 N1 1.51628919 N2 1.52140818 N3 1.53084089</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 CTE &nbsp; 0.710000E-05</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 GTB S &nbsp; &nbsp;'BK7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3 COATING PERF</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp;100.00000000 AIR</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3 AIR</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 4 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000 AIR</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 4 AIR</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;"> END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; color: #7b0000; background-color: #dedede;">PER</span><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;0 0 0 0 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PLOT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUPIL 2 1 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">RED &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE 1 0 0 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUPIL 2 1 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">LIME &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE 2 0 0 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUPIL 2 1 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">BLUE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">TRACE 3 0 0 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p><span style="font-size: 11pt;">In the above example, we have define surface 1 as a grating of 500 lines/mm, assigned coatings to surfaces 2 and 3, and show a PER drawing with light coming at the three defined wavelengths.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3326.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3324.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

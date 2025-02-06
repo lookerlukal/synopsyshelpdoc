@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1252</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">12.5.2 Including other quantities in MC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1253.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1251.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is sometimes useful for MC to evaluate the statistics of properties of the lens or the image that are not considered by BTOL. &nbsp;Normally, MC considers only the same quality descriptors that were requested in the BTOL run that produced the budget that is being simulated. &nbsp;But nearly any other property can be included in the MC evaluation, and the statistics of this property can then be printed and plotted by MC along with its other parameters.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To include another property in the MC analysis, the desired quantity must first be assigned to one of the </span><span class="f_mine" style="text-decoration: underline;"><a href="um15142.htm" class="topiclink">Zn parameters</a></span><span class="f_mine">, within the MC file MCFILE.MAC, and then included with the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">MC IZn “</span><span class="f_mine" style="text-decoration: underline;">label</span><span class="f_mine">”</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where IZn is the Zn parameter to be included, and </span><span class="f_mine" style="text-decoration: underline;">label</span><span class="f_mine"> is an identification string of up to 15 characters that identifies this parameter, </span><span class="f_mine" style="font-style: italic;">enclosed within quote marks</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For example, suppose you want to monitor the exact location of the image centroid in three colors at full field during the MC evaluation. &nbsp;The file MCFILE.MAC might look as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 42px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PANT</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">…</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">AANT</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">…</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">SYNO 5</span></p>
+</td>
+<td style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">(adjustment parameters included by the PREPARE MC request)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(adjustment targets declared in BTOL)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">(to run the optimization)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 42px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:262px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Z1 = YA IN COLOR 1 AT HBAR = 1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">RMS 1 1 300</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Z2 = FILE 5</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">= Z1 + Z2</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Z3 = FILE 1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">MC IZ3 “Centroid 1”</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:251px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This is the principal ray location.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Location 5 gets the Y-centroid.</span></p>
+<p class="p_mine"><span class="f_mine">Add the two</span></p>
+<p class="p_mine"><span class="f_mine">and put the results in Z3.</span></p>
+<p class="p_mine"><span class="f_mine">Include Z3 in MC with this label.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:262px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Z1 = YA IN COLOR 2 AT HBAR = 1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">RMS 2 1 300</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Z2 = FILE 5</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">= Z1 + Z2</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Z4 = FILE 1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">MC IZ4 “Centroid 2”</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:251px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The same thing, but in color 2,</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:262px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Z1 = YA IN COLOR 3 AT HBAR = 1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">RMS 3 1 300</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Z2 = FILE 5</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">= Z1 + Z2</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">Z5 = FILE 1</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">MC IZ5 “Centroid 3”</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">MC</span></p>
+</td>
+<td style="vertical-align:top; width:251px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">and again in color 3</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This finishes the MC file.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Pay attention to the use of the Zn parameters. &nbsp;Here we use Z1 and Z2 for preliminary calculations, and put the desired result into Z3, Z4, and Z5. &nbsp;MC will read these values when the MACro is finished, and they must not be used for anything else in the meantime or the values will be overridden.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">And note the final &quot;MC&quot; command. &nbsp;If you forget to include that, and your analysis is in quiet mode (which makes sense), the system will wait for the missing command and will seem to hang.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1253.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

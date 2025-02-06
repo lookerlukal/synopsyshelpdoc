@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>UM1020</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="FFB,FREE-FORM systems, building" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">UM1020</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;background:url(background-topic-header.jpg)" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   &raquo;No topics above this level&laquo;
+   </p>
+   <h1 class="p_Heading1"><span class="f_Heading1">UM1020</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <img src="hm_btn_navigate_prev_d.png" border="0"
+        ><a href="main_index.htm"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img name=main src="hm_btn_navigate_top.png" border=0 alt="Return to chapter overview"
+        ></a><img src="hm_btn_navigate_next_d.png" border="0">
+    </td>
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><a name="ffbuild"></a><span style="font-size: 16pt;">Free-form System Build (FFBUILD) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1019.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">The term </span><span class="f_mine" style="font-style: italic;">free-form surface</span><span class="f_mine"> usually refers to an aspheric mirror with non-rotationally-symmetric terms or one whose axis of symmetry is decentered with respect to the center of the final part, or both. &nbsp;Although such mirrors are much more difficult to manufacture than spherical mirrors or those with symmetric aspheric terms, it is sometimes possible to get better image quality -- and modern manufacturing methods, such as CNC machining and MRH polishing are improving that difficulty on a regular basis.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The FFBUILD feature can help you set up and optimize such a system. &nbsp;It will find the angles to assign to a set of mirrors to send the axis ray to each mirror in turn, and will prepare an optimization MACro that will control many of the geometrical problems that one encounters in a complex folded system. &nbsp;Of particular importance is the requirement that a given mirror must not get in the way of the beam from a different mirror. &nbsp;That is not simple, as you will learn below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The current release of FFBUILD is intended only for systems with bilateral symmetry; that is, all surfaces should be located in the Y-Z plane.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Input for FFBUILD is as follows:</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">FFBUILD </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">LLIB</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">SYSTEM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">ID </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">name</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">[ WAVL ... ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">(OBJECT SPECIFICATIONS)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">UNITS ...</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">[ CFOV ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">GEOMETRY</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">[ GCLEARANCE &nbsp;/ CCLEAR &nbsp;[ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">weight</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> MIRROR </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ZG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> MIRROR </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ZG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">...</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> IMAGE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ZG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HYIMAGE</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HXIMAGE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">SHAPES</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">sn</span><span class="f_mine" style="font-weight: bold;"> {SPHERICAL / CONIC / ASPHERIC / ZERNIKE / USS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> }</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">sn</span><span class="f_mine" style="font-weight: bold;"> {SPHERICAL / CONIC / ASPHERIC / ZERNIKE / USS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> }</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">...</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 24px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this input the USS shapes are limited to numbers 1, 2, 5, 7, 9, and 11.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program sets up an initial system with mirrors in the global locations given by the </span><span class="f_mine" style="text-decoration: underline;">XG</span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;">YG</span><span class="f_mine">, and</span><span class="f_mine" style="text-decoration: underline;"> ZG</span><span class="f_mine"> input for each mirror. &nbsp;Then it submits a run to the <a href="um518.htm#aim" class="topiclink">AIM</a> program, which finds the global alpha tilt angles required on each surface to send the central ray to the next mirror. &nbsp;This much is automatic, but the rest requires user input. &nbsp;To make the job as easy as possible, it creates a MACro with most of the input you will need.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This MACro contains a PANT file that will vary the global alpha tilt as well as the curvature of each mirror. &nbsp;It does not automatically vary the global Y and Z positions of the mirrors, the higher aspheric terms, or the conic constant (if relevant to that type) at this stage. &nbsp;It adds the latter variables enclosed in SKIP blocks or commented out with the &quot;!&quot; character, so it is easy to add them to the variable list when the design has progressed far enough to warrant those variables. We have found that the program works better if you start off with only the low-order variables, and add the higher orders when needed. &nbsp;Otherwise one would be trying to compensate for defocus with high-order terms, which makes no sense. &nbsp;One must work in stages and make sure the results are reasonable before progressing to the next stage.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In order to prevent a given mirror from blocking the beam from a different one, the program adds many </span><span class="f_mine" style="text-decoration: underline;"><a href="um10312.htm#vclear" class="topiclink">CCLEARANCE</a></span><span class="f_mine"> aberrations to the merit function. &nbsp;If a mirror wanders into a beam somewhere, that will generate an error and the program will try to push it back. &nbsp;If the optional [ </span><span class="f_mine" style="font-weight: bold;">GCLEARANCE </span><span class="f_mine">] directive is entered, the program will also add a set of those controls, which can help avoid the situation when a given mirror falls entirely within the beam between two others and is not seen by the CCLEAR requests. &nbsp;An optional weighting factor may be entered in word 2. &nbsp;The default is CCLEARANCE 1.0. &nbsp;The example given below will make these matters clear.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is our sample input. &nbsp;We want a total of four aspheric mirrors, located as shown on the sketch below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0280.png" width="455" height="540" alt="clip0280" style="width:455px;height:540px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We enter those locations in the GEOM section of the FFBUILD file, shown below. &nbsp;We also specify the image scale by requesting a YA coordinate of -3.5 mm for the full-field chief ray, and the same for the skew chief ray. &nbsp;That will control the focal length, since paraxial values have little meaning with folded systems like this and the customary UMC solve will likely not work exactly as you wish.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">FFBUILD</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">SYSTEM</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">ID TEST FFBUILD</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">OBB 0 2 10</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">WAVL CDF</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">UNI MM</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CFOV</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GEOM</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">2 MIRROR 0 0 80</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">3 MIRROR 0 30 20</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">4 MIRROR 0 -50 60</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">5 MIRROR 0 40 60</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">6 IMAGE 0 -50 20 3.5 3.5</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">SHAPES</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">2 ZERN</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">3 ZERN</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">4 ZERN</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">5 ZERN</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">This example will create a system with four aspheric mirrors at the locations given in the GEOMETRY section.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0281.png" width="435" height="537" alt="clip0281" style="width:435px;height:537px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This is the setup returned automatically by FFBUILD, after it runs the AIM feature. &nbsp;A good start, but not optimized yet. &nbsp;A portion of the optimization MACro is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PANT</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;SKIP</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">VY &nbsp; 2 YG</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">VY &nbsp; 2 ZG</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">VY &nbsp; 3 YG</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">VY &nbsp; 3 ZG</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">VY &nbsp; 4 YG</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">VY &nbsp; 4 ZG</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">VY &nbsp; 5 YG</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">VY &nbsp; 5 ZG</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">VY &nbsp; 6 YG</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">VY &nbsp; 6 ZG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;EOS</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY &nbsp; 2 AG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY &nbsp; 3 AG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY &nbsp; 4 AG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY &nbsp; 5 AG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY &nbsp; 6 AG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">VY &nbsp; 2 RAD</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 CC 10 -10</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 G &nbsp; 2</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 G &nbsp; 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 G &nbsp; 4</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 G &nbsp; 7</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 G &nbsp; 8</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 G &nbsp;10</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 G &nbsp;11</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 G &nbsp;14</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 G &nbsp;15</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 G &nbsp;16</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 G &nbsp;19</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 G &nbsp;20</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;VY &nbsp; 2 G &nbsp;23</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">...</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">AANT</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR 0 1 4 P 0</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR 0 1 4 P 1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR 0 1 4 P -1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR 0 1 4 P .7</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR 0 1 4 P -.7</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR 0 1 4 P .3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR 0 1 4 P -.3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR 0 1 4 P 0 1 0 F</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR 0.5 1 4 P .707 .707 0 F</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GNR 0.5 1 4 P -.707 .707 0 F</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;SKIP</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">M &nbsp; &nbsp;0.00000 &nbsp; &nbsp; 1 A P YG 0 0 0 0 &nbsp; 2</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">M &nbsp; &nbsp;80.0000 &nbsp; &nbsp; 1 A P ZG 0 0 0 0 &nbsp; 2</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">M &nbsp; &nbsp;30.0000 &nbsp; &nbsp; 1 A P YG 0 0 0 0 &nbsp; 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">M &nbsp; &nbsp;20.0000 &nbsp; &nbsp; 1 A P ZG 0 0 0 0 &nbsp; 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">M &nbsp; -30.0000 &nbsp; &nbsp; 1 A P YG 0 0 0 0 &nbsp; 4</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">M &nbsp; &nbsp;40.0000 &nbsp; &nbsp; 1 A P ZG 0 0 0 0 &nbsp; 4</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">M &nbsp; &nbsp;40.0000 &nbsp; &nbsp; 1 A P YG 0 0 0 0 &nbsp; 5</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">M &nbsp; &nbsp;60.0000 &nbsp; &nbsp; 1 A P ZG 0 0 0 0 &nbsp; 5</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">M &nbsp; -50.0000 &nbsp; &nbsp; 1 A P YG 0 0 0 0 &nbsp; 6</span></p>
+<p><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">M &nbsp; &nbsp;20.0000 &nbsp; &nbsp; 1 A P ZG 0 0 0 0 &nbsp; 6</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">&nbsp;EOS</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">M 0 1 A P YA 0 0 0 0 &nbsp; 6</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">M 0 10 A P UNI 0 0 0 0 &nbsp; 6</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">M &nbsp;-0.350000E+01 1 A P YA 1 0 0 0&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">M &nbsp; 0.350000E+01 1 A P YA -1 0 0 0&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">M &nbsp;-0.350000E+01 1 A P XA 0 0 0 1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">M &nbsp; 0.000000E+00 1 A P YA 0 0 0 1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">LLL 1.0000 1 1.0000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">A P CCLEAR 1 0 1 0 &nbsp; 1 &nbsp;3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">S CAO &nbsp; 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">LLL 1.0000 1 1.0000</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">A P CCLEAR 1 0 -1 0 &nbsp; 1 &nbsp;3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">S CAO &nbsp; 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">...</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">...</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">SNAP</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">SYNO 50</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">Most of the merit function consists of the CCLEAR requests. &nbsp;The first of these, for example, says that the beam from surface 1 to 2 along the upper rim ray at full field must not hit surface 3 anywhere within the (probably decentered) clear aperture. &nbsp;The entire set of CCLEAR requests covers all combinations of beams, mirrors, fields, and rays from top, center, and bottom of the pupil. &nbsp;There are many of these, and they all have to be controlled.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">What the program does </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> do at this stage is vary the aspheric coefficients or locations of any of the mirrors. &nbsp;You will probably want to include those variables before you are finished -- but when the MACro first opens, it is a good idea to run it just as it is the first time. &nbsp;That should get you close enough to a solution to start using more variables. &nbsp;The first stage will vary only the global angles and radii of curvature of the mirrors. &nbsp;Here is what we get running the file:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0526.png" width="451" height="550" alt="clip0526" style="width:451px;height:550px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The beams clear each of the mirrors nicely, but the image is not very well corrected yet, which we expect since the mirrors are all still spherical.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now uncomment the first six G-variables on each mirror (by deleting the &quot;!&quot; character in the editor), and run the MACro again. (It is wise not to free up the CC variables too early in the process. &nbsp;The mirrors start out flat, and you can't assign a CC to a flat surface. &nbsp;If the mirrors are declared ZERNIKE surfaces, the CC variables are generally not even needed at all, since there are enough polynomials to do the same thing. &nbsp;So we will not use them in this lesson.) &nbsp;Anneal the system.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Zernike term 2 is similar to an alpha tilt on the surface, and is not on the variable list, since it duplicates the effect of varying the alpha tilt.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The image is better, and we now free up 6 more of &nbsp;the aspheric variables, optimize, and then anneal. &nbsp;The design looks very promising. &nbsp;Free up 6 more, and comment out the SKIP directive before the YG and ZG variables. &nbsp;Optimize and anneal again.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> Here is the PAD display showing OPD fans after 18 G-variables have been declared:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0527.png" width="1179" height="771" alt="clip0527" style="width:1179px;height:771px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Is the image really this good? &nbsp;The fans shown above are in the meridional plane. &nbsp;What happens across the field? &nbsp;Open the MMA dialog to get a map of the wavefront variance over the field. &nbsp;Select a CREC array of 7 x 7 object points and a CREC ray pattern with a grid number of 9, EANALOG scale of 0.01, Show circles, and Execute.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0528.png" width="512" height="691" alt="clip0528" style="width:512px;height:691px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The worst image point is now at about 0.66 field in the X-direction. &nbsp;Let's look at the PSPRD there:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0531.png" width="774" height="577" alt="clip0531" style="width:774px;height:577px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Indeed. &nbsp;This is a great design. &nbsp;Let's check a few more things. &nbsp;What is the distortion? &nbsp;We type</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">GDIS 21</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and see the results:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0530.png" width="771" height="569" alt="clip0530" style="width:771px;height:569px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Indeed. &nbsp;Almost no distortion either.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Let's have a look at our design. &nbsp;Open the Edge Wizard (MEW), select Create all, adjust the mirror thicknesses as you wish, and Close. &nbsp;Then make an RSOLID drawing:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0532.png" width="530" height="622" alt="clip0532" style="width:530px;height:622px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here a colored map of the wavefront variance,with a field grid of 11 x 11:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0533.png" width="455" height="611" alt="clip0533" style="width:455px;height:611px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="font-size: 11pt; background-color: #ffffff;">Look at the CAP listing, and notice how the area of surfaces 3 through 5 used by the beams is decentered with respect to the vertex of those surfaces. &nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> IMAGE&gt;CAP</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ID TEST FFBUILD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;67960 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;05-APR-21 &nbsp; 10:42:24</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> CLEAR APERTURE RADIUS</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> (Y-coordinate only)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SURF &nbsp; &nbsp;X OR R-APER. &nbsp; &nbsp; Y-APER. &nbsp; &nbsp;REMARK &nbsp; &nbsp; X-OFFSET &nbsp; &nbsp;Y-OFFSET &nbsp;EFILE?</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ___________________________________________________________________________</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; 10.0000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Soft CAO</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; 13.1525 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Soft CAO &nbsp; &nbsp; &nbsp; 0.0000 &nbsp; &nbsp; &nbsp;0.2602</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp; 19.3937 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Soft CAO &nbsp; &nbsp; &nbsp; 0.0000 &nbsp; &nbsp; -1.3077</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; 29.6081 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Soft CAO &nbsp; &nbsp; &nbsp; 0.0000 &nbsp; &nbsp; -6.1571</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; &nbsp; 17.7936 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Soft CAO &nbsp; &nbsp; &nbsp; 0.0000 &nbsp; &nbsp; -8.4208</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3.5008 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Soft CAO</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span style="font-size: 11pt; background-color: #ffffff;">Free-form surfaces often do that, and their manufacture is therefore more complicated than is the case with rotationally-symmetric mirrors. &nbsp;The program has implemented the&nbsp;</span><span style="font-size: 11pt; background-color: #ffffff; text-decoration: underline;"><a href="um331.htm#dccr" class="topiclink">DCCR</a></span><span style="font-size: 11pt; background-color: #ffffff;">&nbsp;option on the mirrors, which assigns a decenter to the CAO that coincides with the midpoint between the extreme marginal ray intercepts, at top and bottom of the field, with that surface. &nbsp;The unused part of those surfaces is outside of that default CAO. &nbsp;The FFA analysis can recast those surfaces as centered Zernike shapes, which is appropriate before one makes drawings to send to the shop.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="font-size: 11pt; background-color: #ffffff;">We did not have to use all of the possible G-terms for this example, but sometimes it is a good idea to vary term G 39, which varies the location of the center of the Zernike polynomial expansion in the Y-direction. &nbsp;SYNOPSYS lets that center differ from the center of the radius and conic shape. &nbsp;Sometimes it turns out to be useful. &nbsp;Also, we did not vary term G 51. &nbsp;That term applies a Y-scale to the Zernike polynomial, resulting in elliptical instead of circular zones. &nbsp;A value of 0.5, for example, would produce zones that are half as wide in Y as in X. &nbsp;It may sometimes be useful too. &nbsp;But those complications will probably not be welcome in the shop, so they are better left unused unless they make a substantial difference.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="font-size: 11pt; background-color: #ffffff;">This exercise was fun, but of course there are lots of things we might do differently. &nbsp;In this business, you seldom know what the best approach is until you have tried a good many of them.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="font-size: 11pt; background-color: #ffffff;">Here are some subtle points: &nbsp;First, we gave a desired image scale of +3.5 mm. &nbsp;How did we know the target should be a positive number? &nbsp;Try a positive one and see! &nbsp;It is hard to predict what the right sign should be, and easier to just try them both. &nbsp;We have even seen a case where the Y target had to be negative but the X target positive. &nbsp;The program assigned a global alpha tilt of -108.7728 degrees to the image surface -- which is quite all right -- but the sign on the Y-coordinate then changed. &nbsp;So experiment and see what works best. &nbsp;The answer also depends on whether you have an even or odd number of mirrors. &nbsp;If you can come up with a general rule to predict those signs, please send us a note and we'll add it to this help file.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="font-size: 11pt; background-color: #ffffff;">What if we change the merit function to target OPDs instead of transverse aberrations? &nbsp;It&nbsp;</span><span style="font-size: 11pt; font-style: italic; background-color: #ffffff;">should</span><span style="font-size: 11pt; background-color: #ffffff;">&nbsp;work better -- but any change in the beginning will likely send the design down a very different path. &nbsp;Does it? &nbsp;Sometimes we use both GNR and GNO requests. &nbsp;Every design is different, and all these tools are at your disposal.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="font-size: 11pt; background-color: #ffffff;">Feel free to use your imagination! &nbsp;With a powerful tool like FFBUILD you can explore interesting ideas in a fraction of the time you would have needed only a few years ago.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="font-size: 11pt; font-weight: bold; background-color: #ffffff;">Epilog</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This example worked out rather well, but life is not always so kind. &nbsp;One problem that sometimes develops is when a mirror falls entirely within the beam from a different one and is therefore not controlled by the CCLEAR aberration. &nbsp;Here is one such unfortunate example:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0226.png" width="489" height="427" alt="clip0226" style="width:489px;height:427px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Surface 5 is definitely blocking the beam from 2 to 3. The CCLEAR controls have no effect here, since the upper and lower rim rays do not intersect surface 5 within the area between mirrors 2 and 3, and that is all the CCLEAR requests created by FFBUILD check for. &nbsp;For situations like this, one can use the GCLEAR control:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">FFBUILD</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">...</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GEOMETRY</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">GCLEAR</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">...</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This form checks whether the center, top, and bottom of the CAO on </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SNV</span><span class="f_mine"> falls within the area bounded by the extreme rays between the mirrors. &nbsp;If so, the aberration is the distance from that point to the closest boundary of the area; this aberration goes to zero as the mirror moves out of the area. &nbsp;We have found, however, that it is better to move the offending mirror out of the beam manually and let the CCLEAR operands keep it there. &nbsp;The reason is quite simple: if the program moves surface 5 up, trying to get it out of the forbidden area, it immediately finds that the upper rim ray now intersects with that surface -- which triggers the CCLEARANCE aberration assigned to that ray and pushes it back down. &nbsp;It might still work if you give it a very high weight, however, so keep this trick in mind.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Another problem arises when testing a ray for CCLEARANCE and that ray has </span><span class="f_mine" style="font-style: italic;">two</span><span class="f_mine"> intersections with a target surface, as in the above picture if you move surface 5 up. &nbsp;The program will control one of them, but not necessarily the right one. &nbsp;Here, too, it is best to move the mirror out of the way first.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you use the Zernike option for your mirrors, you can free up the G-variables gradually, starting with the low-order terms, as we did above. &nbsp;We have had good luck with this procedure, and in fact did not need all of the possible variables. &nbsp;Too many high-order variables only get in the way. &nbsp;So don't try to use them all when you are just starting.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A final note: &nbsp;The merit function created by FFBUILD also contains a SKIP block with entries that target the global axial ray locations YG and ZG to equal the mirror locations requested in the original input. &nbsp;Those may be used in cases when you need the position of the center of the CAO of the mirrors to fall close to those locations to satisfy mechanical mounting or other requirements. &nbsp;In this case, simply comment out the SKIP directive and delete any of the aberration definitions that you do not need. &nbsp;That should put the mirror(s) where you want them, if possible. &nbsp;(Remember, the actual part of the mirrors that will be used is not necessarily at the global positions, so even if you do not vary those, the CAOs will move around.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10_21.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>

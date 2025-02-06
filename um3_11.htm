@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um3.11</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Arrays of lenses" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="array"></a><span class="f_mine" style="font-size: 14pt; font-weight: bold;">3.11 Lens Arrays &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um310.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">All of the surface shapes (except prisms) that can be defined in SYNOPSYS can also be declared to be arrays of identical lenslets. &nbsp;This kind of element is finding use in molded plastic sheets, for example. &nbsp;When the surface has been given the shape you want, simply declare it to be an array with the input (in the RLE or CHG file)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ARRAY </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NXARRAY</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NYARRAY</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XSPACING</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YSPACING</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To remove the array attribute on a surface, use</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ARRAY OFF.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">NULL</span><span class="f_mine"> directive also removes any array designation in effect.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To create an array of identical lenslets in a 3-by-3 grid on surface 2, with the lenslets spaced a distance of 0.1 inches apart, for example, you would input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2 ARRAY 3 3 .1 .1</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are restrictions on the use of this feature.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. A user-entered </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um331.htm#cao" class="topiclink">CAO</a></span><span class="f_mine"> or RAO aperture is required, to define the total size of the lens array. &nbsp;This aperture may be decentered. &nbsp;If it is not entered, the program will create an RAO aperture that will encompass the entire array. &nbsp;Do not use any of the UAP aperture options on the array. &nbsp;Note that this aperture applies to the entire array, not to an individual lenslet.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. The grid number should be odd. &nbsp;The central lenslet will be centered on the optical axis.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. You cannot put any tilts, decenters, or local or global coordinates on an array. &nbsp;The raytrace will automatically calculate a temporary decenter as required to put each ray at the correct location on the nearest lenslet, and this will conflict with all of the above options. &nbsp;Use dummy surfaces before the array if you need to position it with these options. &nbsp;The surface following the array may be assigned these attributes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">4. To show the array properly as an element, the other side should be assigned a CAO or RAO identical to that of the array. &nbsp;If the other side also involves lenslets, then that side must also be declared an array: the designation applies to the individual </span><span class="f_mine" style="font-style: italic;">surface</span><span class="f_mine">, not to the element, and both sides must therefore be declared.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">5. An array cannot be declared CAPTURE or LOOSE for </span><span class="f_mine" style="text-decoration: underline;"><a href="umch18.htm" class="topiclink">nonsequential</a></span><span class="f_mine"> raytracing. &nbsp;Use dummy surfaces before or after if you need to use them in this way.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">6. Do not place a real stop anywhere following an array. &nbsp;There is usually not a single unique chief ray in this case, and the pupil search will very likely not converge to what you want.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">7. </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um72.htm#solid" class="topiclink">SOLID</a></span><span class="f_mine"> will show the shape of the lenslets best if you select the greyscale option and turn on switch 60.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">8. All of the input parameters should be non-zero. &nbsp;If you enter zero for any, the program will substitute reasonable defaults.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An example array is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="array1.png" width="687" height="544" alt="array1" style="width:687px;height:544px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input required to define the optics and make this picture is as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID TEST ARRAY</span></p>
+<p class="p_mine"><span class="f_mine"> WAVL .6562700 .5875600 .4861300</span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS INCH</span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;1.00000 &nbsp; &nbsp;0.20000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.20000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 0 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.10000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 RAO &nbsp; &nbsp; &nbsp;0.30000000 &nbsp; &nbsp; &nbsp; 0.30000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 CV &nbsp; &nbsp; &nbsp;8.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.07000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 N1 1.51432237 N2 1.51680005 N3 1.52237643</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 GTB S &nbsp; &nbsp;'BK7 &nbsp; &nbsp; '</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 ARRAY &nbsp; &nbsp;3 &nbsp; 3 &nbsp;0.100000 &nbsp; &nbsp; &nbsp;0.100000 &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 TH &nbsp; &nbsp; &nbsp; 0.18938725</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 YMT &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp;BTH &nbsp; &nbsp; -0.00633600</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 RAO &nbsp; &nbsp; &nbsp;0.30000000 &nbsp; &nbsp; &nbsp; 0.30000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 CV &nbsp; &nbsp; &nbsp;0.0000000000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ON 60</span></p>
+<p class="p_mine"><span class="f_mine">SOLID 30 -20 15 0 0 </span></p>
+<p class="p_mine"><span class="f_mine">GREYSCALE </span></p>
+<p class="p_mine"><span class="f_mine">PLOT </span></p>
+<p class="p_mine"><span class="f_mine">PUPIL 2 50 5 </span></p>
+<p class="p_mine"><span class="f_mine">RED </span></p>
+<p class="p_mine"><span class="f_mine">TRACE P 0 0 100 </span></p>
+<p class="p_mine"><span class="f_mine">END </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is an example of an array of small holographic elements (HOEs), deposited on weak lenses:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="array2.png" width="701" height="554" alt="array2" style="width:701px;height:554px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RLE</span></p>
+<p class="p_mine"><span class="f_mine">ID HOE ARRAY &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;92</span></p>
+<p class="p_mine"><span class="f_mine"> WA1 .6328000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> WT1 1.00000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> APS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</span></p>
+<p class="p_mine"><span class="f_mine"> UNITS INCH</span></p>
+<p class="p_mine"><span class="f_mine"> OBB &nbsp;0.00 &nbsp; &nbsp;1.00000 &nbsp; &nbsp;1.50000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;0.00000 &nbsp; &nbsp;1.50000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 0 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.50000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 1 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 GLM &nbsp; &nbsp; &nbsp;1.60000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 44.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 HOE</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp;HIN &nbsp; &nbsp; &nbsp;1.61000000 &nbsp; &nbsp; &nbsp;0.00200000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp;HTH &nbsp; &nbsp; &nbsp;0.00200000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp;CWAV &nbsp; &nbsp; &nbsp;0.63280000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp;P1 &nbsp; &nbsp; &nbsp;0.00000000 &nbsp; &nbsp; &nbsp;0.00000000 &nbsp;-1000.00000000 &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;1.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp;P2 &nbsp; &nbsp; &nbsp;0.00000000 &nbsp; &nbsp; &nbsp;0.25000000 &nbsp; &nbsp; &nbsp;5.00000000 &nbsp; -1 &nbsp; &nbsp; &nbsp;1.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp;ORDER &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-1</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 2 ARRAY &nbsp; &nbsp;3 &nbsp; 3 &nbsp; 1.00000 &nbsp; &nbsp; &nbsp; 1.00000 &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 REAL</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 RAO &nbsp; &nbsp; &nbsp;3.00000000 &nbsp; &nbsp; &nbsp; 3.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 CV &nbsp; &nbsp; &nbsp;0.7257600000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.36191400</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 3 GLM &nbsp; &nbsp; &nbsp;1.60000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 44.00000000  </span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 TH &nbsp; &nbsp; &nbsp; 1.35022506</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 YMT &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 RAO &nbsp; &nbsp; &nbsp;3.00000000 &nbsp; &nbsp; &nbsp; 3.00000000 &nbsp; &nbsp; &nbsp; 0.00000000 &nbsp; &nbsp; &nbsp; 0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 CV &nbsp; &nbsp; &nbsp;0.0000000000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 4 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 5 CV &nbsp; &nbsp; &nbsp;0.0000000000000 &nbsp; TH &nbsp; &nbsp; &nbsp;0.00000000</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; 5 AIR</span></p>
+<p class="p_mine"><span class="f_mine"> END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SOLID 10 -20 2 0 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">GREYSCALE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">PLOT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">PUPIL 2 1 100 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">BLUE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p class="p_mine"><span class="f_mine">TRACE P 0 0 100 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">END &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The ARRAY attribute is assigned to the HOE itself. &nbsp;The program automatically assigns identical array attributes to the substrate of the HOE (surface 3 in this example), so that it will be rendered correctly by the drawing programs. &nbsp;The RAO aperture on 3 (and 4) must be entered by the user.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um310.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

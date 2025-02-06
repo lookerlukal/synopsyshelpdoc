@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>SketchPad</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SketchPad" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">SketchPAD</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">The SketchPAD is the most interactive feature of SYNOPSYS. &nbsp;Here you can see the lens along with a display of image quality in several different formats. &nbsp;This display can be automatically updated during the course of an optimization run, allowing you to monitor progress and halt the run by clicking </span><img src="stopsign.png" width="28" height="27" alt="stopsign" style="width:28px;height:27px;border:none"><span class="f_BodyTextIndent3"> if it becomes apparent that changes are in order. &nbsp;See </span><span class="f_BodyTextIndent3" style="text-decoration: underline;"><a href="umch10.htm" class="topiclink">Optimization</a></span><span class="f_BodyTextIndent3">. &nbsp;A related feature, the </span><span class="f_BodyTextIndent3" style="font-weight: bold; text-decoration: underline;"><a href="worksheet.htm" class="topiclink">WorkSheet</a></span><span class="f_BodyTextIndent3">, permits changing the lens by entering new data into a dialog box or by moving sliders in an analog fashion with immediate graphical feedback. &nbsp;It also provides tools to insert, split, and remove surfaces, elements, prisms, and fold mirrors. Additional features are the </span><span class="f_BodyTextIndent3" style="text-decoration: underline;"><a href="hidd_vendors.htm" class="topiclink">Vendor Catalog</a></span><span class="f_BodyTextIndent3"> dialog and the </span><span class="f_BodyTextIndent3" style="text-decoration: underline;"><a href="hidd_edgewizard.htm" class="topiclink">Edge-definition Wizard</a></span><span class="f_BodyTextIndent3" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">The SketchPAD display is divided into an upper and a lower section. &nbsp;Any of seven display types can be shown in either half, although some features require a drawing in the top part. &nbsp;Once the display format has been requested, SYNOPSYS remembers this format and automatically displays it whenever the SketchPAD feature is activated. &nbsp;If the lens is later changed, or if another lens is called from the library, the SketchPAD display will automatically update with the new lens the next time the screen is redrawn, or when you click the button </span><img src="update.png" width="26" height="24" alt="update" style="width:26px;height:24px;border:none"><span class="f_BodyTextIndent3">. &nbsp;You can define up to five separate display formats, and switch between them with a click on the buttons </span><img src="pad1to5.png" width="119" height="27" alt="pad1to5" style="width:119px;height:27px;border:none"><span class="f_BodyTextIndent3">.  </span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">It is also possible to </span><span class="f_BodyTextIndent3" style="font-weight: bold;">link the PAD display to a command string</span><span class="f_BodyTextIndent3">, which will be executed whenever the display is updated, letting you view any of the graphics output formats in real time as your lens is edited. &nbsp;The command string must be no more than 89 characters long and contained in a single line. &nbsp;(To run a multiline command, compress all the data onto a single line, with a slash (/) between the separate lines, as in FCO 100 / MTF P 1 0 0 0 P.) &nbsp;It is wise to avoid commands that execute slowly, since the WorkSheet sliders will then exhibit an unwelcome lag in response. &nbsp;This feature is activated by enabling the checkbox at the bottom of the PAD TOP or PAD BOTTOM dialog and entering the desired command string in the edit box there. &nbsp;For more information, click </span><span class="f_BodyTextIndent3" style="text-decoration: underline;"><a href="hid_padlinkhelp.htm" class="topiclink">here</a></span><span class="f_BodyTextIndent3" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">The SketchPAD may be activated by clicking on </span><img src="sketchpad.png" width="26" height="24" alt="sketchpad" style="width:26px;height:24px;border:none"><span class="f_BodyTextIndent3"> or with the SYNOPSYS command </span><span class="f_BodyTextIndent3" style="font-weight: bold;">PAD</span><span class="f_BodyTextIndent3" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">You can move and resize the PAD display, and when you next open it, the position and size are remembered. &nbsp;In the event that you want to revert to the default location and size, just close it and then open it with the command </span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">PAD ZERO</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">or close it with the &quot;X&quot; button, shown below.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="pad_rays"></a><span class="f_BodyTextIndent3" style="font-weight: bold;">SketchPAD Raytracing Options</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">The PAD display can show a variety of ray patterns, selected with options on the PAD Top or PAD Bottom dialog. &nbsp;These include the default rayset, a single ray, or a custom rayset. &nbsp;The default rayset shows three rays each from the on-axis field point and full field. &nbsp;If switch 10 is turned on, the lower field point will also be shown. &nbsp;The single-ray option opens a small dialog where you can select the relative field point and relative aperture point, both in the meridional plane. &nbsp;When the dialog is closed, the selected ray is shown. &nbsp;The custom rayset shows a desired number of rays in a TFAN at the requested relative field point, which can be a skew point.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">A special feature will show either the upper or lower rim ray at full field. &nbsp;It is useful when you want to identify which ray is encountering feathered edges. &nbsp;Just press and hold down the </span><span class="f_BodyTextIndent3" style="font-weight: bold;">F7</span><span class="f_BodyTextIndent3"> key to see the lower rim ray, and the </span><span class="f_BodyTextIndent3" style="font-weight: bold;">F8</span><span class="f_BodyTextIndent3"> key to see the upper rim ray. &nbsp;When you release the key, the normal drawing is restored. &nbsp;If the lens has a skew field defined, the object point taken for this ray is in the meridional plane at a distance from the axis equal to the diagonal distance to the corner of the field.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">If you hold down the </span><span class="f_BodyTextIndent3" style="font-weight: bold;">&lt;SHIFT&gt;</span><span class="f_BodyTextIndent3"> key while you press the </span><span class="f_BodyTextIndent3" style="font-weight: bold;">F7</span><span class="f_BodyTextIndent3"> or </span><span class="f_BodyTextIndent3" style="font-weight: bold;">F8</span><span class="f_BodyTextIndent3"> keys, the rays will be traced from the </span><span class="f_BodyTextIndent3" style="font-style: italic;">lower</span><span class="f_BodyTextIndent3"> field point instead of the upper; and if you hold down the </span><span class="f_BodyTextIndent3" style="font-weight: bold;">&lt;CTRL&gt;</span><span class="f_BodyTextIndent3"> key, the field is taken in the meridional plane, ignoring the skew field, if any. &nbsp;This can be useful when the field is rectangular but you only want to see rays at the top and bottom of the field, not the corners.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">Note that, depending on the sign of the object height and the pupil definition in effect, the &quot;upper&quot; rim ray may in fact be at the bottom of the pupil. &nbsp;This feature makes it easy to see which ray is where.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><a name="padstereo"></a><span class="f_BodyTextIndent3" style="font-weight: bold;">SketchPAD Operations – Mouse:</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="sketchpad.png" width="26" height="24" alt="sketchpad" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">activates the SketchPAD display</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="worksheet.png" width="30" height="29" alt="worksheet" style="width:30px;height:29px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">activates the </span><span class="f_BodyTextIndent3" style="text-decoration: underline;"><a href="worksheet.htm" class="topiclink">WorkSheet</a></span><span class="f_BodyTextIndent3"> display</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="update.png" width="26" height="24" alt="update" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">updates the display</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="undo.png" width="26" height="24" alt="undo" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">Undo function: restores the lens to the last checkpoint</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="checkpoint.png" width="26" height="24" alt="checkpoint" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">sets the checkpoint to the current lens</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="fileprnt.png" width="28" height="24" alt="FilePrnt" style="width:28px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">prints the current PAD display. &nbsp;&lt;Shift&gt;click makes a new graphics windows with a bitmap copy. &nbsp;If you hold down both the &lt;Ctrl&gt; and &lt;Shift&gt; keys and click the button, the printer shows a bitmap copy with all the colors.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="padhard1to1.png" width="26" height="25" alt="padhard1to1" style="width:26px;height:25px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">zooms the display so that printed hardcopy is at the scale indicated</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="le.png" width="26" height="24" alt="le" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">opens the </span><span class="f_BodyTextIndent3" style="text-decoration: underline;"><a href="um1333.htm#le" class="topiclink">LE</a></span><span class="f_BodyTextIndent3"> lens editor </span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="mewbutton.png" width="27" height="25" alt="mewbutton" style="width:27px;height:25px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">activates the </span><span class="f_BodyTextIndent3" style="text-decoration: underline;"><a href="hidd_edgewizard.htm" class="topiclink">Edge-definition Wizard</a></span><span class="f_BodyTextIndent3"> dialog</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="glasstable.png" width="27" height="25" alt="glasstable" style="width:27px;height:25px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">activates the </span><span class="f_BodyTextIndent3" style="text-decoration: underline;"><a href="gt.htm" class="topiclink">GlassMap</a></span><span class="f_BodyTextIndent3"> display</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="padtop.png" width="26" height="24" alt="padtop" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">displays the PAD Top dialog where you select the top display</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="padbottom.png" width="26" height="24" alt="padbottom" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">displays the PAD Bottom dialog where you select the bottom display</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="clip0107.png" width="25" height="24" alt="clip0107" style="width:25px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">scissors the PAD display. &nbsp;Use this if the lens geometry causes elements to overlap the lower pane and you do not want to see those.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="padstereo.png" width="26" height="24" alt="padstereo" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">converts the top display (perspective only) to a red-blue stereo pair.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="bmpbutton.png" width="24" height="24" alt="BMPBUTTON" style="width:24px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">Clicking here puts a copy of the current screen contents into the Windows clipboard in .bmp format. &nbsp;You can then paste it into a SYNOPSYS graphics window (with the button </span><img src="grbitmap.png" width="22" height="24" alt="grbitmap" style="width:22px;height:24px;border:none"><span class="f_BodyTextIndent3">) or into any third-party program that can accept graphics – such as Word, Corel Draw, and all graphics editors. &nbsp;Some of the latter can also convert the drawing into other formats, such as .jpeg.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="white.png" width="26" height="24" alt="white" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">redraws the SketchPAD display on a white background</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="black.png" width="26" height="24" alt="black" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">redraws the SketchPAD display on a black background</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="onetoone.png" width="26" height="24" alt="onetoone" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">resets the zoom and pan of the SketchPAD display so that it fits in the window</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="padzoomto.png" width="25" height="24" alt="padzoomto" style="width:25px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">zooms and pans the display when a portion has been drag selected. &nbsp;You can also just click inside the selection rectangle to zoom in.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="padcircle.png" width="26" height="24" alt="padcircle" style="width:26px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">toggles the drawing of circled surface numbers via switch 52</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="padcirclesize.png" width="21" height="27" alt="padcirclesize" style="width:21px;height:27px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">adjusts size of the circled numbers</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="padfill.png" width="25" height="23" alt="padfill" style="width:25px;height:23px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">when selected, pad profile drawings fill the lens elements with color</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="padfillcolor.png" width="23" height="25" alt="padfillcolor" style="width:23px;height:25px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">when selected, the colors reflect the index and dispersion of the element</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="clip0382.png" width="29" height="26" alt="clip0382" style="width:29px;height:26px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">when selected, PAD fills GLM elements with a crosshatch pattern instead of solid fill. &nbsp;This lets you see at a glance where the real glasses and models are. &nbsp;Switch 15 is toggled by this button.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="padrulers.png" width="27" height="24" alt="padrulers" style="width:27px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">displays horizontal and vertical rulers on the top display. &nbsp;You can move</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">these by dragging their handles, to help you estimate the size of things.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="pad1to5.png" width="119" height="27" alt="pad1to5" style="width:119px;height:27px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">selects one of five display configurations. &nbsp;Click each one, and then define the display you want. &nbsp;When you later click a button, that selection is again displayed.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="switches.png" width="32" height="16" alt="switches" style="width:32px;height:16px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">opens a dialog showing switch settings that apply to PAD</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="help.png" width="27" height="25" alt="help" style="width:27px;height:25px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">opens the Help file at the SketchPad topic.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="padscan.png" width="24" height="24" alt="padscan" style="width:24px;height:24px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">performs a scan of the current lens and display over the field of view. &nbsp;The value of YPP0 is varied in 23 steps, and the display redrawn with a 0.1-second delay between redraws. &nbsp;This lets you evaluate your lens at many field points very quickly. &nbsp;This button does not work with OBG lenses, which have no field. &nbsp;You may change the delay to 1 second, by holding down the left &lt;Ctrl&gt; key when you click the button. &nbsp;Holding the right&lt;-Ctrl&gt; key when you click the button activates a special mode where the program stops at each field point and waits for you to click the button again. &nbsp;You can easily evaluate any of 25 field points in this way, but you have to click for each one. &nbsp;Should you wish to exit this mode, just hold the left &lt;Ctrl&gt; key when you click the button.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="padupdown.png" width="47" height="23" alt="padupdown" style="width:47px;height:23px;border:none"><span class="f_BodyTextIndent3"> &nbsp;These buttons increment and decrement the end point of the range of surface numbers that is displayed on the upper pane. &nbsp;They only affect the drawings D, P, and PP. &nbsp;If the Ctrl key is held down when these buttons are clicked, the </span><span class="f_BodyTextIndent3" style="font-style: italic;">beginning</span><span class="f_BodyTextIndent3"> of the range will be altered, not the end.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="paddefault.png" width="22" height="22" alt="paddefault" style="width:22px;height:22px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">This button resets the PAD display to the default: Y-Z profile drawing on top and ray fans on the bottom.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="yybar.png" width="25" height="23" alt="yybar" style="width:25px;height:23px;border:none"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_BodyTextIndent3">opens the </span><span class="f_BodyTextIndent3" style="text-decoration: underline;"><a href="hidd_yybar.htm#yybar" class="topiclink">Y-YBAR</a></span><span class="f_BodyTextIndent3"> editing dialog</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><img src="padclose.png" width="29" height="23" alt="padclose" style="width:29px;height:23px;border:none"><span class="f_BodyTextIndent3">  &nbsp; &nbsp; &nbsp; &nbsp;This button closes PAD, for emergencies only. &nbsp;It also resets the size and position of PAD to the defaults so it will open in a reasonable manner the next time.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">You can also </span><span class="f_BodyTextIndent3" style="font-weight: bold;">pan</span><span class="f_BodyTextIndent3"> the display by clicking and dragging with the </span><span class="f_BodyTextIndent3" style="font-style: italic; font-weight: bold;">right</span><span class="f_BodyTextIndent3" style="font-weight: bold;"> mouse button</span><span class="f_BodyTextIndent3">, regardless of which tool is selected, and you can instantly magnify or minify at any point by clicking with the right button while holding down the Shift key or both the Ctrl and Shift keys. &nbsp;You can also zoom in and out with the </span><span class="f_BodyTextIndent3" style="font-weight: bold;">mouse wheel</span><span class="f_BodyTextIndent3">.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">All of the PAD display formats have an optional scale factor, and if you leave it out the program will adjust the scale automatically. &nbsp;But sometimes a fixed scale is called for, such as when you want to see the effects of a change and want the same scale each time. &nbsp;You can of course click the PAD Top or Bottom buttons and enter the scale yourself—but there is a shortcut too: click in the PAD window, and then hold down the &lt;Ctrl&gt; key while you click the PAD Top or Bottom button. &nbsp;The current display format stays the same, but the displayed scale becomes fixed at its current value.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">The default printing option, which you get by clicking the print button or typing &lt;Ctrl&gt;P, sends a vector print to the printer, which has smooth lines but cannot show the fill colors, which require a raster capability that printer drivers do not have. &nbsp;Another option, activated by &lt;Ctrl&gt;+&lt;Shift&gt;+ print button, encodes the display as a bitmap and sends that to the printer instead. &nbsp;Then the picture shows all the fill colors, but lines are drawn as individual dots, which are not as smooth, since the screen resolution is lower than the printer resolution. &nbsp;The quality can be maximized by enlarging the PAD display as much as possible before running this option.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">Many of the features of the SketchPad and its family of tools require that the top display show a lens drawing (D, P, or PP). &nbsp;PAD will show circled surface numbers on the first side of real lenses (those with an index change) if switch 52 is OFF, and will number all surfaces if switch 38 is ON as well.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">As you move the mouse about on the PAD display, you will see the values of the</span><span class="f_BodyTextIndent3" style="font-weight: bold;"> (X,Y) position</span><span class="f_BodyTextIndent3"> of the cursor displayed on a separate small dialog. &nbsp;The values reported are calculated according to the scale factor of the drawing in the top display and the current lens units, whenever that drawing is of the form D or PP. &nbsp;You can reset the (0,0) point by a &lt;ctrl&gt;&lt;right-click&gt; at the desired location, as you would in a Graphics Window. &nbsp;If the top drawing is not a profile drawing (D) or perspective view (PP), the scale factor will be either a default value or that resulting from the most recent valid adjustment. &nbsp;This feature is intended to help you judge the size and locations of lens elements, as is the scale-bar option.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">The “D” form of PAD drawing has an option that draws the lens elements filled with color. &nbsp;You can turn this feature off (and get only a line drawing) by turning on switch 46 or by clicking the button </span><img src="padfill.png" width="25" height="23" alt="padfill" style="width:25px;height:23px;border:none"><span class="f_BodyTextIndent3"> , should you want to. &nbsp;This kind of fill only works on the monitor, and not on any printers we have tested. &nbsp;The D drawing is not recommended for lenses that have a combination of RAO and EFILE edges defined. &nbsp;To show these complicated edge shapes, the PP (perspective view) should be used instead.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3" style="font-weight: bold;">SketchPAD Operations – Command mode input:</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">PAD</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">activates the SketchPAD display. &nbsp;The prompt changes to PAD&gt;.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">D</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of a Y-Z-profile drawing</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">PP</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of a perspective drawing</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">P</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of a paraxial drawing</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">F</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of a transverse rayfan display</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">FP</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">same as F, but sagittal fan is over the full pupil</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">F3</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">same as F, but over three fields</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">FP3</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">same as FP and F3 together</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">O</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of an OPD rayfan display</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">OP</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">same as O, but sagittal fan is over the full pupil</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">O3</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">same as O, but over three fields</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">OP3</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">same as OP and O3 together</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">S</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of a spot diagram display</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">A</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">prompts for attributes of a display of astigmatic field curves</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">X</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">erases the requested portion; used to show only one display instead of two</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">U</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">updates the display</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">ZOOM</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">zooms a ZFILE zoom lens to the zoom position in the 2</span><span class="f_BodyTextIndent3" style="vertical-align: super;">nd</span><span class="f_BodyTextIndent3"> word</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">END</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">ends the PAD interactive sequence (but does not close the display)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:71px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">RESTORE</span></p>
+</td>
+<td style="vertical-align:top; width:491px; padding:4px; border:solid 1px #000000;"><p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">Adjusts the position and size of the PAD display so that it appears on the screen. &nbsp;Some activities, especially resizing the SYNOPSYS frame, can result in the PAD window going out of the frame entirely. &nbsp;This command will restore its position so you can see it.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">The default display of rayfans and OPD fans shows 10 rays per sfan. &nbsp;For higher resolution, turn on switch 69; then the fans show 20 rays.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">The size and location of the PAD display are sticky: if you close and then reopen PAD it should come back just where you left it – but this may not be exact for some monitor settings and resolutions. &nbsp;If the position does not come back exactly where you want, go to Options | Set Device Offset, Margins, Font, and enter a correction value in the X and Y boxes in the PAD section. &nbsp;The units are about 0.01 inches. &nbsp;You may enter either positive (right and down) or negative numbers.</span></p>
+<p class="p_BodyTextIndent3" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_BodyTextIndent3">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

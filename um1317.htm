@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1317</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Cells, editor,lens, creating the lens cell" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-size: 14pt;">13.17 Lens Cell Editor &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1318.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1316.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When you have finished optimizing your lens, it is time to think about the kind of lens cell you want to put it in. &nbsp;SYNOPSYS has a lens-cell editor with which you can design many kinds of cells and prepare drawings of the piece parts. &nbsp;This feature is not a replacement for the much larger CAD programs used by mechanical engineers, but it will produce a pretty good lens cell and a set of drawings for those without those tools. &nbsp;Also, it will examine the lens geometry to determine the length of spacers and cell diameters.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There are restrictions on this feature.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. All elements in a lens group that is to fit into a single cell must be rotationally symmetric and aligned on the same optical axis as the first element in that group. &nbsp;If your system has fold mirrors between groups, that is okay–as long as the individual groups meet this requirement.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. For best results, all elements in the group should have </span><span class="f_mine" style="text-decoration: underline;"><a href="um78.htm#efile" class="topiclink">EFILE</a></span><span class="f_mine"> edges defined. &nbsp;This is because the cell editor will let you tie the ID (inside diameter) of a cell to the outside diameter of a lens element, with optional clearance allowance. &nbsp;If the element has an EFILE edge, the program simply picks up the quantity &quot;C&quot;. &nbsp;If the lens has no EFILE edges, then the program can pick up the CAO, which may be either soft or user-defined. &nbsp;The problem then is that if you later make element drawings with the </span><span class="f_mine" style="text-decoration: underline;"><a href="um77.htm#eld" class="topiclink">ELD</a></span><span class="f_mine"> feature, the OD (outside diameter) of the element will be </span><span class="f_mine" style="font-style: italic;">larger</span><span class="f_mine"> than the CAO, because ELD in that case adds 0.05 inches to the aperture radius. &nbsp;But the lens cell will not reflect this, and you must be very careful to fill in the ID diameter yourself in the cell editor. &nbsp;Otherwise the element will not fit into the cell. &nbsp;With EFILE edges, this problem does not come up.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. You must make a lens drawing (the &quot;D&quot; variety, not paraxial or perspective) on the top of the PAD display, and you must assign a non-zero scale factor at that time. &nbsp;The display of the cell is coupled intimately to the PAD display setup, and that is the scale that will apply to any finished drawings that you may make. &nbsp;The first surface in the drawing range must be the first element that will go into the cell.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Let us illustrate this feature with the following triplet lens, found in the installation directory as X24.RLE.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell1.png" width="399" height="240" alt="cell1" style="width:399px;height:240px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Bring this up in PAD, with a scale factor of 4. &nbsp;Then bring up the cell editor by clicking on the button </span><img src="padcell.png" width="28" height="27" alt="padcell" style="width:28px;height:27px;border:none"><span class="f_mine">. &nbsp;When the editor opens, click the &quot;Drag to define&quot; button, and then click and drag the mouse over the area shown below. &nbsp;When you release the mouse button, a new cell part shows up.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell2.png" width="370" height="274" alt="cell2" style="width:370px;height:274px;border:none"><span class="f_mine"> Area for new cell defined by dragging.</span></p>
+<p class="p_mine"><img src="cell3.png" width="357" height="320" alt="cell3" style="width:357px;height:320px;border:none"><span class="f_mine"> New cell that results.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Your lens cell will be made up entirely of cylinders such as this, and you will see how we build up a more complex shape by means of contiguous cylinders. &nbsp;Usually it is easiest to define a new cylinder by dragging, as we did here, but you can also just type the cell dimensions into the edit boxes</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell4.png" width="149" height="191" alt="cell4" style="width:149px;height:191px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and then click the button &quot;Define from data&quot;.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Notice the 12 colored panels on the dialog. &nbsp;The default color is red, and that is what is assigned to our cylinder. &nbsp;Before you define other parts of this cell, you should click one of the other color buttons, so you can more easily see your new cylinder. &nbsp;When you make a more complex shape, as we will in a moment, and all of the parts are correctly aligned, you will then make them contiguous </span><span class="f_mine" style="font-style: italic;">and the same color</span><span class="f_mine">. &nbsp;When you later make drawings of the cell parts, the program lets you group all parts of the same color into one part, and draws an outline around the whole set. &nbsp;That is how you get shapes that are more complex.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The ID and OD of this cylinder are not quite right. &nbsp;Try moving the sliders to the right of the edit boxes shown above. &nbsp;You can easily shape the cylinder any way you like. &nbsp;But we want the ID of the cell to just match the OD of element 1, with a small clearance. &nbsp;These elements have EFILE edges, so it is a simple matter. &nbsp;Click the &quot;Tie</span><span class="f_mine" style="font-family: Wingdings;">&agrave;</span><span class="f_mine">&quot; button.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell5.png" width="578" height="177" alt="cell5" style="width:578px;height:177px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now, for the target, select the radio button &quot;CellID&quot;, and for the source select surface 1 EFILE C. &nbsp;Check the &quot;Honor clearance&quot; box, and click OK. &nbsp;The ID of the cylinder now equals the OD of element 1 with a clearance of 0.127 mm. &nbsp;If you want a different clearance, just enter your data into the box on the lower right of the cell editor, and repeat the process.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now select a different color, say 5, and drag to create another cylinder:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell6.png" width="291" height="304" alt="cell6" style="width:291px;height:304px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We want the OD of this cylinder to equal the ID of cylinder 1. &nbsp;In the Tie to dialog, select the OD target and the source from Part 1 ID, and click OK. &nbsp;Now click the Checkpoint button. &nbsp;This takes a snapshot of your current cell, and you can get back to it with just a click if you make a mistake later on.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you create a cylinder that you do not want, click the &quot;Delete part&quot; button. &nbsp;This marks that cylinder deleted, and it will not show up on the screen, but at the moment it is still there, just hidden. &nbsp;When you click the Checkpoint or &quot;Save cell&quot; button, the program cleans things up and all of the deleted items go away.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">As your cells get complicated, it is helpful to keep track of which cylinder has which part number. &nbsp;Just click the &quot;Numbers&quot; checkbox, and you can see which is which. &nbsp;You probably want to turn off the PAD surface numbers, as we have here, because things get cluttered otherwise. &nbsp;You can also toggle the display of rays through the lenses with the &quot;Rays&quot; checkbox.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now we want to tie the start of this new cell to the end of surface 2. &nbsp;In the Tie to dialog, tie the start of the cell to surface 2, sag at EFILE point A. &nbsp;Adjust the end of the cell to about the mid-point of the rim of element 2. &nbsp;We are going to put an inside thread on this cell, to hold a retaining ring for the second element. &nbsp;Now make sure that the &quot;Edit this part&quot; box has number 2 in it, click color 1 (the red square) and then Update. &nbsp;Now this cylinder looks like part of cylinder 1. &nbsp;It's still a separate part, however, as you can see if you click the Numbers button. &nbsp;Click Checkpoint again.  </span><span class="f_mine" style="font-style: italic;">Always</span><span class="f_mine"> click this after you have defined a new cylinder, for safety. &nbsp;Then check that the cell number in the edit box is the one you want to edit, since part numbers can change following a save or checkpoint. &nbsp;If you want to edit cylinder 2, you can easily make that current just by </span><span class="f_mine" style="font-style: italic;">double-clicking</span><span class="f_mine"> in the top section of that cell (or by entering that part number in the Edit this part box and clicking Update.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now enter the number 2 in the Thread ID box, and click update. &nbsp;The new cylinder is threaded, at 2 TPMM.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Zoom the PAD display to the top of element 2 (drag this area </span><span class="f_mine" style="font-style: italic;">without</span><span class="f_mine"> clicking the Drag to define button, and then click </span><img src="padzoomto.png" width="25" height="24" alt="padzoomto" style="width:25px;height:24px;border:none"><span class="f_mine">). &nbsp;Choose the green color, and drag to define a retaining ring:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell7.png" width="415" height="305" alt="cell7" style="width:415px;height:305px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Tie the OD of this to the ID of part 2, and the end of the part to surface 3, EFILE point A. &nbsp;Assign a thread of 2 TPMM to the OD of this part -- and your retaining ring is done. &nbsp;Do </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> assign this part the same color as parts 1 and 2, because you do not want them drawn as a unit.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now create a new cylinder, shown in brown below, and tie the OD to the ID of part 1 and the start to the end of part 2. &nbsp;Toggle the Numbers checkbox if you forget the part numbers. &nbsp;Leave the end at about the midpoint of the third element, so you can make a retaining ring as we did on the front end. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now make parts 5 and 6 as shown below:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell9.png" width="361" height="117" alt="cell9" style="width:361px;height:117px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here we tie the ID of 5 to the OD of the second element, honoring the clearance, and the start to the start of part 4. &nbsp;Part 6, shown in yellow, has an OD tied to 5 ID, and we give it an ID of exactly 15 via the edit box (and then clicking Update). &nbsp;This makes it easy to tie the end of 6 to the sag of surface 5 at a height of Y = 7.5. &nbsp;The start is tied to surface 4 at point A. &nbsp;When parts 4, 5, and 6 are done, update them with color 1, and they become part of the outside cell housing. &nbsp;Checkpoint!</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that the Tie-to process is not like a lens pickup request; if you later change the source of the tie, the connection is broken. &nbsp;It is a one-time data transfer.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now select part 1 by double-clicking it, and move the start point to midway on element 1. &nbsp;Assign a value of 24 to the OD. &nbsp;Now create part 7 and adjust the ID until there is room for threads there. &nbsp;Tie the end of 7 to the start of 1, and the OD to the OD of 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell10.png" width="321" height="184" alt="cell10" style="width:321px;height:184px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Change the color to color 1, and add another retaining ring at the front end. &nbsp;Drag the start of the retaining ring to where you want it with the Start slider. &nbsp;(If the motion is too coarse, when you zoom in, click on the &quot;Micro&quot; checkbox to make it 100 times slower.) &nbsp;Tie the OD to part 7 ID and put a thread on the OD. &nbsp;Change the ID to exactly 19, and tie the end to the sag of surface 1 at Y = 9.5.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell11.png" width="472" height="316" alt="cell11" style="width:472px;height:316px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you forget just where all of these cells start and end, just click the Outline button:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell12.png" width="440" height="379" alt="cell12" style="width:440px;height:379px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now we need to fill in things at the right end of the cell. &nbsp;Define part 9 and tie it to parts 1 and 4. &nbsp;Thread the ID.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell13.png" width="225" height="225" alt="cell13" style="width:225px;height:225px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Change the color of part 9 to 1, and add the final retaining ring, part 10. &nbsp;Here is the finished lens cell, with part numbers off.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell14.png" width="379" height="311" alt="cell14" style="width:379px;height:311px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-weight: bold;">Making mechanical drawings of your cell</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Save this cell with the name &quot;example&quot;. &nbsp;If you want to open a cell file at a later time, it is important that you first get the </span><span class="f_mine" style="font-style: italic;">same lens</span><span class="f_mine"> back, and show it in PAD in the same way, before you go to the cell editor. &nbsp;Otherwise you may get strange results. &nbsp;The PAD display is intimately connected with the cell editor, and must be initialized the same way before you can proceed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Click on the &quot;Drawing editor …&quot; button. &nbsp;A new dialog opens up. &nbsp;Initially you see the same PAD display. &nbsp;Designing a cell requires two separate steps: the first you have already done; which is designing the cell itself. &nbsp;The second is to design the </span><span class="f_mine" style="font-style: italic;">drawings</span><span class="f_mine"> of the cell and its parts. &nbsp;Everything that is to be drawn must be defined in the drawing editor. &nbsp;You can select individual parts to draw, or the whole cell. &nbsp;That is the default; click the &quot;Define new&quot; button.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now you see your cell, without lens elements. &nbsp;Click &quot;Include lens elements&quot; if you want them back again. &nbsp;Click the &quot;Color fill&quot; checkbox, and your drawing is shown in vector form, with the lines between contiguous parts of the same color deleted.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell15.png" width="371" height="300" alt="cell15" style="width:371px;height:300px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can send any of the drawings shown when this display is open to be converted to standard SYNOPSYS graphics. &nbsp;Click the &quot;Make graphics&quot; button. &nbsp;This picture can be printed, saved, and annotated as can all standard graphics. &nbsp;You can add your company name, etc. to the drawing there -- but you don't have to draw things like dimension arrows, and such. &nbsp;The drawing editor can do that for you. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Enter the number 1 in the box next to &quot;Cell part No&quot;, and then click that button. &nbsp;Click Define new again. &nbsp;Now you see only part 1. &nbsp;But that part is really a piece of a larger part. &nbsp;Select the checkbox &quot;Include all parts of the same color&quot;, and define your drawing again. &nbsp;Viola! &nbsp;All of the parts that are contiguous with part 1 are now shown as a unit. &nbsp;Try the Color fill checkbox; you can see the part in color or in outline.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you see any lines somewhere inside your part that really should be hidden, it is a sign that you did not make those pieces </span><span class="f_mine" style="font-style: italic;">exactly</span><span class="f_mine"> contiguous. &nbsp;Close is not good enough. &nbsp;The Tie-to editor is intended to help you get things exact. &nbsp;If this happens, close the drawing editor and fix up your cell. &nbsp;Then come back.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now we'll add some dimensions to this drawing. &nbsp;Enter the number 6 in the box that says &quot;Piece part&quot;. Select OD in the Dimension lines section, and the radio button that says &quot;Left&quot;. &nbsp;Then click the button &quot;Add line&quot;. &nbsp;If the checkbox &quot;double lines&quot; is selected (the default) you will now get two lines going to the left of surface 6. &nbsp;Move the Line start and Line end sliders until the extra lines look the way you want.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell16.png" width="365" height="257" alt="cell16" style="width:365px;height:257px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Wait a minute! &nbsp;The leftmost component of the cell was number 7, not 6. &nbsp;Why did we need that number instead of 7? &nbsp;Simple. &nbsp;When you define a new part for the drawing editor, it makes a </span><span class="f_mine" style="font-style: italic;">new cell</span><span class="f_mine"> design that only contains the requested part(s). &nbsp;Since the retaining rings are not included in this new cell, the numbering is different from the original cell. &nbsp;To see the renumbered parts, click the checkbox &quot;Show cell part numbers&quot;. &nbsp;(This only works if the Color fill box is also selected.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There is also a checkbox &quot;Numbers&quot;. &nbsp;This shows you the item number of the </span><span class="f_mine" style="font-style: italic;">individual lines</span><span class="f_mine"> that you have added to the picture. &nbsp;It only works if the Color fill box is </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> selected. &nbsp;Select these options, and you see that there are now two new item numbers displayed:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell17.png" width="374" height="271" alt="cell17" style="width:374px;height:271px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Item 59 is a dash-dot line defining the optical axis, put there by default. &nbsp;Click Checkpoint, enter the number 59 in the &quot;Edit item number&quot; box, and then click &quot;Delete this&quot;. &nbsp;It goes away. &nbsp;But you probably want it, so click &quot;Load check&quot; to restore your checkpoint. &nbsp;The two fiducial lines you added are now item 60.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Let's add some dimensions. &nbsp;Under &quot;Dimension numbers and arrows&quot;, enter the number 6 in both the From and To boxes. &nbsp;Select the OD button on the left, and the -OD button on the right. &nbsp;Click &quot;Add arrows&quot;, and you get your dimension arrows -- which you can hardly see since they are at the moment at the very edge of the cell. &nbsp;Slide the &quot;Arrow position&quot; slider until they move where you want them.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now just click the button &quot;Add dimension&quot;. &nbsp;The number 24.0000 shows up near the top of the cell. &nbsp;Move the X-position and Y-position sliders until the number is within the gap in the arrows, and then go to item 61 in the Edit item number box. &nbsp;(You can click on the spin buttons to the right of this box to increment or decrement the item number.) &nbsp;Now move the &quot;First break&quot; and &quot;Second break&quot; sliders to close up this gap somewhat.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Now add lines giving the overall length of the cell. &nbsp;Here you don't have the double line option, so you have to go to part 6, Start, and Up in the Dimension lines section. &nbsp;Click Add line. &nbsp;Do the same for the end of part 7, toggling the Color fill checkbox if you need to change from seeing the part numbers and the item numbers, to verify that part 7 is indeed the rightmost part. &nbsp;Now add arrows from the start of 6 to the end of 7, and the dimension as well. &nbsp;Move these with the sliders, as before -- and if you run to the end of the slider and want to go further, just click Update. &nbsp;The sliders go back to the center.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell18.png" width="366" height="318" alt="cell18" style="width:366px;height:318px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">We need to show the depth of the thread on the left end. &nbsp;To do this we will use a different arrow option. &nbsp;Click the radio button that shows two arrows pointing at each other.  </span><img src="cell19.png" width="125" height="53" alt="cell19" style="width:125px;height:53px;border:none"><span class="f_mine">. &nbsp;Under Dimension numbers and arrows, select part 6 start and part 6 end. &nbsp;Click Add arrows, and then move the arrow pair to below the cell. &nbsp;Adjust the lengths of both with the First break and Second break sliders. &nbsp;In the Dimension lines section, enter 6 in the Piece part box, select Start, Down, and click Add line. &nbsp;Adjust the line start and end, and then do the same at the end of part 6. &nbsp;Click the Add dimension button, and the length of the thread is shown on the picture. &nbsp;Move the number to the left of the arrows you just made.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The procedure should be clear now. &nbsp;After adding the other lines and dimensions that are needed, and moving things around where necessary, we get the final cell drawing.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="cell20.png" width="607" height="473" alt="cell20" style="width:607px;height:473px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Of course this is not completely finished. &nbsp;We need to click Make graphics, and then open the annotation editor to add the company name, tolerances on all dimensions, the thread specifications, and so on. &nbsp;But most of the work has been done already.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can save any of the drawing files, by clicking on the Save button, &nbsp;but remember that if you want to come back later and edit something, you must first get the same lens, open PAD with the same display, open the cell editor and get the same cell back again, and </span><span class="f_mine" style="font-style: italic;">then</span><span class="f_mine"> go to the drawing editor. &nbsp;All of the components must be present for the program to work properly.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-size: 12pt; font-weight: bold;">Recycling an old drawing</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Okay, you've made a perfect drawing, and then realize you have to change the original cell design. &nbsp;Now what? &nbsp;You can change the cell and come back to the drawing editor -- but if you just click on Open or Load check, you get back </span><span class="f_mine" style="font-style: italic;">all</span><span class="f_mine"> of the lines that were plotted on the old drawing, which were correct only for the old cell. &nbsp;The Define new button makes a correct drawing, but all of your lines are gone! &nbsp;Don't worry; you don't have to recreate everything from scratch. &nbsp;You can recycle the lines and dimensions that you put on the previous drawing, and apply them to the new one. &nbsp;But this is tricky, and you must do it right.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">1. &nbsp;Save the previous drawing that contains all of the user-entered data you want to recycle.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">2. &nbsp;Change the original cell design as you like.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">3. &nbsp;Open the drawing editor, select the parts you want to draw, and click Define new. &nbsp;This makes new data files for the solid and outline versions of this set of parts, with no extra lines yet.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">4. &nbsp;Click the Recycle button, and select the file you saved in step 1. &nbsp;All of your lines come back -- including those that point to things that you have changed. &nbsp;Simply edit or delete those lines, and recreate whatever you need to bring the drawing up to date. &nbsp;When done, save it again. &nbsp;Whew!</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1318.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

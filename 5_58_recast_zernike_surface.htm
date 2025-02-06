@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>5.58 Recast Zernike Surface</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="RZS,Zernike surface, redefining" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">5.58 Recast Zernike Surface (RZS)</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;background:url(background-topic-header.jpg)" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   &raquo;No topics above this level&laquo;
+   </p>
+   <h1 class="p_Heading1"><span class="f_Heading1">5.58 Recast Zernike Surface (RZS)</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <img src="hm_btn_navigate_prev_d.png" border="0"
+        ><a href="main_index.htm"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img name=main src="hm_btn_navigate_top.png" border=0 alt="Return to chapter overview"
+        ></a><img src="hm_btn_navigate_next_d.png" border="0">
+    </td>
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="text-decoration: underline;"><a href="5_57_rns.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="5_59__scale_aspheric_terms_gsc.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p>The command RZS will recast most kinds of surface shapes into a ZERNIKE surface. &nbsp;The format is as follows:</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">{ RZS / RZP / RZB } </span><span style="font-weight: bold; text-decoration: underline;">sn</span><span style="font-weight: bold;"> &nbsp;[ SYMM &nbsp;/ RSYMM &nbsp;[ CAO / 0 / </span><span style="font-weight: bold; text-decoration: underline;">rnorm</span><span style="font-weight: bold;"> [ RFIX ]]]</span></p>
+<p>&nbsp;</p>
+<p>If the optional <span style="font-weight: bold;">SYMM</span> is included, only terms with bilateral symmetry will be used.  <span style="font-weight: bold;">RSYMM</span> requests only terms with rotational symmetry. The optional <span style="font-weight: bold; text-decoration: underline;">rnorm</span> is the aperture over which the polynomials are orthogonal; the default is one lens unit; if CAO is entered, the current clear aperture of the surface is used for <span style="font-weight: bold; text-decoration: underline;">rnorm</span>. &nbsp;The optional <span style="font-weight: bold;">RFIX</span> fixes the current RAD of the surface and only varies the Zernike terms.</p>
+<p>&nbsp;</p>
+<p>If the command is <span style="font-weight: bold;">RZS</span> or <span style="font-weight: bold;">RZB</span>, the program calculates the sag of the original surface <span style="font-weight: bold; text-decoration: underline;">sn</span> at an array of points over the surface. &nbsp;Then it submits an optimization run that varies all the enabled coefficients plus the base curve (if not RFIX) and targets the surface sag at those locations. &nbsp;When this completes, the surface has been redefined and has a shape very close to that of the previous. &nbsp;Then one can optimize the new system, varying the G terms as usual.</p>
+<p>&nbsp;</p>
+<p>The command <span style="font-weight: bold;">RZP</span> calculates the slope of the target surface at each array point and adds a target for the slopes in X and Y. &nbsp;This may help avoid ray failures when the shape is changed.</p>
+<p>&nbsp;</p>
+<p>The command <span style="font-weight: bold;">RZB</span> calculates both the sag and slope, and targets both.</p>
+<p>&nbsp;</p>
+<p>To illustrate this feature, we start with the relay telescope and cast the primary mirror to a Zernike surface.</p>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;">FET 4</span></p>
+<p style="margin: 0px 0px 0px 24px;"><span style="font-family: 'Courier New'; font-weight: bold;">RZS 1 SYMM</span></p>
+<p>&nbsp;</p>
+<p>The program fits the currently spherical shape and returns a set of coefficients, most of which are very small:</p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SPECIAL SURFACE DATA</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ______________________________________________________________________________</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;SURFACE NO. &nbsp; 1 -- ZERNIKE POLYNOMIAL</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;APER. SIZE OVER WHICH ZERNIKE COEFF. ARE ORTHOGONAL (AP) &nbsp; &nbsp; &nbsp;1.000000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;TERM &nbsp; &nbsp; &nbsp;COEFFICIENT &nbsp; &nbsp; ZERNIKE POLYNOMIAL</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; 2 &nbsp; &nbsp; -4.878792E-15 &nbsp; &nbsp; R SIN(A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; &nbsp; -0.001722 &nbsp; &nbsp; 2*R**2-1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp;1.719655E-15 &nbsp; &nbsp; R**2 COS(2A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; 7 &nbsp; &nbsp; &nbsp;3.527638E-16 &nbsp; &nbsp; (3*R**2-2) R SIN(A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; 8 &nbsp; &nbsp; -2.087041E-08 &nbsp; &nbsp; 6*R**4-6*R**2+1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;10 &nbsp; &nbsp; -2.377171E-17 &nbsp; &nbsp; R**3 SIN(3A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;11 &nbsp; &nbsp; -4.140616E-17 &nbsp; &nbsp; (4*R**2-3) R**2 COS(2A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;14 &nbsp; &nbsp; -6.372096E-18 &nbsp; &nbsp; (10*R**4-12*R**2+3) R SIN(A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;15 &nbsp; &nbsp; -3.304352E-13 &nbsp; &nbsp; 20*R**6-30*R**4+12*R**2-1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;16 &nbsp; &nbsp; -5.243615E-15 &nbsp; &nbsp; R**4 COS(4A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;19 &nbsp; &nbsp; &nbsp;1.360698E-19 &nbsp; &nbsp; (5*R**2-4) R**3 SIN(3A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;20 &nbsp; &nbsp; &nbsp;2.994780E-19 &nbsp; &nbsp; (15*R**4-20*R**2+6) R**2 COS(2A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;23 &nbsp; &nbsp; &nbsp;3.896676E-20 &nbsp; &nbsp; (35*R**6-60*R**4+30*R**2-4) R SIN(A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;24 &nbsp; &nbsp; -2.606692E-18 &nbsp; &nbsp; 70*R**8-140*R**6+90*R**4-20*R**2+1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;26 &nbsp; &nbsp; &nbsp;7.122774E-19 &nbsp; &nbsp; R**5 SIN(5A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;27 &nbsp; &nbsp; &nbsp;2.668823E-17 &nbsp; &nbsp; (6*R**2-5) R**4 COS(4A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;30 &nbsp; &nbsp; -9.995441E-22 &nbsp; &nbsp; (21*R**4-30*R**2+10) R**3 SIN(3A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;31 &nbsp; &nbsp; -6.525799E-22 &nbsp; &nbsp; (56*R**6-105*R**4+60*R**2-10) R**2 COS(2A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;34 &nbsp; &nbsp; -7.889715E-23 &nbsp; &nbsp; (126*R**8-280*R**6+210*R**4-60*R**2+5) R SIN(A)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;35 &nbsp; &nbsp; -1.347163E-20 &nbsp; &nbsp; 252*R10-630*R8+560*R6-210*R4+30*R2-1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;36 &nbsp; &nbsp; &nbsp;1.822909E-23 &nbsp; &nbsp; 924*R12-2772*R10+3150*R8-1680*R6+420*R4-42*R2+1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;37 &nbsp; &nbsp; &nbsp; &nbsp; -0.001722 &nbsp; &nbsp; 1</span></p>
+<p>&nbsp;</p>
+<p>These aspheric terms have been added to a new spherical base curve that has a radius of -309.87495 inches. &nbsp;The fit is essentially perfect, even though the original radius was -98.85 inches. &nbsp;This happens because there is more than one combination that makes a good fit; indeed, Zernike terms added to a flat surface can also make a good fit. &nbsp;So the program varies all the terms, plus the base radius, and optimizes all of them together.</p>
+<p>&nbsp;</p>
+<p>If you want the base radius to remain the same, simple add the <span style="font-weight: bold;">RFIX</span> entry to the input.</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>

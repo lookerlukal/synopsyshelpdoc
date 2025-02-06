@@ -1,0 +1,1769 @@
+/* Text Styles */
+hr { color: #000000}
+body, table, tr, th /* Normal */
+{
+ font-size: 10pt;
+ font-family: Arial;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.f_Intro /* *Intro */
+{
+ font-family: 'MS Sans Serif';
+}
+span.f_BlockText /* Block Text */
+{
+ font-size: 11pt;
+}
+span.f_BodyText /* Body Text */
+{
+}
+span.f_BodyText2 /* Body Text 2 */
+{
+}
+span.f_BodyText2-1 /* Body Text 2-1 */
+{
+ font-size: 9pt;
+ font-family: 'Courier New';
+ font-weight: bold;
+}
+span.f_BodyTextIndent2 /* Body Text Indent 2 */
+{
+}
+span.f_BodyTextIndent3 /* Body Text Indent 3 */
+{
+}
+span.f_BodyText-1 /* Body Text-1 */
+{
+ font-size: 11pt;
+}
+span.f_c1 /* c1 */
+{
+ font-size: 12pt;
+}
+span.f_c1-1 /* c1-1 */
+{
+ font-size: 12pt;
+}
+span.f_c2 /* c2 */
+{
+ font-size: 12pt;
+}
+span.f_c3 /* c3 */
+{
+ font-size: 12pt;
+}
+span.f_c4 /* c4 */
+{
+ font-size: 12pt;
+}
+span.f_c6 /* c6 */
+{
+ font-size: 12pt;
+}
+span.f_c7 /* c7 */
+{
+ font-size: 12pt;
+}
+span.f_CodeExample /* Code Example */
+{
+ font-size: 8pt;
+ font-family: 'Courier New';
+}
+span.f_Comment /* Comment */
+{
+}
+span.f_COURIER /* COURIER */
+{
+ font-size: 11pt;
+ font-family: 'Courier New';
+}
+span.f_example /* example */
+{
+ font-size: 11pt;
+ font-weight: bold;
+}
+span.f_footer /* footer */
+{
+}
+span.f_footnotereference /* footnote reference */
+{
+ font-size: 8pt;
+ font-family: 'Tms Rmn';
+ vertical-align: super;
+}
+span.f_footnotereference-1 /* footnote reference-1 */
+{
+ font-size: 8pt;
+ font-family: 'Tms Rmn';
+ vertical-align: super;
+}
+span.f_footnotereference-10 /* footnote reference-10 */
+{
+}
+span.f_footnotereference-11 /* footnote reference-11 */
+{
+}
+span.f_footnotereference-12 /* footnote reference-12 */
+{
+}
+span.f_footnotereference-13 /* footnote reference-13 */
+{
+}
+span.f_footnotereference-14 /* footnote reference-14 */
+{
+}
+span.f_footnotereference-15 /* footnote reference-15 */
+{
+}
+span.f_footnotereference-16 /* footnote reference-16 */
+{
+}
+span.f_footnotereference-17 /* footnote reference-17 */
+{
+}
+span.f_footnotereference-18 /* footnote reference-18 */
+{
+}
+span.f_footnotereference-19 /* footnote reference-19 */
+{
+}
+span.f_footnotereference-2 /* footnote reference-2 */
+{
+}
+span.f_footnotereference-20 /* footnote reference-20 */
+{
+}
+span.f_footnotereference-21 /* footnote reference-21 */
+{
+}
+span.f_footnotereference-22 /* footnote reference-22 */
+{
+}
+span.f_footnotereference-23 /* footnote reference-23 */
+{
+}
+span.f_footnotereference-24 /* footnote reference-24 */
+{
+}
+span.f_footnotereference-25 /* footnote reference-25 */
+{
+}
+span.f_footnotereference-26 /* footnote reference-26 */
+{
+}
+span.f_footnotereference-27 /* footnote reference-27 */
+{
+}
+span.f_footnotereference-28 /* footnote reference-28 */
+{
+}
+span.f_footnotereference-29 /* footnote reference-29 */
+{
+}
+span.f_footnotereference-3 /* footnote reference-3 */
+{
+}
+span.f_footnotereference-30 /* footnote reference-30 */
+{
+}
+span.f_footnotereference-31 /* footnote reference-31 */
+{
+}
+span.f_footnotereference-32 /* footnote reference-32 */
+{
+}
+span.f_footnotereference-33 /* footnote reference-33 */
+{
+}
+span.f_footnotereference-34 /* footnote reference-34 */
+{
+}
+span.f_footnotereference-35 /* footnote reference-35 */
+{
+}
+span.f_footnotereference-4 /* footnote reference-4 */
+{
+}
+span.f_footnotereference-5 /* footnote reference-5 */
+{
+}
+span.f_footnotereference-6 /* footnote reference-6 */
+{
+}
+span.f_footnotereference-7 /* footnote reference-7 */
+{
+}
+span.f_footnotereference-8 /* footnote reference-8 */
+{
+}
+span.f_footnotereference-9 /* footnote reference-9 */
+{
+}
+span.f_footnotetext /* footnote text */
+{
+}
+span.f_header /* header */
+{
+}
+span.f_heading1 /* heading 1 */
+{
+ font-size: 12pt;
+ font-family: Helv;
+ font-weight: bold;
+ text-decoration: underline;
+}
+span.f_heading1-1 /* heading 1-1 */
+{
+ font-weight: bold;
+}
+span.f_heading1-10 /* heading 1-10 */
+{
+ font-size: 11pt;
+ font-weight: bold;
+}
+span.f_heading1-11 /* heading 1-11 */
+{
+ font-size: 17pt;
+}
+span.f_heading1-12 /* heading 1-12 */
+{
+ font-size: 12pt;
+ font-weight: bold;
+}
+span.f_heading1-2 /* heading 1-2 */
+{
+ font-size: 9pt;
+ font-weight: bold;
+}
+span.f_heading1-3 /* heading 1-3 */
+{
+ font-size: 14pt;
+}
+span.f_heading1-4 /* heading 1-4 */
+{
+ font-size: 8pt;
+ font-family: 'Courier New';
+ font-weight: bold;
+}
+span.f_heading1-5 /* heading 1-5 */
+{
+ font-size: 11pt;
+ font-weight: bold;
+}
+span.f_heading1-6 /* heading 1-6 */
+{
+ font-size: 14pt;
+}
+span.f_heading1-7 /* heading 1-7 */
+{
+ font-size: 11pt;
+ font-weight: bold;
+}
+span.f_heading1-8 /* heading 1-8 */
+{
+ font-size: 9pt;
+ font-family: 'Courier New';
+ font-weight: bold;
+}
+span.f_heading1-9 /* heading 1-9 */
+{
+ font-weight: bold;
+}
+span.f_heading2 /* heading 2 */
+{
+ font-size: 12pt;
+ font-family: Helv;
+ font-weight: bold;
+}
+span.f_heading2-1 /* heading 2-1 */
+{
+ font-size: 14pt;
+}
+span.f_heading2-2 /* heading 2-2 */
+{
+ font-size: 9pt;
+ font-family: 'Courier New';
+ font-weight: bold;
+}
+span.f_heading2-3 /* heading 2-3 */
+{
+ font-size: 11pt;
+ font-weight: bold;
+}
+span.f_heading2-4 /* heading 2-4 */
+{
+ font-size: 8pt;
+ font-family: 'Courier New';
+ font-weight: bold;
+}
+span.f_heading3 /* heading 3 */
+{
+ font-size: 14pt;
+ font-weight: bold;
+}
+span.f_heading3-1 /* heading 3-1 */
+{
+ font-size: 11pt;
+ font-weight: bold;
+}
+span.f_heading3-2 /* heading 3-2 */
+{
+ font-size: 18pt;
+ font-weight: bold;
+}
+span.f_heading3-3 /* heading 3-3 */
+{
+ font-size: 14pt;
+}
+span.f_heading3-4 /* heading 3-4 */
+{
+ font-family: 'Courier New';
+ font-weight: bold;
+}
+span.f_heading3-5 /* heading 3-5 */
+{
+ font-size: 8pt;
+ font-family: 'Courier New';
+ font-weight: bold;
+}
+span.f_heading3-6 /* heading 3-6 */
+{
+ font-size: 14pt;
+}
+span.f_heading4 /* heading 4 */
+{
+ font-size: 14pt;
+}
+span.f_heading4-1 /* heading 4-1 */
+{
+ font-size: 18pt;
+ font-weight: bold;
+}
+span.f_heading4-2 /* heading 4-2 */
+{
+ font-family: 'Courier New';
+ font-weight: bold;
+}
+span.f_Heading1 /* Heading1 */
+{
+ font-size: 16pt;
+ font-weight: bold;
+}
+span.f_HTMLPreformatted /* HTML Preformatted */
+{
+ font-family: 'Arial Unicode MS';
+}
+span.f_Hyperlink /* Hyperlink */
+{
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.f_ImageCaption /* Image Caption */
+{
+ font-size: 8pt;
+ font-weight: bold;
+}
+span.f_List /* List */
+{
+}
+span.f_Ln1 /* Ln1 */
+{
+ font-family: 'MS Sans Serif';
+}
+span.f_Lp1 /* Lp1 */
+{
+ font-family: 'MS Sans Serif';
+}
+span.f_mine /* mine */
+{
+ font-size: 11pt;
+}
+span.f_mine-1 /* mine-1 */
+{
+ font-size: 11pt;
+}
+span.f_mine-2 /* mine-2 */
+{
+ font-size: 11pt;
+}
+span.f_mine-3 /* mine-3 */
+{
+ font-size: 11pt;
+}
+span.f_mine-4 /* mine-4 */
+{
+ font-size: 11pt;
+}
+span.f_mine-5 /* mine-5 */
+{
+ font-size: 11pt;
+}
+span.f_mine-6 /* mine-6 */
+{
+ font-size: 11pt;
+}
+span.f_NoSpacing /* No Spacing */
+{
+ font-size: 11pt;
+ font-family: Calibri;
+}
+span.f_NormalIndent /* Normal Indent */
+{
+}
+span.f_Normal-1 /* Normal-1 */
+{
+ font-family: 'Tms Rmn';
+}
+span.f_Normal-2 /* Normal-2 */
+{
+ font-family: 'Times New Roman';
+}
+span.f_Normal-3 /* Normal-3 */
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman';
+}
+span.f_Notes /* Notes */
+{
+}
+span.f_OUTPUT /* OUTPUT */
+{
+ font-size: 9pt;
+ font-family: 'Courier New';
+ font-weight: bold;
+}
+span.f_p1 /* p1 */
+{
+ font-size: 12pt;
+}
+span.f_p10 /* p10 */
+{
+ font-size: 12pt;
+}
+span.f_p10-1 /* p10-1 */
+{
+ font-size: 12pt;
+}
+span.f_p10-2 /* p10-2 */
+{
+ font-size: 12pt;
+}
+span.f_p11 /* p11 */
+{
+ font-size: 12pt;
+}
+span.f_p1-1 /* p1-1 */
+{
+ font-size: 12pt;
+}
+span.f_p1-10 /* p1-10 */
+{
+ font-size: 12pt;
+}
+span.f_p11-1 /* p11-1 */
+{
+ font-size: 12pt;
+}
+span.f_p1-11 /* p1-11 */
+{
+ font-size: 12pt;
+}
+span.f_p11-2 /* p11-2 */
+{
+ font-size: 12pt;
+}
+span.f_p1-12 /* p1-12 */
+{
+ font-size: 12pt;
+}
+span.f_p11-3 /* p11-3 */
+{
+ font-size: 12pt;
+}
+span.f_p1-13 /* p1-13 */
+{
+ font-size: 12pt;
+}
+span.f_p12 /* p12 */
+{
+ font-size: 12pt;
+}
+span.f_p1-2 /* p1-2 */
+{
+ font-size: 12pt;
+}
+span.f_p12-1 /* p12-1 */
+{
+ font-size: 12pt;
+}
+span.f_p12-2 /* p12-2 */
+{
+ font-size: 12pt;
+}
+span.f_p12-3 /* p12-3 */
+{
+ font-size: 12pt;
+}
+span.f_p13 /* p13 */
+{
+ font-size: 12pt;
+}
+span.f_p1-3 /* p1-3 */
+{
+ font-size: 12pt;
+}
+span.f_p13-1 /* p13-1 */
+{
+ font-size: 12pt;
+}
+span.f_p13-2 /* p13-2 */
+{
+ font-size: 12pt;
+}
+span.f_p14 /* p14 */
+{
+ font-size: 12pt;
+}
+span.f_p1-4 /* p1-4 */
+{
+ font-size: 12pt;
+}
+span.f_p15 /* p15 */
+{
+ font-size: 12pt;
+}
+span.f_p1-5 /* p1-5 */
+{
+ font-size: 12pt;
+}
+span.f_p1-6 /* p1-6 */
+{
+ font-size: 12pt;
+}
+span.f_p1-7 /* p1-7 */
+{
+ font-size: 12pt;
+}
+span.f_p1-8 /* p1-8 */
+{
+ font-size: 12pt;
+}
+span.f_p1-9 /* p1-9 */
+{
+ font-size: 12pt;
+}
+span.f_p2 /* p2 */
+{
+ font-size: 12pt;
+}
+span.f_p20 /* p20 */
+{
+ font-size: 12pt;
+}
+span.f_p2-1 /* p2-1 */
+{
+ font-size: 12pt;
+}
+span.f_p2-10 /* p2-10 */
+{
+ font-size: 11pt;
+}
+span.f_p2-11 /* p2-11 */
+{
+ font-size: 11pt;
+}
+span.f_p2-2 /* p2-2 */
+{
+ font-size: 12pt;
+}
+span.f_p2-3 /* p2-3 */
+{
+ font-size: 12pt;
+}
+span.f_p2-4 /* p2-4 */
+{
+ font-size: 12pt;
+}
+span.f_p2-5 /* p2-5 */
+{
+ font-size: 12pt;
+}
+span.f_p2-6 /* p2-6 */
+{
+ font-size: 12pt;
+}
+span.f_p2-7 /* p2-7 */
+{
+ font-size: 12pt;
+}
+span.f_p2-8 /* p2-8 */
+{
+ font-size: 12pt;
+}
+span.f_p2-9 /* p2-9 */
+{
+ font-size: 12pt;
+}
+span.f_p3 /* p3 */
+{
+ font-size: 12pt;
+}
+span.f_p3-1 /* p3-1 */
+{
+ font-size: 12pt;
+}
+span.f_p3-10 /* p3-10 */
+{
+ font-size: 12pt;
+}
+span.f_p3-2 /* p3-2 */
+{
+ font-size: 12pt;
+}
+span.f_p3-3 /* p3-3 */
+{
+ font-size: 12pt;
+}
+span.f_p3-4 /* p3-4 */
+{
+ font-size: 12pt;
+}
+span.f_p3-5 /* p3-5 */
+{
+ font-size: 12pt;
+}
+span.f_p3-6 /* p3-6 */
+{
+ font-size: 12pt;
+}
+span.f_p3-7 /* p3-7 */
+{
+ font-size: 12pt;
+}
+span.f_p3-8 /* p3-8 */
+{
+ font-size: 11pt;
+}
+span.f_p3-9 /* p3-9 */
+{
+ font-size: 12pt;
+}
+span.f_p4 /* p4 */
+{
+ font-size: 12pt;
+}
+span.f_p4-1 /* p4-1 */
+{
+ font-size: 12pt;
+}
+span.f_p4-10 /* p4-10 */
+{
+ font-size: 12pt;
+}
+span.f_p4-2 /* p4-2 */
+{
+ font-size: 12pt;
+}
+span.f_p4-3 /* p4-3 */
+{
+ font-size: 12pt;
+}
+span.f_p4-4 /* p4-4 */
+{
+ font-size: 12pt;
+}
+span.f_p4-5 /* p4-5 */
+{
+ font-size: 12pt;
+}
+span.f_p4-6 /* p4-6 */
+{
+ font-size: 12pt;
+}
+span.f_p4-7 /* p4-7 */
+{
+ font-size: 12pt;
+}
+span.f_p4-8 /* p4-8 */
+{
+ font-size: 12pt;
+}
+span.f_p4-9 /* p4-9 */
+{
+ font-size: 12pt;
+}
+span.f_p5 /* p5 */
+{
+ font-size: 12pt;
+}
+span.f_p5-1 /* p5-1 */
+{
+ font-size: 12pt;
+}
+span.f_p5-2 /* p5-2 */
+{
+ font-size: 12pt;
+}
+span.f_p5-3 /* p5-3 */
+{
+ font-size: 12pt;
+}
+span.f_p5-4 /* p5-4 */
+{
+ font-size: 12pt;
+}
+span.f_p5-5 /* p5-5 */
+{
+ font-size: 12pt;
+}
+span.f_p5-6 /* p5-6 */
+{
+ font-size: 12pt;
+}
+span.f_p5-7 /* p5-7 */
+{
+ font-size: 12pt;
+}
+span.f_p6 /* p6 */
+{
+ font-size: 12pt;
+}
+span.f_p6-1 /* p6-1 */
+{
+ font-size: 12pt;
+}
+span.f_p6-2 /* p6-2 */
+{
+ font-size: 12pt;
+}
+span.f_p6-3 /* p6-3 */
+{
+ font-size: 12pt;
+}
+span.f_p6-4 /* p6-4 */
+{
+ font-size: 12pt;
+}
+span.f_p6-5 /* p6-5 */
+{
+ font-size: 12pt;
+}
+span.f_p6-6 /* p6-6 */
+{
+ font-size: 12pt;
+}
+span.f_p7 /* p7 */
+{
+ font-size: 12pt;
+}
+span.f_p7-1 /* p7-1 */
+{
+ font-size: 12pt;
+}
+span.f_p7-2 /* p7-2 */
+{
+ font-size: 12pt;
+}
+span.f_p7-3 /* p7-3 */
+{
+ font-size: 12pt;
+}
+span.f_p7-4 /* p7-4 */
+{
+ font-size: 12pt;
+}
+span.f_p7-5 /* p7-5 */
+{
+ font-size: 11pt;
+}
+span.f_p7-6 /* p7-6 */
+{
+ font-size: 12pt;
+}
+span.f_p8 /* p8 */
+{
+ font-size: 12pt;
+}
+span.f_p8-1 /* p8-1 */
+{
+ font-size: 12pt;
+}
+span.f_p8-2 /* p8-2 */
+{
+ font-size: 12pt;
+}
+span.f_p8-3 /* p8-3 */
+{
+ font-size: 12pt;
+}
+span.f_p8-4 /* p8-4 */
+{
+ font-size: 12pt;
+}
+span.f_p8-5 /* p8-5 */
+{
+ font-size: 11pt;
+}
+span.f_p9 /* p9 */
+{
+ font-size: 12pt;
+}
+span.f_p9-1 /* p9-1 */
+{
+ font-size: 12pt;
+}
+span.f_p9-2 /* p9-2 */
+{
+ font-size: 12pt;
+}
+span.f_p9-3 /* p9-3 */
+{
+ font-size: 12pt;
+}
+span.f_p9-4 /* p9-4 */
+{
+ font-size: 12pt;
+}
+span.f_PlainText /* Plain Text */
+{
+ font-family: 'Courier New';
+}
+span.f_t1 /* t1 */
+{
+ font-size: 12pt;
+}
+span.f_t1-1 /* t1-1 */
+{
+ font-size: 12pt;
+}
+span.f_t12 /* t12 */
+{
+ font-size: 12pt;
+}
+span.f_t1-2 /* t1-2 */
+{
+ font-size: 12pt;
+}
+span.f_t1-3 /* t1-3 */
+{
+ font-size: 12pt;
+}
+span.f_t14 /* t14 */
+{
+ font-size: 12pt;
+}
+span.f_t1-4 /* t1-4 */
+{
+ font-size: 12pt;
+}
+span.f_t15 /* t15 */
+{
+ font-size: 12pt;
+}
+span.f_t1-5 /* t1-5 */
+{
+ font-size: 12pt;
+}
+span.f_t15-1 /* t15-1 */
+{
+ font-size: 12pt;
+}
+span.f_t16 /* t16 */
+{
+ font-size: 12pt;
+}
+span.f_t1-6 /* t1-6 */
+{
+ font-size: 12pt;
+}
+span.f_t16-1 /* t16-1 */
+{
+ font-size: 12pt;
+}
+span.f_t2 /* t2 */
+{
+ font-size: 12pt;
+}
+span.f_t2-1 /* t2-1 */
+{
+ font-size: 12pt;
+}
+span.f_t2-2 /* t2-2 */
+{
+ font-size: 12pt;
+}
+span.f_t2-3 /* t2-3 */
+{
+ font-size: 12pt;
+}
+span.f_t3 /* t3 */
+{
+ font-size: 12pt;
+}
+span.f_t3-1 /* t3-1 */
+{
+ font-size: 12pt;
+}
+span.f_t3-2 /* t3-2 */
+{
+ font-size: 12pt;
+}
+span.f_t3-3 /* t3-3 */
+{
+ font-size: 12pt;
+}
+span.f_t4 /* t4 */
+{
+ font-size: 12pt;
+}
+span.f_t4-1 /* t4-1 */
+{
+ font-size: 12pt;
+}
+span.f_t4-2 /* t4-2 */
+{
+ font-size: 12pt;
+}
+span.f_t5 /* t5 */
+{
+ font-size: 12pt;
+}
+span.f_t5-1 /* t5-1 */
+{
+ font-size: 12pt;
+}
+span.f_t6 /* t6 */
+{
+ font-size: 12pt;
+}
+span.f_t7 /* t7 */
+{
+ font-size: 12pt;
+}
+span.f_t7-1 /* t7-1 */
+{
+ font-size: 12pt;
+}
+span.f_t8 /* t8 */
+{
+ font-size: 12pt;
+}
+span.f_t9 /* t9 */
+{
+ font-size: 12pt;
+}
+span.f_Title /* Title */
+{
+ font-size: 14pt;
+ font-style: italic;
+}
+/* Paragraph styles */
+p /* Normal */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.p_Intro /* *Intro */
+{
+ margin: 5px 0px 5px 8px;
+}
+.p_BlockText /* Block Text */
+{
+ margin: 0px 96px 0px 96px;
+}
+.p_BodyText /* Body Text */
+{
+ margin: 0px 0px 8px 0px;
+}
+.p_BodyText2 /* Body Text 2 */
+{
+ margin: 0px 0px 8px 24px;
+}
+.p_BodyText2-1 /* Body Text 2-1 */
+{
+}
+.p_BodyTextIndent2 /* Body Text Indent 2 */
+{
+ text-indent: 24px;
+ margin: 0px 0px 0px 48px;
+}
+.p_BodyTextIndent3 /* Body Text Indent 3 */
+{
+ text-indent: -72px;
+ margin: 0px 0px 0px 72px;
+}
+.p_BodyText-1 /* Body Text-1 */
+{
+}
+.p_c1 /* c1 */
+{
+ text-align: center;
+}
+.p_c1-1 /* c1-1 */
+{
+ text-align: center;
+}
+.p_c2 /* c2 */
+{
+ text-align: center;
+}
+.p_c3 /* c3 */
+{
+ text-align: center;
+}
+.p_c4 /* c4 */
+{
+ text-align: center;
+}
+.p_c6 /* c6 */
+{
+ text-align: center;
+}
+.p_c7 /* c7 */
+{
+ text-align: center;
+}
+.p_CodeExample /* Code Example */
+{
+ white-space: nowrap;
+}
+.p_Comment /* Comment */
+{
+}
+.p_COURIER /* COURIER */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 137px;
+}
+.p_example /* example */
+{
+ margin: 0px 0px 0px 48px;
+}
+.p_footer /* footer */
+{
+}
+.p_footnotetext /* footnote text */
+{
+}
+.p_header /* header */
+{
+}
+.p_heading1 /* heading 1 */
+{
+ margin: 16px 0px 0px 0px;
+}
+.p_heading1-1 /* heading 1-1 */
+{
+}
+.p_heading1-10 /* heading 1-10 */
+{
+ margin: 0px 0px 0px 48px;
+}
+.p_heading1-11 /* heading 1-11 */
+{
+ margin: 0px 0px 0px 432px;
+}
+.p_heading1-12 /* heading 1-12 */
+{
+ text-align: center;
+}
+.p_heading1-2 /* heading 1-2 */
+{
+}
+.p_heading1-3 /* heading 1-3 */
+{
+ text-align: justify;
+}
+.p_heading1-4 /* heading 1-4 */
+{
+}
+.p_heading1-5 /* heading 1-5 */
+{
+}
+.p_heading1-6 /* heading 1-6 */
+{
+ text-align: center;
+}
+.p_heading1-7 /* heading 1-7 */
+{
+}
+.p_heading1-8 /* heading 1-8 */
+{
+}
+.p_heading1-9 /* heading 1-9 */
+{
+}
+.p_heading2 /* heading 2 */
+{
+ margin: 8px 0px 0px 0px;
+}
+.p_heading2-1 /* heading 2-1 */
+{
+}
+.p_heading2-2 /* heading 2-2 */
+{
+}
+.p_heading2-3 /* heading 2-3 */
+{
+}
+.p_heading2-4 /* heading 2-4 */
+{
+}
+.p_heading3 /* heading 3 */
+{
+}
+.p_heading3-1 /* heading 3-1 */
+{
+}
+.p_heading3-2 /* heading 3-2 */
+{
+ border-color: #000000;
+ border-style: solid;
+ border-width: 0px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ padding: 1px 1px 1px 1px;
+ margin: -1px -1px 0px -1px;
+}
+.p_heading3-3 /* heading 3-3 */
+{
+ text-align: justify;
+}
+.p_heading3-4 /* heading 3-4 */
+{
+}
+.p_heading3-5 /* heading 3-5 */
+{
+}
+.p_heading3-6 /* heading 3-6 */
+{
+ text-align: justify;
+}
+.p_heading4 /* heading 4 */
+{
+ border-color: #000000;
+ border-style: solid;
+ border-width: 0px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ padding: 1px 1px 1px 1px;
+ margin: -1px -1px 0px -1px;
+}
+.p_heading4-1 /* heading 4-1 */
+{
+ text-align: center;
+ border-color: #000000;
+ border-style: solid;
+ border-width: 0px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ padding: 1px 1px 1px 1px;
+ margin: -1px -1px 0px -1px;
+}
+.p_heading4-2 /* heading 4-2 */
+{
+ margin: 0px 0px 0px 38px;
+}
+.p_Heading1 /* Heading1 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.p_HTMLPreformatted /* HTML Preformatted */
+{
+}
+.p_ImageCaption /* Image Caption */
+{
+}
+.p_List /* List */
+{
+ text-indent: -24px;
+ margin: 0px 0px 0px 24px;
+}
+.p_Ln1 /* Ln1 */
+{
+ text-indent: -17px;
+ margin: 3px 0px 3px 24px;
+}
+.p_Lp1 /* Lp1 */
+{
+ margin: 3px 0px 3px 24px;
+}
+.p_mine /* mine */
+{
+}
+.p_mine-1 /* mine-1 */
+{
+}
+.p_mine-2 /* mine-2 */
+{
+}
+.p_mine-3 /* mine-3 */
+{
+}
+.p_mine-4 /* mine-4 */
+{
+}
+.p_mine-5 /* mine-5 */
+{
+}
+.p_mine-6 /* mine-6 */
+{
+}
+.p_NoSpacing /* No Spacing */
+{
+}
+.p_NormalIndent /* Normal Indent */
+{
+ margin: 0px 0px 0px 48px;
+}
+.p_Notes /* Notes */
+{
+}
+.p_OUTPUT /* OUTPUT */
+{
+}
+.p_p1 /* p1 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 137px;
+}
+.p_p10 /* p10 */
+{
+ margin: 0px 0px 0px 57px;
+}
+.p_p10-1 /* p10-1 */
+{
+}
+.p_p10-2 /* p10-2 */
+{
+}
+.p_p11 /* p11 */
+{
+ margin: 0px 0px 0px 79px;
+}
+.p_p1-1 /* p1-1 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 137px;
+}
+.p_p1-10 /* p1-10 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 117px;
+}
+.p_p11-1 /* p11-1 */
+{
+ margin: 0px 0px 0px 60px;
+}
+.p_p1-11 /* p1-11 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 49px;
+}
+.p_p11-2 /* p11-2 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 40px;
+}
+.p_p1-12 /* p1-12 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 43px;
+}
+.p_p11-3 /* p11-3 */
+{
+}
+.p_p1-13 /* p1-13 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 117px;
+}
+.p_p12 /* p12 */
+{
+ margin: 0px 0px 0px 57px;
+}
+.p_p1-2 /* p1-2 */
+{
+}
+.p_p12-1 /* p12-1 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 71px;
+}
+.p_p12-2 /* p12-2 */
+{
+}
+.p_p12-3 /* p12-3 */
+{
+}
+.p_p13 /* p13 */
+{
+ text-align: justify;
+}
+.p_p1-3 /* p1-3 */
+{
+ text-align: justify;
+}
+.p_p13-1 /* p13-1 */
+{
+ text-align: justify;
+}
+.p_p13-2 /* p13-2 */
+{
+}
+.p_p14 /* p14 */
+{
+}
+.p_p1-4 /* p1-4 */
+{
+ text-align: justify;
+}
+.p_p15 /* p15 */
+{
+ margin: 0px 0px 0px 48px;
+}
+.p_p1-5 /* p1-5 */
+{
+ text-align: justify;
+}
+.p_p1-6 /* p1-6 */
+{
+ text-align: justify;
+}
+.p_p1-7 /* p1-7 */
+{
+}
+.p_p1-8 /* p1-8 */
+{
+}
+.p_p1-9 /* p1-9 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 257px;
+}
+.p_p2 /* p2 */
+{
+ text-indent: -384px;
+ margin: 0px 0px 0px 288px;
+}
+.p_p20 /* p20 */
+{
+ margin: 0px 0px 0px 77px;
+}
+.p_p2-1 /* p2-1 */
+{
+ text-align: justify;
+}
+.p_p2-10 /* p2-10 */
+{
+}
+.p_p2-11 /* p2-11 */
+{
+}
+.p_p2-2 /* p2-2 */
+{
+ text-indent: -384px;
+ margin: 0px 0px 0px 288px;
+}
+.p_p2-3 /* p2-3 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 57px;
+}
+.p_p2-4 /* p2-4 */
+{
+ text-align: justify;
+}
+.p_p2-5 /* p2-5 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 57px;
+}
+.p_p2-6 /* p2-6 */
+{
+ text-align: justify;
+}
+.p_p2-7 /* p2-7 */
+{
+ text-align: justify;
+}
+.p_p2-8 /* p2-8 */
+{
+}
+.p_p2-9 /* p2-9 */
+{
+ text-align: justify;
+}
+.p_p3 /* p3 */
+{
+ margin: 0px 0px 0px 76px;
+}
+.p_p3-1 /* p3-1 */
+{
+ text-align: justify;
+}
+.p_p3-10 /* p3-10 */
+{
+}
+.p_p3-2 /* p3-2 */
+{
+ text-align: justify;
+}
+.p_p3-3 /* p3-3 */
+{
+}
+.p_p3-4 /* p3-4 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 7px;
+}
+.p_p3-5 /* p3-5 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 56px;
+}
+.p_p3-6 /* p3-6 */
+{
+ margin: 0px 0px 0px 112px;
+}
+.p_p3-7 /* p3-7 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 48px;
+}
+.p_p3-8 /* p3-8 */
+{
+}
+.p_p3-9 /* p3-9 */
+{
+ text-align: justify;
+ text-indent: -48px;
+ margin: 0px 0px 0px 48px;
+}
+.p_p4 /* p4 */
+{
+ text-indent: -432px;
+ margin: 0px 0px 0px 336px;
+}
+.p_p4-1 /* p4-1 */
+{
+ margin: 0px 0px 0px 57px;
+}
+.p_p4-10 /* p4-10 */
+{
+ text-indent: -38px;
+ margin: 0px 0px 0px 58px;
+}
+.p_p4-2 /* p4-2 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 47px;
+}
+.p_p4-3 /* p4-3 */
+{
+ text-align: justify;
+}
+.p_p4-4 /* p4-4 */
+{
+ margin: 0px 0px 0px 235px;
+}
+.p_p4-5 /* p4-5 */
+{
+}
+.p_p4-6 /* p4-6 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 57px;
+}
+.p_p4-7 /* p4-7 */
+{
+ margin: 0px 0px 0px 72px;
+}
+.p_p4-8 /* p4-8 */
+{
+ text-align: justify;
+ text-indent: 48px;
+ margin: 0px 0px 0px 96px;
+}
+.p_p4-9 /* p4-9 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 244px;
+}
+.p_p5 /* p5 */
+{
+ text-align: justify;
+}
+.p_p5-1 /* p5-1 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 55px;
+}
+.p_p5-2 /* p5-2 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 57px;
+}
+.p_p5-3 /* p5-3 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 36px;
+}
+.p_p5-4 /* p5-4 */
+{
+}
+.p_p5-5 /* p5-5 */
+{
+ margin: 0px 0px 0px 57px;
+}
+.p_p5-6 /* p5-6 */
+{
+ margin: 0px 0px 0px 49px;
+}
+.p_p5-7 /* p5-7 */
+{
+ margin: 0px 0px 0px 32px;
+}
+.p_p6 /* p6 */
+{
+ margin: 0px 0px 0px 68px;
+}
+.p_p6-1 /* p6-1 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 33px;
+}
+.p_p6-2 /* p6-2 */
+{
+ margin: 0px 0px 0px 43px;
+}
+.p_p6-3 /* p6-3 */
+{
+ text-align: justify;
+}
+.p_p6-4 /* p6-4 */
+{
+ margin: 0px 0px 0px 259px;
+}
+.p_p6-5 /* p6-5 */
+{
+ margin: 0px 0px 0px 28px;
+}
+.p_p6-6 /* p6-6 */
+{
+ margin: 0px 0px 0px 259px;
+}
+.p_p7 /* p7 */
+{
+ text-indent: -38px;
+ margin: 0px 0px 0px 38px;
+}
+.p_p7-1 /* p7-1 */
+{
+ margin: 0px 0px 0px 35px;
+}
+.p_p7-2 /* p7-2 */
+{
+ text-align: justify;
+ margin: 0px 0px 0px 52px;
+}
+.p_p7-3 /* p7-3 */
+{
+}
+.p_p7-4 /* p7-4 */
+{
+}
+.p_p7-5 /* p7-5 */
+{
+}
+.p_p7-6 /* p7-6 */
+{
+}
+.p_p8 /* p8 */
+{
+}
+.p_p8-1 /* p8-1 */
+{
+}
+.p_p8-2 /* p8-2 */
+{
+}
+.p_p8-3 /* p8-3 */
+{
+}
+.p_p8-4 /* p8-4 */
+{
+ margin: 0px 0px 0px 49px;
+}
+.p_p8-5 /* p8-5 */
+{
+}
+.p_p9 /* p9 */
+{
+ margin: 0px 0px 0px 93px;
+}
+.p_p9-1 /* p9-1 */
+{
+ text-align: justify;
+}
+.p_p9-2 /* p9-2 */
+{
+}
+.p_p9-3 /* p9-3 */
+{
+ margin: 0px 0px 0px 24px;
+}
+.p_p9-4 /* p9-4 */
+{
+ margin: 0px 0px 0px 75px;
+}
+.p_PlainText /* Plain Text */
+{
+}
+.p_t1 /* t1 */
+{
+}
+.p_t1-1 /* t1-1 */
+{
+}
+.p_t12 /* t12 */
+{
+}
+.p_t1-2 /* t1-2 */
+{
+}
+.p_t1-3 /* t1-3 */
+{
+}
+.p_t14 /* t14 */
+{
+}
+.p_t1-4 /* t1-4 */
+{
+}
+.p_t15 /* t15 */
+{
+}
+.p_t1-5 /* t1-5 */
+{
+}
+.p_t15-1 /* t15-1 */
+{
+}
+.p_t16 /* t16 */
+{
+}
+.p_t1-6 /* t1-6 */
+{
+}
+.p_t16-1 /* t16-1 */
+{
+}
+.p_t2 /* t2 */
+{
+}
+.p_t2-1 /* t2-1 */
+{
+}
+.p_t2-2 /* t2-2 */
+{
+}
+.p_t2-3 /* t2-3 */
+{
+}
+.p_t3 /* t3 */
+{
+}
+.p_t3-1 /* t3-1 */
+{
+}
+.p_t3-2 /* t3-2 */
+{
+}
+.p_t3-3 /* t3-3 */
+{
+}
+.p_t4 /* t4 */
+{
+}
+.p_t4-1 /* t4-1 */
+{
+}
+.p_t4-2 /* t4-2 */
+{
+}
+.p_t5 /* t5 */
+{
+}
+.p_t5-1 /* t5-1 */
+{
+}
+.p_t6 /* t6 */
+{
+}
+.p_t7 /* t7 */
+{
+}
+.p_t7-1 /* t7-1 */
+{
+}
+.p_t8 /* t8 */
+{
+}
+.p_t9 /* t9 */
+{
+}
+.p_Title /* Title */
+{
+ text-align: center;
+}
+
+
+#hmpopupdiv /* used for javascript text popups */
+{
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  background-color: #FFFFFF;
+  padding: 6px;
+  border:1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888;
+}
+
+#hmlightbox /* image lightbox */
+{
+  border: none;
+  padding: 8px;
+  background: #FFF;
+  font-size: 110%;
+  font-weight: bold;
+  color: #777;
+  box-shadow: 5px 5px 5px #888;
+}
+
+a.dropdown-toggle /* dropdown toggle caption */
+{
+  cursor: pointer;
+}
+a.inline-toggle /* inline toggle caption */
+{
+  cursor: pointer;
+}
+img.dropdown-toggle-icon /* toggle icon */
+{
+  cursor: pointer;
+}

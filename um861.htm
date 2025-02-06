@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um861</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CONTOUR,image analysis,image analysis wavefront map,PUPIL plot,wavefront, mapping of,ZLEVEL" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="pupil"></a><span class="f_mine" style="font-weight: bold;">8.6.1 Exit Pupil Wavefront Map (PUPIL) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um862.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um86.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A plot of the OPD errors in the final wavefront may be obtained from the dialog </span><span class="f_mine" style="font-weight: bold;">MDI</span><span class="f_mine"> or using the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">[ CONTOUR [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">[ FRINGES [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GRID</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">[ CLEVEL [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GRID</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">[ ZLEVEL [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GRID</span><span class="f_mine" style="font-weight: bold;"> ] ]</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">PUPIL { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> 0 </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WX</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WY</span><span class="f_mine" style="font-weight: bold;"> [ POST { X / Y / XF / YF } &nbsp;[ EXPUPIL / MXSF [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RLIM</span><span class="f_mine" style="font-weight: bold;"> ] [MULTI/ADD/FINAL/ ] ] ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where the data are as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 42px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:93px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the color number , or “</span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine">” for the primary color.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:93px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the fractional Y-object height</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:93px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the wavefront deformation that will be scaled to one inch on the plot</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:93px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the fractional X-object height.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:93px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WX</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WY</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">give optional wedge components to be added to the pupil errors. &nbsp;This is useful when preparing contour plots of the fringe pattem to be expected when testing a system, since interferometers usually are more readable with a wedge added to the wavefront.  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WX</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WY</span><span class="f_mine"> are the wedge, in waves at the edge of the pupil, in X and Y.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:93px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">POST</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This entry in word 9 of the command will implement post processing of the fringe pattern. &nbsp;It only works if FRINGES has been requested.  </span><span class="f_mine" style="font-weight: bold;">X</span><span class="f_mine"> produces a trace through the pattern in the X-direction; </span><span class="f_mine" style="font-weight: bold;">Y</span><span class="f_mine"> does the same in Y; and </span><span class="f_mine" style="font-weight: bold;">XF</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">YF</span><span class="f_mine"> calculate the Fourier transform of the trace in X or Y.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the Fourier analysis, the lowest frequency is a constant value, the next one corresponds to one cycle over the pattern, the third is two cycles, and so on. &nbsp;The phase is given by the arctangent of the sine and cosine values.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program also tests the transmission of each ray, if the lens is in polarization mode, and alters the intensity of the fringe pattern accordingly.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature only operates if the lens is in VIG mode.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:93px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">EXPUPIL / MXSF</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The entry </span><span class="f_mine" style="font-weight: bold;">EXPUPIL</span><span class="f_mine"> in word 11 causes the program to evaluate the fringe pattern at the </span><span class="f_mine" style="font-style: italic;">exit pupil</span><span class="f_mine">. &nbsp;It will test the ray density at each point in the pupil and compare it to the density on the axis. &nbsp;The intensity of the fringe pattern is adjusted if the two are different. This is intended for laser beam shapers, where rays are typically more concentrated at the edge of the pupil in order to compensate for the falloff of the Gaussian laser beam there. &nbsp;If this feature is selected for an OBG system without beam shaping, the fringe pattern will show the Gaussian falloff in intensity. &nbsp;If the beam shaping has been done correctly, the fringes will look more uniform.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The density test is performed on a flat surface, which is appropriate for a beam shaper, which is usually collimated. &nbsp;But it is not recommended for a fast focal lens, where this mapping does not satisfy the sine condition and spurious falloff will be evident.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature only operates if the lens is in VIG mode, and only if FRINGES has been requested.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">MXSF</span><span class="f_mine"> option is similar, except that the position of each sample point is taken at the last surface in the lens rather than at the exit pupil. &nbsp;This can be useful for a telecentric system, where the exit pupil is at infinity and the calculation becomes meaningless at that distance. &nbsp;It is also called for in multi-beam designs where the several beams are decentered with respect to the optical axis and projecting the chief ray to that axis does not yield a meaningful pupil location.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Be aware that, if a beamshaper does not produce a smooth ray distribution at the output, the intensity pattern may see spurious peaks, especially if a caustic is present. &nbsp;This looks like high intensity, and the program scales the entire pattern down to stay within the 256-level greyscale. &nbsp;The pattern can then look entirely black, except for a white point here and there where the peaks occurred. &nbsp;If this occurs, try the </span><span class="f_mine" style="font-weight: bold;">RLIM</span><span class="f_mine"> parameter, discussed below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:93px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RLIM</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This optional parameter is useful when the pupil remapping has nonlinear portions, or worse yet, a caustic. &nbsp;That portion will give very high intensity, infinite right at the caustic. &nbsp;This parameter is a limiting value against which all samples will be tested. &nbsp;Any that exceed the entered value will be set to that value. &nbsp;Then the well-behaved parts of the pupil should look more normal. &nbsp;A value of from 2 to 10 often does the job. &nbsp;Of course it's better to avoid caustics in the first place.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:93px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">MULTI/ADD/FINAL</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These entries in word 13 are used when you want to superimpose on a single plot the exit pupil (or MXSF pupil) from separate systems. &nbsp;This is called for when you have a partitioned pupil, as from an array of coherent lasers, and want to see the ensemble showing all of them combined. &nbsp;It only works in FRINGES mode, and all cases should otherwise have identical PUPIL parameters.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The first of the set should specify the MULTI parameter, subsequent cases should specify ADD, and the last one should specify FINAL.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The plot is made by drawing a series of horizontal lines spaced as though on an obliquely-seen aperture. &nbsp;These are given a Y-offset corresponding to the value of the OPD error at each aperture point. &nbsp;The pattern is shown in </span><span class="f_mine" style="font-style: italic;">normalized</span><span class="f_mine"> entrance pupil coordinates; if XMP1 does not equal YMP1, the difference does not appear on this form of plot. &nbsp;(However, the CONTOUR and FRINGES options do show the pupil shape; see below.) &nbsp;Vignetting and obscurations are shown, but pupil distortion is not, since these are normalized coordinates. &nbsp;To obtain a listing of all rays deleted from the pupil, turn on switch 16 prior to the </span><span class="f_mine" style="font-weight: bold;">PUPIL</span><span class="f_mine"> command. &nbsp;To see the fringes at an intermediate surface, drawn in actual coordinates, the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um8_6_1_2.htm#fis" class="topiclink">FIS</a></span><span class="f_mine"> feature is used instead.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An example of </span><span class="f_mine" style="font-weight: bold;">PUPIL</span><span class="f_mine"> output is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um8f11.png" width="397" height="295" alt="um8f11" style="width:397px;height:295px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The pupil map may also be plotted by a contour-plot program, instead of the normal oblique-perspective program. &nbsp;To do so, enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">CONTOUR [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">prior to the </span><span class="f_mine" style="font-weight: bold;">PUPIL</span><span class="f_mine"> command.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program will generate a contour plot with an interval between contours of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SCF</span><span class="f_mine">. &nbsp;Up to ten levels can be plotted, and if more than ten would be required to plot at the requested interval, a default interval will be substituted. &nbsp;If the pupil is elliptical or rectangular, the shape will be shown on the plot. &nbsp;An example of a </span><span class="f_mine" style="font-weight: bold;">CONTOUR</span><span class="f_mine"> plot is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um8f12.png" width="398" height="295" alt="um8f12" style="width:398px;height:295px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The contours may be drawn as a line of level numbers instead of a line, by placing switch 26 ON.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="fringe"></a><span class="f_mine">To show the pupil map as a fringe pattern, the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">FRINGES [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GRID</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">must be entered before the </span><span class="f_mine" style="font-weight: bold;">PUPIL</span><span class="f_mine"> command. &nbsp;The pupil shape is shown on this form of plot. &nbsp;This makes a picture as shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um8f28.png" width="264" height="197" alt="um8f28" style="width:264px;height:197px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default grid index is 70x70, and you may enter any number for </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GRID</span><span class="f_mine"> from 50 to 500. &nbsp;This form also shows the relative intensity of the fringe pattern as affected by a Gaussian object, pupil distortion,and &nbsp;beam shaping (if </span><span class="f_mine" style="font-weight: bold;">RESAMPLE</span><span class="f_mine"> is selected), as well as polarization and coatings if the lens is in polarization mode. &nbsp;To disable accounting for the influence of these effects, turn off VIG mode. &nbsp;Then the plot will show only the OPDs and not the relative intensity of the pattern. &nbsp;Post processing is available for the fringe pattern, as noted above. &nbsp;Absorption losses within lenses is ignored by this feature. &nbsp;If </span><span class="f_mine" style="font-weight: bold;">EXPUPIL</span><span class="f_mine"> is selected, the coordinates of the plot are taken at the exit pupil instead of the default entrance pupil. &nbsp;The pupil shape may thereby be ascertained.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="clevel"></a><span class="f_mine">The PUPIL command can also show the shape of the wavefront with a color scale, where blue is the lowest and red is the highest point. &nbsp;Enter the command </span><span class="f_mine" style="font-weight: bold;">CLEVEL</span><span class="f_mine"> before the PUPIL command.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0317.png" width="725" height="536" alt="clip0317" style="width:725px;height:536px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If </span><span class="f_mine" style="font-weight: bold;">ZLEVEL</span><span class="f_mine"> is entered before the PUPIL command, the display will be annotated with the Zernike coefficients, as returned by the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um8661.htm#zcoe" class="topiclink">ZCOE</a></span><span class="f_mine"> option.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0318.png" width="727" height="536" alt="clip0318" style="width:727px;height:536px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">PUPIL</span><span class="f_mine"> program can also give the wavefront </span><span class="f_mine" style="font-style: italic;">shape</span><span class="f_mine"> resulting from a </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um866.htm#coe" class="topiclink">COE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um8661.htm#zcoe" class="topiclink">ZCOE</a></span><span class="f_mine"> analysis. To do so, that request must immediately precede the PUPIL request.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Another form of the pupil plot shows the wavefront at several points in the field. &nbsp;This is the FPU option, explained in <a href="um8614.htm" class="topiclink">Section 8.6.14</a>.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="861view"></a><span class="f_mine">Note that all of the graphics displayed by the forms of PUPIL (except the EXPUPIL and MXSF variety) refer to the </span><span class="f_mine" style="font-style: italic;">entrance pupil</span><span class="f_mine">. &nbsp;The coordinates are </span><span class="f_mine" style="font-style: italic;">normalized</span><span class="f_mine"> in the case of the oblique view, so the picture is always bounded by a circle. &nbsp;The FRINGE option, on the other hand, shows the entrance pupil shape at the vertex plane of surface 1, and any change in that shape due to </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#vfield" class="topiclink">VFIELD</a></span><span class="f_mine"> data or the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#wap" class="topiclink">WAP</a></span><span class="f_mine"> options, shows up as well. &nbsp;(An exception is made for object type </span><span class="f_mine" style="text-decoration: underline;"><a href="um311.htm" class="topiclink">OBD</a></span><span class="f_mine">, since the paraxial dimension can become infinite as the angle approaches 90 degrees; the pupil with that object is shown in normalized coordinates.) &nbsp;For example the triplet below</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um8f33.png" width="645" height="391" alt="um8f33" style="width:645px;height:391px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">has a WAP aperture in effect, and the entrance pupil is strongly reduced in size at the edge of the field. &nbsp;Here are the FRINGE plots for the on-axis and full-field points.</span></p>
+<p class="p_mine"><img src="um8f34.png" width="464" height="431" alt="um8f34" style="width:464px;height:431px;border:none"><span class="f_mine"> </span><img src="um8f35.png" width="464" height="431" alt="um8f35" style="width:464px;height:431px;border:none"></p>
+<p class="p_mine"><span class="f_mine">To see the </span><span class="f_mine" style="font-style: italic;">exit pupil</span><span class="f_mine">, which may have pupil distortions that are not seen in the PUPIL displays, use the EXPUPIL option where appropriate; also, the </span><span class="f_mine" style="text-decoration: underline;"><a href="um8_6_1_2.htm#fis" class="topiclink">FIS</a></span><span class="f_mine">, </span><span class="f_mine" style="text-decoration: underline;"><a href="um88.htm#map" class="topiclink">MAP</a></span><span class="f_mine"> or </span><span class="f_mine" style="text-decoration: underline;"><a href="um84.htm" class="topiclink">footprint</a></span><span class="f_mine"> features are recommended.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is an example of a multi-beam pupil calculated for an array of coherent lasers. &nbsp;The several beams are called for in a CHG file, but could also be called by GET commands.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">GET 3</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CHG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">ID TEST PUPIL MULTI</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PP: 2</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">FRING</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUP P 0 0 1 0 3 0 0 0 MXSF PP MULTI</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CHG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">1 DEC 0 -2 0 100</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">FRING</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUP P 0 0 1 0 3 0 0 0 MXSF PP ADD</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CHG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">1 DEC 0 -1.5 0 100</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">FRING</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUP P 0 0 1 0 3 0 0 0 MXSF PP ADD</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CHG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">1 DEC 0 -1 0 100</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">FRING</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUP P 0 0 1 0 3 0 0 0 MXSF PP ADD</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CHG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">1 DEC 0 -.5 0 100</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">FRING</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUP P 0 0 1 0 3 0 0 0 MXSF PP ADD</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CHG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">1 DEC 0 .5 0 100</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">FRING</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUP P 0 0 1 0 3 0 0 0 MXSF PP ADD</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CHG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">1 DEC 0 1.0 0 100</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">FRING</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUP P 0 0 1 0 3 0 0 0 MXSF PP ADD</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CHG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">1 DEC 0 1.5 0 100</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">FRING</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUP P 0 0 1 0 3 0 0 0 MXSF PP ADD</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">CHG</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">1 DEC 0 2 0 100</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">FRING</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">PUP P 0 0 1 0 3 0 0 0 MXSF PP FINAL</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0440.png" width="809" height="601" alt="clip0440" style="width:809px;height:601px;border:none"></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um862.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

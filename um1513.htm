@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1513</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SYACTIVATE,SYDEFEAT,symbol substitution" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="aisymbols"></a><span class="f_mine" style="font-weight: bold;">15.1.3 Symbol Substitution</span><span class="f_mine" style="font-size: 14pt;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um15125.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um15131.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">AI has the ability to redefine character strings. &nbsp;A sequence of one to three characters followed by a colon &quot;:&quot; may be equated to a string, such as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">AA: Change G 3 on surface number 6 to</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Then you may enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">AA .0012</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and the value is changed. &nbsp;Or</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">BB: The thickness of element 6</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">CC: 1.2345</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">Print BB</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">BB = CC</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the above example, the result is as if you had entered</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">Print the thickness of element 6</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">The thickness of element 6 = 1.2343</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SYNOPSYS commands may similarly be redefined:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">DD: RAY P 0 0 1 SURF</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Entering </span><span class="f_mine" style="font-weight: bold;">DD</span><span class="f_mine"> will then give the surface-by-surface path of the ray. &nbsp;The substitution is recursive: if the new sentence contains an equated string, it will again be substituted:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">EE: Plot FF for 1 radius equal GG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">FF: focal length</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">GG: 1 to HH</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">HH: 2.3</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Typing </span><span class="f_mine" style="font-weight: bold;">EE</span><span class="f_mine"> then gives a plot of focal length versus 1 RD. &nbsp;(Of course one could simply type “PLOT FOCL FOR 1 RAD = 1 TO 2.3”, but here we are showing a neat feature.) &nbsp;If </span><span class="f_mine" style="font-weight: bold;">FF</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">GG</span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold;">HH</span><span class="f_mine"> are later redefined, the command </span><span class="f_mine" style="font-weight: bold;">EE</span><span class="f_mine"> uses the new definitions. &nbsp;Note that if switch 45 is on, all characters of nearly all input lines are checked for symbols; if off, only the first three characters of </span><span class="f_mine" style="font-weight: bold;">AI</span><span class="f_mine"> sentences or </span><span class="f_mine" style="font-style: italic;">command-level</span><span class="f_mine"> SYNOPSYS commands are checked. &nbsp;Thus in the input file</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">OFF 45</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">CHG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">3 RAD 2.345 TH 6.789</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">only the </span><span class="f_mine" style="font-weight: bold;">“CHG”</span><span class="f_mine"> portion could use symbol substitution, because the rest of the input is not at </span><span class="f_mine" style="text-decoration: underline;"><a href="um21.htm#commandlevel" class="topiclink">command level</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that in the previous example, the symbols &quot;</span><span class="f_mine" style="font-weight: bold;">HH</span><span class="f_mine">&quot; and “</span><span class="f_mine" style="font-weight: bold;">EE”</span><span class="f_mine"> were redefined by Al. &nbsp;If you later wanted to invoke the MACro editor by typing </span><span class="f_mine" style="font-weight: bold;">EE</span><span class="f_mine">, the command would not work, and the ray angle tangent HH would no longer be calculated by a reference to </span><span class="f_mine" style="font-weight: bold;">HH</span><span class="f_mine">. &nbsp;To remedy this, you may either exit from </span><span class="f_mine" style="font-weight: bold;">AI</span><span class="f_mine"> with the command </span><span class="f_mine" style="font-weight: bold;">INT</span><span class="f_mine">, or delete the symbols with</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">Delete symbol EE.</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">Delete symbol HH.</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A list of current symbols is produced by </span><span class="f_mine" style="font-weight: bold;">Show symbols</span><span class="f_mine">, and any symbol that is redefined takes the latest string equated to the name. &nbsp;Up to 100 symbols may be defined, and may be included in your CUSTOM.MAC.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Any printing character except the &quot;$” and the “!&quot; may be defined as a symbol: </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">@: What is the global Z coordinate of surface 6?</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and multiple lines may be implied by the &quot;/&quot; or &quot;;&quot; characters.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">#: GET 5/EM STARS/print the back focus/SA3?</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Typing the character &quot;</span><span class="f_mine" style="font-weight: bold;">#</span><span class="f_mine">&quot; will then</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.</span></p>
+</td>
+<td style="vertical-align:top; width:503px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Get lens number 5 from the library,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.</span></p>
+</td>
+<td style="vertical-align:top; width:503px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Execute the MACro that has been saved with the name &quot;STARS&quot;,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">3.</span></p>
+</td>
+<td style="vertical-align:top; width:503px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Print the back focus,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">4.</span></p>
+</td>
+<td style="vertical-align:top; width:503px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Evaluate and print the third-order spherical aberration.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When symbols are included in an </span><span class="f_mine" style="font-weight: bold;">AI</span><span class="f_mine"> sentence or SYNOPSYS command line, they must not run into another word. &nbsp;This prevents unintended substitution in cases like</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">SS: SHOW SYMBOLS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">CHG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">1 GID</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">GLASS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here, the &quot;SS&quot; in GLASS is safe from substitution because it is part of another word (it runs into the letters “GLA”). &nbsp;The exception to this rule is when a minus sign appears before a symbol:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">XYZ: 22.3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">CHANGE 4 TH TO -XYZ</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can temporarily defeat symbol substitution with the command </span><span class="f_mine" style="font-weight: bold;">SYDEFEAT</span><span class="f_mine"> and enable it again with </span><span class="f_mine" style="font-weight: bold;">SYACTIVATE</span><span class="f_mine">. &nbsp;Those may be handy if your MACro has mnemonics that collide with some of your symbols.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program automatically recognizes a number of symbols, as explained in <a href="um103.htm" class="topiclink">Section 10.3</a>. &nbsp;Thus, the characters </span><span class="f_mine" style="font-weight: bold;">FP1</span><span class="f_mine"> will be replaced by the surface number that is one higher than the surface currently assigned the <a href="um3312.htm#flag3312" class="topiclink">FLAG</a> attribute.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um15131.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

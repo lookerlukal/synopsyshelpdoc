@@ -1,0 +1,463 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>tmch7</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p style="text-align: center;"><span style="font-size: 18pt; font-style: italic; font-weight: bold;">Chapter 7</span></p>
+<p class="p_heading1-6" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_heading1-6" style="font-size: 18pt; font-weight: bold;">The Power User</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-6" style="text-align: left;"><span class="f_p1-6" style="font-size: 11pt;">Now that you have learned the basics of running SYNOPSYS, let us turn to some more advanced material. &nbsp;In this chapter you will see examples of some systems with reflections, a Mangin mirror, obscurations, tilts and decenters, and see how to analyze your lens in other coordinate systems. &nbsp;You will find additional examples of lens files in the User's Manual in </span><span class="f_p1-6" style="font-size: 11pt; text-decoration: underline;"><a href="appe.htm" class="topiclink">Appendix E</a></span><span class="f_p1-6" style="font-size: 11pt;">, which you should study when you have completed this Tutorial Manual.  </span><span class="f_p1-6" style="font-size: 11pt; text-decoration: underline;"><a href="tmch9.htm" class="topiclink">Chapter 9</a></span><span class="f_p1-6" style="font-size: 11pt;"> of this manual gives a worked-out example of a lens design problem, where you can see many of the features you have seen (and a few more) in action.</span></p>
+<p class="p_p1-6" style="text-align: left;"><span class="f_p1-6">&nbsp;</span></p>
+<p class="p_p1-6" style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-6">&nbsp;</span></p>
+<p><a name="tm7l1"></a><span class="f_p1-6" style="font-size: 14pt;">Reflecting Systems</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p1-6" style="text-align: left;"><span class="f_p1-6" style="font-size: 11pt;">Here is a reflecting telescope with a Mangin mirror for the secondary and three lenses that relay the image to a second focal point while erecting it and correcting the aberrations of the primary and secondary at the same time. &nbsp;You can type this into the MACro editor and follow along with the analysis given here.</span></p>
+<p class="p_p1-6" style="text-align: left;"><span class="f_p1-6">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">RLE</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">ID RELAY TELESCOPE</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">OBB 0 .25 8.0 &nbsp; &nbsp; &nbsp; &nbsp;!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;This is a 16-inch aperture, 0.5-degree field</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">UNITS INCH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;Switch 24 is on, so the default is mm</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">1 RD -98.85 TH -37.8638 AIR</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">1 REFLECTOR &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;Surface 1 is the primary mirror, defined as reflective</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">2 RD 22.90473 TH -.5 GTB S &nbsp; &nbsp; &nbsp; &nbsp;!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;the secondary is the Mangin mirror, encountered twice</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">SK12</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">3 RD 536.59216 PTH -2 PIN 2 &nbsp; &nbsp; &nbsp; &nbsp;!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;Surface 3 is the revlective side of the Mangin, and the</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">3 REFLECTOR &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;thickness coming back is the same as going in.</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">4 PCV 2 YMT 0</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">5 TH 5.04396</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">6 RD 13.96087 TH .25 GTB S</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">BK7</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">7 RD -5.65247 TH 6.41386</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">8 RD -1.70879 TH .25 GTB S</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">SF6</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">9 RD -1.88028 TH 7.98917</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">10 RD -72.74201 TH .315 GTB S</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">BASF12</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">11 UMC .0714 YMT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;!</span><span style="font-family: 'Courier New Bold'; color: #007b00; background-color: #ffffff;">&nbsp;this calls for an F/7 system.</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">12</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">1 CAI 2.1</span></p>
+<p><span style="font-family: 'Courier New Bold'; background-color: #ffffff;">END</span></p>
+<p class="p_p1-6" style="text-align: left;"><span class="f_p1-6">&nbsp;</span></p>
+<p class="p_t4"><span class="f_t4" style="font-size: 11pt;">(This lens is also found in the installation directory USER in library location 4, and on the disc as file 4.RLE.)</span></p>
+<p class="p_t4"><span class="f_t4">&nbsp;</span></p>
+<p class="p_t4"><span class="f_t4" style="font-size: 11pt;">The comments above explain much of what is special about this system. &nbsp;The first point is that the thicknesses </span><span class="f_t4" style="font-size: 11pt; font-style: italic;">change sign</span><span class="f_t4" style="font-size: 11pt;"> following each reflection, since the light then changes its direction. (It is also possible for light to go the </span><span class="f_t4" style="font-size: 11pt; font-style: italic;">wrong</span><span class="f_t4" style="font-size: 11pt;"> way, compared to the rule just stated. &nbsp;Such rays are called </span><span class="f_t4" style="font-size: 11pt; font-style: italic;">strange rays, </span><span class="f_t4" style="font-size: 11pt;">and follow different raytracing rules from </span><span class="f_t4" style="font-size: 11pt; font-style: italic;">normal rays.  </span><span class="f_t4" style="font-size: 11pt;">You can read about them in the </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;"><a href="um251.htm#strangerays" class="topiclink">User's Manual</a></span><span class="f_t4" style="font-size: 11pt;">.)</span></p>
+<p class="p_t4"><span class="f_t4">&nbsp;</span></p>
+<p class="p_t4"><span class="f_t4" style="font-size: 11pt;">The rest is familiar; there is a YMT solve on surface 4 so that the dummy surface number 5 will be at the intermediate paraxial focus. &nbsp;The UMC solve on surface 11 gives an F/7 beam -- and must be positive in this case since the paraxial marginal ray is at that point going </span><span class="f_t4" style="font-size: 11pt; font-style: italic;">upward</span><span class="f_t4" style="font-size: 11pt;">. &nbsp;Look at the drawing below and you can see how the intermediate focus has reversed the usual sign.</span></p>
+<p class="p_t4"><span class="f_t4">&nbsp;</span></p>
+<p class="p_t4"><img src="tm7f1.png" width="569" height="223" alt="tm7f1" style="width:569px;height:223px;border:none"></p>
+<p class="p_t4"><span class="f_t4">&nbsp;</span></p>
+<p class="p_t4"><span class="f_t4" style="font-size: 11pt;">Surface 3 is the reflecting side of the Mangin mirror, and since surface 4 is physically identical to surface 2 we use pickups to be sure the thickness is the same going both ways (with a sign change indicated by the entry PTH -2). &nbsp;But the PCV on surface 4 does not change sign – since the surface must face the same way as before.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_t4"><span class="f_t4" style="font-size: 11pt;">Note that surface 4 must be entered as a separate surface in the lens file since the program would not automatically know that this surface can be encountered twice.  </span><span class="f_t4" style="font-size: 11pt; font-style: italic;">Every surface</span><span class="f_t4" style="font-size: 11pt;"> must be entered in the order in which light encounters it, except in </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;"><a href="umch18.htm#nonsequential" class="topiclink">nonsequential raytracing</a></span><span class="f_t4" style="font-size: 11pt;"> mode, which is not a topic for beginners.</span></p>
+<p class="p_t4"><span class="f_t4">&nbsp;</span></p>
+<p class="p_t4" style="margin: 0px 48px 0px 48px;"><span class="f_t4" style="font-size: 11pt;">Users of previous versions of SYNOPSYS will note this change: indices are </span><span class="f_t4" style="font-size: 11pt; font-style: italic;">always positive</span><span class="f_t4" style="font-size: 11pt;"> as of Version 12 and later, and reflections are stated explicitly as shown above, rather than implied by a sign change, as before.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_t4"><span class="f_t4" style="font-size: 11pt;">The primary mirror has a perforation, entered with the CAl input.</span></p>
+<p class="p_t4"><span class="f_t4">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:203px; padding:4px; border:solid 1px #000000; border-right:none; border-bottom:none;"><p class="p_t4" style="line-height: 1.50;"><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_t4" style="font-size: 11pt;"> CAO </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">RADIUS</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">XOS</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">YOS</span></p>
+<p class="p_t4" style="line-height: 1.50;"><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_t4" style="font-size: 11pt;"> CAI </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">RADIUS</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">XOS</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">YOS</span></p>
+<p class="p_t4" style="line-height: 1.50;"><span class="f_t4">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:407px; padding:4px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p class="p_t4" style="line-height: 1.50;"><span class="f_t4" style="font-size: 11pt;">Circular radius outside, X, Y decentration</span></p>
+<p class="p_t4" style="line-height: 1.50;"><span class="f_t4" style="font-size: 11pt;">Inside </span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:203px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none;"><p class="p_t4" style="line-height: 1.50;"><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_t4" style="font-size: 11pt;"> RAO </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">XS</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">YS</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">XOS</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">YOS</span></p>
+<p class="p_t4" style="line-height: 1.50;"><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_t4" style="font-size: 11pt;"> RAI </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">XS</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">YS</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">XOS</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">YOS</span></p>
+<p class="p_t4" style="line-height: 1.50;"><span class="f_t4">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:407px; padding:4px; border:solid 1px #000000; border-top:none; border-bottom:none; border-left:none;"><p class="p_t4" style="line-height: 1.50;"><span class="f_t4" style="font-size: 11pt;">Rectangular aperture, side lengths in X, Y</span></p>
+<p class="p_t4" style="line-height: 1.50;"><span class="f_t4" style="font-size: 11pt;">inside</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:203px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none;"><p class="p_t4" style="line-height: 1.50;"><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_t4" style="font-size: 11pt;"> EAO </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">B</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">A</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">XOS</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">YOS</span></p>
+<p class="p_t4" style="line-height: 1.50;"><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_t4" style="font-size: 11pt;"> EAI </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">B</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">A</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">XOS</span><span class="f_t4" style="font-size: 11pt;"> </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">YOS</span></p>
+</td>
+<td style="vertical-align:top; width:407px; padding:4px; border:solid 1px #000000; border-top:none; border-left:none;"><p class="p_t4" style="line-height: 1.50;"><span class="f_t4" style="font-size: 11pt;">Elliptical outside aperture; semi-axes in X, Y</span></p>
+<p class="p_t4" style="line-height: 1.50;"><span class="f_t4" style="font-size: 11pt;">inside</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_t4"><span class="f_t4">&nbsp;</span></p>
+<p class="p_t4"><span class="f_t4" style="font-size: 11pt;">There are other aperture formats you can use to give general polygon shapes and apodization of various kinds. &nbsp;These are found in the </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;"><a href="um331.htm#uap" class="topiclink">User's Manual</a></span><span class="f_t4" style="font-size: 11pt;"> and in the </span><span class="f_t4" style="font-size: 11pt; font-weight: bold;">SPS</span><span class="f_t4" style="font-size: 11pt;"> dialog. &nbsp;You can specify a decentered aperture with the X and Y-offset parameters </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">XOS</span><span class="f_t4" style="font-size: 11pt;"> and </span><span class="f_t4" style="font-size: 11pt; text-decoration: underline;">YOS</span><span class="f_t4" style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p class="p_t4"><span class="f_t4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">Store this lens in the library, because we are going to make a variety of changes to it. Then examine the image quality with the command </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">RPT .001 10 M</span><span class="f_p5-4" style="font-size: 11pt;"> or with the </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">MRR</span><span class="f_p5-4" style="font-size: 11pt;"> dialog. &nbsp;The results are shown below</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><img src="tm7f2.png" width="534" height="715" alt="tm7f2" style="width:534px;height:715px;border:none"><span class="f_p5-4" style="font-size: 11pt;">.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">Because of the obscuration, there is a hole in the center of the fan curves. &nbsp;If the lens were in NOVIG mode, this hole would not appear, since vignetting would then be ignored. &nbsp;Notice the small &quot;X&quot; on each TFAN ordinate; this is the position of the GIHT (Gaussian image height) and shows you the distortion at that field point. &nbsp;If you wanted to correct for distortion, one way would be to target in the merit function (in the AANT file) the difference between the GIHT and the real-ray intercept at full field:</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">M 0 1</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">A GIHT</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">S 2 YA 1</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">Suppose you wanted to do that at half field. &nbsp;How do you subtract </span><span class="f_p5-4" style="font-size: 11pt; font-style: italic;">half </span><span class="f_p5-4" style="font-size: 11pt;">of the GIHT from the YA at half field? &nbsp;Here is one way:</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 38px;"><span class="f_p2-6" style="font-size: 11pt; font-weight: bold;">M 0 1</span></p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 38px;"><span class="f_p2-6" style="font-size: 11pt; font-weight: bold;">A GIHT</span></p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 38px;"><span class="f_p2-6" style="font-size: 11pt; font-weight: bold;">DIV CONST 2</span></p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 38px;"><span class="f_p2-6" style="font-size: 11pt; font-weight: bold;">S 2 YA .5</span></p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 47px;"><span class="f_p2-6">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">In this example we divide the GIHT by the constant 2, and then subtract the ray intercept.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-4" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 7px;"><span class="f_p3-4">&nbsp;</span></p>
+<p><a name="tm7l2"></a><span class="f_p3-4" style="font-size: 14pt;">SYNOPSYS Utilities</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">Now let us explore some of the utilities in SYNOPSYS. &nbsp;This system has an internal focal plane, where the image is poorly corrected. &nbsp;Here is how to examine the image on surface 5 instead of at the final surface:</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 38px;"><span class="f_p2-6" style="font-size: 11pt; font-weight: bold;">CHG</span></p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 38px;"><span class="f_p2-6" style="font-size: 11pt; font-weight: bold;">5 MXSF</span></p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 38px;"><span class="f_p2-6" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 38px;"><span class="f_p2-6" style="font-size: 11pt; font-weight: bold;">RPT 0 10 2 1 3</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">The CHG entry &quot;MXSF&quot; means that surface 5 is to be the maximum surface number -- which truncates the rest of the system. &nbsp;The RPT command has a scale factor of zero, causing the program to calculate a default scale. &nbsp;You could also use the footprint feature (</span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">MFP</span><span class="f_p5-4" style="font-size: 11pt;">) to look at the ray pattern on the intermediate surface, but you need to enter a scale factor yourself in that case. &nbsp;Be aware, however, that the lens is now truncated, and you must get the original lens back again if you don’t want it to stay that way.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">By now you may have noticed a problem when you try to look at this or some of the other plots: it can be hard to read some of the numbers on the monitor, although they are the proper size for hardcopy output. &nbsp;On the screen, it may be hard to tell that the scale of the last plot was .02. &nbsp;Simple: &nbsp;You can zoom in and out with the </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">mouse wheel</span><span class="f_p5-4" style="font-size: 11pt;">. &nbsp;Or click on the magnifying glass in the </span><span class="f_p5-4" style="font-size: 11pt; text-decoration: underline;"><a href="graphics.htm" class="topiclink">Graphics Window</a></span><span class="f_p5-4" style="font-size: 11pt;">, and then click on the picture where you need more magnification. &nbsp;(Shortcut: &lt;Shift&gt;&lt;Right-Click&gt; where you want to magnify, and &lt;Ctrl&gt;&lt;Shift&gt;&lt;Right-Click&gt; to demagnify.) &nbsp;And there's more: drag with the left mouse button around the area you want to zoom into, and then just click inside the selection rectangle. &nbsp;To restore the full-scale view, click the button </span><img src="clip0330.png" width="24" height="23" alt="clip0330" style="width:24px;height:23px;border:none"><span class="f_p5-4" style="font-size: 11pt;">. &nbsp;This sequence also works in the PAD dislplay.</span></p>
+<p class="p_p2-6" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p2-6">&nbsp;</span></p>
+<p><a name="tm7l3"></a><span class="f_p2-6" style="font-size: 14pt;">Scaling the Lens</span></p>
+<p class="p_p2-6"><span class="f_p2-6">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">This reflective system is currently in units of inches. Suppose you want it in millimeters:</span></p>
+<p>&nbsp;</p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">SCALE MM</span></p>
+<p>&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">The focal length was previously about 112 inches, and in millimeters it is of course 2846. &nbsp;Suppose you want the system to have a focal length of 5000 mm.</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">SCALE FOCL 5000</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">To change that to 2500, enter</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 38px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">SCALE .5</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">These options are shown on the </span><span style="font-size: 11pt; font-weight: bold;">MUT</span><span style="font-size: 11pt;"> dialog, and in the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um58.htm#scale" class="topiclink">User’s Manual</a></span></p>
+<p>&nbsp;</p>
+<p class="p_p2-6" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p2-6">&nbsp;</span></p>
+<p><a name="tm7l4"></a><span class="f_p2-6" style="font-size: 14pt;">Tilts, Decenters and other Coordinate Systems</span></p>
+<p class="p_p2-6"><span class="f_p2-6">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">Now let's look at a system that does not have rotational symmetry. &nbsp;This is an infrared telescope that will let you use a variety of features not covered yet, and also provide a look at the AFOCAL option. &nbsp;Type the following data into the MACro editor.</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">RLE</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">ID EXAMPLE FOLDED SYSTEM</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">WAVL 11.5 9.75 8</span></p>
+<p class="p_p9-2" style="margin: 0px 0px 0px 38px;"><span class="f_p9-2" style="font-size: 11pt; font-weight: bold;">OBB 0 10.5 .25 0 14 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p9-2" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p9-2" style="font-size: 11pt;"> Note the rectangular field of view</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">UNITS INCH</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">WAP 1</span></p>
+<p class="p_p10-1" style="margin: 0px 0px 0px 38px;"><span class="f_p10-1" style="font-size: 11pt; font-weight: bold;">1 TH 1.4</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">2 RD -2.885 TH .125 GTB U</span></p>
+<p class="p_p11-3" style="margin: 0px 0px 0px 38px;"><span class="f_p11-3" style="font-size: 11pt; font-weight: bold;">GE</span></p>
+<p class="p_p12-2" style="margin: 0px 0px 0px 38px;"><span class="f_p12-2" style="font-size: 11pt; font-weight: bold;">3 RD -2.414 TH 0.01844</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">4 RD -39.488 TH .125 PIN 2</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">5 RD -11.872 TH .06224</span></p>
+<p class="p_p10-1" style="margin: 0px 0px 0px 38px;"><span class="f_p10-1" style="font-size: 11pt; font-weight: bold;">6 RD 1.275 TH .18862 PIN 2</span></p>
+<p class="p_p12-2" style="margin: 0px 0px 0px 38px;"><span class="f_p12-2" style="font-size: 11pt; font-weight: bold;">7 RD 1.16442 TH 1.59327</span></p>
+<p class="p_p10-1" style="margin: 0px 0px 0px 38px;"><span class="f_p10-1" style="font-size: 11pt; font-weight: bold;">8 TH .55678</span></p>
+<p class="p_p10-1" style="margin: 0px 0px 0px 38px;"><span class="f_p10-1" style="font-size: 11pt; font-weight: bold;">9 REFLECTOR</span></p>
+<p class="p_p9-2" style="margin: 0px 0px 0px 38px;"><span class="f_p9-2" style="font-size: 11pt; font-weight: bold;">10 TH -1.24205 AIR</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">11 RD 7.544 TH -.195 PIN 2</span></p>
+<p class="p_p9-2" style="margin: 0px 0px 0px 38px;"><span class="f_p9-2" style="font-size: 11pt; font-weight: bold;">12 RD 4.969 TH -3.42287 AIR</span></p>
+<p class="p_p9-2" style="margin: 0px 0px 0px 38px;"><span class="f_p9-2" style="font-size: 11pt; font-weight: bold;">13 REFLECTOR</span></p>
+<p class="p_p9-2" style="margin: 0px 0px 0px 38px;"><span class="f_p9-2" style="font-size: 11pt; font-weight: bold;">14 TH 2.79342</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">15 REFLECTOR</span></p>
+<p class="p_p9-2" style="margin: 0px 0px 0px 38px;"><span class="f_p9-2" style="font-size: 11pt; font-weight: bold;">16 TH -3.28207 AIR</span></p>
+<p class="p_p9-2" style="margin: 0px 0px 0px 38px;"><span class="f_p9-2" style="font-size: 11pt; font-weight: bold;">17 RD 46.54133 TH -.195 PIN 2</span></p>
+<p class="p_p11-3" style="margin: 0px 0px 0px 38px;"><span class="f_p11-3" style="font-size: 11pt; font-weight: bold;">18 RD 21.157 AIR</span></p>
+<p class="p_p11-3" style="margin: 0px 0px 0px 38px;"><span class="f_p11-3" style="font-size: 11pt; font-weight: bold;">19 AIR &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p11-3" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p11-3" style="font-size: 11pt;">These two dummies are explained in the text</span></p>
+<p class="p_t15" style="margin: 0px 0px 0px 38px;"><span class="f_t15" style="font-size: 11pt; font-weight: bold;">20 AIR</span></p>
+<p class="p_p11-3" style="margin: 0px 0px 0px 38px;"><span class="f_p11-3" style="font-size: 11pt; font-weight: bold;">9 AT 45 0 200</span></p>
+<p class="p_p11-3" style="margin: 0px 0px 0px 38px;"><span class="f_p11-3" style="font-size: 11pt; font-weight: bold;">10 AT 45 0 200</span></p>
+<p class="p_p11-3" style="margin: 0px 0px 0px 38px;"><span class="f_p11-3" style="font-size: 11pt; font-weight: bold;">13 AT 18 0 200</span></p>
+<p class="p_p11-3" style="margin: 0px 0px 0px 38px;"><span class="f_p11-3" style="font-size: 11pt; font-weight: bold;">14 AT 18 0 200</span></p>
+<p class="p_p9-2" style="margin: 0px 0px 0px 38px;"><span class="f_p9-2" style="font-size: 11pt; font-weight: bold;">15 AT 27 0 200</span></p>
+<p class="p_p9-2" style="margin: 0px 0px 0px 38px;"><span class="f_p9-2" style="font-size: 11pt; font-weight: bold;">16 AT 27 0 200</span></p>
+<p class="p_p11-3" style="margin: 0px 0px 0px 38px;"><span class="f_p11-3" style="font-size: 11pt; font-weight: bold;">9 RAO 1.2 1.6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p11-3" style="font-size: 11pt; font-family: 'Courier New';">!</span><span class="f_p11-3" style="font-size: 11pt;"> These are rectangular apertures on the fold mirrors</span></p>
+<p class="p_p9-2" style="margin: 0px 0px 0px 38px;"><span class="f_p9-2" style="font-size: 11pt; font-weight: bold;">13 RAO 1.5</span><span class="f_p9-2" style="font-size: 11pt; font-style: italic; font-weight: bold;"> </span><span class="f_p9-2" style="font-size: 11pt; font-weight: bold;">2.2</span></p>
+<p class="p_p9-2" style="margin: 0px 0px 0px 38px;"><span class="f_p9-2" style="font-size: 11pt; font-weight: bold;">15 RAO 2.0 2.4</span></p>
+<p class="p_p11-3" style="margin: 0px 0px 0px 38px;"><span class="f_p11-3" style="font-size: 11pt; font-weight: bold;">AFOCAL</span></p>
+<p class="p_p5-4" style="margin: 0px 0px 0px 38px;"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p class="p_t4"><span class="f_t4">&nbsp;</span></p>
+<p class="p_t4"><span class="f_t4" style="font-size: 11pt;">(This system is also found in the installation directory USER, as FOLDS.RLE.)</span></p>
+<p class="p_t4"><span class="f_t4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">This system has a rectangular field of view of semi-angles 14 by 10.5 degrees, and the elements are made of germanium, which is found in the </span><span class="f_p5-4" style="font-size: 11pt; text-decoration: underline;"><a href="unusual.htm" class="topiclink">Unusual</a></span><span class="f_p5-4" style="font-size: 11pt;"> catalog. &nbsp;You might be interested to see what else is in this catalog; click the above link. &nbsp;You will see a list that includes numerous crystals and IR-transmitting materials.</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">To model the folded mirrors in this example, we have simply assigned the mirrors an alpha tilt (with the </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">AT</span><span class="f_p5-4" style="font-size: 11pt;"> mnemonic) and then put a second tilt on a dummy surface located at the mirror. &nbsp;It is also possible to model such a mirror without the added dummy surface, as explained in <a href="um381.htm#mat" class="topiclink">Section 3.8.1</a> of the User's Manual. That is one way to ensure that the axis following the mirror always tilts at the same angle as the mirror, even if you later change the mirror angle.</span></p>
+<p class="p_p3-4" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 7px;"><span class="f_p3-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">The paraxial focus of this lens is at infinity. &nbsp;It is never a good idea to try to express infinity in digital computations, however, so the program has a convention: the lens is in </span><span class="f_p5-4" style="font-size: 11pt; text-decoration: underline;"><a href="um32.htm#afocal" class="topiclink">AFOCAL</a></span><span class="f_p5-4" style="font-size: 11pt;"> mode, which requires that the last two surfaces be coincident dummies. &nbsp;In this situation, SYNOPSYS will give angular coordinates instead of transverse intercepts of rays exiting from the system. &nbsp;Instead of lens units, the output ray coordinates are therefore in </span><span class="f_p5-4" style="font-size: 11pt; font-style: italic;">radians</span><span class="f_p5-4" style="font-size: 11pt;">. </span><span class="f_p5-4" style="font-size: 11pt; font-style: italic;"> </span><span class="f_p5-4" style="font-size: 11pt;">Another AFOCAL option allows you to defocus an AFOCAL system a small amount, as when focusing an eyepiece at various accomodations; this is the </span><span class="f_p5-4" style="font-size: 11pt; text-decoration: underline;"><a href="um32.htm#accom" class="topiclink">ACCOMODATE</a></span><span class="f_p5-4" style="font-size: 11pt;"> option, explained in the User's Manual. &nbsp;Yet another will model a perfect lens placed in the collimated output; this is the </span><span class="f_p5-4" style="font-size: 11pt; text-decoration: underline;"><a href="um32.htm#aperfect" class="topiclink">APERFECT</a></span><span class="f_p5-4" style="font-size: 11pt;"> option -- but it is seldom used since SYNOPSYS has an intrinsic afocal option that is lacking in some other programs. &nbsp;In a minute I will explain the tilted surfaces input with the &quot;AT&quot; mnemonic -- but first let's get a plot of the system so you can see what is going on.</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p><a name="tm7l5"></a><span class="f_p3-4" style="font-size: 14pt;">Perspective Drawing</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">If you try to get a DWG plot of this system, you will find that the lens runs off the bottom of the page because of the tilted coordinate systems. &nbsp;Instead, try one of the perspective drawing programs. &nbsp;There are five kinds, all found in the </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">MPE</span><span class="f_p5-4" style="font-size: 11pt;"> dialog, -- but instead of using the dialog we will make a MACro. &nbsp;Type the following into the editor:</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 38px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">PER 20 30 1 1 99</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 38px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">PLOT</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 38px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">RAY 2</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 38px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">PUP 4 10</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 38px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">RED</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 38px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">TRA 2 1 0 10</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 38px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">BLUE</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 38px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">TRA 2 -1 0 10</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 38px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">(You can copy the above lines and paste them into a MACro editor.)</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The general format for the </span><span style="font-size: 11pt; font-weight: bold;">PER</span><span style="font-size: 11pt;"> (perspective), </span><span style="font-size: 11pt; font-weight: bold;">RPER</span><span style="font-size: 11pt;"> (rotating perspective), </span><span style="font-size: 11pt; font-weight: bold;">SOLID</span><span style="font-size: 11pt;"> (solid model), rotating </span><span style="font-size: 11pt; font-weight: bold;">RSOLID</span><span style="font-size: 11pt;">, and the DXF file </span><span style="font-size: 11pt; font-weight: bold;">DSOLID</span><span style="font-size: 11pt;"> model is shown in the </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um72.htm#per" class="topiclink">User’s Manual</a></span><span style="font-size: 11pt;">.  </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">In this input, 20 is the elevation angle and 30 the azimuth from which to view the lens. &nbsp;We asked for a full-scale drawing of the whole system but did not specify the position on the page of the center of the first surface, so the program will center the picture.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p><span style="font-size: 11pt;">There are many arguments that we did not enter, and some of them apply only to the SOLID model, which otherwise follows the same format. &nbsp;This example also draws some rays on the picture; the RAY command is much like the one you have used, and the PUP... and TRA… mnemonics are identical to those you have used to get a footprint. &nbsp;Here we ask for a circle of 10 rays at the upper and lower full-field point, plotted in red and blue.</span></p>
+<p>&nbsp;</p>
+<p><img src="tm7f3.png" width="741" height="547" alt="tm7f3" style="width:741px;height:547px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The </span><span style="font-size: 11pt; font-weight: bold;">RPER</span><span style="font-size: 11pt;"> command is similar to PER, but the drawing is displayed in a special window where you can tilt, pan, and zoom the lens drawing on the screen and make a red-blue stereo pair. &nbsp;These commands also have a prompted form of input; if you just type </span><span style="font-size: 11pt; font-weight: bold;">PER</span><span style="font-size: 11pt;">, or </span><span style="font-size: 11pt; font-weight: bold;">RPER</span><span style="font-size: 11pt;"> for example, and read the prompts on the screen, you can make the same drawing. &nbsp;PAD can also make a PER drawing, for cases where the Y-Z profile is not appropriate. &nbsp;Change PER to RPER in your MACro, and try it again. &nbsp;When the picture shows up, click and drag </span><span style="font-size: 11pt; font-style: italic;">on the picture</span><span style="font-size: 11pt;"> to rotate it.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p><span style="font-size: 11pt;">This plot calls for colors on the display, which show up if </span><span style="font-size: 11pt; text-decoration: underline;"><a href="hidd_mss.htm" class="topiclink">switch 35</a></span><span style="font-size: 11pt;"> is ON. Some of the other plots you have made, such as RPT, can also appear in color, provided that this switch is ON.</span></p>
+<p>&nbsp;</p>
+<p class="p_p7-3" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p7-3">&nbsp;</span></p>
+<p><a name="tm7l6"></a><span class="f_p7-3" style="font-size: 14pt;">Relative Coordinate System</span></p>
+<p>&nbsp;</p>
+<p class="p_p8-2"><span class="f_p8-2" style="font-size: 11pt;">The tilt commands used for this system specify what are called </span><span class="f_p8-2" style="font-size: 11pt; font-style: italic;">relative tilts</span><span class="f_p8-2" style="font-size: 11pt;">. &nbsp;SYNOPSYS has five conventions for tilting and decentering elements, the others being </span><span class="f_p8-2" style="font-size: 11pt; font-style: italic;">remote, group,</span><span class="f_p8-2" style="font-size: 11pt;"> </span><span class="f_p8-2" style="font-size: 11pt; font-style: italic;">global</span><span class="f_p8-2" style="font-size: 11pt; font-family: 'Times New Roman'; font-style: italic;">,</span><span class="f_p8-2" style="font-size: 11pt; font-style: italic;"> </span><span class="f_p8-2" style="font-size: 11pt;">and </span><span class="f_p8-2" style="font-size: 11pt; font-style: italic;">loca</span><span class="f_p8-2" style="font-size: 11pt;">l.</span><span class="f_p8-2" style="font-size: 11pt; font-style: italic;"> </span><span class="f_p8-2" style="font-size: 11pt;">(And there is yet another feature that gives output in some </span><span class="f_p8-2" style="font-size: 11pt; text-decoration: underline;"><a href="um384.htm#external" class="topiclink">external</a></span><span class="f_p8-2" style="font-size: 11pt;"> coordinate system.) </span><span class="f_p8-2" style="font-size: 11pt; font-style: italic;"> </span><span class="f_p8-2" style="font-size: 11pt;">Here is the format of relative tilts and decenters.</span></p>
+<p>&nbsp;</p>
+<p><img src="tm7f4.png" width="368" height="296" alt="tm7f4" style="width:368px;height:296px;border:none"></p>
+<p>&nbsp;</p>
+<p class="p_p8-2"><span class="f_p8-2" style="font-size: 11pt;">All tilt and decenter options may be found in the </span><span class="f_p8-2" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="hidd_sps2.htm" class="topiclink">SPS</a></span><span class="f_p8-2" style="font-size: 11pt;"> surface data editing spreadsheet, and can also be accessed when the </span><span class="f_p8-2" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="worksheet.htm" class="topiclink">WorkSheet</a></span><span class="f_p8-2" style="font-size: 11pt;"> is open by clicking the button </span><img src="clip0116.png" width="25" height="25" alt="clip0116" style="width:25px;height:25px;border:none"><span class="f_p8-2" style="font-size: 11pt;">. &nbsp;The relative tilt and decenter convention is the most suitable for general use. &nbsp;This feature permits you to specify a tilt in a single direction on a given surface (that is, either </span><span class="f_p8-2" style="font-size: 11pt; text-decoration: underline;"><a href="um381.htm" class="topiclink">alpha, beta, or gamma</a></span><span class="f_p8-2" style="font-size: 11pt;">) and also a decenter in (X,Y,Z)</span><span class="f_p8-2" style="font-size: 11pt; font-style: italic;"> </span><span class="f_p8-2" style="font-size: 11pt;">at the same time. &nbsp;The latter alters the position of the surface relative to its normal position, which is normally controlled by the thickness or airspace assigned to the previous surface. &nbsp;The tilt so entered may occur about a remote point or about the vertex of the surface, and a specified number of surfaces may be tilted or decentered as a group. &nbsp;The surfaces beyond the group remain where they were relative to the surface before the group. &nbsp;It is this automatic UNDO that makes the relative convention so useful. &nbsp;The </span><span class="f_p8-2" style="font-size: 11pt; font-style: italic; text-decoration: underline;"><a href="um385.htm" class="topiclink">group</a></span><span class="f_p8-2" style="font-size: 11pt;"> option is similar, except you can tilt in three directions on the same surface.</span></p>
+<p class="p_p8-2"><span class="f_p8-2">&nbsp;</span></p>
+<p class="p_p8-2"><span class="f_p8-2" style="font-size: 11pt;">The (XYZ) coordinates refer to a left-handed system, where the Y-axis is up, the X-axis points towards you, and the Z-axis is to the right.</span></p>
+<p class="p_p8-2"><span class="f_p8-2">&nbsp;</span></p>
+<p class="p_p8-2"><img src="tm7f5.png" width="555" height="433" alt="tm7f5" style="width:555px;height:433px;border:none"></p>
+<p class="p_p8-2"><span class="f_p8-2">&nbsp;</span></p>
+<p class="p_p8-2"><span class="f_p8-2" style="font-size: 11pt;">Example 2 in the box shows a simple case, where element 2 is tilted by 15 degrees. &nbsp;Since two surfaces are tilted as a group, surface 5 remains where it was. &nbsp;In example 3, the lens is decentered by one-half inch in the Y direction. &nbsp;Example 4 shows a tilt where the </span><span class="f_p8-2" style="font-size: 11pt; text-decoration: underline;">AXIS</span><span class="f_p8-2" style="font-size: 11pt;"> is non-zero -- in this case one inch to the left of the vertex of surface 3. &nbsp;In example 5 the third element tilts along with the second because four surfaces are in the group, and in the last example the image plane also tilts because the group size (100) is greater than the maximum number of surfaces in the lens, so an undo surface cannot be present. &nbsp;A group like this creates a permanent axis tilt or decenter.</span></p>
+<p class="p_p1-6"><span class="f_p1-6">&nbsp;</span></p>
+<p class="p_p8-2"><span class="f_p8-2" style="font-size: 11pt;">You are allowed to specify any number of surfaces that will utilize the same undo surface, creating what we call an </span><span class="f_p8-2" style="font-size: 11pt; font-style: italic;">undo stack</span><span class="f_p8-2" style="font-size: 11pt;">. &nbsp;The undo surface will reverse the tilts and decenters of all of them, sequentially, so as to go back to where it would have been had the asymmetries not been specified. &nbsp;You are </span><span class="f_p8-2" style="font-size: 11pt; font-style: italic;">not</span><span class="f_p8-2"> </span><span class="f_p8-2" style="font-size: 11pt;">allowed, however, to define your tilts and decenters in a way that produces </span><span class="f_p8-2" style="font-size: 11pt; font-style: italic;">overlapping</span><span class="f_p8-2" style="font-size: 11pt;"> undo regions. &nbsp;That means that a given undo surface has to undo </span><span class="f_p8-2" style="font-size: 11pt; font-style: italic;">all</span><span class="f_p8-2" style="font-size: 11pt;"> of the relative tilts and decenters that are still in effect prior to that surface and which refer to an undo surface anywhere in the lens.</span></p>
+<p class="p_p8-2"><span class="f_p8-2">&nbsp;</span></p>
+<p class="p_p8-2"><span class="f_p8-2" style="font-size: 11pt;">For example, suppose you want to tilt the third element shown in case 5, by 10 degrees, and you want the image plane to remain where it is now. &nbsp;You can enter &quot;5 AT 10 0 2&quot;, thereby causing the image surface to be assigned the undo of the tilt of surface 5 as well as the tilt of surface 3.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p8-2"><span class="f_p8-2" style="font-size: 11pt;">If the tilt axis location is not on the Z-axis, you can use the remote tilt options RAT, RBT, and RGT. &nbsp;These let you give the location of the tilt axis with the arguments </span><span class="f_p8-2" style="font-size: 11pt; text-decoration: underline;">XR</span><span class="f_p8-2" style="font-size: 11pt;"> </span><span class="f_p8-2" style="font-size: 11pt; text-decoration: underline;">YR</span><span class="f_p8-2" style="font-size: 11pt;"> and </span><span class="f_p8-2" style="font-size: 11pt; text-decoration: underline;">ZR</span><span class="f_p8-2" style="font-size: 11pt;">. &nbsp;If you enter both a decenter and a tilt for a group, the group sizes must agree, and the decenter should be entered first.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p8-2"><span class="f_p8-2" style="font-size: 11pt;">The relative tilt convention was used for the folded system you typed in. &nbsp;This system shows the recommended way to input fold mirrors; surfaces 9 and 10 are a good example. &nbsp;Surface 9 is the actual mirror, given a permanent axis tilt of 45 degrees about the vertex and designated a REFLECTOR, while surface 10 is a dummy which is only there to provide a convenient way to tilt the optical axis an additional 45 degrees to follow the light. &nbsp;Surface pairs 13 and 14, and 15 and 16 are fold-axis-tilt combinations as well. &nbsp;SYNOPSYS also can tilt a mirror and </span><span class="f_p8-2" style="font-size: 11pt; font-style: italic;">imply</span><span class="f_p8-2" style="font-size: 11pt;"> an axis tilt on the following surface, without requiring an extra dummy surface for that purpose. &nbsp;This is the </span><span class="f_p8-2" style="font-size: 11pt; font-weight: bold;">MAT / MBT</span><span class="f_p8-2" style="font-size: 11pt;"> option, described in <a href="um381.htm#mat" class="topiclink">Section 3.8.1</a>.</span></p>
+<p class="p_p8-2"><span class="f_p8-2">&nbsp;</span></p>
+<p class="p_p8-2"><span class="f_p8-2" style="font-size: 11pt;">You will probably prefer to use the PAD | </span><span class="f_p8-2" style="font-size: 11pt; text-decoration: underline;"><a href="worksheet.htm" class="topiclink">WorkSheet</a></span><span class="f_p8-2" style="font-size: 11pt;"> feature to insert fold mirrors such as these, since the program takes care of the dummy surface and all of the sign changes of thicknesses automatically. &nbsp;But it is helpful to understand how that kind of system is set up, especially if you want to use features like the </span><span class="f_p8-2" style="font-size: 11pt; text-decoration: underline;"><a href="um1333.htm" class="topiclink">LE</a></span><span class="f_p8-2" style="font-size: 11pt;"> editor or the text-edit box of WorkSheet.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p8-2"><span class="f_p8-2" style="font-size: 11pt;">It is sometimes useful to see how the system looks without the dummy surfaces appearing on the picture. &nbsp;This is easily done: turn switch 20 ON. &nbsp;Any dummy that has a user-entered aperture or is either the first or last surface on the drawing will still show up, but the others will not – so you can choose which of the dummies you want to see. &nbsp;You can also declare a surface </span><span class="f_p8-2" style="font-size: 11pt; text-decoration: underline;"><a href="um3312.htm" class="topiclink">REAL</a></span><span class="f_p8-2" style="font-size: 11pt;"> in the lens file, and then it will be drawn as a real surface even if switch 20 is on.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p8-2"><span class="f_p8-2" style="font-size: 11pt;">Let me describe the other two conventions for tilted surfaces, before we do some manipulations on the folded system.</span></p>
+<p class="p_p8-2"><span class="f_p8-2">&nbsp;</span></p>
+<p class="p_p1-6" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-6">&nbsp;</span></p>
+<p><a name="tm7l7"></a><span class="f_p1-6" style="font-size: 14pt;">Global Coordinates</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-6"><span class="f_p2-6" style="font-size: 11pt;">The GLOBAL convention specifies the absolute position and angle(s) of a surface in the coordinate system of surface number 1. &nbsp;For example, to input surface 9 of the folded system in global coordinates, you would enter</span></p>
+<p class="p_p2-6"><span class="f_p2-6">&nbsp;</span></p>
+<p class="p_p2-6"><span class="f_p2-6" style="font-size: 11pt;">9 GLOBAL POSITION 0 0 4.06935</span></p>
+<p class="p_p2-6"><span class="f_p2-6" style="font-size: 11pt;">9 GLOBAL ANGLE 45</span></p>
+<p class="p_p7-3"><span class="f_p7-3" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p7-3"><span class="f_p7-3">&nbsp;</span></p>
+<p class="p_p3-4" style="margin: 0px 288px 0px 38px;"><span class="f_p3-4" style="font-size: 11pt; font-style: italic; text-decoration: underline;">General format, global coordinates: &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_p4-5" style="margin: 0px 288px 0px 38px;"><span class="f_p4-5">&nbsp;</span></p>
+<p class="p_p4-5" style="margin: 0px 288px 0px 38px;"><span class="f_p4-5" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p4-5" style="font-size: 11pt;"> GLOBAL POSITION </span><span class="f_p4-5" style="font-size: 11pt; text-decoration: underline;">XG</span><span class="f_p4-5" style="font-size: 11pt;"> </span><span class="f_p4-5" style="font-size: 11pt; text-decoration: underline;">YG</span><span class="f_p4-5" style="font-size: 11pt;"> </span><span class="f_p4-5" style="font-size: 11pt; text-decoration: underline;">ZG</span></p>
+<p class="p_p2-6" style="margin: 0px 288px 0px 38px;"><span class="f_p2-6" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p2-6" style="font-size: 11pt;"> GLOBAL ANGLE </span><span class="f_p2-6" style="font-size: 11pt; text-decoration: underline;">AG</span><span class="f_p2-6" style="font-size: 11pt;"> </span><span class="f_p2-6" style="font-size: 11pt; text-decoration: underline;">BG</span><span class="f_p2-6" style="font-size: 11pt;"> </span><span class="f_p2-6" style="font-size: 11pt; text-decoration: underline;">GG</span></p>
+<p class="p_p2-6" style="margin: 0px 288px 0px 38px;"><span class="f_p2-6" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p2-6" style="font-size: 11pt;"> GLOBAL</span></p>
+<p class="p_p7-3"><span class="f_p7-3" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p2-6"><span class="f_p2-6">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">This convention allows you to input tilts in all three directions at once [interpreted as Euler angles in the order (alpha, beta, gamma)] as well as decenters. &nbsp;With this option, the absolute position is fixed, and is not controlled by the thickness entered on the previous surface, as is the case with relative tilts. &nbsp;The paraxial raytrace program, </span><span class="f_p5-4" style="font-size: 11pt; font-style: italic;">which ignores all tilts and decenters, </span><span class="f_p5-4" style="font-size: 11pt;">takes a value for the &quot;thickness&quot; of the previous surface from the geometric distance between the vertices of the global surface and the preceding one, or optionally from just the Z-component of this separation, depending on the system parameters GTS and GTZ, which you may read about in the </span><span class="f_p5-4" style="font-size: 11pt; text-decoration: underline;"><a href="um32.htm#gts" class="topiclink">User's Manual</a></span><span class="f_p5-4" style="font-size: 11pt;">. &nbsp;You can also </span><span class="f_p5-4" style="font-size: 11pt; font-style: italic;">change</span><span class="f_p5-4" style="font-size: 11pt;"> a coordinate convention, as you will see later.</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">What if you want the Euler angles defined in a different order? &nbsp;Simple; just replace the word </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">ANGLE</span><span class="f_p5-4" style="font-size: 11pt;"> in the above syntax with one of the following:</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">ABG, AGB, BAG, BGA, GAB, GBA.</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">Thus, “5 GLOBAL BGA 5 7 9” would specify a global angle on surface 5 with alpha = 5, beta = 7, and gamma = 9 – and the order is beta, gamma, alpha.</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p5-4">&nbsp;</span></p>
+<p><a name="tm7l8"></a><span class="f_p5-4" style="font-size: 14pt;">Local Coordinates</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">The third convention is called LOCAL coordinates, and it follows the same rules as global, except that the surface position is entered in the coordinate system defined by the </span><span class="f_p5-4" style="font-size: 11pt; font-style: italic;">previous</span><span class="f_p5-4" style="font-size: 11pt;"> surface rather than surface number 1. &nbsp;The formats are</span></p>
+<p class="p_p7-3"><span class="f_p7-3" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p7-3"><span class="f_p7-3">&nbsp;</span></p>
+<p class="p_p8-2" style="margin: 0px 288px 0px 38px;"><span class="f_p8-2" style="font-size: 11pt; font-style: italic; text-decoration: underline;">General format, local coordinates:</span></p>
+<p class="p_p8-2" style="margin: 0px 288px 0px 38px;"><span class="f_p8-2">&nbsp;</span></p>
+<p class="p_p8-2" style="margin: 0px 288px 0px 38px;"><span class="f_p8-2" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p8-2" style="font-size: 11pt;"> LOCAL POSITION </span><span class="f_p8-2" style="font-size: 11pt; text-decoration: underline;">XL</span><span class="f_p8-2" style="font-size: 11pt;"> </span><span class="f_p8-2" style="font-size: 11pt; text-decoration: underline;">YL</span><span class="f_p8-2" style="font-size: 11pt;"> </span><span class="f_p8-2" style="font-size: 11pt; text-decoration: underline;">ZL</span></p>
+<p class="p_p7-3" style="margin: 0px 288px 0px 38px;"><span class="f_p7-3" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p7-3" style="font-size: 11pt;"> LOCAL ANGLE  </span><span class="f_p7-3" style="font-size: 11pt; text-decoration: underline;">AL</span><span class="f_p7-3" style="font-size: 11pt;"> </span><span class="f_p7-3" style="font-size: 11pt; text-decoration: underline;">BL</span><span class="f_p7-3" style="font-size: 11pt;"> </span><span class="f_p7-3" style="font-size: 11pt; text-decoration: underline;">GL</span></p>
+<p class="p_p7-3" style="margin: 0px 288px 0px 38px;"><span class="f_p7-3" style="font-size: 11pt; text-decoration: underline;">SN</span><span class="f_p7-3" style="font-size: 11pt;"> LOCAL</span></p>
+<p class="p_p7-3"><span class="f_p7-3" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p>&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">Again, the Euler-angle order may be specified with the appropriate mnemonic substituted for the word ANGLE.</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">The local and global conventions do not provide for an automatic undo of the geometry, as is the case with relative tilts, but another feature is useful for a similar purpose. &nbsp;Suppose you want surface 12 in a lens to pick up the coordinate system of surface 3, and there are some global surfaces in between. &nbsp;Here is the CHG file entry:</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 40px;"><span class="f_p2-6" style="font-size: 11pt; font-weight: bold;">12 COINCIDENT 3.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p><span style="font-size: 11pt;">And if you want to change the global coordinates of surface 4 while surface 9 remains where it is, just enter</span></p>
+<p>&nbsp;</p>
+<p><span style="width:40px">&nbsp;</span><span style="font-size: 11pt; font-weight: bold;">9 GLOBAL</span></p>
+<p><span style="width:40px">&nbsp;</span><span style="font-size: 11pt; font-weight: bold;">4 GLOBAL ANGLE</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; font-weight: bold;">…</span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">This specification declares surface 9 to be GLOBAL at its present location, and then changes the angle of surface 4.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The local and global conventions must be used carefully; if you were, say, to position the focal plane with either of these options, you could not at the same time use a YMT solve to find the paraxial focus, nor could you vary the last TH to refocus the lens. &nbsp;You can, however, vary the global or local coordinates in the PANT file using the mnemonics XG, YG, ZG, XL, YL, and ZL for the position, and AG, BG, GG, AL, BL, and GL for the angles.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">In an earlier example, I showed how to enter surface 9 in global coordinates. &nbsp;How did I find out what those coordinates were? &nbsp;I did not have to add up all of the thicknesses to get the ZG coordinate. There is an easier way.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-4" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 7px;"><span class="f_p3-4">&nbsp;</span></p>
+<p><a name="tm7l9"></a><span class="f_p3-4" style="font-size: 14pt;">Analysis in Other Coordinate Systems</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">Type the following commands:</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 40px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">ASY</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 40px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">ASY GLOBAL</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 40px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">ASY GLOBAL 9</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 40px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">ASY LOCAL</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 40px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">ASY 6 10</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">The first gives a listing of all of the tilts and decenters in the system, and the convention by which they were entered. &nbsp;The second gives the global coordinates of every surface. &nbsp;The third gives the coordinates of every surface </span><span class="f_p5-4" style="font-size: 11pt; font-style: italic;">in the Coordinate system of surface 9, </span><span class="f_p5-4" style="font-size: 11pt;">while the fourth gives local coordinates. &nbsp;The last example gives the normal ASY output of surfaces 6 through 10, showing how you can list just a portion of the system. &nbsp;The ASY listing comes along with SPEC and PRT, and can be found in the </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">MLL</span><span class="f_p5-4" style="font-size: 11pt;"> dialog.</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-6" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_p1-6">&nbsp;</span></p>
+<p><a name="tm7l10"></a><span class="f_p1-6" style="font-size: 14pt;">Changing Coordinate Systems</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">Once a lens contains tilts or decenters, it is simple to convert from one convention to another. &nbsp;Suppose you want to change surface 9 in the folded system from relative to global</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-4" style="margin: 0px 0px 0px 44px;"><span class="f_p3-4" style="font-size: 11pt; font-weight: bold;">CHG</span></p>
+<p class="p_p3-4" style="margin: 0px 0px 0px 44px;"><span class="f_p3-4" style="font-size: 11pt; font-weight: bold;">9 GLOBAL</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 47px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">You can change to GROUP, GLOBAL, LOCAL, or RELATIVE in this way, but only in a CHG file; if you tried to enter these lines in the </span><span class="f_p5-4" style="font-size: 11pt; font-style: italic;">original</span><span class="f_p5-4" style="font-size: 11pt;"> RLE file the program would not yet have the global information available; it has to finish processing the whole file first. &nbsp;Because you are permitted to enter all three Euler angles, you cannot </span><span class="f_p5-4" style="font-size: 11pt; font-style: italic;">always </span><span class="f_p5-4" style="font-size: 11pt;">convert from global or local to relative coordinates, since that convention can have but a single direction at a time. &nbsp;You will be informed if this is the case.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">This lens system is somewhat complex, and suppose you decide that you really want to analyze it the other way around – from the objective end instead of from the scanner end. &nbsp;(This IR telescope is designed </span><span class="f_p5-4" style="font-size: 11pt;">to</span><span class="f_p5-4" style="font-size: 11pt;"> couple to a scanning system located at surface 1, as entered.) &nbsp;You do not have to reenter everything yourself; just type</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-4" style="margin: 0px 0px 0px 44px;"><span class="f_p3-4" style="font-size: 11pt; font-weight: bold;">REVERSE</span></p>
+<p class="p_p3-4"><span class="f_p3-4">&nbsp;</span></p>
+<p class="p_p3-4"><span class="f_p3-4" style="font-size: 11pt;">To get a quick look at it, enter PAD, and at the PAD&gt; prompt, type</span></p>
+<p class="p_p3-4"><span class="f_p3-4">&nbsp;</span></p>
+<p class="p_p3-4"><span style="width:38px">&nbsp;</span><span class="f_p3-4" style="font-size: 11pt; font-weight: bold;">PP 10 20 &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_p3-4" style="font-size: 11pt;">(PAD PER)</span></p>
+<p class="p_p3-4"><span style="width:38px">&nbsp;</span><span class="f_p3-4" style="font-size: 11pt; font-weight: bold;">T</span></p>
+<p class="p_p3-4"><span class="f_p3-4">&nbsp;</span></p>
+<p class="p_p3-4" style="text-align: left; margin: 0px 0px 0px 0px;"><span class="f_p3-4" style="font-size: 11pt;">(This form of input will not prompt for the angles, saving a little time.) &nbsp;The lens is turned around, and you see that, in this case, light starts out going to the </span><span class="f_p3-4" style="font-size: 11pt; font-style: italic;">left </span><span class="f_p3-4" style="font-size: 11pt;">rather than the right, as usual. &nbsp;To enter this in an RLE file, you would include the line &quot;LRAYS”, indicating that the entering rays go to the left. Here is the PAD display.</span></p>
+<p class="p_p3-4" style="text-align: left; margin: 0px 0px 0px 0px;"><span class="f_p3-4">&nbsp;</span></p>
+<p class="p_p3-4" style="text-align: left; margin: 0px 0px 0px 0px;"><img src="clip0212.png" width="531" height="555" alt="clip0212" style="width:531px;height:555px;border:none"></p>
+<p class="p_p2-6"><span class="f_p2-6">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">If you turn the lens around a second time, it comes back as it was originally – except that there is now an extra surface in front. &nbsp;When it was originally reversed, the prograrn made the (new) output end AFOCAL since the original object was at infinity. &nbsp;This mode requires two coincident dummy surfaces there, however, and since lenses usually have only one at that point, the program added another.</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">You’ll notice that the PAD display has put numbered circles at the first side of each element, to help you find things – but in this case the circles are covering part of the lenses themselves (due to the direction of the axes at that point). &nbsp;To show the display without the circles, click on the button </span></p>
+<p class="p_p5-4"><img src="tm7f9.png" width="49" height="43" alt="tm7f9" style="width:49px;height:43px;border:none"><span class="f_p5-4" style="font-size: 11pt;">.  </span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">You can also turn on switch 52 to do the same thing.</span></p>
+<p class="p_p2-6"><span class="f_p2-6">&nbsp;</span></p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;"><p><a name="tm7l11"></a><span class="f_p5-4" style="font-size: 14pt;">Folding and Unfolding Your Lens System</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">You can insert and delete fold mirrors in two ways. &nbsp;The easiest way is to go to the </span><span class="f_p5-4" style="font-size: 11pt; text-decoration: underline;"><a href="sketchpad.htm" class="topiclink">SketchPAD</a></span><span class="f_p5-4" style="font-size: 11pt;">, where you can open the </span><span class="f_p5-4" style="font-size: 11pt; text-decoration: underline;"><a href="worksheet.htm" class="topiclink">WorkSheet</a></span><span class="f_p5-4" style="font-size: 11pt;"> dialog (click on </span><img src="worksheet.png" width="30" height="29" alt="worksheet" style="width:30px;height:29px;border:none"><span class="f_p5-4" style="font-size: 11pt;">, and then click on the buttons </span><img src="wsfold.png" width="26" height="24" alt="wsfold" style="width:26px;height:24px;border:none"><span class="f_p5-4" style="font-size: 11pt;"> or </span><img src="wsunfold.png" width="26" height="24" alt="wsunfold" style="width:26px;height:24px;border:none">. <span class="f_p5-4" style="font-size: 11pt;"> Then you simply click on the lens drawing in an airspace to insert a fold mirror at that point – or click on a fold mirror to remove it (using the second button). &nbsp;You can also flip an existing fold mirror around (changing the sign of the tilt angle) with the button </span><img src="mflip.png" width="26" height="24" alt="mflip" style="width:26px;height:24px;border:none"><span class="f_p5-4" style="font-size: 11pt;">.</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">These operations can also be done in Command mode. &nbsp;Get the original folded system back, and enter the following,</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-4" style="margin: 0px 0px 0px 44px;"><span class="f_p3-4" style="font-size: 11pt; font-weight: bold;">UNFOLD 9</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">and then get a new PER drawing</span></p>
+<p class="p_p5-4"><img src="clip0210.png" width="564" height="415" alt="clip0210" style="width:564px;height:415px;border:none"></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">Surface 9 is no longer a mirror, and the signs of all following thicknesses are reversed. &nbsp;Now fold this system at a different angle at surface 9:</span></p>
+<p>&nbsp;</p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 35px;"><span class="f_p2-6" style="font-size: 11pt; font-weight: bold;">FOLD 9 -120</span></p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 35px;"><span class="f_p2-6">&nbsp;</span></p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 35px;"><img src="clip0211.png" width="561" height="414" alt="clip0211" style="width:561px;height:414px;border:none"></p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 35px;"><span class="f_p2-6">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">Surface 9 is once again a mirror, and the axis now folds by -120 degrees rather than 90, as before. &nbsp;The FOLD command works only where you have two coincident dummy surfaces, such as 9 and 10 in the unfolded lens. (There is another form, the MFOLD command, which only requires a single dummy surface.) &nbsp;The UNFOLD command works where the two surfaces have equal relative tilts, as was the case with the original folded system, and the first of the two is a reflector, or where the fold mirror uses the<a href="um381.htm#mat" class="topiclink"> MAT or MBT</a> forms, which do not require the second dummy surface. &nbsp;The WorkSheet button, mentioned above, </span><span class="f_p5-4" style="font-size: 11pt; font-style: italic;">automatically</span><span class="f_p5-4" style="font-size: 11pt;"> inserts the dummy surfaces, and then executes the FOLD command. &nbsp;In case you’re lost at this point, the </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">UNFOLD</span><span class="f_p5-4" style="font-size: 11pt;"> and </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">FOLD</span><span class="f_p5-4" style="font-size: 11pt;"> commands are just that -- </span><span class="f_p5-4" style="font-size: 11pt; font-style: italic;">commands</span><span class="f_p5-4" style="font-size: 11pt;"> that you type into the Command Window. &nbsp;Then you just have to update the PAD display to see the result.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">With the system now folded at 120 degrees, let us examine the path of the axis ray. &nbsp;If you type the </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">RAY</span><span class="f_p5-4" style="font-size: 11pt;"> command, as you did in Chapter 1, you will see the path of the ray in the relative coordinate system of each surface. &nbsp;Since this is the axis ray, all of these numbers will be zero, which is not very interesting. &nbsp;There is another form of raytrace that shows the path in global coordinates.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 35px;"><span class="f_p4-5" style="font-size: 11pt; font-weight: bold;">GRAY P 0 0 0 SURF</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 35px;"><span class="f_p4-5">&nbsp;</span></p>
+<p class="p_p7-3"><span class="f_p7-3" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p class="p_p7-3"><span class="f_p7-3">&nbsp;</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 35px;"><span class="f_p4-5" style="font-size: 11pt; font-style: italic; text-decoration: underline;">General format, global raytrace:</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 35px;"><span class="f_p4-5">&nbsp;</span></p>
+<p class="p_p4-5" style="margin: 0px 0px 0px 35px;"><span class="f_p4-5" style="font-weight: bold;">GRAY { </span><span class="f_p4-5" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_p4-5" style="font-weight: bold;"> / P } </span><span class="f_p4-5" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_p4-5" style="font-weight: bold;"> </span><span class="f_p4-5" style="font-weight: bold; text-decoration: underline;">XEN</span><span class="f_p4-5" style="font-weight: bold;"> </span><span class="f_p4-5" style="font-weight: bold; text-decoration: underline;">YEN</span><span class="f_p4-5" style="font-weight: bold;"> { SURF / 0 } </span><span class="f_p4-5" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_p4-5" style="font-weight: bold;"> </span><span class="f_p4-5" style="font-weight: bold; text-decoration: underline;">JCOORD</span></p>
+<p class="p_p7-3"><span class="f_p7-3" style="font-size: 11pt;">___________________________________________________________________</span></p>
+<p>&nbsp;</p>
+<p class="p_p1-6"><span class="f_p1-6" style="font-size: 11pt;">In this case the results are in the coordinate system of surface 1. &nbsp;To get a similar listing in the coordinates of surface 10, you would enter</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p2-6" style="margin: 0px 0px 0px 39px;"><span class="f_p2-6" style="font-size: 11pt; font-weight: bold;">GRAY 2 1 0 0 SURF 0 10.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">In addition to showing the intercepts of the ray in global coordinates, these listings also give the angle tangents ZZ and HH, which tell you the direction in which the ray is going.</span></p>
+<p class="p_p5-4"><span class="f_p5-4">&nbsp;</span></p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">Besides the </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">RAY</span><span class="f_p5-4" style="font-size: 11pt;"> and </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">GRAY</span><span class="f_p5-4" style="font-size: 11pt;"> commands, SYNOPSYS has two other individual raytrace commands:  </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um631.htm#tray" class="topiclink">TARGET</a></span><span class="f_p5-4" style="font-size: 11pt;">, which is a targetted raytrace for finding the ray that hits a given surface at a given spot, and </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um173.htm#pray" class="topiclink">PRAY</a></span><span class="f_p5-4" style="font-size: 11pt;">, which keeps track of the polarization of the ray. &nbsp;All of these can be found in the </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold;">MRR</span><span class="f_p5-4" style="font-size: 11pt;"> dialog. &nbsp;Another program useful for setting up folded systems is the </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um518.htm#aim" class="topiclink">AIM</a></span><span class="f_p5-4" style="font-size: 11pt;"> command, which will find the global tilt angles of each of a series of mirrors that will aim a selected ray through the system. &nbsp;And the </span><span class="f_p5-4" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1020.htm" class="topiclink">FFBUILD</a></span><span class="f_p5-4" style="font-size: 11pt;"> feature can help you set up a set of free-form mirrors while controlling interferences automatically.</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p5-4"><span class="f_p5-4" style="font-size: 11pt;">This ends the chapter for power users. By now you should be able to enter rather complicated systems and run the optimization and analysis programs on them. &nbsp;The next chapter deals with tolerancing.</span></p>
+<p class="p_mine-5"><span class="f_mine-5">&nbsp;</span></p>
+<p><span style="text-decoration: underline;"><a href="tmch8.htm" class="topiclink">To Chapter 8</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

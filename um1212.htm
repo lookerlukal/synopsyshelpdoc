@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1212</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><a name="um1212"></a><span class="f_mine" style="font-weight: bold;">12.1.2 BTOL Adjustments &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um12121.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um12111.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Adjustments are changes that are made to the lens while BTOL is running in order to compensate for the ill effects of parameter errors. &nbsp;With judicious selection they can relax the tolerances by a large amount. &nbsp;The most basic is a focus adjustment, and no tolerance analysis is complete without it. &nbsp;Often a paraxial thickness solve takes care of this automatically. &nbsp;It goes without saying that to be realistic, you must plan on actually making exactly those adjustments in the shop as the lenses are later manufactured.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The simplest form of adjustment can be made directly within BTOL, using the input formats described in this section. &nbsp;These execute very quickly and do a good job of accounting for the effects of an airspace adjustment or the tilt of an element. &nbsp;A more complicated form allows you to execute a full-blown</span><span class="f_mine" style="font-weight: bold;"> SYNOPSYS optimization</span><span class="f_mine"> as each variable is perturbed in BTOL. &nbsp;Here is it possible to perform a sophisticated fabrication adjustment, and the improvement in image quality will be reflected in looser tolerances. &nbsp;This is the </span><span class="f_mine" style="font-weight: bold;">REOPT</span><span class="f_mine"> option, which is more complicated to run and many times slower than the first. &nbsp;It is described in </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um12121.htm" class="topiclink">Section 12.1.2.1</a></span><span class="f_mine">. &nbsp;Yet a third feature will emulate a series of fab adjustments and give the statistics of the whole process. &nbsp;This is the most powerful of all, and is described in </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1253.htm" class="topiclink">Section 12.5.3</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To help you find which parameters would be most useful as adjustments, BTOL has a special mode that searches for all reasonable combinations of group shifts along the axis and decenters in Y, and prints a table showing the effectiveness of each. &nbsp;This is the </span><span class="f_mine" style="font-weight: bold;">ATABLE</span><span class="f_mine"> feature, described in </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um12122.htm" class="topiclink">Section 12.1.2.2</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> can adjust up to four quantities while preparing the tolerance budget. &nbsp;As each variable is incremented, the adjustment is performed in accordance with the stated goals, with the result that the adjustments are built into the derivative increments and the budget preparation can ignore them after the derivatives are calculated. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There is no optimization involved in this step; the adjustment goals simply specify that the spots at one or more field points should vary as little as possible from the nominal design. &nbsp;The image is therefore refocused at one or more points, but aberrations are not rebalanced. &nbsp;Also, the adjustments only involve the spot size, not the boundary targets given to </span><span class="f_mine" style="font-weight: bold;">MAG</span><span class="f_mine">, </span><span class="f_mine" style="font-weight: bold;">DIS</span><span class="f_mine">, or </span><span class="f_mine" style="font-weight: bold;">BORE</span><span class="f_mine">, if any. &nbsp;The adjustment applied to a lens that is part of a multiconfiguration tolerance analysis considers only the image in </span><span class="f_mine" style="font-style: italic;">that configuration</span><span class="f_mine">. &nbsp;This means that if you want an adjustment to control the image quality in several configurations at once, you must use the reoptimize option described above.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="damp"></a><span class="f_mine">Although you may request up to four adjustments, </span><span class="f_mine" style="font-style: italic;">it is strongly recommend that you refrain from using adjustments that are redundant</span><span class="f_mine">. &nbsp;Curvature and thickness adjustments are only used to compensate for axially-symmetric parameters, while the others are only used to compensate for non-symmetric parameters, such as tilt and wedge. &nbsp;But when two or more adjustments apply to the same parameters, solving for the best combined adjustment will often produce a singular matrix; i.e., the two do exactly the same thing. &nbsp;SYNOPSYS can damp the results, preventing singularity, with the optional </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">DAMP</span><span class="f_mine"> term in the BTOL command – but this has the effect of using the adjustments more or less equally, which is not often the best solution.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In a typical case, where two thickness adjustments are requested, it often happens that one of them is very useful for refocusing, while the other changes the aberration balance too much to be useful for this purpose. &nbsp;If the first were the only adjustment, the tolerances might be quite loose, because the adjustment works. &nbsp;If the second were added in addition to the first, the tolerances could actually be </span><span class="f_mine" style="font-style: italic;">tighter</span><span class="f_mine">, even though BTOL now has an additional parameter. &nbsp;Although this is counterintuitive, it results from the fact that the lens is only refocused, not reoptimized, and the ill effects of the second adjustment are contaminating the good effects of the first.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you are </span><span class="f_mine" style="font-style: italic;">sure</span><span class="f_mine"> that an additional adjustment is going to be useful, you should consider the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um12121.htm" class="topiclink">REOPTIMIZE</a></span><span class="f_mine"> feature, described in the next section. &nbsp;Otherwise you are advised to experiment with the damping factor and run BTOL several times to find if the tolerances can actually be loosened in this way. &nbsp;In fact this sometimes happens (I have seen a factor of two improvement!) – but bear in mind that the shop then has a far more difficult assembly problem, since they will in general have no way of knowing how to adjust several parameters at the same time. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may specify that a given adjustment only be applied to perturbations of surfaces that are within a specified surface range, using the</span><span class="f_mine" style="font-weight: bold;"> APPLY</span><span class="f_mine"> input. &nbsp;This may be useful, for example, when you want to construct a system in sections, adjust each section separately, and then assemble the entire system later. &nbsp;If you choose this option, be aware that you will not be able to run </span><span class="f_mine" style="text-decoration: underline;"><a href="um125.htm#mc" class="topiclink">MC</a></span><span class="f_mine">, since that feature is not structured for this kind of adjustment procedure: it always applies whatever adjustments are available, to the entire system. &nbsp;If you want to use MC in such cases, you are advised to use the </span><span class="f_mine" style="text-decoration: underline;"><a href="um121.htm#bsegment" class="topiclink">SEGMENT</a></span><span class="f_mine"> option instead. &nbsp;The APPLY input must immediately follow the ADJUST request to which it is to apply. &nbsp;Adjustments with no APPLY data automatically apply to the entire lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If your lens is a </span><span class="f_mine" style="text-decoration: underline;"><a href="um1071.htm#zfile" class="topiclink">ZFILE</a></span><span class="f_mine"> zoom lens, you can specify how the adjustment is to apply. &nbsp;If you request ALL, then the adjustment is actually calculated only at zoom 1, and that adjustment is used when evaluating the image quality at every zoom. &nbsp;If you specify EACH, then a new adjustment is calculated at each zoom position before the quality is calculated. &nbsp;The latter makes sense only if you can perform such an adjustment whenever the zoom setting is changed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Adjustments cannot be assigned to surface 0 (the object surface).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Input is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ ADJUST </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">name</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AJMAX</span><span class="f_mine" style="font-weight: bold;"> [ { ALL / EACH } ] ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ APPLY </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSPS</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ FOCUS { REAL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-weight: bold;"> / ALL / EACH } ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">name</span><span class="f_mine"> is one of</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 54px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RD</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TH </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSURF</span></p>
+</td>
+<td style="vertical-align:top; width:287px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">THI </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSURF</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RAD</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">XDC</span></p>
+</td>
+<td style="vertical-align:top; width:287px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TILT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSURF</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CV</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">YDC</span></p>
+</td>
+<td style="vertical-align:top; width:287px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">DEC </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSURF</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TH0</span></p>
+</td>
+<td style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ACCOM</span></p>
+</td>
+<td style="vertical-align:top; width:287px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ZDATA</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="6" style="vertical-align:top; width:190px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ADJUST </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> CV [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AJMAX</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:347px; padding:4px; border:solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="10" style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the surface number of a curvature that is available for adjusting the ill effects of other tolerances. &nbsp;It is implied in this case that the other variables will be fabricated to the tolerances in the budget, and measured, and a new value for </span><span class="f_mine" style="font-weight: bold;">CV</span><span class="f_mine"> then computed with the optimization program. &nbsp;The resulting value for this curvature will then be substituted for the original value when the final lens is made. &nbsp;The purpose of this and the other adjustments, described below, is to loosen up the tolerances of the other elements by permitting a reoptimization of the lens after manufacture. &nbsp;The maximum permitted adjustment for correcting a single parameter error may be entered as </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AJMAX</span><span class="f_mine">. &nbsp;The default allows unbounded change in curvature, and the units are curvature.  </span><span class="f_mine" style="font-weight: bold;">ADJUST RD</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">RAD</span><span class="f_mine"> are equivalent to </span><span class="f_mine" style="font-weight: bold;">ADJUST</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold;">CV</span><span class="f_mine">. &nbsp;The surface to be adjusted must be spherical.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The way in which the program </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> utilizes this and the other adjustments is covered in the section on </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1212.htm#bfocus" class="topiclink">FOCUS</a></span><span class="f_mine">, below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="8" style="vertical-align:top; width:238px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ADJUST </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> TH </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSURF</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AJMAX</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:299px; padding:4px; border:solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="10" style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the surface number of a thickness to be used for tolerance adjustment.  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSURF</span><span class="f_mine"> is the number of surfaces that are to move as a group. &nbsp;If omitted, only the given thickness or airspace dimension is altered; if entered, the thickness change is compensated by an opposite change of the thickness following the group. &nbsp;Default maximum is 0.05 in.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="9" style="vertical-align:top; width:250px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ADJUST </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> TILT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSURF</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AJMAX</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:287px; padding:4px; border:solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="10" style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies that a surface or element tilt is to be used to compensate for the ill effects of other surface or element tilts and decenters. </span><span class="f_mine" style="text-decoration: underline;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSURF</span><span class="f_mine"> is the number of surfaces to be tilted as a unit; the default is one. &nbsp;The focal plane may be included as a tilt adjustment. &nbsp;If the surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> has a tilt or decenter prior to entering the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">BTOL</span><span class="f_mine"> program, the entry </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSURF</span><span class="f_mine"> is ignored and the same number will be in effect as was before. &nbsp;Tilt adjustments utilize the relative tilt feature, and are subject to the restrictions of that feature regarding the availability of the </span><span class="f_mine" style="text-decoration: underline;"><a href="um381.htm#undosurf" class="topiclink">UNDO surface</a></span><span class="f_mine"> following the group.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that a surface specified as a tilt adjustment will not be examined for surface wedge or element tilt or decenter tolerances. &nbsp;If you want the wedge to be toleranced, and the surface has a tilt adjustment, you must enclose the element in dummy surfaces and adjust the tilt of the whole group. &nbsp;The surfaces within the group will then be toleranced as usual.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Also note that a tilt adjustment is used only to control image quality degradation via the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1212.htm#bfocus" class="topiclink">FOCUS</a></span><span class="f_mine"> command, not for boresight, magnification, or distortion correction. &nbsp;This compensation is applied only to tolerances of non-rotationally symmetric errors; i.e., a tilt adjustment is not used to compensate for a radius error. &nbsp;The default maximum is 1 degree; </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AJMAX</span><span class="f_mine"> should be input in degrees.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="10" style="vertical-align:top; width:298px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ADJUST </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> DECENTER </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSURF</span><span class="f_mine" style="font-weight: bold;"> [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AJMAX</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+</td>
+<td style="vertical-align:top; width:239px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="10" style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies a surface or element decenter adjustment in the Y-direction. The comments above regarding TILT apply also. &nbsp;Default maximum is 0.05 in.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that for a centered non-tilted spherical surface, tilt and decenter are nearly equivalent, since decentering a curved surface changes the slope angle at the axis. &nbsp;For this reason you should not adjust </span><span class="f_mine" style="font-style: italic;">both</span><span class="f_mine"> a tilt and decenter of a surface, and if one is adjusted the other should not be toleranced. &nbsp;If two or more adjustments have the same effect on the refocusing adjustment, they can produce a singular correction matrix, which is solved linearly, with optional </span><span class="f_mine" style="text-decoration: underline;"><a href="um121.htm#bdamp" class="topiclink">damping</a></span><span class="f_mine">. &nbsp;The result can be unsatisfactory, and you are advised to eliminate one of the adjustments in such a case before proceeding.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="7" style="vertical-align:top; width:214px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ADJUST </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> { XDC or YDC }</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:323px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="10" style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies the decentration direction.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TH0</span></p>
+</td>
+<td colspan="10" style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">It is possible to adjust the object distance to maintain focus in BTOL. &nbsp;The surface number is then irrelevant, and you would use</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">ADJUST 0 TH0 …</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Be warned, however, that when you vary the object distance in a lens with a fixed YMP1 (usually the case), the F/number in object space changes with TH0. &nbsp;If this F/number is large, the effects are minor – but with a fast object, like a microscope objective traced from the short conjugate, this can be a major perturbation to the lens. &nbsp;In this case, one should use the </span><span class="f_mine" style="text-decoration: underline;"><a href="um311.htm#osna" class="topiclink">OSNA</a></span><span class="f_mine"> option, which adjusts the value of YMP1, keeping the numerical aperture constant.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ACCOM</span></p>
+</td>
+<td colspan="10" style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This will adjust the afocal accommodation. &nbsp;The lens must be in AFOCAL mode already, but it does not have to be accommodated. &nbsp;Any surface number may be given.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that MC cannot adjust the accomodation, since it is a parameter, not a variable, for the optimization. &nbsp;If you want to use MC to evaluate your tolerances afterwards, then instead of this adjustment, simply put the lens in ACCOMODATE mode and add a YMT solve on the next-to-last surface. &nbsp;The final surface will retain the curvature set by the original ACCOM, but the distance to that surface will adjust itself to the paraxial focus. &nbsp;Then do not declare the ACCOM as an adjustment.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span style="font-size: 11pt; font-weight: bold;">ZDATA</span></p>
+</td>
+<td colspan="10" style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This will adjust the position of a group in a ZFILE zoom lens. &nbsp;In this case, </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> input refers to the </span><span class="f_mine" style="font-style: italic;">group</span><span class="f_mine"> number instead of a surface number. &nbsp;The adjustment will automatically be applied to each zoom, since it is intended to model the common procedure where one adjusts one of the groups on a lens bench as the lens is assembled, and then cuts the cam curve for that group to the measured best position. &nbsp;In this scenario it makes little sense to apply an adjustment of a given group in a given zoom to a different zoom, so word 5 of the input is ignored.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since the ZDATA adjustment necessarily only applies to zooms 2 and higher, the program cannot use it to adjust zoom 1 -- which is usually desired as well. &nbsp;So it assigns a Z-decenter to the zoom group, and varies the ZDC in zoom 1, while using the zoom position adjustment in the other zooms. &nbsp;The result is a budget that reflects the above procedure and can be analyzed by MC. &nbsp;In that program, the adjustment is divided into ZDC for zoom 1 and the ZDATA adjustment for higher zooms.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that, if the ZDATA adjustment is requested for a zoom lens, the program is restricted to systems with no more than 190 surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bzaw"></a><span class="f_mine" style="font-weight: bold;">ZAW</span></p>
+</td>
+<td colspan="10" style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the weighting of the various zoom positions during the adjustment calculation.  </span><span class="f_mine" style="font-weight: bold;">FNUM</span><span class="f_mine"> weights the zooms by 1 / FNUM, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">WT</span><span class="f_mine"> gives the weight at that zoom.  </span><span class="f_mine" style="font-weight: bold;">UNIFORM</span><span class="f_mine"> weights all zoom positions equally.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:148px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bfocus"></a><span class="f_mine" style="font-weight: bold;">FOCUS …</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; width:389px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="10" style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">In order to utilize the adjustments given by the </span><span class="f_mine" style="font-weight: bold;">ADJUST</span><span class="f_mine"> input described above, there must be a specified adjustment goal. &nbsp;Many lenses include paraxial pickups and solves as part of the normal lens description, and these are automatically honored by </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine">. &nbsp;If a lens already has a paraxial solve on the final airspace, it is not necessary to specify an adjustment parameter or a goal, since the solve performs the function automatically.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Only a single FOCUS entry is permitted.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:130px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">FOCUS REAL</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:407px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="10" style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives a field angle at which a focus adjustment is to be performed. &nbsp;The goal is to compensate for the defocus caused by each parameter as it is evaluated by BTOL, not to reoptimize the lens or rebalance aberrations. &nbsp;The program traces four rays at the 0.1 zone in the primary color (and three more in the short color if this wavelength is defined) and changes the specified adjustment parameter so as to maintain the transverse intercepts of these rays as nearly constant as possible, measured from the chief ray intercept. &nbsp;The effect is nearly the same as a paraxial focus goal for the on-axis image, but may be specified off axis if desired. &nbsp;Any field point may be requested, and it need not be the same as any of the points at which the quality descriptors are defined.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Do not specify a real-ray focus goal on axis and a paraxial focus solve simultaneously. &nbsp;These calculations control very nearly the same thing and satisfying them both can produce bizarre changes in the lens.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">FOCUS ALL</span></p>
+</td>
+<td colspan="9" style="vertical-align:top; width:437px; padding:4px; border:solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="10" style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies that the change in focus for all field points for which a quality descriptor has been specified (with the </span><span class="f_mine" style="font-weight: bold;">FOV</span><span class="f_mine"> input) will be controlled simultaneously by the adjusting variables. &nbsp;The relative weighting of each field point is considered in finding the best compromise focus.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:106px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">FOCUS EACH</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:431px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="10" style="vertical-align:top; width:479px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies that each field point is to be adjusted independently with the allowed variables. &nbsp;This situation would be appropriate, for example, for an eyepiece where the user could focus his eye at each point in the field as needed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Be aware that there is a utility that can adjust the orientation of individual lens elements in their cell in order to minimize the effects of element wedge. &nbsp;This is not part of BTOL or MC, but runs as a separate command. &nbsp;Read about </span><span class="f_mine" style="font-weight: bold;">UCLOCK</span><span class="f_mine"> in </span><span class="f_mine" style="text-decoration: underline;"><a href="um538.htm" class="topiclink">Section 5.38</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span><span class="f_mine">  </span><span class="f_mine" style="text-decoration: underline;"><a href="um125.htm#mcclock" class="topiclink">MC</a></span><span class="f_mine"> can also evaluate the statistics of a batch of lenses that will be clocked at assembly.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um12121.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

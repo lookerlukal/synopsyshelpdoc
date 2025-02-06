@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>library of</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="prisms--&gt;" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine" style="font-size: 14pt;">3.9 Prism Library</span><span class="f_mine" style="font-weight: bold;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um385.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um391.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To help you enter prisms into SYNOPSYS, a variety of basic forms may be specified by merely stating the prism type and giving the width, in lens units, and the index of refraction. &nbsp;The program sets up all of the required surfaces, using </span><span class="f_mine" style="text-decoration: underline;"><a href="um383.htm#local" class="topiclink">LOCAL</a></span><span class="f_mine"> positions and tilts to describe the geometry, and </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#uap" class="topiclink">UAPs</a></span><span class="f_mine"> to define the shape of the active surfaces. &nbsp;For prisms involving a roof surface, the program also defines the required </span><span class="f_mine" style="text-decoration: underline;"><a href="um181.htm#loose" class="topiclink">LOOSE</a></span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;"><a href="um181.htm#capture" class="topiclink">CAPTURE</a></span><span class="f_mine"> surfaces and places the system in NOSEQUENTIAL mode (see </span><span class="f_mine" style="text-decoration: underline;"><a href="umch18.htm" class="topiclink">Chapter 18</a></span><span class="f_mine">). &nbsp; The general form of input, which goes in the RLE or CHG file, is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> PRISM</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"> name</span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program places a prism flag on the surface which is recognized by the programs PER, RPER, SOLID, and RSOLID – causing them to construct the parts of the prism that are not optically active, but which must appear on the drawings to complete the prism.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="nprism"></a><span class="f_mine">Each type of prism requires a particular number of surfaces, indicated in the listings below, which you must leave available. &nbsp;Any user data on those surfaces will be replaced by the prism data when the prism is defined, and after editing the system with PAD or LE. &nbsp;If it is necessary to alter the data on the various prism surfaces – to change face angles, for example – the prism flag must first be removed by the </span><span class="f_mine" style="font-weight: bold;">CHG</span><span class="f_mine"> entry</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> NPRISM.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Then the prism surfaces become normal surfaces, which you may alter as you wish.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that prisms are not rendered by the basic lens drawing programs </span><span class="f_mine" style="font-weight: bold;">DWG</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">PAD</span><span class="f_mine"> / </span><span class="f_mine" style="font-weight: bold;">D</span><span class="f_mine">. &nbsp;Instead, the programs </span><span class="f_mine" style="font-weight: bold;">PER,</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold;">[R]SOLID</span><span class="f_mine">, and </span><span class="f_mine" style="font-weight: bold;">PAD</span><span class="f_mine"> / </span><span class="f_mine" style="font-weight: bold;">PP</span><span class="f_mine"> are recommended (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um72.htm" class="topiclink">7.2</a></span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;"><a href="um1331.htm" class="topiclink">13.3.1</a></span><span class="f_mine">).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You are advised not to put a prism on surface 1, because surface 2 (which is defined in local coordinates) is then positioned relative to surface 1. &nbsp;But in </span><span class="f_mine" style="font-style: italic;">global</span><span class="f_mine"> coordinates it is also defined WRT surface 1, so there is a conflict. &nbsp;In this case, the program will change surface 2 to global, which works perfectly well – but if you make more changes and are unaware that there is now a global coordinate involved, you can get unexpected results.  </span><span class="f_mine" style="font-weight: bold;">So start all prisms on surface 2 or higher.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">By far the </span><span class="f_mine" style="font-weight: bold;">easiest way</span><span class="f_mine"> to insert a prism into your system is with the </span><span class="f_mine" style="text-decoration: underline;"><a href="worksheet.htm" class="topiclink">WorkSheet</a></span><span class="f_mine">. &nbsp;All you need to do is allow a space between elements where you want the prism to go, and then click the WS button </span><img src="insertprism.png" width="24" height="23" alt="insertprism" style="width:24px;height:23px;border:none"><span class="f_mine">. &nbsp;Select your prism from the displayed set, enter a face dimension, and click on that space in the lens drawing. &nbsp;Your prism will be inserted, and all following surfaces will be adjusted if necessary to account for either positive or negative space following the prism. &nbsp;If your system is folded on itself it may not be clear just where you clicked in the lens drawing, so use the button </span><img src="doithere.png" width="23" height="23" alt="doithere" style="width:23px;height:23px;border:none"><span class="f_mine"> instead, and follow the instructions in the dialog. &nbsp;The prism will initially be assigned glass type BK7, but for most prisms you can change it later if you want another glass type. &nbsp;(Just assign the desired type to that surface in the WorkSheet.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Another WorkSheet option is used for the common situation where you want to model a prism with a slab of glass in the initial design stages. &nbsp;Optimization can be faster, and the PAD D drawing is then appropriate for monitoring the design. &nbsp;(Once a real prism is inserted, the perspective drawing is required for rendering the shape properly.) &nbsp;But when the design is stable, you may want to change the slab into a real prism in order to show the actual system geometry. &nbsp;If your system currently contains a dummy slab, then in the Insert Prism dialog, select the option “Replace dummy glass slab with prism”. &nbsp;Then select the prism you wish to substitute for the slab and enter the width, as usual. &nbsp;When you then click on the slab in the PAD drawing, it is removed and the prism substituted, with the same index as the slab.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The reverse procedure is available in the Remove Prism button.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Prism selection may also be done interactively in the </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine"> dialog. &nbsp;Examples of some of the selections in the library of prisms are shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um3f26.png" width="618" height="390" alt="um3f26" style="width:618px;height:390px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Most of the prism types can be made of any optical material – but the dove and double dove prisms, whose dimensions vary with index of refraction, comes from the library with a fixed index (glass type BK7) and appropriate dimensions. &nbsp;No index should be entered in this case.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The several prism types are described in the following sections, along with an indication of the coordinate systems in effect in front of and behind the prism. &nbsp;In many cases, the thicknesses following the prism will have the opposite sign from that before, and this is indicated in the appropriate sections and also in the </span><span class="f_mine" style="text-decoration: underline;"><a href="commandwindow.htm" class="topiclink">Command Window</a></span><span class="f_mine"> when the prism data are entered. &nbsp;The material before a prism should be AIR, and the same is automatically true following the prism.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you need to know the dimensions of a prism after it is inserted into a system, the commands ASY GLOBAL and ASY LOCAL (see</span><span class="f_mine" style="text-decoration: underline;"><a href="um46.htm" class="topiclink"> 4.6</a></span><span class="f_mine">) will give the positions and angles of each surface, and the CAP listing gives the UAP data defining the positions of the vertices of each face, in lens units (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#um3311" class="topiclink">3.3.1.1</a></span><span class="f_mine">).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One last word about prisms: &nbsp;Many of them involve a roof surface, which requires the lens to be put into <a href="um32.htm" class="topiclink">nonsequential</a> mode. &nbsp;The raytrace is then much slower than is sequential mode. &nbsp;If you want to run the optimization program on a system with a roof prism in it, you will probably get tired of waiting. &nbsp;I do. &nbsp;There is a simple solution, however, that works in most cases. &nbsp;If you turn on switch 37, the program will trace the system as if it were sequential – which is much faster – and will give exactly the same image analysis, and therefore the same optimization results, as long as the merit function does not control ray coordinates at the roof itself. &nbsp;The only time this will not work is when nonsequential mode is required for reasons other than the presence of a roof prism, such as with the DDOVE.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Tolerancing a prism involves considerations not encountered with other surface types. &nbsp;This is explained in </span><span class="f_mine" style="text-decoration: underline;"><a href="um1211.htm#pep" class="topiclink">Chapter 12</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is occasionally necessary to remove a prism flag, such as when you want to vary the locations of individual surface, for example. &nbsp;Suppose the lens has a Schmidt prism at surface 12 with an aperture dimension of 15 mm. &nbsp;You would enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">CHG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">12 NPRISM</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">to remove the prism flag, perform your analysis, and then restore the flag with</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">CHG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">12 PRISM SCHMIDT 15</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um391.htm" class="topiclink">Prism definitions</a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um391.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um385.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um382</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="GLOBAL coordinates" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="global"></a><span class="f_mine" style="font-weight: bold;">3.8.2 Global Coordinates &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3811.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3821.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">As mentioned in </span><span class="f_mine" style="text-decoration: underline;"><a href="um241.htm" class="topiclink">section 2.4.1</a></span><span class="f_mine">, there are five possible rules for entering tilts and and decenters. &nbsp;This section discusses the GLOBAL rules, which apply when you want to enter three Euler angles to define the orientation of a surface and give the location in the coordinate system of surface 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">GLOBAL data may be edited in the </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine"> dialog, as well as by the WorkSheet. &nbsp;In an </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file, a surface may be defined </span><span class="f_mine" style="font-weight: bold;">GLOBAL</span><span class="f_mine"> with input of the form</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:388px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> GLOBAL</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">or</span></p>
+</td>
+<td style="vertical-align:top; width:388px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> GLOBAL POSITION </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ZG</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:40px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">and</span></p>
+</td>
+<td style="vertical-align:top; width:388px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> GLOBAL ANGLE </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">BG</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GG</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The first form is used only to change a surface that has previously been entered RELATIVE or LOCAL; it merely translates the present surface location into GLOBAL coordinates. &nbsp;(This should only be used in a </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file, since the global positions are not calculated until after the original RLE file has been ended.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The second form gives the position and angles of the surface, in the coordinate system of surface number 1. &nbsp;(It is also possible to enter or change any of the global coordinates in AI, with specific mnemonics -- see </span><span class="f_mine" style="text-decoration: underline;"><a href="umch15.htm" class="topiclink">Chapter 15</a></span><span class="f_mine">.) &nbsp;If the surface is not yet global, the current position will be changed to global coordinates before the new data are processed.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="382euler"></a><span class="f_mine">In the above input, the mnemonic </span><span class="f_mine" style="font-weight: bold;">ANGLE</span><span class="f_mine"> specifies the Euler-angle order (</span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&alpha;,&beta;,&gamma;</span><span class="f_mine">), where </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AG</span><span class="f_mine"> is alpha, and so on. &nbsp;You may specify a different order by substituting one of the following mnemonics:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">ABG</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">AGB</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">BAG</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">BGA</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">GAB</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine" style="font-weight: bold;">GBA</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For example, “5 GLOBAL BAG 5 10 3” says that the Euler angles are to be taken in the order (</span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; font-weight: bold;">&beta;,&alpha;,&gamma;</span><span class="f_mine">), where alpha is 5, beta is 10, and gamma is 3, and assigned to surface 5.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can vary the global positions with variables in the PANT file using the mnemonics</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">AG &nbsp; &nbsp; &nbsp; &nbsp;global alpha tilt angle</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">BG &nbsp; &nbsp; &nbsp; &nbsp;global beta tilt angle</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">GG &nbsp; &nbsp; &nbsp; &nbsp;global gamma tilt angle</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">XG &nbsp; &nbsp; &nbsp; &nbsp;global X-position</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">YG &nbsp; &nbsp; &nbsp; &nbsp;global Y-position</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">ZG &nbsp; &nbsp; &nbsp; &nbsp;global Z-position ;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">for example: VY 33 YG, to vary the global Y-coordinate of surface 33.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also target them in the AANT file with the same mnemonics, for example</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">M 22.7756 1 A ZG 21</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">giving a target value of 22.7756 to the global Z-coordinate of surface 21.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If a surface has been defined GLOBAL (or LOCAL), the thickness of the previous surface no longer controls its position, since the GLOBAL (or LOCAL) data override any TH that may have been entered. &nbsp;However, a thickness must still be defined for purposes of paraxial raytracing. &nbsp;Even though the paraxial programs ignore tilts and decenters, in the case of GLOBAL surfaces the global data are the only position specification available. &nbsp;From these data an effective &quot;thickness&quot; must be derived, and this is done in accordance with one of two options, selected with the system parameters </span><span class="f_mine" style="font-weight: bold;">GTS</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">GTZ</span><span class="f_mine"> (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm" class="topiclink">3.2</a></span><span class="f_mine">). &nbsp;Since these options can, in some cases, produce unexpected results, the use of paraxial solves following GLOBAL (or LOCAL) surfaces is not recommended unless you are very careful.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.</span></p>
+</td>
+<td style="vertical-align:top; width:521px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The vertex separation of the global surface and the preceding one is used for TH (default). &nbsp;This is given the sign of the Z-component. (</span><span class="f_mine" style="font-weight: bold;">GTS</span><span class="f_mine">)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.</span></p>
+</td>
+<td style="vertical-align:top; width:521px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Only the Z-component of the vertex separation is taken as the thickness. &nbsp;This is done in the coordinate system of the global surface. (</span><span class="f_mine" style="font-weight: bold;">GTZ</span><span class="f_mine">)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Global input is incompatible with thickness pickups or solves on the previous surface. &nbsp;Surface number 1 cannot be made GLOBAL or LOCAL, and if that surface is tilted or decentered, other surfaces that are GLOBAL will follow it. &nbsp;(But we do not recommend putting a tilt or decenter on surface 1.) &nbsp;Global data may be converted to relative with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> RELATIVE</span><span class="f_mine">, to group with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold;">GROUP</span><span class="f_mine">, to local with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> LOCAL</span><span class="f_mine">, and removed entirely with </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> NAS</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Referring to the tilted lens system shown </span><span class="f_mine" style="text-decoration: underline;"><a href="um3811.htm" class="topiclink">above</a></span><span class="f_mine">, suppose that surfaces 3, 4, and 5 were to be entered as global surfaces. &nbsp;The input might be:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">CHG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">3 GLOBAL POSITION 0 0 1.85</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">3 GLOBAL ANGLE 45 0 0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">4 GLOBAL POSITION 0 -1.12 1.85</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">4 GLOBAL ANGLE 90 0 0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">5 GLOBAL POSITION 0 -1.47 1.85</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">5 GLOBAL ANGLE -90 0 0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_mine"><span class="f_mine">Surface 6 has not been redefined (it could also have been GLOBAL), to illustrate the fact that it is </span><span class="f_mine" style="font-style: italic;">still in the same place relative to 5</span><span class="f_mine">, regardless of how surface 5 was placed where it is, because it is a RELATIVE surface – by default).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the above example, the vertex-to-vertex spacing was the logical selection for obtaining a paraxial thickness (the default). &nbsp;Now we will use global coordinates to decenter the center element of a triplet (and show how AI can change the lens). &nbsp;In this case, the Z-component of the separation should be taken as the thickness. &nbsp;The input for changing the lens is:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">CHG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">GTZ</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">5 GLOBAL</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">AI</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">Change YG of surface 3 to 1.5</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The lens now looks like this:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um3f25.png" width="360" height="180" alt="um3f25" style="width:360px;height:180px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The AI sentence changed the global Y-coordinate of surface 3. &nbsp;Surface 5 was changed to GLOBAL in the </span><span class="f_mine" style="font-weight: bold;">CHG</span><span class="f_mine"> file, and it therefore remained fixed relative to surface 1. &nbsp;Note that if surface 5 had </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> been so changed, it would still be on the Z-axis of surface 4 (and 3), with the same YG as 3. &nbsp;The GTZ entry selects the Z-component for the paraxial thickness of surface 2.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3821.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3811.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

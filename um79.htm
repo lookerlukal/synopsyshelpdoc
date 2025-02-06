@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um79</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="3-parameter plots,PA3" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="pa3"></a><span class="f_mine" style="font-size: 14pt;">7.9 Three-Parameter Plots (PA3) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um710.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um78.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um1512.htm" class="topiclink">AI</a></span><span class="f_mine"> can prepare a plot showing how a given parameter affects some other quantity, giving you a two-parameter plot. &nbsp;The feature described in this section prepares a plot where two parameters change independently, and a third is evaluated and plotted as a function of those two. &nbsp;This feature requires </span><span class="f_mine" style="text-decoration: underline;"><a href="umch15.htm#ai" class="topiclink">AI</a></span><span class="f_mine"> mode to be on and uses the </span><span class="f_mine" style="text-decoration: underline;"><a href="um15142.htm" class="topiclink">Zn</a></span><span class="f_mine"> parameters to contain the data to be changed and evaluated. &nbsp;Input </span><span class="f_mine" style="font-style: italic;">must</span><span class="f_mine"> be entered into a </span><span class="f_mine" style="text-decoration: underline;"><a href="macros.htm" class="topiclink">MACro</a></span><span class="f_mine"> for this feature. &nbsp;The format is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">[ CONTOUR ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">PA3 { TEST / LOOP / AGAIN / QUIT } [ </span><span class="f_mine" style="text-decoration: underline;">HT</span><span class="f_mine"> [ R / L ] ]/[COLOR]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">RZ1 </span><span class="f_mine" style="text-decoration: underline;">START</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">RZ2 </span><span class="f_mine" style="text-decoration: underline;">START</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">RZ3 </span><span class="f_mine" style="text-decoration: underline;">MIN</span><span class="f_mine"> </span><span class="f_mine" style="text-decoration: underline;">MAX</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">[NO]SMOOTH</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">XLABEL &quot;label string&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(up to 32 characters, refers to Z1)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">YLABEL &quot;label string&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(refers to Z2)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">ZLABEL &quot;label string&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(refers to Z3)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">LOOP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">(Any SYNOPSYS commands, where parameters Z1 and Z2 are used as input somewhere)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">[Any evaluation that writes to the AI output buffer]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">Z3 = (something that AI can refer to)</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">PA3</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The first PA3 input initializes everything and specifies the height and orientation of the 3-D plot to be made.  </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HT</span><span class="f_mine"> is the height of the highest point on the plot measured from the zero point for that parameter pair. &nbsp;The R / L choice refers to a right or left rotation of the display, which is rendered as a solid surface. &nbsp;Entering neither of these gives a straight view, without rotation. &nbsp;If the PA3 command follows a</span><span class="f_mine" style="font-weight: bold;"> CONTOUR</span><span class="f_mine"> directive, then the height and orientation data are ignored, and the data are contour plotted, with exactly 10 levels drawn encompassing the entire data range.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the word “</span><span class="f_mine" style="font-weight: bold;">COLOR</span><span class="f_mine">” appears instead of the </span><span class="f_mine" style="text-decoration: underline;">HT</span><span class="f_mine"> [ R / L ] entry, the display will be formatted and shown with colored pixels instead of the oblique-perspective view. &nbsp;The color spectrum is applied to the entire range of data from Z3, but any data value that is exactly equal to zero is shown in black.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The parameters to be altered are always Z1 and Z2. &nbsp;The ranges of Z1 and Z2 are given by the </span><span class="f_mine" style="font-weight: bold;">RZ1</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">RZ2</span><span class="f_mine"> input. &nbsp;The range of Z3 for which data will be plotted on the Z-axis may be given by the </span><span class="f_mine" style="font-weight: bold;">RZ3</span><span class="f_mine"> input. &nbsp;Any data outside this range will be clipped at the end that is violated, and shown by the color option as black if clipped at the low end and white if at the high end. &nbsp;The default range is +/- 1.0E10.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Labels may be entered with the </span><span class="f_mine" style="font-weight: bold;">XLABEL</span><span class="f_mine"> to </span><span class="f_mine" style="font-weight: bold;">ZLABEL</span><span class="f_mine"> input, and will be shown on the plot if entered. &nbsp;It is wise to repeat the range points in the labels, since they are otherwise not documented. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">LOOP</span><span class="f_mine"> command ends the PA3 input and sends control back to the command interpreter, which then executes the remaining commands in the usual fashion. &nbsp;When the second </span><span class="f_mine" style="font-weight: bold;">PA3</span><span class="f_mine"> command is reached, the program loops back to the beginning, alters the variables, executes the command sequence again, and continues in this fashion until the entire parameter space has been evaluated.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The influence of parameters Z1 and Z2 results from those symbols showing up somewhere in the command sequence, which may contain ordinary commands or AI strings, but which must </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> contain any command that utilizes the same 3-D display by which PA3 renders its output, which would corrupt those data, or which themselves loop back to the MACro. &nbsp;Thus you may </span><span class="f_mine" style="font-style: italic;">not</span><span class="f_mine"> request any of the following commands in this sequence:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-weight: bold;">[W]DMTF, [W]PSPRD, DMODEL, M2F, SURP, SPROFILE, ANNEAL</span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The quantity to be evaluated as a function of the two variables must be put into the Z3 parameter before the second PA3 command is reached. &nbsp;This is done in the usual fashion, where Z3 is set equal to some lens parameter, such as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">Z3 = 4 TH</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">Z3 = BACK.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Or you may execute any command not in the above list that places a copy of its output in the AI buffer, and then load Z3 from there, for example:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">Z3 = FILE 4</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Most commands fill the buffer, and you check by simply executing that command and then entering the AI sentence.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine">BUFFER?</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If your answers are displayed, note which file location contains the number you want, and then use that number as the FILE location.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This feature normally executes the loop a total of 3481 times, giving data for a 59x59 array of points. &nbsp;It is often a very lengthy feature to run, and it is wise to test your input before committing to the entire loop. &nbsp;To test it, just enter &quot;</span><span class="f_mine" style="font-weight: bold;">TEST</span><span class="f_mine">&quot; in word 2 of the PA3 command, and run your MACro. &nbsp;The program will do the loop only once and list the values of Z1, Z2, and Z3 at the end, showing all of the output from the command sequence. &nbsp;If you time this loop (use the </span><span class="f_mine" style="text-decoration: underline;"><a href="um515.htm#time" class="topiclink">TIME</a></span><span class="f_mine"> command) and multiply by 3481, you get an idea of how long the process will take. &nbsp;If word 2 contains &quot;</span><span class="f_mine" style="font-weight: bold;">LOOP</span><span class="f_mine">&quot;, the entire array of points is evaluated, and output is automatically put in </span><span class="f_mine" style="text-decoration: underline;"><a href="quiet.htm" class="topiclink">QUIET</a></span><span class="f_mine"> mode. &nbsp;If </span><span class="f_mine" style="font-weight: bold;">switch 78</span><span class="f_mine"> is turned on before the process starts, the array will consist of 118x118 data points instead of 59x59. &nbsp;(The finer resolution will only be visible in the COLOR display, however, so it makes no sense otherwise.) &nbsp;It will also take four times longer to run.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">After the array of points is evaluated and the plot is displayed, you can change the display orientation and height by entering the PA3 command with &quot;</span><span class="f_mine" style="font-weight: bold;">AGAIN</span><span class="f_mine">&quot; in word 2. &nbsp;In this case, do not use the same MACro, since only a single line of input is required. &nbsp;(You cannot change the default oblique-perspective or color view into a contour plot, and vice-versa, however.) &nbsp;So, if your plot was shown with the surface drawing and you want to show it again with the COLOR option, you could simply enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span><span class="f_mine">PA3 AGAIN COLOR</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">after the first display appears. &nbsp;You can also do the reverse.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the event that the loop terminates abnormally because of an unforeseen error condition, the system may no longer respond to user input. &nbsp;This is because it is still trying to run PA3 instead of the command interpreter. &nbsp;To recover from this situation, just enter </span><span class="f_mine" style="font-weight: bold;">PA3 QUIT</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The optional </span><span class="f_mine" style="font-weight: bold;">[NO]SMOOTH</span><span class="f_mine"> directive controls whether the oblique-perspective view is smoothed or not. &nbsp;If your data show discrete points on a continuous surface, then smoothing should be turned on (it is the default). &nbsp;If your data contain discrete values which are better shown as a step function, then smoothing should be turned off.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To illustrate this feature, we enter the following MACro:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">PA3 LOOP 3.5 L </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">RZ1 1 0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">RZ2 -.05 .05</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">XLAB &quot;HBAR 1 TO 0&quot;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">YLAB &quot;BTH -.05 TO .05&quot;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ZLAB &quot;1/RMS&quot;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">LOOP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">CHG</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">BTH Z2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">RMS P Z1 200</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">Z4 = FILE 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">= 1/Z4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">Z3 = FILE 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">PA3</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this sequence, we vary the </span><span class="f_mine" style="text-decoration: underline;"><a href="um32.htm#bth" class="topiclink">BTH</a></span><span class="f_mine"> parameter from -.05 to .05, thereby changing the focus position slightly, using variable Z2. &nbsp;We also change the field point with variable Z1, which shows up in the HBAR position in the RMS command.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To evaluate the effect of these changes, we then execute the </span><span class="f_mine" style="text-decoration: underline;"><a href="um856.htm" class="topiclink">RMS</a></span><span class="f_mine"> command (in the MACro), which puts the RMS spot size into file location 1. &nbsp;Now things get a little tricky. &nbsp;A good image has a low RMS, but on the plot that would appear as a </span><span class="f_mine" style="font-style: italic;">hole</span><span class="f_mine"> instead of a hill, and would not be visible due to the hidden-line removal algorithm. &nbsp;So we instead put the value into Z4, find the inverse of that quantity with the implied </span><span class="f_mine" style="text-decoration: underline;"><a href="um1514.htm" class="topiclink">calculation</a></span><span class="f_mine">, and then put the results of that calculation into Z3 for the plot.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is the result:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="pa3a.png" width="652" height="515" alt="pa3a" style="width:652px;height:515px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here it is drawn again in a right view:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="pa3b.png" width="649" height="510" alt="pa3b" style="width:649px;height:510px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This is how it looks as a contour plot:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="pa3c.png" width="769" height="606" alt="pa3c" style="width:769px;height:606px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">And this is the color version. &nbsp;This was prepared with switch 78 turned on, and you can see the fine resolution produced by this option.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="pa3d.png" width="666" height="496" alt="pa3d" style="width:666px;height:496px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um710.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

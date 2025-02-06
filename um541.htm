@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>SPACERS</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Spacer, length of" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p>&nbsp;</p>
+<p><a name="spacers"></a><span style="font-size: 14pt;">5.41 Lens Spacer Length (SPACERS) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um540.htm" class="topiclink">Previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um542.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The command </span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 11pt;">SPACERS [ </span><span style="font-size: 11pt; text-decoration: underline;">JSSS</span><span style="font-size: 11pt;"> </span><span style="font-size: 11pt; text-decoration: underline;">JSPS</span><span style="font-size: 11pt;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will calculate the length of the lens cell or spacer ring between two elements. &nbsp;This calculation takes the value of each airspace and adjusts it by the sag of the surfaces on both sides. &nbsp;The surface range may be entered with the command; the default covers the entire lens. &nbsp;The calculation is done in the YZ plane and is not valid if the surfaces do not exhibit axial symmetry. &nbsp;This feature may be accessed by the utility MUT.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The aperture used for the sag calculation on each surface is equal to one of the following;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">1. &nbsp;The value of any hard CAO in effect on the surface, if any.</span></p>
+<p><span style="font-size: 11pt;">2. &nbsp;The value of </span><span style="font-size: 11pt; text-decoration: underline;"><a href="hidd_edgewizard.htm" class="topiclink">EFILE</a></span><span style="font-size: 11pt;"> points A or E, if no hard CAO has been declared. &nbsp;Point E is taken for the lower surface number spanning the airspace, and point A for the higher.</span></p>
+<p><span style="font-size: 11pt;">3. &nbsp;The current soft CAO if no EFILE or hard CAO data are in effect.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Consider the lens shown below.</span></p>
+<p>&nbsp;</p>
+<p><img src="lcell.png" width="516" height="345" alt="lcell" style="width:516px;height:345px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The command SPACERS gives the following table:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SPACER LENGTH CALCULATION, IN UNITS OF MM</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SN &nbsp;SN &nbsp; AIRSPACE &nbsp; &nbsp;APERTURE &nbsp; APERTURE &nbsp; &nbsp; &nbsp; SAG &nbsp; &nbsp; &nbsp; &nbsp;SAG &nbsp; &nbsp; SPACER</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> -- &nbsp;-- &nbsp; -------- &nbsp; &nbsp;-------- &nbsp; -------- &nbsp; ------- &nbsp; &nbsp;------- &nbsp;---------</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;2 &nbsp; 3 &nbsp; &nbsp; 1.9092 &nbsp; &nbsp;19.1171E &nbsp; 17.6450E &nbsp; &nbsp;0.7143 &nbsp; &nbsp; 8.0728 &nbsp; &nbsp; 9.2677</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;4 &nbsp; 5 &nbsp; &nbsp; 1.0000 &nbsp; &nbsp;15.6285E &nbsp; 15.3811E &nbsp; &nbsp;2.7306 &nbsp; &nbsp; 2.3845 &nbsp; &nbsp; 0.6539</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;6 &nbsp; 7 &nbsp; &nbsp;28.7174 &nbsp; &nbsp;12.6585E &nbsp; 12.1000C &nbsp; &nbsp;5.4677 &nbsp; &nbsp; 2.8466 &nbsp; &nbsp;26.0963</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;8 &nbsp; 9 &nbsp; &nbsp;16.2998 &nbsp; &nbsp;12.8906E &nbsp; &nbsp;6.0611C &nbsp; &nbsp;1.2865 &nbsp; &nbsp; 0.0000 &nbsp; &nbsp;15.0133</span></p>
+<p class="p_OUTPUT"><span class="f_OUTPUT">&nbsp;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> Note: apertures marked &quot;C&quot; are taken from the current CAO value;</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> Apertures marked &quot;E&quot; are taken from the current EFILE data for points A or E.</span></p>
+<p><span style="font-size: 9pt; font-family: 'Courier New'; font-weight: bold;"> SPACER is the airspace adjusted by the sags on both sides.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">Suppose you want to design a spacer between surfaces 6 and 7. &nbsp;The length of that spacer is 26.0963 mm, as given in the table. &nbsp;The aperture taken for the sag calculation is at EFILE point E (12.6585) on surface 6 (noted by the tag “E”), while that for surface 7 is at the hard CAO (12.1) on that surface (noted by “C”). &nbsp;Since the &nbsp;EFILE data describe only the shape of the lens and do not specify the point on the surface where you want the spacer to touch the surface, we allow the hard CAO to override the EFILE points for this calculation. &nbsp;If you want the EFILE points to govern, be sure to delete any hard CAO that may be in effect. </span></p>
+<p>&nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um542.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

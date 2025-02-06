@@ -1,0 +1,695 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um1211</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p><a name="um1211"></a><span style="font-size: 11pt; font-weight: bold;">12.1.1 Variable attributes</span><span style="font-size: 11pt; font-family: 'Times New Roman';">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um12111.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um121.htm" class="topiclink">Previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This section describes the input to assign attributes to individual variables. &nbsp;It is also possible to define global settings, which will apply to all variables of a given class. &nbsp;(That input, which is described in the previous section, must precede all other input, including that below.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The variables may be assigned numerous non-default attributes with additional input. &nbsp;In the formats below, the item </span><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> list }</span><span class="f_mine"> is to be selected from the following:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RAD</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RD</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CV</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TH</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">INDEX</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">VNO</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">WEDGE</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TILT</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">IRREG</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">CONIC </span><span class="f_mine">or</span><span class="f_mine" style="font-weight: bold;"> CC</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RFR</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">THI</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">DECENT</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">XDC</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1211.htm#brl1" class="topiclink">RL1, RL2</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">WTR</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TTR</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SSD </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">YDC</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">REDGE</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PEP</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PAX</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PAY</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ZYDC</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PFTEST</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GPANG</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GPPOS</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:112px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#binclude" class="topiclink">[ INCLUDE JSSS THRU JSPS ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#bexclude" class="topiclink">[ EXCLUDE SN THRU SN ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold;">[ FIX { list } TOLERANCE ]</span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#brange" class="topiclink">[ RANGE { list } DMAX ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold;">[ { FIX / RANGE } { ATH / GTH } </span><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;">value</span><span style="font-size: 11pt; font-weight: bold;"> ]</span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#bexact" class="topiclink">[ EXACT ALL ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#bexact" class="topiclink">[ EXACT { { list } SN SN SN &nbsp;} ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#bexact" class="topiclink">[ EXACT ALL list ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#bexact" class="topiclink">[ EXACT SN { list } ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#brange" class="topiclink">[ RANGE SN { list } DMAX ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#bfix" class="topiclink">[ FIX SN { list } TOL ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#btpr" class="topiclink">[ TPR { SN SN SN … / ALL } ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#btolpftest" class="topiclink">[ PFTEST { SN SN ... / ALL } ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#bcement" class="topiclink">[ CEMENT { SN SN SN … } ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#bgroup" class="topiclink">[ GROUP { LEFT / RIGHT } SN SN ]</a></span></p>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1211.htm#bthc" class="topiclink">[ THC SN SN ]</a></span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="btpr"></a><span class="f_mine" style="font-weight: bold;">TPR</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:626px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the surface numbers of all radii for which testplates already exist. &nbsp;These surfaces will be given tighter tolerances of but a few fringes, and other tolerances will usually be looser as a result. &nbsp;Flat surfaces need not be listed since by default they are assumed matched. &nbsp;If the word </span><span class="f_mine" style="font-weight: bold;">ALL</span><span class="f_mine"> is entered instead of a list of surface numbers, then all radii that would otherwise be toleranced in this run will be assumed matched to testplates.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-style: italic;">Never</span><span class="f_mine"> calculate a tolerance to be assigned to a testplate itself. &nbsp;Have the testplate made and measured, and then fit the lens to that value. &nbsp;If you give the testplate itself a tolerance, then the statistics of the surface are skewed by whatever error finally turns up, and the predictions of BTOL are less accurate. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um126.htm" class="topiclink">Section 12.6</a></span><span class="f_mine"> for a discussion of this issue. &nbsp;The radius tolerance applies to the </span><span class="f_mine" style="font-style: italic;">lens surface</span><span class="f_mine">, not the testplate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the shop does not plan on using testplates, then the radius tolerance applies to the radius, this declaration should not be used, and the statistics of that tolerance should be accurate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="btolpftest"></a><span style="font-weight: bold;">PFTEST</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:626px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This declaration is appropriate only for aspheric surfaces. &nbsp;It is intended for surfaces that will be measured with a profilometer, rather than with a testplate or a null setup. &nbsp;The latter are more accurate, but difficult and expensive to set up.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program models the figure error of power-series aspheres with coefficient G 15, and for Zernike surfaces with term 5, both of which describe an astigmatism error. &nbsp;For other shapes, the program implements the general-purpose cylinder option GPCYLINDER, which will add a cylinder whose shape in Y is opposite to that in X. &nbsp;In every case, the modeled error cannot be improved with a focus adjustment at the on-axis point.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The idea is that, if the errors are small, the effect on the MTF is a function of the wavefront variance and is not very sensitive to the particular aberrations that may be present. &nbsp;So we use these terms as a proxy for figure errors in general.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To test such a surface, one runs the profilometer over the surface in a raster fashion, measuring the sag at each location and subtracting the sag calculated for the ideal surface. &nbsp;Then one finds the standard deviation of the errors (the average of the squares minus the square of the average), and takes the square root of the result. &nbsp;If this is less than the standard deviation tolerance printed by BTOL, the surface is in tolerance. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This procedure should work for most gentle surface errors, but may not be appropriate for errors that change rapidly over the surface and generate large values of the slope. &nbsp;If the surface resembles a Fresnel lens or a phonograph record, you have serious problems.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Surfaces so declared are not given a curvature, irregularity or rolled-edge tolerance, since one does not want to include the same error twice, and those are also figure errors.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If aspherics of the form ZERNIKE. BICONIC, or TORIC are not so declared, they will be treated the same as regular surfaces, with irregularity modeled with a cylinder term and (except for Zernikes) rolled edges modeled with a high-order aspheric. &nbsp;This would be appropriate for surfaces tested via a null setup, where one can observe fringes and measure exactly those errors. &nbsp;Other aspheric shapes are not assigned a tolerance if not declared with PFTEST.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">It is an error to specify this attribute for a surface that is not declared aspheric in some manner.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If </span><span class="f_mine" style="font-weight: bold;">ALL</span><span class="f_mine"> is specified instead of surface numbers, the program automatically assigns this attribute to all surfaces within the active range that already are aspheric.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The default </span><span class="f_mine" style="font-weight: bold;">RANGE</span><span class="f_mine"> for the modeled cylinder error is about 300 waves of sag at the aperture. &nbsp;This is then reduced as necessary to create the final budget. &nbsp;To enter a different range, calculate the actual maximum sag error you want at the full aperture, in lens units, and divide by the square of that aperture radius, giving the sag at unit aperture. &nbsp;Then enter that value with</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RANGE </span><span class="f_mine" style="text-decoration: underline;">sn</span><span class="f_mine"> PFTEST </span><span class="f_mine" style="text-decoration: underline;">sag</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bexact"></a><span class="f_mine" style="font-weight: bold;">EXACT…</span></p>
+</td>
+<td style="vertical-align:top; width:593px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the variables for which exact measurements are available. &nbsp;These will be bypassed by </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> and will contribute nothing to the tolerance budget. &nbsp;For example:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">EXACT ALL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;; </span><span class="f_mine" style="font-style: italic;">all</span><span class="f_mine"> variables are exact. (No numbers entered.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">EXACT TH 2 4 6 &nbsp; &nbsp; ; these three thicknesses are exact</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">EXACT ALL INDEX ; all indices of refraction are exact</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you enter FIX or RANGE input with a zero argument, the program converts that input to EXACT.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:70px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="brange"></a><span class="f_mine" style="font-weight: bold;">RANGE…</span></p>
+</td>
+<td style="vertical-align:top; width:593px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">defines the maximum permissible tolerance on a particular variable. &nbsp;Any tolerance that tends to be greater than this amount will be set at that value.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Although this parameter sets a maximum, it is not strictly used for that purpose. &nbsp;(Nobody ever complained about a tolerance that was too </span><span class="f_mine" style="font-style: italic;">loose</span><span class="f_mine">!) &nbsp;Instead, by increasing the range assigned to a variable that is coming out too </span><span class="f_mine" style="font-style: italic;">tight</span><span class="f_mine">, that tolerance will be made looser by the budget process when you run BTOL again. That is its true purpose.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Most variables have default ranges, as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Type</span></p>
+</td>
+<td style="vertical-align:top; width:510px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Default range</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Radii</span></p>
+</td>
+<td style="vertical-align:top; width:510px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">10 waves of curvature error at CAO.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For radii, enter the </span><span class="f_mine" style="font-style: italic;">curvature</span><span class="f_mine"> range for DMAX, not the radius range. &nbsp;To enter a fringe tolerance for radii, see RFR, below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This variable is available for surfaces whose shape involves a radius value, but not for some of the exotic shapes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Conic or CC</span></p>
+</td>
+<td style="vertical-align:top; width:510px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.0.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Thicknesses</span></p>
+</td>
+<td style="vertical-align:top; width:510px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">.005 in.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Index</span></p>
+</td>
+<td style="vertical-align:top; width:510px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">.001</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Dispersion (VNO)</span></p>
+</td>
+<td style="vertical-align:top; width:510px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.0</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Wedge</span></p>
+</td>
+<td style="vertical-align:top; width:510px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">.005 in. TIR at CAO radius.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For wedge, enter the angle in degrees. &nbsp;Wedge is toleranced in the AT direction unless the surface already has a BT or GT, and for a single surface unless a group tilt has previously been specified.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This parameter is assigned to the second side of each element, since the first side is reserved for the element tilt tolerance. &nbsp;The wedge is therefore modeled on side 2. &nbsp;In the event that your mounting geometry ensures that side 2 has no tilt and you want the wedge tolerance on side 1, you can use the PAY variable instead, as described below. &nbsp;To input the wedge as a TIR, see WTR, below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Irregularity</span></p>
+</td>
+<td style="vertical-align:top; width:510px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">2.5 fringes (at .6328 </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&mu;</span><span class="f_mine">M) of cylinder. &nbsp;For irregularity, enter the number of fringes over the full aperture.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Rolled edge (REDGE)</span></p>
+</td>
+<td style="vertical-align:top; width:510px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">1.0 fringes (at .6328 </span><span class="f_mine" style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&mu;</span><span class="f_mine">M) of aspheric term G16 This term specifies a rolloff given by the 10</span><span class="f_mine" style="vertical-align: super;">th</span><span class="f_mine"> power of radius. &nbsp;Input is in fringes, at the edge.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This is the only BTOL variable for which the expected mean value is nonzero. &nbsp;Rolled edges are almost always </span><span class="f_mine" style="font-style: italic;">down</span><span class="f_mine">, not up, and it is unlikely that an error on any surface will be compensated by an opposite error elsewhere – which is the case for other variables. &nbsp;This affects the statistics of the calculation, and to account for this special case the program returns a tolerance that is reduced by square root of 1/3. &nbsp;MC also models this reduced tolerance, always applying it to a turned-down edge, and the image quality statistics then come out as expected.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This variable is not available for some of the more exotic shapes, such as Zernike surfaces</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">An example of this kind of error is shown in the text below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Element TILT</span></p>
+</td>
+<td style="vertical-align:top; width:510px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">005 in. TIR at CAO radius. &nbsp;Enter tilt values in degrees. &nbsp;Tilt and decenter tolerances will involve a single element unless a relative tilt or decenter is already in effect. &nbsp;In that case, the tolerance applies to the same group size as in the nominal lens. The global variety, described in </span><span class="f_mine" style="text-decoration: underline;"><a href="um121.htm" class="topiclink">Section 12.1</a></span><span class="f_mine">, as well as the TTR input of this section, is always input in TIR units.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If an element or a group of elements has been declared a </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um385.htm#group" class="topiclink">GROUP</a></span><span class="f_mine">, the default tolerance on tilt and decenter is disabled and the group will instead be given tolerances on all six degrees of freedom: X, Y, Z, and alpha, beta, and gamma.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">Element decent.</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:573px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">.005 in. &nbsp;Element tilts and decenters refer to a single element unless the element is cemented; then it refers to the entire group. &nbsp;This parameter is related to the </span><span class="f_mine" style="font-style: italic; text-decoration: underline;"><a href="um1211.htm#brl1" class="topiclink">roll</a></span><span class="f_mine" style="text-decoration: underline;"><a href="um1211.htm#brl1" class="topiclink"> options</a></span><span class="f_mine">, RL1, and RL2, which are discussed below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that the default option is to tolerance the Y-decenter only, assuming that the X-decenter will have a similar tolerance. &nbsp;But for some off-axis mirror systems this is not the case. &nbsp;If your MC analysis differs substantially from the predictions of BTOL, try adding the XDC tolerances to the variable list. &nbsp;For example, if surface 2 is a tilted and decentered mirror, you might add</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RANGE 2 XDC 0.1</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">to the declarations section of your BTOL input, and check whether the MC analysis is more on target.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can also declare the surface or element a GROUP, and BTOL will generate tolerances in all six degrees of freedom, which is even better. &nbsp;See the comment under TILT, above.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RL1, RL2</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:573px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These refer to the </span><span class="f_mine" style="font-style: italic;">roll</span><span class="f_mine"> of an element, which is a decenter combined with a tilt such that the element remains in contact with a mechanical structure to the left or the right. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um1211.htm#brl1" class="topiclink">below</a></span><span class="f_mine"> for a discussion. &nbsp;Since this option must be explicitly requested, there is no default range. &nbsp;See also </span><span class="f_mine" style="text-decoration: underline;"><a href="um12111.htm" class="topiclink">Section 12.1.1.1</a></span><span class="f_mine"> for a discussion of the use of these parameters with cemented surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bpep"></a><span class="f_mine" style="font-weight: bold;">PEP</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:573px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This is the piston error of the faces of a prism. &nbsp;See the discussion of prisms, </span><span class="f_mine" style="text-decoration: underline;"><a href="um1211.htm#pep" class="topiclink">below</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PAX</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:573px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The angular error in X (the beta direction), used only for roof prisms.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PAY</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:573px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The angular error in Y, normally used for prisms, for faces other than roofs.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This parameter can also be used when you want the wedge tolerance to be evaluated on side 1 of an element instead of side 2, which is the default. &nbsp;To use it in this way, first disable the wedge tolerance with</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">EXACT WEDGE </span><span class="f_mine" style="text-decoration: underline;">SIDE2</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where SIDE2 is the surface number of the second side, whose wedge you wish to disable. &nbsp;Then add</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">RANGE </span><span class="f_mine" style="text-decoration: underline;">SIDE1</span><span class="f_mine"> PAY </span><span class="f_mine" style="text-decoration: underline;">TANGENT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where SIDE1 is the first side and </span><span class="f_mine" style="text-decoration: underline;">TANGENT</span><span class="f_mine"> is the tangent of the range angle. &nbsp;For a range of 6 arcminutes, for example, range would be 0.001745.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The budget comes back with a tolerance on term G 2, which is the aspheric term linear in Y. &nbsp;This is effectively the tangent of the wedge angle tolerance on side 1.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ZYDC</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:573px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This is valid only for ZFILE zoom lenses, and applies to the centration error of zoom groups. &nbsp;The default range is the same as for element decenters, described above. &nbsp;For this variable, </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> refers to the group number, not the surface number.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">PFTEST</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:573px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">See the details for the global assignment of this attribute, above.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GPANG</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:573px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This parameter applies only to surfaces that are already declared </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um385.htm#group" class="topiclink">GROUP</a></span><span class="f_mine">. &nbsp;They will be given a tolerance of three angles, alpha, beta, and gamma (in that order). &nbsp;Data are input in degrees, and the default is 0.143 degrees, or 8.59 arcminutes.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">GPPOS</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:573px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This also applies only to surfaces declared the start of a GROUP. &nbsp;They will be assigned tolerances in X, Y, and Z. &nbsp;Data are in lens units, and the default is 0.005 inches or 0.127 mm. &nbsp;With these group tolerances, you know the alignment requirements in all six dimensions.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:101px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bcement"></a><span class="f_mine" style="font-weight: bold;">CEMENT</span></p>
+</td>
+<td style="vertical-align:top; width:461px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Use this option when you have modeled a cement layer as an explicit surface with very small thickness. &nbsp;There are several consequences of doing so, which are explained in </span><span class="f_mine" style="text-decoration: underline;"><a href="um12111.htm" class="topiclink">Section 12.1.1.1</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The derivative increment is taken at the current RANGE. &nbsp;Since the accuracy of the derivative is questionable if the resulting change of quality is excessive, the program will reduce the increment in stages until the resulting changes are reasonable if this should occur. &nbsp;(For SPOT and WAVE descriptors, the degradation is allowed to approach 5 times the limit; for MTF and STREHL descriptors, the limit is given by the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um121.htm#bimax" class="topiclink">IMAX</a></span><span class="f_mine"> parameter.) &nbsp;When this happens the program will display an informative message saying that the increment has been reduced. &nbsp;You may disable this message with the option NODMESSAGE.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Other mnemonics are as follows.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">RFR</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">specifies the radius of curvature in fringe units.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">VNO</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the Abbe V-number. </span><span class="f_mine" style="font-weight: bold;">VNUM</span><span class="f_mine"> also works.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">WTR</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the wedge, in TIR units at the current clear aperture.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">TTR</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the surface tilt, in TIR units.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">SSD</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">refers to special surface data:</span></p>
+<p class="p_mine"><span class="f_mine">for torics, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> = 1 for RX</span></p>
+<p class="p_mine"><span class="f_mine">for biconics, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> = 1 for KY, and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> =2 for KX</span></p>
+<p class="p_mine"><span class="f_mine">for power-series aspherics, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> = 1 to 2 for G1 to G2. &nbsp;(Note: previous versions of SYNOPSYS allowed all G-coefficients to be toleranced, but recent changes simply made things too large. &nbsp;This reduces the variable space by a factor of 8.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">THI</span></p>
+</td>
+<td style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">for convenience, is the same as </span><span class="f_mine" style="font-weight: bold;">TH</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To enter non-default values for any of these quantities, enter a positive number in the actual lens units. &nbsp;The surface number used for element tilt and decenter should be the first side of an element, while element wedge is assigned to the </span><span class="f_mine" style="font-style: italic;">second</span><span class="f_mine"> side.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bfix"></a><span class="f_mine" style="font-weight: bold;">FIX...</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">assigns fixed tolerances to particular variables. &nbsp;Any variable entered with this option will be assigned the fixed tolerance when the budget is prepared, regardless of its sensitivity. &nbsp;Too large a fixed tolerance can prevent a successful budget from being found. &nbsp;(Note: </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> assumes that the fixed tolerance on a variable represents a range with uniform probability distribution – which is also the case for tolerances that it calculates. &nbsp;The standard deviation of such a variable is the tolerance divided by the square root of 3. &nbsp;If a variable is expected to be </span><span class="f_mine" style="font-style: italic;">at</span><span class="f_mine"> its tolerance instead of at a random place </span><span class="f_mine" style="font-style: italic;">within</span><span class="f_mine"> it, the fixed tolerance input should then be increased by 1.732, since the program calculates the effect of what it believes is the standard deviation, which is smaller. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um123.htm" class="topiclink">sections 12.3</a></span><span class="f_mine"> and </span><span class="f_mine" style="text-decoration: underline;"><a href="um126.htm" class="topiclink">12.6</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The special operands </span><span class="f_mine" style="font-weight: bold;">ATH</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold;">GTH</span><span class="f_mine"> can be declared </span><span class="f_mine" style="font-weight: bold;">FIX</span><span class="f_mine">ed; those apply to all airspace thicknesses and glass thicknesses, and override any FIX assigned to TH variables. &nbsp;Those operands can also be assigned a </span><span class="f_mine" style="font-weight: bold;">RANGE</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:208px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bgroup"></a><span class="f_mine" style="font-weight: bold;">GROUP LEFT, GROUP RIGHT</span></p>
+</td>
+<td style="vertical-align:top; width:310px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:472px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">are used when a thickness variation is offset by a neighboring thickness or airspace. &nbsp;Depending on the details of how the lens elements are mounted, a given thickness error may simply displace all other elements to the right or left, or may only affect those neighboring surfaces which depend on the same reference surface in the lens cell. &nbsp;In the sketch below are shown two groups of lenses, where the leftmost group is positioned against a reference surface to the right of the group, and the rightmost group against a surface on the left. &nbsp;This is a common occurrence in lens cells, and it is apparent that if an element in the left group were made thicker than nominal, the airspace to the left of the group would be reduced a corresponding amount. &nbsp;Similarly, an increased thickness in the right group would cause a reduction in the airspace to the right. &nbsp;These thickness and airspaces are therefore not independent variables, and to properly evaluate their effect on tolerances the correlations should be stated with the </span><span class="f_mine" style="font-weight: bold;">BTOL</span><span class="f_mine"> input.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um12f5.png" width="478" height="336" alt="um12f5" style="width:478px;height:336px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this example we would input, for the two groups:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">GROUP LEFT 5 9</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">GROUP RIGHT 11 15</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">indicating that surfaces 5 through 9 are mounted so that any thickness errors are offset by a corresponding error of the opposite sign to the left of surface 5, and the errors of surfaces 11 through 15 are offset to the right of surface 15.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bthc"></a><span class="f_mine" style="font-weight: bold;">THC...</span></p>
+</td>
+<td style="vertical-align:top; width:478px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">may also be used to specify that a given thickness is to be correlated with a neighboring thickness or airspace. If surface 6 were to be correlated with surface 9, for example, we would input </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine"> &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_mine" style="font-weight: bold;"> &nbsp;THC 6 9</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">which means that an increased thickness of surface 6 causes a reduced thickness of surface 9. &nbsp;Note that the reverse is not automatically true; thickness 9 may have an error of its own that is independent of any other surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This optional input should not be overlooked, since many thickness tolerances vary by more than a factor of two when the correlation is considered. &nbsp;The default considers each thickness independent of all others.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The surface numbers specified may not correspond to those assigned to the start and end of a ZFILE zoom group. &nbsp;They may apply to surfaces within a group, however.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="binclude"></a><span class="f_mine" style="font-weight: bold;">INCL</span></p>
+</td>
+<td style="vertical-align:top; width:478px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">may be input if the program is to consider only a portion of a lens, as for example, to tolerance the objective of a telescope without considering the eyepiece. &nbsp;Only the surfaces numbered from </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine"> through </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSPS</span><span class="f_mine"> will be treated. &nbsp;The default is to tolerance the entire lens. &nbsp;Only one </span><span class="f_mine" style="font-weight: bold;">INCL</span><span class="f_mine"> entry may be input.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:46px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="bexclude"></a><span class="f_mine" style="font-weight: bold;">EXCL</span></p>
+</td>
+<td style="vertical-align:top; width:478px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This input will exclude those surfaces from </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> to </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> from the tolerance analysis and budget preparation. &nbsp;Any number of </span><span class="f_mine" style="font-weight: bold;">EXCL</span><span class="f_mine"> entries may be input. &nbsp;Automatically excluded are reference surfaces (with no index change) and the object and image surfaces (except for image tilt, which is included).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="brl1"></a><span class="f_mine">Calculating a tolerance for element centration requires knowing something about the mounting scheme for that element. &nbsp;The default parameter DECENTER (or YDC) will treat the perturbation as a pure decenter in the Y-direction. &nbsp;This might happen if the lens is rather thick and it is held by gravity against the ID of the lens cell, or when there is a flat area that is pressed against a shoulder. &nbsp;In other cases, however, as when a curved surface is constrained by a shoulder or flange on one side and a retaining ring on the other, the lens is more likely to </span><span class="f_mine" style="font-style: italic;">roll</span><span class="f_mine"> against the shoulder, acquiring a small tilt in the process, as well as a decenter. &nbsp;Thus, the element decenter and tilt are coupled.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program can calculate the centration tolerance for such cases. &nbsp;The parameters RL1 and RL2 may be given on a RANGE or FIX directive instead of DECENTER, to indicate that the lens will roll on side 1 or side 2, which are usually not the same thing as a pure decenter. &nbsp;Consider the lens below:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="rl12.png" width="380" height="548" alt="rl12" style="width:380px;height:548px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">What happens if the two elements are decentered? &nbsp;The answer depends on how they are mounted. &nbsp;If the first element is allowed to roll against a mount to its left, the airspace acquires a significant wedge, as shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="rl12a.png" width="348" height="538" alt="rl12a" style="width:348px;height:538px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the element can roll against a structure between the elements, on the other hand, the airspace does not acquire a wedge.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="rl12b.png" width="301" height="546" alt="rl12b" style="width:301px;height:546px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this case, we would expect less image degradation from the decenter error. &nbsp;The difference in the tolerance budget is significant. &nbsp;Here is a portion of the BTOL analysis for the default case, where decenters are purely in the Y-direction:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ELE SURF &nbsp; &nbsp; ELEMENT TILT TOLERANCE &nbsp;Y-DECENT TOL &nbsp;X-DECENT TOL</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (ARC MIN) &nbsp; &nbsp; &nbsp; &nbsp; (TIR)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> _______________________________________________________________</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 &nbsp; 1 &nbsp; &nbsp; &nbsp; 0.37828 &nbsp; &nbsp; &nbsp; 0.00132 &nbsp; &nbsp; &nbsp; 0.00150 &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 &nbsp; 2 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 &nbsp; 3 &nbsp; &nbsp; &nbsp; 0.37316 &nbsp; &nbsp; &nbsp; 0.00129 &nbsp; &nbsp; &nbsp; 0.00150 &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 &nbsp; 4 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 5 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Compare this to the budget prepared when the two elements are constrained to roll against the interior spacer:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">ELE SURF &nbsp; &nbsp; ELEMENT TILT TOLERANCE &nbsp;Y-DECENT TOL &nbsp;X-DECENT TOL</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (ARC MIN) &nbsp; &nbsp; &nbsp; &nbsp; (TIR)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> _______________________________________________________________</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 &nbsp; 1 &nbsp; &nbsp; &nbsp; 0.38817 &nbsp; &nbsp; &nbsp; 0.00136 &nbsp; &nbsp; &nbsp; 0.00410 &nbsp;RL2</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 &nbsp; 2 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 &nbsp; 3 &nbsp; &nbsp; &nbsp; 0.38253 &nbsp; &nbsp; &nbsp; 0.00132 &nbsp; &nbsp; &nbsp; 0.00340 &nbsp;RL1</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 &nbsp; 4 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; 5 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the second case, the decenter tolerances are a factor of two or more looser. &nbsp;The BTOL input for this case was</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">BTOL 3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">RANGE 1 RL2 .005</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">RANGE 3 RL1 .005</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">DEGRADE SPOT .4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">GO</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Since the program has no way of knowing which mounting scheme you intend to use, there is no default for the roll options: you must give an explicit RANGE yourself in the BTOL input. &nbsp;Also, you can only use one of the options DECENTER, RL1, and RL2 on a given element.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">There is no conflict between the above parameters and the element TILT parameter, however, which you can see are both treated in the above samples. &nbsp;Thus, you may consider the TILT tolerance to govern the machining of the cell, and the RL1 or RL2 tolerance to apply to the location of the lens within that cell.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The RL2 option will roll about the next surface that is followed by AIR. &nbsp;This means that if your lens has a </span><span class="f_mine" style="font-weight: bold;">cemented</span><span class="f_mine"> doublet or triplet, the actual surface that defines the roll geometry is the </span><span class="f_mine" style="font-style: italic;">last</span><span class="f_mine"> surface of the cemented group, not necessarily the second side of the element you assign the RL2 to. &nbsp;Further, note that it makes no sense to specify an RL2 range to other than the first element in such groups; each element can only roll about the cemented interface to its left, which requires the RL1 option for all but the first, which can use either option. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um12111.htm" class="topiclink">Section 12.1.1.1</a></span><span class="f_mine"> for more details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The Monte-Carlo program </span><span class="f_mine" style="text-decoration: underline;"><a href="um125.htm#mc" class="topiclink">MC</a></span><span class="f_mine"> perturbs the lens in accordance with the selection you made with the BTOL input. &nbsp;If you selected one of the roll options, then that program assigns both a decenter and tilt to the element, in addition to any element tilt that also was given a tolerance. &nbsp;The only restriction is that the tilt and the remote tilt due to the decenter are always in the same sense, either alpha or beta – since relative tilts can only be in one sense at a time. &nbsp;We do not believe that this has any ill effect on the statistics of the result, since the two can either add or subtract depending on the random sign chosen.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The roll options RL1 and RL2 are distinct from the </span><span class="f_mine" style="font-style: italic;">rolled edge</span><span class="f_mine"> tolerance. &nbsp;The former describe position errors in a given element, while the latter is an error in the </span><span class="f_mine" style="font-style: italic;">shape</span><span class="f_mine"> of a given surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="rolled"></a><span class="f_mine" style="font-weight: bold;">Rolled Edge</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 11pt;">When surfaces are polished, they often show a narrow zone around the edge that is lower than it should be. &nbsp;This is called a </span><span style="font-size: 11pt; font-style: italic;">rolled edge</span><span style="font-size: 11pt;">. &nbsp;Modeling it is of course not exact, since every lens will be somewhat different. &nbsp;The program approximates the shape error with a 10th-power aspheric term.</span></p>
+<p style="margin: 14px 0px 14px 0px;"><span style="font-size: 11pt;">Here is an example. &nbsp;A 10th-order term has been added to the primary mirror of the relay telescope. &nbsp;The wavefront now has about a one-wave error.</span></p>
+<p style="margin: 14px 0px 14px 0px;"><img src="clip0376.png" width="797" height="475" alt="clip0376" style="width:797px;height:475px;border:none"></p>
+<p style="margin: 14px 0px 14px 0px;"><span style="font-size: 11pt;">The data describing this shape can be entered in WS:</span></p>
+<p><span style="font-size: 12pt; font-family: 'Times New Roman';"> &nbsp; 1 RAD &nbsp; &nbsp;-98.8500000000000 &nbsp; TH &nbsp; &nbsp;-37.86380000 AIR &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p><span style="font-size: 12pt; font-family: 'Times New Roman';"> &nbsp; 1 CC &nbsp; &nbsp; &nbsp;0.00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-size: 12pt; font-family: 'Times New Roman';"> &nbsp; 1 DC1 &nbsp;0.00000000E+00 0.00000000E+00 0.00000000E+00 0.00000000E+00 </span><span style="font-size: 12pt; font-family: 'Times New Roman'; color: #ff0000;">1.00000000E-14</span><span style="font-size: 12pt; font-family: 'Times New Roman';"> &nbsp; &nbsp; &nbsp; </span></p>
+<p><span style="font-size: 12pt; font-family: 'Times New Roman';"> &nbsp;1 DC2 &nbsp;0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p><span style="font-size: 12pt; font-family: 'Times New Roman';"> &nbsp;1 DC3 &nbsp;0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p><span style="font-size: 12pt; font-family: 'Times New Roman';"> &nbsp;1 DC4 &nbsp;0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00 </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The shape of the figure error is shown by </span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Courier New'; font-weight: bold;">SPROF 1 0 .00002</span></p>
+<p>&nbsp;</p>
+<p><img src="clip0378.png" width="759" height="560" alt="clip0378" style="width:759px;height:560px;border:none"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 11pt;">The error is in the +Z direction, which is displayed as up in the figure above. &nbsp;This is the kind of error that results from poor control during polishing.</span></p>
+<p class="p_mine" style="text-align: center;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="pep"></a><span class="f_mine" style="font-weight: bold;">Prism tolerances</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Prisms, taken from the </span><span class="f_mine" style="text-decoration: underline;"><a href="um391.htm" class="topiclink">prism library</a></span><span class="f_mine">, require special treatment for tolerancing. &nbsp;The optical faces themselves are given a figure tolerance, as are all other flat optical surfaces. &nbsp;But in some prisms a given face is encountered more than once. &nbsp;To model this, the program automatically assigns a curvature pickup where needed, as well as an index pickup to all interior spaces.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The thickness and slope errors require three additional variable types, not available for ordinary surfaces. &nbsp;These are:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">PEP &nbsp; &nbsp; &nbsp; &nbsp;the piston error in each face except the first</span></p>
+<p class="p_mine"><span class="f_mine">PAX &nbsp; &nbsp; &nbsp; &nbsp;the angular error in X</span></p>
+<p class="p_mine"><span class="f_mine">PAY &nbsp; &nbsp; &nbsp; &nbsp;the angular error in Y.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">BTOL automatically adds the variables listed above when tolerancing a prism, modeled via G-coefficients. &nbsp;Thus, term G11, which is linear in X, provides a way to model an error in the beta-tilt assigned to roof surfaces, and is varied by the parameter PAX, while term G2, which is linear in Y, models the alpha-tilt error on all faces that are not part of a roof, according to parameter PAY. &nbsp;Term G17, which is a constant term in the aspheric description, can be viewed as a piston error: the surface is located either above or below its ideal location. &nbsp;This is the function of parameter PEP.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To understand how all this works, consider the Schmidt prism below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="pep.png" width="374" height="343" alt="pep" style="width:374px;height:343px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here, light enters at surface 10, reflects from 11, goes to the two roof surfaces at 12 and 13, reflects from 14, and exits through 15. &nbsp;Surfaces 10 and 14 are really the same, so the program assigns a curvature pickup on 10. &nbsp;Similarly, surface15 is assigned a PCV of surface 11. &nbsp;(Note that the surface with the </span><span class="f_mine" style="font-style: italic;">larger</span><span class="f_mine"> CAO is the pickup target; this is so that when BTOL calculates the rolled-edge tolerance REDGE it puts that rolled edge at the larger CAO.) &nbsp;When surface 14 is assigned a PAY variable by BTOL, modeling an error in alpha tilt, surface 10 gets the same tilt via the PCV, and similarly for surface 11 and 15.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The roof surfaces at 12 and 13, on the other hand, are described by a local beta tilt, and to show the effect of an error in this tilt the program assigns the variable PAX. &nbsp;Thus, both surfaces of the roof then get tolerances on this variable.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One more point should be mentioned. &nbsp;In a system with a roof prism such as this, the program automatically puts the system into </span><span class="f_mine" style="text-decoration: underline;"><a href="umch18.htm" class="topiclink">nonsequential</a></span><span class="f_mine"> mode. &nbsp;In this mode, the order in which rays encounter the roof surfaces depends on which side of the pupil they are on. &nbsp;Although this mode gives meaningful raytrace paths and the lens drawing programs show the correct paths, raytracing is very slow. &nbsp;Especially for optimization and BTOL, where one wants speedy results, the loss of speed is significant.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To cope with this situation, we have provided a mode switch, number 37, which will cause the program to always trace rays sequentially, even if the system is in nonsequential mode. &nbsp;It turns out that the image quality one calculates is not dependent on the sequential order of the rays through a roof prism, so one can get the faster speed of sequential raytracing even if the system contains such as prism. &nbsp;For producing an accurate drawing, on the other hand, one must turn that switch off.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">BTOL will run properly with either setting of switch 37, but much faster if it is on. &nbsp;In that case, one gets the faster speed when it calculates the tolerances on all surfaces except roofs. &nbsp;For those surfaces (only) the program temporarily turns the switch off, calculates the tolerances (which depend on the surface order now) and then turns it on again, if it was on, when it has finished with the roof surfaces.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here is a section of the listing from a BTOL run with a Schmidt prism.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">PRISM TOLERANCES</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ELE SURF &nbsp; &nbsp; &nbsp; PISTON &nbsp; &nbsp; &nbsp; X-ANGLE &nbsp; &nbsp; &nbsp; Y-ANGLE</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(ARC MIN) &nbsp; &nbsp;(ARC MIN)</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">--------------------------------------------------</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5 &nbsp;11 &nbsp; &nbsp; &nbsp; 0.10135 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 3.53306</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5 &nbsp;12 &nbsp; &nbsp; &nbsp; 0.11557 &nbsp; &nbsp; &nbsp; 0.26441 &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5 &nbsp;13 &nbsp; &nbsp; &nbsp; 0.11557 &nbsp; &nbsp; &nbsp; 0.26441 &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5 &nbsp;14 &nbsp; &nbsp; &nbsp; 0.10135 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 6.49856</span></p>
+<p class="p_footnotetext"><span class="f_footnotetext" style="font-family: 'Courier New';"> </span><span class="f_footnotetext" style="font-family: 'Courier New'; font-weight: bold;"> &nbsp;5 &nbsp;15 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000 &nbsp; &nbsp; &nbsp; 0.00000</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note the piston errors. &nbsp;To understand them, look at surface 11 in the picture below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="pep2.png" width="396" height="444" alt="pep2" style="width:396px;height:444px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here, we have assigned a very large value to term G17 of that surface, so you can see the effect. &nbsp;Now it is located to the right of where the prism normally would have it. &nbsp;Surface 15, which picks up the curvature of 11, has moved with it, and you can see the change in ray path, which no longer hits the roof surfaces at the vertex.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The angular tolerances on faces at 11 and 14 are listed with a Y-ANGLE, while the roof surfaces are assigned a much tighter tolerance on the X-ANGLE. &nbsp;Roofs are hard to make accurately.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-align: center;"><span class="f_mine" style="font-weight: bold;">ZFILE zoom lens tolerances</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When zoom lenses are assembled, elements within a given zoom group are mounted in a sleeve, and then that sleeve is mounted inside larger tubes in which the cam curves have been machined. &nbsp;Thus there are two centration tolerances of concern: the elements within the sleeve and the group inside the tube. &nbsp;BTOL assigns two separate tolerances for those two assembly errors.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The element centration tolerance is given in the budget as a decenter, as usual, and a separate list gives the centration tolerance of each zoom group. &nbsp;The Monte-Carlo analysis (MC) honors both of these, yielding statistics for random combinations of both errors.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um12111.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

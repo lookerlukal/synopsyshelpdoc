@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>naming aberrations for later listing or reuse</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="AFILE, named aberration list,optimization--&gt;" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine" style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-right: none; border-left: none; margin: 0px 0px 1px 0px;"><span class="f_mine">&nbsp;</span></p>
+<p><a name="alist"></a><span class="f_mine" style="font-size: 14pt;">10.11 Naming aberrations: the AFILE, ALIST &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1012.htm" class="topiclink">Next</a><a href="um1010.htm" class="topiclink"> Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span style="width:48px">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="text-decoration: underline;"><a href="um103.htm" class="topiclink">Section 10.3</a></span><span class="f_mine"> showed how it is possible to assign a name to any of the permitted aberration definitions. &nbsp;This section extends the concept further: a separate file is created that contains only aberration definitions and the names by which they are to be known; the AANT file can then refer to these aberrations by name, eliminating the need to retype the definitions at the time they are to be used.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The definitions are entered into the </span><span class="f_mine" style="text-decoration: underline;"><a href="macros.htm" class="topiclink">MACro</a></span><span class="f_mine"> editor exactly as they would be in an </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> file, except that the file begins with the mnemonic </span><span class="f_mine" style="font-weight: bold;">AFILE</span><span class="f_mine"> instead of </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine">. &nbsp;This MACro is </span><span class="f_mine" style="font-style: italic;">never executed</span><span class="f_mine">. &nbsp;It is simply saved by the editor as a file with the special name &quot;AFILE.MAC&quot;. &nbsp;Each aberration, or group of aberrations, that you want to recall in a later </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> file should be identified with a unique name, of up to 8 characters, either all numbers or starting with a letter, and containing no imbedded spaces or punctuation. &nbsp;Then the </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> file simply calls them by name. &nbsp;For example, suppose the </span><span class="f_mine" style="font-weight: bold;">AFILE</span><span class="f_mine"> contains the entries</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">AFILE</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">NAME RAYSET1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A 2 YA 0 0 .6</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A 2 YA 0 0 .8</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A 2 YA 0 0 1.</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">NAME OFFAXIS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A 2 YC 1 0 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A 2 YC 1 0 .8</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 2 A ABR -1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">S ABR -2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A 2 YC 1 0 -1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">MO 1 A 2 YC 1 0 -8</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 2 A ABR -1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">S ABR -2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">NAME AXCOLOR</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A 1 YA 0 0.7</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">S 3 YA 0 0.7</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">NAME SPHER</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A SA3</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">then a useful merit function could read simply</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">AANT P</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">AFILE SPHER</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">AFILE AXCOLOR 10</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">AFILE RAYSET1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">NAME EDGEPOS</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ECP .1 .01 2 4 5</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where each named aberration is identified by the word &quot;</span><span class="f_mine" style="font-weight: bold;">AFILE</span><span class="f_mine">&quot;, followed by the name of that aberration, and optionally a weighting factor that multiplies the weight originally input to the AFILE. &nbsp;For example, the first aberration in the above </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> file recalls the </span><span class="f_mine" style="font-weight: bold;">SA3</span><span class="f_mine"> target, which originally was given a weight of 1.0. &nbsp;The second, using the name AXCOLOR, gives a weight of 10, which multiplies the original weight of 1 on that aberration. &nbsp;The third name used, RAYSET1, includes the three rays defined under that name. &nbsp;The rayset OFFAXIS was not used by this </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> file, but an edge-control aberration was added, given the name EDGEPOS in the </span><span class="f_mine" style="font-weight: bold;">AANT</span><span class="f_mine"> file, at the time it was defined.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You may intermix </span><span class="f_mine" style="font-weight: bold;">AFILE</span><span class="f_mine"> references and locally defined aberrations at will, and optionally assign names to the latter. &nbsp;When the optimization is complete, you may examine the resulting aberrations (and definitions) with the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um109.htm#final" class="topiclink">FINAL</a></span><span class="f_mine"> command or with the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1011e.htm#alist" class="topiclink">ALIST</a></span><span class="f_mine"> command, which gives an abbreviated listing that shows the name, raw value, and relative contribution of each aberration to the merit function. &nbsp;The &quot;raw value&quot; of the aberration is the actual value of the quantity calculated, not the error measured from the target value.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For example, consider the following AANT file.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">AANT</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">NAME RAY1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M .01 1 A 2 YA 0 0.7</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">NAME RAY2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A 2 YA 0 0 .9</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">NAME EDGEP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">ECP 1 .1 3 6</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">After optimization, the FINAL list shows</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">SYNOPSYS AI&gt; </span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;FINAL </span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> ABERRATION LIST</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp; &nbsp;NAME &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TARGET &nbsp; &nbsp; &nbsp; &nbsp; WEIGHT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FINAL VALUE &nbsp; R. EFFECT</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 RAY1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.0100000 &nbsp; &nbsp; &nbsp;1.0000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.140562E-02 &nbsp; 0.005123</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; A &nbsp; 2 &nbsp;YA &nbsp; &nbsp;0.00000 &nbsp; 0.00000 &nbsp; 0.70000 &nbsp; 0.00000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 RAY2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.0000000 &nbsp; &nbsp; &nbsp;1.0000000 &nbsp; &nbsp; &nbsp; &nbsp; -0.111611E-02 &nbsp; 0.003230</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; A &nbsp; 2 &nbsp;YA &nbsp; &nbsp;0.00000 &nbsp; 0.00000 &nbsp; 0.90000 &nbsp; 0.00000</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3 EDGEP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.0000000 &nbsp; &nbsp; &nbsp;0.1000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.195563E-01 &nbsp; 0.991647</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp;UPPER R.R. EDGE CONTROL</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; 3</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; 6</span></p>
+<p class="p_heading3-5"><span class="f_heading3-5"> SYNOPSYS AI&gt;</span></p>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">and the </span><span class="f_mine" style="font-weight: bold;">ALIST</span><span class="f_mine"> gives</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">SYNOPSYS AI&gt;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">ALIST </span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> ABERRATION SUMMARY LIST</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> NO. NAME &nbsp; &nbsp; &nbsp; RAW VALUE &nbsp;REL. EFFECT &nbsp; NO. NAME &nbsp; &nbsp; &nbsp; RAW VALUE &nbsp;REL. EFFECT</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">______________________________________________________________________________</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 RAY1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.0114 &nbsp; &nbsp; &nbsp; 0.0051 &nbsp; &nbsp; 3 EDGEP &nbsp; &nbsp; &nbsp; &nbsp; 1.1956 &nbsp; &nbsp; &nbsp; 0.9916</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 RAY2 &nbsp; &nbsp; &nbsp; &nbsp; -0.0011 &nbsp; &nbsp; &nbsp; 0.0032</span></p>
+<p><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The actual ray intercept of the first ray was 0.0114, which is 0.001405 more than the target value of 0.01. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">FINAL</span><span class="f_mine"> list gives the latter number (times the weighting, which is here 1.0), and the </span><span class="f_mine" style="font-weight: bold;">AFILE</span><span class="f_mine"> the former. &nbsp;For aberration RAY2, the two are identical since the target was 0. &nbsp;The </span><span class="f_mine" style="font-weight: bold;">ALIST</span><span class="f_mine"> command may be used even if no AFILE or local names are present; the names will be printed as blanks, with the aberrations listed in order.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In case it is not clear, you do not </span><span class="f_mine" style="font-style: italic;">have</span><span class="f_mine"> to give names to your aberrations; this just to help you find them in what can be a rather long listing from FINAL or ALIST.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um1012.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

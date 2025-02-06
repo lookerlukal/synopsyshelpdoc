@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um622</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="EDGE command,feathered edges, table of" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p>&nbsp;</p>
+<p><a name="edge"></a><span style="font-weight: bold;">6.2.2 EDGE Thickness &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-decoration: underline;"><a href="um63.htm" class="topiclink">Next</a></span> <span style="text-decoration: underline;"><a href="um62.htm" class="topiclink">Previous</a></span> <span style="text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The commands</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">EDGE [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">EDGE [ </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSPS</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Produce a listing of the center and edge thicknesses for all adjacent surfaces which are not tilted or decentered. &nbsp;The calculation is performed in the Y-Z plane. &nbsp;The program examines the apertures on either side of an element or airspace, using the CAO values or EFILE point A if defined. &nbsp;Then it calculates the sags on both sides and finds the edge thickness.  </span><span class="f_mine" style="font-weight: bold;">EDGE</span><span class="f_mine"> may be run interactively from the dialog </span><span class="f_mine" style="font-weight: bold;">MUT.  </span><span class="f_mine">Individual edges may be controlled in optimization with the construction-parameter <a href="um1033.htm#eth" class="topiclink">ETH,</a> and edges can be monitored in the whole lens with the mnemonics <a href="um1037.htm#aec" class="topiclink">AEC</a>, AGE, AFE, and AAE.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">EDGE does not support hyperhemispherical surfaces, where there are two different sags for a given Y-coordinate. &nbsp;In such cases, feathering can be controlled as outlined in <a href="um1037.htm#aec" class="topiclink">Section 10.3.7</a>.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A sample EDGE listing is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;EDGE</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> ID FOUR-ELEMENT LENS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1646 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;05-JUN-18 &nbsp; 08:29:15</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SWITCH 39 IS ON; Y-HEIGHT IS EFILE POINT A OR E, IF DEFINED, OTHERWISE IS CAO</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> EDGE THICKNESS DATA</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp;SURF &nbsp; &nbsp; &nbsp; &nbsp;CENTER TH &nbsp; &nbsp;EDGE TH &nbsp; &nbsp; &nbsp;Y-HEIGHT-1 &nbsp; Y-HEIGHT-2 MEDIUM</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> _________________________________________________________________________</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1- &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; 7.7291 &nbsp; &nbsp; </span><span style="font-family: 'Courier New'; font-weight: bold; color: #ff0000;"> -1.5226</span><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; &nbsp; &nbsp;30.7460 &nbsp; &nbsp; &nbsp;30.6190 &nbsp; &nbsp;LAK21</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2- &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp; 5.0000 &nbsp; &nbsp; &nbsp; 9.9149 &nbsp; &nbsp; &nbsp;30.6190 &nbsp; &nbsp; &nbsp;30.6190 &nbsp; &nbsp;LAFN7</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3- &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp;28.6286 &nbsp; &nbsp; &nbsp;27.9682 &nbsp; &nbsp; &nbsp;30.6190 &nbsp; &nbsp; &nbsp; 0.0000 &nbsp; &nbsp;AIR</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 4- &nbsp;5 &nbsp; &nbsp; &nbsp; &nbsp;31.9644 &nbsp; &nbsp; &nbsp;37.6102 &nbsp; &nbsp; &nbsp;21.3076 &nbsp; &nbsp; &nbsp;20.3534 &nbsp; &nbsp;AIR</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5- &nbsp;6 &nbsp; &nbsp; &nbsp; &nbsp; 5.0000 &nbsp; &nbsp; &nbsp; 4.3863 &nbsp; &nbsp; &nbsp;21.2000 &nbsp; &nbsp; &nbsp;18.8926 &nbsp; &nbsp;SF6</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 6- &nbsp;7 &nbsp; &nbsp; &nbsp; &nbsp; 5.3513 &nbsp; &nbsp; &nbsp; 1.0562 &nbsp; &nbsp; &nbsp;18.8926 &nbsp; &nbsp; &nbsp;20.9460 &nbsp; &nbsp;AIR</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 7- &nbsp;8 &nbsp; &nbsp; &nbsp; &nbsp; 9.0000 &nbsp; &nbsp; &nbsp; 8.2986 &nbsp; &nbsp; &nbsp;20.9460 &nbsp; &nbsp; &nbsp;20.6643 &nbsp; &nbsp;LAK16A</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 8- &nbsp;9 &nbsp; &nbsp; &nbsp; &nbsp;99.8780 &nbsp; &nbsp; &nbsp;99.3189 &nbsp; &nbsp; &nbsp;20.6643 &nbsp; &nbsp; &nbsp; 0.0000 &nbsp; &nbsp;AIR</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In the above listing, the first element is feathered, as indicated by the negative edge thickness.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um63.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

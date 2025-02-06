@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um381</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="AT, BT, GT tilts,DECENTER,MAT, MBT,RAT. RBT, RGT tilts,relative option for tilts, decenters,remote tilts" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="relative"></a><span class="f_mine" style="font-weight: bold;">3.8.1 Relative, Remote &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um38.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3811.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Relative and remote tilts and decenters of optical elements are entered with parameters specifying a direction and a magnitude, and the number of surfaces involved. &nbsp;With these commands a single surface or a group of surfaces may be moved as a unit, and the program will automatically compute the reverse motions required to place the surfaces following the group at their normal position relative to the elements before the group.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A tilt may be specified about a point not at the vertex of the surface with the remote options RAD, RBT, and RGT. &nbsp;This feature calculates both the decenter and tilt of the group and does not accept separate DECENTER data.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="decenter"></a><span class="f_mine" style="font-weight: bold;">Decenters:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> </span><span class="f_mine" style="font-weight: bold;">DECENT </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XDC</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">YDC</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ZDC</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSURF</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NSURF</span><span class="f_mine">, the number of surfaces involved, is not specified, or is input as 1, the asymmetry applies to that surface only. &nbsp;If the number exceeds the remaining number of surfaces in the lens, the reverse motions are not applied, resulting in a permanent optical axis tilt or decenter.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Relative tilts may also be edited in the </span><span class="f_mine" style="font-weight: bold;">SPS</span><span class="f_mine"> dialog. &nbsp;The input commands, which are included in the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="umch3.htm#rle" class="topiclink">RLE</a></span><span class="f_mine"> or </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file, are as follows:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="381tilts"></a><span class="f_mine" style="font-weight: bold;">Tilts:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><img src="um3f19.png" width="226" height="61" alt="um3f19" style="width:226px;height:61px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">(Alpha Tilt)</span></p>
+<p class="p_mine"><span class="f_mine">(Beta Tilt)</span></p>
+<p class="p_mine"><span class="f_mine">(Gamma Tilt)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><img src="um3f20.png" width="268" height="65" alt="um3f20" style="width:268px;height:65px;border:none"></p>
+</td>
+<td style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">(Remote Alpha Tilt)</span></p>
+<p class="p_mine"><span class="f_mine">(Remote Beta Tilt)</span></p>
+<p class="p_mine"><span class="f_mine">(Remote Gamma Tilt)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A special set can be applied to mirrors with the input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> { MAT / MBT ) </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ANGLE</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">See <a href="um381.htm#mat" class="topiclink">below</a> for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The directions involved and the sign conventions are shown below. &nbsp;The magnitude of alpha and beta tilts should not exceed 90 degrees, and gamma tilts should be less than 180 degrees. &nbsp;The location of the tilt axis, if not at the vertex of the surface, may be given by the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">AXIS</span><span class="f_mine"> input if it is on the Z-axis, or by the remote tilt options RAT, RBT, and RGT, where the coordinates of the rotation point are explicitly entered with the arguments </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um46.htm#asy" class="topiclink">XR</a></span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um46.htm#asy" class="topiclink">YR</a></span><span class="f_mine" style="font-weight: bold;"><a href="um46.htm#asy" class="topiclink"> </a></span><span class="f_mine">and<a href="um46.htm#asy" class="topiclink"> </a></span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um46.htm#asy" class="topiclink">ZR</a></span><span class="f_mine">. &nbsp;Note that the latter option is converted by the program into a conventional decenter plus a centered tilt, and no other decenter should be entered when using this option. &nbsp;The equivalent decenters are printed with the<a href="um46.htm#asy" class="topiclink"> </a></span><span class="f_mine" style="text-decoration: underline;"><a href="um46.htm#asy" class="topiclink">ASY</a></span><span class="f_mine"> output.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 48px 0px 48px;"><span class="f_mine">Do not use the tilt angle of an RAT … RGT tilt as a design variable. &nbsp;Since the program does not retain the remote coordinates after it has converted to a centered tilt, a different tilt angle will not correspond to the resulting decenter. &nbsp;You may, however, vary the tilt angle when the tilt axis has been specified by the </span><span class="f_mine" style="text-decoration: underline;">AXIS</span><span class="f_mine"> input, since that dimension is honored continuously.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Keep in mind that the paraxial programs </span><span class="f_mine" style="font-style: italic;">ignore</span><span class="f_mine"> tilts and decenters. &nbsp;If you position surfaces with this options, the focal length, f/number, etc. may have little meaning. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um382.htm#global" class="topiclink">GLOBAL</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um3f21.png" width="548" height="225" alt="um3f21" style="width:548px;height:225px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You can vary the tilt angles with the PANT input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">VY </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> AT </span><span class="f_mine" style="text-decoration: underline;">NSURF</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">VY </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> BT </span><span class="f_mine" style="text-decoration: underline;">NSURF</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">VY </span><span class="f_mine" style="text-decoration: underline;">SN</span><span class="f_mine"> GT </span><span class="f_mine" style="text-decoration: underline;">NSURF</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">and you can target any of these quantities in the AANT file with input such as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">M 5.0 1 A TILT 4 &nbsp;,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">which specifies a target value of 5 degrees to the tilt angle on surface 4.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_p2-11"><a name="381pas"></a><span class="f_p2-11">The input</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_p3-10" style="margin: 0px 0px 0px 56px;"><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNA</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> PAS </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SNB</span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-10" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NSURF</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p class="p_mine"><span class="f_mine">picks up the tilts and decenters from surface </span><span class="f_mine" style="text-decoration: underline;">SNB</span><span class="f_mine"> (with a sign change if </span><span class="f_mine" style="text-decoration: underline;">SNB</span><span class="f_mine"> is negative) and applies them to a group of </span><span class="f_mine" style="text-decoration: underline;">NSURF</span><span class="f_mine"> surfaces beginning with surface </span><span class="f_mine" style="text-decoration: underline;">SNA</span><span class="f_mine">. &nbsp;Note that if surface </span><span class="f_mine" style="text-decoration: underline;">SNB</span><span class="f_mine"> uses a non-zero AXIS location, the sign of AXIS follows that for tilts. &nbsp;Surface </span><span class="f_mine" style="text-decoration: underline;">SNB</span><span class="f_mine"> must not be GLOBAL or LOCAL.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> RELATIVE</span><span class="f_mine"> will change a GLOBAL or LOCAL surface to a RELATIVE surface, if possible.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="undosurf"></a><span class="f_mine">Several rules must be observed when using relative tilts and decenters:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">1.</span></p>
+</td>
+<td style="vertical-align:top; width:496px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Only one tilt direction may be specified per surface (i.e., do not do both an AT and BT on the same surface). &nbsp;Decenters may be in all three directions at once. &nbsp;Coincident dummy surfaces may be used to provide compound tilts, or you can use the </span><span class="f_mine" style="text-decoration: underline;"><a href="um385.htm#group" class="topiclink">GROUP</a></span><span class="f_mine"> option, which allows tilts in three axes at the same surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">2.</span></p>
+</td>
+<td style="vertical-align:top; width:496px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="undosurf"></a><span class="f_mine">A surface or group tilt or decenter will automatically produce a compensating reverse decenter or tilt on the surface following the group. &nbsp;This surface is called the “undo” surface, and is identified in printed listings of the asymmetries in the lens (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um46.htm" class="topiclink">4.6</a></span><span class="f_mine">). &nbsp;There is no restriction regarding additional tilts and decenters on this surface, and any number of prior surfaces may utilize the same undo surface. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um2411.htm" class="topiclink">Section 2.4.1.1</a></span><span class="f_mine"> for more information.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">3.</span></p>
+</td>
+<td style="vertical-align:top; width:496px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">To apply both a tilt and a decenter to the same surface, enter the decenter first. &nbsp;The number of surfaces in the group must agree in both entries.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">4.</span></p>
+</td>
+<td style="vertical-align:top; width:496px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The location of the tilt axis is negative if it is to the left of the surface (i.e., in the -Z direction).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">5.</span></p>
+</td>
+<td style="vertical-align:top; width:496px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If a non-zero </span><span class="f_mine" style="text-decoration: underline;">AXIS</span><span class="f_mine"> is entered, a resulting decenter will be computed and added to whatever decenter was input previously. &nbsp;If a tilt entry with a non-zero axis is entered to change a previous tilt which also had a non-zero axis, the previous decenter will be dropped before the new one is calculated.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">6</span><span style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+</td>
+<td style="vertical-align:top; width:496px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="381tilt"></a><span class="f_mine">A relative tilt may be placed on the </span><span class="f_mine" style="font-weight: bold;">object surface</span><span class="f_mine">. &nbsp;In this case the data are assigned to surface number 0, the axis location is always assumed to be zero, and the group size entry is unused; the tilt affects the object surface only. &nbsp;You cannot pick up the object tilt with PAS or make anything coincident with it using COINCIDENT. &nbsp;There is no GLOBAL or LOCAL option for a tilted object. &nbsp;The object tilt may be varied in the PANT file and appear as a target in the AANT file, both using surface number 0.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The tilt option is not available for OBB, INFINITE, OBG, or OBD objects. &nbsp;(It only works on finite object specifications.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The</span><span class="f_mine" style="font-weight: bold;"> image</span><span class="f_mine"> may be tilted using any of the tilt options.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:16px; padding:4px; border:solid 1px #000000;"><p style="text-align: justify;"><span style="font-size: 11pt;">7.</span></p>
+</td>
+<td style="vertical-align:top; width:496px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="381nas"></a><span class="f_mine">Tilt and decenter data must be entered on separate lines. &nbsp;Tilts and decenters may be removed from a surface (and the associated UNDOsurface, if any) with the command</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:24px"></td><td style="border:none;padding:0"><span class="f_p5-7" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p5-7" style="font-size: 11pt; font-weight: bold;"> NAS</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_p5-7" style="font-size: 11pt;">(No ASymmetry).</span></td></tr></table></div><p class="p_p5-7" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p5-7">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To remove all tilts and decenters in the entire lens, enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-weight: bold;">NAS </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">in a CHG file with no surface number.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Deformations (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um33222.htm" class="topiclink">3.3.2.2.2</a></span><span class="f_mine">) are not removed by these instructions. &nbsp;The input</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:24px"><a name="381symm"></a></td><td style="border:none;padding:0"><span class="f_p5-7" style="font-size: 11pt; font-weight: bold;">SYMM</span></td></tr></table></div><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">removes all tilts, decenters, and deformations from the entire lens. &nbsp;No surface number is used on this command, which is entered as part of a </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um361.htm#chg" class="topiclink">CHG</a></span><span class="f_mine"> file.  </span><span class="f_mine" style="font-style: italic;">Note that the paraxial raytrace, and therefore pickup and solve computation, ignores all asymmetries</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_p5-7" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p5-7">&nbsp;</span></p>
+<p class="p_p5-7" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><a name="mat"></a><span class="f_p5-7" style="font-size: 16pt; font-weight: bold;">Tilting Mirrors</span></p>
+<p class="p_p5-7" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p5-7">&nbsp;</span></p>
+<p class="p_p5-7" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p5-7" style="font-size: 11pt;">When mirrors are tilted, one usually wants the axis following the mirror to get a second tilt equal to that of the mirror. &nbsp;This is done in one of two ways:</span></p>
+<p class="p_p5-7" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p5-7">&nbsp;</span></p>
+<p class="p_p5-7" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p5-7" style="font-size: 11pt;">1. &nbsp;A dummy surface is placed at the same location, on the axis, following the reflector surface, and is assigned the same tilt angle as the mirror. &nbsp;One usually employs the<a href="um381.htm#381pas" class="topiclink"> PAS</a> option, described above, which makes that surface pick up the angle of the mirror. &nbsp;The WorkSheet button </span><span class="f_p5-7" style="font-size: 11pt; font-weight: bold;">Fold here</span><span class="f_p5-7" style="font-size: 11pt;"> can automatically insert both surfaces to set up this geometry. &nbsp;If the mirror is to be inserted at the location of an existing dummy surface, the WorkSheet can optionally use that surface as the mirror and then add just one more dummy for the axis tilt.</span></p>
+<p class="p_p5-7" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p5-7">&nbsp;</span></p>
+<p class="p_p5-7" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p5-7" style="font-size: 11pt;">2. &nbsp;If you do not want an extra dummy surface located at the mirror, the format </span><span class="f_p5-7" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SN</span><span class="f_p5-7" style="font-size: 11pt; font-weight: bold;"> { MAT / MBT } </span><span class="f_p5-7" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ANGLE</span><span class="f_p5-7" style="font-size: 11pt;"> will assign the requested tilt angle to the mirror and then implement a </span><span class="f_p5-7" style="font-size: 11pt; font-style: italic;">negative</span><span class="f_p5-7" style="font-size: 11pt;"> undo on the next surface -- which has the effect of tilting that surface by an equal angle, putting it on the tilted optical axis. The WorkSheet can automatically insert a fold mirror with this geometry too. &nbsp;The surface following the mirror is then available for any other tilt or decenter. &nbsp;Note that this method does not allow an additional decenter on the mirror, since the paraxial raytrace does not have valid separations in this case. &nbsp;If you need to decenter the mirror before it is tilted, use the two-surface method, above.</span></p>
+<p class="p_p5-7" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p5-7">&nbsp;</span></p>
+<p class="p_p5-7" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p5-7" style="font-size: 11pt;">To change a mirror tilt to an ordinary relative tilt, first change the following surface (with the negative undo) to GLOBAL or LOCAL. &nbsp;This will change the status of both that surface and the surface with the mirror tilt, leaving the locations and angles unchanged.</span></p>
+<p class="p_p5-7" style="text-indent: -24px; margin: 0px 0px 0px 24px;"><span class="f_p5-7">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um3811.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um38.htm" class="topiclink">previous</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

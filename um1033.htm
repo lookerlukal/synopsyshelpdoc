@@ -1,0 +1,782 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>construction parameter aberrations</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ADIFF,AVOL,CAM, controlling shape,Centroid: control via XLOC, YLOC,Construction parameter aberrations,FCLEAR,optimization--&gt;,Paraxial raypath, correcting,PYA, etc. (Paraxial aberrations),STRAIN aberration,ZM3" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><a name="um1033"></a><span class="f_mine" style="font-weight: bold;">10.3.3 Construction parameter aberrations &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10331.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10323.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Construction parameter aberrations are specified by input of two kinds. &nbsp;The first takes a mnemonic followed by a surface number, in the format</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> A / S / MUL / DIV } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">name</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">name</span><span class="f_mine"> is one of the following:</span></p>
+<p class="p_p3-9"><span class="f_p3-9">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px -7px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#ard" class="topiclink">RD</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#axdc" class="topiclink">ZDC</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aag" class="topiclink">GG</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#apya" class="topiclink">PYA</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#apxa" class="topiclink">PXA</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#ard" class="topiclink">RAD</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#gsa" class="topiclink">GSA, GSC</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aal" class="topiclink">XL</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#apya" class="topiclink">PYB</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#apxa" class="topiclink">PXB</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aind" class="topiclink">IND</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#argr" class="topiclink">RGR</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aal" class="topiclink">YL</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#apya" class="topiclink">PUA</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#apxa" class="topiclink">PVA</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#apdisp" class="topiclink">PDISP</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#axg" class="topiclink">XG</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aal" class="topiclink">ZL</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#apya" class="topiclink">PUB</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#apxa" class="topiclink">PVB</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#ath" class="topiclink">TH</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#axg" class="topiclink">YG</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aal" class="topiclink">AL</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#apya" class="topiclink">POW</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#apxa" class="topiclink">PJA</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#atilt" class="topiclink">TILT</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#axg" class="topiclink">ZG</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aal" class="topiclink">BL</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#apya" class="topiclink">PIB</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#apxa" class="topiclink">PJB</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#axdc" class="topiclink">XDC</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aag" class="topiclink">AG</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aal" class="topiclink">GL</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#acv" class="topiclink">CV</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#cslopeabrn" class="topiclink">CSLOPE</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#axdc" class="topiclink">YDC</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aag" class="topiclink">BG</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#acao" class="topiclink">CAO</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#acc" class="topiclink">CC</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_mine-1" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#caxaberration" class="topiclink">CAX, CAY</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#awgt" class="topiclink">WGT</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#axe" class="topiclink">XE</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#axe" class="topiclink">YE</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#axe" class="topiclink">ZE</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#axe" class="topiclink">AE</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#axe" class="topiclink">BE</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#axe" class="topiclink">GE</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#astrain" class="topiclink">STRAIN</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#ascao" class="topiclink">SCAO</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#afrms" class="topiclink">FRMS</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#afslope" class="topiclink">FSLOPE</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#affhigh" class="topiclink">FFHIGH</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#afflow" class="topiclink">FFLOW</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#afftir" class="topiclink">FFTIR</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#affrms" class="topiclink">FFRMS</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#affalpha" class="topiclink">FFALPHA</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#affbeta" class="topiclink">FFBETA</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#eth" class="topiclink">ETH</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#blth" class="topiclink">BLTH</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#zm3" class="topiclink">ZM1 - ZM3</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#avol" class="topiclink">ADIFF</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#avol" class="topiclink">AVOL</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#afclear" class="topiclink">FCLEAR</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#agmn" class="topiclink">GMN</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#agmn" class="topiclink">GMV</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#dcx" class="topiclink">DCX</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#dcx" class="topiclink">DCY</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#stx" class="topiclink">STX, STY</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#nurbsabrn" class="topiclink">NURBS</a></span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#xnurbsabrn" class="topiclink">XNURBS</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span style="font-size: 12pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#asphabrn" class="topiclink">ASPH</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#anar" class="topiclink">NAR</a></span></p>
+</td>
+<td style="vertical-align:top; width:111px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12" style="font-size: 11pt; font-weight: bold; text-decoration: underline;"><a href="um1033.htm#anar" class="topiclink">RNAR</a></span></p>
+</td>
+<td style="vertical-align:top; width:113px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:87px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><span class="f_t12">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p class="p_mine"><span class="f_mine">The second type takes a mnemonic and zero or more additional numbers.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="text-indent: 48px;"><span class="f_mine" style="font-family: 'Times New Roman'; font-weight: bold;">{</span><span class="f_mine" style="font-weight: bold;"> A / S / MUL / DIV } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">name</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">where </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">name</span><span class="f_mine"> is one of the following:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;"><a href="um1033.htm#azdata" class="topiclink">ZDATA ngroup</a></span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"> zoom</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#asag" class="topiclink">SAG sn</a> x y</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aasag" class="topiclink">ASAG sn</a> x y</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aconst" class="topiclink">CONST nb</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#agc" class="topiclink">GC nb</a> isn</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aabr" class="topiclink">ABR nb</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#ag" class="topiclink">G nb</a> isn</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aoal" class="topiclink">OAL jsss</a> jsps</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#lsx" class="topiclink">LS{X/Y/Z} low</a> high</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#slope" class="topiclink">SLOPE sn</a> x y</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#slope" class="topiclink">XSLOPE sn</a> x y</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#axloc" class="topiclink">XLOC</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#ayloc" class="topiclink">YLOC</a></span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aant_tsag" class="topiclink">TSAG</a></span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">isn</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">fraction</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um1033.htm#aant_tsag" class="topiclink">TYSAG</a></span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">isn</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Y-height</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="ard"></a><span class="f_mine" style="font-weight: bold;">RD or RAD</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:675px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">refers to the radius of curvature. &nbsp;For conics, the axial radius (a**</span><span class="f_mine" style="vertical-align: super;">2 </span><span class="f_mine">/ b) is used.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td rowspan="7" style="vertical-align:top; width:1px; padding:4px; border:solid 1px #000000; border-top:none; border-right:none; border-bottom:none; border-left:none;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="acv"></a><span class="f_mine" style="font-weight: bold;">CV</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:675px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the curvature, or 1 / RADIUS.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="acc"></a><span class="f_mine" style="font-weight: bold;">CC</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:675px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">refers to the conic constant.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="aind"></a><span class="f_mine" style="font-weight: bold;">IND</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:675px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">refers to the primary index.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="apdisp"></a><span class="f_mine" style="font-weight: bold;">PDISP</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:675px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">refers to the difference between Nlong and Nshort.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="ath"></a><span class="f_mine" style="font-weight: bold;">TH</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:675px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the axial thickness or airspace. &nbsp;(Note: to target the </span><span class="f_mine" style="font-style: italic;">object</span><span class="f_mine"> distance, use &quot;TH0&quot;, not &quot;TH 0&quot; or “0 TH” -- see </span><span class="f_mine" style="text-decoration: underline;"><a href="um1032.htm" class="topiclink">10.3.2</a></span><span class="f_mine">.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="atilt"></a><span class="f_mine" style="font-weight: bold;">TILT</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:675px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the angle, in degrees, of the AT, BT, or GT on that surface. &nbsp;Undo tilts are ignored. &nbsp;This is not used to target GLOBAL or LOCAL tilts, which have other mnemonics (see </span><span class="f_mine" style="text-decoration: underline;"><a href="um1033.htm#aag" class="topiclink">below</a></span><span class="f_mine">).</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="4" style="vertical-align:top; width:191px; padding:4px; border:solid 1px #000000;"><p class="p_heading2-3"><a name="axdc"></a><span class="f_heading2-3">XDC, YDC, and ZDC</span></p>
+</td>
+<td colspan="6" style="vertical-align:top; width:580px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">are the amount of relative surface decenter (not LOCAL or GLOBAL).</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:106px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="anar"></a><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">NAR, RNAR</span></p>
+</td>
+<td colspan="9" style="vertical-align:top; width:695px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9" style="font-size: 11pt;">refer to the </span><span class="f_p3-9" style="font-size: 11pt; text-decoration: underline;"><a href="um54.htm#nar" class="topiclink">narcissus</a></span><span class="f_p3-9" style="font-size: 11pt;"> contribution of that surface &nbsp;NAR is the value of YNi at the requested surface, while RNAR is the ratio of the values calculated for the marginal and chief rays.</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:106px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="argr"></a><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">RGR</span></p>
+</td>
+<td colspan="9" style="vertical-align:top; width:695px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9" style="font-size: 11pt;">is similar to the </span><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">NAR</span><span class="f_p3-9" style="font-size: 11pt;"> aberration, except that it refers to a ghost image of the detector at a pupil position rather than back at the detector.</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The value calculated for this aberration, multiplied by the value of YA at the pupil, is the value of YA of the retroreflected axial paraxial marginal ray at the pupil.</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="awgt"></a><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">WGT</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the weight, in grams, of the element between this surface and the next. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um52.htm" class="topiclink">section 5.2</a></span><span class="f_mine">. &nbsp;This calculation currently ignores any </span><span class="f_mine" style="text-decoration: underline;"><a href="um78.htm#efile" class="topiclink">EFILE</a></span><span class="f_mine"> data that may be in effect.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="axg"></a><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">XG, YG, ZG</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">are the GLOBAL coordinates of the surface. </span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="aag"></a><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">AG, BG, GG</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9" style="font-size: 11pt;">are the GLOBAL angles of the surface</span><span class="f_p3-9" style="font-size: 10pt;">, in degrees</span><span class="f_p3-9" style="font-size: 11pt; font-family: 'Times New Roman';">.</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="7" style="vertical-align:top; width:172px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="aal"></a><span class="f_mine" style="font-weight: bold;">XL, YL, ZL, AL, BL, GL</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:541px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">are the position and angles in LOCAL coordinates (i.e., in the coordinate system of the previous surface) , in degrees.</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="7" style="vertical-align:top; width:172px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="axe"></a><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">XE, YE, ZE, AE, BE, GE</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+<td colspan="3" style="vertical-align:top; width:541px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9" style="font-size: 11pt;">control the </span><span class="f_p3-9" style="font-size: 11pt; text-decoration: underline;"><a href="um384.htm#external" class="topiclink">EXTERNAL</a></span><span class="f_p3-9" style="font-size: 11pt;"> positions and angles.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="8" style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="apya"></a><span class="f_mine" style="font-weight: bold;">PYA, PYB, PUA, PUB, POW, PIB</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:347px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">are the Y, U, and I (angle of incidence) values for the A and B paraxial rays. &nbsp;Ray A is the axial marginal ray, and ray B is the chief ray. POW is the element power.</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="8" style="vertical-align:top; width:281px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="apxa"></a><span class="f_mine" style="font-weight: bold;">PXA, PXB, PVA, PVB, PJA, PJB</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:347px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">correspond to the PYA, etc. aberrations above, except that they apply to the skew plane. &nbsp;These aberrations are zero unless XPXT is turned on. &nbsp;PJA is power in the X-Z plane.</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; width:82px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-align: left; text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="agc"></a><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">GC </span><span class="f_p3-9" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-9" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ISN</span></p>
+</td>
+<td colspan="8" style="vertical-align:top; width:686px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">refers to GRIN coefficients, defined in </span><span class="f_mine" style="text-decoration: underline;"><a href="um102.htm#vgc" class="topiclink">section 10.2</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="6" style="vertical-align:top; width:221px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="azdata"></a><span class="f_mine" style="font-weight: bold;">ZDATA </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NGROUP</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NZOOM</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+<td colspan="4" style="vertical-align:top; width:550px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the ZDATA zoom of group </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NGROUP</span><span class="f_mine"> at zoom </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NZOOM</span><span class="f_mine">. The lens must be a ZFILE zoom lens.</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:106px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-align: left; text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="ag"></a><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">G </span><span class="f_p3-9" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p3-9" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">ISN</span></p>
+</td>
+<td colspan="9" style="vertical-align:top; width:695px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">targets an aspheric coefficient (DC1 terms, etc): &nbsp;G number </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> on surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ISN</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:106px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="acao"></a><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">CAO</span></p>
+</td>
+<td colspan="9" style="vertical-align:top; width:695px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-align: left; text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9" style="font-size: 11pt;">Is the radius of the clear aperture. &nbsp;This will be calculated during optimization, so it is always current. &nbsp;If the surface has a hard CAO, this quantity will be fixed unless the CAO is also a variable. &nbsp;See </span><span class="f_p3-9" style="font-size: 11pt; text-decoration: underline;"><a href="um62.htm#um621" class="topiclink">section 6.2.1</a></span><span class="f_p3-9" style="font-size: 11pt;"> for a discussion of the default definition. &nbsp;If the surface has a hard EAO or RAO, the Y semi-axis is returned. &nbsp;See </span><span class="f_p3-9" style="font-size: 11pt; text-decoration: underline;"><a href="um331.htm#um3311" class="topiclink">section 3.3.1.1</a></span><span class="f_p3-9" style="font-size: 11pt;"> for a description of these features.</span></p>
+<p class="p_p3-9" style="text-align: left; text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+<p class="p_p3-9" style="text-align: left; text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9" style="font-size: 11pt;">This aberration will control the aperture at a single surface at the current ACON and ZOOM. &nbsp;If you want to control the apertures of all elements in the lens, use the </span><span class="f_p3-9" style="font-size: 11pt; text-decoration: underline;"><a href="um103_14.htm#aac" class="topiclink">AAC</a></span><span class="f_p3-9" style="font-size: 11pt;"> control</span></p>
+<p class="p_p3-9" style="text-align: left; text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:106px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="ascao"></a><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">SCAO</span></p>
+</td>
+<td colspan="9" style="vertical-align:top; width:695px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9" style="font-size: 11pt;">This returns the sag of the surface at the clear aperture given by the current CAO value. &nbsp;It is intended to help control edge feathering in zoom lenses, where the ECP and ECN features do not account for the feathering that may occur at apertures in a different zoom setting. &nbsp;The monitor </span><span class="f_p3-9" style="font-size: 11pt; text-decoration: underline;"><a href="um103_15.htm" class="topiclink">AZA</a></span><span class="f_p3-9" style="font-size: 11pt;"> is intended to control things automatically, but you may get more detailed control with this option.</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:106px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="axloc"></a><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">XLOC</span></p>
+</td>
+<td colspan="9" style="vertical-align:top; width:695px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9" style="font-size: 11pt;">is the actual value of the X coordinate of the image centroid most recently defined by a previous GNN request.</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:106px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="ayloc"></a><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">YLOC</span></p>
+</td>
+<td colspan="9" style="vertical-align:top; width:695px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9" style="font-size: 11pt;">is the actual value of the Y coordinate of the image centroid most recently defined by a previous GNN request.</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:106px; padding:4px; border:solid 1px #000000;"><p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><a name="aabr"></a><span class="f_p3-9" style="font-size: 11pt; font-weight: bold;">ABR </span><span class="f_p3-9" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">NB</span></p>
+</td>
+<td colspan="9" style="vertical-align:top; width:695px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">refers to a previous weighted aberration, which may be reused in combination with other composite members. &nbsp;The number entered for </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine"> refers to the aberration number to be reused, if it is positive. &nbsp;If negative, it refers to the current number plus the entered value. &nbsp;(To refer to the just-previous aberration, you would enter -1, and so on.)</span></p>
+<p class="p_p3-9" style="text-indent: 0px; margin: 0px 0px 0px 0px;"><span class="f_p3-9">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="asag"></a><span class="f_mine" style="font-weight: bold;">SAG </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">X</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Y</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">refers to the surface sag of surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine">, at the coordinates X Y. &nbsp;There is also a form that returns the sag of a surface at the current CAO aperture, this is the</span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"> </span><span class="f_mine" style="text-decoration: underline;"><a href="um1033.htm#ascao" class="topiclink">SCAO</a></span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="aasag"></a><span class="f_mine" style="font-weight: bold;">ASAG </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">X</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">Y</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Unlike the SAG operand, which returns the actual sag of a surface, the ASAG returns only that part of the sag that is contributed by the aspheric coefficients. &nbsp;This applies to the basic power-series aspherics and Zernike surfaces. &nbsp;For all other shapes, including USS surfaces, the total sag is returned.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="aconst"></a><span class="f_mine" style="font-weight: bold;">CONST </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">enters a constant, </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NB</span><span class="f_mine">, to be used in combination with other aberration components when the compound aberration involves a constant.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="aoal"></a><span class="f_mine" style="font-weight: bold;">OAL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSSS</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JSPS</span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:571px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the overall length between two surfaces, as defined by the sum of the intervening thickness. &nbsp;This uses only the TH value, which may not be appropriate if global or local positions are involved.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="5" style="vertical-align:top; width:178px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="astrain"></a><span class="f_mine" style="font-weight: bold;">STRAIN </span></p>
+</td>
+<td colspan="5" style="vertical-align:top; width:571px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the </span><span class="f_mine" style="text-decoration: underline;"><a href="um69.htm#strain" class="topiclink">strain</a></span><span class="f_mine"> of an element. &nbsp;This might serve to reduce the aberrations (and power) of the selected element.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="afrms"></a><span class="f_mine" style="font-weight: bold;">FRMS</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This aberration applies only to a surface defined as USS type 9, which uses </span><span class="f_mine" style="text-decoration: underline;"><a href="um3327.htm#forbes" class="topiclink">Forbes</a></span><span class="f_mine"> aspheric polynomials type A to describe the departure of the surface from a sphere + conic section. &nbsp;It controls the RMS departure of the aspheric terms from the base conic.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Note that you can also control the departure of an aspheric surface from the best-fitting sphere via the </span><span class="f_mine" style="text-decoration: underline;"><a href="um103_11.htm#clink_adef" class="topiclink">CLINK</a></span><span class="f_mine"> option, where the data are calculated by the ADEF command. &nbsp;See the above link for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="afslope"></a><span class="f_mine" style="font-weight: bold;">FSLOPE</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This form controls the slope error of a Forbes polynomial type B, or USS type 11. &nbsp;See above.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="affhigh"></a><span class="f_mine" style="font-weight: bold;">FFHIGH</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the highest (most positive) reduced sag of a free-form surface. &nbsp;See </span><span class="f_mine" style="text-decoration: underline;"><a href="um549.htm#um549" class="topiclink">Section 5.49</a></span><span class="f_mine"> for a description of this term.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="afflow"></a><span class="f_mine" style="font-weight: bold;">FFLOW</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the lowest (most negative) reduced sag of a free-form surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="afftir"></a><span class="f_mine" style="font-weight: bold;">FFTIR</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the total runout due to the non-symmetric terms in a Zernike expansion of a free-form surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="affrms"></a><span class="f_mine" style="font-weight: bold;">FFRMS</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the rms runout due to the non-symmetric terms in a Zernike expansion of a free-form surface.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="affalpha"></a><span class="f_mine" style="font-weight: bold;">FFALPHA</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the alpha angle (in the Y-Z plane) of the surface normal of a free-form surface at the optical center (the on-axis chief-ray point). &nbsp;This angle defines the axis of the part when it is centered in a lathe.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="affbeta"></a><span class="f_mine" style="font-weight: bold;">FFBETA</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the beta angle (in the X-Z plane) of the surface normal of a free-form surface at the optical center (the on-axis chief-ray point). &nbsp;This angle defines the axis of the part when it is centered in a lathe.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="eth"></a><span class="f_mine" style="font-weight: bold;">ETH</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the edge thickness of an element or airspace. &nbsp;This is calculated at the current <a href="um331.htm#cao" class="topiclink">CAO</a> (not the <a href="um78.htm#efile" class="topiclink">EFILE</a> edge) and ignores any tilt or decenter on the surface following </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine">. &nbsp;It is not appropriate for hyperhemispherical surfaces, which have two different sags at the same Y-coordinate.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="blth"></a><span class="f_mine" style="font-weight: bold;">BLTH</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">controls the thickness of a lens blank. &nbsp;The program takes the axial thickness of the designated surface and adds the sag of the curves at the current <a href="um331.htm#cao" class="topiclink">CAO</a> on both sides if they are concave, but not if convex. &nbsp;The calculation is performed in the Y-Z plane, ignoring any tilt or decenter on the second side of the element.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The absolute value is returned, so the answer is always positive.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="lsx"></a><span class="f_mine" style="font-weight: bold;">LSX, LSY, LSZ</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These quantities will control the (X, Y, Z) separation between two surfaces that are not numerically adjacent. &nbsp;If the surfaces are adjacent, then the usual edge-thickness controls can easily prevent feathered edges or too small an airspace, but if the surfaces are not adjacent, those controls do not work. &nbsp;They are also useful if the overlap is in the Y-direction, where the edge controls do not work.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">For example, in order to athermalize a lens, one might add a dummy surface between surfaces 4 and 5, assign different expansion coefficients to surfaces 4 and (the inserted) 5, and vary those and other lens parameters. &nbsp;That will tell you where surface 5 should go so you can attach two sleeves to compensate for thermal changes, using the <a href="um59.htm#shadow" class="topiclink">thermal shadowing</a> feature. &nbsp;But you do not want surfaces 4 and 6 to collide, and since they are no longer adjacent numerically, <a href="um1037.htm#aec" class="topiclink">AEC</a> and ECP/N will not work.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">You could then enter, in the AANT file,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M 3 1 A LSZ 4 6</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This will control the Z-component of the spacing between surfaces 4 and 6, taken at the current CAO apertures on both surfaces, and target the result to 3 lens units. &nbsp;The program converts this request into the following, in this case:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">M 3 1</span></p>
+<p class="p_mine"><span class="f_mine">A ZG 6</span></p>
+<p class="p_mine"><span class="f_mine">S ZG 4</span></p>
+<p class="p_mine"><span class="f_mine">A SCAO 6</span></p>
+<p class="p_mine"><span class="f_mine">S SCAO 4</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The calculation picks up the global Z-coordinates of the surfaces in this example, but If the system is folded so the local Z-axis is parallel to the Y-axis of surface 1, then one should use the global Y instead. &nbsp;That is the purpose of the LSY option, and similarly for LSX.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="zm3"></a><span class="f_mine" style="font-weight: bold;">ZM1 - ZM3</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These parameters control the first three moments of a ZFILE zoom lens cam curve. &nbsp;ZM1 is the RSS first derivative of the zoom motions of the selected group; ZM2 encodes the second derivative, and ZM3 the third. &nbsp;One often wants to avoid cam curves that swing wildly up and down since, even though the image may look excellent, it will be a challenge to make a cam with that kind of motion. &nbsp;The third moment in such cases will be much larger than for a gentle curve and can be controlled with the ZM3 aberration.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This entry is followed by the number of the group you wish to control.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To evaluate the current moments of the cam curve, use </span><span class="f_mine" style="text-decoration: underline;"><a href="um10712.htm#cam" class="topiclink">CAM STATISTICS</a></span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="avol"></a><span class="f_mine" style="font-weight: bold;">AVOL, ADIFF</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These aberrations only apply to those aspherics that can be analyzed by </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um516.htm#adef" class="topiclink">ADEF</a></span><span class="f_mine">. &nbsp;They call that program, which compares the current shape with the closest fitting sphere and then returns with the values of the total volume removed to generate the asphere and the maximum sag difference between it and the sphere. &nbsp;If your asphere has large coefficients and the image shows wild swings up and down -- which happens all too often -- you can use these to tone things down. &nbsp;You can also use these to remove an asphere if the lens won't let you simply delete the coefficients. &nbsp;Target one or both to zero, and if that converges you should then be able to declare the surface a sphere.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="afclear"></a><span class="f_mine" style="font-weight: bold;">FCLEAR</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Use this when you want the separation between two adjacent surfaces to become large enough to accomodate a fold mirror. &nbsp;A negative value indicates insufficient clearance, and you should ask for a positive value large enough to allow for mounting hardware, etc.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The program evaluates the current CAOs of surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine"> and </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine">+1, plus the sags of the two, and determines whether a 45-degree fold mirror will fit in the space between. &nbsp;The sign of the returned aberration is independent of the sign of the thickness of surface </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SN</span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><a name="agmn"></a><span class="f_mine" style="font-weight: bold;">GMN, GMV</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These quantities target the Nd and Vd of the glass model.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><a name="dcx"></a><span class="f_t12" style="font-weight: bold;">DCX, DCY</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These return the current decenter of the CAO of the surface in X and Y. &nbsp;They can be used in conjunction with the </span><span class="f_mine" style="text-decoration: underline;"><a href="um10312.htm#vclear" class="topiclink">SCLEAR</a></span><span class="f_mine"> aberration in cases where the CAO is decentered via the </span><span class="f_mine" style="text-decoration: underline;"><a href="um331.htm#dccr" class="topiclink">DCCR</a></span><span class="f_mine"> declaration.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><a name="stx"></a><span class="f_t12" style="font-weight: bold;">STX, STY</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These quantities are intended for use when designing Zernike polynomial surfaces. &nbsp;It is possible for such surfaces to wind up at a steep angle to the vertex plane if certain coefficients are varied. &nbsp;Term G 2, for example, acts like a tilt term on the surface, and the result is then not well described by the actual tilt assigned to the vertex plane. &nbsp;In extreme cases, rays may fail to trace since they must encounter the vertex plane first.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The aberration calculated by these terms is found by taking the sag of the resulting surface at a small positive and negative value of Y on the surface, and finding the difference. &nbsp;If they are equal, the surface is tangent to the vertex plane at the origin and the return is zero. &nbsp;If not, the value is approximately twice the tangent of the angular difference between the surface and the vertex plane.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><a name="slope"></a><span class="f_t12" style="font-weight: bold;">SLOPE, XSLOPE</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These aberrations return the tangent of the slope angle in Y or X of the surface at the given (X,Y) point. &nbsp;It is useful when certain types of aspheres fly rapidly away outside of the useful aperture. &nbsp;In such cases, it is possible for a ray to have more than a single intersection point with that surface, which in turn leads to ray failures if the program finds the wrong one. &nbsp;Keeping the slope under control should avoid this problem.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><a name="caxaberration"></a><span class="f_t12" style="font-weight: bold;">CAX, CAY</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These return the current decenter of a hard CAO on the given surface in X and Y.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><a name="nurbsabrn"></a><span class="f_t12" style="font-weight: bold;">NURBS</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This form targets the individual Z-component of each of the control points of a USS 15 NURBS surface. &nbsp;It is possible for the terms to become very large when varied, with alternating signs, and the surface may appear smooth. &nbsp;But it is not a situation to be desired. &nbsp;this operand should tone things down.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><a name="xnurbsabrn"></a><span class="f_t12" style="font-weight: bold;">XNURBS</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This is similar to the NURBS version, but applies to the Z-coordinates of the XLD array assigned to a type USS 24 extended XNURBS surface. &nbsp;See the comments for NURBS, above.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><a name="asphabrn"></a><span class="f_t12" style="font-weight: bold;">ASPH</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This operand is used when you want to change an aspheric surface to spherical. &nbsp;Sometimes, just deleting the aspheric terms and conic constant leads to ray failures, so you need to get there gently, with the help of the program.  </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the target surface is defined by a conic constant, G-series polynomial terms, or Zernike terms, this option will add a target of zero for each nonzero term, with a weight equal to the inverse of the current value times the entered weight value.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><a name="cslopeabrn"></a><span class="f_t12" style="font-weight: bold;">CSLOPE</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">This operand will return the tangent of the slope of the surface at the current CAO. &nbsp;It is used for controlling the slope of a surface in a ZFILE zoom lens, where the steepest slope can occur at an unpredictable zoom position. &nbsp;Since the default CAOs are calculated at the maximum aperture used by all zooms, this will control the slope at that position.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A monitor is available that will limit the slopes of all surfaces; see </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um103_12.htm#asc" class="topiclink">ACS</a></span><span class="f_mine">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><a name="gsa"></a><span class="f_t12" style="font-weight: bold;">GSA, GSC</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">These operands are intended for when you are designing molded glass aspheric lenses and you want to avoid the &quot;gull-wing&quot; shape. &nbsp;Consider the lens below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="clip0457.png" width="302" height="250" alt="clip0457" style="width:302px;height:250px;border:none"></p>
+<p class="p_mine"><span class="f_mine">The shape of surface 7 might cause a problem in molding if the process involves pressing a heated glass globule into an aspheric mold. &nbsp;The center of the surface is convex, and then it becomes concave partway out to the edge. &nbsp;This geometry can cause air to become trapped between the glass and the mold, since it has nowhere to go once the center and edge of the mold are in contact with the glass. &nbsp;Then the lens will not match the mold in that area. &nbsp;In brief, the sag of the shape has a stationary point (SP) between the axis and margin, which must be avoided. &nbsp;The same issue is seen at surface 3.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">One way to deal with the problem is to try to move the SP either to the axis or to the edge of the lens, and that is the function of these operands. &nbsp;GSA returns the fractional aperture of the SP measured from the axis. &nbsp;GSC returns the fractional distance from the CAO of the surface. &nbsp;If the return goes to zero, then the surface does not have a gull-wing shape anymore.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In this example, it is unlikely one can move the SP to the edge of either surface, since the slope there wants to be quite large. &nbsp;So the GSA version would likely work better in this instance.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This issue does not arise with molded plastic lenses, since the process is very different.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" style="vertical-align:top; width:100px; padding:4px; border:solid 1px #000000;"><p class="p_t12"><a name="aant_tsag"></a><span class="f_t12" style="font-weight: bold;">TSAG, TYSAG</span></p>
+</td>
+<td colspan="7" style="vertical-align:top; width:671px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">The aberration </span><span class="f_mine" style="font-weight: bold;">TSAG</span><span class="f_mine"> calculates the local thickness of an element at the specified zone, given as a fraction of the current clear aperture. &nbsp;It takes the current thickness, subtracts the sag of the given surface at that zone, and adds the sag of the next one. &nbsp;This can be used to control the maximum and minimum thickness of molded plastic elements, which must be constrained within a certain range since the material changes upon cooling. &nbsp;For example,</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">LLL 2 1 .5 A TSAG 3 0.55</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">will control the local thickness of surface 3 at the zone 0.55 times the current clear aperture radius, and penalize the MF if that value goes below 2.0 mm.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The form </span><span class="f_mine" style="font-weight: bold;">TYSAG</span><span class="f_mine"> is similar, except the height is specified in Y. in lens units, rather than as a fraction of the CAO.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The input </span><span class="f_mine" style="font-weight: bold;">ABR</span><span class="f_mine"> is most frequently used to permit correcting the differences between individual ray intercepts as well as the intercepts themselves, without tracing the rays more than once. &nbsp;For example, to correct the </span><span class="f_mine" style="font-weight: bold;">YC</span><span class="f_mine"> aberration at full field for the meridional fan at zones .8 and 1.0, and at the same time correct the </span><span class="f_mine" style="font-style: italic;">differences</span><span class="f_mine"> in the Y intercepts for these two rays, you could enter</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A 2 YC 1 0 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 1 A 2 YC 1 0.8</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">M 0 2 A ABR -1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">S ABR -2.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This will correct the transverse aberration and also minimize the slope of the TFAN at the .8 to 1.0 zone, with a weight of 2.0.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um10331.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

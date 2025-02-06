@@ -1,0 +1,355 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>um867</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="image analysis,image analysis partial coherence,PARTC" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+html {
+  overflow-x: auto; overflow-y: scroll;
+}
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+      .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #ffffff; }
+      .sync-toc a:hover { text-decoration: underline; }
+
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+
+
+
+</head>
+<body>
+
+
+<div id="idcontent"><div id="innerdiv">
+<!--ZOOMRESTART-->
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="partc"></a><span class="f_mine" style="font-weight: bold;">8.6.7 Partial Coherence Analysis &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um868.htm" class="topiclink">Next</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um8615.htm" class="topiclink">Previous</a></span><span class="f_mine" style="font-family: 'Times New Roman';"> </span><span class="f_mine" style="font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The image of a self-luminous or diffuse target differs from that of a target illuminated via a condenser system as in a microscope or slide projector, when diffraction is taken into account. &nbsp;In the latter kind of system it is customary to illuminate the target or transparency by forming a real image of a light source at the entrance pupil of the projection lens, and, depending on the design of the condenser, the pupil may or may not be completely filled with the image of the filament.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the pupil is filled only at its center, as with a laser source, the various points of the target are illuminated by radiation coherent with that from every other point, </span><span class="f_mine" style="font-style: italic;">i.e</span><span class="f_mine">., the light has a definite phase relationship for all points. &nbsp;The image formed under such conditions, called coherent imaging, is quite different from that formed under incoherent conditions: neighboring portions of a bar target, for example, will interfere with each other and produce fringes at a higher spatial frequency than the target itself.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If the pupil is completely filled with radiation, the image is closer to the incoherent than the coherent case, but completely incoherent imaging requires the pupil to be overfilled by a factor of 2. &nbsp;In most practical cases, therefore, the image is somewhere between the two cases, and is termed </span><span class="f_mine" style="font-style: italic;">partially coherent</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">SYNOPSYS can calculate either the one-dimensional profile, or a 2-dimensional picture, of the partially coherent image of various targets, with specified pupil filling. &nbsp;The calculation is somewhat less general than the other diffraction analysis programs in that it assumes normal incidence at the image, scalar diffraction theory, ignores polarization, and uses an interpolation polynomial to describe the wavefront rather than exact tracing of each ray. &nbsp;These assumptions are usually appropriate for cases in which partial coherence is a factor, however, since these often involve nearly perfect, and in the case of microlithography lenses, telecentric optics.  </span><span class="f_mine" style="font-weight: bold;">PARTC</span><span class="f_mine"> honors apodization and vignetting, but not the </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um83.htm#obsi" class="topiclink">OBS</a></span><span class="f_mine"> feature. &nbsp;For reference, you can get a listing of all of the points in the pupil mask, where the transmission is scaled from 0 to 10, by turning on switch 50 prior to the PARTC command. &nbsp;The two-dimensional version is found in the image-tools menu </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="hidd_mit.htm#mit" class="topiclink">MIT</a></span><span class="f_mine">; the one-dimensional case is described here.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Both forms assume that the ray pattern in the exit beam is a linear mapping of that in the entrance pupil. &nbsp;If this is not &nbsp;the case, as when the system has large pupil aberrations, the partial coherence features are not accurate and should not be used.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-weight: bold;">PARTC</span><span class="f_mine"> may be run interactively from the dialog </span><span class="f_mine" style="font-weight: bold;">MPA</span><span class="f_mine">. &nbsp;The command-mode input to </span><span class="f_mine" style="font-weight: bold;">PARTC</span><span class="f_mine"> is</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">PARTC { </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span><span class="f_mine" style="font-weight: bold;"> / M / P } </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">REL</span><span class="f_mine" style="font-weight: bold;"> [ GAUSSIAN </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RBS</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ XREL </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XREL</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ KNIFE ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ ANNULUS </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RHO</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">NRHO</span><span class="f_mine" style="font-weight: bold;"> ]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[[NO]NORMAL]</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JTAR</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SWAVL</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CONTRAST</span><span class="f_mine" style="font-weight: bold;"> [ X/Y [ PHASE ] ] </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">{ PLOT / END }</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">[ PLOT NOSOURCE ]</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table cellspacing="0" cellpadding="4" border="0" style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">ICOL</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the color number,</span><span class="f_mine" style="font-weight: bold;"> </span><span class="f_mine">“</span><span class="f_mine" style="font-weight: bold;">M</span><span class="f_mine">” requests a multicolor analysis, and “</span><span class="f_mine" style="font-weight: bold;">P</span><span class="f_mine">” just the primary color.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">HBAR</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the fractional Y-object height.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">GBAR</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the fractional X-object height.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">REL</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the fraction of the pupil to be filled.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine" style="margin: 0px 16px 0px 0px;"><span class="f_mine" style="font-weight: bold;">GAUSSIAN </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">RBS</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If the illuminated patch has a Gaussian profile instead of uniform, enter the relative beam size at the edge of the patch as RBS.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">XREL</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">If the fraction is different in X and Y–for a slit filament, for example–enter the X-value here. </span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">KNIFE</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">Produces a printed knife-edge trace of the reconstructed waveform.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">ANNULUS</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">parameters to define an annular illumination pattern. &nbsp;See below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[NO]NORMAL</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">NORMAL requests the output reconstruction be normalized so that the average intensity is the same as the average of the input waveform. &nbsp;This may or may not be accurate, since energy can be diffracted out of the aperture -- but the contrast is unaffected by this step and the waveform is easier to compare with the target shape afterward. &nbsp;The default is NONORMAL.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">JTAR</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the type of target, defined below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SWAVL</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">is the spatial wavelength, as measured at the final image in microns. &nbsp;For </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;"><a href="um32.htm#afocal" class="topiclink">AFOCAL</a></span><span class="f_mine"> lenses, this dimension is in milliradians.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold; text-decoration: underline;">CONTRAST</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">gives the target contrast, defined as ( MAX - MIN ) / ( MAX + MIN ). &nbsp;Its value should be non-zero.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine" style="font-weight: bold;">[ X ]</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">causes the image to be sampled in the X direction. The default direction is Y.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:132px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:340px; padding:4px; border:solid 1px #000000;"><p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um8f20.png" width="474" height="324" alt="um8f20" style="width:474px;height:324px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The</span><span class="f_mine" style="font-weight: bold;"> PARTC</span><span class="f_mine"> calculation requires numerical evaluation of a four-dimensional integral, which can be time consuming. &nbsp;The target is sampled at a frequency sufficient to describe all the harmonics that can be imaged by the lens, with a minimum of twenty and a maximum of 200 samples in the case of a sine or square-wave target, and a fixed number of 180 samples for the other types. &nbsp;It is usually much faster to utilize the former, since only a single cycle of the pattern is evaluated, which is then repeated for four cycles on the plot. &nbsp;The other target types, on the other hand, require evaluating every point over the equivalence of four and one-half cycles. &nbsp;If you request the optional </span><span class="f_mine" style="font-weight: bold;">DOUBLE</span><span class="f_mine">, then these numbers are all multiplied by two. &nbsp;In that case, sample numbers in the text that follows should all be multiplied by two as well.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Targets are ordinarily assumed to be modulated in intensity in accordance with the requested contrast. &nbsp;It is also possible to analyze a target where the pattern is encoded in a </span><span class="f_mine" style="font-style: italic;">phase difference</span><span class="f_mine">, with constant intensity. &nbsp;To do so, just include the optional word </span><span class="f_mine" style="font-weight: bold;">PHASE</span><span class="f_mine"> in the target description. &nbsp;The entry for contrast then applies to the phase difference instead of the intensity contrast, which is of course zero for this case.</span><span style="font-size: 11pt;"> &nbsp;The phase is in units of wavelengths.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span style="font-size: 11pt;">The fraction of the pupil that is filled according to the </span><span style="font-size: 11pt; text-decoration: underline;">REL</span><span style="font-size: 11pt;"> input is assumed to be </span><span style="font-size: 11pt; font-style: italic;">uniformly</span><span style="font-size: 11pt;"> filled, but the program will model a Gaussian intensity profile if the lens has the GAUSSIAN declaration in the RLE file. &nbsp;See <a href="um314.htm" class="topiclink">Section 3.1.4</a> for details.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Output consists of a printed table of target and image profile, plus a plotted display of these data if the input file ends with the word </span><span class="f_mine" style="font-weight: bold;">PLOT</span><span class="f_mine">. &nbsp;You may also request a knife-edge trace of the image data with the optional </span><span class="f_mine" style="font-weight: bold;">KNIFE</span><span class="f_mine">. &nbsp;These data give a running sum of the intensities of the reconstructed image.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Target number 6 is available only in command mode or from a MACro (not from dialog </span><span class="f_mine" style="font-weight: bold;">MPA</span><span class="f_mine">). &nbsp;It is defined by the user in the following format:</span></p>
+<p class="p_p4-9" style="margin: 0px 0px 0px 48px;"><span class="f_p4-9">&nbsp;</span></p>
+<p class="p_p4-9" style="margin: 0px 0px 0px 48px;"><span class="f_p4-9" style="font-size: 11pt; font-weight: bold;">PARTC …</span></p>
+<p class="p_p4-9" style="margin: 0px 0px 0px 48px;"><span class="f_p4-9" style="font-size: 11pt; font-weight: bold;">6 </span><span class="f_p4-9" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">SIZE</span><span class="f_p4-9" style="font-size: 11pt; font-weight: bold;"> 0 [ X ]</span></p>
+<p class="p_p4-9" style="margin: 0px 0px 0px 48px;"><span class="f_p4-9" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">LOCATION</span><span class="f_p4-9" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p4-9" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">VALUE</span></p>
+<p class="p_p4-9" style="margin: 0px 0px 0px 48px;"><span class="f_p4-9" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">LOCATION</span><span class="f_p4-9" style="font-size: 11pt; font-weight: bold;"> </span><span class="f_p4-9" style="font-size: 11pt; font-weight: bold; text-decoration: underline;">VALUE</span></p>
+<p class="p_p4-9" style="margin: 0px 0px 0px 48px;"><span class="f_p4-9" style="font-size: 11pt; font-weight: bold;">…</span></p>
+<p class="p_p4-9" style="margin: 0px 0px 0px 48px;"><span class="f_p4-9" style="font-size: 11pt; font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This input defines a target profile that is specified at points of discontinuity over a set of 180 data points. &nbsp;As each location and value set is read, the target data from that point through point 180 are set to the entered value. &nbsp;The </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SIZE</span><span class="f_mine"> is a reference dimension, which is drawn on the plot (see the figure below) and which corresponds to the image scale of exactly 40 data points. &nbsp;The program calculates the target contrast from the entered data, so no contrast entry is needed in the data in this case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">To describe a step function in the X direction, for example, that starts at 80% at the left of the target and goes to 20% from the center to the right edge, the input would be:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">6 30 0 X</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">1 .8</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">90 .2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The target has a total size of 30 x 4.5, or 135 microns, since the entered </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">SIZE</span><span class="f_mine"> of 30 microns covers 40 of the 180 data points.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><a name="867partc"></a><span class="f_mine">A novel use of PARTC is to analyze the diffraction pattern of an arbitrary object profile, where coherence is not an issue. &nbsp;For example one can examine the image profile of a double star with input such as</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">GET 4</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">PARTC M 0 0 2</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">6 8 0 X</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">1 0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">70 300</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">71 0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">110 300</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">111 0</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 48px;"><span class="f_mine" style="font-weight: bold;">PLOT NOSOURCE</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Here we get the relay telescope from the lens library and request an analysis of a double star whose images are separated by 8 microns at the focal plane. &nbsp;The object consists of two very bright points, of intensity 300, and the image is given below. &nbsp;For this case we do not want to show the object profile, which would extend off the top of the picture. &nbsp;The relative aperture filling </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">REL</span><span class="f_mine"> of 2 ensures that we are looking at the fully incoherent case. &nbsp;(The Image Tools dialog MIT can also analyze and plot a double-star source.)</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="partcdouble.png" width="586" height="462" alt="partcdouble" style="width:586px;height:462px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">When entering a value of </span><span class="f_mine" style="font-weight: bold; text-decoration: underline;">REL</span><span class="f_mine"> such as this, be aware that the calculation time varies as the</span><span class="f_mine" style="font-style: italic;"> square</span><span class="f_mine"> of this number.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Another interesting use of PARTC is to analyze what happens if the illumination pattern at the pupil has a hole in the middle. &nbsp;An important use of this feature is when you need to design an objective for microlithography, which of course must be very fast and corrected to a very small fraction of a wave in the UV. &nbsp;These lenses are very complicated, and difficult to design and manufacture – but a whole new set of options arises if you can allow use of a reflecting system, which is of course obscured. &nbsp;This approach has been avoided by the industry due to the fact that the obscuration completely blocks the zero-order information from the image. &nbsp;According to diffraction theory, the low-frequency information goes through the lens in the vicinity of the illuminated spot in the pupil, which is always at the center and may be quite small – and one cannot tolerate an obscuration there. &nbsp;The high frequency information goes through near the margin of the pupil, and that is why one uses a very fast lens in the first place: to pass frequencies as high as possible.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">But the geometry changes if, instead of illuminating the pupil with a small spot in the center, one designs the illumination optics so that it produces a </span><span class="f_mine" style="font-style: italic;">ring</span><span class="f_mine"> of illumination located, say, halfway out in the pupil. &nbsp;Now one can tolerate a central obscuration, and while the frequencies that are transmitted differ from the usual case, a very useful image is obtained. &nbsp;An example of this kind of analysis is given below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Output from </span><span class="f_mine" style="font-weight: bold;">PARTC</span><span class="f_mine"> includes a listing of the coefficients of the wavefront polynomial for each color, the numerical aperture and F/number of the lens, the sample spacing, and the number of samples over which the target is evaluated. &nbsp;The pupil is sampled over a grid of 41 x 41 rows, with the number of rows actually contained within the filled portion listed in the output. &nbsp;You may request an optional listing of the object spectrum, by placing </span><span class="f_mine" style="text-decoration: underline;"><a href="um29.htm" class="topiclink">switch 22</a></span><span class="f_mine"> ON prior to calling </span><span class="f_mine" style="font-weight: bold;">PARTC</span><span class="f_mine" style="font-family: 'Times New Roman';">.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A listing is given of the object intensity at each sample point together with the intensity of the reconstructed image at that point. &nbsp;An example of the plotted output is shown below.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="um8f21.png" width="396" height="294" alt="um8f21" style="width:396px;height:294px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">PARTC places a copy of its output in the </span><span class="f_mine" style="font-weight: bold;">AI FILE buffer</span><span class="f_mine">, and you can do some interesting things with these data. &nbsp;For example, let us plot the sine-wave contrast for the perfectly coherent case as a function of spatial frequency. &nbsp;The result is analogous to the familiar MTF curve – never mind that the MTF concept is strictly speaking not applicable with coherent light. &nbsp;First we make a MACro:</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New';">= 1000 / AIP</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New';">Z5 = FILE 1</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New';">PARTC P 0 0 0 </span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New';">1 Z5 1 Y</span></p>
+<p class="p_mine"><span class="f_mine" style="font-family: 'Courier New';">PLOT</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Initialize AIP with AIP = 200, which is a frequency near the middle of the MTF curve for this lens, and run this MACro. &nbsp;Then ask to see the AI buffer:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;BUFFER?</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> The current FILE BUFFER contains</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 1 &nbsp; &nbsp; &nbsp;20.00000000 &nbsp;No. Samples</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 2 &nbsp; &nbsp; &nbsp; 0.92598074 &nbsp;CONTRAST</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 3 &nbsp; &nbsp; &nbsp; 0.04337431 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 4 &nbsp; &nbsp; &nbsp; 0.05251709 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 5 &nbsp; &nbsp; &nbsp; 0.08399759 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 6 &nbsp; &nbsp; &nbsp; 0.14768598 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 7 &nbsp; &nbsp; &nbsp; 0.25335719 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 8 &nbsp; &nbsp; &nbsp; 0.40361910 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 9 &nbsp; &nbsp; &nbsp; 0.58871012 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 10 &nbsp; &nbsp; &nbsp; 0.78556516 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 11 &nbsp; &nbsp; &nbsp; 0.96196295 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 12 &nbsp; &nbsp; &nbsp; 1.08462728 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 13 &nbsp; &nbsp; &nbsp; 1.12859918 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 14 &nbsp; &nbsp; &nbsp; 1.08462728 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 15 &nbsp; &nbsp; &nbsp; 0.96196295 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 16 &nbsp; &nbsp; &nbsp; 0.78556516 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 17 &nbsp; &nbsp; &nbsp; 0.58871012 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 18 &nbsp; &nbsp; &nbsp; 0.40361910 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 19 &nbsp; &nbsp; &nbsp; 0.25335719 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 20 &nbsp; &nbsp; &nbsp; 0.14768598 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 21 &nbsp; &nbsp; &nbsp; 0.08399759 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> &nbsp; 22 &nbsp; &nbsp; &nbsp; 0.05251709 &nbsp;OUTPUT</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; font-weight: bold;"> SYNOPSYS AI&gt;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The reconstructed sinewave is sampled in the above data, and the contrast is given in file location 2. (The contrast is defined as (MAX - MIN) / (MAX + MIN).) &nbsp;Now we can make a new MACro to do the analysis we need:</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-family: 'Courier New';">= 1000 / AIP</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-family: 'Courier New';">Z5 = FILE 1</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-family: 'Courier New';">PARTC P 0 0 0 </span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-family: 'Courier New';">1 Z5 1 Y</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-family: 'Courier New';">END</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine" style="margin: 0px 0px 0px 38px;"><span class="f_mine" style="font-family: 'Courier New';">ORD = FILE 2</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Run this once, and then define a symbol to loop over the range of spatial frequencies that we want:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">QQ: QUIET / DO MACRO FOR AIP = 1 TO 400 / LOUD</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Run this by typing the new command QQ. &nbsp;Here is the result:</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="partc4.png" width="509" height="689" alt="partc4" style="width:509px;height:689px;border:none"><span class="f_ImageCaption">par</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">Let us point out some subtleties: &nbsp;First, we entered the AIP data in c/mm units, the same as with MTFs – while PARTC wants the wavelength in microns. &nbsp;So we first convert the AIP value by finding 1000 / AIP. &nbsp;We put this value into variable Z5 (learn about the Zn parameters in </span><span class="f_mine" style="text-decoration: underline;"><a href="um15142.htm" class="topiclink">section15.1.4.2</a></span><span class="f_mine">.) &nbsp;This is the spatial wavelength, and PARTC reads it for the </span><span class="f_mine" style="text-decoration: underline;">SWAV</span><span class="f_mine"> data in word 2. Then </span><span class="f_mine" style="font-family: 'Courier New';">ORD</span><span class="f_mine"> accumulates the plot data.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">This lens has a diffraction MTF cutoff at 649 cy/mm, and the fully coherent analysis drops to zero at half of this value, as shown on the plot. &nbsp;Note the stepwise reduction of the contrast along the way. &nbsp;It is widely believed that a fully coherent MTF stays at a value of 1.0 until it drops to zero – but that is true only if the object is a perfect sinusoid in </span><span class="f_mine" style="font-style: italic;">amplitude</span><span class="f_mine"> space, while our target is a sinewave in </span><span class="f_mine" style="font-style: italic;">intensity</span><span class="f_mine"> space. &nbsp;The two are of course different.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">If you run this analysis out to 500 c/mm with </span><span class="f_mine" style="font-weight: bold;">annular pupil illumination</span><span class="f_mine">, the curve changes: higher frequencies show up but the mid frequencies are lower, indicating that it is quite feasible to use an obscured system for coherent microlithography work, provided the illumination is annular.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><img src="partc5.png" width="452" height="611" alt="partc5" style="width:452px;height:611px;border:none"></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The </span><span class="f_mine" style="font-weight: bold;">ANNULUS</span><span class="f_mine"> option generates a set of </span><span class="f_mine" style="text-decoration: underline;">NRHO</span><span class="f_mine"> pupil arrays, each identical to the one that is normally located at the center of the pupil by PARTC, but arranged around a circle of fractional pupil radius </span><span class="f_mine" style="text-decoration: underline;">RHO</span><span class="f_mine">. &nbsp;In this case, we have modeled a perfectly coherent system with a ring of illumination halfway out in the pupil and a total of 100 coherent points. &nbsp;The added input was</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">ANNULUS 0.5 100.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A large number of points result in a smoother curve, while a smaller number runs more quickly.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><a name="um8l1"></a><span class="f_mine" style="font-weight: bold;">Theory</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">The mathematical theory of partial coherence has been described by Hopkins*, and will not be repeated here. &nbsp;I will, however, outline the steps in the calculation as performed by SYNOPSYS, to help users understand the meaning of the results.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">A two-dimensional object may be described by an intensity function which varies in X and Y or equivalently by an amplitude function giving the local field strength at each point. &nbsp;If we consider a perfectly coherent case for the moment, the pupil of the projection lens contains a single point of light from the condenser in the absence of a target. &nbsp;When a target is inserted, each Fourier component of its amplitude distribution produces two additional diffracted images of that point in the pupil. &nbsp;In general, many of these diffracted points fall outside the physical lens pupil, and energy and information are lost. &nbsp;The array of all such points that fall within the pupil constitutes a coherent set of radiating sources that produce an interference pattern at the final image. &nbsp;This pattern is the fully coherent case.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">In a partially coherent case, there are numerous points in the pupil that are filled by mutually incoherent areas of the lamp, and we simply repeat the above calculation for each such area and superimpose the results. &nbsp;The several points do not all give identical patterns because they are centered at different places, have different aberrations, and the same set of diffracted points do not pass through the lens from all of them.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p class="p_mine"><span class="f_mine">*H. H. Hopkins, &quot;On the diffraction theory of optical images&quot;, </span><span class="f_mine" style="font-style: italic;">Proc. Roy'. Soc. London</span><span class="f_mine">, Ser. A 217, pp. 408-432, 1953.</span></p>
+<p class="p_mine"><span class="f_mine">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um868.htm" class="topiclink">Next</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span><span style="font-size: 11pt; font-family: 'Times New Roman'; text-decoration: underline;"><a href="um.htm#um_contents" class="topiclink">TOC</a></span><span style="font-size: 11pt; font-family: 'Times New Roman';"> </span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>
